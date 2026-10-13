@@ -1,0 +1,18 @@
+
+=== s6_radial_stub_openems run 2026-10-13 18:18
+coarse: cells 323570, time 214 s, Z_line(1 GHz) 87.0 ohm, eeff(1 GHz) 3.129, f_res 2.9151 GHz
+fine: cells 455988, time 1417 s, Z_line(1 GHz) 83.5 ohm, eeff(1 GHz) 3.228, f_res 2.9775 GHz
+mesh change in f_res coarse->fine: +2.14 %
+model A: f_res 2.4251 GHz (-18.6 % vs openEMS); |X(1.5 GHz)| 48.7 ohm vs openEMS 37.0 ohm
+model B: f_res 2.6686 GHz (-10.4 % vs openEMS); |X(1.5 GHz)| 65.2 ohm vs openEMS 37.0 ohm
+model C: f_res 2.4632 GHz (-17.3 % vs openEMS); |X(1.5 GHz)| 52.8 ohm vs openEMS 37.0 ohm
+model D: f_res 2.3020 GHz (-22.7 % vs openEMS); |X(1.5 GHz)| 41.8 ohm vs openEMS 37.0 ohm
+  openEMS Z_in(1.00 GHz) =    0.23   -65.73j ohm
+  openEMS Z_in(1.50 GHz) =    0.01   -37.03j ohm
+  openEMS Z_in(2.00 GHz) =    0.32   -20.68j ohm
+  openEMS Z_in(2.45 GHz) =    0.36   -10.26j ohm
+  openEMS Z_in(3.00 GHz) =    0.09    +0.42j ohm
+  openEMS Z_in(4.00 GHz) =    0.25   +18.28j ohm
+PRE-REG 1 (f_res within +-4 % of C): MISSED (-17.3 %)
+PRE-REG 2 (A high by > 5 %): MISSED (-18.6 %)
+PRE-REG 3 (|X| at 1.5 GHz within 15 % of C): MISSED

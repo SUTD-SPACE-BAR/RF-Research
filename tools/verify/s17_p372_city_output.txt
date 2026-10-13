@@ -1,0 +1,13 @@
+  city        line at 250.000 MHz: Fam =  10.38 dB ->    3163 K  [in range]
+  city        line at 425.000 MHz: Fam =   3.99 dB ->     727 K  [EXTRAPOLATED (> 250 MHz)]
+  city        line at 433.125 MHz: Fam =   3.77 dB ->     690 K  [EXTRAPOLATED (> 250 MHz)]
+  city        P.372-13 Table 3 at 425 MHz (measured): Fa = 6 dB -> 1155 K
+  residential line at 250.000 MHz: Fam =   6.08 dB ->    1175 K  [in range]
+  residential line at 425.000 MHz: Fam =  -0.31 dB ->     270 K  [EXTRAPOLATED (> 250 MHz)]
+  residential line at 433.125 MHz: Fam =  -0.53 dB ->     256 K  [EXTRAPOLATED (> 250 MHz)]
+  residential P.372-13 Table 3 at 425 MHz (measured): Fa = 4 dB -> 728 K
+  rural       line at 250.000 MHz: Fam =   0.78 dB ->     347 K  [in range]
+  rural       line at 425.000 MHz: Fam =  -5.61 dB ->      80 K  [EXTRAPOLATED (> 250 MHz)]
+  rural       line at 433.125 MHz: Fam =  -5.83 dB ->      76 K  [EXTRAPOLATED (> 250 MHz)]
+  rural       P.372-13 Table 3 at 425 MHz (measured): Fa = 3 dB -> 579 K
+CHECK city line at 425 MHz ~720 K and Table 3 city ~1150 K: PASS

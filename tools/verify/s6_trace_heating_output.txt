@@ -1,0 +1,47 @@
+=== 1. line voltage and current, 50 ohm
+      2 W: I_rms 0.200 A, V_peak 14.1 V; at VSWR 3 maxima V_peak 21.2 V, I_rms 0.300 A
+     10 W: I_rms 0.447 A, V_peak 31.6 V; at VSWR 3 maxima V_peak 47.4 V, I_rms 0.671 A
+     25 W: I_rms 0.707 A, V_peak 50.0 V; at VSWR 3 maxima V_peak 75.0 V, I_rms 1.061 A
+[PASS] 2 W in 50 ohm = 14.1 V peak, 0.20 A rms 
+=== 2-4. loss split, RF/DC resistance, temperature rise (infinitely long trace, 50 mm wide board)
+ -- JLC04161H-7628 4-layer, 0.359 mm: Z0 51.0 ohm (H-J, bare, t 35 um), eeff 3.18
+      433 MHz    2 W: alpha_c  2.08 + alpha_d  1.25 dB/m -> p'   0.96 +   0.57 W/m; R'_RF/R'_DC =  24.5/ 1.37 = 17.8; I_rms 0.20 A vs I_eq(DC) 1.06 A | dT: FD    3.3 K, analytic    3.0 K, IPC-2221(I_eq)    8.5 K
+      433 MHz   25 W: alpha_c  2.08 + alpha_d  1.25 dB/m -> p'  12.00 +   7.17 W/m; R'_RF/R'_DC =  24.5/ 1.37 = 17.8; I_rms 0.71 A vs I_eq(DC) 3.74 A | dT: FD   40.8 K, analytic   38.0 K, IPC-2221(I_eq)  149.2 K
+      915 MHz    2 W: alpha_c  3.29 + alpha_d  2.63 dB/m -> p'   1.52 +   1.21 W/m; R'_RF/R'_DC =  38.6/ 1.37 = 28.2; I_rms 0.20 A vs I_eq(DC) 1.41 A | dT: FD    5.6 K, analytic    5.3 K, IPC-2221(I_eq)   16.3 K
+      915 MHz   25 W: alpha_c  3.29 + alpha_d  2.63 dB/m -> p'  18.94 +  15.15 W/m; R'_RF/R'_DC =  38.6/ 1.37 = 28.2; I_rms 0.71 A vs I_eq(DC) 4.98 A | dT: FD   70.4 K, analytic   66.1 K, IPC-2221(I_eq)  287.0 K
+     2450 MHz    2 W: alpha_c  6.49 + alpha_d  7.05 dB/m -> p'   2.99 +   3.24 W/m; R'_RF/R'_DC =  76.2/ 1.37 = 55.5; I_rms 0.20 A vs I_eq(DC) 2.13 A | dT: FD   12.5 K, analytic   11.8 K, IPC-2221(I_eq)   41.6 K
+     2450 MHz   25 W: alpha_c  6.49 + alpha_d  7.05 dB/m -> p'  37.35 +  40.56 W/m; R'_RF/R'_DC =  76.2/ 1.37 = 55.5; I_rms 0.71 A vs I_eq(DC) 7.54 A | dT: FD  155.9 K, analytic  147.3 K, IPC-2221(I_eq)  734.2 K
+   analytic resistances: trace->plane 1.23 K m/W, board->air 0.98 K m/W
+ -- JLC0216A 2-layer, 2.692 mm: Z0 49.6 ohm (H-J, bare, t 30 um), eeff 3.37
+      433 MHz    2 W: alpha_c  0.29 + alpha_d  1.31 dB/m -> p'   0.13 +   0.60 W/m; R'_RF/R'_DC =   3.3/ 0.21 = 15.4; I_rms 0.20 A vs I_eq(DC) 1.86 A | dT: FD    1.1 K, analytic    1.4 K, IPC-2221(I_eq)    1.4 K
+      433 MHz   25 W: alpha_c  0.29 + alpha_d  1.31 dB/m -> p'   1.66 +   7.53 W/m; R'_RF/R'_DC =   3.3/ 0.21 = 15.4; I_rms 0.71 A vs I_eq(DC) 6.56 A | dT: FD   14.1 K, analytic   16.9 K, IPC-2221(I_eq)   25.0 K
+      915 MHz    2 W: alpha_c  0.45 + alpha_d  2.76 dB/m -> p'   0.21 +   1.27 W/m; R'_RF/R'_DC =   5.2/ 0.21 = 24.3; I_rms 0.20 A vs I_eq(DC) 2.64 A | dT: FD    2.2 K, analytic    2.7 K, IPC-2221(I_eq)    3.1 K
+      915 MHz   25 W: alpha_c  0.45 + alpha_d  2.76 dB/m -> p'   2.61 +  15.92 W/m; R'_RF/R'_DC =   5.2/ 0.21 = 24.3; I_rms 0.71 A vs I_eq(DC) 9.32 A | dT: FD   27.8 K, analytic   33.6 K, IPC-2221(I_eq)   55.4 K
+     2450 MHz    2 W: alpha_c  0.90 + alpha_d  7.40 dB/m -> p'   0.41 +   3.41 W/m; R'_RF/R'_DC =  10.2/ 0.21 = 47.9; I_rms 0.20 A vs I_eq(DC) 4.23 A | dT: FD    5.6 K, analytic    6.9 K, IPC-2221(I_eq)    9.2 K
+     2450 MHz   25 W: alpha_c  0.90 + alpha_d  7.40 dB/m -> p'   5.16 +  42.62 W/m; R'_RF/R'_DC =  10.2/ 0.21 = 47.9; I_rms 0.71 A vs I_eq(DC) 14.96 A | dT: FD   70.5 K, analytic   85.8 K, IPC-2221(I_eq)  162.6 K
+   analytic resistances: trace->plane 1.16 K m/W, board->air 1.16 K m/W
+[PASS] E22 2 W at 433 MHz on JLC-7628: long-line rise < 5 K (FD) 3.26 K
+[PASS] analytic two-resistor model within 25 % of the FD solver (all cases) worst 22 %
+[PASS] IPC-2221 fed with the DC-equivalent current is conservative by > 2x for a trace 0.21 mm above a plane 2.9x
+[PASS] 25 W at 2.45 GHz on the thin-prepreg line: long-line rise > 50 K (a real limit) 156 K
+[PASS] the 2-layer wide trace runs cooler than the 4-layer narrow one at 25 W, 915 MHz 
+=== short traces: power dissipated = P (1 - 10^(-A/10))
+   JLC04161H-7628 4-layer, 0.359 mm, 433 MHz, 3 cm at 2 W: loss 0.100 dB, dissipated 45 mW
+   JLC04161H-7628 4-layer, 0.359 mm, 2450 MHz, 5 cm at 25 W: loss 0.677 dB, dissipated 3607 mW
+   JLC0216A 2-layer, 2.692 mm, 915 MHz, 5 cm at 25 W: loss 0.161 dB, dissipated 910 mW
+=== 5. peak voltage vs Paschen minimum (air, ~327 V)
+      2 W, VSWR 1: V_peak max   14.1 V  (below 327 V)
+     25 W, VSWR 1: V_peak max   50.0 V  (below 327 V)
+     25 W, VSWR 3: V_peak max   75.0 V  (below 327 V)
+    100 W, VSWR 3: V_peak max  150.0 V  (below 327 V)
+   matched 50-ohm power at 327 V peak: 1069 W (at VSWR 3: 475 W)
+[PASS] 25 W even at VSWR 3 stays < 1/4 of the Paschen minimum 
+=== 6. ground-plane resistance (G-03-03)
+   DC sheet resistance, 17.5 um Cu: 0.985 mOhm/sq
+   DC sheet resistance, 35.0 um Cu: 0.493 mOhm/sq
+   surface resistance at    433 MHz: 5.43 mOhm/sq (|Zs| = 7.68 mOhm/sq)
+   surface resistance at    915 MHz: 7.89 mOhm/sq (|Zs| = 11.16 mOhm/sq)
+   surface resistance at   2450 MHz: 12.91 mOhm/sq (|Zs| = 18.26 mOhm/sq)
+[PASS] surface resistance at 433 MHz ~ 5.4 mOhm/sq 
+
+ALL PASS

@@ -1,0 +1,1393 @@
+=== kb/00-math-foundations/complex-numbers-and-phasors.md
+- What is $j$, and why do engineers use $j$ instead of $i$?
+- What does Euler's formula $e^{j\theta}=\cos\theta+j\sin\theta$ actually mean, and why is it everywhere in RF?
+- What is a phasor, and why can I replace $d/dt$ with $j\omega$?
+- Why is impedance a complex number? Is the imaginary part "not real"?
+- What is the difference between RMS, peak, peak-to-peak, average power and PEP?
+- Why is there a ½ in $P=\tfrac12\mathrm{Re}\{VI^*\}$ in some books but not in others?
+- What is reactive power and does it heat anything?
+- What is an analytic signal and a complex envelope?
+- What is a negative frequency, and why does my SDR's FFT show signals at negative frequencies?
+- Why does `atan(y/x)` give the wrong phase angle?
+=== kb/00-math-foundations/decibels-and-log-units.md
+- Why do we use 10 log for power but 20 log for voltage?
+- What exactly is a dBm, and how many volts is 0 dBm (or 33 dBm) into 50 Ω?
+- Is 30 dBm + 30 dBm = 60 dBm? How do I add two signals given in dBm?
+- When do two signals add to +3 dB and when to +6 dB?
+- What is the difference between dB, dBm, dBW, dBi, dBd, dBic, dBc, dBc/Hz, dBFS, dB-Hz, dBsm and dBK?
+- How do I convert dBµV/m field strength into received power in dBm?
+- Why is thermal noise −174 dBm/Hz, and why does the spectrum-analyser noise floor move when I change RBW but my carrier does not?
+- Why does 1 % sometimes mean −40 dB and sometimes 0.04 dB?
+- What is a neper and why does it appear in transmission-line attenuation?
+- How can I do dB arithmetic in my head?
+=== kb/00-math-foundations/differential-equations-circuits-waves.md
+- What is a time constant, and why do we say a capacitor is "charged" after 5τ?
+- Why does charging a capacitor from a fixed voltage always waste half the energy, whatever the resistance?
+- How do I tell whether an RLC circuit will ring, and how fast the ringing dies?
+- What are damping ratio ζ, natural frequency ωₙ and Q, and how are they related?
+- Why do my power rails ring after a load step, and how do I damp them?
+- Where does the wave equation come from, and why is $f(x-vt)$ a solution?
+- How do telegrapher's equations turn into waves on a cable?
+- What is separation of variables, and how does it give waveguide modes and cutoff frequencies?
+- Why is skin depth a "diffusion" length?
+=== kb/00-math-foundations/fourier-series-and-transform.md
+- What does it mean that "every signal is a sum of sine waves"?
+- Why does a square wave contain only odd harmonics, and how big are they?
+- Why do fast clock edges cause EMI hundreds of MHz above the clock frequency?
+- Could my flight computer's 24 MHz or 40 MHz clock interfere with my 433/900 MHz LoRa receiver?
+- What is a sinc function and why does it appear everywhere?
+- What is the time–bandwidth product, and why can't a signal be both short and narrowband?
+- What do Parseval's theorem, the convolution theorem and the modulation theorem say, in plain words?
+- What does the spectrum of a radar pulse train look like?
+- What does the spectrum of a chirp (radar or LoRa) look like, and why is its bandwidth B regardless of length?
+- How is the DFT/FFT related to the "real" Fourier transform?
+- Why is an antenna's far-field pattern the Fourier transform of its aperture?
+=== kb/00-math-foundations/laplace-transfer-functions-bode.md
+- What is the Laplace variable $s$, and how is it related to $j\omega$?
+- What are poles and zeros *physically*, and why does their position tell me whether a circuit rings, decays or oscillates?
+- How do I sketch a Bode plot by hand?
+- What are damping ratio, natural frequency and Q, and how do they relate to overshoot and peaking?
+- What do phase margin and gain margin mean, and why do amplifiers and PLLs oscillate?
+- What is a minimum-phase system, and why does a delay or a right-half-plane zero make control harder?
+- What is group delay, and why does a narrow filter delay my signal?
+- Why is rise time × bandwidth ≈ 0.35?
+=== kb/00-math-foundations/linear-systems-convolution.md
+- What makes a system "linear" and "time-invariant", and why do we care?
+- What is an impulse response, and what does convolution actually compute?
+- Why is filtering a multiplication in frequency but a convolution in time?
+- What does "causal" mean mathematically, and why can't I build an ideal brick-wall filter?
+- What is the Hilbert transform and where does it show up in RF?
+- What are the Kramers–Kronig relations, and why must a lossy PCB dielectric have a frequency-dependent εr?
+- Why does my EM or SI simulator ask for a "Djordjevic–Sarkar" or "wideband Debye" material model instead of just εr and tan δ?
+- What is the difference between phase delay and group delay, and what is dispersion?
+- Is a mixer a linear system?
+=== kb/00-math-foundations/math-roadmap-for-rf.md
+- What maths do I actually need to design radios, antennas, radars, phased arrays and analog circuits?
+- In what order should I learn it, starting from high-school algebra?
+- Which maths does each RF topic depend on (link budgets, matching, filters, LNAs, antennas, arrays, FMCW radar, LoRa)?
+- How can I check whether I'm ready for a given topic?
+- What free courses and books cover each stage?
+- What can I skip (for now)?
+=== kb/00-math-foundations/matrices-and-linear-algebra-for-networks.md
+- How does a circuit simulator actually solve a circuit (nodal analysis, MNA)?
+- What do Z, Y, ABCD and S matrices mean, and how do I convert between them?
+- Why is a reciprocal network's S-matrix symmetric, and a lossless one's unitary?
+- What do eigenvalues tell me about a circuit (natural frequencies, coupled resonators)?
+- Why does MIMO capacity involve the singular value decomposition?
+- How do adaptive beamformers use covariance matrices and eigenvectors?
+- How does VNA calibration become a linear-equation solve?
+- What is least squares, and why do calibration fits go numerically wrong (conditioning)?
+=== kb/00-math-foundations/numerical-methods-overview.md
+- How do calculators and simulators solve equations that have no closed form?
+- When should I use bisection, Newton or Brent's method?
+- Which numerical integration rule should I use, and why is Gauss–Legendre so accurate?
+- Why is the FFT fast, and what does it actually compute?
+- Why does my transient simulation blow up or need tiny time steps (stiffness, stability)?
+- What are FDTD, MoM and FEM, how do they differ, and which one fits antennas, PCBs, cavities?
+- What is the Courant (CFL) condition and "cells per wavelength"?
+- How do I know a simulation result is right (convergence and validation)?
+=== kb/00-math-foundations/probability-random-processes-and-psd.md
+- Why is thermal noise Gaussian?
+- Why do noise *powers* add but noise *voltages* don't?
+- What does "nV/√Hz" mean, and how do I turn a noise density into an rms voltage?
+- What is a power spectral density, and what does the Wiener–Khinchin theorem say?
+- What is "white" noise and why is it an idealisation?
+- What is equivalent noise bandwidth (ENBW), and why is it not the −3 dB bandwidth?
+- What are the Rayleigh and Rician distributions, and how much fade margin does my link need?
+- What is the Q-function / erfc, and how does it give bit-error rates?
+- Why does averaging make a spectrum-analyser noise trace smoother, and by how much?
+- How do I set a detection threshold for a given false-alarm rate?
+- Where does shot noise's $2qI$ come from?
+=== kb/00-math-foundations/special-functions-bessel-sinc.md
+- What is a sinc function and why does it keep appearing (pulses, apertures, FFT bins)?
+- Why does an FM signal have sidebands with Bessel-function amplitudes, and what is Carson's rule?
+- How can I calibrate FM deviation with a spectrum analyser (the "Bessel null" method)?
+- Why is a dish antenna's beam described by a "jinc"/Airy pattern with −17.6 dB sidelobes?
+- What are Fresnel integrals and how do they give knife-edge diffraction loss (6 dB at grazing)?
+- What is the Q-function/erfc and where does it appear?
+- Why do Chebyshev polynomials appear in both filters and antenna arrays?
+- What are Legendre functions and spherical Bessel functions used for?
+- Where does the modified Bessel function $I_0$ show up (Rician fading, Kaiser windows)?
+=== kb/00-math-foundations/vector-calculus-for-em.md
+- What do gradient, divergence, curl and the Laplacian mean physically?
+- How do I read Maxwell's equations in words?
+- What do the divergence (Gauss) theorem and Stokes' theorem let me do in practice?
+- Why do antenna books use spherical coordinates, and why do the formulas look so messy there?
+- Why can't I take the Laplacian of each component of a vector in spherical coordinates?
+- What is a "phasor vector field", and why does $\nabla\times\mathbf E=-j\omega\mu\mathbf H$ have a $j$ in it?
+- Where does $e^{-jkr}/r$ come from, and what is the Helmholtz equation?
+- How far from an antenna does the near field stop mattering?
+=== kb/01-circuit-theory/energy-storage-and-reactive-power.md
+- What are real, reactive and apparent power, and what does "var" mean?
+- What is power factor, and does it matter in RF circuits?
+- How much energy is stored in an inductor or capacitor, and how does that relate to reactive power?
+- Why can the voltage across a capacitor in a matching network be much higher than the RF voltage on the 50 Ω line?
+- How do I check capacitor voltage and inductor current ratings for a 2 W LoRa transmitter's matching network or filter?
+- Why does a small tuned loop antenna need a high-voltage capacitor?
+- Where does reactive power "go"? Does it heat anything?
+=== kb/01-circuit-theory/lumped-elements-impedance-admittance.md
+- What is impedance, and how is it different from resistance?
+- Why does a capacitor's impedance fall with frequency while an inductor's rises?
+- What is the reactance of 10 nH or 10 pF at 433 MHz, 915 MHz and 2.4 GHz?
+- What is admittance, and when is it easier to use than impedance?
+- How do I combine impedances in series and in parallel?
+- How do I turn a series R + jX into an equivalent parallel R ∥ X (and why is that only true at one frequency)?
+- Why is a capacitor's reactance negative?
+- When can I treat a component or a PCB trace as "lumped"?
+- What value of L or C gives 50 Ω of reactance at my frequency?
+- Is a 100 nF capacitor a "short circuit" at 433 MHz?
+=== kb/01-circuit-theory/network-theorems-max-power-transfer.md
+- How do KCL and KVL turn a circuit into equations I can solve?
+- What is nodal analysis and why do simulators use it?
+- What are the Thévenin and Norton equivalents and how do I find them?
+- When can I use superposition (and why can't I superpose powers)?
+- What is the maximum power transfer theorem, and what is "available power"?
+- Why is the load impedance for maximum power the *complex conjugate* of the source impedance?
+- Does conjugate matching really waste half the power? Is a matched system only 50 % efficient?
+- Why isn't a power amplifier conjugate-matched to its transistor? What is a load-line match?
+- Why isn't an LNA conjugate-matched either — what is noise matching?
+- If my LoRa module wants 50 Ω, is it "conjugate matched" to the antenna?
+=== kb/01-circuit-theory/passive-filter-design-prototypes.md
+- How do I design an LC low-pass, high-pass, band-pass or band-stop filter from tables?
+- What are the g-values in filter tables and how do I scale them to 50 Ω and my frequency?
+- Butterworth, Chebyshev, elliptic or Bessel — which should I use?
+- What filter order do I need for a given attenuation?
+- How do I design a harmonic filter for a 433 MHz LoRa power amplifier?
+- Can I build a 902–928 MHz band-pass filter from chip inductors and capacitors? Why is the insertion loss so high?
+- Why do the textbook band-pass element values come out as 0.3 pF and 100 nH?
+- How much loss will component Q add to my filter?
+- What is group delay and why does a sharp filter distort pulses?
+- Why is my Bessel filter's cutoff in the wrong place?
+=== kb/01-circuit-theory/resonance-and-q.md
+- What happens at resonance in a series and in a parallel LC circuit?
+- What exactly is Q, and why are there so many definitions (energy, bandwidth, X/R)?
+- What is the difference between unloaded Q, loaded Q and external Q?
+- How is bandwidth related to Q?
+- How do I convert a series-loss model to a parallel-loss model of a resonator?
+- If my inductor has Q = 50 and my capacitor Q = 500, what is the Q of the tank?
+- Why does a narrow filter made from chip inductors have so much insertion loss?
+- What is the Q of an L-matching network and why does it set the match bandwidth?
+- Why is the voltage across a resonant capacitor so much bigger than the input voltage?
+- What is the group delay of a resonator?
+=== kb/01-circuit-theory/transformers-coupled-inductors.md
+- What is mutual inductance, and what does the coupling coefficient k mean?
+- How does an ideal transformer transform impedance (and why by the turns ratio squared)?
+- What are leakage and magnetising inductance, and how do they limit a real transformer's bandwidth?
+- How do I model two coupled inductors in a circuit simulator?
+- How does a tapped inductor or a capacitive divider act as an impedance transformer in a tank?
+- How do I measure k from the frequency splitting of two coupled resonators?
+- Why does a transmission-line (Guanella/Ruthroff) transformer work at much higher frequencies than a conventional one?
+- Why is |k| always ≤ 1?
+=== kb/01-circuit-theory/transient-and-step-response.md
+- What is a time constant and how long does an RC or RL circuit take to settle?
+- Where does the "rise time × bandwidth ≈ 0.35" rule come from, and when is it 0.4 or 0.45?
+- What do damping ratio ζ and Q have to do with overshoot and ringing?
+- Why does my scope show ringing at ~100 MHz on every fast edge?
+- Why does a decoupling capacitor ring when the load current steps?
+- How long does a narrowband filter or resonator take to respond to a burst (e.g. a LoRa or radar pulse)?
+- How do rise times of cascaded stages combine?
+- What is the difference between the time-domain view and the frequency-domain view of the same circuit?
+=== kb/01-circuit-theory/two-port-networks-zyh-abcd.md
+- What is a two-port network and why describe circuits that way?
+- What do Z, Y, h and ABCD parameters mean physically, and how are they measured?
+- Which parameter set should I use for series, parallel or cascaded connections?
+- How do I convert between Z, Y, h, ABCD (and S)?
+- How do I find the input impedance and voltage gain of a two-port with a load?
+- How can I tell from the matrix whether a network is reciprocal, symmetric or lossless?
+- Why are ABCD matrices so convenient for ladder filters and transmission lines?
+- What are T-parameters and why do different textbooks disagree on them?
+- Why are transistor data given as h-parameters (low frequency) but S-parameters (RF)?
+=== kb/02-electromagnetics/boundary-conditions-reflection-refraction.md
+- What conditions must E, H, D and B satisfy at an interface between two materials or at a metal surface?
+- How much of a wave reflects off a dielectric, the ground or the sea, and how does this depend on angle and polarization?
+- What is the Brewster angle and why does vertical polarization over ground have a reflection "dip"?
+- What is total internal reflection and what is an evanescent wave?
+- How thick can a fibreglass nose cone be before it hurts my 433/915 MHz link? What is a half-wave radome wall?
+- Can I put an antenna inside a carbon-fibre airframe?
+- Why is the ground-reflected wave in a two-ray model nearly −1 at low grazing angles?
+=== kb/02-electromagnetics/dielectrics-permittivity-loss-tangent.md
+- What do Dk, Df, εr, ε', ε'' and tanδ mean and how are they related?
+- Why do materials polarise, and why does that cause loss?
+- What is a Debye relaxation, and why does FR-4's permittivity drift slowly with frequency?
+- What is the Djordjevic–Sarkar (wideband Debye) model and why do simulators insist on it?
+- Why does a Rogers datasheet give two different Dk values ("process" and "design")?
+- What εr and tanδ should I use for FR-4, RO4003C, RO4350B, PTFE, alumina, fibreglass, water, PLA/ABS 3D-printed parts?
+- How much do glass weave, moisture and temperature change the numbers?
+- Is carbon fibre a dielectric?
+=== kb/02-electromagnetics/electromagnetic-units-and-constants.md
+- What are the exact values of ε0, μ0, c and the impedance of free space today?
+- Is μ0 still exactly 4π×10⁻⁷ H/m after the 2019 SI redefinition, and does it matter for RF work?
+- Why is the impedance of free space 376.73 Ω and not exactly 120π Ω?
+- How do I convert between V/m, dBµV/m, W/m² and dBm/m²?
+- How do I convert a received power in dBm into a field strength in dBµV/m?
+- What goes wrong when I mix Gaussian (CGS) and SI formulas from old physics books?
+- What are the units of E, H, D, B, J, ρ, σ, ε, μ and how do they fit together?
+=== kb/02-electromagnetics/inductance-capacitance-from-fields.md
+- What *is* inductance and capacitance in terms of fields and stored energy?
+- What is the inductance of a PCB trace, a via or a bond wire — and why do experts say that question is incomplete?
+- What is the difference between loop inductance and partial inductance (Ruehli, Clayton Paul)?
+- How do I compute mutual inductance between two loops or two wires?
+- What are L and C per unit length of coax, a two-wire line, a wire over ground, a microstrip?
+- How big is fringing capacitance, and when does the parallel-plate formula fail?
+- Why does "1 nH/mm" come up so often, and when is it wrong?
+=== kb/02-electromagnetics/magnetic-materials-permeability.md
+- What do μ', μ'' and "complex permeability" mean on a ferrite datasheet?
+- Why does a ferrite's permeability collapse above some frequency, and why can't I have high μ *and* high frequency (Snoek's limit)?
+- Why is a ferrite bead a resistor at 100 MHz rather than an inductor?
+- Which ferrite mix (31, 43, 61, 67…) for 433 MHz or 915 MHz? Do ferrites work at 2.4 GHz?
+- What makes a magnetised ferrite "gyrotropic", and how does that give circulators and isolators?
+- Why does nickel (e.g. in ENIG or connector plating) behave strangely at RF?
+=== kb/02-electromagnetics/maxwells-equations.md
+- What do each of Maxwell's four equations actually say, in plain words?
+- What is displacement current, is it "real", and why is it essential for radio waves to exist?
+- How do the integral and differential forms relate, and when should I use which?
+- What are constitutive relations (D = εE, B = μH, J = σE) and when do they break down?
+- How do I write Maxwell's equations for sinusoidal signals (phasor / time-harmonic form)?
+- Where do KVL and KCL come from, and exactly when do they stop being true?
+- Why does my oscilloscope show different voltages depending on how I route the probe ground lead?
+- Is a conductor a conductor at all frequencies? (σ/ωε and charge relaxation time)
+=== kb/02-electromagnetics/near-field-far-field.md
+- Where does an antenna's near field end and its far field begin?
+- What do λ/2π, 0.62√(D³/λ) and 2D²/λ mean, and which applies to my antenna?
+- How far away must I be to measure an antenna's gain or pattern correctly?
+- What is "wave impedance", and why are magnetic near fields hard to shield?
+- Why does Friis' formula fail when two antennas are close?
+- Why does my radio detune when I put it near the rocket body or my hand?
+=== kb/02-electromagnetics/poynting-vector-power-flow.md
+- What is the Poynting vector and what does it physically represent?
+- How do I convert between transmitted power, power density (W/m²) and field strength (V/m, dBµV/m)?
+- What field strength does my 2 W 433 MHz transmitter produce at 1 km, 10 km or 30 km?
+- Does electrical energy flow *inside* the copper wire or in the space around it?
+- In a coax cable, where exactly is the power flowing?
+- What is reactive power in field terms, and how does the "complex Poynting theorem" relate to impedance?
+- Why can't I use S = E²/377 right next to my antenna?
+=== kb/02-electromagnetics/quasi-static-vs-full-wave.md
+- When can I treat a PCB trace as just a wire, and when must I treat it as a transmission line?
+- Where do the "λ/10" and "λ/20" rules come from, and how wrong is a lumped model at those sizes?
+- How do I decide from a digital signal's rise time rather than its clock frequency?
+- What exactly "breaks" when a circuit gets electrically large: phase, impedance, radiation, KVL?
+- What are electroquasistatic (EQS) and magnetoquasistatic (MQS) approximations?
+- How big is "small" at 433 MHz, 915 MHz, 2.4 GHz on FR-4?
+=== kb/02-electromagnetics/radiation-from-currents-hertzian-dipole.md
+- How do currents produce radiated waves, step by step from Maxwell's equations?
+- What are the scalar and vector potentials, the Lorenz gauge and "retarded" potentials?
+- What are the complete fields of a Hertzian (infinitesimal) dipole, including the near-field terms?
+- Where does R_rad = 80π²(l/λ)² come from, and why do some books get 789 Ω and others 790 Ω?
+- Why do accelerating charges radiate but steady currents don't?
+- How much does a small loop radiate, and why is a small loop antenna so inefficient?
+- Why do cables (common-mode) radiate far more than PCB loops (differential-mode)?
+=== kb/02-electromagnetics/skin-effect-conductor-loss-roughness.md
+- Why does RF current flow near the surface of a conductor, and how deep does it go?
+- What is the skin depth of copper, silver, gold, aluminium and nickel at 433 MHz, 915 MHz, 2.4 GHz, 10 GHz, 77 GHz?
+- What is surface resistance (Ω per square) and how do I get the AC resistance of a wire or a PCB trace from it?
+- What is the proximity effect and when does it matter?
+- How much does copper foil roughness increase loss, and which model (Hammerstad, Groiss, Huray, "cannonball") should I use?
+- Is ENIG bad for RF? Why do people recommend immersion silver, OSP or bare copper?
+- Does silver plating help? Does gold? When is Litz wire useful?
+=== kb/02-electromagnetics/wave-equation-plane-waves-polarization.md
+- How does the wave equation fall out of Maxwell's equations?
+- What are the propagation constant γ = α + jβ and the intrinsic impedance η, and how do I compute them for any material?
+- What is the wavelength and speed of a wave inside FR-4, water or fibreglass?
+- How fast does a 433 MHz signal die in sea water, fresh water or a lossy radome?
+- What is the difference between linear, circular and elliptical polarization, and what is axial ratio?
+- Which way does a "right-hand circularly polarized" wave rotate — and why do physics/optics books say the opposite?
+- How much signal do I lose receiving a circularly polarized GNSS signal with a linear antenna?
+=== kb/02-electromagnetics/waveguides-and-cavity-resonators.md
+- How does a hollow metal pipe carry microwaves, and why does it have a cutoff frequency?
+- What are TE, TM and TEM modes, and why can't a hollow waveguide carry TEM?
+- What waveguide size would I need at 433 MHz, 915 MHz, 2.45 GHz or 10 GHz?
+- Phase velocity is faster than light in a waveguide — doesn't that break relativity?
+- How lossy is a waveguide compared with coax?
+- How do cavity resonators work, and what limits their Q?
+- Why does a small hole or a honeycomb vent block RF (waveguide beyond cutoff)?
+- What is a substrate-integrated waveguide (SIW)?
+- Why does my PCB's power/ground plane pair resonate at a few hundred MHz?
+=== kb/03-transmission-lines-matching/broadband-matching-bode-fano.md
+- Is there a fundamental limit to how wideband I can match a reactive load such as a small antenna?
+- What does the Bode–Fano integral say, in plain words and in numbers?
+- How much can a cleverer matching network improve on a simple one? (At most ≈ 4× for VSWR 2.)
+- Why is my small 433 MHz chip/helical antenna so narrowband and so sensitive to its surroundings?
+- Can a 1 cm 915 MHz antenna cover the whole 902–928 MHz band?
+- How do I estimate an antenna's Q from a NanoVNA sweep, and then its best achievable bandwidth?
+- Can resistive loading, active (non-Foster) or time-varying networks beat the limit?
+=== kb/03-transmission-lines-matching/coax-and-cables.md
+- How is the characteristic impedance of coax calculated from its dimensions?
+- Why is 50 Ω the standard (and why is TV cable 75 Ω)?
+- How much loss do RG-58, RG-174, RG-316, RG-402/405, LMR-195/240/400 and U.FL micro-coax have at 433, 915, 1575 and 2450 MHz?
+- Which cable should I use for a LoRa ground station, and how much range does cable loss cost?
+- How much power can a cable carry, and why does the rating fall with frequency?
+- What limits the maximum frequency of a coax?
+- Which cables are phase-stable (for arrays and interferometry)?
+- How long can a U.FL pigtail be before it hurts a GNSS receiver?
+=== kb/03-transmission-lines-matching/impedance-matching-lumped-and-distributed.md
+- How do I design an L-network, and where does $Q=\sqrt{R_h/R_l-1}$ come from?
+- How do I match a complex load such as a chip antenna measured as 18 − j35 Ω?
+- When should I use a Pi or T network instead of an L, and how do I pick Q?
+- How much bandwidth do I get, and how much loss do real 0402 inductors add?
+- How do single-stub, quarter-wave, binomial, Chebyshev and Klopfenstein matching work, and when do they beat lumped parts?
+- What is the practical procedure for tuning a pi pad on my PCB with a NanoVNA?
+- Is the best match always the conjugate match? (Not for PAs and LNAs.)
+- Why did my perfect simulated match fail on the real board?
+=== kb/03-transmission-lines-matching/input-impedance-stubs-quarter-wave.md
+- What impedance do I see looking into a length of line terminated in some load?
+- Why does a quarter-wave line turn a short into an open (and 12.5 Ω into 200 Ω)?
+- How long must a piece of coax be to act as a quarter wave at 433 MHz?
+- How can a piece of open or shorted line replace an inductor or capacitor?
+- What is a resonant stub, what is its Q, and how is it used as a bias feed or harmonic trap?
+- How much bandwidth does a quarter-wave transformer have?
+- Why is a half-wave line "transparent", and when is it not?
+- How do I convert electrical length (degrees) to millimetres on coax or PCB?
+=== kb/03-transmission-lines-matching/planar-lines-microstrip-stripline-cpwg.md
+- How wide should a 50 Ω trace be on a JLCPCB 2-layer 1.6 mm board, and on the 4-layer JLC04161H-7628 stackup?
+- What are the Hammerstad–Jensen, Wheeler and Kirschning–Jansen formulas, and how accurate are they?
+- Why is microstrip "quasi-TEM" and what is effective permittivity?
+- When should I use grounded coplanar waveguide (CPWG) instead of microstrip?
+- How much do copper thickness and soldermask change the impedance?
+- How do I design a 100 Ω differential pair? Is the IPC-2141 formula good enough?
+- How lossy is a trace on FR-4 at 433 MHz, 915 MHz, 2.45 GHz and 5.8 GHz?
+- At what frequency do microstrip lines start to misbehave (dispersion, surface waves, radiation)?
+- Why does my impedance calculator disagree with another one?
+=== kb/03-transmission-lines-matching/reflections-vswr-return-loss-mismatch.md
+- What is the reflection coefficient Γ and how is it related to VSWR, return loss and mismatch loss?
+- My antenna has a VSWR of 2:1 — how much power am I actually losing?
+- Does "reflected power" burn out my transmitter / LoRa module?
+- Why does the SWR reading change when I change the length of my coax?
+- Why does a long, lossy cable make a bad antenna look well matched?
+- Is return loss positive or negative? Is S11 = −10 dB the same as a return loss of 10 dB?
+- Does low SWR mean my antenna is good?
+- How high does the voltage on the line get when the load is mismatched?
+- Where are the voltage maxima and minima of a standing wave?
+=== kb/03-transmission-lines-matching/s-parameters.md
+- What exactly are S-parameters, and why do we use waves instead of voltages and currents at RF?
+- What do $S_{11}$, $S_{21}$, $S_{12}$, $S_{22}$ mean physically, and what does "referenced to 50 Ω" mean?
+- What is the difference between Kurokawa power waves and Marks–Williams pseudo-waves, and when does it matter?
+- How do I convert S to Z, Y or ABCD, change the reference impedance, or cascade networks (T-parameters)?
+- How do I check that a measured S-matrix is physical (reciprocal, lossless, passive)?
+- What are mixed-mode (differential/common) S-parameters?
+- How do I read a Touchstone (.s2p) file, and why is the column order S11 S21 S12 S22?
+- How do I get group delay from S21? What are K and μ?
+=== kb/03-transmission-lines-matching/signal-flow-graphs-mason.md
+- What is a signal-flow graph and how do I draw one for a two-port between a source and a load?
+- How does Mason's gain rule work, step by step?
+- Where do $\Gamma_\text{in}=S_{11}+S_{12}S_{21}\Gamma_L/(1-S_{22}\Gamma_L)$ and the transducer-gain formula come from?
+- Why can't I measure RF power more accurately than about ±0.1–0.6 dB even with a perfect power sensor?
+- How much does a mismatched source (like a LoRa module) and a mismatched antenna reduce delivered power, and can a mismatch ever *increase* it?
+- Why does my SWR meter read 1.2 on a perfect dummy load?
+- Where do the periodic ripples in a cable's insertion loss come from?
+=== kb/03-transmission-lines-matching/smith-chart.md
+- What exactly is the Smith chart — why are the grid lines circles?
+- How do I read impedance, admittance, VSWR and Q off it?
+- Which way do I move when I add a series inductor, a shunt capacitor, or a length of line?
+- How do I read my NanoVNA's Smith display (markers, loops, spirals)?
+- Why does the trace always go clockwise as frequency increases?
+- What are constant-Q circles and why do they matter for bandwidth?
+- What are noise, gain and stability circles (preview)?
+- What does "negative resistance / outside the chart" mean?
+=== kb/03-transmission-lines-matching/telegrapher-equations-characteristic-impedance.md
+- When does a wire or PCB trace stop being "just a wire" and become a transmission line?
+- What is characteristic impedance physically, and why is it measured in ohms if nothing dissipates?
+- Why does my multimeter read open (or a few ohms) across a 50 Ω coax instead of 50 Ω?
+- How do I derive $Z_0$ and the propagation constant $\gamma=\alpha+j\beta$ from the RLGC model?
+- What is velocity factor, and how do I compute the physical length of a quarter wave in coax?
+- Why is attenuation in dB per metre roughly proportional to $\sqrt{f}$ at low frequency and to $f$ at high frequency?
+- What is a distortionless line and why did Heaviside add inductance to telephone cables?
+- Is $Z_0$ really constant with frequency? Why is it complex at audio frequencies?
+- How do I measure $Z_0$ and velocity factor of an unknown cable with a NanoVNA?
+=== kb/03-transmission-lines-matching/time-domain-reflectometry.md
+- How does a TDR show the impedance along a cable or PCB trace?
+- How do I tell a capacitive from an inductive discontinuity on a TDR trace, and how big is it?
+- How can a VNA (or NanoVNA) produce a TDR plot from frequency data?
+- What sets the spatial resolution and the maximum distance ("alias-free range")?
+- What do the minimum / normal / maximum windows do?
+- What are low-pass vs band-pass modes, and gating?
+- How do I find a bad connector or a kink in a long antenna feed?
+=== kb/04-real-components-hf/capacitors-at-rf-mlcc.md
+- What is the difference between C0G/NP0, X7R, X5R and Y5V, and which do I use in an RF path?
+- Why does my "10 µF" ceramic capacitor measure 3 µF on the 5 V rail?
+- What are ESR, ESL and self-resonant frequency (SRF), and how do I get them for a part?
+- What value DC-blocking capacitor should I use at 433 MHz, 915 MHz and 2.4 GHz?
+- Can I use a capacitor above its self-resonant frequency?
+- Why do people put 100 nF and 100 pF (or 10 nF) in parallel — does it help or hurt?
+- What is the Q of a chip capacitor and does it matter in a matching network?
+- What are "RF-grade" or "high-Q" capacitors (Murata GJM, ATC, Johanson), and are they worth it?
+- What voltage rating do I need in a PA matching network or a tuned antenna?
+- Does capacitor orientation on the board matter?
+=== kb/04-real-components-hf/component-models-s2p-spice.md
+- Where do I get accurate RF models for capacitors, inductors, beads and resistors?
+- What is in a vendor `.s2p` file, and was it measured in series or shunt?
+- Should I use the S-parameter file or the SPICE/equivalent-circuit model?
+- Why doesn't my simulation with vendor models match my board?
+- How do I include pads, vias and the PCB in a simulation that uses de-embedded part models?
+- How can I tell if an S-parameter file is bad (non-passive, non-causal)?
+- How do I use `.s2p` files in scikit-rf, QUCS-S, LTspice or a harmonic-balance simulator?
+- Can S-parameter models show DC bias, saturation or temperature effects?
+=== kb/04-real-components-hf/crystals-and-resonators.md
+- What is inside a quartz crystal electrically (motional R, L, C and C0)?
+- What are series and parallel (anti-)resonance, and what does "load capacitance" on the datasheet mean?
+- How do I pick the two load capacitors for a crystal?
+- How many ppm does 1 pF of extra stray capacitance pull my crystal?
+- What is ESR, negative resistance and gain margin in a Pierce oscillator, and what is drive level?
+- What is the difference between XO, TCXO, VCXO, OCXO and MEMS oscillators?
+- How big is a 10 ppm error at 433 MHz and 915 MHz?
+- When does LoRa need a TCXO? Why do narrow bandwidths and high spreading factors care about crystal drift?
+- Does rocket acceleration or vibration shift my radio's frequency?
+=== kb/04-real-components-hf/ferrites-and-beads.md
+- What does a ferrite bead actually do — is it an inductor or a resistor?
+- What does "600 Ω at 100 MHz" on a bead datasheet mean, and what is it at 433 or 915 MHz?
+- Why does my bead stop working when the load draws current?
+- Can a bead plus a capacitor make supply noise *worse*? How do I damp it?
+- Which bead should I put on the supply of a LoRa module or a GNSS receiver?
+- What are Fair-Rite 31, 43, 61 (and 73) materials and which do I use on a cable?
+- How does a common-mode choke differ from a bead?
+- When does a ferrite bead hurt rather than help?
+=== kb/04-real-components-hf/inductors-at-rf.md
+- What kinds of RF inductors exist (air-core, wirewound ceramic, multilayer, thin-film, ferrite-core) and when do I use each?
+- How do inductance and Q change with frequency, and why does inductance "rise" near the self-resonant frequency?
+- How far below SRF should I operate a chip inductor?
+- Why do multilayer inductors have lower Q than wirewound ones, and how much does it matter?
+- How do I calculate the inductance of an air-wound coil (Wheeler, Nagaoka, Lundin)? How accurate are these formulas?
+- Do RF inductors saturate?
+- What inductor should I use for an RF choke / bias-T at 433 or 915 MHz?
+- Why doesn't my measured inductor match the datasheet?
+=== kb/04-real-components-hf/package-parasitics-bondwires.md
+- How much inductance does a bondwire have? Is "1 nH per mm" right?
+- How much lead inductance do SOIC, TSSOP and QFN packages have?
+- Why do RF ICs (LoRa transceivers, LNAs, PAs) have so many ground pins and a big exposed pad?
+- How should I connect a QFN exposed pad to ground, and how many vias does it need?
+- What does ground inductance do to an amplifier's gain and stability?
+- Why is a PA's ground connection so critical?
+- Why do RF parts come in QFN/BGA/flip-chip rather than SOIC?
+=== kb/04-real-components-hf/pcb-parasitics-traces-vias-pads.md
+- How much inductance does a PCB trace have — is "1 nH per mm" right?
+- What is the difference between partial inductance and loop inductance, and which one matters?
+- How much inductance does a via have on a 1.6 mm 2-layer board vs a 4-layer JLCPCB board?
+- Does putting more ground vias in parallel keep reducing inductance?
+- How much capacitance does a component pad add, and why cut the ground plane under an SMA pad?
+- What happens when a trace crosses a gap or slot in the ground plane?
+- Why should my shunt capacitor's ground via be right at the pad?
+- When can I treat a short trace as a lumped inductor?
+=== kb/04-real-components-hf/resistors-at-rf.md
+- Does a chip resistor still behave like a resistor at 433 MHz, 915 MHz or 2.4 GHz?
+- Why are low-value resistors inductive and high-value resistors capacitive at RF?
+- Is there a resistor value that stays flat to the highest frequency?
+- Thin film or thick film — which for RF?
+- How do I make a good 50 Ω termination on a PCB?
+- What resistor values do I need for a 3/6/10/20 dB 50 Ω attenuator, and can chip resistors take my transmitter's power?
+- How do I derate a chip resistor's power with temperature?
+- Why does a 10 kΩ bias resistor on an RF line not isolate as well as I expected?
+=== kb/05-analog-electronics/active-filters.md
+- How do I design a 2nd-order low-pass with an op-amp, and what sets its $f_0$ and Q?
+- Sallen-Key or multiple-feedback (MFB) — which should I use?
+- How do I build a 4th-, 5th- or 6th-order Butterworth, Bessel or Chebyshev filter from 2nd-order sections?
+- How sensitive is my filter to 1 % resistors and 5 % capacitors?
+- How fast must the op-amp be (GBW) for a given filter?
+- Why does my Sallen-Key low-pass "stop filtering" at high frequency?
+- What order of anti-alias filter do I need in front of an ADC?
+- When should I use a state-variable or biquad filter?
+=== kb/05-analog-electronics/amplifier-topologies.md
+- What do the three basic single-transistor stages (common emitter/source, base/gate, collector/drain) each do well?
+- Why does a common-base stage make a good wideband 50 Ω input, and what noise figure does that cost?
+- Why is the cascode everywhere, from op-amp input stages to LNAs?
+- How does a differential pair reject common-mode noise and why is it more linear than a single transistor?
+- Why do MMIC gain blocks (ERA, MAR, Gali, PGA class) have a Darlington pair and two resistors, and why do I bias them through a resistor and choke?
+- How do the four feedback-amplifier types change input and output impedance?
+- How can I estimate the bandwidth of a multi-capacitor amplifier without solving a big polynomial?
+- How much does emitter degeneration improve linearity (IIP3)?
+- What is a current mirror, and how accurate is it?
+=== kb/05-analog-electronics/analog-signal-conditioning.md
+- When do I need an instrumentation amplifier instead of an op-amp difference amplifier?
+- How much CMRR do I get from 1 % or 0.1 % resistors?
+- How much voltage does a strain-gauge or pressure bridge give, and why measure ratiometrically?
+- How do I scale and shift a ±2.5 V (or 0–8.4 V battery) signal into a 3.3 V ADC?
+- Why does my voltage divider read wrong on the MCU's ADC, and what capacitor fixes it?
+- How do I protect an analog input from ESD, reverse voltage and over-voltage — and how can the protection diodes *back-power* my board?
+- How should I pick a TVS for a battery or pyro rail?
+- How do I filter RF out of long sensor wires without ruining the INA's CMRR?
+- How do I measure pyro-channel current and igniter continuity reliably?
+- When is galvanic isolation needed?
+=== kb/05-analog-electronics/bjt-fundamentals-small-signal.md
+- Why is a BJT's transconductance exactly $I_C/V_T$, whatever the transistor?
+- What are $r_\pi$, $r_e$, $r_o$ and the Early voltage, and how do I get them from the bias point?
+- What do $f_T$ and $f_{max}$ really mean, and why is $f_T$ not "the highest frequency the transistor works at"?
+- Why does a common-emitter stage's bandwidth collapse when its gain is high (Miller effect)?
+- Why should I never design a bias circuit that depends on β?
+- What sets a BJT's noise, what is the optimum source resistance, and why are RF LNA transistors run at several mA?
+- What's special about SiGe HBTs and why are they used for LNAs up to tens of GHz?
+- Why is $BV_{CEO}$ so much lower than $BV_{CBO}$, and why do RF transistors die from 1–2 V of reverse base-emitter voltage?
+- How does saturation work, and what sets $V_{CE(sat)}$?
+=== kb/05-analog-electronics/data-converters-adc-dac.md
+- Where does SNR = 6.02N + 1.76 dB come from, and when is it wrong?
+- What are SINAD, ENOB, SFDR, THD and noise spectral density (dBFS/Hz), and how do I read them off a datasheet?
+- Why does clock jitter limit SNR at high input frequency, and how much jitter can I afford?
+- Where will a 433 MHz or 915 MHz signal land if I sample it at 61.44 or 125 MSPS?
+- How do flash, SAR, pipeline, sigma-delta and time-interleaved ADCs differ, and which suits sensors, SDR or radar?
+- Why do DAC outputs droop and have images, and what is the sinc correction?
+- How much does oversampling and decimation improve SNR?
+- Why does my SAR ADC read wrong unless I put a capacitor at its input (charge kickback), and how do I size the RC?
+- What is an ADC's noise figure, and how much gain do I need in front of it in an SDR?
+- How does reference noise limit an ADC?
+=== kb/05-analog-electronics/diodes-schottky-pin-varactor.md
+- What does the diode equation actually say, and where do 26 mV and "60 mV per decade" come from?
+- Why does a diode's forward voltage drop by about 2 mV per °C?
+- Why is a Schottky diode fast and low-drop, and why is it the default RF detector and mixer diode?
+- How much DC voltage will a Schottky detector give me for a given RF power, and where does square-law detection stop?
+- Why does my zero-bias detector read differently when it gets hot?
+- How does a PIN diode act as a current-controlled resistor at RF but a rectifier at low frequency?
+- How do I estimate insertion loss and isolation of a series or shunt PIN switch?
+- What is the C–V law of a varactor, what is gamma, and how much can I tune a VCO with one?
+- Why does a varactor VCO get noisy or distorted when the RF swing is large?
+- What is a step-recovery (snap-off) diode and what are comb generators used for?
+- Can I put an ordinary TVS or ESD diode on an antenna line?
+- Why are Zener diodes noisy, and which voltage has the lowest temperature coefficient?
+=== kb/05-analog-electronics/feedback-and-stability.md
+- What exactly is "loop gain", and how do I find it in a real circuit?
+- What do phase margin and gain margin mean, and how much do I need?
+- How does phase margin relate to overshoot and ringing on a step response?
+- When is the simple Bode test not enough and I need the Nyquist criterion?
+- How do op-amps stay stable (dominant-pole and Miller compensation, pole splitting, the right-half-plane zero)?
+- Why does my op-amp ring or oscillate when I hang a capacitor (or a long cable, or an ADC input) on its output — and how do $R_{ISO}$ and in-loop compensation fix it?
+- Why does a transimpedance amplifier or a high-value feedback resistor need a small feedback capacitor, and how big?
+- Why does an emitter follower oscillate at hundreds of MHz, and why does a 100 Ω base resistor cure it?
+- How do I track down and cure a parasitic oscillation on a real board?
+=== kb/05-analog-electronics/fets-mosfet-jfet-gaas-gan.md
+- What is the MOSFET square law, and why does it stop working in modern short-channel transistors?
+- What is the $g_m/I_D$ design method and why do analog designers love it?
+- Why does a MOSFET give less transconductance per milliamp than a BJT?
+- When should I use a JFET instead of a BJT or op-amp input?
+- What is a HEMT/pHEMT and why are GaAs pHEMTs the classic lowest-noise LNA device at 0.5–20 GHz?
+- Why is everyone using GaN for power amplifiers?
+- What does LDMOS do that GaN does not (and vice versa)?
+- Why must I apply the negative gate voltage before the drain voltage on GaAs/GaN amplifiers?
+- Which transistor technology should I pick for a given frequency, power and noise requirement?
+- Will my pyro-channel MOSFET really turn on fully with a 3.3 V GPIO?
+=== kb/05-analog-electronics/low-noise-analog-design.md
+- How do I predict the noise of an amplifier from its $e_n$ and $i_n$ and the source resistance?
+- What is the optimum source resistance, and can I "noise-match" by adding a resistor? (No — why?)
+- What noise figure does an op-amp give with a 50 Ω source, and how do transformers or paralleled devices improve it?
+- Why do my thick-film resistors make low-frequency noise when there is DC across them?
+- What is kT/C noise and why does it limit sampling circuits?
+- What is noise bandwidth and how do I convert a filter's −3 dB bandwidth into it?
+- Why is a photodiode transimpedance amplifier's noise dominated by the op-amp's voltage noise, not the feedback resistor?
+- Which amplifier (bipolar, JFET, CMOS) should I use for a 50 Ω, 1 kΩ, 100 kΩ or 10 MΩ source?
+=== kb/05-analog-electronics/op-amps-real-limitations.md
+- Why is my gain-of-10 amplifier's bandwidth only a tenth of the op-amp's GBW — and why does an inverting gain of −1 only get half?
+- What is the difference between small-signal bandwidth and full-power bandwidth?
+- How do I add up $e_n$, $i_n$ and resistor noise, and what does the 1/f corner do to low-frequency noise?
+- How big is the DC error of my circuit (offset, drift, bias current, CMRR, PSRR), and when do I need a zero-drift op-amp?
+- Why does supply ripple from a switching regulator show up at the op-amp output?
+- What does "rail-to-rail" really mean, and why is there distortion near the positive rail on some RRIO parts?
+- Why can't I put a capacitor across the feedback resistor of a current-feedback amplifier?
+- How do fully differential amplifiers drive ADCs, and what input impedance does a single-ended source see?
+- Why does my sensor amplifier's output shift when the LoRa transmitter keys up?
+- How do I choose an op-amp?
+=== kb/05-analog-electronics/oscillators.md
+- What really makes a circuit oscillate, and why is "loop gain = 1 at 0°" not the whole story?
+- How do I view an oscillator as a negative resistance cancelling a resonator's loss?
+- How do Colpitts, Clapp, Hartley and Pierce oscillators work, and what sets their frequency?
+- How do I pick the load capacitors for a crystal, and how much will a wrong value pull my LoRa radio's frequency?
+- What is $g_{m,crit}$ and gain margin for a crystal oscillator, and why do some crystal circuits fail to start in the cold?
+- What limits the amplitude of an oscillator, and how big does it get?
+- What is Leeson's model and why does resonator Q dominate phase noise?
+- How do VCOs, ring oscillators and RC relaxation oscillators differ?
+=== kb/05-analog-electronics/power-supplies-for-rf-and-analog.md
+- How much switching-regulator ripple gets through an LDO at 1–2 MHz, and why does PSRR fall with frequency?
+- How noisy is an LDO (µV rms), and does it matter for my ADC, VCO or sensor?
+- How big is a buck converter's output ripple, and why is it often larger than the formula says?
+- How do supply ripple and noise show up as spurs next to my LO or transmitter carrier?
+- How do I design an LC or ferrite-bead post-filter that does not resonate and make things worse?
+- What happens to a 1S LiPo when a 2 W LoRa module draws 1 A+ bursts through a buck-boost — and to my sensor readings?
+- What is ground bounce, and how big is it?
+- Why must some RF amplifiers be powered up in a particular order?
+- What makes a good voltage reference?
+=== kb/06-rf-circuits/amplifier-stability-and-biasing.md
+- What does "unconditionally stable" actually mean for an RF amplifier?
+- How do I compute the Rollett K factor, |Δ| and the μ factor from S-parameters, and which test should I trust?
+- Why is K > 1 not enough on its own?
+- What is a stability circle and how do I read it on a Smith chart?
+- My LNA simulates fine but oscillates on the bench — where do I look?
+- Why is my transistor unstable at 100 MHz when I designed it for 1.5 GHz?
+- Can a matching network make an unstable transistor stable?
+- How big a resistor do I need to stabilise a transistor, and what does it cost in noise figure and gain?
+- What is MSG vs MAG and why does the datasheet curve have a kink?
+- How do I design a bias tee (choke and blocking capacitor values) for 433 MHz?
+- How do I bias a BJT, an enhancement-mode pHEMT, or a depletion-mode GaAs/GaN FET?
+- In what order must I apply gate and drain voltage to a GaN HEMT, and why?
+- Why does a source via's inductance change stability and input match?
+=== kb/06-rf-circuits/baluns-and-rf-transformers.md
+- Why does my transceiver (CC1101, SX126x RX input, AD9361, many mixers) have differential RF pins, and how do I connect it to a 50 Ω antenna?
+- How do I design a lumped LC ("lattice") balun, and how wide is it?
+- How does a Marchand balun work and what coupling does it need?
+- What is the difference between a Guanella and a Ruthroff transformer, and why does one work to higher frequency?
+- What do amplitude and phase imbalance specs mean for my system?
+- What sets the low- and high-frequency limits of a ferrite transformer?
+- Should I use a chip balun (e.g. Johanson) or discrete parts?
+- What are mixed-mode S-parameters (Sdd, Scs, Sds)?
+=== kb/06-rf-circuits/couplers-dividers-combiners.md
+- How does a Wilkinson divider work, and why does it need a resistor between the outputs?
+- Why can't a three-port be lossless, matched and reciprocal at the same time?
+- How do I design a Wilkinson for 2.45 GHz in microstrip, or with lumped L and C at 433 MHz?
+- How do I make an unequal (e.g. 2:1) power split?
+- What are branch-line (90°) and rat-race (180°) hybrids used for?
+- How do I feed a circularly polarised GNSS patch with a quadrature hybrid, and how good will the axial ratio be?
+- What are coupling, directivity and isolation, and why is my microstrip coupler's directivity so poor?
+- How do I sample a PA's output power with a directional coupler?
+- What is a Lange coupler?
+- When should I use a resistive splitter instead?
+- How much power do I lose when combining two PAs that are not perfectly in phase — or when one fails?
+=== kb/06-rf-circuits/lna-design.md
+- What is the difference between transducer, available, operating and maximum available gain?
+- What are noise parameters (Fmin, Γopt, Rn) and how do I use them?
+- Why can't I have minimum noise figure and a perfect input match at the same time — and how do people get both?
+- How do I draw noise circles and gain circles and choose a source impedance?
+- How does inductive source degeneration give a real 50 Ω input without a noisy resistor?
+- How do I design a discrete pHEMT LNA for 433 MHz or for GPS L1 (1575.42 MHz), step by step?
+- Why does my LNA need a resistor or feedback if I want it stable?
+- How much does inductor Q matter for LNA noise figure?
+- Should the LNA go before or after the SAW filter?
+- Does my LoRa ground station actually benefit from an LNA, and where should it go?
+- Which ready-made LNA MMICs are good at 433 MHz and at GNSS L1?
+- How much power will destroy an LNA, and how close can the rocket's transmitter be?
+=== kb/06-rf-circuits/mixers.md
+- How does multiplying two sine waves shift a signal in frequency, and why do I get both sum and difference?
+- Why is a diode double-balanced mixer's conversion loss about 6 dB, and what is the theoretical minimum?
+- What do "Level 7", LO drive, isolation and IP3 mean on a Mini-Circuits mixer data sheet?
+- What is a spur chart, and which m × n products hurt a 433 MHz receiver with a 10.7 MHz IF?
+- What is the image frequency and the half-IF spur?
+- How does an image-reject (Hartley) or IQ mixer cancel the image, and how much imbalance can I tolerate?
+- What is a Gilbert cell, and what limits its linearity?
+- What are passive FET mixers and why are they used in modern CMOS radios?
+- What is a harmonic mixer, and why does an anti-parallel diode pair mix with 2 × LO?
+- Can I "mix" by sampling (subsampling), and what does it cost in noise?
+=== kb/06-rf-circuits/power-amplifiers.md
+- Why can a class A amplifier never exceed 50 % efficiency, and where does class B's 78.5 % come from?
+- What do the class letters A, AB, B, C, D, E, F and inverse-F actually mean?
+- Why is a PA not conjugately matched? What is the Cripps load line?
+- What is load-pull, and why are the contours shaped like that?
+- How do I pick the output matching network and harmonic filter for a 2 W 433 MHz transmitter?
+- How much harmonic suppression does a LoRa transmitter need to be legal?
+- What is back-off, PAPR, and why does a QAM/OFDM PA run so inefficiently?
+- How does a Doherty amplifier keep its efficiency at 6 dB back-off?
+- What are envelope tracking and digital predistortion?
+- Can a LoRa PA run saturated? (Yes — constant envelope.)
+- How hot will my PA get, and what happens when the antenna breaks off (VSWR)?
+- What sets the class-E component values, and why does the switch see 3.6 × Vcc?
+=== kb/06-rf-circuits/rf-filters-lc-saw-baw-cavity-microstrip.md
+- Should my filter be LC, SAW, BAW, ceramic, helical, cavity or microstrip?
+- Why can't I build a 1.7 MHz-wide 433 MHz filter from chip inductors?
+- How does unloaded Q set a band-pass filter's insertion loss?
+- How do Richards' transformation and the Kuroda identities turn a lumped filter into stubs and lines?
+- How do I design a stepped-impedance microstrip low-pass or a parallel-coupled-line band-pass filter?
+- Why does my microstrip coupled-line filter have a spurious passband at twice the centre frequency?
+- What are coupling coefficients and external Q, and how do I extract them from an EM simulation?
+- What is a coupling matrix and how do cross-couplings create transmission zeros?
+- Why is my 2.45 GHz microstrip filter on FR-4 so lossy?
+- What SAW filter should go in front of a GNSS or 433 MHz receiver, and what insertion loss should I expect?
+=== kb/06-rf-circuits/rf-switches-attenuators-limiters.md
+- How does a PIN diode act as an RF switch, and why does it need milliamps of bias?
+- Series or shunt switch — which gives better isolation, and at what cost?
+- What does "Ron × Coff" mean for a CMOS/SOI switch, and how does it set insertion loss and isolation?
+- How does a quarter-wave T/R switch protect a receiver when transmitting?
+- Which switch should go between a LoRa transceiver's PA and LNA and the antenna?
+- How do I calculate Pi and T attenuator resistor values, and how much power does each resistor take?
+- Why does an attenuator improve return loss?
+- What is a digital step attenuator (DSA) good for?
+- How do I protect an LNA from a nearby transmitter, and what are flat leakage and spike leakage?
+- Why is an anti-parallel diode pair a poor limiter for a 0 dBm-rated GNSS LNA?
+=== kb/06-rf-circuits/vco-and-pll-synthesizers.md
+- How does a phase-locked loop turn a 25 MHz crystal into a clean 433.92 MHz or 3.5 GHz signal?
+- What are Kvco, Kφ (charge-pump gain) and N, and how do they set the loop bandwidth?
+- How do I design a passive loop filter for a given bandwidth and phase margin?
+- Which noise sources dominate close to the carrier and far out, and what is the best loop bandwidth?
+- What is the "normalised phase-noise floor" (PN_SYNTH, figure of merit) on a PLL data sheet?
+- How does fractional-N work, and where does sigma-delta noise go?
+- Where do reference spurs come from and how do I suppress them?
+- How long does a PLL take to lock or hop?
+- When should I use a DDS or a clock generator like the Si5351 instead?
+- How does a VCO's resonator Q set its phase noise (Leeson)?
+=== kb/07-noise-linearity/dynamic-range-sfdr-blocking.md
+- What is spurious-free dynamic range (SFDR) and why is it "two-thirds of IIP3 minus the noise floor"?
+- What is the difference between blocking, desensitisation, adjacent-channel rejection and selectivity?
+- Why can a transmitter on the same mast stop my receiver even though it is on a different channel?
+- How does an ADC's SNR translate into a noise figure, and how much gain do I need in front of an SDR's ADC?
+- What does "processing gain" of an oversampling ADC mean?
+- What is AGC for, and what does it cost?
+- How do I read the SX1262 blocking and ACR numbers?
+=== kb/07-noise-linearity/noise-figure-and-friis.md
+- What exactly is noise figure, and how is it different from noise factor and noise temperature?
+- Why must the LNA go first, right at the antenna?
+- Why does 3 dB of cable in front of my LNA cost me 3 dB, but 3 dB of cable after it costs almost nothing?
+- How do I compute the noise figure of a chain of amplifiers, filters, cables and mixers?
+- Why does my mixer datasheet quote a "DSB" noise figure and why is the "SSB" one 3 dB worse?
+- What are Fmin, Rn and Γopt, and why is the input match for lowest noise not the match for highest gain?
+- What are noise circles?
+- Can a noise figure be negative, or can a cascade be quieter than its first stage?
+=== kb/07-noise-linearity/nonlinearity-p1db-ip3-intermod.md
+- What is the 1 dB compression point, and why does gain drop at high input power?
+- What is IP3 (third-order intercept point), and why do IM3 products rise 3 dB for every 1 dB of input?
+- Is IIP3 always P1dB + 9.6 dB? Why do datasheets disagree with that rule?
+- What is the difference between input-referred (IIP3) and output-referred (OIP3) figures?
+- Which frequencies do intermodulation products land on — and can two other teams' transmitters create a signal on *my* channel?
+- How do I compute the IIP3 of a chain of LNA + filter + mixer + ADC?
+- What are IP2, cross-modulation and AM–PM conversion, and when do they matter?
+- How do I measure IP3 without measuring my test setup instead?
+=== kb/07-noise-linearity/phase-noise-and-jitter.md
+- What does "−120 dBc/Hz at 100 kHz offset" actually mean?
+- How do I convert an oscillator's phase-noise plot into RMS jitter in femtoseconds?
+- What limits the SNR of an ADC sampling a 70 MHz or 433 MHz signal — and why is clock jitter the culprit?
+- What is Leeson's model, and why does oscillator phase noise fall at 30, then 20 dB/decade, then flatten?
+- What is reciprocal mixing, and how does a strong nearby transmitter "deafen" my LoRa receiver through the LO?
+- Why does multiplying a frequency by N raise phase noise by 20 log N?
+- How does a PLL shape phase noise?
+- How much does phase noise hurt OFDM EVM and FMCW radar?
+=== kb/07-noise-linearity/receiver-cascade-analysis.md
+- How do I build a stage-by-stage budget for a receiver (gain, noise figure, IIP3, compression)?
+- Where should the LNA, the SAW filter and the long cable go on a LoRa ground station?
+- How much does each stage contribute to the total noise, and which stage limits linearity?
+- What does a "level diagram" show, and how do I check headroom for a strong interferer?
+- How does a GNSS active antenna chain work out, and what C/N0 should I expect?
+- Is there a script I can reuse for my own chains?
+=== kb/07-noise-linearity/sensitivity-and-mds.md
+- How do I calculate a receiver's sensitivity from its noise figure and bandwidth?
+- What is the difference between sensitivity, noise floor and MDS?
+- How can LoRa receive signals *below* the noise (negative SNR)? Doesn't that break physics?
+- Why does each LoRa spreading-factor step give ~2.5 dB more sensitivity?
+- Is the EBYTE datasheet's "−147 dBm at 2.4 kbps" believable?
+- What sensitivity does my ground station really have at the antenna connector?
+- How do GNSS sensitivity figures like "−167 dBm tracking" relate to C/N0?
+=== kb/07-noise-linearity/shot-and-flicker-noise.md
+- What is shot noise and why is it $2qI$?
+- Does a resistor carrying DC have shot noise?
+- What is 1/f (flicker) noise, and what is a "flicker corner frequency"?
+- Why do zero-IF (direct-conversion) receivers struggle with narrow channels like LoRa?
+- Why does an oscillator's phase noise get steeper (1/f³) close to the carrier?
+- Why does integrated 1/f noise never "settle", and what is the link to the bias-instability floor of an IMU?
+- What are popcorn (burst) noise and generation–recombination noise?
+=== kb/07-noise-linearity/thermal-noise-and-noise-temperature.md
+- Where does the "−174 dBm/Hz" noise floor come from, and is it a law of nature?
+- Why does a resistor make noise at all, and why does the available noise power not depend on its resistance?
+- What is kTB and how much noise is there in a 125 kHz LoRa channel?
+- What is "noise temperature", and why do people describe an amplifier with a temperature in kelvin?
+- What is antenna noise temperature, and is my antenna noisier pointed at the ground or the sky?
+- Why do HF radios not care about receiver noise figure but GNSS receivers care a lot?
+- Why does a 3 dB cable in front of my receiver add exactly 3 dB of noise figure?
+- When does the quantum (Planck) correction to thermal noise matter?
+- Why does my spectrum analyzer show the noise floor 2.5 dB too low in log-average mode?
+=== kb/08-antennas/antenna-fundamentals.md
+- What does an antenna actually do, physically?
+- What is the difference between directivity, gain, and realized gain?
+- If an antenna has "5 dBi gain", does it amplify my signal?
+- What is dBi, dBd, dBic, and how do I convert between them?
+- Why does a half-wave dipole have 2.15 dBi and a short dipole 1.76 dBi?
+- What is effective aperture, and why is it λ²G/4π for every antenna?
+- Why do bigger antennas at low frequency "catch more signal"?
+- What is radiation resistance and how is it different from input impedance?
+- What are radiation efficiency, mismatch efficiency and total efficiency?
+- How do I estimate gain from a beamwidth on a datasheet?
+- What does "antenna bandwidth" mean — VSWR, gain, axial ratio, pattern?
+- Is an antenna's receive pattern the same as its transmit pattern (reciprocity)?
+- How do I calculate EIRP and ERP for my LoRa transmitter?
+- Does a good SWR mean my antenna is efficient?
+=== kb/08-antennas/antenna-matching-and-baluns.md
+- Why does my antenna's SWR change when I touch or move the coax?
+- What is common-mode current on a coax, and where does it come from?
+- Do I need a balun on a dipole? On a Yagi? On a monopole?
+- Current balun vs voltage balun — what is the difference, and which is better?
+- How does a λ/4 sleeve ("bazooka") balun work, and how long should it be at 433 or 915 MHz?
+- How does a λ/2 coax 4:1 balun match a folded dipole?
+- Which ferrite mix should I use (31, 43, 61) and how much choking impedance is "enough"?
+- How do I measure common-mode current or the impedance of a choke?
+- How are Yagi driven elements matched (gamma, hairpin, T-match)?
+=== kb/08-antennas/antenna-measurement.md
+- What does an S11/SWR measurement tell me about my antenna, and what can it not tell me?
+- How far away must the test antenna be for a valid gain or pattern measurement?
+- How do I measure gain without a calibrated reference antenna (three-antenna method)?
+- How do I measure radiation efficiency of a small antenna (Wheeler cap)?
+- How do I measure axial ratio and polarization sense?
+- Can I measure a pattern in my backyard with an SDR, and how accurate is it?
+- Why do my range-test RSSI numbers jump around by ±5 dB?
+- How do I avoid the test cable becoming part of the antenna?
+=== kb/08-antennas/antenna-polarization-and-circular-polarization.md
+- What is the polarization of an antenna, and how is it defined when receiving?
+- What does RHCP actually mean — clockwise from where?
+- What is axial ratio, and how does it relate to cross-polarization?
+- How much signal do I lose with a linear antenna receiving a circularly polarized signal, or two linear antennas at an angle?
+- Why does reflection turn RHCP into LHCP, and why does that help GNSS reject multipath?
+- How do I make circular polarization (crossed dipoles, patches, helices)?
+- My rocket rolls — should the ground station be circularly polarized?
+- What is "spin Doppler"?
+=== kb/08-antennas/antenna-simulation-nec-openems.md
+- Which tool should I use for a Yagi, a whip, a patch, a PCB antenna, or an antenna inside a nose cone?
+- How does NEC work, and what are its segmentation rules?
+- What can NEC-2 not model (dielectrics, PCBs, stepped-diameter elements)?
+- What is the average gain test and why should I always check it?
+- How do I set up a patch or PCB antenna in openEMS (mesh, ports, boundaries, NF2FF)?
+- How do I know my simulation is right (convergence, cross-checks)?
+- What do 4nec2, xnec2c, NEC2++/PyNEC, MMANA-GAL and EZNEC differ in?
+=== kb/08-antennas/antennas-on-rockets.md
+- Where should I put the 433/915 MHz telemetry antenna on my rocket?
+- Can I put the antenna inside a fibreglass nose cone? Inside a carbon-fibre or aluminium body tube?
+- Why do I lose telemetry near apogee when the rocket is straight above the ground station?
+- Why does the signal fade periodically when the rocket rolls?
+- Should the ground station use a Yagi, a helix, or a crossed Yagi, and which polarization?
+- Does the motor plume block the signal during boost?
+- What happens to the link under the parachute and after landing?
+- How much does a nose cone detune the antenna?
+- What do professional sounding rockets use (wraparound, blade, quadraloop)?
+- How do I keep the 2 W LoRa transmitter from deafening the GNSS receiver?
+=== kb/08-antennas/dipoles-and-monopoles.md
+- Why is a half-wave dipole 73 Ω, and where does the +j42.5 Ω come from?
+- How long should I actually cut a 433 MHz or 915 MHz dipole, and why is it shorter than λ/2?
+- Does wire thickness change the resonant length and bandwidth?
+- Why is a quarter-wave monopole 36.5 Ω, and why does mine measure something else?
+- What happens to a λ/4 whip on a small flight-computer board with no real ground plane?
+- Why do ground-plane antennas use drooping radials, and what angle gives 50 Ω?
+- What is a folded dipole and why is it ~300 Ω? What if the two conductors are different diameters?
+- What are sleeve dipoles, J-poles and end-fed half-waves (EFHW), and why a 49:1 transformer?
+- How do loading coils and top hats shorten a monopole, and what does it cost in efficiency?
+- Why does my dipole's SWR change when I move the coax?
+=== kb/08-antennas/gnss-antennas.md
+- Why are GNSS antennas right-hand circularly polarized?
+- Patch or helix — which should I use for GPS/Galileo on a flight computer or a rocket?
+- What does an "active antenna" add, and how much LNA gain do the ZED-F9P and MAX-M10S want?
+- Why does my GNSS patch perform badly on a small board, or inside a rocket body?
+- How big should the ground plane be?
+- What are axial ratio and phase-centre variation, and why do RTK users care?
+- What bands do L1/L2/L5 and E1/E5b/B1/B2 occupy, and does my antenna cover them?
+- Why does my GNSS lose satellites when the LoRa transmitter keys up?
+- Is a chip antenna good enough for GNSS?
+=== kb/08-antennas/helical-antennas.md
+- What is the difference between a normal-mode and an axial-mode helix?
+- How do I design an axial-mode helix for 435 MHz or 2.4 GHz?
+- Why do calculators say my 10-turn helix has 16–17 dBi when it measures ~13 dBic?
+- Which formula for helix gain should I trust — Kraus, King & Wong, or Emerson?
+- How big a ground plane does a helix need?
+- How do I match a helix (≈100–150 Ω) to 50 Ω?
+- Which winding direction gives RHCP?
+- What is a quadrifilar helix (QFH) and why is it used for weather satellites and some GNSS antennas?
+- Is a helix a good ground-station antenna for a rolling rocket?
+=== kb/08-antennas/horn-reflector-aperture-antennas.md
+- Why is the gain of a big aperture antenna ≈ 4πA/λ² times an efficiency?
+- What is aperture efficiency, and why is a dish only 55–70 % efficient?
+- How do I design an optimum-gain pyramidal horn for 5.8 or 10 GHz?
+- How much gain does a 1.2 m dish give at 2.45 or 5.8 GHz?
+- What is the trade-off between illumination taper and spillover, and what edge taper is optimum?
+- How do f/D and the feed pattern go together?
+- How big must a "cantenna" (circular waveguide feed) be for 2.4 GHz?
+- How much does surface roughness of a dish cost (Ruze)?
+- Why does a prime-focus dish reverse circular polarization?
+=== kb/08-antennas/loop-antennas.md
+- How does a small loop radiate, and why is its radiation resistance so tiny?
+- Why is a small loop's efficiency so sensitive to conductor size?
+- What is a "magnetic loop" (small transmitting loop) and why does it need a huge-voltage capacitor?
+- How is a full-wavelength loop different from a small loop?
+- Why do AM radios use ferrite rods, and why are they receive-only?
+- When is a small loop a good receive antenna despite terrible efficiency?
+- Are PCB loop antennas at 433 MHz (key fobs) any good?
+=== kb/08-antennas/patch-antennas.md
+- How does a flat square of copper over a ground plane radiate?
+- How do I calculate the width and length of a patch for 2.45 GHz on FR-4, or for GNSS L1 on Rogers?
+- Why is my FR-4 patch's gain only ~2 dBi when the textbooks say 6–7 dBi?
+- Why is patch bandwidth only 1–3 %, and how do I widen it?
+- Where do I put the feed so it is 50 Ω (inset depth, probe position)?
+- What are surface waves and why do thick, high-εr substrates lose efficiency?
+- How do truncated-corner patches make circular polarization, and how big should the truncation be?
+- What is the difference between probe, inset, aperture-coupled and proximity-coupled feeds?
+- Can I make a 915 MHz or 433 MHz patch for a ground station or a rocket?
+- How do I verify a patch design in openEMS before ordering boards?
+=== kb/08-antennas/pcb-and-chip-antennas.md
+- How does an inverted-F (IFA) antenna work, and why is there a short to ground next to the feed?
+- Can I just copy TI's 2.4 GHz or 868/915 MHz PCB antenna? What must match?
+- Why does my chip antenna perform far worse than its datasheet?
+- How big must the ground plane be, and what is the "keep-out" area?
+- How do I design the pi-matching network, and what do I measure to tune it?
+- Where should an ESP32 module (with PCB antenna) go on my board?
+- Is a PCB antenna viable at 433 MHz on a flight computer?
+- PIFA vs IFA vs meandered monopole vs chip — which do I choose?
+=== kb/08-antennas/small-antenna-limits.md
+- Why can't I make a tiny 433 MHz antenna that is efficient *and* wideband?
+- What is the Chu limit, and what exactly does "ka" measure?
+- What is the difference between Chu's, Hansen's and McLean's Q formulas?
+- How much bandwidth can a chip antenna at 915 MHz possibly have?
+- Why does a lossy small antenna look "wideband"?
+- What is Wheeler's radiansphere?
+- Do fractal antennas beat the limit? What about "nano" or crowdfunded "tiny long-range" antennas?
+- Can a small antenna be directional (superdirective)?
+- Does a matching network fix a small antenna's bandwidth?
+=== kb/08-antennas/yagi-uda-and-log-periodic.md
+- How can un-driven metal rods (directors, reflector) make an antenna directional?
+- Why is the reflector longer and the directors shorter than the driven element?
+- How much gain do I get per metre of boom, and why does it grow so slowly?
+- How do I design a 433 MHz or 915 MHz Yagi for a rocket ground station (DL6WU method)?
+- Does a metal boom change the element lengths? By how much?
+- Why is a 3-element Yagi's feed impedance so low and how do I match it?
+- How accurately must I cut the elements?
+- How do I stack two Yagis, or make a circularly polarized crossed Yagi?
+- What is a log-periodic dipole array (LPDA), and how do I choose τ and σ?
+- Should I use a Yagi or an LPDA for a ground station?
+=== kb/09-propagation-link-budget/atmospheric-rain-attenuation.md
+- Does the atmosphere or rain attenuate my 433/915 MHz telemetry?
+- Why are 22 GHz and 60 GHz "bad" frequencies for long links, and why is 60 GHz used for short-range radios?
+- How much does heavy tropical rain attenuate a 24 GHz or 77 GHz radar?
+- Does fog or cloud matter?
+- How much loss do trees add if the rocket lands in a forest?
+- How much signal do I lose if my ground station is indoors?
+=== kb/09-propagation-link-budget/diffraction-knife-edge.md
+- How much signal do I lose when a hill or building blocks the line of sight?
+- What is the Fresnel–Kirchhoff parameter $v$, and how do I compute it?
+- Why is there 6 dB of loss even when the obstacle just grazes the line of sight?
+- How good is the ITU-R P.526 approximation to the exact knife-edge loss?
+- How do I handle two or more ridges (Deygout, Epstein–Peterson, Bullington), and why do they disagree?
+- My rocket landed behind a ridge — can I still hear it, and does 433 or 915 MHz do better?
+=== kb/09-propagation-link-budget/empirical-path-loss-models.md
+- When should I use free space, plane earth, Hata, Egli, Longley–Rice or an ITU-R method?
+- What model applies to a rocket-to-ground link (air-to-ground)?
+- What model applies to ground-level LoRa between two people or nodes?
+- What is the log-distance model with shadowing, and what path-loss exponents are typical?
+- Why do different "calculators" give answers 20 dB apart for the same link?
+- What are the validity limits of Okumura–Hata, and what happens when I use it for 2 m antennas?
+=== kb/09-propagation-link-budget/fresnel-zones-los-radio-horizon.md
+- What is a Fresnel zone, and why does "I can see the other antenna" not guarantee a free-space link?
+- How big is the first Fresnel zone on a 433 MHz or 915 MHz link?
+- What is the "60 % clearance" rule and where does it come from?
+- How far is the radio horizon, and what is the 4/3-earth (k-factor) model?
+- At what altitude will my descending rocket drop below the horizon or below Fresnel clearance?
+- How high must my ground-level LoRa antennas be for a clear path?
+- What are super-refraction and ducting, and do they matter in Singapore?
+=== kb/09-propagation-link-budget/friis-free-space-path-loss.md
+- How much power does a receiving antenna collect from a transmitter a known distance away?
+- Where does the free-space path loss formula come from, and what are the constants 32.45, 92.45 and −147.55?
+- Do higher frequencies really "attenuate more" in free space?
+- Is 433 MHz or 915 MHz better for range, all else equal?
+- What are EIRP and ERP, and how do they convert?
+- How do I convert between received power, power flux density and field strength (dBµV/m)?
+- When is the Friis equation not valid (near field, ground, obstructions)?
+=== kb/09-propagation-link-budget/ionospheric-hf-propagation.md
+- Does the ionosphere affect my rocket's 433/915 MHz telemetry?
+- Why does HF (3–30 MHz) travel thousands of km while UHF does not?
+- What are the critical frequency, the MUF and the skip zone?
+- What is NVIS and when is it used?
+- What is Faraday rotation, and why do satellite links at VHF/UHF use circular polarisation?
+- What is ionospheric scintillation, and is Singapore affected?
+- How much ionospheric error does GNSS see, and how do dual-frequency receivers remove it?
+=== kb/09-propagation-link-budget/link-budget-methodology.md
+- How do I write a link budget line by line, and what belongs in each line?
+- How far will my E22-400T33D (433 MHz, 2 W) downlink reach to a ground Yagi at 30 km?
+- How does the 915 MHz 1 W E220-900T30D secondary link compare?
+- What is G/T and how does the C/N0 / Eb/N0 form relate to the dBm form?
+- How much fade margin should I leave, and for what?
+- Why do my "10 000 km" free-space ranges not match reality?
+- Does the rocket's exhaust plume block the signal?
+=== kb/09-propagation-link-budget/link-margin-availability.md
+- How much fade margin do I need for 90 %, 99 % or 99.9 % reliability?
+- How do I combine shadowing, fading, antenna-pattern and polarisation uncertainties into one margin?
+- Why is "add up all the worst cases" the wrong approach — and when is it right?
+- Will sending each telemetry packet three times make the link reliable?
+- What margin should a rocket telemetry link carry during ascent, descent and after landing?
+- What is the difference between availability of a fixed link (99.99 %) and reliability of a flight link?
+=== kb/09-propagation-link-budget/multipath-fading-doppler.md
+- What are Rayleigh and Rician fading, and what is the K-factor?
+- How much fade margin do I need for 99 % or 99.9 % reliability?
+- What are delay spread and coherence bandwidth, and is LoRa affected by multipath?
+- What Doppler shift does a Mach 3 rocket produce at 433 MHz, and can LoRa handle it?
+- Why can the *rate of change* of Doppler during boost break a LoRa link even when the shift itself is fine?
+- How often do fades happen and how long do they last?
+- How much does diversity (two antennas, two frequencies, two polarisations) help?
+=== kb/09-propagation-link-budget/polarization-mismatch-loss.md
+- How much signal do I lose when the transmit and receive antennas are not polarised the same way?
+- Why does a circularly polarised ground antenna cost exactly 3 dB with a linear rocket antenna, and why is that often a good deal?
+- What does a CP antenna's axial ratio do to the mismatch loss?
+- What happens to my link as the rocket pitches over, rolls, and swings under the parachute?
+- Why is the signal weakest when the rocket flies straight away from (or toward) the ground station?
+- Which way should the ground antenna be polarised for a landed rocket?
+=== kb/09-propagation-link-budget/two-ray-ground-reflection.md
+- Why does path loss near the ground grow at 40 dB per decade instead of 20?
+- What is the breakpoint (critical) distance, and why does raising an antenna help so much?
+- Why does the signal from a climbing rocket fade in and out every few seconds at the ground station?
+- Does polarisation matter for ground reflection? What is the Brewster angle?
+- Why is a landed rocket so hard to hear, and does it matter which way it is lying?
+- What is the "minimum effective antenna height"?
+- How rough does the ground have to be before the reflection stops mattering?
+=== kb/10-comms-modulation/analog-modulation-am-fm-pm-ssb.md
+- How much of an AM signal's power actually carries the message?
+- What is the difference between AM, DSB-SC, SSB and VSB, and when does each need a coherent receiver?
+- What is the FM modulation index, and how do Bessel functions give the FM spectrum?
+- How wide is an FM signal (Carson's rule), and how good is that rule?
+- Why does FM give better audio SNR than AM, and what is the "FM threshold"?
+- What is the capture effect, and why can two FM stations not be heard at once while two AM aircraft can?
+- What are pre-emphasis and de-emphasis (75 µs / 50 µs), and how many dB do they buy?
+- How is APRS / 1200-baud packet sent over an NBFM radio, and what bandwidth does it use?
+- How do I calibrate FM deviation with a spectrum analyser?
+=== kb/10-comms-modulation/ber-ebn0-and-shannon.md
+- What is Eb/N0, and why do communications engineers use it instead of plain SNR?
+- How do I convert between Eb/N0, Es/N0, SNR, C/N and C/N0 without losing (or gaining) 3 dB?
+- Where does BER = Q(√(2Eb/N0)) for BPSK come from, and how is Q related to erfc?
+- Why does QPSK have the same bit error rate as BPSK even though it sends twice as many bits?
+- What Eb/N0 do I need for a BER of 1e-5 with BPSK, FSK, DPSK, 8-PSK, 16-QAM or 64-QAM?
+- How much worse is non-coherent FSK than coherent BPSK, and why?
+- How do I turn a required Eb/N0 into a receiver sensitivity in dBm for my 10 kbps rocket link?
+- What is the Shannon limit, and why is it −1.59 dB?
+- LoRa works at −20 dB SNR — does it beat Shannon?
+- How much does a short packet (100–300 bits) cost compared with Shannon's infinite-block limit?
+- Why is my simulated BER curve exactly 3 dB away from the textbook curve?
+- How bad is Rayleigh fading for BER, and why does the curve become a straight line on a log plot?
+=== kb/10-comms-modulation/channel-coding-fec.md
+- What does forward error correction actually buy me in dB, and why is "coding gain" quoted at a specific BER?
+- What do (n, k), code rate, minimum distance and "corrects t errors" mean?
+- How do Hamming, Golay, BCH and Reed–Solomon block codes differ, and when is each appropriate?
+- How does a convolutional code and the Viterbi decoder work, and what is the K = 7, rate-½ "NASA standard" code?
+- Why is soft-decision decoding about 2 dB better than hard-decision?
+- What are turbo, LDPC and polar codes, and are they practical on a microcontroller?
+- What is interleaving, and how deep must it be for my fading or spinning-rocket channel?
+- What does LoRa's coding rate CR 4/5 … 4/8 really do for me?
+- Which FEC libraries can I use for a custom radio?
+- For short telemetry packets, how close to Shannon can any code get?
+=== kb/10-comms-modulation/digital-modulation-psk-qam-fsk.md
+- What is the difference between bit rate, symbol rate and baud?
+- What does a constellation diagram actually represent?
+- How wide is an FSK signal — is it just twice the deviation?
+- What is the modulation index of FSK, and why are h = 0.5 (MSK) and h = 1 special?
+- What are MSK, GFSK and GMSK, and what does "BT = 0.3" mean?
+- Why do satellites use OQPSK or π/4-QPSK instead of plain QPSK?
+- How many bits per second per hertz can BPSK, QPSK, 16-QAM or 64-QAM deliver?
+- What is PAPR, and why does 16-QAM force me to run my PA backed off?
+- What is EVM, and how does it relate to SNR?
+- Which modulations can be demodulated without recovering the carrier phase?
+- Why do cheap 433 MHz remotes use OOK and most ISM data radios use GFSK?
+=== kb/10-comms-modulation/matched-filter-detection.md
+- What is a matched filter and why is it "optimal"?
+- Why is the best possible output SNR 2E/N0 no matter what shape the pulse has?
+- Is a matched filter the same thing as a correlator?
+- Why does my receiver need a root-raised-cosine filter if the transmitter already has one?
+- How much do I lose if I use a plain RC or crystal IF filter instead of a true matched filter?
+- How does a radar compress a long chirp into a short pulse, and what does that have to do with LoRa?
+- How do I set a threshold to detect a preamble or sync word with a given false-alarm rate?
+- Why does a small frequency offset destroy my sync-word correlator on a fast rocket?
+- What changes when the noise is not white?
+=== kb/10-comms-modulation/modulation-choice-guide.md
+- For a given range, data rate, power and bandwidth, which modulation and FEC should I use?
+- How do LoRa, GFSK, BPSK+FEC, QPSK+LDPC and OFDM compare in required Eb/N0, bandwidth and hardware complexity?
+- Is LoRa actually more sensitive than FSK or PSK *at the same data rate*, or only because it is slower?
+- What changes for a fast rocket (Doppler, antenna nulls, near-pad dynamic range)?
+- When is a coherent PSK design worth the extra receiver complexity?
+- When is OFDM or high-order QAM justified?
+- What should I pick for a custom 433/915 MHz telemetry radio, and for a video downlink?
+=== kb/10-comms-modulation/ofdm.md
+- What is OFDM, and why do Wi-Fi, LTE/5G and DVB-T all use it?
+- Why are the subcarriers "orthogonal" even though their spectra overlap?
+- How does an inverse FFT generate OFDM, and what does the cyclic prefix do?
+- How long must the cyclic prefix be?
+- Why does OFDM have such a high peak-to-average power ratio, and what does that do to my PA?
+- Why is OFDM so sensitive to frequency offset and phase noise?
+- How are timing and frequency synchronised (Schmidl–Cox), and what are pilots for?
+- Should I use OFDM for a custom rocket telemetry or video link?
+=== kb/10-comms-modulation/packet-framing-protocols.md
+- What goes into a radio packet, and why each part?
+- How long should my preamble be, and what makes a good sync word?
+- How do I set the sync-word error tolerance for a given false-alarm rate?
+- Which CRC polynomial should I use, what does "HD = 4 up to 32 751 bits" mean, and what is the chance a corrupted frame passes the CRC?
+- Why do FSK radios "whiten" data, and how does PN9 whitening work?
+- How does packet error rate relate to bit error rate, and what frame length maximises throughput?
+- When should I use ARQ (retransmission) versus FEC — and what can a downlink-only rocket link do instead of ARQ?
+- How should I design a rocket telemetry frame (headers, counters, versions), and what can I borrow from CCSDS?
+=== kb/10-comms-modulation/pulse-shaping-isi.md
+- Why can't I just send rectangular pulses?
+- What is intersymbol interference (ISI) and where does it come from?
+- What is the Nyquist ISI criterion, and what is the minimum bandwidth for a given symbol rate?
+- What is the difference between a raised-cosine and a root-raised-cosine filter, and why do we split it between TX and RX?
+- How does the roll-off factor β trade bandwidth against timing sensitivity and PAPR?
+- How long should my RRC FIR filter be?
+- How do I read an eye diagram?
+- Does my rocket telemetry link need an equaliser?
+- What are zero-forcing, MMSE and decision-feedback equalisers, and which should I use?
+=== kb/10-comms-modulation/spread-spectrum-dsss-fhss-css.md
+- What is spread spectrum, and what is "processing gain"?
+- Does spreading improve performance against ordinary thermal noise?
+- What is jamming margin, and how do I compute it?
+- What are m-sequences and Gold codes, and how are GPS C/A codes generated?
+- How does frequency hopping differ from direct sequence, and what does it protect against?
+- How does chirp spread spectrum (LoRa) work, and why is it equivalent to M-ary FSK?
+- Why does a frequency offset look like a timing offset in LoRa, and what does rocket Doppler do to it?
+- How can GPS signals be received when they are ~18 dB below the thermal noise floor?
+- How does CDMA let many users share a channel, and what is the near–far problem?
+=== kb/10-comms-modulation/synchronization-carrier-timing.md
+- What has to be synchronised in a digital receiver, and in what order?
+- How does a Costas loop recover the carrier of a BPSK/QPSK signal that has no carrier component?
+- How do I choose the loop bandwidth and damping, and compute the loop-filter gains?
+- How much phase jitter does a carrier loop add, and how much does that cost in BER?
+- How do I estimate a frequency offset, and what is the best possible accuracy (Cramér–Rao bound)?
+- How do Gardner and Mueller–Müller timing recovery work, and which needs what?
+- How do I find the start of a packet (preamble, sync word), and what threshold do I use?
+- How big is the Doppler shift on a rocket, how fast does it change, and how do I handle it?
+- Why is a ±10 ppm crystal a bigger problem than Mach-3 Doppler at 433 MHz?
+=== kb/11-radar/detection-theory-cfar.md
+- What SNR does a radar actually need to "see" a target, and where do numbers like 13 dB come from?
+- What are probability of detection (Pd) and probability of false alarm (Pfa), and how are they traded?
+- What is the Neyman–Pearson criterion and why does it lead to "compare the magnitude with a threshold"?
+- Why does a fluctuating target (a drone, a person) need so much more SNR than a steel sphere?
+- What are the Swerling I–IV models and which one should I use for my target?
+- How accurate are Albersheim's and Shnidman's equations?
+- Is non-coherent integration gain really √N? (No — it is closer to N^0.7–N^0.85.)
+- What is CFAR, why does my FMCW radar need it, and how do I set the threshold multiplier?
+- CA-CFAR vs OS-CFAR vs GO/SO-CFAR — which one should I use and what do they cost?
+- How many false alarms per second will my range–Doppler map produce at Pfa = 10⁻⁶?
+- What is CFAR loss and how many reference cells do I need?
+=== kb/11-radar/pulsed-radar-and-pulse-compression.md
+- What sets a pulsed radar's range resolution — the pulse length or the bandwidth?
+- How do I choose the PRF, and why can't I have both unambiguous range and unambiguous velocity?
+- What are duty cycle, average power and blind (eclipsed) range?
+- What is pulse compression and why do solid-state radars need it?
+- Why does a matched-filtered chirp have −13 dB sidelobes, and what does a Hamming or Taylor window cost?
+- What are Barker codes, and why is 13 the longest?
+- Frank, P4, polyphase codes — when do I use them instead of a chirp?
+- What is "range–Doppler coupling" and why is a chirp called Doppler-tolerant?
+- How does stretch processing relate to FMCW radar?
+- How many samples per resolution cell do I need to avoid straddle loss?
+=== kb/11-radar/radar-cross-section.md
+- What exactly is radar cross section, and why is it not the physical area of the target?
+- What is a dBsm?
+- Why does a small metal sphere reflect so weakly at low frequency, and why does RCS oscillate near one wavelength?
+- What are the RCS formulas for a sphere, flat plate, cylinder, dihedral and trihedral corner reflector?
+- How do I build a corner-reflector calibration target for my 24/60/77 GHz radar, and how big should it be?
+- What RCS should I assume for a person, a drone, a car, a bird, or a hobby rocket?
+- Why does the echo from a drone or a car jump around by 10–20 dB when it turns slightly?
+- Which Swerling model fits which target?
+- How do stealth shaping and radar-absorbing materials reduce RCS?
+- How do I measure the RCS of my own target (e.g. a rocket airframe)?
+=== kb/11-radar/radar-range-equation.md
+- How far can my radar see a given target, and how do I derive the radar equation from scratch?
+- Why does radar range grow only as the fourth root of transmit power?
+- How does the radar equation differ from the Friis equation for a communication link?
+- What is the "energy" form of the radar equation, and why do pulsed and FMCW radars obey the same law?
+- How do I write the radar equation for a TI mmWave FMCW chip (the SWRA553 form)?
+- What losses should I budget (window, straddle, beam shape, CFAR, atmosphere, rain), and how big are they?
+- What is the search-radar (power–aperture) equation, and when do I use it instead of the track form?
+- How does the bistatic / passive-radar equation work?
+- How far can a 24 GHz HB100/CDM324-type module see a person, and why does an FFT extend it?
+- Can a DIY S-band radar track a small rocket to apogee?
+- Why does a 60 GHz radar lose range outdoors, and how much does tropical rain hurt 77 GHz?
+=== kb/12-phased-arrays/array-factor-linear-arrays.md
+- What is an "array factor" and where does the sin(Nx)/sin(x) formula come from?
+- Why is the pattern of an array "element pattern × array factor", and when is that wrong?
+- How narrow is the beam of an N-element array with half-wavelength spacing?
+- Where are the nulls and how high is the first sidelobe of a uniform array?
+- What is the difference between a broadside and an endfire array, and what is the Hansen–Woodyard trick?
+- How do I calculate the directivity of an array — is it just 10·log10(N) + element gain?
+- If I combine N receivers coherently, how much does my SNR improve, and why?
+- Why does a transmit array's EIRP grow as N² but its receive G/T only as N?
+- How far away do I need to be to measure an array's far-field pattern?
+- Is an array of 4 dipoles better than a Yagi for my ground station?
+- What is the connection between an array pattern and a Fourier transform / an FIR filter?
+- Why does array directivity stay the same when I scan a λ/2-spaced array of isotropic elements, even though the beam gets wider?
+=== kb/12-phased-arrays/beam-steering-grating-lobes.md
+- What phase do I put on each element to point the beam at 40°?
+- What is a grating lobe and why is it "spatial aliasing"?
+- What element spacing can I use if I only need to scan ±30° (or ±60°)?
+- Is λ/2 spacing always safe?
+- Why does the beam get wider and the gain drop as I steer away from broadside?
+- What is beam squint, and when do I need true-time delay instead of phase shifters?
+- How much bandwidth can a phase-shifter-steered array handle?
+- How many phase-shifter bits do I need? Do more bits give finer beam pointing?
+- What are quantisation lobes and how high are they with a 4-bit phase shifter?
+- Why does my beam point at the wrong angle when I change frequency?
+- How accurately can I point the beam if my element phases have random errors?
+- What is "visible space" and "u-space"?
+=== kb/12-phased-arrays/planar-arrays-element-pattern-coupling.md
+- How do I steer a 2-D (planar) array in azimuth and elevation?
+- Should I put the elements on a square grid or a triangular grid?
+- My patch is perfectly matched on its own — why is it mismatched once it's in the array, and why does the match change as I steer?
+- What is the difference between the isolated element pattern, the embedded (active) element pattern and the array factor?
+- What is "active reflection coefficient" (scan impedance) and how do I measure it with an ordinary 2-port VNA?
+- What is scan blindness, and will my FR-4 patch array suffer from it?
+- Why is the gain of an array less than N × the gain of one element (the element-gain paradox)?
+- What is the maximum gain one element can contribute in a big array?
+- Do edge elements behave differently? What changes for a small (4–16 element) array?
+- How strong is the coupling between two λ/2 dipoles or patches half a wavelength apart?
+- Is closer spacing always safer?
+- How does coupling affect a direction-finding array?
+=== kb/14-sdr-dsp/digital-filters-fir-iir.md
+- What is the difference between an FIR and an IIR filter, and which should I use in an SDR?
+- How many taps does my FIR need for a given transition band and stop-band attenuation?
+- Window method, least-squares or Parks–McClellan (remez) — which and why?
+- What is linear phase / group delay, and why do demodulators care?
+- How do I turn an analogue Butterworth/Chebyshev/elliptic design into a digital IIR, and what is prewarping?
+- Why did my high-order IIR blow up when I put it in fixed point (or even float32)?
+- How many coefficient bits do I need for 80 dB of stop-band?
+- How many accumulator bits does a fixed-point FIR need?
+- How expensive (multiplies per second) is a channel filter for a LoRa channel?
+- Why is my filter's output delayed, and by how much?
+=== kb/14-sdr-dsp/fft-spectral-analysis-windows.md
+- What exactly does an FFT bin represent, and how wide is it?
+- Why does my SDR's noise floor drop when I increase the FFT size, while the signal stays put?
+- Which window should I use — Hann, Blackman–Harris, flat-top, Kaiser — and what do ENBW and scalloping loss mean?
+- How do I convert FFT output to dBFS, dBFS/Hz, or (with calibration) dBm/Hz?
+- Why does a tone's level change by up to ~4 dB depending on its exact frequency?
+- Does zero-padding increase resolution?
+- Why is a single FFT of noise so "grassy", and how much averaging do I need?
+- Why does averaging in dB give a noise floor that's 2.5 dB too low?
+- How do I measure the noise figure of my SDR setup with an FFT?
+- What FFT length should a spectrogram use to show a LoRa chirp clearly?
+- What is the FFT's processing gain for finding weak tones?
+=== kb/14-sdr-dsp/iq-complex-baseband.md
+- Why do SDRs deliver *complex* samples (I and Q) instead of ordinary real numbers?
+- What is a "negative frequency" on my SDR's waterfall?
+- How does a quadrature (IQ) mixer turn an RF signal into I and Q, and how does a transmitter go back?
+- What is that spike right in the middle of my SDR spectrum, and how do I get rid of it?
+- Why do I see a faint mirror copy of a strong signal on the opposite side of the centre frequency (HackRF, Pluto, LimeSDR)?
+- How much image rejection does 0.1 dB of gain error and 1° of phase error give me?
+- What is "offset tuning", and what does it *not* protect me from?
+- Is the RTL-SDR a zero-IF receiver?
+- How do I correct IQ imbalance in software?
+- What are analytic signals and the Hilbert transform used for in practice?
+- How many Hz off will my 433.92 MHz signal appear for a given ppm error?
+=== kb/14-sdr-dsp/sampling-aliasing-bandpass-sampling.md
+- What does the Nyquist–Shannon sampling theorem actually say, and where does the factor of 2 come from?
+- Why does a 1.1 MHz tone show up at 100 kHz when I sample at 1 MS/s?
+- What is a Nyquist zone, and why is a signal in the second zone "upside down"?
+- Can I sample a 70 MHz IF (or even 433 MHz directly) with an ADC running far below twice the carrier? Which sample rates are allowed?
+- Why does an SDR with a 2.4 MS/s sample rate show 2.4 MHz of spectrum, not 1.2 MHz?
+- How steep does my anti-alias filter have to be?
+- Why does undersampling make my noise floor worse?
+- How much clock jitter can I tolerate if I sample a 433 MHz signal directly?
+- Why can't I use the whole ±fs/2 span of my SDR's display?
+- What sample rate should I pick to receive a 125 kHz LoRa channel?
+=== kb/15-lora-ism-radios/ground-station-design.md
+- Should my ground station use an omni, a Yagi or a helix?
+- Where do the LNA and the SAW filter go, and in which order?
+- How much does coax loss before the receiver cost me?
+- How fast must I track the rocket, and can I do it by hand?
+- Is it worth running two receivers (diversity)?
+- How do I record the raw LoRa signal with an SDR and decode it later?
+- How high must my antenna be for a ground-to-ground or post-landing link?
+- What should the ground station log so a flight can be analysed afterwards?
+- Why might a 923 MHz receiver in Singapore be desensitised by nearby cellular sites?
+=== kb/15-lora-ism-radios/ism-band-plans-duty-cycle.md
+- Which frequencies and power levels may a LoRa radio use in Singapore?
+- Is my 2 W E22-400T33D at 433 MHz or 1 W E220-900T30D at 900 MHz legal in Singapore?
+- What are the EU 868 MHz sub-bands and duty-cycle limits (ETSI EN 300 220)?
+- What do the US FCC §15.247 rules (hopping, 400 ms dwell, 1 W, 6 dBi) mean for LoRa?
+- What is AS923 and why does Singapore use it?
+- What is the difference between e.r.p., e.i.r.p. and conducted power?
+- How often may I transmit a telemetry packet under a 1 % or 10 % duty cycle?
+- Why can't SF11/SF12 at 125 kHz be used in 400 ms-dwell regions?
+=== kb/15-lora-ism-radios/lora-impairments-doppler-drift-timing.md
+- How much frequency error between transmitter and receiver can LoRa tolerate?
+- Does a Mach 3–5 rocket's Doppler shift break a LoRa link at 433 or 915 MHz?
+- Why can acceleration (Doppler *rate*) break LoRa even when the Doppler shift is small?
+- Which SF/BW settings survive the boost phase of a high-power rocket?
+- Do I need a TCXO, or is a ±10–20 ppm crystal fine?
+- What does low-data-rate optimisation (LDRO) protect against, and can I force it on?
+- What is the LoRa capture effect, and what happens when two packets collide?
+- Are different spreading factors really orthogonal?
+- How does multipath affect LoRa?
+- Can my 433 MHz radio interfere with my 900 MHz radio on the same rocket?
+=== kb/15-lora-ism-radios/lora-modules-ebyte-rfm-heltec.md
+- What is inside an EBYTE E22-400T33D and E220-900T30D, and what do the part-number letters mean?
+- How do the EBYTE M0/M1 modes, AUX pin and configuration registers work?
+- What SF/BW/CR does an EBYTE "air data rate" of 2.4k or 19.2k correspond to?
+- How do I read RSSI from an EBYTE module, and what are LBT, WOR and the "encryption key"?
+- How much current and heat does a 2 W module need, and what supply should I design?
+- Can an EBYTE UART module talk to a bare SX1262 running RadioLib?
+- Which dev boards (Heltec, RAK4631, T-Beam, Wio-E5, RFM95) use which chip?
+- Should I use a UART module or a bare chip with my own firmware for the next flight computer?
+=== kb/15-lora-ism-radios/lora-phy-css-math.md
+- What exactly is a LoRa chirp, and how does a chirp carry bits?
+- What do spreading factor (SF), bandwidth (BW) and coding rate (CR) actually change?
+- Why is the LoRa symbol time $2^{SF}/BW$, and what is a "chip"?
+- How do I calculate the LoRa bit rate for a given SF, BW and CR?
+- How does a LoRa receiver demodulate — why "de-chirp and FFT"?
+- Where does LoRa's "processing gain" come from and how big is it?
+- How long is my packet on the air (time-on-air), and why do SX127x and SX126x formulas look different?
+- What are the preamble, sync word, header, CRC and low-data-rate optimisation (LDRO)?
+- Why does each SF step only buy ~2.5 dB of sensitivity instead of 3 dB?
+- What do the 4.25 symbols and the "+8" in the time-on-air formula mean?
+- Why can't my SX1262 talk to my SX1276 at SF6?
+=== kb/15-lora-ism-radios/lora-sensitivity-and-link-budget.md
+- How do I calculate the sensitivity of a LoRa receiver for a given SF and bandwidth?
+- Why does LoRa work below the noise floor, and what SNR does each SF need?
+- What noise figure do Semtech chips really have?
+- Is EBYTE's "−147 dBm sensitivity at 2.4 kbps" believable?
+- What range can my E22-400T33D (433 MHz, 2 W) or E220-900T30D (900 MHz, 1 W) actually reach from a rocket?
+- If LoRa's link budget is 160+ dB, why do rockets lose telemetry after landing?
+- Would a Singapore-legal 10 mW (433 MHz) or 100 mW (920 MHz) radio still reach 10–30 km?
+- Are the "LoRa world records" (700–1300 km) real, and what do they mean for me?
+- How much does urban noise and interference in Singapore cost me?
+=== kb/15-lora-ism-radios/lorawan-vs-raw-lora.md
+- What is the difference between LoRa and LoRaWAN?
+- What are LoRaWAN Class A, B and C devices?
+- What does ADR do, and why is it bad for moving devices?
+- Could I send rocket telemetry through The Things Network or a LoRaWAN gateway?
+- What are Meshtastic and Reticulum, and are they useful for a launch site?
+- Which should I use for a rocket downlink, an RTK-correction link, or a recovery beacon?
+=== kb/15-lora-ism-radios/other-ism-radios-fsk-2g4.md
+- How does LoRa compare with plain FSK/GFSK radios (CC1101, Si4463, SX126x FSK) at the same data rate?
+- What are SiK/RFD900x telemetry radios, and why do UAV and rocketry people use them?
+- Is an XBee-PRO 900HP better than LoRa?
+- What can 2.4 GHz options (nRF24L01+, nRF52840 BLE long range, ESP-NOW LR, SX1280 FLRC) do?
+- When should I choose FSK over LoRa for rocket telemetry?
+=== kb/15-lora-ism-radios/rocket-telemetry-radio-design.md
+- How do I choose SF, bandwidth and packet size so my rocket telemetry keeps up with the flight?
+- What should a telemetry packet contain, and how do I make packet loss measurable?
+- Is LoRa's built-in coding enough, or do I need extra FEC?
+- Which radio settings survive boost (Doppler rate), and which are best after landing?
+- Why does telemetry drop out near apogee or right above the pad, and how do antenna placement and roll matter?
+- Does the motor plume block the signal?
+- How do I run a 433 MHz and a 900 MHz radio on the same vehicle without them interfering?
+- Should my rocket accept commands over the radio, and if so how do I make that safe?
+- Can I send RTK corrections to the rocket over LoRa while it is also transmitting telemetry?
+- What have amateur and university rocket teams actually flown for telemetry?
+=== kb/15-lora-ism-radios/semtech-chip-family.md
+- Which LoRa chip is inside my E22 / E220 / RFM95 / Heltec board, and does it matter?
+- What is the difference between SX1276, SX1278, SX1262, SX1268 and LLCC68?
+- Why can't an LLCC68 run SF12?
+- Which chip should I use for a new 433 MHz or 920 MHz rocket radio?
+- What do PA_BOOST, OCP, paDutyCycle/hpMax, DIO2 RF-switch and DIO3 TCXO settings do?
+- What SX126x errata/known limitations must firmware work around?
+- What are LR1110/LR1120/LR1121/LR2021 and SX1280, and when are they worth it?
+- Why must I run image calibration for 433 MHz on an SX126x?
+=== kb/17-test-measurement/nanovna-librevna-practical.md
+- Which low-cost VNA should I buy (NanoVNA-H4, NanoVNA V2 Plus4, LiteVNA, LibreVNA) for 433 MHz, 915 MHz and GNSS work?
+- Why does my NanoVNA get noisy above 300 MHz, and how far can I trust it at 915 MHz and 1.5 GHz?
+- Which firmware and PC software should I use?
+- How do I measure my rocket's antenna S11 in its final position without the cable lying to me?
+- How do I tune a pi-match footprint on my board with a NanoVNA?
+- How do I measure a filter's S21, a cable's loss and velocity factor, or find a fault with TDR?
+- How do I measure an SMD inductor, capacitor or ferrite bead with a NanoVNA?
+- Why does the SWR change when I touch the cable, and how do I stop it?
+- Can I connect an LNA or a transmitter directly to the NanoVNA?
+=== kb/17-test-measurement/vna-fundamentals-calibration.md
+- What is inside a vector network analyzer and what does "directivity" or "source match" mean for it?
+- Why does a VNA need calibration at all, and why exactly three standards for a one-port?
+- How do you derive the open-short-load (SOL) calibration equations?
+- What are the 12-term and 8-term error models, and which one does my NanoVNA/LibreVNA use?
+- SOLT, SOLR (unknown thru), TRL, LRM — which calibration should I use and why?
+- What are "offset delay", "C0…C3" and "L0…L3" in a calibration-kit definition, and do they matter below 1 GHz?
+- What is the difference between port extension and de-embedding?
+- Why does my calibration go bad when I add an SMA-to-U.FL adapter after calibrating?
+- How do IF bandwidth and averaging change dynamic range and sweep time?
+- How accurate is a return-loss number from a low-cost VNA?
+=== kb/19-regulations-safety/amateur-radio-licensing.md
+- Can I legally run my 2 W 433 MHz LoRa telemetry under a ham licence in Singapore?
+- How do I get a Singapore amateur licence, what does the exam cover and what does it cost?
+- What is the difference between the Singapore Restricted and General class licences?
+- What power may a Singapore amateur use on 70 cm, and does the Yagi gain count?
+- Is encryption allowed on amateur radio? Is the EBYTE "encryption key" a problem?
+- How often must a telemetry transmitter send its callsign?
+- Is one-way telemetry from a rocket or balloon allowed on amateur bands?
+- Can a Singapore ham transmit in the USA at Spaceport America, or do I need a US licence?
+- Is LoRa "spread spectrum" under FCC Part 97, and why does it matter?
+- Can I use 902–928 MHz (33 cm) amateur privileges at Spaceport America?
+- What happens legally if my rocket goes above 50 km?
+- When is licence-exempt (SRD/Part 15) better than amateur operation for 433 MHz telemetry?
+=== kb/19-regulations-safety/singapore-imda-rules.md
+- Is my 2 W EBYTE E22-400T33D (433 MHz) legal to use in Singapore?
+- Is my 1 W EBYTE E220-900T30D (900 MHz band) legal in Singapore, and on which channel?
+- What power and duty cycle does IMDA allow for LoRa at 433 MHz, 866–869 MHz and 917–925 MHz?
+- What law actually makes low-power radios licence-free in Singapore?
+- Is it illegal just to *own* a 2 W radio module in Singapore?
+- Does antenna gain count towards the IMDA power limit?
+- What is the difference between e.r.p. and e.i.r.p. in IMDA documents?
+- What licences can a student rocketry team get to transmit at higher power (amateur, experimental, temporary permit)?
+- How much does an IMDA temporary frequency permit cost and how long does it take?
+- Do I need to register equipment with IMDA if I build my own radio?
+- What should our rocket and ground station comply with before we switch them on in Singapore?
+- Can I use a 24 GHz or 60 GHz radar module in Singapore?

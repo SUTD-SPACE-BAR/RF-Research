@@ -1,0 +1,45 @@
+==========================================================================================
+1) Symbolic: second derivative of the range r(t) = |p(t) - s|
+   d2r/dt2 == a.rhat + (|v|^2 - rdot^2)/r :  True
+   and |v|^2 - rdot^2 = v_perp^2 (component of v across the line of sight) => term >= 0 always
+   straight pass at speed v, miss distance R0: rddot(t=0) = v**2/R0
+==========================================================================================
+2) Reference 10 km trajectory (proj_lora_link.tune_apogee)
+   peak kinematic |a| (ascent) 11.1 g; burnout 6.93 s; apogee 9998 m at 41.3 s
+   Station 0.5 km cross-range:
+     numeric vs analytic rddot max diff 0.036 m/s^2 (away from the rail-exit/burnout steps)
+     max |rddot|  15.3 g at t =  2.95 s (a.rhat   7.2 g + vperp^2/R   8.1 g; R 0.67 km, v 312 m/s)
+     max |a.rhat| alone   9.0 g; max vperp^2/R alone   8.5 g (t = 2.61 s); in burn: max |rddot| 15.3 g
+   Station 2 km cross-range:
+     numeric vs analytic rddot max diff 0.016 m/s^2 (away from the rail-exit/burnout steps)
+     max |rddot|  13.7 g at t =  5.86 s (a.rhat   6.2 g + vperp^2/R   7.5 g; R 2.68 km, v 595 m/s)
+     max |a.rhat| alone   7.1 g; max vperp^2/R alone   7.9 g (t = 5.07 s); in burn: max |rddot| 13.7 g
+   Station 5 km cross-range:
+     numeric vs analytic rddot max diff 0.009 m/s^2 (away from the rail-exit/burnout steps)
+     max |rddot|  11.1 g at t =  6.93 s (a.rhat   4.0 g + vperp^2/R   7.0 g; R 5.58 km, v 692 m/s)
+     max |a.rhat| alone   4.0 g; max vperp^2/R alone   7.0 g (t = 6.93 s); in burn: max |rddot| 11.1 g
+==========================================================================================
+3) Per-packet Doppler drift, 32-byte frame (CR4/5, 8-sym preamble, CRC), ascent windows
+   'full' = drift of the true Doppler over the packet; 'acc-only' = a.rhat integrated
+   f = 433.125 MHz
+     SF 7/125k      ToA    71.9 ms limit  325.5 Hz | 0.5 km:    15.6 (    9.2) ok   | 2 km:    14.0 (    7.2) ok   | 5 km:    11.2 (    4.1) ok  
+     SF 8/125k      ToA   133.6 ms limit  162.8 Hz | 0.5 km:    29.0 (   17.1) ok   | 2 km:    26.0 (   13.4) ok   | 5 km:    20.8 (    7.5) ok  
+     SF 9/125k      ToA   246.8 ms limit   81.4 Hz | 0.5 km:    53.5 (   31.6) ok   | 2 km:    48.0 (   24.6) ok   | 5 km:    38.1 (   13.8) ok  
+     SF10/125k      ToA   452.6 ms limit   40.7 Hz | 0.5 km:    97.8 (   57.9) FAIL | 2 km:    88.0 (   44.7) FAIL | 5 km:    68.8 (   24.8) FAIL
+     SF12/125k LDRO ToA  1810.4 ms limit  162.8 Hz | 0.5 km:   371.7 (  231.4) FAIL | 2 km:   348.4 (  162.9) FAIL | 5 km:   242.3 (   94.7) FAIL
+     SF 9/250k      ToA   123.4 ms limit  162.8 Hz | 0.5 km:    26.8 (   15.8) ok   | 2 km:    24.0 (   12.3) ok   | 5 km:    19.2 (    7.0) ok  
+     SF10/250k      ToA   226.3 ms limit   81.4 Hz | 0.5 km:    49.0 (   29.0) ok   | 2 km:    44.0 (   22.5) ok   | 5 km:    35.0 (   12.7) ok  
+     SF11/250k      ToA   411.6 ms limit   40.7 Hz | 0.5 km:    89.0 (   52.7) FAIL | 2 km:    80.1 (   40.7) FAIL | 5 km:    62.8 (   22.7) FAIL
+     SF 9/500k      ToA    61.7 ms limit  325.5 Hz | 0.5 km:    13.4 (    7.9) ok   | 2 km:    12.0 (    6.2) ok   | 5 km:     9.6 (    3.5) ok  
+     SF11/500k      ToA   205.8 ms limit   81.4 Hz | 0.5 km:    44.6 (   26.4) ok   | 2 km:    40.1 (   20.5) ok   | 5 km:    31.9 (   11.6) ok  
+   f = 868.125 MHz
+     SF 7/125k      ToA    71.9 ms limit  325.5 Hz | 0.5 km:    31.3 (   18.5) ok   | 2 km:    28.1 (   14.4) ok   | 5 km:    22.5 (    8.2) ok  
+     SF 8/125k      ToA   133.6 ms limit  162.8 Hz | 0.5 km:    58.1 (   34.3) ok   | 2 km:    52.1 (   26.8) ok   | 5 km:    41.7 (   15.1) ok  
+     SF 9/125k      ToA   246.8 ms limit   81.4 Hz | 0.5 km:   107.2 (   63.4) FAIL | 2 km:    96.3 (   49.2) FAIL | 5 km:    76.4 (   27.7) ok  
+     SF10/125k      ToA   452.6 ms limit   40.7 Hz | 0.5 km:   195.9 (  116.1) FAIL | 2 km:   176.5 (   89.6) FAIL | 5 km:   138.0 (   49.7) FAIL
+     SF12/125k LDRO ToA  1810.4 ms limit  162.8 Hz | 0.5 km:   745.1 (  463.8) FAIL | 2 km:   698.3 (  326.5) FAIL | 5 km:   485.6 (  189.8) FAIL
+     SF 9/250k      ToA   123.4 ms limit  162.8 Hz | 0.5 km:    53.6 (   31.7) ok   | 2 km:    48.1 (   24.7) ok   | 5 km:    38.5 (   14.0) ok  
+     SF10/250k      ToA   226.3 ms limit   81.4 Hz | 0.5 km:    98.3 (   58.1) FAIL | 2 km:    88.3 (   45.2) FAIL | 5 km:    70.1 (   25.4) ok  
+     SF11/250k      ToA   411.6 ms limit   40.7 Hz | 0.5 km:   178.3 (  105.6) FAIL | 2 km:   160.5 (   81.6) FAIL | 5 km:   125.9 (   45.4) FAIL
+     SF 9/500k      ToA    61.7 ms limit  325.5 Hz | 0.5 km:    26.8 (   15.8) ok   | 2 km:    24.1 (   12.4) ok   | 5 km:    19.3 (    7.0) ok  
+     SF11/500k      ToA   205.8 ms limit   81.4 Hz | 0.5 km:    89.4 (   52.8) FAIL | 2 km:    80.3 (   41.1) ok   | 5 km:    63.9 (   23.2) ok  

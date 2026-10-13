@@ -1,0 +1,71 @@
+1. Small-loop (magnetic dipole) field vs distance, broadside, |H| ~ |1/(kr)^3 + j/(kr)^2 - 1/(kr)| form
+  7 MHz   : lambda/2pi =   6.82 m; halving distance deep in near field: +18.2 dB; in far field: + 6.0 dB
+  30 MHz  : lambda/2pi =   1.59 m; halving distance deep in near field: +18.2 dB; in far field: + 6.0 dB
+  146 MHz : lambda/2pi =   0.33 m; halving distance deep in near field: +18.2 dB; in far field: + 6.0 dB
+  433 MHz : lambda/2pi =   0.11 m; halving distance deep in near field: +18.2 dB; in far field: + 6.0 dB
+PASS near-field halving distance ~ +18 dB
+PASS far-field halving distance ~ +6 dB
+
+2. Close-in fox: received power from 1 W at 146 MHz (0 dBi both ends, free space)
+   1000 m: FSPL  75.7 dB, Pr  -45.7 dBm, above S9 (-73 dBm) by  27.3 dB
+    100 m: FSPL  55.7 dB, Pr  -25.7 dBm, above S9 (-73 dBm) by  47.3 dB
+     10 m: FSPL  35.7 dB, Pr   -5.7 dBm, above S9 (-73 dBm) by  67.3 dB
+      1 m: FSPL  15.7 dB, Pr   14.3 dBm, above S9 (-73 dBm) by  87.3 dB
+PASS 1 W fox at 10 m is ~67 dB above S9
+  third-harmonic trick: listening at 3f gives the fox's harmonic, typically 40-60 dB down (HomingIn)
+
+3. RCD: Y-capacitor protective-conductor current at 230 V 50 Hz
+  Cy  1.0 nF -> 0.072 mA; devices to 9 mA: 125; to 15 mA: 208
+  Cy  2.2 nF -> 0.159 mA; devices to 9 mA:  57; to 15 mA:  95
+  Cy  4.7 nF -> 0.340 mA; devices to 9 mA:  27; to 15 mA:  45
+  Cy 10.0 nF -> 0.723 mA; devices to 9 mA:  13; to 15 mA:  21
+PASS 4.7 nF at 230 V 50 Hz = 0.34 mA
+  BEAMA transient: Xc 20000 ohm, f_eq 5000 Hz, C = 1.59 nF gives 50 mA
+PASS BEAMA 1.6 nF
+  US 120 V 60 Hz, 4.7 nF -> 0.213 mA (GFCI trips at 4-6 mA per UL 943 class A)
+
+4. Common-mode choke threshold effect (K9YC): reduction = 20 log|Z_loop + Z_choke| / |Z_loop|
+           Z_choke  resistive loop dB  capacitive loop dB  detected (x2) dB
+          (100+0j)                2.5                 0.9               5.0
+          (300+0j)                6.0                 3.6              12.0
+         (1000+0j)               12.7                11.1              25.5
+         (3000+0j)               20.8                20.1              41.7
+              200j                1.6                -8.7               3.2
+         (50+250j)                3.1                -8.7               6.3
+      (1000+1000j)               14.8                12.4              29.5
+PASS 300 ohm resistive choke on 300 ohm loop = 6 dB
+PASS an inductive choke can INCREASE current in a capacitive loop
+  N^2 scaling below self-resonance: 1 turn 150 ohm -> 2 turns 600, 3 turns 1350, 5 turns 3750 ohm (ideal)
+
+5. Field from our own transmitter: E = sqrt(30 P G)/r (far-field formula; optimistic inside lambda/2pi)
+  E22 2 W, 433 MHz dipole   : 0.05 m: 198.4 V/m, 0.10 m:  99.2 V/m, 0.30 m:  33.1 V/m, 1.00 m:   9.9 V/m, 3.00 m:   3.3 V/m | 10 V/m at 0.99 m, 3 V/m at 3.31 m
+  E220 1 W, 915 MHz dipole  : 0.05 m: 140.3 V/m, 0.10 m:  70.2 V/m, 0.30 m:  23.4 V/m, 1.00 m:   7.0 V/m, 3.00 m:   2.3 V/m | 10 V/m at 0.70 m, 3 V/m at 2.34 m
+  100 mW SRD                : 0.05 m:  44.4 V/m, 0.10 m:  22.2 V/m, 0.30 m:   7.4 V/m, 1.00 m:   2.2 V/m, 3.00 m:   0.7 V/m | 10 V/m at 0.22 m, 3 V/m at 0.74 m
+PASS 2 W dipole gives ~99 V/m at 10 cm
+  IEC 61000-4-3 test levels: 1, 3, 10, 30 V/m (levels 1-4), 80 MHz-6 GHz
+
+6. Averaging needed to see a noise-floor change: std of 10log10(mean of K exp samples)
+  K=    1: std  5.67 dB (approx 4.34/sqrt(K) =  4.34 dB), mean bias -2.63 dB
+  K=   10: std  1.39 dB (approx 4.34/sqrt(K) =  1.37 dB), mean bias -0.22 dB
+PASS std ~ 4.34/sqrt(K) at K=10
+  K=  100: std  0.43 dB (approx 4.34/sqrt(K) =  0.43 dB), mean bias -0.02 dB
+PASS std ~ 4.34/sqrt(K) at K=100
+  K= 1000: std  0.14 dB (approx 4.34/sqrt(K) =  0.14 dB), mean bias -0.00 dB
+PASS std ~ 4.34/sqrt(K) at K=1000
+  -> before/after difference has std sqrt(2)*4.34/sqrt(K); a 1 dB change at 3 sigma needs K >= 340 per reading
+PASS K for 1 dB at 3 sigma (difference) ~ 340
+
+7. GSM TDMA: frame 4.615 ms (8 slots of 577 us)
+  frame rate 216.7 Hz, slot 577 us, duty 0.125
+PASS GSM frame rate 216.7 Hz
+
+8. Magnetic field of PA supply current bursts at a magnetometer (isolated straight wire, upper bound)
+  0.5 A: 1 cm:  10.0 uT, 2 cm:   5.0 uT, 5 cm:   2.0 uT, 10 cm:   1.0 uT
+  1.0 A: 1 cm:  20.0 uT, 2 cm:  10.0 uT, 5 cm:   4.0 uT, 10 cm:   2.0 uT
+  2.0 A: 1 cm:  40.0 uT, 2 cm:  20.0 uT, 5 cm:   8.0 uT, 10 cm:   4.0 uT
+  1 A trace 0.2 mm over its return plane, 1 cm away: ~ 800.0 nT
+  1 A trace 0.2 mm over its return plane, 2 cm away: ~ 200.0 nT
+  1 A trace 0.2 mm over its return plane, 5 cm away: ~  32.0 nT
+PASS 1 A at 2 cm = 10 uT (isolated wire)
+
+RESULT: ALL PASS

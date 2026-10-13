@@ -1,0 +1,85 @@
+1vij2y0	Is this kit enough for a basic SDR setup?	14	C	14/sdr-hardware-survey	
+1nxmfzg	What is this signal on my waterfall? (unknown-signal ID)	14	M	NEW 14/signal-identification	unknown-signal workflow absent — reinforces D1 #16
+1da7bwk	What's the best SDR setup to start with?	14	C	14/sdr-hardware-survey	
+sdlwxu	Is this what I get for buying a cheap LNA? (spurs/overload)	18	P	18/lna-pa-gain-block-mmics; 07/dynamic-range-sfdr-blocking	SPF5189Z-class boards covered; broadband LNA overload/oscillation symptoms on an SDR not shown
+1nkglng	What is this signal? (screenshot)	14	M	NEW 14/signal-identification	
+1nkgofn	Why does a stereo WFM station appear far outside the FM band?	14	P	17/sdr-as-test-equipment; 06/receiver-architectures	images/spurs mentioned; tuner LO-harmonic mixing and ADC overload not worked through
+1nr2qba	What is this 16-tone signal with ~100 Hz spacing (military?)	14	M	NEW 14/signal-identification	MFSK/OFDM HF modem ID absent
+1nu0vj8	Why can I hear music at 410 MHz?	14	P	17/sdr-as-test-equipment	harmonic mixing (FM × 4) / overload not explained — D1 #12
+yhcm2a	Which textbooks/online courses teach the maths and engineering of radio and SDR?	LRN	P	14/gnu-radio-and-software-stack; 00/math-roadmap-for-rf	no curated SDR course list (PySDR, GNU Radio tutorials, Lyons)
+r20ygu	Is this antenna amplifier useful for an SDR at all?	14	C	14/sdr-hardware-survey; 07/noise-figure-and-friis	"does the SDR's NF matter with an LNA"
+y7axsx	What are the square blocks beside WFM broadcasts?	14	M	NEW 14/signal-identification	HD Radio/IBOC; duplicate of rfelectronics 13y3fkh
+1day37w	MetOp-C vs Meteor-M: which gives better weather-satellite images?	20	P	08/helical-antennas (QFH)	LRPT/HRPT reception chain (antenna, LNA, Doppler, decoders) absent
+sjhiu7	How well does a Raspberry Pi 4 work as an SDR station?	14	P	14/gnu-radio-and-software-stack; 14/sdr-hardware-survey	USB bandwidth/CPU limits covered; SBC-specific guidance thin
+mrzotu	Mystery signals at 672–682 MHz — what are they?	14	M	NEW 14/signal-identification	band-plan lookup method absent (D1 #5)
+knxqwm	Why do I receive a local FM station up near the FRS band?	14	P	17/sdr-as-test-equipment	spurious responses/overload
+1tfocq0	What is ruining my 20 m band reception? (noise source)	07	P	07/thermal-noise-and-noise-temperature	man-made noise level stated; how to hunt RFI sources (inverters, LED drivers) absent — reinforces D1 #7/#29
+1fd0got	Are the cheap eBay B210 clones any good?	14	P	14/sdr-hardware-survey	clone B210/Pluto variants only partly discussed
+142c7sj	Why do strong FM signals show up where they shouldn't?	14	P	17/sdr-as-test-equipment	overload/IMD/images — D1 #12
+17idkjp	Is there a single best SDR receiver?	14	C	14/sdr-hardware-survey	
+wmru6t	What's good satellite-tracking software?	14	M	NEW 20/satellite-reception-recipe	Gpredict/Look4Sat/Doppler correction absent
+vsleea	What is this signal repeating every 8 s at 433.89 MHz?	14	C	14/software-demodulation	433 MHz OOK sensors / rtl_433
+13aa1pu	SSB voice outside the 15 m ham band — harmonic or image?	14	P	09/ionospheric-hf-propagation; 17/sdr-as-test-equipment	HF band occupancy (other services) and spur checks not covered
+1bknnxb	My house lights blink when I transmit on one frequency — why?	13	M	13/emc-emi-fundamentals (planned)	RF immunity of LED drivers/dimmers — reinforces D1 #7
+mti82w	rtl_433 can't decode this 433 MHz signal — what next?	14	P	14/software-demodulation	URH/inspectrum workflow mentioned, not stepwise
+1jsof2z	What kind of encoding is this (bitstream)?	14	P	14/software-demodulation; 10/packet-framing-protocols	Manchester/PWM/NRZ recognition not covered
+urpbz7	Can I point a satellite-TV dish at other satellites?	08	P	08/horn-reflector-aperture-antennas	dish/feed covered; LNB and offset-dish geometry absent
+1v9l9u2	GNU Radio 3.x vs 4.0 — which?	14	C	14/gnu-radio-and-software-stack	
+s0rpg	Good books to get started with GNU Radio?	LRN	P	14/gnu-radio-and-software-stack	
+g386gl	How do FFT sinks in GNU Radio work (scaling, averaging)?	14	C	14/fft-spectral-analysis-windows	
+6unsnq	Best GNU Radio tutorials for a beginner?	14	C	14/gnu-radio-and-software-stack	"where do I start"
+4vs5is	How do I demodulate the analog FM video from 5.8 GHz drones?	14	M	14/software-demodulation	analog video (FM-TV, sync) not covered; low relevance
+11ipb9x	My QPSK constellation from an IQ file rotates/drifts — why?	10	C	10/synchronization-carrier-timing	frequency offset / carrier recovery
+9qrot8	Why do I need a low-pass filter here (before decimation)?	14	C	14/multirate-dsp-decimation-cic	
+maoi78	What are filter "taps"?	14	C	14/digital-filters-fir-iir	
+1mu20oj	Do GNU Radio blocks run on the SDR's FPGA or on my PC?	14	C	14/fpga-for-sdr; 14/gnu-radio-and-software-stack	
+ulscsu	How do I use GNU Radio for DSP from Python?	14	C	14/gnu-radio-and-software-stack	
+y1e0f4	How can a signal be both real and imaginary at one instant?	14	C	14/iq-complex-baseband	
+2ci79m	How do I build my own basic SDR?	20	M	20/sdr-receiver-build (planned)	
+wzskg	Should I buy a USRP?	14	C	14/sdr-hardware-survey	
+142gm98	How do I generate GPS baseband samples (gps-sdr-sim) from a GRC file?	21	M	21-gnss (NEW); 19/spectrum-allocation-ism-bands	GNSS signal structure + simulation; never radiate (legality) — reinforces D1 #4
+yzwctp	Trying to decode LoRa in GNU Radio	14	C	14/gnu-radio-and-software-stack	gr-lora_sdr
+1mzywc4	Why do fire-control radars use pulses rather than FMCW?	11	P	11/pulsed-radar-and-pulse-compression; 11/fmcw-radar	no explicit pulsed-vs-FMCW selection table (isolation, range, stealth)
+1d6szrn	Best interactive websites/apps to learn radar?	LRN	P	11/_index	no curated learning list (radartutorial.eu etc.)
+og7069	How does a radar warning receiver work?	11	M	NEW 11 (ESM/radar detectors)	EW receivers absent; relates to D1 #37 radar detectors
+l8w2fk	What is the "bible" of radar?	LRN	P	11/_sources	Skolnik/Richards cited but not recommended by level
+1lh8vdl	What is this radar display format called (A-scope/PPI/B-scope)?	11	M	11/pulsed-radar-and-pulse-compression; GLOSSARY	reinforces D1 #32
+1mg1bba	Why can't a simple pulsed radar measure Doppler?	11	C	11/pulsed-radar-and-pulse-compression; 11/ambiguity-function-waveforms	coherent pulse train needed
+1metwvx	Radar book recommendations?	LRN	P	11/_sources	
+1km6ozd	Could a buried radar detect people above ground?	02	P	02/wave-equation-plane-waves-polarization	soil attenuation from lossy-media formula; GPR absent
+v8jhss	Can someone explain Doppler ambiguity?	11	C	11/pulsed-radar-and-pulse-compression	
+iu5j5v	How do vehicle radar detectors ("fuzzbusters") work?	11	M	11/diy-radar-hardware	reinforces D1 #37
+125cc16	How much range does pulse-Doppler look-down mode give up?	11	P	11/clutter-and-mti	airborne clutter/PRF choice only outlined
+szuwvj	Can weather radars detect aircraft?	11	P	11/clutter-and-mti; 11/radar-range-equation	weather-radar sensitivity vs aircraft RCS not worked
+ha0k7v	Which radar for an indoor robot?	11	C	11/diy-radar-hardware	
+1ddcwa2	What does a stealthy target look like on radar?	11	C	11/radar-cross-section	
+1eq2lze	What counter-measures make a GPS receiver jam-resistant?	21	P	12/adaptive-beamforming-doa; 08/gnss-antennas	CRPA nulling covered generically; GNSS-specific anti-jam absent
+dnmnih	Why do radars use horn antennas?	08	C	08/horn-reflector-aperture-antennas	
+ckayiw	Why is ISAR suited to maritime patrol?	11	C	11/sar-and-imaging	
+mvf7p5	How can I improve signal-to-clutter ratio?	11	C	11/clutter-and-mti	
+lykpko	What does a corner reflector do to a short-range Doppler radar?	11	C	11/radar-cross-section; 11/cw-and-doppler-radar	
+lig64x	How does a Doppler weather radar work?	11	P	11/clutter-and-mti	rain reflectivity covered; pulse-pair velocity and dual-pol absent
+1pf3utc	Does a wedge moving perpendicular to the beam give a Doppler shift?	11	C	11/cw-and-doppler-radar	cosine error
+1nc5eau	How do I see the raw signal from an HB100 module?	11	C	11/cw-and-doppler-radar	
+7h9el5	How does a phased-array radar estimate target angle?	12	C	12/adaptive-beamforming-doa; 12/tapering-sidelobe-control	monopulse + DOA
+1vxkckl	Wi-Fi HaLow instead of LoRa for sending images in the field?	15	P	15/other-ism-radios-fsk-2g4	802.11ah HaLow not covered
+1k22x3o	What range can I expect with these antennas on my GPS tracker?	15	C	15/lora-sensitivity-and-link-budget	
+qfni22	Why use a Reyax UART module instead of a bare SX1276 board?	15	C	15/lora-modules-ebyte-rfm-heltec	UART module vs bare chip
+1u6ldii	Has anyone used LR2021 FLRC for 200–600 kB image transfers?	15	P	15/semtech-chip-family; 15/other-ism-radios-fsk-2g4	FLRC covered for SX1280; LR2021 sub-GHz FLRC throughput not
+11cqx0l	Can I run a LoRa network independent of TTN?	15	C	15/lorawan-vs-raw-lora	
+1w8s3ua	How do I make a DIY cable antenna for an Ra-02 (433 MHz)?	08	C	08/dipoles-and-monopoles	
+1ugy0ix	What's the longest real-world LoRa range people get?	15	C	15/lora-sensitivity-and-link-budget	records + caveats
+mxb8i1	Do I need a gateway to receive from several nodes?	15	C	15/lorawan-vs-raw-lora	
+llmefg	Intro to LoRa: chip prices, range, tutorials?	15	C	15/semtech-chip-family; 15/lora-sensitivity-and-link-budget	
+1gax0eq	Which LoRa protocol/gateway for hundreds of ESP32 sensors?	15	P	15/lorawan-vs-raw-lora	network capacity (ALOHA collisions vs node count) not quantified
+ykoju2	Can I build a DIY 120° sector antenna for 915 MHz hotspots?	08	P	08/patch-antennas; 08/yagi-uda-and-log-periodic	sector/panel antenna design absent
+tjrsj8	Is my LoRa project legal?	15	C	15/ism-band-plans-duty-cycle; 19/singapore-imda-rules	
+m6fpnw	Are there LoRa satellite services?	15	P	15/lorawan-vs-raw-lora	TinyGS/LR-FHSS mentioned briefly; Doppler/link budget to LEO not worked
+1mm3bog	Why aren't there more 1 W (30 dBm) LoRa modules?	15	P	15/lora-modules-ebyte-rfm-heltec; 15/ism-band-plans-duty-cycle	legal limits + PA/thermal reasons not collected in one answer
+1ka0agb	Can Meshtastic/LoRa carry voice audio?	15	P	15/lora-phy-css-math	bit-rate maths covered; low-rate codecs (Codec2) and duty-cycle limits absent
+qa9ca5	How private is a LoRa messaging system?	15	P	15/lorawan-vs-raw-lora	encryption not verified (page says so)
+1uonccq	Architecture for sending 15 kB images through dense, hilly forest without LOS?	09	P	09/atmospheric-rain-attenuation; 09/diffraction-knife-edge; 10/modulation-choice-guide	vegetation + diffraction + throughput covered separately; no worked NLOS forest example
+1hnfm2a	Are these harmonics on my LoRa transmitter normal?	17	C	17/spectrum-analyzers; 06/power-amplifiers	
+1cgrowl	Is LoRa full duplex?	15	C	15/lora-modules-ebyte-rfm-heltec; 06/rf-switches-attenuators-limiters	half-duplex T/R switching
+1vpmj5x	How do I measure PDR, RSSI, SNR and latency per spreading factor?	17	C	17/antenna-range-ota-testing	
+1vckjpu	Which mesh should I pick (Meshtastic, MeshCore, Reticulum)?	15	P	15/lorawan-vs-raw-lora	MeshCore absent; routing trade-offs thin

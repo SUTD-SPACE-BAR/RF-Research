@@ -1,0 +1,129 @@
+=== 1. Refractivity ===
+  dry 15 C                  : e =   0.0 hPa, N =  272.9 N-units (dry part 272.9)
+  15 C 60 %                 : e =  10.2 hPa, N =  318.9 N-units (dry part 272.9)
+  Singapore 30 C 80 %       : e =  34.0 hPa, N =  396.2 N-units (dry part 258.3)
+  Singapore night 28 C 95 % : e =  35.9 hPa, N =  407.8 N-units (dry part 260.0)
+  [PASS] Singapore surface N: 396.2 (expected 370..410)
+  dN/dh =   -40 N/km: k = 1.34
+  dN/dh =     0 N/km: k = 1
+  dN/dh =  -100 N/km: k = 2.76
+  dN/dh =  -157 N/km: k = -4.05e+03
+  [PASS] k for -40 N/km: 1.342 (expected 1.33..1.35)
+  radio/geometric horizon ratio sqrt(4/3) = 1.155 -> ~15 % farther
+  [PASS] horizon ratio: 1.155 (expected 1.15..1.16)
+
+=== 2. Ducting condition ===
+  ray curvature = -dn/dh (near-horizontal); equals Earth curvature 1/a when dN/dh = -1e6/a = -157.0 N/km
+  [PASS] critical gradient (N/km): -157 (expected -157.5..-156.5)
+  M(h) = N(h) + 157 h(km): dM/dh = dN/dh + 157 < 0 marks a trapping layer
+
+=== 3. Maximum trapped wavelength (surface duct, linear M profile, WKB phase integral) ===
+  derived coefficient C = 16 sqrt(2)/9 = 2.514  (lambda_max = C d sqrt(dM 1e-6))
+  [PASS] coefficient vs literature 2.5: 2.514 (expected 2.45..2.55)
+  evaporation duct 10 m, dM 10          : f_min =    3771 MHz -> trapped: 5.8G, 10G
+  evaporation duct 15 m, dM 15          : f_min =    2053 MHz -> trapped: 2.4G, 5.8G, 10G
+  strong evaporation duct 25 m, dM 25   : f_min =     954 MHz -> trapped: 2.4G, 5.8G, 10G
+  surface-based inversion 100 m, dM 20  : f_min =     267 MHz -> trapped: 433, 915, 2.4G, 5.8G, 10G
+  elevated/surface inversion 200 m, dM 30: f_min =     109 MHz -> trapped: 433, 915, 2.4G, 5.8G, 10G
+  thick trade-wind/subsidence duct 300 m: f_min =      63 MHz -> trapped: 433, 915, 2.4G, 5.8G, 10G
+  [PASS] 15 m evaporation duct f_min (GHz): 2.053 (expected 1.5..3.0)
+  [PASS] 100 m inversion duct f_min (MHz): 266.6 (expected 200..350)
+
+=== 4. Ducted LoRa path at 915 MHz ===
+   100 km: free-space  131.7 dB; ducted (cylindrical from 50 km, +10 dB coupling) ~ 138.7 dB; EIRP 22 dBm+3 dBi, Rx 3 dBi, SF12/BW125 sens -137 dBm -> margin  26.3 dB
+   200 km: free-space  137.7 dB; ducted (cylindrical from 50 km, +10 dB coupling) ~ 141.7 dB; EIRP 22 dBm+3 dBi, Rx 3 dBi, SF12/BW125 sens -137 dBm -> margin  23.3 dB
+   400 km: free-space  143.7 dB; ducted (cylindrical from 50 km, +10 dB coupling) ~ 144.7 dB; EIRP 22 dBm+3 dBi, Rx 3 dBi, SF12/BW125 sens -137 dBm -> margin  20.3 dB
+  [PASS] 400 km ducted margin positive (dB): 20.31 (expected 0..40)
+  (beyond the smooth-earth horizon the normal diffraction loss would be >> 100 dB extra)
+
+=== 5. Sporadic-E ===
+  Es at 110 km, take-off 0 deg: one-hop  2351 km, sec i = 5.45
+  Es at 110 km, take-off 3 deg: one-hop  1776 km, sec i = 5.25
+  Es at 120 km, take-off 0 deg: one-hop  2454 km, sec i = 5.22
+  Es at 120 km, take-off 3 deg: one-hop  1875 km, sec i = 5.05
+  foEs =  5 MHz -> max one-hop Es MUF ~  27.3 MHz (2 m needs foEs >= 26 MHz)
+  foEs = 10 MHz -> max one-hop Es MUF ~  54.5 MHz (2 m needs foEs >= 26 MHz)
+  foEs = 15 MHz -> max one-hop Es MUF ~  81.8 MHz (2 m needs foEs >= 26 MHz)
+  foEs = 25 MHz -> max one-hop Es MUF ~ 136.3 MHz (2 m needs foEs >= 26 MHz)
+  [PASS] Es max obliquity at 110 km: 5.451 (expected 5.3..5.6)
+  P.534: d=1000 km, f=50 MHz, foEs=10: Gamma =   2.5 dB, path length   1035 km, E(1 kW EIRP isotropic) =  42.0 dBuV/m
+  P.534: d=1500 km, f=50 MHz, foEs=10: Gamma =   3.1 dB, path length   1529 km, E(1 kW EIRP isotropic) =  38.1 dBuV/m
+  P.534: d=1500 km, f=144 MHz, foEs=25: Gamma =   3.6 dB, path length   1529 km, E(1 kW EIRP isotropic) =  37.5 dBuV/m
+  P.534: d=2000 km, f=50 MHz, foEs=12: Gamma =   5.9 dB, path length   2027 km, E(1 kW EIRP isotropic) =  32.7 dBuV/m
+  NOTE: P.534 eq. (5) as extracted by pdftotext reads l = [2R0^2 + (R0+h)^2 - 2R0(R0+h)cos(d/2R0)]^0.5; the geometric two-leg path is 2[R0^2 + (R0+h)^2 - 2R0(R0+h)cos(d/2R0)]^0.5 (used here; layout ambiguity noted).
+  [PASS] P.534 Gamma at 1500 km, f/foEs = 5 (dB) [pre-registered 5..25 was a guess; formula value]: 3.053 (expected 2.5..3.5)
+  [PASS] P.534 Gamma at 2000 km, f/foEs = 8 (dB): 11.44 (expected 10..13)
+  foEs over Singapore and Tokyo from the P.1239/P.534 maps (R12 = 78), local noon and 20 LT:
+   Singapore month  1: noon median  5.4 / upper decile  8.0 MHz; 20 LT  2.4 /  5.5 MHz
+   Singapore month  6: noon median  5.2 / upper decile  6.9 MHz; 20 LT  2.8 /  5.2 MHz
+   Singapore month 10: noon median  5.4 / upper decile  7.4 MHz; 20 LT  1.8 /  3.9 MHz
+   Singapore month 12: noon median  5.1 / upper decile  7.5 MHz; 20 LT  2.2 /  4.2 MHz
+   Tokyo     month  1: noon median  4.4 / upper decile  5.7 MHz; 20 LT  1.9 /  3.7 MHz
+   Tokyo     month  6: noon median  6.7 / upper decile 12.8 MHz; 20 LT  5.0 /  8.7 MHz
+   Tokyo     month 10: noon median  4.4 / upper decile  6.6 MHz; 20 LT  2.4 /  5.2 MHz
+   Tokyo     month 12: noon median  3.8 / upper decile  5.4 MHz; 20 LT  2.2 /  4.3 MHz
+  [PASS] Tokyo median foEs June noon > December noon (MHz): 2.928 (expected 0.0..10)
+
+=== 6. Meteor scatter ===
+  trail at 80 km, both stations at 0 deg elevation: max range ~  2019 km
+  trail at 100 km, both stations at 0 deg elevation: max range ~  2258 km
+  trail at 120 km, both stations at 0 deg elevation: max range ~  2473 km
+  [PASS] meteor max range at 100 km (km): 2258 (expected 2200..2300)
+  D = 2 m^2/s,  28 MHz: underdense amplitude decay time back-scatter  362.97 ms, forward (phi = 70 deg)  3102.9 ms
+  D = 2 m^2/s,  50 MHz: underdense amplitude decay time back-scatter  113.83 ms, forward (phi = 70 deg)   973.1 ms
+  D = 2 m^2/s, 144 MHz: underdense amplitude decay time back-scatter   13.72 ms, forward (phi = 70 deg)   117.3 ms
+  D = 2 m^2/s, 222 MHz: underdense amplitude decay time back-scatter    5.77 ms, forward (phi = 70 deg)    49.4 ms
+  D = 2 m^2/s, 432 MHz: underdense amplitude decay time back-scatter    1.52 ms, forward (phi = 70 deg)    13.0 ms
+  D = 5 m^2/s,  28 MHz: underdense amplitude decay time back-scatter  145.19 ms, forward (phi = 70 deg)  1241.2 ms
+  D = 5 m^2/s,  50 MHz: underdense amplitude decay time back-scatter   45.53 ms, forward (phi = 70 deg)   389.2 ms
+  D = 5 m^2/s, 144 MHz: underdense amplitude decay time back-scatter    5.49 ms, forward (phi = 70 deg)    46.9 ms
+  D = 5 m^2/s, 222 MHz: underdense amplitude decay time back-scatter    2.31 ms, forward (phi = 70 deg)    19.7 ms
+  D = 5 m^2/s, 432 MHz: underdense amplitude decay time back-scatter    0.61 ms, forward (phi = 70 deg)     5.2 ms
+  [PASS] 50/144 MHz duration ratio = (144/50)^2: 8.294 (expected 8.2..8.4)
+  Underdense received power also scales ~ lambda^3 (Eshleman): 6 m is (144/50)^3 = 24x (14 dB) stronger than 2 m
+
+=== 7. Aircraft scatter ===
+  aircraft at  9.0 km: radio horizon   391 km each side -> max path ~  782 km
+  aircraft at 11.0 km: radio horizon   432 km each side -> max path ~  864 km
+  aircraft at 12.0 km: radio horizon   451 km each side -> max path ~  903 km
+  [PASS] max aircraft-scatter path at 11 km (km): 864.2 (expected 850..880)
+  bistatic R1=R2=300 km, 144 MHz, 100 W, 14 dBi each, sigma = 100 m^2: Pr = -147.7 dBm (forward-scatter sigma can be 10-30 dB larger near the bistatic baseline)
+  bistatic R1=R2=400 km, 144 MHz, 100 W, 14 dBi each, sigma = 100 m^2: Pr = -152.7 dBm (forward-scatter sigma can be 10-30 dB larger near the bistatic baseline)
+  Doppler (250 m/s, worst-case geometry 2v/lambda) at 144 MHz: up to 240 Hz
+
+=== 8. EME ===
+     50 MHz: EME path loss  242.9 dB (ARRL Handbook table 242.9)
+    144 MHz: EME path loss  252.1 dB (ARRL Handbook table 252.1)
+    222 MHz: EME path loss  255.9 dB (ARRL Handbook table 255.8)
+    432 MHz: EME path loss  261.6 dB (ARRL Handbook table 261.6)
+    902 MHz: EME path loss  268.0 dB (ARRL Handbook table 268.0)
+   1296 MHz: EME path loss  271.2 dB (ARRL Handbook table 271.2)
+   2304 MHz: EME path loss  276.2 dB (ARRL Handbook table 276.2)
+  10368 MHz: EME path loss  289.2 dB (ARRL Handbook table 289.2)
+  [PASS] EME 144 MHz path loss (dB): 252.1 (expected 251.9..252.3)
+  [PASS] EME 1296 MHz path loss (dB): 271.2 (expected 271.0..271.4)
+  perigee 356 500 km vs apogee 406 700 km: 2.29 dB (exam: least loss at perigee)
+  [PASS] perigee-apogee difference (dB): 2.289 (expected 2.1..2.4)
+  echo delay mean 2.56 s; Earth-rotation Doppler (460 m/s, two-way) at 144 MHz ~ 442 Hz
+  radar-equation check: sigma = eta pi r^2 = 6.17e+11 m^2
+  max ground separation: both stations see the Moon -> up to ~182 deg of arc ~ 20226 km (exam: 12 000 mi = 19308 km)
+
+=== 9. TEP geometry (dip latitudes from IGRF-14, 2026.75) ===
+  Singapore : dip latitude (300 km)   -6.5 deg
+  Darwin    : dip latitude (300 km)  -22.5 deg
+  Townsville: dip latitude (300 km)  -29.7 deg
+  Perth     : dip latitude (300 km)  -48.3 deg
+  Okinawa   : dip latitude (300 km)  +21.7 deg
+  Hong Kong : dip latitude (300 km)  +18.5 deg
+  Tokyo     : dip latitude (300 km)  +30.8 deg
+  Manila    : dip latitude (300 km)   +9.0 deg
+  Brisbane  : dip latitude (300 km)  -38.5 deg
+  Darwin-Okinawa:  4313 km, dip latitudes -22.5 / +21.7 (sum  -0.8: ~0 = symmetric)
+  Townsville-Tokyo:  6155 km, dip latitudes -29.7 / +30.8 (sum  +1.1: ~0 = symmetric)
+  Darwin-Hong Kong:  4273 km, dip latitudes -22.5 / +18.5 (sum  -4.0: ~0 = symmetric)
+  Brisbane-Tokyo:  7160 km, dip latitudes -38.5 / +30.8 (sum  -7.8: ~0 = symmetric)
+  Singapore-Manila:  2394 km, dip latitudes  -6.5 /  +9.0 (sum  +2.5: ~0 = symmetric)
+  [PASS] Darwin-Okinawa distance (km): 4313 (expected 4000..5000)
+  [PASS] Singapore dip latitude (deg): -6.506 (expected -8..-5)
+
+ALL PASS

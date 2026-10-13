@@ -1,0 +1,24 @@
+=== IGRF-14 self-checks ===
+  [PASS] dipole strength B0 2025 (nT): 29733.365 (expected 29700..29900)
+  [PASS] north geomagnetic pole latitude 2025-26 (deg): 80.861 (expected 80.0..81.5)
+  [PASS] Boulder total field 2025 (nT): 51330.552 (expected 50500..52500)
+  [PASS] Boulder dip 2025 (deg): 66.439 (expected 64.5..66.5)
+  [PASS] Kototabang dipole geomagnetic lat 2005: -10.354 (expected -11.0..-9.8)
+  [PASS] Chumphon dip latitude 2005: 3.220 (expected 2.7..3.9)
+  [PASS] Trivandrum |dip| 2005: 1.726 (expected 0..3)
+  [PASS] Jicamarca |dip| 2005: 0.872 (expected 0..2)
+
+=== Singapore (1.35 N, 103.82 E) ===
+  dip at ground (2026.75) = -12.72 deg
+  dip at 300 km = -12.85 deg
+  dip latitude (tan mu = tan I / 2) = -6.44 deg
+  dipole geomagnetic latitude = -7.77 deg
+  modified dip (P.1239, 1960 field, 300 km) = -17.17 deg
+  gyrofrequency at 300 km = 1.012 MHz; at 100 km = 1.122 MHz
+  dip equator at  95.00 E: +7.00 deg geographic latitude
+  dip equator at 103.82 E: +6.66 deg geographic latitude
+  dip equator at 110.00 E: +6.42 deg geographic latitude
+  dip equator at 120.00 E: +6.50 deg geographic latitude
+  [PASS] Singapore ground dip in -20..-10 deg: -12.722 (expected -20..-10)
+
+ALL PASS

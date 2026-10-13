@@ -1,0 +1,116 @@
+=== 1. Maxwell vs Neumann, coaxial loops ===
+  a=0.05 b=0.05 d=0.02 m: Maxwell 67.5369 nH, Neumann 67.5369 nH
+[PASS]   agree < 0.1 % 
+  a=0.05 b=0.03 d=0.05 m: Maxwell 11.2384 nH, Neumann 11.2384 nH
+[PASS]   agree < 0.1 % 
+  a=0.3 b=0.3 d=2.0 m: Maxwell 1.8725 nH, Neumann 1.8725 nH
+[PASS]   agree < 0.1 % 
+
+=== 2. Self-inductance of a thin loop ===
+  R=50 mm a=0.5 mm: filament-GMD 292.6 nH, mu0R(ln8R/a-2) 294.3 nH (HF, surface current), mu0R(ln8R/a-1.75) 310.1 nH (DC)
+[PASS]   within 1 % 
+  R=300 mm a=3.0 mm: filament-GMD 1755.4 nH, mu0R(ln8R/a-2) 1766.1 nH (HF, surface current), mu0R(ln8R/a-1.75) 1860.3 nH (DC)
+[PASS]   within 1 % 
+  R=20 mm a=0.2 mm: filament-GMD 117.0 nH, mu0R(ln8R/a-2) 117.7 nH (HF, surface current), mu0R(ln8R/a-1.75) 124.0 nH (DC)
+[PASS]   within 1 % 
+
+=== 3. Coupling k vs distance for two identical 25 mm-radius loops (0.5 mm wire) ===
+  d =     5 mm (d/R =  0.2): k = 0.4294   (dipole approx pi mu0 R^4/(2 L (R^2+d^2)^1.5) = 0.3711)
+  d =    10 mm (d/R =  0.4): k = 0.2693   (dipole approx pi mu0 R^4/(2 L (R^2+d^2)^1.5) = 0.3150)
+  d =    25 mm (d/R =  1.0): k = 0.0985   (dipole approx pi mu0 R^4/(2 L (R^2+d^2)^1.5) = 0.1391)
+  d =    50 mm (d/R =  2.0): k = 0.0283   (dipole approx pi mu0 R^4/(2 L (R^2+d^2)^1.5) = 0.0352)
+  d =   100 mm (d/R =  4.0): k = 0.0052   (dipole approx pi mu0 R^4/(2 L (R^2+d^2)^1.5) = 0.0056)
+
+=== 4. Max efficiency of a resonant two-coil link (series-series) ===
+  k=0.01, Q1=100, Q2=100: U=1.00; numeric max 17.157 % at RL/R2 = 1.414; formula 17.157 % at RL/R2 = sqrt(1+U^2) = 1.414
+[PASS]   formula exact 
+  k=0.05, Q1=50, Q2=30: U=1.94; numeric max 37.096 % at RL/R2 = 2.179; formula 37.096 % at RL/R2 = sqrt(1+U^2) = 2.179
+[PASS]   formula exact 
+  k=0.2, Q1=30, Q2=30: U=6.00; numeric max 71.762 % at RL/R2 = 6.083; formula 71.762 % at RL/R2 = sqrt(1+U^2) = 6.083
+[PASS]   formula exact 
+  k=0.02, Q1=1000, Q2=1000: U=20.00; numeric max 90.488 % at RL/R2 = 20.025; formula 90.488 % at RL/R2 = sqrt(1+U^2) = 20.025
+[PASS]   formula exact 
+  U needed for 50 % / 80 % / 90 %:  ['2.83', '8.94', '18.97'] (U = 2 sqrt(eta)/(1-eta))
+
+=== 5. Square planar spiral inductance: Mohan (1999) vs own filament model ===
+  45 mm, 4 turns, w=s=0.5 mm (din 38.0 mm, fill 0.084): filament 1.701 uH, mod. Wheeler 1.585 uH, current sheet 1.704 uH
+[MISS]   Mohan within 6 % of filament model 
+  60 mm, 3 turns, w=s=1.0 mm (din 50.0 mm, fill 0.091): filament 1.239 uH, mod. Wheeler 1.164 uH, current sheet 1.241 uH
+[PASS]   Mohan within 6 % of filament model 
+  30 mm, 6 turns, w=s=0.3 mm (din 23.4 mm, fill 0.124): filament 2.176 uH, mod. Wheeler 2.109 uH, current sheet 2.180 uH
+[PASS]   Mohan within 6 % of filament model 
+
+=== 6. Worked 13.56 MHz reader coil ===
+  L = 1.701 uH, trace length 663 mm, skin depth 17.9 um, R_dc 0.65 ohm, R_ac(skin) 0.85 ohm, with x1.5 proximity 1.28 ohm
+  X_L = 145.0 ohm, Q = 114, self-resonance with Ca = 4 pF: 61 MHz; R_rad = 6.19e-06 ohm -> radiation efficiency 4.9e-06
+  damping to Q = 30: RQ = 0.5 (wL/Q - Ra) = 1.78 ohm per side (AN11755 form)
+  EMC filter L0 = 160 nH, C0 = 659 pF (f_r0 15.5 MHz); target Rmatch = 30.0 ohm diff.
+  half-circuit: Z_A needed = 19.63+12.34j ohm; parallel R of half antenna = 2177 ohm
+  exact solve: C1 = 60.7 pF, C2 = 97.2 pF per side (check Zin_half = 15.00+0.00j)
+  AN11755 (5)-(6) with differential Rtr = 39.25, Xtr = -24.69 ohm: C1 = 60.4 pF, C2 = 97.1 pF
+  same formulas with Rtr halved (19.63 ohm): C1 = 87.8 pF, C2 = 73.6 pF
+[PASS] approx C1 (differential Rtr) within 5 % of exact (-0.4 %)
+[PASS] approx C2 (differential Rtr) within 5 % of exact (-0.1 %)
+  differential Zmatch at 13.00/13.56/14.00 MHz: 4.0+2.0j, 30.0+0.0j, 7.5-17.3j
+    I =  50 mA rms, d = 20 mm: H_axis = 1.88 A/m  (>= 1.5 A/m ISO 14443 min)
+    I =  50 mA rms, d = 40 mm: H_axis = 0.55 A/m
+    I =  50 mA rms, d = 60 mm: H_axis = 0.21 A/m
+    I = 100 mA rms, d = 20 mm: H_axis = 3.76 A/m  (>= 1.5 A/m ISO 14443 min)
+    I = 100 mA rms, d = 40 mm: H_axis = 1.10 A/m
+    I = 100 mA rms, d = 60 mm: H_axis = 0.41 A/m
+    I = 200 mA rms, d = 20 mm: H_axis = 7.51 A/m  (>= 1.5 A/m ISO 14443 min)
+    I = 200 mA rms, d = 40 mm: H_axis = 2.20 A/m  (>= 1.5 A/m ISO 14443 min)
+    I = 200 mA rms, d = 60 mm: H_axis = 0.82 A/m
+  optimum loop radius for max H at distance d: a = sqrt(2) d (d/dA of a^2/(a^2+d^2)^1.5 = 0)
+
+=== 7. Near-field boundary lambda/2pi ===
+     0.1250 MHz: lambda/2pi =   381.708 m
+     0.1342 MHz: lambda/2pi =   355.540 m
+    13.5600 MHz: lambda/2pi =     3.519 m
+   915.0000 MHz: lambda/2pi =     0.052 m
+
+=== 8. Qi / LF RFID tank numbers ===
+  Qi A11 (TI bq500212A: 400 nF tank, 100 kHz resonance, 110-205 kHz operation): L = 6.33 uH
+  125 kHz: L = 0.5 mH needs C = 3.24 nF
+  125 kHz: L = 1.0 mH needs C = 1.62 nF
+  125 kHz: L = 2.4 mH needs C = 0.68 nF
+  air loops R = 20 mm, gap 3 mm: k = 0.529 (single-turn filament model; multi-turn spirals and ferrite backing change it)
+  air loops R = 20 mm, gap 5 mm: k = 0.399 (single-turn filament model; multi-turn spirals and ferrite backing change it)
+  air loops R = 20 mm, gap 8 mm: k = 0.285 (single-turn filament model; multi-turn spirals and ferrite backing change it)
+
+=== 9. Kurs et al. 2007 plausibility (own estimate) ===
+  L (Wheeler) = 20.8 uH, X = 1293 ohm, R_ohm (skin, no proximity) = 0.431 ohm, R_rad (magnetic) = 0.0817 ohm -> Q ~ 2521
+  (the paper reports measured Q ~ 950; proximity effect and the electric-dipole radiation of a self-resonant helix, which this estimate omits, bring it down)
+  d = 1.0 m: k = 1.67e-02, Q = 950: U = 15.89, eta_max = 88 %
+  d = 1.0 m: k = 1.67e-02, Q = 2521: U = 42.18, eta_max = 95 %
+  d = 2.0 m: k = 2.48e-03, Q = 950: U = 2.36, eta_max = 44 %
+  d = 2.0 m: k = 2.48e-03, Q = 2521: U = 6.26, eta_max = 73 %
+
+=== 10. NFC Q trade-off: 847.5 kHz subcarrier sidebands and ASK-pause ring-down ===
+  Q =  10: sideband at +-847.5 kHz attenuated   -4.1 dB; energy ring-down tau = Q/(pi f) = 0.23 us (106 kbit/s Type A pause ~2-3 us)
+  Q =  20: sideband at +-847.5 kHz attenuated   -8.6 dB; energy ring-down tau = Q/(pi f) = 0.47 us (106 kbit/s Type A pause ~2-3 us)
+  Q =  30: sideband at +-847.5 kHz attenuated  -11.8 dB; energy ring-down tau = Q/(pi f) = 0.70 us (106 kbit/s Type A pause ~2-3 us)
+  Q =  35: sideband at +-847.5 kHz attenuated  -13.0 dB; energy ring-down tau = Q/(pi f) = 0.82 us (106 kbit/s Type A pause ~2-3 us)
+  Q =  60: sideband at +-847.5 kHz attenuated  -17.6 dB; energy ring-down tau = Q/(pi f) = 1.41 us (106 kbit/s Type A pause ~2-3 us)
+  Q = 114: sideband at +-847.5 kHz attenuated  -23.1 dB; energy ring-down tau = Q/(pi f) = 2.68 us (106 kbit/s Type A pause ~2-3 us)
+
+=== 11. Frequency splitting of two identical coupled resonators ===
+  k = 0.005: normal modes at 13.526 and 13.594 MHz (f0/sqrt(1+-k)); splitting visible in the transfer response only if k > k_c = 1/sqrt(Q1 Q2) (Q = 30: k_c = 0.033; Q = 950: k_c = 0.0011)
+  k = 0.02: normal modes at 13.426 and 13.698 MHz (f0/sqrt(1+-k)); splitting visible in the transfer response only if k > k_c = 1/sqrt(Q1 Q2) (Q = 30: k_c = 0.033; Q = 950: k_c = 0.0011)
+  k = 0.1: normal modes at 12.929 and 14.293 MHz (f0/sqrt(1+-k)); splitting visible in the transfer response only if k > k_c = 1/sqrt(Q1 Q2) (Q = 30: k_c = 0.033; Q = 950: k_c = 0.0011)
+
+=== 12. Passive UHF RFID forward-link read range (Friis) ===
+  EIRP 4 W, tag G = 0.0 dBi, match tau 0.9, chip sensitivity -14 dBm: r =   7.8 m
+  EIRP 4 W, tag G = 2.1 dBi, match tau 0.9, chip sensitivity -14 dBm: r =  10.0 m
+  EIRP 4 W, tag G = 0.0 dBi, match tau 0.9, chip sensitivity -18 dBm: r =  12.4 m
+  EIRP 4 W, tag G = 2.1 dBi, match tau 0.9, chip sensitivity -18 dBm: r =  15.9 m
+  EIRP 4 W, tag G = 0.0 dBi, match tau 0.9, chip sensitivity -22 dBm: r =  19.7 m
+  EIRP 4 W, tag G = 2.1 dBi, match tau 0.9, chip sensitivity -22 dBm: r =  25.2 m
+
+=== 13. 125 kHz reader (a = 40 mm, N = 60, 0.2 A rms) and a 20 mm, 100-turn tag coil ===
+  d = 50 mm: H = 36.57 A/m rms, tag open-circuit V = 1133.8 mV rms, x Q_tag 20 (resonant tank) = 22.68 V rms
+  d = 100 mm: H =  7.68 A/m rms, tag open-circuit V =  238.3 mV rms, x Q_tag 20 (resonant tank) = 4.77 V rms
+  d = 150 mm: H =  2.57 A/m rms, tag open-circuit V =   79.6 mV rms, x Q_tag 20 (resonant tank) = 1.59 V rms
+  d = 200 mm: H =  1.13 A/m rms, tag open-circuit V =   35.1 mV rms, x Q_tag 20 (resonant tank) = 0.70 V rms
+
+SOME MISSES (see above)

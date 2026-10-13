@@ -1,0 +1,125 @@
+1r57rc3	What is the round three-pronged PCB trace with a 100 Ω resistor between arms?	06	C	06/couplers-dividers-combiners	Wilkinson divider (curved arms, 2Z0 isolation resistor)
+10t3uzx	What is this antenna array and what is it for? (photo ID)	08	M	NEW 08/antenna-identification-field-guide	no visual guide to common tower/cellular/backhaul/DAS antennas
+1kfhahc	Why is my hand-wound toroid's inductance so much lower than calculated?	04	P	04/inductors-at-rf; 04/ferrites-and-beads	AL/µ of unknown cores, iron powder vs ferrite, measuring core — reinforces D1 #19
+1p0ndoa	Humbled by how hard RF is — where do I go from here?	LRN	P	00/math-roadmap-for-rf	maths roadmap exists; no RF-practice learning path
+1r9vgyi	Can copper tape on 3D-printed parts make usable antennas?	08	P	02/dielectrics-permittivity-loss-tangent; 08/patch-antennas	PLA/ABS εr given; no antenna fabrication-methods section (tape, conductive filament, plating)
+1lj5j7m	My FMCW radar shows no reflection beat frequency — what's wrong?	11	C	11/fmcw-radar; 11/diy-radar-hardware	beat-frequency, leakage and IF-bandwidth debugging covered
+1s68yqv	What are these antennas? (photo ID)	08	M	NEW 08/antenna-identification-field-guide	
+1aodnnw	Help identify what this antenna is used for (photo ID)	08	M	NEW 08/antenna-identification-field-guide	
+1rb2gs4	Measuring a coax cable's impedance with a VNA gives odd results	03	C	03/telegrapher-equations-characteristic-impedance; 17/nanovna-librevna-practical	open/short method and TDR for Z0 covered
+1ajsdsv	Why are car radio whips wound in a helix around a rod, and how is a monopole wired?	08	C	08/helical-antennas; 08/dipoles-and-monopoles	normal-mode helix + car body as ground plane
+1uv2cbr	What type of antenna is this? (photo ID)	08	M	NEW 08/antenna-identification-field-guide	
+1fhxjtu	How can I find who in my class is running an RF jammer?	12	P	12/adaptive-beamforming-doa; 19/spectrum-allocation-ism-bands	array DOA covered; handheld fox-hunting (directional antenna + attenuator + body shielding) and jammer legality missing — reinforces D1 #2
+1l2uya4	I have a signal generator and made a tiny radio station — what else can I do with it?	20	M	NEW 20/first-rf-projects	beginner project ladder absent; also legality of home broadcasting — reinforces D1 #24
+1rysjdu	How do you reduce probe crosstalk in 67 GHz GSSG differential on-wafer calibration?	17	M	17/vna-fundamentals-calibration	on-wafer probing not covered (low relevance)
+1oj5yrc	I was given an RF textbook — how and where do I start?	LRN	P	00/math-roadmap-for-rf	no graded RF reading list
+1o783j3	What are these odd copper shapes on a microwave PCB and where can I learn about them?	06	P	06/rf-filters-lc-saw-baw-cavity-microstrip; 03/input-impedance-stubs-quarter-wave	stubs/coupled-line filters explained; no visual "distributed-element zoo" (radial stubs, spurlines, hairpins, interdigital) — reinforces D1 #3
+1ik7am5	What is this box/antenna right outside my bedroom window, and is it safe?	08	P	19/rf-exposure-safety	exposure covered; small-cell/5G equipment ID absent
+1eynxnn	Why does this RF PCB have circles and triangles in the traces, and how are they designed?	03	P	03/input-impedance-stubs-quarter-wave; 06/rf-filters-lc-saw-baw-cavity-microstrip	radial (butterfly) stubs not covered — D1 #3
+1vc2h2w	Why does my "433 MHz" antenna resonate at 1.4 GHz in simulation?	08	P	08/antenna-simulation-nec-openems; 16/simulation-validation	modelling pitfalls covered generally; no section on higher-order modes/wrong port or ground setup
+jnytnt	Which videos best explain transmission-line theory and impedance?	LRN	P	03/_index	KB has theory; no curated video list
+1s3xj4n	What are good beginner RF projects for an EE student?	20	M	NEW 20/first-rf-projects	reinforces D1 #24
+1la0m09	Why does an 11 GHz PA eval board use microstrip rather than GCPW when there is room?	03	C	03/planar-lines-microstrip-stripline-cpwg	when to choose CPWG vs microstrip
+1krdwmz	What matters when designing a radar retroreflector?	11	C	11/radar-cross-section	corner-reflector RCS, size, tolerance
+kguk11	How does this Mini-Circuits power splitter/combiner work?	06	P	06/couplers-dividers-combiners	Wilkinson/resistive covered; ferrite-transformer (0°/180° hybrid) splitters used in Mini-Circuits ZFSC/ZSC not explained
+1w954xh	My 32 MHz Colpitts oscillator won't start	05	C	05/oscillators	start-up gm/gain margin
+1vjrl7z	Where do people learn RF and antenna design?	LRN	P	00/math-roadmap-for-rf	no RF learning roadmap
+1k9a0fz	How do I design a two-stage LNA?	06	C	06/lna-design; 07/noise-figure-and-friis	
+1weielq	How do I build a DIY 5G/LTE mast (external antennas) for high SINR?	09	P	09/link-budget-methodology; 08/yagi-uda-and-log-periodic	cellular-specific (MIMO cross-pol panels, SINR vs RSRP, band choice) absent
+1nomt27	How do I calculate Colpitts component values?	05	C	05/oscillators	
+1t76vft	Why are YIG resonators spheres rather than cylinders?	02	M	02/magnetic-materials-permeability	YIG resonators/filters (demagnetising factor, uniform precession) absent; low relevance
+i3j3qb	Why are RF books so hard to learn from?	LRN	P	00/math-roadmap-for-rf	reading order per level absent
+1k0q0ws	How can we still receive Voyager 1 from 24 billion km?	09	C	09/link-budget-methodology; 07/thermal-noise-and-noise-temperature; 10/channel-coding-fec	principles covered (G/T, narrow BW, coding); add DSN worked example
+gkxu36	Help with a satellite-TV LNB teardown — what's inside?	06	M	06/receiver-architectures	LNB (DRO/PLL LO, Ku-band HEMT LNA, IF) absent — reinforces D1 tail item
+1psrdwe	Zero experience but big RF ambitions — where to begin?	LRN	P	00/math-roadmap-for-rf	
+j3cgfg	What should I NOT do with my first (used) spectrum analyzer?	17	C	17/spectrum-analyzers; 19/lab-safety-esd-high-power	input overload, DC, attenuators covered
+10iqbqt	How does this 5.8 GHz multilayer patch work — what is the middle layer for?	08	C	08/patch-antennas	aperture/proximity-coupled and stacked feeds
+1ed5cbe	Why does my analyzer show a big signal at 0.0000 MHz?	17	P	17/spectrum-analyzers	LO feedthrough at 0 Hz not named (SDR DC spike is covered in 14/iq-complex-baseband)
+t6chs0	Could this circuit work as an FM demodulator?	10	P	10/analog-modulation-am-fm-pm-ssb	analog discriminators only named in one line; no circuit walk-through (Foster–Seeley, quadrature, PLL)
+qnsnmf	Can openEMS show 3-D time-domain field animations in a microstrip?	16	P	16/openems-workflow	field dump boxes / ParaView not described
+k173t4	How do circularly polarised antennas work, and where can I learn more?	08	C	08/antenna-polarization-and-circular-polarization	
+11teoq3	What are the structures on this RFID tag?	08	M	NEW 08/other-antenna-types (RFID)	UHF RFID tag antennas (T-match dipole, loop) and HF NFC coils absent — reinforces D1 #8
+1vtyfiv	Beginner RF project ideas?	20	M	NEW 20/first-rf-projects	
+1ofebec	How do I design the application circuit around a GaN HEMT PA?	06	C	06/power-amplifiers; 06/amplifier-stability-and-biasing	bias sequencing, matching, stability
+gv6qbj	Is my DIY TEM cell's S11 good enough for EMC pre-compliance?	17	M	13/emc-emi-fundamentals (planned); 19/certification-fcc-ce-imda	TEM/GTEM cells not covered (17/oscilloscopes flags it as a gap)
+uanfih	Help me read this spectrum analyzer display	17	C	17/spectrum-analyzers	
+u2d8uj	Which textbook for waveguides and antenna design?	LRN	P	02/_sources; 08/_sources	books cited as sources, no "which book for whom"
+ttgj80	Why is my PA's power-added efficiency so low?	06	C	06/power-amplifiers	
+1qghf8k	RF design seems impossible — how do I learn it?	LRN	P	00/math-roadmap-for-rf	
+bwv2yb	Will this SMA fit a female K (2.92 mm) connector?	18	C	18/connectors-and-cables-parts	SMA/3.5/2.92 families; add explicit intermating table
+lz0ve2	What maths do I need to understand OFDM and MIMO?	00	C	00/math-roadmap-for-rf; 00/matrices-and-linear-algebra-for-networks	
+1k1wror	How is a coax "50 Ω" regardless of length?	03	C	03/telegrapher-equations-characteristic-impedance	
+thtz2d	Is my first GPS front-end schematic sensible?	21	P	08/gnss-antennas; 20/gnss-front-end-design (planned)	active-antenna bias, SAW, LNA placement partly covered; review checklist absent
+1sxm886	How do I tune an unknown PCB antenna with a VNA?	08	C	08/pcb-and-chip-antennas; 17/nanovna-librevna-practical	
+1ho96yg	Can drones fly safely near radio/broadcast towers?	19	P	19/rf-exposure-safety; 07/dynamic-range-sfdr-blocking	desense/GNSS interference to drones near high-power sites not discussed
+1o94kwg	Energy flows in the fields around power lines, not in the wire?!	02	C	02/poynting-vector-power-flow	
+wjsj1c	Any YouTube channels that design RF circuits step by step?	LRN	M	NEW 00/rf-learning-roadmap	no curated video list
+tn6p8y	What antenna element does the Starlink dish use (two crossed H-slots per oval)?	12	P	12/planar-arrays-element-pattern-coupling; 08/patch-antennas	dual-pol aperture-coupled stacked patches covered generically; no Starlink case study
+1fms6l7	Why are slots in a slotted-waveguide array offset alternately up and down?	08	M	NEW 08/other-antenna-types (slot)	slot antennas / Babinet absent — reinforces D1 #8
+1eavr27	How do I measure characteristic impedance?	03	C	03/telegrapher-equations-characteristic-impedance	
+qqjvuz	How do you mesh complicated or irregular geometry in openEMS?	16	P	16/openems-workflow	mesh rules covered; STL/polyhedron import and graded meshing of curved parts not
+wgxcd	Why 50 Ω?	03	C	03/coax-and-cables	
+nt616h	Why do 0 dB + 0 dB and 0 dBm + 0 dBm give different answers?	00	C	00/decibels-and-log-units	
+1p7puxl	Will a DIY Faraday cage (mesh box) block my phone?	13	P	02/waveguides-and-cavity-resonators; 13/shielding-and-isolation (planned)	aperture/waveguide-below-cutoff covered; seams/doors/grounding myth absent — reinforces D1 #10
+1mk10rn	Why aren't tunable power-splitter beamforming networks common?	12	P	12/beamforming-architectures	amplitude-and-phase weight hardware vs vector modulators only partly
+1u1486p	What limits this amplifier's output power?	06	C	06/power-amplifiers	load line, supply, P1dB
+1tw9xmp	First impedance-matching attempt — help	03	C	03/impedance-matching-lumped-and-distributed	
+1rrgd96	How do I model/design an SMA-footprint-to-microstrip transition in HFSS?	13	M	13/connectors-and-launches (planned)	reinforces D1 #3
+1bm8nol	Can I 3-D print RF lenses in resin?	08	M	NEW 08/other-antenna-types (lens)	lens antennas absent (only mentioned in 11/diy-radar-hardware) — reinforces D1 #8
+127i8fx	Why does this vertical have four coils along its length?	08	P	08/dipoles-and-monopoles	loading coils covered; collinear phasing coils not explained
+lh98pe	Why does my Wi-Fi signal's spectrum look like a butt (two humps)?	10	P	10/ofdm; 17/spectrum-analyzers	OFDM spectrum shape, DC null and RBW/averaging look not explained
+1mhzgqu	How does my car's remote starter work (range, codes)?	10	P	10/digital-modulation-psk-qam-fsk	OOK covered; rolling codes and fob link budgets absent
+lipbt1	At what frequency do antennas stop working?	08	P	08/antenna-fundamentals	no section on antennas vs frequency up to optical (plasmonic/nano-antennas, conductor loss)
+1k4uph4	How weak a signal can actually be received?	07	C	07/sensitivity-and-mds	
+1jr392f	Can several receivers share one antenna (RX only)?	06	P	06/couplers-dividers-combiners; 15/ground-station-design	splitter loss covered; receiver multicoupler (LNA then split) not stated explicitly
+1hkvl2i	How can I build deeper RF knowledge on the job?	LRN	P	00/math-roadmap-for-rf	
+13y3fkh	What are the flat square-shaped blocks either side of FM broadcast stations on my analyzer?	14	M	NEW 14/signal-identification	HD Radio (IBOC) sidebands; signal-ID guide absent — reinforces D1 #16
+ltnvrp	The air is full of every frequency — how does a receiver pick one signal out?	07	P	07/dynamic-range-sfdr-blocking; 01/network-theorems-max-power-transfer	superposition+selectivity idea not stated for beginners — reinforces D1 #29
+1h7ynao	What cover/radome can I put over an L-band helix?	02	C	02/boundary-conditions-reflection-refraction; 02/dielectrics-permittivity-loss-tangent	radome thickness and material
+1jqiiwe	How do I calculate input P1dB?	07	C	07/nonlinearity-p1db-ip3-intermod	
+1jvznka	Why match impedance instead of minimising it?	01	C	01/network-theorems-max-power-transfer	
+132p79a	How would you learn RF electronics almost from scratch?	LRN	P	00/math-roadmap-for-rf	
+130tl8k	Favourite RF/microwave YouTube channels?	LRN	M	NEW 00/rf-learning-roadmap	
+q83jsp	What is the Starlink phased-array architecture?	12	P	12/beamforming-architectures	no Starlink/satcom user-terminal case study
+1klof28	Stuck on impedance matching for my LNA	06	C	06/lna-design	
+jt2sue	Has anyone seen this QB-SMP adapter?	18	P	18/connectors-and-cables-parts	SMP/SMPM and quick-lock families not covered
+ilgnkt	Would an antenna radiating at 540–580 THz glow green?	02	P	02/wave-equation-plane-waves-polarization	light as EM wave implicit; no "RF to optics" continuum section
+wcgad8	What type of modulation is this? (spectrum/waterfall screenshot)	14	M	NEW 14/signal-identification	reinforces D1 #16
+vbh4b3	Help me identify this RF connector	18	C	18/connectors-and-cables-parts	
+1k2sb3j	Why doesn't my breadboard AM radio work?	20	P	06/receiver-architectures; 10/analog-modulation-am-fm-pm-ssb	simple discrete AM/crystal radios absent — reinforces D1 #11
+1oxo44b	Will floating copper on my PCB act as antennas and hurt my signal?	13	P	13/grounding-and-return-paths	one line ("don't leave floating islands"); needs why/when — D1 #1
+xjtan5	How do Smith chart, phase, reflection and resonance relate?	03	C	03/smith-chart	
+1wlks1x	How do I do broadband matching systematically instead of blind tuning?	03	P	03/broadband-matching-bode-fano; 03/impedance-matching-lumped-and-distributed	limits covered; synthesis procedure (real-frequency technique, multi-section L) thin
+1uc7obf	Why does an RF switch datasheet specify 22 pF DC blocks, not a bigger value?	04	C	04/capacitors-at-rf-mlcc	SRF-based DC-block choice
+nntt41	Advice for a pure beginner in RF?	LRN	P	00/math-roadmap-for-rf	
+1lxc1nn	Why are there spurs at every multiple of my PLL's phase-detector frequency?	06	C	06/vco-and-pll-synthesizers	reference spurs
+vxlscw	Help me understand the matching circuit around a Si4063 transmitter	06	P	18/rf-transceiver-ics; 06/transmitter-architectures	vendor class-E/switched match of Si446x not walked through — reinforces D1 #18
+10z0elr	What is this connector?	18	C	18/connectors-and-cables-parts	
+1og2rks	Best books to learn RF engineering?	LRN	M	NEW 00/rf-learning-roadmap	books cited as sources but no ranked list by level
+1nky6h7	Can someone explain what a VNA does?	17	C	17/vna-fundamentals-calibration	
+1nbbc9z	How do I shield a room to get 40+ dB attenuation at Ku band?	13	M	13/shielding-and-isolation (planned)	reinforces D1 #10
+1qia67b	On a 4-layer RF board, what should layer 3 be?	13	C	13/stackups-and-materials	
+1cbfxsn	How does this UHF RFID tag work as an antenna?	08	M	NEW 08/other-antenna-types (RFID)	
+10kikmo	Please review my RF PCB layout	13	M	13/rf-pcb-review-checklist (planned)	reinforces D1 #3
+lmq4rh	Help debugging my DIY FM transmitter	20	P	05/oscillators; 10/analog-modulation-am-fm-pm-ssb	one-transistor FM transmitter not covered — D1 #11
+1i3kgho	Why doesn't the RF signal get lost in the emitter resistor?	05	C	05/amplifier-topologies	emitter bypass/degeneration
+jnvpha	What is the "hello world" project of RF?	20	M	NEW 20/first-rf-projects	
+za43at	How did old (valve/magnetron) radars work?	11	P	11/pulsed-radar-and-pulse-compression	pulsed principle covered; magnetron/duplexer/PPI history absent — D1 #32
+khsv6i	Where can I find RF project kits?	20	M	NEW 20/first-rf-projects	
+kcg12o	How do receivers reach such high sensitivity?	07	C	07/sensitivity-and-mds; 07/noise-figure-and-friis	
+juj00v	What are the tiny RF test-point connectors on phone boards (switch connectors)?	18	M	18/connectors-and-cables-parts	RF switch/test connectors (Murata MM8030 class) absent
+i058i4	How do I switch one antenna between TX and RX?	06	C	06/rf-switches-attenuators-limiters	T/R switching
+ut5g6l	Best beginner book for radio engineering?	LRN	M	NEW 00/rf-learning-roadmap	
+s6084p	Books for RF systems engineers?	LRN	M	NEW 00/rf-learning-roadmap	
+1ro4iaa	Does the phase shift between array elements change with frequency?	12	C	12/beam-steering-grating-lobes	squint vs TTD
+o9b8yu	Good book for basic antenna design?	LRN	M	NEW 00/rf-learning-roadmap	
+lf54k4	Which tools and skills should I learn for an RF career?	LRN	P	17/lab-setup-by-budget; 16/tool-landscape-overview	tools covered; skills ladder absent
+1pklrzi	Should a short RF trace be 50 Ω or as wide as the pads?	03	C	03/planar-lines-microstrip-stripline-cpwg; 04/pcb-parasitics-traces-vias-pads	pad capacitance and short-line rules
+1kh6zu8	Good practical interview questions for a senior RF engineer?	CAR	O	—	career
+1omkcd1	What to expect in a cellular RF hardware interview?	CAR	O	—	career
+12mg3z5	What RF engineer interview questions come up?	CAR	O	—	career (overlaps W4-D5 interview sweep)
+1s3kh3n	Which RF specialty to pick for the next decade?	CAR	O	—	career
+1tbp7bm	How important is a Master's/PhD for RF or antenna engineering?	CAR	O	—	career
+1hq6dl3	Why is RF a smaller field than embedded or VLSI?	CAR	O	—	career
+qn1tu8	Is RF engineering a good career?	CAR	O	—	career
+1su4rmd	New grad applying for RF test roles with no interviews — what's wrong?	CAR	O	—	career

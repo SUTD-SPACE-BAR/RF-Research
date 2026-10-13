@@ -1,0 +1,71 @@
+=== 0. Yagi, sky and ground model ===
+  11-el DL6WU, boom 1724 mm, DE 331.3 mm; free space: boresight 14.30 dBi, Z 45.8+0.0j, average gain 0.996
+[PASS] 0a free-space gain within 0.4 dB of the KB value 14.2 dBi and AGT 0.98-1.02 (14.30 dBi)
+  sky model at 433 MHz: T_bg (P.372 galactic median) = 39.7 K (915 MHz: 7.1 K); T_sky(90 deg) = 41.5 K, T_sky(30 deg) = 43.2 K, T_sky(10 deg) = 49.5 K, T_sky(5 deg) = 57.4 K, T_sky(2 deg) = 72.0 K, T_sky(0 deg) = 98.6 K
+  man-made noise (P.372 Fa = c - 27.7 log f, defined to 250 MHz, extrapolated here): city 691 K, residential 257 K, rural 76 K, quiet rural 2 K
+
+=== 1H. H-pol Yagi, boom centre 3 m over average ground (NEC Sommerfeld): method A ===
+   el   G_bore dBi  peak dBi @el   eta_up   T_sky-part K   T_ground-part K   T_A K   Z_in
+    0    -176.83      20.04 @ 3.5    0.879        46.7            35.1         81.8   46.0-0.1j
+    2     18.38      20.02 @ 3.5    0.892        47.2            31.4         78.7   45.9-0.0j
+    5     16.65      19.88 @ 3.5    0.908        47.7            26.6         74.3   45.9+0.0j
+   10     18.52      19.37 @ 3.5    0.930        47.7            20.3         68.1   45.8-0.0j
+   20     14.47      16.85 @ 3.5    0.955        45.7            13.1         58.8   45.8-0.1j
+   30     14.38      15.20 @21.0    0.961        43.0            11.2         54.2   45.9-0.1j
+   45     14.53      14.67 @43.5    0.966        41.6             9.9         51.6   45.8-0.0j
+   60     14.60      14.72 @58.5    0.969        41.0             9.0         50.1   45.7-0.0j
+   90     14.87      14.87 @90.0    0.970        40.8             8.7         49.4   45.6+0.0j
+
+=== 1V. V-pol Yagi, boom centre 3 m over average ground (NEC Sommerfeld): method A ===
+   el   G_bore dBi  peak dBi @el   eta_up   T_sky-part K   T_ground-part K   T_A K   Z_in
+    0    -176.75      18.59 @ 3.0    0.590        32.5           118.9        151.4   45.8-0.0j
+    2     17.43      18.58 @ 3.0    0.635        34.6           105.8        140.4   45.8-0.0j
+    5     15.05      18.43 @ 3.0    0.699        37.3            87.2        124.5   45.8+0.0j
+   10     15.40      17.84 @ 3.0    0.792        40.8            60.4        101.2   45.8+0.0j
+   20     14.29      15.00 @ 3.0    0.904        43.1            27.9         71.1   45.8-0.0j
+   30     14.30      14.33 @31.0    0.938        42.0            17.9         60.0   45.8-0.0j
+   45     14.30      14.30 @45.0    0.955        41.2            12.9         54.2   45.8-0.0j
+   60     14.40      14.43 @59.0    0.965        41.0            10.1         51.1   45.8-0.0j
+   90     14.87      14.87 @90.0    0.970        40.8             8.7         49.4   45.6+0.0j
+[PASS] 1a T_A at 90 deg elevation (H-pol) between 40 and 80 K (sky ~40 K + back/side-lobe ground spill) (49.4 K)
+[PASS] 1b T_A at 0 deg elevation is the largest (half the main beam on the ground/horizon) 
+
+=== 2. Cross-checks ===
+  H-pol, el 10 deg: Sommerfeld T_A = 68.1 K vs reflection-coefficient ground (GN 0) 68.1 K
+[PASS] 2a GN 0 (reflection-coefficient) and Sommerfeld T_A agree within 3 K at 3 m (4.3 lambda) height 
+   el  pol   T_A method A (NEC ground)   T_A method B (free-space pattern + Fresnel, incoherent)
+    0   H          81.8                        81.7
+   10   H          68.1                        67.5
+   30   H          54.2                        53.3
+   90   H          49.4                        48.3
+    0   V         151.4                       149.6
+   10   V         101.2                        99.5
+   30   V          60.0                        58.9
+   90   V          49.4                        48.3
+[PASS] 2b methods A and B agree within 10 K at every tested elevation (max diff 1.8 K)
+
+=== 3. G/T vs elevation (G = free-space boresight gain; the NEC-over-ground boresight gain, which adds the coherent ground-reflection lobing at low elevation, is shown separately; T_sys = T_A + T_rx at the antenna terminals) ===
+  T_rx: masthead LNA NF 0.5 dB -> 35 K; module NF 6 dB behind 1 dB of coax -> 1163 K
+   el  pol  G_fs   G_over_ground   T_A K   G/T LNA dB/K   G/T module dB/K   G/T LNA + rural man-made 76 K
+    0   H   14.30     (0)           81.8      -6.39          -16.65             -8.56
+    2   H   14.30    18.38          78.7      -6.27          -16.64             -8.49
+    5   H   14.30    16.65          74.3      -6.10          -16.62             -8.39
+   10   H   14.30    18.52          68.1      -5.84          -16.60             -8.24
+   20   H   14.30    14.47          58.8      -5.44          -16.57             -8.01
+   30   H   14.30    14.38          54.2      -5.22          -16.55             -7.89
+   45   H   14.30    14.53          51.6      -5.09          -16.54             -7.82
+   60   H   14.30    14.60          50.1      -5.01          -16.54             -7.78
+   90   H   14.30    14.87          49.4      -4.98          -16.53             -7.76
+    0   V   14.30     (0)          151.4      -8.41          -16.89             -9.89
+    2   V   14.30    17.43         140.4      -8.15          -16.85             -9.71
+    5   V   14.30    15.05         124.5      -7.73          -16.80             -9.42
+   10   V   14.30    15.40         101.2      -7.05          -16.72             -8.97
+   20   V   14.30    14.29          71.1      -5.97          -16.61             -8.31
+   30   V   14.30    14.30          60.0      -5.49          -16.57             -8.04
+   45   V   14.30    14.30          54.2      -5.22          -16.55             -7.89
+   60   V   14.30    14.40          51.1      -5.06          -16.54             -7.80
+   90   V   14.30    14.87          49.4      -4.98          -16.53             -7.76
+  V-pol, 5 deg vs 90 deg elevation: G/T worse by 2.75 dB with the LNA, 0.26 dB with the module alone
+[PASS] 3a antenna temperature matters only with an LNA: module-only G/T varies < 0.5 dB over 5-90 deg (V-pol), LNA G/T varies > 2 dB (module -0.26, LNA -2.75 dB)
+
+SUMMARY: ALL PASS

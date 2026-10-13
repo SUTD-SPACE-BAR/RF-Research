@@ -1,0 +1,61 @@
+====================================================================================================
+A. Coupled 0.2 mm traces on L1 of JLC04161H-7628 (h 0.2104 mm, er 4.4, no mask) — FD field solver
+====================================================================================================
+  gap 0.2 mm (pitch 0.4): Z0 66.0 ohm, v 0.573 c, kC 12.84 %, kL 23.29 %, NEXT_sat kb 9.03 % (-20.9 dB), kf -5.22 %
+  gap 0.4 mm (pitch 0.6): Z0 66.9 ohm, v 0.576 c, kC 4.67 %, kL 12.07 %, NEXT_sat kb 4.19 % (-27.6 dB), kf -3.70 %
+  gap 0.6 mm (pitch 0.8): Z0 67.1 ohm, v 0.576 c, kC 2.10 %, kL 7.21 %, NEXT_sat kb 2.33 % (-32.7 dB), kf -2.56 %
+  gap 1.0 mm (pitch 1.2): Z0 67.1 ohm, v 0.576 c, kC 0.71 %, kL 3.30 %, NEXT_sat kb 1.00 % (-40.0 dB), kf -1.30 %
+  gap 0.6 mm + floating 0.2 mm guard: kb 2.43 %, kf -2.34 %
+  gap 0.6 mm + guard stitched to GND: kb 0.97 %, kf -1.03 %
+[PASS] NEXT falls with spacing 
+[PASS] FEXT coefficient negative for microstrip (kL > kC) 
+[PASS] stitched guard beats floating guard 
+  ratio kb(0.2 mm)/kb(0.6 mm) = 3.88; Johnson-Graham 1/(1+(D/h)^2) predicts 3.35
+
+====================================================================================================
+B. Saturation length and NEXT/FEXT vs coupled length (gap 0.2 mm, 3.3 V edge)
+====================================================================================================
+  tr 0.5 ns: L_sat = v*tr/2 = 43 mm
+  tr 1.0 ns: L_sat = v*tr/2 = 86 mm
+  tr 2.0 ns: L_sat = v*tr/2 = 172 mm
+  tr 5.0 ns: L_sat = v*tr/2 = 430 mm
+  coupled    10 mm, tr 1 ns: NEXT   34.7 mV, FEXT   -10.0 mV
+  coupled    30 mm, tr 1 ns: NEXT  104.1 mV, FEXT   -30.1 mV
+  coupled    60 mm, tr 1 ns: NEXT  208.2 mV, FEXT   -60.2 mV
+  coupled   100 mm, tr 1 ns: NEXT  298.0 mV, FEXT  -100.3 mV
+  coupled   150 mm, tr 1 ns: NEXT  298.0 mV, FEXT  -150.5 mV
+
+====================================================================================================
+C. FDTD check of a matched coupled pair (Paul MTL FDTD), gap 0.2 mm, tr 1 ns, 1 V source (0.5 V on line)
+====================================================================================================
+  30 mm: NEXT peak FDTD 15.77 mV vs closed form 15.77 mV; FEXT peak FDTD -4.68 mV vs -4.56 mV
+[PASS] NEXT within 15 % (30 mm) 
+[PASS] FEXT within 20 % (30 mm) 
+  150 mm: NEXT peak FDTD 45.68 mV vs closed form 45.16 mV; FEXT peak FDTD -23.38 mV vs -22.80 mV
+[PASS] NEXT within 15 % (150 mm) 
+[PASS] FEXT within 20 % (150 mm) 
+
+====================================================================================================
+D. Termination of a 100 mm SPI clock (single 0.2 mm line), R_out 30 ohm (assumed), tr 1 ns, 3.3 V, receiver 5 pF
+====================================================================================================
+  single 0.2 mm trace: Z0 67.1 ohm, v 0.576 c, TD(100 mm) 0.579 ns
+  none      (Rser  0.0 ohm): final 3.30 V, overshoot +1.18 V, ring-back -0.43 V, t50 1.23 ns, settles (±5 %) by 4.84 ns, mid-line time in 30-70 % band 0.70 ns
+  series    (Rser 37.1 ohm): final 3.30 V, overshoot +0.00 V, ring-back -0.00 V, t50 1.38 ns, settles (±5 %) by 2.20 ns, mid-line time in 30-70 % band 0.93 ns
+  parallel  (Rser  0.0 ohm): final 2.28 V, overshoot +0.14 V, ring-back -0.01 V, t50 1.47 ns, settles (±5 %) by 1.72 ns, mid-line time in 30-70 % band 0.53 ns
+  thevenin  (Rser  0.0 ohm): final 2.79 V, overshoot +0.12 V, ring-back -0.01 V, t50 1.10 ns, settles (±5 %) by 1.66 ns, mid-line time in 30-70 % band 0.36 ns
+  ac        (Rser  0.0 ohm): final 3.00 V, overshoot +0.00 V, ring-back +0.00 V, t50 1.46 ns, settles (±5 %) by 7.88 ns, mid-line time in 30-70 % band 1.20 ns
+[PASS] unterminated overshoot > 0.5 V 
+[PASS] series termination overshoot < 0.25 V 
+[PASS] parallel termination halves-ish DC level (R_out/(R_out+Z0) divider) 
+  parallel termination DC load at 3.3 V: 34 mA when high; Thevenin (2 x 134 ohm): 12 mA standing either state; AC (R 67 ohm + 100 pF): ~0 DC, switching power C V^2 f = 22 mW at 20 MHz
+
+====================================================================================================
+E. Critical length l = v*tr/6 above which a trace needs to be treated (and usually terminated) as a line
+====================================================================================================
+  tr  0.5 ns: l_crit =    14 mm
+  tr  1.0 ns: l_crit =    29 mm
+  tr  2.0 ns: l_crit =    58 mm
+  tr  5.0 ns: l_crit =   144 mm
+  tr 10.0 ns: l_crit =   288 mm
+
+ALL PASS

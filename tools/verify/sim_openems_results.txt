@@ -1,0 +1,22 @@
+
+=== sim_openems_msl.py 2026-09-27 17:48 ===
+Microstrip W=2.8 mm h=1.51 mm er=4.5, t=0: H-J Z0=50.44 ohm eps_eff=3.390; FD solver Z0=50.38 ohm eps_eff=3.386
+openEMS coarse: lambda/30, 4 substrate cells, 55575 cells, 4 s
+   f=0.440 GHz: Z0= 49.92 ohm (K-J  50.43), eps_eff=3.403 (K-J 3.394), |S11|= -57.9 dB, |S21|= -0.00 dB
+   f=0.920 GHz: Z0= 49.97 ohm (K-J  50.42), eps_eff=3.403 (K-J 3.403), |S11|= -58.6 dB, |S21|= -0.00 dB
+   f=1.580 GHz: Z0= 50.12 ohm (K-J  50.42), eps_eff=3.412 (K-J 3.417), |S11|= -55.2 dB, |S21|= -0.01 dB
+   f=2.440 GHz: Z0= 50.44 ohm (K-J  50.46), eps_eff=3.428 (K-J 3.439), |S11|= -53.9 dB, |S21|= -0.01 dB
+openEMS fine: lambda/50, 8 substrate cells, 231012 cells, 13 s
+   f=0.440 GHz: Z0= 50.17 ohm (K-J  50.43), eps_eff=3.410 (K-J 3.394), |S11|= -56.5 dB, |S21|= -0.00 dB
+   f=0.920 GHz: Z0= 50.29 ohm (K-J  50.42), eps_eff=3.402 (K-J 3.403), |S11|= -55.3 dB, |S21|= -0.01 dB
+   f=1.580 GHz: Z0= 50.47 ohm (K-J  50.42), eps_eff=3.407 (K-J 3.417), |S11|= -57.9 dB, |S21|= -0.01 dB
+   f=2.440 GHz: Z0= 50.82 ohm (K-J  50.46), eps_eff=3.426 (K-J 3.439), |S11|= -53.9 dB, |S21|= -0.01 dB
+Mesh convergence at 1 GHz: Z0 coarse 49.98 -> fine 50.31 ohm (-0.64 %); vs H-J -0.27 %, vs FD -0.15 %
+
+
+=== sim_openems_patch.py 2026-09-27 17:51 ===
+2.45 GHz FR-4 patch 28.81x37.23 mm, h 1.6 mm, er 4.4, tand 0.02, ground 80.0 mm, probe 8.3 mm from edge
+openEMS coarse (res_div 20: max cell 3.08 mm, 4 substrate cells, 127050 cells, 8 s): f_res 2.3860 GHz (-2.61 % vs TL design), S11min -19.5 dB, Zin 41.5+4.5j ohm, BW(VSWR2) 2.14 %, D 6.95 dBi, e_rad 44.2 %, G 3.40 dBi
+openEMS fine (res_div 30: max cell 2.05 mm, 6 substrate cells, 399562 cells, 25 s): f_res 2.3950 GHz (-2.24 % vs TL design), S11min -20.2 dB, Zin 42.2+4.4j ohm, BW(VSWR2) 2.17 %, D 6.95 dBi, e_rad 44.8 %, G 3.47 dBi
+openEMS finest (res_div 45: max cell 1.38 mm, 8 substrate cells, 1161600 cells, 54 s): f_res 2.3970 GHz (-2.16 % vs TL design), S11min -19.6 dB, Zin 42.1+5.5j ohm, BW(VSWR2) 2.21 %, D 6.95 dBi, e_rad 44.5 %, G 3.44 dBi
+Mesh convergence: f_res coarse->fine +0.38 %, fine->finest +0.08 %; D coarse->finest +0.01 dB (frequency grid step 1 MHz = 0.04 %)

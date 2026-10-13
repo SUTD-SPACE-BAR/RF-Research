@@ -1,0 +1,75 @@
+1. Mode table (Eb/N0 counts ALL transmitted energy, sync included)
+mode         Rb b/s  SNR2500    C/N0  Eb/N0  Es/N0 eta b/s/Hz
+FT8           6.092    -20.8   13.18   5.33   5.22     0.1218
+FT4          15.278    -17.5   16.48   4.64   3.29     0.1834
+JT65A         1.538    -25.0    8.98   7.11   4.68     0.0087
+JT9A          1.469    -26.0    7.98   6.31   5.58     0.0942
+JT4A          1.529    -23.0   10.98   9.14   4.57     0.0874
+Q65-15A       6.016    -22.0   11.98   4.19   3.74     0.0139
+Q65-60A       1.510    -27.0    6.98   5.19   4.76     0.0140
+Q65-300A      0.262    -33.0    0.98   6.80   6.37     0.0138
+FST4-60       1.486    -28.0    5.98   4.26   1.08     0.1199
+WSPR          0.452    -31.0    2.98   6.43   1.32     0.0766
+FST4W-120     0.457    -32.0    1.98   5.38   0.34     0.0775
+[PASS] FT8 Rb = 77/12.64 s = 6.09 b/s  6.092
+[PASS] FT8 Eb/N0 at -20.8 dB ~ 5.3 dB  5.33
+[PASS] FT4 Eb/N0 at -17.5 dB ~ 4.6 dB  4.64
+[PASS] WSPR Eb/N0 at -31 dB ~ 6.4 dB (3.4 dB if half the energy is called sync)  6.43
+[PASS] JT65A Eb/N0 at -25 dB ~ 7.1 dB  7.11
+[PASS] LDPC/QRA modes (FT8, FT4, Q65, FST4/W) cluster at 4.2-5.4 dB Eb/N0  4.19..5.38 dB
+[PASS] older RS/convolutional modes (JT65, JT9, JT4, WSPR) need 6.3-9.1 dB  6.31..9.14 dB
+[PASS] RTTY: SNR -5 dB @ 32 b/s -> Eb/N0 ~ 14 dB (PA3FWM)  13.9
+[PASS] PSK31: SNR -10 dB @ 31 b/s -> Eb/N0 ~ 9 dB (PA3FWM)  9.1
+
+2. FT8 at -21 dB in 2500 Hz
+[PASS] -21 dB in 2500 Hz = -4.0 dB in the 50 Hz occupied band  -4.01
+[PASS] = +5.0 dB Es/N0 in each 6.25 Hz symbol (26.0 dB 'processing gain')  5.02
+
+3. Non-coherent M-FSK constrained-capacity limits
+[PASS] NC-BFSK MI tends to 1 bit at high SNR  
+   FT8      M= 8 rate 1.328 b/sym: NC Es/N0 >=  4.13 dB -> Eb/N0 >=  4.24 dB; coherent Eb/N0 >=  1.23 dB (achieved  5.33)
+   FT4      M= 4 rate 0.885 b/sym: NC Es/N0 >=  3.66 dB -> Eb/N0 >=  5.00 dB; coherent Eb/N0 >=  1.64 dB (achieved  4.64)
+   JT65A    M=64 rate 1.143 b/sym: NC Es/N0 >=  2.62 dB -> Eb/N0 >=  5.05 dB; coherent Eb/N0 >=  1.60 dB (achieved  7.11)
+   WSPR     M= 2 rate 0.309 b/sym: NC Es/N0 >=  1.80 dB -> Eb/N0 >=  6.91 dB; coherent Eb/N0 >=  2.45 dB (achieved  6.43)
+   Q65-60A  M=64 rate 1.222 b/sym: NC Es/N0 >=  2.83 dB -> Eb/N0 >=  3.25 dB; coherent Eb/N0 >= -0.10 dB (achieved  5.19)
+[PASS] FT8 limit (single-symbol NC 8-FSK, sync counted) ~ 3.6-4.2 dB  4.24
+[PASS] FT8 sits within ~2 dB of its own constrained limit  gap 1.09 dB
+[PASS] FT4 and WSPR beat the single-symbol NC limit (multi-symbol block detection uses phase continuity) but stay above the coherent limit  
+[PASS] FT4 with single-symbol detection + BP only (-15.3 dB, QEX Table 5) is above the NC limit  6.84 vs 5.00 dB
+   FT8 at threshold: C = 1.709 b/sym (needs 77/58 = 1.328), V = 2.538
+   normal approx., decode prob 50%: Es/N0 >= 4.12 dB -> Eb/N0 >= 4.23 dB
+[PASS] at 50 % decode probability the finite-length penalty vanishes (Q^-1(0.5)=0)  
+   normal approx., decode prob 90%: Es/N0 >= 4.92 dB -> Eb/N0 >= 5.03 dB
+[PASS] 90 % decode needs ~0.5-1.5 dB more than 50 % (58-symbol block)  +0.79 dB
+
+4. Unconstrained bounds
+   FT8    eta = 0.1218 b/s/Hz -> Shannon Eb/N0 >= -1.41 dB (achieved 5.33)
+[PASS] FT8 Shannon bound at eta=0.12 is ~ -1.4 dB  -1.41
+   WSPR   eta = 0.0766 b/s/Hz -> Shannon Eb/N0 >= -1.48 dB (achieved 6.43)
+   JT65A  eta = 0.0087 b/s/Hz -> Shannon Eb/N0 >= -1.58 dB (achieved 7.11)
+[PASS] 77 bits, unlimited bandwidth: 50 % -> -1.59 dB; 90 % -> ~ -0.5 dB  -1.59, -0.52 dB
+
+5. LoRa SF12/125 kHz (CR 4/5, LDRO, explicit header, CRC) carrying a 10-byte message
+[PASS] 10-byte payload at SF12 LDRO = 18 payload symbols  18
+   PER   50%: SER 0.0378 -> Es/N0 12.51 dB -> Eb/N0 (all energy, 80 info bits)  8.28 dB
+   PER   10%: SER 0.0058 -> Es/N0 13.60 dB -> Eb/N0 (all energy, 80 info bits)  9.37 dB
+   PER    1%: SER 0.0006 -> Es/N0 14.57 dB -> Eb/N0 (all energy, 80 info bits) 10.34 dB
+[PASS] ideal LoRa needs ~2.5-4 dB more Eb/N0 than FT8 for a short (80-bit) message at 50 %  2.95 dB
+[PASS] canonical LoRa SF12 -20 dB in 125 kHz -> Eb/N0 6.3 dB (293 b/s, no LDRO)  6.30
+[PASS] LoRa SF12/125 kHz threshold expressed in 2500 Hz = -3.0 dB  -3.01
+   LoRa-style signalling at FT8's 6.09 b/s would need SNR2500 = -17.8 dB (FT8: -20.8 dB)
+[PASS] SX127x SF12/7.8 kHz with LDRO: 15.3 b/s; -20 dB in 7.8 kHz = -15.0 dB in 2500 Hz  15.26 b/s
+   NC 4096-FSK capacity at 8 b/sym: Es/N0 >= 9.01 dB -> Eb/N0 >= -0.02 dB per payload bit
+[PASS] LoRa SF12's own NC-4096-FSK limit at 8 b/sym is ~0 dB Eb/N0, so the datasheet 6.3 dB leaves ~6 dB unused  -0.02 dB
+
+6. Worked examples
+[PASS] FT8-style sensitivity with NF 6 dB = -154.8 dBm  -154.8 dBm
+[PASS] LoRa SF12/125 kHz sensitivity with NF 6 dB = -137.0 dBm  -137.0 dBm
+[PASS] difference 17.8 dB = 16.8 dB of bit-rate ratio (293 vs 6.09 b/s) + ~1 dB Eb/N0  17.79 = 16.82 + 0.97
+[PASS] one FT8 tone spacing at 433 MHz = 0.0144 ppm  0.0144 ppm
+[PASS] 10 g at 433 MHz = 142 Hz/s: 22.7 Hz (3.6 spacings) per FT8 symbol, ~1.8 kHz per transmission  141.6 Hz/s
+[PASS] 0.1 ppm at 433 MHz = 43 Hz  
+[PASS] an FT8 report of -15 dB with NF 6 dB means ~ -149 dBm received  -149.0 dBm
+[PASS] 17.8 dB is a range factor of 7.8 in free space  7.75
+
+34/34 checks PASS

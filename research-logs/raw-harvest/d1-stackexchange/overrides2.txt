@@ -1,0 +1,4 @@
+165|09|partial|09/atmospheric-rain-attenuation|building entry loss incl. metallised (low-E) glass 31–33 dB given; through-glass antenna couplers not
+360|10|partial|10/ber-ebn0-and-shannon|Shannon shows bandwidth (not carrier) sets capacity, but the carrier-frequency misconception is not stated explicitly
+462|09|partial|09/atmospheric-rain-attenuation|building/vegetation loss given only at 433–915 MHz; frequency trend of penetration and the "higher f penetrates better" myth not addressed (09/friis addresses FSPL myth)
+482|09|partial|09/atmospheric-rain-attenuation|same: frequency dependence of wall/obstacle loss not tabulated

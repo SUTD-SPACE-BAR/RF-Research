@@ -1,0 +1,53 @@
+1. Alamouti BPSK
+[PASS] Alamouti 2x1 at 6 dB = 2-branch MRC at 3 dB  MC 2.373e-02 vs CF 2.387e-02
+[PASS] Alamouti 2x1 at 12 dB = 2-branch MRC at 9 dB  MC 2.448e-03 vs CF 2.448e-03
+[PASS] Alamouti 2x2 at 6 dB = 4-branch MRC at 3 dB  MC 2.110e-03 vs CF 2.001e-03
+[PASS] Alamouti 2x2 at 12 dB = 4-branch MRC at 9 dB  MC 2.250e-05 vs CF 2.259e-05
+[PASS] 2x2 Alamouti at 10 dB beats 1x2 MRC at 10 dB (diversity 4 vs 2)  1.06e-04 vs 1.60e-03
+
+2. Orthogonal space-time block codes
+[PASS] rate-3/4 code: G^H G = (|s1|^2+|s2|^2+|s3|^2) I for 4 Tx  
+[PASS] dropping one column gives a rate-3/4 code for 3 Tx  
+[PASS] Alamouti matrix is orthogonal: A^H A = (|s1|^2+|s2|^2) I  
+
+3. Transmit CSI (MRT) vs Alamouti, 2x1
+[PASS] MRT 2x1 at 10 dB = 1x2 MRC at 10 dB (array gain 2 needs CSI at Tx)  1.607e-03 vs 1.599e-03
+[PASS] Alamouti 2x1 at 10 dB = MRT at 7 dB (3 dB array-gain penalty)  
+
+4. 2x2 spatial multiplexing, QPSK (rho = total SNR, Es per antenna = 1/2)
+   10 dB: ZF 7.77e-02, MMSE 5.39e-02, ML 2.90e-02
+   20 dB: ZF 9.61e-03, MMSE 6.49e-03, ML 5.32e-04
+   30 dB: ZF 1.01e-03, MMSE 6.76e-04, ML 6.25e-06
+[PASS] ML <= MMSE <= ZF at every SNR  
+[PASS] ZF diversity slope ~1 (Nr-Nt+1) per decade of SNR  0.98
+[PASS] ML diversity slope ~2 (Nr)  1.93
+[PASS] ZF at 20 dB = 1-branch Rayleigh, bit SNR rho/(2 Nt) (Nr-Nt+1 = 1 branch)  9.611e-03 vs 9.710e-03
+[PASS] LMMSE output SINR formula matches measurement on 5 fixed channels (< 0.1 dB)  
+
+5. 4 b/s/Hz on 2x2: Alamouti+16QAM vs SM-QPSK (ML)
+   10 dB: Alamouti-16QAM SER 1.13e-01   SM-QPSK-ML SER 5.30e-02
+   20 dB: Alamouti-16QAM SER 3.37e-04   SM-QPSK-ML SER 1.01e-03
+   30 dB: Alamouti-16QAM SER 0.00e+00   SM-QPSK-ML SER 2.25e-05
+[PASS] SM-QPSK beats Alamouti-16QAM at 10 dB  
+[PASS] Alamouti-16QAM beats SM-QPSK at 30 dB (diversity 4 vs 2 wins at high SNR)  
+
+6. Imperfect CSI for Alamouti 2x1
+   T=1: BER 6.038e-04; equivalent perfect-CSI SNR 15.25 dB -> loss 4.75 dB (bracket 3.01-4.77)
+[PASS] T=1 pilots: loss between 10log(1+1/T) and 10log(1+2/T) dB  
+   T=4: BER 1.363e-04; equivalent perfect-CSI SNR 18.60 dB -> loss 1.40 dB (bracket 0.97-1.76)
+[PASS] T=4 pilots: loss between 10log(1+1/T) and 10log(1+2/T) dB  
+[PASS] channel change between slots creates an error floor (BER at 40 dB rises with 1-r)  r=1: 0.0e+00, 0.99: 7.5e-05, 0.95: 2.1e-03
+[PASS] Jakes correlation over one symbol at 10 kbaud, f_D = 433 Hz: J0 = 0.98  0.9816
+
+7. Cyclic delay diversity, uncoded OFDM
+[PASS] CDD uncoded BER at 15 dB = 1x1 Rayleigh (diversity only appears with coding across subcarriers)  7.617e-03 vs 7.723e-03
+
+8. Numbers quoted on the page
+[PASS] coherence time at f_D = 433 Hz ~ 1 ms (0.423/f_D)  0.98 ms
+[PASS] 802.11a 20 MHz symbol 4 us: an Alamouti pair spans 8 us  
+[PASS] rate-3/4 4-Tx code: 3 symbols / 4 slots  
+[PASS] same signal on two antennas: power ripples +3 dB ... null; Alamouti: flat 0 dB (= one antenna)  
+[PASS] 10 cm airframe: max path difference 0.14 lambda at 433 MHz (52 deg, no null) but 0.81 lambda at 2.44 GHz  0.144, 0.813
+[PASS] in-phase pair at 433 MHz, 10 cm apart: +3.0 dB broadside, +2.1 dB endfire (no deep null)  2.08 dB
+
+28/28 checks PASS

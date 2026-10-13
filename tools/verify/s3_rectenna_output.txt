@@ -1,0 +1,30 @@
+=== 1. ngspice 915 MHz rectenna efficiency vs available power (single series diode, tank match Q 10) ===
+   -40 dBm  HSMS-2850 ideal match:   4.5 % (Vdc     6.7 mV, Rg 10000, RL 10000);  with Q_L = 50 inductor:   3.2 %
+   -30 dBm  HSMS-2850 ideal match:  20.0 % (Vdc    44.7 mV, Rg 10000, RL 10000);  with Q_L = 50 inductor:  15.8 %
+   -20 dBm  HSMS-2850 ideal match:  40.7 % (Vdc   110.5 mV, Rg 3000, RL 3000);  with Q_L = 50 inductor:  31.3 %
+   -10 dBm  HSMS-2850 ideal match:  61.1 % (Vdc   428.0 mV, Rg 3000, RL 3000);  with Q_L = 50 inductor:  50.7 %
+    +0 dBm  HSMS-2850 ideal match:  70.3 % (Vdc   838.6 mV, Rg 1000, RL 1000);  with Q_L = 50 inductor:  58.0 %
+   +10 dBm  HSMS-2850 ideal match:  30.4 % (Vdc  1744.5 mV, Rg 300, RL 1000);  with Q_L = 50 inductor:  30.1 %
+    +0 dBm  HSMS-282x class (BV 15 V), Q_L = 50:  41.9 % (Vdc 0.65 V, Rg 1000, RL 1000)
+   +10 dBm  HSMS-282x class (BV 15 V), Q_L = 50:  56.5 % (Vdc 1.30 V, Rg 300, RL 300)
+   +20 dBm  HSMS-282x class (BV 15 V), Q_L = 50:  66.8 % (Vdc 4.48 V, Rg 300, RL 300)
+
+=== 2. Resistive source, no harmonic termination (quasi-static), HSMS-2850 without Cj ===
+  -10 dBm: best 38.9 % (Rg 10000, RL 30000) — half-wave ceiling 4/pi^2 = 40.5 %
+  +0 dBm: best 38.0 % (Rg 1000, RL 3000) — half-wave ceiling 4/pi^2 = 40.5 %
+  ngspice spot check at 0 dBm: eta 38.10 % vs quasi-static 37.98 %
+
+=== 3. Power budgets (Friis, 2 dBi harvesting antenna) and the exposure cap ===
+  SG 920-925 MHz LPWAN, 100 mW e.r.p. (164 mW EIRP), 3 m        : Pr =  -17.1 dBm =     19.34 uW -> DC ~    7.135 uW (eta 37 %, upper bound)
+  SG 920-925 MHz LPWAN, 100 mW e.r.p., 10 m                     : Pr =  -27.6 dBm =      1.74 uW -> DC ~    0.340 uW (eta 20 %, upper bound)
+  FCC 15.247 915 MHz, 4 W EIRP, 3 m                             : Pr =   -3.2 dBm =    478.85 uW -> DC ~  266.675 uW (eta 56 %, upper bound)
+  E22 33 dBm into a 2.15 dBi dipole (3.3 W EIRP) at 433 MHz, 10 m: Pr =   -8.0 dBm =    157.86 uW -> DC ~   82.381 uW (eta 52 %, upper bound)
+  same, 100 m                                                   : Pr =  -28.0 dBm =      1.58 uW -> DC ~    0.298 uW (eta 19 %, upper bound)
+  ambient -40 dBm:  100.00 nW in, DC <= 3.217 nW (eta at -40 dBm used as an optimistic cap)
+  ambient -50 dBm:   10.00 nW in, DC <= 0.322 nW (eta at -40 dBm used as an optimistic cap)
+  ambient -60 dBm:    1.00 nW in, DC <= 0.032 nW (eta at -40 dBm used as an optimistic cap)
+     433 MHz: ICNIRP public S =  2.17 W/m^2, A_e(2 dBi) =  604.6 cm^2 -> P_max =  130.9 mW where a person may stand; 5 W phone charge needs S =      83 W/m^2 =    38 x the limit (EIRP     26 kW at 5 m)
+     915 MHz: ICNIRP public S =  4.58 W/m^2, A_e(2 dBi) =  135.4 cm^2 -> P_max =   61.9 mW where a person may stand; 5 W phone charge needs S =     369 W/m^2 =    81 x the limit (EIRP    116 kW at 5 m)
+    2450 MHz: ICNIRP public S = 10.00 W/m^2, A_e(2 dBi) =   18.9 cm^2 -> P_max =   18.9 mW where a person may stand; 5 W phone charge needs S =    2648 W/m^2 =   265 x the limit (EIRP    832 kW at 5 m)
+
+ALL S3 RECTENNA CHECKS PASS

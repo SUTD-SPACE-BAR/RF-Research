@@ -1,0 +1,55 @@
+1. Feed-forward 4th-power (Viterbi & Viterbi) phase estimation, QPSK
+[PASS] V&V (r^4) at 10 dB, N=32: variance ~1.5x the MCRB 1/(2N Es/N0)  2.79 deg rms vs MCRB 2.26 deg (ratio 1.52)
+[PASS] V&V (r^4) at 10 dB, N=64: variance ~1.5x the MCRB 1/(2N Es/N0)  1.98 deg rms vs MCRB 1.60 deg (ratio 1.52)
+[PASS] smaller weighting exponent helps at 10 dB: m=0/1 closer to the MCRB than r^4  m=0 1.16, m=1 1.11 x MCRB
+[PASS] at 3 dB the 4th-power nonlinearity costs > 2x the MCRB (noise x signal cross terms)  ratio 6.49
+[PASS] a block of N symbols ~ a loop with BnT = 1/(2N): sigma^2 = BnT/(Es/N0) = MCRB  
+[PASS] 4th-power estimator range is +-pi/4 (pi/2 ambiguity)  
+
+2. Residual-carrier BPSK (PM with index beta)
+[PASS] beta = 30 deg: carrier -1.25 dB, data -6.02 dB  line -1.25 dB
+[PASS] beta = 60 deg: carrier -6.02 dB, data -1.25 dB  line -6.02 dB
+[PASS] beta = 80 deg: carrier -15.21 dB, data -0.13 dB  line -15.20 dB
+[PASS] residual-carrier example: C/N0 40 dB-Hz, beta 60 deg -> carrier 34.0 dB-Hz, 10 Hz loop SNR 24.0 dB, data Eb/N0 18.8 dB  
+
+3. ML timing error detector and polyphase filterbank
+[PASS] ML TED S-curve crosses zero at the correct instant  zero at offset 0/32
+[PASS] P = 32 polyphase arms: worst-case T/64 offset costs < 0.01 dB of peak and ISI < -30 dB  peak loss 0.0037 dB, ISI -33.5 dB
+
+4. Oerder-Meyr square-law FFT timing
+[PASS] Oerder-Meyr at 10 dB, 256 symbols, beta=0.5: rms timing error < 0.03 T (after removing the fixed filter delay)  rms 0.0088 T, constant offset -0.000 T
+
+5. Normalised cross-correlation delay estimation
+[PASS] flat band B: B_rms^2 = B^2/12  
+[PASS] |NCC| <= 1 and = 1 for a scaled, integer-delayed copy (amplitude-invariant)  
+   E/N0 = 31.1 dB: rms 0.0415 samples vs CRB 0.0434, mean bias +0.0008
+[PASS] NCC + parabolic interpolation (4x oversampled) within 1.5x of the CRB std at E/N0 = 31 dB  ratio 0.96
+[PASS] parabolic-interpolation bias is small (< 0.05 sample) at 4x oversampling  +0.0008
+[PASS] 1 MHz flat band, E/N0 = 30 dB: sigma_tau = 12.3 ns (3.7 m)  12.3 ns
+
+6. 5G NR numerology (normal CP)
+   mu=0:     15 kHz, slot 1.0000 ms,   1 slots/ms, Tu  66.667 us, CP 4.688 us (long CP 5.208 us)
+   mu=1:     30 kHz, slot 0.5000 ms,   2 slots/ms, Tu  33.333 us, CP 2.344 us (long CP 2.865 us)
+   mu=2:     60 kHz, slot 0.2500 ms,   4 slots/ms, Tu  16.667 us, CP 1.172 us (long CP 1.693 us)
+   mu=3:    120 kHz, slot 0.1250 ms,   8 slots/ms, Tu   8.333 us, CP 0.586 us (long CP 1.107 us)
+   mu=4:    240 kHz, slot 0.0625 ms,  16 slots/ms, Tu   4.167 us, CP 0.293 us (long CP 0.814 us)
+   mu=5:    480 kHz, slot 0.0312 ms,  32 slots/ms, Tu   2.083 us, CP 0.146 us (long CP 0.667 us)
+   mu=6:    960 kHz, slot 0.0156 ms,  64 slots/ms, Tu   1.042 us, CP 0.073 us (long CP 0.594 us)
+[PASS] mu=0: Tu 66.67 us, CP 4.69 us, first-symbol CP 5.21 us (= LTE)  
+[PASS] mu=1 (30 kHz): slot 0.5 ms, CP 2.34 us; mu=3 (120 kHz): slot 0.125 ms, CP 0.586 us  
+[PASS] 14 symbols + CPs fill one slot exactly (mu=1)  
+[PASS] 15 kHz, 50 MHz, 270 RB: occupied 48.60 MHz (97.2% of the channel)  
+[PASS] 30 kHz, 100 MHz, 273 RB: occupied 98.28 MHz (98.3% of the channel)  
+[PASS] 60 kHz, 100 MHz, 135 RB: occupied 97.20 MHz (97.2% of the channel)  
+[PASS] 60 kHz, 200 MHz, 264 RB: occupied 190.08 MHz (95.0% of the channel)  
+[PASS] 120 kHz, 400 MHz, 264 RB: occupied 380.16 MHz (95.0% of the channel)  
+[PASS] 30 kHz x 4096-point FFT = 122.88 MS/s for 100 MHz  
+[PASS] 802.11a/g: 52 used subcarriers -> 16.25 MHz (+DC null) ~ 16.6 MHz occupied  
+[PASS] LTE 20 MHz: 100 RB x 12 x 15 kHz = 18 MHz (+ unused DC subcarrier)  
+[PASS] LTE PSS/SSS/PBCH occupy the central 6 RB = 1.08 MHz  
+[PASS] 802.11n HT20: 56 used subcarriers -> 17.5 MHz (17.8 MHz edge to edge with DC)  
+[PASS] idle LTE cell, 1 CRS port: 8 of 168 REs per RB-subframe -> -13.2 dB below full load (equal EPRE)  -13.22 dB
+[PASS] NR SSB: 240 subcarriers at 30 kHz = 7.2 MHz (20 RB)  
+[PASS] lambda/2 at 2.44 / 5.5 GHz = 6.1 / 2.7 cm  
+
+34/34 checks PASS

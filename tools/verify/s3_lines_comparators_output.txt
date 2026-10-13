@@ -1,0 +1,30 @@
+=== 1. 4-20 mA loop receiver for a 3.3 V ADC ===
+    3.6 mA -> 0.540 V across 150 ohm  (NE 43 fault low (<= 3.6 mA))
+    3.8 mA -> 0.570 V across 150 ohm  (NE 43 range low)
+    4.0 mA -> 0.600 V across 150 ohm  (zero)
+   20.0 mA -> 3.000 V across 150 ohm  (full scale)
+   20.5 mA -> 3.075 V across 150 ohm  (NE 43 range high)
+   21.0 mA -> 3.150 V across 150 ohm  (NE 43 fault high (>= 21 mA))
+  12-bit LSB 0.806 mV = 5.37 uA = 0.034 % of span; 25 ppm/K shunt over 50 K = 0.125 % gain error
+  wire 2 x 200 m of 0.5 mm^2 Cu = 13.8 ohm; max total loop R at 22 mA = (24 - 10)/22 mA = 636 ohm -> 423 ohm spare
+  ngspice loop, wire+extra R =  13.8 ohm: I = 20.000 mA, transmitter terminal voltage 19.72 V
+  ngspice loop, wire+extra R = 400.0 ohm: I = 20.000 mA, transmitter terminal voltage 12.00 V
+  ngspice loop, wire+extra R = 600.0 ohm: I = 17.647 mA, transmitter terminal voltage 9.88 V
+
+=== 2. 1 V ground offset between a remote sensor and the flight computer ===
+  single-ended ADC reading: error = 1 V (the whole offset)
+  4-resistor difference amp G = 1, worst-case 1 % resistors (ngspice): error 19.8 mV -> CMRR 34.1 dB (formula (1+G)/4e = 34.0 dB)
+  INA with 100 dB CMRR: 10 uV
+
+=== 3. Schmitt trigger: 1S undervoltage detector, comparator on 3.3 V push-pull, Vref = 1.200 V ===
+  ideal: Rt = 100k, Rh = Rt*Vcc/(VH-VL) = 1.650 M, Rb = 53.88 k
+  E96: Rh = 1.65 M, Rb = 53.6 k -> rising 3.512 V, falling 3.312 V, hysteresis 0.200 V
+  ngspice sweep: output rises at Vbat = 3.507 V, falls at 3.316 V
+  ramp 3.3 -> 3.6 V with 20 mV p-p noise: 27 output transitions without hysteresis (Rh open), 1 with Rh
+  open-drain pull-up 10k into 20 pF: 10-90 % rise = 2.2 R C = 440 ns; keep Rh >= 100 Rp (TI TIDU020)
+
+=== 4. 555 astable (Vcc 5 V, RA 10k, RB 47k, C 10 nF) ===
+  formula: f = 1/(ln2 (RA+2RB) C) = 1.443/((RA+2RB)C) = 1387.2 Hz, duty 54.8 %; monostable t = RC ln3 = 1.1 RC
+  ngspice behavioural 555: f = 1387.3 Hz (+0.01 %), duty 54.8 %
+
+ALL S3 LINE/COMPARATOR CHECKS PASS

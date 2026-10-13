@@ -1,0 +1,63 @@
+{"created_utc": 1587219423, "id": "g3o724", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "GNURadio", "title": "SDRplay RSP1A Bias T doesn't work in GNU Radio"}
+{"created_utc": 1587149968, "id": "g386gl", "link_flair_text": null, "num_comments": 6, "score": 11, "subreddit": "GNURadio", "title": "How FFT \"sinks\" work in Gnu Radio"}
+{"created_utc": 1587138794, "id": "g34mbw", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "GNURadio", "title": "RSP1A drops samples in GNU Radio on PC with Xeon W3565 CPU"}
+{"created_utc": 1587132244, "id": "g32lsq", "link_flair_text": null, "num_comments": 5, "score": 1, "subreddit": "GNURadio", "title": "Newbie osmosdr install question"}
+{"created_utc": 1587086710, "id": "g2s9o3", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "gr-fec convolutional decoder example not working"}
+{"created_utc": 1587049412, "id": "g2gkcg", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "GNURadio", "title": "Channel error on USRP B210"}
+{"created_utc": 1587042590, "id": "g2elip", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "GNURadio", "title": "How does 'WX FFT sink' work in GNURadio?"}
+{"created_utc": 1586154021, "id": "fvtiai", "link_flair_text": null, "num_comments": 6, "score": 4, "subreddit": "GNURadio", "title": "Is GNU Radio 3.8 installable on windows?"}
+{"created_utc": 1586115180, "id": "fvjqdt", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "GNURadio", "title": "GNURadio 3.8: Problem with Stream Mux"}
+{"created_utc": 1586075253, "id": "fvaj47", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "Ethernet point to point link example"}
+{"created_utc": 1585780488, "id": "fta9pb", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Embedded python blocks not working at all"}
+{"created_utc": 1585442228, "id": "fqwbel", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "How to have \"Hello\" appear at 2 frequencies using Adalm Pluto and GNURadio?"}
+{"created_utc": 1585255089, "id": "fpj64v", "link_flair_text": null, "num_comments": 9, "score": 9, "subreddit": "GNURadio", "title": "Motorola Type II smartnet decoding"}
+{"created_utc": 1584738350, "id": "fm2rbc", "link_flair_text": null, "num_comments": 7, "score": 5, "subreddit": "GNURadio", "title": "Signals in GNURadio"}
+{"created_utc": 1584707636, "id": "flu9s4", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "GNU Radio suddenly not working"}
+{"created_utc": 1584611511, "id": "fl7gnt", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "GNURadio", "title": "QT Gui Frequency sink add some kind of marker?"}
+{"created_utc": 1584608394, "id": "fl6x6v", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "GNURadio", "title": "Embedded python block read/write global variable"}
+{"created_utc": 1584594337, "id": "fl4cus", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "GNURadio", "title": "How can I save data from a spectrum plot?"}
+{"created_utc": 1584473204, "id": "fkbczv", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "How to implement a band boost/peaking filter?"}
+{"created_utc": 1584158794, "id": "ficqyj", "link_flair_text": null, "num_comments": 7, "score": 1, "subreddit": "GNURadio", "title": "Is it possible to make a python block with a random relationship between the number of input items and the number of output items?"}
+{"created_utc": 1583968184, "id": "fh6bz7", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "xterm executable \" is missing Mac OS 10.12.6"}
+{"created_utc": 1583948261, "id": "fh0zxj", "link_flair_text": null, "num_comments": 9, "score": 1, "subreddit": "GNURadio", "title": "Rational Resampler"}
+{"created_utc": 1583851621, "id": "fgex63", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "GNURadio", "title": "Sorry - help needed..."}
+{"created_utc": 1583792354, "id": "fg31vp", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Hackrf not in \"built-in source types\""}
+{"created_utc": 1583752211, "id": "fft206", "link_flair_text": null, "num_comments": 6, "score": 1, "subreddit": "GNURadio", "title": "Editing IQ-files?"}
+{"created_utc": 1583662019, "id": "ffan89", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "GNURadio", "title": "GNURadio. Here you see 2 scenarios: in the first I am transmitting a signal in audio wav source, and in the second I transmit the bits of that signal with \"Vector Source\" block. The problem is that receiver only responds to the AUDIO and not to bits of vector source. Pics of graphs below."}
+{"created_utc": 1583626459, "id": "ff47nr", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "GNURadio", "title": "Can a flowgraph like this work and the signal be recognized succesfully by receiver? Or do I need to insert some block to modulate the signal? Also what would happen if I delete the \"Signal Source\" block? Is it necessary?"}
+{"created_utc": 1583626243, "id": "ff462t", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Can a flowgraph like this work and the signal be recognized succesfully by receiver? Or do I need to insert some block to modulate the signal? Also what would happen if I delete the \"Signal Source\" block? Is it necessary?"}
+{"created_utc": 1583597411, "id": "fex60h", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "GNURadio", "title": "I'm a noob. What's the purpose of \"Rational Resampler\" and \"Low pass filter\"? When should I use them?"}
+{"created_utc": 1583536280, "id": "fem30l", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "GNURadio", "title": "Radio Signal from Outer Space"}
+{"created_utc": 1583520165, "id": "fehzvr", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "GNURadio", "title": "GNURadio doesn't let me work with more than one sequence of bits."}
+{"created_utc": 1583489051, "id": "febeh6", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "GNURadio", "title": "Error when I try to use Embedded Python Block and to return lists of bits from it"}
+{"created_utc": 1583427972, "id": "fdybyu", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "GNURadio", "title": "I am using a Python Embedded Block to act as a \"custom\" vector source, but it seems not to act as it should."}
+{"created_utc": 1583416236, "id": "fdvif3", "link_flair_text": null, "num_comments": 8, "score": 2, "subreddit": "GNURadio", "title": "I don't have gr-osmosdr installed - but I have...?"}
+{"created_utc": 1583409779, "id": "fdu938", "link_flair_text": null, "num_comments": 5, "score": 1, "subreddit": "GNURadio", "title": "What's the difference between \"complex to mag\" and \"complex to mag^2\" block?"}
+{"created_utc": 1583312866, "id": "fdaewr", "link_flair_text": null, "num_comments": 6, "score": 5, "subreddit": "GNURadio", "title": "I don't know why I have this wav output signal, since the bits are different and even if I edit the vector source bits. Is this a BUG?"}
+{"created_utc": 1583255308, "id": "fcxpsb", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "Dab+, gnuradio and TMC messages"}
+{"created_utc": 1583245073, "id": "fcv6sr", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "FSK demodulation (without FFT)"}
+{"created_utc": 1583184991, "id": "fcjgpi", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "GNURadio", "title": "The Dance of the DDS Tones in GnuRadio"}
+{"created_utc": 1583168401, "id": "fcf2sz", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Can the peak capture feature of the WX GUI FFT sink be replicated?"}
+{"created_utc": 1583144380, "id": "fca37e", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "What are some forums dedicated to GNURadio and this RF world?"}
+{"created_utc": 1583104365, "id": "fc2i57", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "Is D8PSK still supported?"}
+{"created_utc": 1583099615, "id": "fc1coq", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "GNURadio", "title": "How can I transmit combination of bits instead of a wav file with GNURadio?"}
+{"created_utc": 1582992214, "id": "fbejws", "link_flair_text": null, "num_comments": 9, "score": 2, "subreddit": "GNURadio", "title": "Stereo audio source not working"}
+{"created_utc": 1582827737, "id": "fagd37", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "GNURadio", "title": "OFDM Demodulation?"}
+{"created_utc": 1582813508, "id": "factbr", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "GNU radio tutorial for beginner"}
+{"created_utc": 1582592154, "id": "f91ol4", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "GNURadio", "title": "Check for peaks, if present then execute function"}
+{"created_utc": 1581915125, "id": "f53fc2", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "GNURadio", "title": "How to create PWM WAVE FORM in GNU RADIO"}
+{"created_utc": 1581599595, "id": "f39sdi", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "GNURadio", "title": "How to find a block?"}
+{"created_utc": 1581594400, "id": "f38sh6", "link_flair_text": null, "num_comments": 0, "score": 4, "subreddit": "GNURadio", "title": "How to import yml files into GNU Radio?"}
+{"created_utc": 1581542662, "id": "f2ye5y", "link_flair_text": null, "num_comments": 3, "score": 5, "subreddit": "GNURadio", "title": "What is the current version?"}
+{"created_utc": 1581524902, "id": "f2tr3h", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "rx_time tag in non-UHD source"}
+{"created_utc": 1581468771, "id": "f2ihka", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "GNURadio", "title": "Running flow graph (.py) without gnuradio-companion"}
+{"created_utc": 1581445152, "id": "f2cewb", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Help with SDR"}
+{"created_utc": 1581414628, "id": "f267og", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "I need to display mic jack device name, but \"arecord\" tool doesn't exist in macos."}
+{"created_utc": 1581298721, "id": "f1ix5i", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "GNU Radio On Mac OSX - QT Plots Flashing Black and White"}
+{"created_utc": 1581278028, "id": "f1e05s", "link_flair_text": null, "num_comments": 7, "score": 6, "subreddit": "GNURadio", "title": "Comparing SDR options with good support for GNURadio"}
+{"created_utc": 1581130517, "id": "f0li0f", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "GNURadio", "title": "Capturing a WIFI signal with GNU Radio Companion"}
+{"created_utc": 1581115196, "id": "f0i9tb", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "GNURadio", "title": "Kill flowgraph/program on underrun?"}
+{"created_utc": 1579288906, "id": "eq50i0", "link_flair_text": null, "num_comments": 8, "score": 7, "subreddit": "GNURadio", "title": "Does anyone else think GNURadio on MacOS sucks?"}
+{"created_utc": 1579092261, "id": "ep1v39", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "gr-lora in Win10"}
+{"created_utc": 1578838748, "id": "ennylg", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "GRC in Win10"}
+{"created_utc": 1578178420, "id": "ek3xt5", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "GNURadio", "title": "Event triggered recorder"}

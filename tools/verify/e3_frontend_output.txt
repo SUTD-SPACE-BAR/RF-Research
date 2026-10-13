@@ -1,0 +1,99 @@
+=== 1. Field strength to available power (half-wave dipole, G = 2.15 dBi) ===
+     100 MHz, E =  1000.0 mV/m ->    4.9 dBm (rfcalc    4.9 dBm)
+[PASS]   formula vs rfcalc at 100 MHz 
+     100 MHz, E =   100.0 mV/m ->  -15.1 dBm (rfcalc  -15.1 dBm)
+[PASS]   formula vs rfcalc at 100 MHz 
+     100 MHz, E =    10.0 mV/m ->  -35.1 dBm (rfcalc  -35.1 dBm)
+[PASS]   formula vs rfcalc at 100 MHz 
+     433 MHz, E =   100.0 mV/m ->  -27.8 dBm (rfcalc  -27.8 dBm)
+[PASS]   formula vs rfcalc at 433 MHz 
+     935 MHz, E =  1000.0 mV/m ->  -14.5 dBm (rfcalc  -14.5 dBm)
+[PASS]   formula vs rfcalc at 935 MHz 
+  10 kW ERP FM at 3 km: E = sqrt(30 EIRP)/d = 234 mV/m -> -7.7 dBm into a 100 MHz dipole
+[PASS] 10 kW ERP at 3 km gives ~0.23 V/m and ~-8 dBm 
+
+=== 2. Power at the ground-station connector from nearby transmitters ===
+  own 433 MHz uplink 2 W, dipoles, 5 m                          : FSPL  39.2 dB ->   -1.9 dBm
+  own 433 MHz uplink 2 W, 20 m                                  : FSPL  51.2 dB ->  -13.9 dBm
+  other team 915 MHz 1 W, 10 m (rx Yagi 10 dBi side-lobe -5 dBi): FSPL  51.7 dB ->  -24.5 dBm
+  cell site 940 MHz, 60 dBm EIRP (assumed), 300 m, 0 dBi        : FSPL  81.5 dB ->  -21.5 dBm
+  phone/Wi-Fi 2.44 GHz 20 dBm EIRP, 2 m                         : FSPL  46.2 dB ->  -26.2 dBm
+[PASS] 2 W at 5 m (433 MHz, dipoles) delivers about -2 dBm 
+
+=== 3. Receive chains at 433 MHz (B = 125 kHz) ===
+  SDR alone                       : NF  5.40 dB, IIP3  -10.0 dBm, floor  -117.6 dBm, SFDR  71.8 dB
+  coax -> SDR                     : NF  8.40 dB, IIP3   -7.0 dBm, floor  -114.6 dBm, SFDR  71.8 dB
+  LNA -> SAW -> coax -> SDR       : NF  0.84 dB, IIP3  -24.8 dBm, floor  -122.2 dBm, SFDR  64.9 dB
+  SAW -> LNA -> coax -> SDR       : NF  2.69 dB, IIP3  -24.8 dBm, floor  -120.3 dBm, SFDR  63.7 dB
+  LNA -> coax -> SDR (no filter)  : NF  0.69 dB, IIP3  -26.8 dBm, floor  -122.3 dBm, SFDR  63.7 dB
+  10 dB pad -> SDR                : NF 15.40 dB, IIP3   -0.0 dBm, floor  -107.6 dBm, SFDR  71.8 dB
+[PASS] LNA at the antenna gives NF < 1 dB 
+[PASS] LNA in front lowers system IIP3 by ~ its gain (SDR-dominated) 
+[PASS] SAW before LNA costs ~2 dB NF 
+[PASS] pad lowers sensitivity 10 dB but raises IIP3 10 dB (SFDR unchanged within 0.3 dB) 
+
+=== 4. IM3 from two blockers and required preselector rejection ===
+  SDR alone                       : two equal blockers may reach  -45.9 dBm each before IM3 hits the floor
+  LNA -> coax -> SDR (no filter)  : two equal blockers may reach  -58.6 dBm each before IM3 hits the floor
+  LNA -> SAW -> coax -> SDR       : two equal blockers may reach  -57.3 dBm each before IM3 hits the floor
+  two FM stations at -20.0 dBm into the unfiltered LNA chain: IM3 -6.4 dBm (input-referred) vs floor -122.3 dBm -> need >= 38.6 dB of rejection AHEAD of the LNA
+[PASS] required rejection = (Pb - Pmax) and IM3 then equals floor 
+
+=== 5. Band-pass prototype rejection at a nearby blocker ===
+  US 902-928 filter vs 940 MHz downlink      Butterworth n=3:  16.8, n=5:  27.8, n=7:  38.9 dB; Chebyshev 0.1 dB n=5:  32.2 dB
+  SG 917-925 filter vs 935 MHz               Butterworth n=3:  32.5, n=5:  54.1, n=7:  75.7 dB; Chebyshev 0.1 dB n=5:  60.9 dB
+  SG 917-925 filter vs 927 MHz               Butterworth n=3:  10.9, n=5:  17.5, n=7:  24.5 dB; Chebyshev 0.1 dB n=5:  19.3 dB
+  433 SRD filter vs 446 MHz PMR              Butterworth n=3:  68.2, n=5: 113.7, n=7: 159.1 dB; Chebyshev 0.1 dB n=5: 121.4 dB
+  433 MHz 10 MHz-wide BPF vs FM 100 MHz      Butterworth n=3: 135.1, n=5: 225.1, n=7: 315.2 dB; Chebyshev 0.1 dB n=5: 232.9 dB
+[PASS] Butterworth n=5, 915/26 MHz at 940 MHz ~ 27-28 dB 
+
+=== 6. Limiter leakage vs SDR maximum input ===
+  HackRF One            : max  -5.0 dBm -> pad after limiter >= 21.0 dB (worst leakage 13 dBm + 3 dB margin)
+  SDRplay RSPdx-R2      : max  +0.0 dBm -> pad after limiter >= 16.0 dB (worst leakage 13 dBm + 3 dB margin)
+  R820T/RTL-SDR (chip)  : max +10.0 dBm -> pad after limiter >=  6.0 dB (worst leakage 13 dBm + 3 dB margin)
+[PASS] HackRF needs >= 21 dB of pad after a VLM-33-class limiter 
+
+=== 7. TVS/ESD diode on an RF line ===
+  24.5 dBm, |Gamma| 0.0: peak RF voltage  5.31 V
+  33.0 dBm, |Gamma| 0.0: peak RF voltage 14.13 V
+  33.0 dBm, |Gamma| 0.5: peak RF voltage 21.19 V
+  30.0 dBm, |Gamma| 0.5: peak RF voltage 15.00 V
+  10.0 dBm, |Gamma| 0.0: peak RF voltage  1.00 V
+  ESD0P2RF-class (5.3 V working): max power without conduction 24.5 dBm matched, 21.0 dBm at VSWR 3
+[PASS] 2 W at VSWR 3 reaches ~21 V peak 
+  shunt 0.2 pF: 433: RL 37.3 dB / IL 0.001 dB; 915: RL 30.8 dB / IL 0.004 dB; 1575: RL 26.1 dB / IL 0.011 dB; 2440: RL 22.3 dB / IL 0.025 dB
+  shunt 0.5 pF: 433: RL 29.4 dB / IL 0.005 dB; 915: RL 22.9 dB / IL 0.022 dB; 1575: RL 18.2 dB / IL 0.066 dB; 2440: RL 14.5 dB / IL 0.157 dB
+  shunt 1.5 pF: 433: RL 19.9 dB / IL 0.045 dB; 915: RL 13.5 dB / IL 0.197 dB; 1575: RL  9.2 dB / IL 0.561 dB; 2440: RL  6.0 dB / IL 1.240 dB
+[PASS] 1.5 pF shunt at 1575 MHz gives RL < 20 dB (visible mismatch) 
+
+=== 8. Bias tee components and DC budget ===
+  choke for X_L >= 10 Z0 at 400 MHz: L >= 199 nH (needs SRF > 1.7 GHz)
+  DC block for X_C <= Z0/10 at 400 MHz: C >= 80 pF
+  shunt choke X_L = 250 ohm: insertion loss 0.043 dB, RL 20.0 dB
+  shunt choke X_L = 500 ohm: insertion loss 0.011 dB, RL 26.0 dB
+  shunt choke X_L = 1000 ohm: insertion loss 0.003 dB, RL 32.0 dB
+[PASS] X_L = 10 Z0 shunt costs < 0.02 dB 
+  50 mA over 20 m at 0.06 ohm/m loop: drop 0.060 V -> 4.44 V at the LNA
+  180 mA over 20 m at 0.06 ohm/m loop: drop 0.216 V -> 4.28 V at the LNA
+  50 mA over 30 m at 0.02 ohm/m loop: drop 0.030 V -> 4.47 V at the LNA
+[PASS] 50 mA over 20 m RG-58-class drops < 0.1 V 
+  DC-shorted antenna (folded dipole, J-pole, shunt-fed): bias tee sees a short -> current limit or damage
+
+=== 9. Pad test: n-th order products move n dB per dB ===
+  order 1: drops 10.01 dB for a 10 dB pad
+  order 2: drops 20.14 dB for a 10 dB pad
+  order 3: drops 30.00 dB for a 10 dB pad
+  order 4: drops 40.00 dB for a 10 dB pad
+[PASS] 2nd/3rd/4th harmonics drop ~20/30/40 dB 
+  broadcast FM at 102.5 MHz: 4th harmonic at 410 MHz with 4 x 75 = 300 kHz deviation
+
+=== 10. Antenna-to-antenna isolation (far field, co-polar, main beams) ===
+  433 MHz,  2 m, two dipoles: isolation  26.9 dB -> 2 W TX gives    6.1 dBm at the RX
+  433 MHz, 10 m, two dipoles: isolation  40.9 dB -> 2 W TX gives   -7.9 dBm at the RX
+  915 MHz,  2 m, two dipoles: isolation  33.4 dB -> 2 W TX gives   -0.4 dBm at the RX
+  915 MHz, 10 m, two dipoles: isolation  47.4 dB -> 2 W TX gives  -14.4 dBm at the RX
+[PASS] 433 MHz, 10 m: isolation ~41 dB 
+  far-field condition d >> lambda/2pi = 11 cm (near-field coupling is worse than Friis predicts)
+
+20/20 checks passed
+ALL PASS

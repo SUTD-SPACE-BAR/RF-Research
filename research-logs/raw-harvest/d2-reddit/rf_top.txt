@@ -1,0 +1,260 @@
+1mgv7qa|332|57|Who wants to see and test the radar system that once got me in trouble?
+1r57rc3|316|60|What is the strange round 'trident' PCB trace (with a 100Ω (?) resistor at one end)
+vn44ev|272|139|Help! I want to bring this back to life.
+1nu0whm|184|14|When you get bored while sorting BNC connectors...
+1wgp82d|180|45|DIY 3D Printed Corner Reflector For Testing a 77 GHz Radar Module
+1rx8yo1|163|25|TIL that thermal noise starts to taper off around 1THz
+10t3uzx|159|43|Can anyone tell me what antenna array this is and what it would be used for?
+1l6yj0a|152|30|Spectrum analyzer RF board
+1kfhahc|151|26|Why is my toroid inductance so low?
+n1bb0i|143|49|Why do so many RF websites look like they’re from 1992?
+muqu9u|143|30|Don't Buy Cheap Cables for Test Equipment.
+1ry81la|138|36|Remember when I made webgpu accelerated propagation tool? It already got stolen.
+1p0ndoa|135|43|help - i just humbled by the Dunning-Kruger-Effect and now i am stuck
+1r9vgyi|133|17|Interesting FDM/copper tape process, useful for antenna patterns?
+1jjto23|128|41|Why?
+1lj5j7m|121|36|I can't find the reflection beat frequency. (FMCW RADAR)
+1s68yqv|119|45|What are these antennas?
+1aodnnw|116|118|Can anyone help identify the use of this Antenna?
+1rb2gs4|114|26|Trying to measure impedance of cable - Coax connected to VNA
+1l7rh14|109|17|Looking for a handful of Beta testers for my Python FEM Simulation library
+scaqto|109|33|Does anyone know what noise this microwave dish is making?
+1ajsdsv|108|26|Why are car radio antennas twisted around a pole and how are monopole antennas wired in general?
+mdyyeg|103|10|When you get bored while sorting BNC connectors...
+1uv2cbr|99|27|What type of antenna is this?
+1fhxjtu|99|55|Is there a way to identify who in my class is using an RF jammer during clicker quizzes? 
+1l2uya4|97|21|Found this signal generator. Made a little radio station in the house. What else can I do with it?
+1rysjdu|97|17|Crosstalk in 67GHz GSSG differential calibration: How are you guys minimizing the coupling?
+1qc9cci|95|25|What can cause "prepulse distortion"?
+1oj5yrc|91|49|I got this book as a gift from my father but I don't know where or how to start.what can i do?
+1kz4sr9|88|5|What I imagine when I think of practitioners of black magic, the RF dark arts
+1o783j3|87|13|What are these structures called, and where can I learn more about them?
+1cqekp0|87|11|Bought a server rack for my equipment :) sorry for the spam but wanted to share the upgrade ?
+1ik7am5|86|52|What exactly is this thing? Right outside my bedroom window.
+1rgyync|86|17|Who’s tried probing at 110GHz+? Curious about your biggest fails and wins with high-frequency wafer testing.
+1eynxnn|86|28|Hi! Today i got this magic PCB in my hands and it instantly grabbed my attention to RF electronics could someo
+1kh6zu8|85|51|What are good practical interview questions to ask a senior RF engineer that proves they have hands-on experie
+1jd9d8o|85|22|Mom can we have SMA cable?
+1vvk9ku|85|17|Can we please address the relentless amount of slop projects shared here
+1vc2h2w|85|25|Why does this supposedly 433 MHz antenna resonate at 1.4 GHz in my simulation?
+1dsh35t|85|7|When you get bored while sorting BNC connectors...
+jnytnt|83|9|Putting together a playlist of videos for those seeking to understand transmission line theory and impedance. 
+1s3xj4n|81|32|What are some good beginner RF projects for an EE student?
+nelbcy|80|55|We accidentally built a RF engineering company; looking for ways to monetize without government contracting?
+1la0m09|79|34|Why does this 11 GHz PA eval board use Microstrips instead of GCPW despite having so much free space for CPWs?
+tb5asz|79|36|What abandoned Russian tech would you most like to scavenge?
+k5lgcf|76|13|Who is next?
+xiio5a|74|1|What is a good RF cable? Theory & Experiments with Junkosha Phase/Amplitude Stable Cables
+1krdwmz|73|31|Help! Radar retroreflector design considerations
+184vssd|70|19|What are these antennas?
+1r35d64|70|24|Can somebody identify this component?
+kguk11|69|17|Can anyone explain how this mini-circuits power splitter/combiner works?
+w6f84l|68|28|Can someone please explain how this type of antenna works?
+1w954xh|68|31|32MHz Colpitts not working
+1vjrl7z|68|31|Where do y’all learn RF/antenna design?
+1hk6t6u|68|17|RF amp
+1k9a0fz|67|8|2 stage LNA design
+1weielq|67|17|Help with diy 5G mast with high SINR
+1nomt27|66|37|Colpitts Oscillator Calculations
+gciops|65|21|Anyone know what type of antenna these are. Taken at a ski area.
+1t76vft|65|10|Why are YIG spheres spherical and not cylindrical?
+1pjdzw9|64|14|Can anyone guide me on where I can find literature about this?
+1loivea|64|9|Can someone please explain why do we need this circuit and possibly its working?
+i3j3qb|64|40|Why are RF books terrible?
+wuznrn|64|55|Any ideas for this old sat-Nav and tv hardware? Came off of a 100+ ft yacht
+1omkcd1|63|32|Cellular RF Hardware Design Engineer Interview @ Apple
+1k0q0ws|63|39|How in the world do we receive satellite signals from Voyager 1?
+gkxu36|63|19|LNB Teardown help
+1i9tbte|62|27|When is 'terahertz' RF not actually 'terahertz' RF?
+m7brfe|61|41|Do people still want old O-Scopes? I have a Tektronix 2467B 400MHz o scope made in the late 80’s and I’m N
+1psrdwe|61|40|I have zero experience and big ambitions (help plese)
+wvr4ck|60|22|I've never seen an antenna like this, any idea what it is used for?
+1m7wiw9|59|1|How to Get Phase From a Signal (Using I/Q Sampling) by MarshallBrunerRF @ YouTube
+j3cgfg|59|27|What NOT to do? Getting my first spectrum analyzer today. HP 8591E
+1v5acdk|59|38|Number of RF Engineers with 10+ years experience in the US is only around 1500?
+1f2nbh1|59|18|What does this symbol mean?
+gxank1|58|13|Can we do new tool days here?
+10iqbqt|56|10|How does this 5,8 Ghz patch antenna work? What does the middle layer accomplish?
+1peovgd|56|24|VNA
+smgdir|56|19|Saw this on the side of my local library, assume it’s for WiFi?
+1heaew1|55|9|Explaining the Radar Range Equation (@MarshallBrunerRF on YT)
+1ed5cbe|55|30|Phenomenon?: 0.0000Mhz
+1nyw5cv|53|13|How much Non-RF work do you do at your job?
+t6chs0|53|9|Could this circuit be used as an FM demodulator? (Details in comments)
+qnsnmf|52|20|Does openEMS allow for 3D time-domain visualizations of field propagation within microstrip?
+1k23n9d|52|13|How would you mentor / train a junior RF engineer
+1vyklzr|52|31|Working 12-hour days as an SI Engineer. I’m completely burnt out and ready to let the balls drop. Need advic
+1p29kow|51|24|Is it ok to route power trace under RF network if its 3 layers away?
+k173t4|51|21|What's the science behind circularly polarized antennas like this, and where can I learn more about them?
+11teoq3|50|28|Can someone explain what the structures are on this RFID tag?
+1vtyfiv|50|17|Beginner RF projects
+1odlial|49|26|What is this on S11?
+1af5zcj|49|25|How is the input/output impedance of this circuit determined?
+m631oy|48|2|How Amateur Radio Fans Decoded SpaceX's Telemetry & Engineering Video (all credit NOT mine)
+1ofebec|48|20|GaN HEMT Power Amplifier Application Circuit Design
+1n9vyda|48|12|is this course worth the money?
+1hxqnb8|48|34|Feeling lost in my RF engineering career and need advice
+gv6qbj|48|17|I've made first S11 measurement on my DIY TEM cell. Do you think that it is good enough for EMC precompliance 
+uanfih|48|25|need help reading spectrum analyzer. details in comments
+u2d8uj|48|9|Looking for a textbook wrt waveguides & antenna design.
+12mg3z5|47|39|RF Engineer Interview Questions?
+1ka5nj5|47|31|Looking for a legend
+xmeckx|47|13|I always wanted one of these as a kid to pick up mysterious TV signals in the microwave bands. Was there actua
+ttgj80|47|36|Does anyone know why I have such a low PAE?
+1re95wz|47|7|Manual vs. Auto Probing Stations: Is high-end automation overrated for complex 110GHz+ R&D?
+1qghf8k|47|13|RF Design - How do I possibly learn this?
+13608e6|46|24|I’ve got an entire box of these rotary attenuators that my boss gave me as part of a DAS decommissioning. I�
+hx3qg6|46|57|The Nope Antenna
+yu6hkw|46|44|Does anyone here know about Rohde & Schwarz?
+bwv2yb|46|6|Will this fit in a female K connector?
+11urcz2|45|14|Do you know what component is this ?
+102rrr5|45|71|What is this giant antenna used for?
+lz0ve2|45|16|What area of mathematics do I need to study to understand this and OFDM and MIMO?
+1nqdbjj|45|10|Got a job offer as an RF Lab Intern!
+1k1wror|45|49|How is a 50 ohm coax always 50 ohms? Doesn't it depend on the length of the cable?
+1rt8jp6|45|13|Junior RF Engineer red flags / deal breakers ??
+1luoohi|44|23|What is this part used for?
+thtz2d|44|22|Does this GPS circuit look sensible? First time working with RF, trying to follow datasheets.
+t3lkdn|44|32|Anyone know what this is? Kinda looks might have had an array of elements on the front flat side maybe.
+1sxm886|44|14|How to tune a random PCB antenna with a VNA
+1ho96yg|44|42|Can drones fly near radio towers?
+1o94kwg|43|27|Power lines vs RF, this blows my mind
+y1w0tq|43|19|How does this first stage function?
+wjsj1c|43|20|Are there any YouTube channels or resources where the author tries to design rf electronic circuits step-by-st
+vtm3fw|43|21|Help on what this is and how to work out?
+tn6p8y|43|26|On Starlink dish phased array, what type of antenna is each individual element. I see that each oval has two p
+1s3kh3n|43|47|If you had to pick one RF specialty for the next decade, what would it be?
+1fms6l7|43|17|slotted waveguide array antenna - why slots placed up and down?
+1eavr27|43|11|Characteristic impedance measurement 
+qqjvuz|42|11|When you’re trying to mesh anything with complicated/irregular geometry in openEMS
+1oqslo1|42|13|What different goes on in these expensive commercial SATCOM equipment ?
+unk1sd|42|25|Input impedance at operational frequency
+1t5zy9v|42|10|Anybody have any Interest in this piece?
+wgxcd|41|2|Why 50 Ohms?
+nt616h|41|64|Answers for 0dB+0dB and 0dBm+0dBm are different. Why?
+nmgn44|41|6|Any water damage? About 3 inches.
+1p7puxl|41|40|Faraday Cage Question
+1mk10rn|41|18|Why aren't tunable power splitter beamforming networks common in RF?
+im2m3j|41|11|Looking for mm-Wave ASICs Designers (Bell Labs - NOKIA)
+uv4vj3|41|24|Is there a secret to antennas ?
+1u1486p|41|16|Why is the power of this amplifier limited?
+1tw9xmp|41|10|Help with matching, first time :)
+1rrgd96|41|17|SMA footprint to microstrip transition HFSS
+1h3jbtc|41|2|FMCW radar, pt 4: "How do FMCW RADARs measure velocity?"
+1bm8nol|41|19|RF lenses with 3d printed resin possible? 
+127i8fx|40|10|What kind of antenna is this? I never saw 4 loading coils on a monopole.
+lh98pe|40|13|Why does my wifi look like a butt?
+1mhzgqu|40|43|How does my car remote starter work?
+1vng6d4|40|11|Is this deal “too good to be true” ? Would you trust this units s-parameter measurements to be accurate at
+1su4rmd|40|37|New EE grad targeting RF test roles — 1000+ applications, zero interviews. Where am I going wrong?
+1hq6dl3|40|29|Why is RF not as big as Embedded Systems or VLSI?
+1fdjv6s|40|30|Where can I find these empty feedthrough enclosures with SMA connectors? I bought some ages ago, and can't rem
+11vjzrb|39|16|Beginner RF Projects?
+mibyez|39|18|Antenna engineers, how is it and how do you feel about the future of antenna engineers?
+lipbt1|39|16|At what frequency do antennas become ineffective?
+1nw6znf|39|29|RF Horn...Or Something Else?
+1k4uph4|39|30|Anecdotally, how weak of a signal cam be received?
+1jr392f|39|35|Is this possible? Multiple radios sharing single antenna in RX ONLY mode
+dgs7xl|39|11|What is this antenna for? I found it in south central rural Nebraska.
+1hkvl2i|39|13|How to build better knowledge in RF
+194kfky|39|51|Is everyone old?
+13y3fkh|38|27|Why does the spectrum analyzer have a square wave by 102.25 MHz, I see the often in FM broadcasting.
+12ym0ss|38|43|Companies with no involvement at all with defense?
+ltnvrp|38|22|To me, RF still seem like magic. Isn't atmosphere filled with every known Fz being blasted all around us, so w
+1usuoiv|38|12|High power pulse RF amplifier transformer question
+1rtth61|38|1|"How Hard Can You Push an RF Amplifier? | P1dB, Psat, and Compression" by Marshall Bruner @YouTube
+1h7ynao|38|8|L Band helical cover
+1g1vd8x|38|17|How often do you get imposter syndrome being in RF? 
+12ruts3|37|11|Why does RF use a minimal amount of transistors?
+1jqiiwe|37|23|How to calculate input P1dB
+1tbp7bm|37|25|How important is a Masters or a PhD for RF/Antenna engineering?
+1jvznka|36|52|Why is the goal of designing rf circuits to match impedance and not minimize it?
+1v8hudw|36|88|Is radar engineering challenging?
+1raq9dy|36|35|Roast my high-level design sketch
+ao6rld|36|11|Reading a schematic: What even is this?
+132p79a|35|14|How would you learn RF electronics from almost scratch?
+130tl8k|35|10|What’s your favorite RF/Microwave YouTube channel?
+q83jsp|35|5|Anyone have any idea of the Starlink Phased Array underlying architecture?
+1klof28|35|17|stuck at impedance matching for my LNA
+jt2sue|35|13|Has anyone seen this RF adapter before? I have only the one and can't find it anywhere! QB-SMP FEMALE TO SMA F
+ilgnkt|35|20|If we stared at a theoretically antenna which were emmiting a signal from 540THz to 580THz, would we see a gre
+wcgad8|35|45|What type of modulation is this? Context in comments
+vbh4b3|35|25|Can anyone help me ID this RF connector?
+1t5seid|35|14|Advice for an aspiring RF/Antenna engineer
+py6gch|34|11|Anybody knows what software used to draw this schematic?. It is publication quality sch that is usually in RF 
+nqa4u2|34|25|What are these components?
+1ottesh|34|16|Would this work effectively? What needs to be considered in it's construction?
+1k2sb3j|34|19|Why my am radio circuit not working
+f0go2u|34|25|When will I not be shit?
+x0z04u|34|14|help identify this component?
+1sonp4q|34|15|Is the research in rf electronics still in progress or has it matured ?
+3kk8rj|33|25|How to tell that your layout guy is not an RF engineer...
+mosy3x|33|9|is L the length of all the sides added together or each side individually
+ljckwm|33|19|Why is optics/photonics research more popular than RF research in EE departments across the US?
+1oxo44b|33|16|I have floating copper on my PCB and I was wondering if they will be good enough antennae to affect the signal
+ghmctd|33|47|TSP #170 - Is 5G Dangerous?
+xjtan5|33|6|Relation between smith chart, phase, reflected, and resonate frequency.
+1wlks1x|33|12|How to go about broadband impedance matching without brainlessly tuning parameters.
+1uc7obf|33|35|This RF switch datasheet recommends 22pF DC blocking caps in series with every RF line. Why not a bigger value
+1ta4k8a|33|12|Career dead end with coaxial cables?
+1rtwg03|33|28|What is this spike in S11 HFSS caused by
+1ga1x68|33|35|Why does RF pay so low?
+1dw46qx|33|14|What Might be Causing This Weird Phenomenon?
+13f2i1k|32|42|Most expensive component?
+nntt41|32|18|Advices for a pure beginner
+1lxc1nn|32|2|PLL+VCO Spurs at every multiple of FPD (phase detector frequency)
+j5s23c|32|13|Little bit more going on here than just a router?
+w2a2ul|32|17|How do I use this?
+vxlscw|32|18|I need help, understanding this circuit for the Si4063 chip. I am by far not a RF expert. I want to use that c
+uhn6xu|32|4|Has anyone reverse engineered some code for this eInk Price Tag based on CC2640?
+1cr917e|32|11|How do these feed lines work?
+10z0elr|31|16|What is this connector on the left
+10h4v67|31|28|How am I doing so far for my front end?
+ktuybo|31|22|I'm an ECE student thinking about specializing in rf, but i don't think i want to work for a defense company. 
+1ojebk8|31|18|Was given a network analyzer from a factory setting, what should I do with it?
+1og2rks|31|7|Best books to learn about RF engineering?
+1nky6h7|31|22|Can someone explain VNA?
+1nbbc9z|31|23|How do I shield my room from Ku band to achieve -40db+ of attenuation?
+1n03btm|31|8|Fixing old RF plasma etcher
+1lfjin1|31|21|Can you help identify this waveguide part?
+1j7zqlk|31|18|Do you reckon it’s a sloppy job?
+fqqhfp|31|11|8753C damaged in shipping by UPS. Still looks functional but I'd rather not ship a whole unit again. Anyone in
+1vcvwe5|31|25|Career in RF circuits?
+1rjswfq|31|6|This has to be a pricing error, right?
+1qia67b|31|11|4-Layer RF PCB Stackup Question: Best Practice for Layer 3?
+1eeu0k0|31|17|blips in S11
+1cdsk2m|31|3|Inspired by Mr. Shahramian of The Signal Path, I managed to give back some life to this 8350B + 86260. Not sur
+1cbfxsn|31|14|Help me understand how this UHF RFID tag acts as an antenna (see comment below)
+19arexe|31|34|Is the RF job market down?
+188i0db|30|33|What rf jobs are out there?
+10kikmo|30|27|Just finished this PCB and wanted to get some opinions on the rf layout
+lmq4rh|30|28|Help me with this FM transmitter I'm trying to build for four days. (Continued in the comments)
+ld2ktc|30|15|Performed a THD test on an old 4000-series HP spectrum/network analyser and got this response. What gives?
+1pv1wzt|30|12|Are RF entry jobs limited?
+1j4zvkz|30|14|Can anyone explain this image of this E-field distribution? what does it represent - a sine wave?
+1i3kgho|30|19|Why doesnt the rf get lost by the emitter resistor?
+jnvpha|30|29|What is the "hello world" of RF electronics?
+za43at|30|9|How did old radars work?
+1v9h9jd|30|6|What's going on at NXP? They introduce new RF GaN parts only to kill them 3 years later?
+1u8cc57|30|23|What was your biggest wow moment in RF/Analog?
+1q7nber|30|3|RF Engineers: Seeking Guidance on Re-Entering RF After Utility & Telecom Experience
+17nrafm|29|26|What does 50 Ohm in Co-axial wire mean?
+qn1tu8|29|45|Is RF Engineering a good career?
+n2lihc|29|15|Advice on pursuing a masters in RF engineering
+1luv72u|29|11|Question for the RF Test Engineers: What made you choose RF Test Engineering? And are you happy with your care
+khsv6i|29|11|Where can i find RF project kits?
+kcg12o|29|16|How do RF receivers attain such high sensitivities?
+juj00v|29|19|What is the name of these RF testpoint connectors shown in TSP#173
+i058i4|29|26|How can I switch between Rx and Tx signals so this system can use only one antenna?
+ut5g6l|29|38|What is the best beginner book to understand radio engineering?
+s6084p|29|9|Relevant books for RF System Engineers
+1ro4iaa|29|8|Does the phase shift between antennas change with frequency?
+1q1j3i8|29|25|Fast Paced High Impact Industries for RF Masters New Grads? Stereotypes About Defense True?
+e8s40d|29|9|Anyone else see a problem? Gotta love vendors.
+o9b8yu|28|16|Good book to learn basic antenna design?
+lf54k4|28|23|What tools and skills should I learn if i'm interested in career in rf electronics?
+1pklrzi|28|17|Am I supposed to match RF trace to 50 ohms or make it as wide as pads?
+1m88ri1|28|33|Antenna design as a career
+1m5urfg|28|19|Best US Cities/Metro Areas for EE Jobs based on RF?
+1m5h3d2|28|42|Help: RF Output Connector Broke Off – Soldered Back, Is It OK?
+1hvk0p7|28|1|"What is Radar Signal-to-Noise Ratio? | The Animated Radar Cheatsheet" by @MarshallBrunerRF on YT

@@ -1,0 +1,52 @@
+1. Reflections and termination (Rs 25 ohm, Z0 50 ohm, 5 pF receiver, tr = 1 ns, 3.3 V)
+   TD/tr = 0.05 (≈   8.3 mm on FR-4 microstrip): far-end overshoot   1.7 %, later undershoot   0.0 %
+   TD/tr = 0.10 (≈  16.5 mm on FR-4 microstrip): far-end overshoot   5.2 %, later undershoot   0.0 %
+   TD/tr = 0.17 (≈  28.1 mm on FR-4 microstrip): far-end overshoot  10.6 %, later undershoot   0.1 %
+   TD/tr = 0.25 (≈  41.3 mm on FR-4 microstrip): far-end overshoot  17.1 %, later undershoot   1.0 %
+   TD/tr = 0.50 (≈  82.5 mm on FR-4 microstrip): far-end overshoot  29.4 %, later undershoot   5.6 %
+   TD/tr = 1.00 (≈ 165.0 mm on FR-4 microstrip): far-end overshoot  35.0 %, later undershoot  11.1 %
+   TD/tr = 2.00 (≈ 330.1 mm on FR-4 microstrip): far-end overshoot  35.2 %, later undershoot  12.0 %
+   overshoot reaches 10 % at TD/tr ≈ 0.16
+[FAIL] unterminated overshoot is small (< 5 %) for TD < tr/10  5.2 %
+[PASS] unterminated overshoot exceeds 15 % once TD > tr/2  29.4 %
+   terminations at TD = tr (≈ 165 mm), 3.3 V:
+     none                          : final 3.30 V, overshoot  35.0 %, settle(5 %)  6.56 ns, DC power    0.0 mW (high state)
+     series (Rs+Rt = Z0)           : final 3.30 V, overshoot   0.0 %, settle(5 %)  2.40 ns, DC power    0.0 mW (high state)
+     parallel 50 ohm to GND        : final 2.20 V, overshoot   4.2 %, settle(5 %)  2.12 ns, DC power  217.8 mW (high state)
+     Thevenin 100/100 to 3.3 V     : final 2.75 V, overshoot   3.5 %, settle(5 %)  1.94 ns, DC power   54.4 mW (high state)
+     AC 50 ohm + 100 pF            : final 3.30 V, overshoot   0.0 %, settle(5 %) 13.52 ns, DC power    0.0 mW (high state)
+     AC 50 ohm + 22 pF (too small) : final 3.30 V, overshoot   9.2 %, settle(5 %)  5.90 ns, DC power    0.0 mW (high state)
+[PASS] series termination removes far-end overshoot (< 3 %)  
+[PASS] parallel 50 ohm at 3.3 V costs > 200 mW in the high state and cuts the swing to 2/3 (Rs 25 ohm)  2.20 V
+[FAIL] AC termination with RC >> 2TD settles faster than unterminated  
+[PASS] series termination: near-end plateau at V/2 for 2TD (do not load mid-line)  1.65 V
+2. NEXT / FEXT from mutual L and C (JLC04161H-7628, h 0.2104 mm, er 4.4, 35 um Cu)
+   W = 0.20 mm, gap 0.20 mm: Ze 77.9, Zo 53.7 ohm, eeff e/o 3.289/2.649; Lm/L = 0.2356, Cm/C = 0.1310; Kb = 0.0916 (-20.8 dB), kf = -0.0523
+   length  100 mm, tr 0.5 ns (2TD/tr = 2.30): NEXT sim 0.0927 vs formula 0.0916; FEXT sim 0.0616 vs formula 0.0601 (sign -1)
+[PASS] saturated NEXT = Kb within 10 % (10 cm, 0.5 ns)  
+[PASS] FEXT = kf * TD/tr within 15 % (10 cm, 0.5 ns)  
+[PASS] microstrip FEXT is negative (inductive coupling dominates)  
+   length  100 mm, tr 2.0 ns (2TD/tr = 0.57): NEXT sim 0.0535 vs formula 0.0527; FEXT sim 0.0158 vs formula 0.0150 (sign -1)
+   length   20 mm, tr 1.0 ns (2TD/tr = 0.23): NEXT sim 0.0215 vs formula 0.0211; FEXT sim 0.0063 vs formula 0.0060 (sign -1)
+[PASS] short coupled length (2TD < tr): NEXT scales as Kb * 2TD/tr within 15 %  
+   (homogeneous dielectric -> Lm/L = Cm/C -> kf = 0; checked with a fully embedded pair)
+[PASS] stripline (homogeneous): eeff_even = eeff_odd (FEXT ~ 0)  4.400 vs 4.400
+3. The 3W rule, evaluated
+   JLC04161H-7628, W 0.20 mm: centre spacing 2W = 0.40 mm (D/h 1.90): Kb = 0.0916 ( -20.8 dB), |kf| = 0.0523; J&G 1/(1+(D/h)^2) = 0.217
+   JLC04161H-7628, W 0.20 mm: centre spacing 3W = 0.60 mm (D/h 2.85): Kb = 0.0423 ( -27.5 dB), |kf| = 0.0372; J&G 1/(1+(D/h)^2) = 0.110
+   JLC04161H-7628, W 0.20 mm: centre spacing 5W = 1.00 mm (D/h 4.75): Kb = 0.0148 ( -36.6 dB), |kf| = 0.0181; J&G 1/(1+(D/h)^2) = 0.042
+   JLC04161H-7628, W 0.20 mm: centre spacing 10W = 2.00 mm (D/h 9.51): Kb = 0.0034 ( -49.4 dB), |kf| = 0.0047; J&G 1/(1+(D/h)^2) = 0.011
+   2-layer h 1.51 mm, W 0.30 mm: centre spacing 2W = 0.60 mm (D/h 0.40): Kb = 0.2295 ( -12.8 dB), |kf| = 0.0331; J&G 1/(1+(D/h)^2) = 0.864
+   2-layer h 1.51 mm, W 0.30 mm: centre spacing 3W = 0.90 mm (D/h 0.60): Kb = 0.1675 ( -15.5 dB), |kf| = 0.0352; J&G 1/(1+(D/h)^2) = 0.738
+   2-layer h 1.51 mm, W 0.30 mm: centre spacing 5W = 1.50 mm (D/h 0.99): Kb = 0.1011 ( -19.9 dB), |kf| = 0.0353; J&G 1/(1+(D/h)^2) = 0.503
+   2-layer h 1.51 mm, W 0.30 mm: centre spacing 10W = 3.00 mm (D/h 1.99): Kb = 0.0376 ( -28.5 dB), |kf| = 0.0271; J&G 1/(1+(D/h)^2) = 0.202
+[PASS] 3W on thin prepreg gives NEXT below -25 dB (Kb < 0.056)  -27.5 dB
+[PASS] 3W on a 1.5 mm 2-layer board is far worse (> 10 dB more NEXT than on 7628)  -15.5 dB
+4. Clock trace beside a 50-ohm RF trace, 10 mm parallel run, 920 MHz (JLC-7628)
+   gap 0.2 mm (centre 0.56 mm): Kb  -22.1 dB; backward coupling at 920 MHz over 10 mm =  -25.6 dB
+   gap 0.5 mm (centre 0.86 mm): Kb  -30.8 dB; backward coupling at 920 MHz over 10 mm =  -34.2 dB
+   gap 1.0 mm (centre 1.36 mm): Kb  -39.7 dB; backward coupling at 920 MHz over 10 mm =  -43.1 dB
+   gap 2.0 mm (centre 2.36 mm): Kb  -50.4 dB; backward coupling at 920 MHz over 10 mm =  -53.8 dB
+[PASS] 2 mm gap, 10 mm run at 920 MHz couples below -50 dB  -53.8 dB
+
+Summary: 12/14 checks passed

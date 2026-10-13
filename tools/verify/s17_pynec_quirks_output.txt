@@ -1,0 +1,7 @@
+no RP/XQ: exception AttributeError 'NoneType' object has no attribute 'get_impedance'
+with XQ: [71.97184704+0.1178895j]
+monopole GE 0: [42.63689038-1686.55445439j]
+monopole GE 1: [36.03098248+0.35674158j]
+len 15 theta [10. 30. 50. 70. 90.] phi [ 0. 45. 90.]
+flat |Etheta|: [0.139 0.421 0.697 0.915 1.    0.139 0.421 0.697 0.915 1.    0.139 0.421
+ 0.697 0.915 1.   ]

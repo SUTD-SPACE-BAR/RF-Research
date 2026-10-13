@@ -1,0 +1,41 @@
+threads 52, comments 1180
+ 27 threads   66 comments  Pozar, Microwave Engineering
+ 16 threads   31 comments  Balanis, Antenna Theory
+ 13 threads   23 comments  ADS/AWR/HFSS (commercial)
+  9 threads   13 comments  ARRL Handbook
+  9 threads   13 comments  W2AEW (YouTube)
+  8 threads   10 comments  ham radio licence
+  8 threads   10 comments  NanoVNA
+  8 threads   12 comments  Razavi, RF Microelectronics
+  7 threads    9 comments  The Signal Path (YouTube)
+  6 threads   10 comments  Rohde & Schwarz / Keysight app notes & videos
+  5 threads    5 comments  Collin
+  5 threads    7 comments  Bowick, RF Circuit Design
+  5 threads    6 comments  Stutzman & Thiele
+  4 threads    8 comments  RTL-SDR
+  4 threads    5 comments  tinySA
+  4 threads    4 comments  Kraus, Antennas
+  4 threads    5 comments  Hayward et al., Experimental Methods in RF Design (EMRFD)
+  4 threads    7 comments  QUCS/QucsStudio
+  3 threads    7 comments  Horowitz & Hill, Art of Electronics
+  3 threads    4 comments  Lee, Planar Microwave Engineering
+  3 threads    3 comments  Gonzalez, Microwave Transistor Amplifiers
+  3 threads    4 comments  Steer, Microwave and RF Design (free)
+  3 threads    3 comments  HackRF
+  3 threads    7 comments  LTspice/ngspice
+  3 threads    3 comments  Richards, Principles of Modern Radar / Fundamentals of Radar SP
+  3 threads   10 comments  Skolnik (radar)
+  2 threads    2 comments  PySDR (Lichtman)
+  2 threads    2 comments  ARRL Antenna Book
+  2 threads    2 comments  Pluto SDR
+  2 threads    2 comments  openEMS
+  1 threads    1 comments  Orfanidis EWA (free)
+  1 threads    1 comments  Analog Devices (Wiki/University/RF basics)
+  1 threads    3 comments  Sonnet
+  1 threads    1 comments  Eric Bogatin (SI)
+  1 threads    2 comments  Coursera / edX
+  1 threads    1 comments  Cripps (PA)
+  1 threads    1 comments  Mahafza (radar MATLAB)
+  1 threads    1 comments  MIT OCW 6.013 / 6.776 etc.
+  1 threads    1 comments  Henry Ott (EMC)
+  1 threads    2 comments  Lee, Design of CMOS RF ICs

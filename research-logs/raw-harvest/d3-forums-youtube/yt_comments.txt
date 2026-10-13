@@ -1,0 +1,840 @@
+
+=== The Scariest Chart in Electrical Engineering | https://www.youtube.com/watch?v=GK2pZ_oVU1o | 40 comments fetched
+- [544] Fight the data brokers, use code veritasium at https://incogni.com/veritasium to get an exclusive 60% off your annual subscription.
+- [15K] Veritasium's target audience: general public. Actual audience: traumatized EE students and engineers
+- [6.2K] FINALLY... a topic even veritasium sucks at explaining.
+- [3.5K] there’s always someone who checks the comments, but never writes. Greetings to you
+- [430] Thanks for citing my video in the references. Really appreciate it.
+- [1.3K] It wasn't until I saw a plastic slinky attached to a metal slinky that I truly understood impedance mismatch.
+- [1.4K] My electromagnetism professor made us bring compasses and rulers so we could draw our own Smith chart during exams. Fun times...
+- [4.1K] Future electrical engineers will return to this video every year on pilgrimage when it's time to learn the Smith chart 😂
+- [75] 11:21 - ooooh man, that sound of markers on paper must be how like nails on a chalkboard sound to other people lol
+- [2.1K] I love how every other branch of science uses charts to show data, but Electrical Engineering just uses a chart that looks like a transmutation circle to summon a demon.
+- [1.3K] This is the first Veritasium video where I have a difficult time understanding everything discussed in it, even with the simplified examples. Respect to all electrical engineers out there, literal wizards
+- [3K] Within the Electronics world, RF electronics engineers are widely considered to be magicians who may in fact be sacrificing goats to make sure their impedances match.  A lot of recent exposure to this graph has been the incredible democrati
+- [13] 0:57 you’re telling me that this guy is a skilled electrical engineer?!? I thought he just made skits on yt 😭
+- [1.1K] I'm an RF engineer. This field can be really difficult for people to get into, so it's great to see someone trying to take this topic to a larger audience. I had a few things I wanted to add here: 1. When discussing recieved power at around
+- [1.2K] Let’s go!! Hey was great talking with you guys! Thanks for having me on.
+- [941] My professor told us to not make photocopies of the Smith chart, because by buying an official Smith chart, Philip Smith’s widow would get royalties. Buying fresh charts might have cost me a few bucks, but it helped the old widow in some sm
+- [15] How did anyone ever figure this out without slinkys?!?  Jokes aside, it really is crazy to me that we have even the slightest grasp of this nature. Especially 100 years ago!  Great presentation, thank you!
+- [496] I love how even a simplified veritasium explanation of transmission line concepts gets very complicated. And this is coming from someone with 12 years of electrical engineering experience.
+- [571] Physicist and high power RF/Microwave Design engineer here. Truly a brilliant attempt to simplify this subject in a 30 minute video. Kudos for trying. For the past 30+ years I have been using the Smith chart not only to match transmission l
+- [931] As an RF engineer, this chart is my life.
+- [789] I felt a great disturbance in the EM field, as if a million hams cried out together - "at last!"
+- [19] It truly is black magic. Title of this video keeps changing.
+- [369] I can confirm that several people in my EE class dropped out as soon as the Smith Chart showed up
+- [491] 1:43 "one in England and one in Argentina" what a great timo
+- [513] That thumbnail is a jumpscare, giving me war flashbacks to my undergrad days
+- [1] I used to love Zach Star’s comedy videos from his second channel and i haven’t seen him in like 2-3 years so seeing him here and remembering that he’s a legit engineer was like a freaking flash-bang 😂
+- [244] Ah yes the infamous Smith Chart.  I'm a retired EE and I remember vividly at my undergraduate days at Purdue this thing scared the bejesus out of me.  I graduated and my first job was working at the Motorola Government Electronics division 
+- [263] Like a moth to light, the amateur radio operators are here.
+- [1] Wow.😮  I now understand after finishing my EE .  Thank you veritasium ❤😁
+- [56] its stuff like this which makes me feel like the "electricity is real world magic" thing is true  so now I can put on my degree "Practitioner of Magic"
+- [95] will smith chart at 37:23 caught me off guard ngl
+- [39] Bro had big shoes to fill and did not disappoint. Exceptional work, kudos! 👏👏👏
+- [2] This is an extremely well-put-together video, and I hope this doesn’t come across as nitpicking. One visual that might help some people understand what “90 degrees out of phase” means is to imagine a dot moving around a circle.  One complet
+- [497] 37:17 the will smith chart 💀
+- [348] 0:10 wiring diagram for Deathstar?
+- [207] I always think about this when I watch Veritasium videos, that there’s another version of me that actually understood the video.
+- [5] 15:46 during uni, I remembered this by thinking of "ice", ice floats on water, beginning from top left, inductance, I, on bottom, C
+- [84] I did NOT expect to see my own professor here :). I feel very privileged to have Dr. Furse as a professor.
+- [23] Took me weeks to fully understand it. If this video had been out there back in my college days, it would have been much easier and more engaging :D
+- [235] Every field of study has its 'scariest chart'. This could be an ongoing series.
+
+=== #170 | https://www.youtube.com/watch?v=h_7d-m1ehoY | 40 comments fetched
+- [564] After 26 years of Navy Electronics, working at NASA, building spacecraft comm systems, this is the first time I completely understand I & Q signals. No one ever showed me on an Oscope. I finally get it! Thanks.
+- [4] you know its good when the professor uses a real oscilloscope
+- [302] The clearest explanation of IQ signaling on the web
+- [43] As a retired teacher, I am qualified to give you an "A" for this presentation.  Well done!
+- [34] 10 years down and it's 'THE BEST' video for the topic. making learning a streamline.
+- [1] Over 11 years later, YouTube finally drops this video into my feed, clearest explanation I've seen.
+- [9] This is one of the best videos on YouTube.
+- [24] Here is someone who really knows what he is talking about. So clear, so easy! This always seemed to me like a complicated matter. Not anymore!  Thanks a million.
+- [15] Wow. I just finished reading the ARRL handbook on IQ modulation and walked away scratching my head. 20 minutes after playing start on this video cleared up all of my confusion. Very clear explanation and very well demonstrated. The examples
+- [62] I had more "ah-ha!" moments during the 20 mins of this video than I have during my entire 10 years in telco!  Thank you so much for your sharing of knowledge. This is a great, "back to basics" instruction for anyone working with any type of
+- [41] This is pure YT-Gold.  Well prepared, nicely edited, good mix of theory and demo.
+- [45] You know, i study electronical engineering in the 7th Semester - Specialized in RF-Design. I had 6 Subjects with 4 different profs on system theory and software receiver design. Until i watched your video i did not really understood what th
+- [5] The math on the scope section is amazing. This is one of the first things I show the undergrads in my lab!
+- [7] FINALLY - THANK YOU! After years of working with Digital Video Signals for Satellites (DVB-S), I understood BPSK (flipping the carrier) modulation & vaguely understanding QPSK with the constellation diagram. Then came (DVB-S2) with 8PSK for
+- [9] I‘m a beginner in „hobby RF“… and I understood IQ for the first time. Thank you for this great  video!
+- [9] This is the best tutorial on IQ signals I’ve ever seen. You have clearly explained this topic that has always been very hazy in my mind.
+- [3] As an electrical engineering student, I vaguely had these thoughts while studying various textbooks, and this video clearly articulated them in language. I think I can now explain this to others. It was a really thrilling video.
+- [9] Absolutely the best description of this seemingly complex subject. I worked as a video engineer for many years, and looked at these i/q signals on the scope without fully understanding them. My only wish is that you did a little more explan
+- [5] Wonderful explanation -- it's actually really difficult to get someone to sit down with you and explain this concept so well. I also studied EE and have been working in industry for almost 5 years.
+- [1] This is the best tutorial on IQ that I've ever seen. Thanks!
+- [6] I know this is an old video but thank you for covering the foundational concepts of what I/Q data represents and showing exactly where the rubber meets the road. This information makes the more "sophisticated" topics more attainable. Thank 
+- [2] This is the most clearly explained (I & Q signals) I've ever heard since college. Thank You.
+- [4] Perhaps the best explanation for basic modulation & demodulation I've seen. Respect.
+- [1] You just combined so many of my engineer classes I am rather stunned. I wont sleep tonight.....thanks.......
+- [1] Youre best teacher of all time, you have that special ability to teach even really complicated concepts that many teachers teach through hard math. Visuailizing the concepts on scope or spectrum analyzer almost always worked for me, and you
+- [4] This has been the most clear explanation of demonstration of IQ processing I have come across. Amazing content, thank you!
+- [2] nice job, clearest and simples explanation of IQ signals in the whole internet
+- [5] Thanks a lot - I just had the most valuable 20 Minutes of Youtube-time since many years! They way you explain the concept us IQ modulation is perfect in its combination of simplicity and detail. I recently started to work on digital designs
+- [2] I bumped on this channel as I have to take over a RF testbench for infrared detectors during my PhD and this channel is completely what I need! Thanks! 🎉
+- [13] I've been exploring RF for a few months now and have watched countless videos on the topic. Your explanation of quadrature signals is easily the most complete yet simple to understand. My understanding of I & Q has just made a big leap
+- [4] It is the most satisfying tutorial so far in my life, after working in Radio Resource Management for one of the leading telco for quite a long time for the first time I was able to visualize the IQ concept. Great work and your efforts are v
+- [2] the best of the best explanation i have ever seen about such a complex topic 🎩🎓
+- [5] amazing ....for the first time in my little life i have understood what actually i was reading all my life.... thank you very much for this beautiful demonstration
+- [1] People need the concept illustration like this to have a solid foundation before they begin learning all the tedious and boring formulas derivation like those taught in schools .  Great work for spelling it out to the world.
+- [4] Wonderful video..never seen anyone explain IQ simpler than this…thank you professor !
+- [1] It’s 1 a.m. where I live, and I’ve been banging my head on the table trying to understand IQ modulation. Then I clicked on this video, and it was the best thing I’ve done all night! THANK YOU SO SO SO MUCH ! you saved me so much time. I can
+- [4] WELL DONE Alan ! You have once again taken a deep topic and presented it a form that is easily understandable. It conveys to the viewer a working overview of the theory that powers software defined radios. Thanks again
+- [2] Alan.  Extremely helpful video.  Your description and graphics make understanding the subject much easier.  Then when you put them on the scope, well that put it over the top.  Seeing the signals on the scope tied all the elements together.
+- [8] world needs more teachers like u ....thanks you for the video :)
+- [2] 5 min into the video and I already know I'm going to learn more here than an entire semester worth of college education. Plus looking at the comments of people with decades of experience saying this video helped them is a really re-assuring
+
+=== #297 | https://www.youtube.com/watch?v=TsXd6GktlYQ | 40 comments fetched
+- [34] I'm not a ham radio guy. I'm not an EE. I don't have an upcoming exam. But this presentation is mind-blowingly engaging and fascinating. Smith Charts are brilliant analog computers.
+- [201] For those, who came here 1 hour before exam, you are in the right place
+- [113] On an educational genius scale of 1-10:   This presentation of the Smith Chart = 11
+- [2] thankyou for the video, made my night before exam easier
+- [160] Holy molly!!! much better than the university lectures!!! great explanation. You make it look very simple!
+- [36] I have listened to many lectures and presentation during my career (now retired).  None have ever made a subject more interesting, informative, educational and downright easy to understand than the ones you do!  Absolutely brilliant.  Thank
+- [3] great video - I´m studying electronics and came here through falling down the "line impedance-rabbit-hole". Didn´t know what a Smith-Chart is. Fascinating tool.
+- [6] Great absolute to the point crash refresher course for former RF engineer ( 30 yers ago at Nokia ) who has forgotten everything and is now  setting up ham station and antenna tuning lab. Thanks alot! 73 Jyrki  OH1XYZ
+- [24] 30 years in electronics,always avoided smith charts as too complicated to get a handle on...now I have seen the light, even if my mobile app does it all for me......great lecture
+- [2] OMG! I learned that exactly 40 years ago at Engineering graduation and I had forgot all as I never return to it. I have a nice plastic Smith Chart with movable scales.  Thanks to bring back that to me at the eve of my retirement!
+- [4] bro, you are really the best, your teachings are utilized in Government projects too.
+- [3] Great presentation.Glad I found it!! again, studying for extra. I'm in awe of the guys who originally developed this chart!
+- [4] I really wish this was available 60 years ago. It would have made my studies much easier
+- [10] ABSOLUTELY EXCELLENTISSIMO! ALL tech courses should be taught like this. This video will serve as my new standard on how to teach tech subjects.
+- [2] Intro to RF Circuits has been a series of elevations and crashes, but this video has made it better. Thanks!
+- [3] Bravo! This is the best and most simple explanation I have seen so far. As a novice/hobbiest who didn’t know what a smith chart was a week ago, I understand it now thanks to you.
+- [2] I was looking for a simple Smith chart tutorial for a long time ago.  Thanks a lot 😊
+- [2] I haven't used a Smith chart in decades. Excellent refresher.
+- [2] Brilliant - wish there was something like this when I was an EE undergrad.
+- [8] For such a complex process you make it look very much simpler. Thank you.
+- [5] Philip H. Smith's wonderful invention is indeed an amazing graphical aid.  Sadly, unless you use it VERY regularly, you can spend an awfully long time re-learning or remembering, exactly how to do things. To be honest, I mostly reach for my
+- [3] Excellent presentation.  Understanding this process is required for when your VNA battery goes dead or you step on it.
+- [1] w2aew: My Compliments to you. Amazing this is the best tutorial I’ve ever seen. Finally I found a real professional. Thank you for all your efforts. 👍
+- [2] Hello, I am a radio engineer and get my diploma 12 years ago and only now I knew what is Smith Chart and how it works!) Thank you!
+- [1] I'm Purdy dumb...... But after rewinding a few times i was able to take away the major points of your lecture(no ill intent).  Thanks again for your time and energy put into helping people. 👍👍
+- [2] Thank you very much for this wonderful presentation, very well done, thank you.  You are doing mankind a favor with this, seriously good work and thanks again.  (i'm binge watching hours of your other content).
+- [4] Thanks a lot!!!! This video helps me understand Smith Chart within an hour. I wonder if you do an LNA design example step-by-step.
+- [2] One AWESOME Video! Thanks for taking time to put this together.  I plan to use this video in my Telecommunications Class.
+- [1] thanks
+- [2] Wonderfull
+- [3] Thanks for your great explanation: it is bliss !
+- [10] The very best clear and concise explanation on this subject I have ever heard. Thank you very much.
+- [2] Nice explanation
+- [4] Wow! This deserves 12 stars out of 10! What a great video and comprehensive explanation! I just dig into Smith Charts and this is really the best and most practical teaching i could ever find about Smith Charts! Really great help, altough i
+- [18] For those of you learning the smith chart and want to understand why Inductive/Capacitive components move you around the smith chart the way they do, consider the following:  A series inductor appears more like an open circuit to a given RF
+- [2] Great Video! You are wonderful!
+- [1] Thank you for such awesome explanation....!
+- [8] Wow only one person in denial that's pretty good. Thanks for the great video!
+- [2] Thank you for this excellent explanation .
+- [5] Great clarity with a misunderstood and underused concept. +10!
+
+=== Understanding VSWR and Return Loss | https://www.youtube.com/watch?v=BijMGKbT0Wk | 40 comments fetched
+- [141] excellent video, thank you, those 5 dislikes probably from keysight
+- [37] I am now 66 retired and way back in 1985, I took a 9 month course of Microwave electronics at Microwave Training Institute in Mountain View, California, a school privately owned by Alan Scott. Learned the basics, Operation of Klystrons, Ref
+- [28] “The definition of genius is taking the complex and making it simple.” - A. Einstein. Brilliant channel. Credit to all involved.
+- [16] excellent delivery and I am in the Telecommunication field  for the past 40 years and I am impressed.
+- [2] I'd like to make three important points, all of which can be easily proven as fact:  1.) Reflected power is absolutely NOT what damages a PA device or stage. It is the mismatch in optimum impedance at the output port, regardless of standing
+- [5] I just found the Gold mine, and the fact it comes from my favorite Test&Measurement company is icing on the cake.
+- [6] That graph at min 5 was all that i was needing.
+- [1] I finally understand how VSWR is calculated. The pseudo scope/wave example shows it all. Great video, thanks 🙏
+- [17] One of the best lectures I have ever come across. Thank you so much sir!
+- [1] this helped me through HF/RF Engineering thanks
+- [ ] Excellent presentation!!!
+- [4] MAN this helped so much. Im final year doing electrical engineering and my teacher speaks no English and i was FREAKING out until i found your video. Thanks mate
+- [7] Amazing and very valuable for someone like me been over 10 yrs in field
+- [3] I didn't know actor James Woods was into antenna efficiency! :)
+- [2] Beautifully made presentation/explanation. 5/5!
+- [2] What an excellent video, more like this please!
+- [2] I like this comment and it is spot on. The pacing of the speech and clarity  videos is just right in an area of Radio Frequency engineering that is not easy to grasp. No wonder Rhode and Schwartz make the best analysers in the industry. I w
+- [1] So informative and explained very simply😊
+- [2] very nice presentation
+- [1] SUPERB. What a great explanation.
+- [6] Beautifully explained..
+- [3] Thank you!  Such a beautifully explained video!
+- [4] This is one of the best and easy to understand explanation with clear examples I have come across. Well done team. I request you to post more such videos.
+- [1] Just getting into amateur radio, this is very helpful.
+- [2] Thank you so much for the explanation and the concept. Your way of your explanation is easy to understand, preety straightforward but still bring the concept. Hope the best for you
+- [1] This video is so good that tomorrow I would like to buy some Rohde & Schwarz test gear to give back... if I could afford it :) Thank you!
+- [1] Excellent presentation on understanding the Return loss and importance of VSWR.
+- [2] Very well presented.
+- [1] Very clear explanation. Thanks!
+- [1] A clear and good presentation. Thank you.
+- [1] To the point and very informative. Thanks a lot for the share!
+- [1] Very helpful!
+- [3] In the beginning, I don't understand at all the concept of VSWR and Return Loss. But, after I watched this video, I got some new insight. I'm really glad that I found this video. Thanks a lot, Rohde Schawrz.
+- [2] omg this video was so informative; thank you a tonne
+- [1] Wow superb video! Thanks!
+- [ ] This was very informative, appreciate it.
+- [1] great, thank so much for that knowledge you provided
+- [1] Excellent video sir..... it helped me understand  the thing. Thanks a lot !!!
+- [1] Excellent, Excellent, excellent video! THANK YOU!! I subscribed...
+- [2] excellent explanations... thank you
+
+=== #112 | https://www.youtube.com/watch?v=hMOwbNUpDQA | 40 comments fetched
+- [148] ...when your device says "Hi" instead of "hello world" because you don't want to use too much bandwidth.  :)
+- [119] Thank you, Andreas, you've compressed what is 3 hours of lecture, that I didn't understand into 20 minutes of knowledge transfer.  Keep doing these videos you are an inspiration
+- [10] your accent and speed  speaking is excellent , even a french can understand you !    👍👋💖
+- [25] Great video. No unnecessary talking face, but only relevant illustrations and clear explanations.  This is how every single Youtube video should be and not only 0,0001%.
+- [13] What a brilliant presentation. Well planned and executed. Kept moving at a good pace that was easy to follow. No umming or erring and no boring repetition. A perfect example of how it should be done. Many thanks for all the time and effort 
+- [8] you are very skilled at starting the story from the perspective of someone unfamiliar with the topic and progressively leading them through discovery piece by piece
+- [2] You are not just knowledgeable, but also a great teacher. thank you
+- [2] I can watch your videos 3 times, back to back, and still pull information from them. You are very masterful in your articulation.
+- [37] Thanks Andreas, you've produced the best and most didactic introduction to LPWAN, and LORAWAN in particular, I've seen
+- [2] Very pleased to hear a young Werner Herzog explaining LoRaWAN
+- [7] Thank you for providing subtitles in Portuguese. sure your channel will be very successful ppis is now accessible to people who do not speak English well. I'll watch all your videos that have subtitles in Portuguese
+- [2] Thanks for the explanation. You filled in all the missing pieces of an overview. I like your methodical and paced explanation style.
+- [7] Thanks for your kind presentation. For me, it was great to know that the relationship between bandwidth and range. Yes, energy conservation raw is applied to all of things in nature.
+- [1] You are not only the great engineer - you are the great lecturer too!
+- [51] Andreas... WOW! Great explanation! I learned a lot! THANK YOU!!!
+- [ ] Great video. Waiting for the next video like to set up my own gateway. Very interesting.
+- [5] This is an extremely useful video. Thank you for the info.
+- [1] This is the first time I've enjoyed a powerpoint presentation type of a video You're a great explainer
+- [11] love it cant wait til next vid on this.
+- [ ] I have so much respect for people like you who understand this stuff
+- [15] Your video is very well made, incredibly informative and covered an interesting topic.  It's rare that one can learn so much in 20 minutes. You've raised my expectations for instructional videos. I'll be more critical of others, including m
+- [2] Good to see you all really enjoying his LoRa.
+- [25] @6:50 "The link budget is, as every other budget, something you have at the beginning and which you spend over time. If your budget is used up, you cannot spend more. At least this is what we learned when we were young." I thought his was a
+- [36] Very interesting, and you are a very good teacher
+- [ ] Thank you so much for this video, you saved a lot time to understand the Lora concept.
+- [ ] Another first class explanation, wish you all the success you deserve.
+- [ ] Man !!! This is a very good explanation of LoRa and LoRaWAN. Very funny at times also. Thanks.
+- [5] Excellent video, thanks. Perfect solution for sensors. Such a pity the LoRa transceivers are so expensive compared to ESP8266.
+- [ ] It is June 7, 2020. I just worked through your lora meshtastic video. Now I am going back to review. Thank you for all your work.
+- [1] Problem solved in few minutes. Thank you sir
+- [3] Thank you Andreas - I've finally caught up with things so I can now look at this technology. Great introduction.
+- [ ] Still the best video about Lora/Lorawan. Thanks!
+- [194] You are an excellent presenter. :-)
+- [ ] Always enjoying your lessons meine Herr 😎. Great explanation!
+- [3] Thanks - you are very good at explaining complex radio theories in an easy to understand way . I like your other videos also - it will take me awhile to watch them all !
+- [ ] I'm starting to know about LORA and in some minutes I could understand a little bit of this technology  thank you Andreas
+- [4] Very good. danke für all diese Videos. Sehr hilfreich. Gruss aus Berlin
+- [ ] speeding up the video by 5-10% worked fine for me 👍
+- [4] many thanks for the excellent introduction to Lora, I would really like to see an esp client using low power without the wifi enabled to run the lora client with a temperature sensor etc. please sir!!
+- [ ] Excellent, just in 20min, got a glimpse of key points, awesome
+
+=== How LoRa Modulation really works - long range communication using chirps | https://www.youtube.com/watch?v=jHWepP1ZWTk | 40 comments fetched
+- [39] Which modulation scheme should I cover next? 🤔
+- [220] This wasn't really emphasized but usually more bits per symbol means worse performance for a given SNR, but in LoRas case, a higher SF also greatly increases the symbol's duration (as well as the bits per symbol), increasing SF by 1 means 1
+- [72] “You can always detect a sine wave in noise….if you are willing to “wait” long enough” - E.J. Swanson
+- [390] This is possibly the best explanation of Lora modulation I’ve seen ever…
+- [136] I’m a ham operator. I setup a LoRa base station using the lora ham shield that runs on top of an arduino. With that arduino plugged into my raspberry pi at home, and another arduino with lora hsm shield running in my car. I was able to TX/R
+- [85] It absolutely blew my mind how clearly you have explained the LoRa modulation despite the complex maths behind it.
+- [3] "Spreading factor is between 7 and 12 in Lora" Fascinating, I'll be sure to let her know.
+- [3] the moment i saw remembered what chirp means i was like "oh yeah you can just squeeze the chipr for a different signal and that probably goes really nicely with filtering out background noise because you have so many sample points you can c
+- [2] LoRa is incredible in that it can work below the noise floor
+- [61] Great video!  Just one comment: The LoRa demodulator is basically a correlator plus a bank of filters, the latter being implemented using FFT. And, the LoRa symbols are basically time shifted versions of each other.  Conceptually it is very
+- [1] While watching this, my brain started to think about it deeply. Ultimately I fell asleep. I guess my brain was overwhelmed and turned off. 😀
+- [3] Man, your explanation is awesome. I really liked the way you added the paper information and brought a nice explanation. Please, keep going with these kind of videos.   Regards, Pedro.
+- [2] Excellent video mate, cheers for that! Good to see matlab getting used as well, it is invaluable in so many ways.
+- [4] at 4:09 you put up both down chirps. Thanks for the lecture
+- [7] Years ago with a friend i did a equivalent experiment using GNU-Radio. Not related to LoRa but the target was using width bandwidth spreadspectrum to get a signal over a long distance 100 - 200 km  (60-100Mi) I also added a noise generator 
+- [4] Thanks for explaining this what I always considered RF wizardry. Even though I don't have the mathematical fundament to stand on to understand it thoroughly, I have the feeling that I'm a lot smarter than before the video
+- [1] Perfect material for our LoRa APRS group!
+- [19] Dont know what amazed me more - the LoRa protocol or your explaination. Thanks for the video.
+- [ ] Very impressive and well done. Thank you. Back when I was in school this would have been a PhD.
+- [ ] A really useful introduction and also you dive in quite deeply. I found it very interesting.
+- [20] I've been very impressed with the performance I've been getting with LoRa, and this was a wonderful addition to the documentation from Semtec. They make it easy enough to use, but this understanding is invaluable.
+- [2] Many thanks for posting this video.  I had no idea how LoRa worked beforehand but your video clearly explained it.  It took a while to  figure out how convert your Matlab code into Octave code and correct my typos.  But the final result wor
+- [2] Excellent explanation. Excellent content. Excellent topic. Keep up the good work.
+- [3] Well done. It would be interesting to add information about the bandwidth of the signal vs SF. This relates directly to the received noise and hence the S/N ratio. This will perhaps also shed a light on your question how far one can go by i
+- [1] Wonderful video. Amazing. I'm working with LoRA modeling on my thesis. Great job and great explanation.
+- [1] Somehow, I just knew the clever math trick would involve fourier transforms. Invariably in signals, compression, or other similar domains, converting between time and frequency domains opens up all sorts of interesting options for improving
+- [ ] The best video I've seen that explains LoRa. Thank you. Got a device with SF 12 capability now, and LoRa is just amazing.
+- [ ] I have been long time to browse such best explanation of Lora to understand, thanks for great lecture
+- [2] Really good explanation! Again this shows the power of FFT. OFDM uses a similar mathimatical trick with the FFT btw.
+- [ ] thank you so much, kind person! Without you it would have taken ages for to learn all of that
+- [ ] This is a super valuable video! Simple and to the point. Thanks!
+- [ ] This video is simply incredible. Thank you so much for explaining this. Help me tons!
+- [2] This video is simply unbelievable, very clever explanation!
+- [1] Thanks for the video and very clear explanation. As a graduated in electronic engineering at the Padua university ( the same of Lorenzo Evangelista) I studied spread spectrum in the nineties but at the time I didn't catched the concept: too
+- [ ] What a great video and details explanation!  That helps me a lot with my project in LoRa IoT!  Thank you very much!
+- [ ] Truly wonderful and comprehensive explanation. Thanks a lot!
+- [ ] Excellent ! Really helped me to grasp the intution about LoRa !
+- [ ] Signed up! Love so deep math analysis.
+- [ ] Great tutorial! YouTube at it's finest. Thank you.
+- [ ] Great Vid! Although I mostly forgot university maths, I got to understand the principle of spreading factor and symbols on LORA.
+
+=== The Truth about SWR: Debunking the Myths and Misunderstandings | https://www.youtube.com/watch?v=L1_NLEpsW90 | 40 comments fetched
+- [43] As a ham of over 30 years and an electrical engineer, 2 thumbs up for a great video to educate about SWR.
+- [ ] Very helpful!  --Regards from Baltimore.
+- [18] Great explanation. I've explained this to many folks over the years, but you crystalized it very well for a short video.  Generally speaking, most hams understand SWR as well as they understand grounding and bonding - almost nill
+- [19] Nice job Michael!  Made me think past the SWR standards.  I would really like a video taking this a little farther using a RigExpert AA-650 Zoom  or similar and talk about what the optimum X,Z,R numbers on the meter would be to strive for w
+- [12] I worked in the 2-way radio field for 33 years and before we had analyzers, if we suspected a problem with the antenna or coax, we would send someone up the tower with a wattmeter and dummy load. First, with the wattmeter and dummy load, we
+- [ ] Excellent video!  So many hams I know are upset with 1.5:1 and jump through hoops to get from 1.3 down to 1.2.
+- [7] The only thing you could have mentioned would be CM chokes.  Often, that will solve a lot of ills regearing SWR problems.  Maybe another video for those less familiar with this very interesting phenomenon.
+- [13] This information is just gold. Thanks for it!
+- [ ] Great emphasis on the importance of feed line. No component can be taken for granted and feed line is often just given no respect. Antennas and feed lines are where to put your money as a mere 3db improvement net output achieved by any mean
+- [ ] I am a customer of DXE....that aside this is the best video on SWR.
+- [ ] Love the Century 21D in the background.
+- [ ] Great video, clear explanation! The concept that reflected power is not lost (minus the power dissipated in the coax and matching network, if any)  is often ignored by many hams. Thank you!
+- [22] Another thing to Keep In Mind is that 1 S-Unit is 6db so 1/2 S-Unit is 3db, and in most cases 1 S-Unit signal loss at the other end will not be noticed UNLESS your close to the noise floor in Weak Signal Conditions where your signal could b
+- [7] What did I learn? That I know less than I thought. 😢
+- [ ] Don't know if your still watching the comments. Just thought i would let you know great job on swr.
+- [ ] Thank you for spending the time to do this video. You explained SWR very well. The mists are beginning to part…..😊
+- [1] New Subscriber Here From Penzance , Cornwall   Bless Up
+- [ ] Enjoyed the video, thanks very much.
+- [9] Very Good explanation. One thing to keep in mind, transmitter finals do not like a high SWR, especially solid state, ergo the tuner. By using a tuner to match your transmitter output to the antenna system (transmission line and antenna) you
+- [5] Interesting and most helpful. Thank you Michael and DX Engineering! W5JCS
+- [4] 9/2024:  Hello & Good Day from The Future.  I just found & subscribed to this site.  Excellent tutorial and now, I want more.  Thank You & Best Regards.
+- [1] Great video and timely as well.   A friend of mine is having a problem with his 80M antenna and he needed some understanding as to what he was seeing on his rig expert meter.  Thanks for this post, it is very useful.   73!
+- [1] Very informative and well done video.
+- [ ] This is a very complex topic....many radios fail because of out of tolorence amplifiers, so so transmission lines and over modulated signals. When running at the edge can get expensive. Great talk!!
+- [ ] Excellent insight. Thank you.
+- [ ] Nice presentation, thanks Michael! There's actually an online antenna modeller website which can show, for a multiband wire antenna like an OCFD or EFHW, exactly how VSWR changes across a frequency range when using a user-defined length of 
+- [ ] Thank you. Saved to rewatch.
+- [ ] Thank you so much for the information. That's really interesting even if you know the topic very well.
+- [2] Good stuff 👍
+- [ ] Little surprised you talked about coax as if it is the only transmission line (no mention of balanced line).  Also surprised to see the use of "Db".  When presenting technical stuff, wrong units serve as a distraction.  Good discussion on r
+- [ ] Thanks Mickael,great video will have to watch against absorb everything.
+- [7] Thank you so much for this video!  I have been preaching this gospel for years and now I finally have a terrific summary that I can just point people at!  73 de AA5SA
+- [ ] Awesome.
+- [ ] Agree I have had issues with 1:1swr antennas with stray rf however tuning 1:3 /1:5 has solved this for an endfed via a matching unit despite the settings being fine on an analyser it's truly a dark art especially with environmental factors 
+- [ ] Thanks 👋🏻Good Stuff👍🏽 thanks 73 🎙Ira
+- [3] Good information. Well presented. Now I have to get to work and figure this out.  ✌✌
+- [ ] Thank you.
+- [1] XE2ZZ Good Info.
+- [ ] Good Video Mike! 73 ghw
+- [ ] Thanks for clear and concise information.  Please replace the "hobby" word with "amateur radio".
+
+=== Transmission Lines - Signal Transmission and Reflection | https://www.youtube.com/watch?v=ozeYaikI11g | 40 comments fetched
+- [24] To see subtitles in other languages:  Click on the gear symbol under the video, then click on "subtitles." Then select the language (You may need to scroll up and down to see all the languages available). --To change subtitle appearance:  S
+- [201] The music goes from "Ah, yes, you see the voltage moves like a gentle wave across the wires, the voltage bobbing lazily up and down at its output," to "AAAAH F*** ELECTRICITY"
+- [16] Great. That video show us the difference between a Teacher and a teacher.Simple as that.
+- [29] Like how I felt like I was playing Halo and learning at the same time.
+- [4] The music gave me a wave of thrill, for sure.
+- [28] Have you considered making videos like this for substation concepts? As an Electrical Engineering student, I think it would be really beneficial for us to see the different substation configurations at work via the animations this channel o
+- [6] I've been reading about this and looking at diagrams showing this arrangement. This animation really clarified what I've been reading.
+- [5] Someone at YouTube is looking out for me. Every time school covers a subject I'm stuck on, this channel always pops up in my recommended shortly after.
+- [2] I dont know what is better, the video or the music in the background :D
+- [3] sick guitar solo in the background
+- [9] A beautiful animation on signal transmission and reflection which is an often confusing key concept in transmission lines and systems. Thank you to all those who prepared this and made it available !
+- [ ] Most university lectures can’t even be compared to videos like this. A single video like this explains things infinitely better than what many professors and entire universities manage to do. Many universities should seriously consider awar
+- [4] Damn these videos are so frkin good. Bless whoever created this
+- [2] THIS IS A VERY INTERESTING GRAPICAL REPRESENTATION ON HOW THESE VARIABLES AFFECT THE CIRCUIT PROPERTIES.  THANK YOU, FOR THIS EXPLANATION!!
+- [9] Such a cool video! My signal transmission class was a total nightmare; I hope others have better luck.
+- [4] That's cool.  Phone lines are a good example of a transmission line, you can actually measure the capacitance and we do it from the CO when someone reports a trouble.  We can sort of get an idea of if there's even a phone plugged in based o
+- [6] This is the Best channel which successfully explains complicated rules, theories and pure basics of electric in an very clear and understandable way with very good animations. Very well done  Eugene please go on producing vids!
+- [2] The style of these videos is fantastic.  The pace and vocalization are perfect.  The only thing I would add as a critiques is that you can never restate/rephrase a concept too many times for the uninitiated.
+- [4] I love the video! The content, the animation, the pace, the narrate, the music, literally everything! Thank you !
+- [ ] THANK YOU so much eugene khutoryansky you have just cleared all the concepts of transmission
+- [4] Great video, as always!  It would be great if you made a video explaining AC power transmission (what happens in power transmission lines).   I am an electrical engineer and I have studied transmission theory in Electromagnetics Course, abu
+- [1] I  got to give props to the animator working with the music director on this project and also to the voice actor that changes to a much more sinister tone to extenuate the real-world implications this simple animation has
+- [ ] Dude, your genius for explaining complex subjects in simple, easy to understand ways is scary.  Thanks.
+- [ ] Hats off to your effort. I couldn't get it all. Maybe I am not that with my basic understanding.
+- [2] Wow! Wasn't even aware of this phenomenon. Thanks a lot.
+- [ ] Always loved the art style of the videos and the narrator's voice. She enunciates like Microsoft Sam. The voice and animations work together to give the videos a surreal feeling that's pleasant and unique. Keep making these videos. I watch 
+- [1] I like the guitar jamz thrown in!:face-blue-smiling:
+- [5] Your videos are great! and I loved the soundtrack :D
+- [ ] So much helpfull information perfectly presented, thanks! Finally understood, why there have to be Resistors at the end of CAN wires.
+- [ ] Excellent video, I can watch this all the day over and over again and not getting bored even for once :D
+- [1] So educative and future promising
+- [1] now it all makes sense! :D great video and great use of illustrations to explain
+- [1] Wow great content, love this type of ed video, very clear
+- [ ] Un'ottima rappresentazione grafica delle costanti distribuite e del loro effetto sulla propagazione del segnale lungo la linea
+- [ ] You have the best illustrations about engineering! Your videos are of excellent quality and high instructive value. Thank you for making the world a less strange place
+- [ ] This is great review and simple explaining ,, Thank you alot
+- [ ] Thank you! It helped me in Guided Waves topinc in the electrical engineering
+- [ ] I love that song and the video was great. I'm now studying impedance canceling.
+- [ ] Excellent visual demonstrations. It's really helpful for understanding what's happening. Thanks.
+- [ ] I work on J 1939 data links quite often.  This explains the role of the terminating resistors.  Now I better understand the transmission  line at a more fudamental level. Thanks Eugene.
+
+=== Why is Coax 50 Ohms? ( | https://www.youtube.com/watch?v=I-OnQZJv35I | 40 comments fetched
+- [494] I am 76 y.o. retired. I have been wondering "Why 50 AND 75?" for about 65 years.  Now I know.  Thank you.
+- [28] As an electrical engineer I took an electromagnetics 2 class. We went over all of this and did the math to "match impedances" as it is necessary at high frequencies
+- [77] I love it when things are explained in their historical context - it always clears up all the why’s.
+- [33] Years ago while researching into the origins of VHF (AM) offset carrier transmission (simulcasting) I ended up in the under ground archives of the British library, Chancery Lane in London.  Most of the original sources had yet to be digitis
+- [399] 40 years ago I was asked this as an interview question for a job at the Motorola company as an RF design engineer. I spent over two hours filling the board with math to give a deterministic answer for both the 30 Ohm,(max power) and the 75 
+- [17] Good explanation Dave.  I'm a EE with a BS degree.  I specialized in transmission line theory and RF communications.  This is exactly what we were taught at Iowa State many moons ago.  The characteristic impedance for CATV coax is 75 ohms. 
+- [84] Thanks Dave!  Might I add more information about why 50 Ohm coax.  Years ago  an engineer for the Hewlet Packard instrument labs explained it this way.    At about the start of WWII there was no standard.  With a world war approaching, a st
+- [126] A guy a mile from me was apparently an avid short wave enthusiast, who excelled at DXing.  When he passed, I visited his property in the woods and saw his very tall antenna tower.  I Googled his name and discovered his fame.  Someone appare
+- [14] We used Heliax on our high power  transmitter to antenna connections and we filled the space inside with a dehumidified pressured air  supply slightly greater than atmospheric pressure to keep out moisture
+- [5] 50 ohms takes me back… That was the large one with a screw on connector on my vidicon camera. Broadcast TV was 75 ohms with a type F connector. The early 1960s were fun. Didn’t know they stopped calling it the Heaviside Layer!
+- [11] For people using 75 ohm cable, you can get RG11 which is very close to RG8's size, and you can get flooded cable which has a water absorbing gel to protect the shield from water damage.
+- [6] Best condensed yet great I ever heared of this subject after 37 years working RF. Kudos!!
+- [29] Thanks Dave. Good explanation. Characteristic impedance of a transmission line is a hard enough concept to grasp. Understanding 377 ohm Free Space is the next step. Been licensed since 1960 when you had to demonstrate 20 wpm Morse at the FC
+- [23] Thanks Dave.  I am a retired Electrical Engineer, this was an excellent explanation .  I never really thought about all the specific details you explained.   Good job.  Joe
+- [16] Hi Folks, Interesting discussion! I seem to recall reading decades ago that the 50 Ohm standard came about from the US Navy. The long wire dipole elements that were suspended from the ship's conning tower to the bow and stern at a declining
+- [1] Great explanation. My takeaway is that 50 Ω is not a “magic” optimum, but a successful engineering compromise that grew into an ecosystem. Once radios, connectors, test equipment, feedlines and antennas were built around it, interoperabilit
+- [9] Dave, if my math teachers explained things as well as you do, my school years would have been so much better. Thank you.
+- [11] 30? 60? 77?  I thought the answer to everything was 42.
+- [28] Oliver Heaviside was a genius, that many in Electrical Engineering community no less about. He introduced the concept of (impedance) "matching", whether it is a twisted pair, flat cable (like for old TV set to its antenna) or co-axial cable
+- [19] When Santa said "I'll go way beyond the answer" I decided to stay and watch!
+- [3] Differential Calculus was developed by Isaac Newton and Gottfried Leibnitz.  Oliver Heaviside was instrumental in developing the Operational Calculus.
+- [1] I'm a professional electrician and work in industrial controls and my work is increasingly getting involved with radio technology. I have to say I love your approach to your videos, you have a great educational approach! I will be checking 
+- [2] Also note that 75 ohm cable requires less metal for a given diameter, so that is another reason why it is cheaper.
+- [49] Heaviside also reduced "Maxwell's" equations into their modern differential form.
+- [1] I read about this many many years ago. IIRC, the "High Power" optimum is actually a balance between the arc-over voltage and the resistive loss of the conductors. If it was strictly arc-over voltage, then the optimum would be as low an impe
+- [8] Most people are not aware of the fact that Heaviside is responsible for the concise form of Maxwell's equations that we use on a daily basis. When Maxwell was done, his equations were a horrible mess of twenty equations in twenty variables.
+- [1] I remember looking at industrial electronics catalogs back in the '70s, and could find specific cable numbers that had nominal impedances of 50, 52, and 52.3 ohms.  All due to variations in diameters, dielectric materials, and size of condu
+- [3] Did the relatively high output impedance of tube technology of the time affect bell lab's choice of 30 ohms for max power transfer?   I wonder if 50 ohms today is still the best balance of power/loss given modern low impedance output stages
+- [1] The answer to questions like this often boils down to the fact that engineering is the art of compromise. So 50 Ohms was chosen for air dielectric coax as a good compromise between low insertion loss and power handling, with 50 Ohms being a
+- [3] From Amphenol: Experimentation in the early 20th century determined that the best POWER HANDLING capability could be achieved by using 30 Ohm Coaxial Cable, whereas the lowest signal ATTENUATION (LOSS) could be achieved by using 77 Ohm Coax
+- [2] Great video! Thanks! My understanding is that a cable’s ohm rating has to do with what impedance it wants to terminate into for minimum loss due to inductance and capacitance. The more capacitance a cable has, the lower its impedance charac
+- [10] Interesting.  I was getting cross talk on my landline about 25 years ago.  I could hear one particular residence talking to other people, but only when I was on the line to someone else.  We discovered that they could hear us one day when I
+- [1] I recall seeing 3/8 copper tubing with a inner cable separated by what looked like ceramic or a hard powder substance. It was ran on the outside of the walls to switches and outlets in old buildings mainly hospitals.
+- [4] Thanks David. It all makes sense when you have all the facts.
+- [2] I always thought twisted pair was very clever, a poor man's  EMC resistant cable.  I was a little surprised, but understood it, when I came across twisted pair in automotive air bag wiring.  I wasn't aware of heliax, but it makes sense sinc
+- [100] As a Canadian I appreciated you randomly switching between Zee and Zed.
+- [1] Triaxial cable is normally purged and pressurized with nitrogen to eliminate moisture.  Commonly used with microwave repeaters.
+- [5] 3:40 Great presentation. But Heaviside did not invent differentical calculus (that was Descartes, Leibniz, Newton). Heaviside developed techniques for using the Laplace transform as a means for solving differential equations and thereby usi
+- [ ] we did the terminators on the cables in RF labs at Hughes.. but unless you are doing the high freqs (aerospace), the shielding is only needed for daily  noise for home products.
+- [3] I was taught coaxial means along the same axis. My last job we used both 50 and 75 ohms in the 70 MHz range.
+
+=== Meshtastic off-grid radio: Fantastic? Waste of Plastic? Or... | https://www.youtube.com/watch?v=0A7A-CSd3e4 | 40 comments fetched
+- [428] My buddy is a tech guy who works with the gov. and I brought Meshtastic up to him. He immediately went on a quick rant about how law enforcement is currently trying to shutdown Meshtastic because they don’t have a reliable way to monitor it
+- [1.5K] Excellent video Jeff and Jeff's Dad :) We like getting constructive feedback as it helps us make things better!
+- [313] If you can only take one thing away from this video... take away how proud and happy this Dad clearly is with his son.
+- [188] I wish I had a respectable and intelligent father like yours to conversate with.  You are very lucky.
+- [421] My college physics prof was a ham radio operator. He was into antenna design. When I took quantum mechanics from him I learned that the equations for designing antennas are the same partial differential equations as quantum mechanics.
+- [287] I built a solar powered unit with an 8db omni antenna.  I threw a rope over a tree branch about 50' above ground and hoisted the radio to the branch.  I also adjusted the settings for maximum range and I can consistently connect to my other
+- [20] I envy the father / son relationship.  Good on you guys.
+- [218] Hamvention 2024 in Dayton overloaded the network. There were at least over 200 nodes within the fairground and the constant rebroadcast was the biggest problem. The devs actually made changes about rebroadcast because of that both in softwa
+- [79] That vape looks dope af
+- [65] Meshtastic is a gateway drug to the world of radios. I started with them and have since got several radio licenses and set up some repeaters and routers. It’s really fun to mess around with. Also, if you’re using one with the drone, your be
+- [49] Good video. I'm at about 300' in the SF bay area. I've been able to see approximately 150 nodes, and I'm able to connect with many of them, some direct, and some by hoping from node to node. My longest connection so far is about 125 miles. 
+- [21] I bought 2 Heltec v3's close to a year ago, and they haven't magically unpacked and assembled themselves.   Maybe one day.
+- [23] I live on a hill in Cape Town and my node is quite popular. It's a fun little hobby because it doesn't take up a lot of time or skill to get started and it's great to see all the nodes pop up!
+- [271] For anybody who noticed the 500 feet comment, normally you can only fly a drone up to 400 feet. If you’re a part 107 pilot you can fly higher if you’re within 400 feet of a structure. Since he works at a radio station the power is higher.
+- [17] The big thing is that they're great for person-to-person short range stuff like camping, etc but in order for it to be a regional/metro-wide thing that's even remotely reliable like normal text messages, you have to work VERY hard setting u
+- [2] And here a year later, Meshcore is where it's at! Good news is all you need to do is update the software. But I bet you know that!
+- [34] I would definitely love to see an update to this Meshtastic video as well as comparisons against MeshCore as far as performance, security, & reliabillity...
+- [148] Thanks for the info.  Our local emergency communications group is looking into supplementing GMRS and ham build-outs with Meshtastic.  In addition to being concerned about 900MHz signal attenuation due to rain, we are also considering the e
+- [2] The encryption of these is more robust and well-designed than most commercial standards (TETRA, GSM, DMR, etc.)
+- [7] I think many people don't understand that this is different than ham radio or cell phones or gmrs. This isn't about being in private communications with friends or family. IoT is about exchanging data. The data might be text, it also might 
+- [40] "RF is black magic"
+- [13] if you are in a remote lolcation where you seem to be the only node, you should consider a repeater (not router) up as high as you can get, and connect with client or client mute devices locally.   also, make a separate channel with your ow
+- [2] We need a MeshCore video!!
+- [16] We are using LoRA as part of many student projects at the university I work for. Sending data messages for various monitoring stations including road infrastructure, agricultural systems - frost-detection, robotics and such. Interesting tha
+- [9] Great video. Straight facts, no meshing around... 🙂
+- [57] What a timely video. I live in Swannanoa, NC, which was devastated by Helene. I'm also a ham and in our rural, remote community, we were cut off for days due to both our bridge and a significant section of our road being washed out. Fortuna
+- [1] would be cool to see a comparison video on meshcore as well
+- [6] Good video guys. Cool to see Father/Son working together too!
+- [7] The RAK wireless nodes are the go at the moment. They do it all, have good BT and Wifi range due to having dedicated antennas, as well as they can be solar charged, so you can set up a node on your roof, in a box with a panel and just use t
+- [15] Seeing St. Louis Hills neighborhood wasn't on my bingo card when I clicked on this video. My dad and I will be playing with some meshtastic this weekend. South County Nodes coming soon!
+- [14] Mate, your pops is doing good, 35, wardrives and drone recons for nodes. Love it.
+- [3] The BEST video out there as an intro to LoRa devices and the Meshtastic eco system.
+- [1] Hi Jeff, I would love to see a video covering the alternative networks, mainly MeshCore & Reticulum. - Daniel
+- [4] I build one with a Sparkfun ESP32 red board, just to experiment. It wasn't cheap, but easy to build. I listened to the victims of the hurricane, not on LoRa of course. Very confronting. I'm from Belgium and woke up at night. It grabbed me i
+- [32] Can’t wait to make my own meshtastic device! Glad to see you finally making a more in depth video on it!
+- [6] Great video!! also, I'd recommend taking a look at the Heltxt Standalone build, it's cheaper to build with more features than buying the Tdeck. And a much easier standalone experience that lasts longer. Got a 4000mAh battery to last 6 days 
+- [29] Jeff explaining that you shouldn't assume something is private because the packets are going through the air, while the background is scrolling through the documentation explaining how they use public/private key pairs using EC52219 crypto.
+- [34] To fix the Bluetooth range on the heltec V3 all you need is a little bit of wire cut to 31mm. You desolder the little coil antenna and just solder that on. It's a massive improvement.
+- [ ] Just getting into meshtastic and ordered a pre-built unit, and the parts and pieces so I can build a solar node. Very cool to see a fellow St. Louisian!
+- [4] The concept is great, but in rural areas the major problem with this is the "high" frequency that limits range. If they were able to use a chanel in the CB band this problem would have been solved.   End to end encryption messages that coul
+
+=== #314 | https://www.youtube.com/watch?v=xa6dqx9udcg | 40 comments fetched
+- [136] From what I see in the comments and having bought one myself. The folks who sell this VNA should as least pay you as an instructor if not for the boost in their sales. Thanks for another set of helpful insights in both using this device and
+- [19] When I think back to how many hours I spent  in the 80's with a noise bridge trying to get a tiny fraction of what these devices do in an instant, it just blows my mind.
+- [133] This video will be a reference for all amateurs for years to come.
+- [1] Starting to like the smith chart more all the time.
+- [158] This is such an excellent presentation. He doesn’t waste time, like most do, with extraneous talk. He gets to the point right away.
+- [12] THANK YOU.... I got my NanoVNA out to test an antenna and ground plane.... been a year? I forgot the basics, and watching video got it quickly,  SWR 1.03 and impedance 51 ohms... at target freq with a flat SWR with ripple and tight smith ch
+- [4] One of the best videos on the NanoVNA in operation that I have yet seen. Thanks for presenting this.
+- [26] Absolutely  stellar.    I'm 75,  have forgotten  a lot of what I thought I used to know.  ETR2, USN, 68-74,  NAS Miramar, 70-74,  maintained  GCA RADAR  and TACAN, unfortunately all old tube stuff back then. 9.8ghz  RADAR
+- [2] Very interesting demonstration of the Smith chart. Well done. 73 from Paris, France.
+- [75] Easily the best videos on YouTube for this type of content....please keep them coming.
+- [3] This is the best video on the internet on how to use a NanoVNA to sweep an antenna system for SWR.  We've shared it with our club.  Thanks for taking the time to make these videos
+- [4] Well done.  Nice watching the tuner affect.  Thank you.
+- [3] The best NanoVNA tutorial I've seen.
+- [9] Sometime it takes time to load the video, first thing I do is like the video before even it starts 😁
+- [2] This made a lot of different things click in my head around antennas and tuning. Thanks for showing it!
+- [46] Alan, you're the best thing on YouTube - period. If only I could turn back the clock knowing everything you've taught me. Can't thank you enough.
+- [ ] Good demonstration. Tuners make more sense to me now after seeing this visual aid demonstrated on the vna.
+- [3] I just got a NANO VNA-H4, and with videos like this I have invested well, thanks for all the help!
+- [2] Not only does this video show how to operate a Nano VNA, it also shows what an antenna tuner actually does to bring a match between your antenna and your rig.
+- [3] just dug out my older nano vna 3.5 and you refreshed everything I needed to reacquaint myself in 5 minutes flat
+- [7] That is exactly what I wanted to know how to do with my NanoVNA....I have been unsuccessful at trying to intuitively figure out the menu structure.....so glad you are here to help us all figure this stuff out!  Thanks so much, Alan! Pete KD
+- [1] Thank you I learnt more watching your video that the other 20 or so others I had watched, great explanation and well presented
+- [2] Excellent video. I love the way you get straight to the point without the BS that most videos have.  Subscribed
+- [1] Just got a nano vna today.  I watched this video and the video on sweeping a filter last night.  I had it going today within minutes.  Already checked most of my antennas and checked a filter.  Thanks for your informative videos!
+- [2] This was succinct AF.   Great job, man!
+- [2] Great video! I bought a NanoVNA and was looking for info on its use. Looks like I found it! Nice job!!!😁
+- [3] One of the clearest, most concise videos I've seen on the topic. Many thanks for your clear explanation.
+- [11] That really helped me understand what the controls on a tuner do, as you said... thanks!
+- [3] Thankyou for uploading. I've just ordered a Nano VNA as it looks like great value for money 👌
+- [2] Short, exact to the point with great explanations! Instruction video as it should be! 🙂
+- [2] I get amazed everytime I see your videos, a True Electrical Engineer at its best,
+- [1] Thanks a ton for posting this tutorial. I owe you a cold one!
+- [5] you should just stream whenever you are in the lab :) everything is gold!
+- [1] I'll say again, "You are an excellent instructor."
+- [2] This video is a very concise and easy-to-follow step-by-step instruction on how to measure SWR. If you pay attention you will start to learn the UI of the NanoVNA and get a feel for how to make it do other things. W2AEW, you did a very good
+- [1] This was a delightful intro to a lot of the functions of the Nano VNA interface.  It is a powerful little tool, but the UI isn't always intuitive.  This was very useful to me.
+- [ ] Everyone else presenting this confused me, and left me with more questions than answers.  THANK YOU for straightening it all out in 6 minutes!
+- [1] Thanks, Alan. I need a refresher in using these things every time I pick one up.  73 WA4QGA
+- [3] Bill-N6EF-Thanks for a another great NanoVNA video. I'm learning a lot about the NanoVNA from your videos. I never really understood the value of the Smith chart until I saw how you used it in this demonstration. I usually turn it off and o
+- [1] Thanks for the video… David, you’re the best teacher I’ve ever had in the RF/Ham fields. Your duplexer tuning videos are still used as review material every time I tune one.
+
+=== What does "impedance matching" actually look like? (electricity waves) | https://www.youtube.com/watch?v=RkAF3X6cJa4 | 40 comments fetched
+- [898] You can also view terminating resistor as substitute for the rest of infinite wire. This way it's easier to understand why there is no reflected wave in this case
+- [446] 25 years ago I learned all this at university.  But the depth of insight you've added to that basic knowledge is a revelation.
+- [528] As an RF Engineer, I live by this principle. It was really cool to see you approach it from the DC perspective and I am very impressed by your painstaking oscilloscope measurements!!! I have only ever seen plots like this in simulations, ne
+- [278] The fact that more or less consumer grade scopes can actually capture this is utterly brilliant. And then all the graph visualisations, especially the one with the 8 or so different resistance levels and see how impedance matching magically
+- [32] As someone who has learnt this at uni, i can say these videos have been the best explanation i have ever seen
+- [195] I don't often write comments, but WOW this was awesome. This, combined with the last video somehow got me to see an intense beauty in this "low-level", more advanced type of electrical properties. Thank you so much for this
+- [44] As someone working in testing motors for EVs, this video and the main channel one were GOLD! The Portuguese PhD who tries to educate me at work will love this, and hopefully i can understand more about EMC!
+- [21] Let me tell you that this just made me make sense of the DMX line impedance loads used to avoid "reflections" in the line.... I knew about this ripples or waves of "voltage" but I couldn't figure it out why a load of an "apparent impedance"
+- [87] If you use the electron motion visualization again in future, adding colour based on speed may make it a easier to see the changes in velocity, so blue is slow, red is fast, and rainbow or gradient between.   Also, this video should be requ
+- [126] It was really interesting to see the dynamical demonstrations of pulses propagating and hitting the different loads! I didn't expect the real world waveforms to be so close to the ones you see in textbooks. Bravo to you!
+- [68] The link to the main channel in the video description leads to an error page, because of an ')' at the end of the link.
+- [4] The role of impedance matching in minimizing the reflections of the electrical waves is exactly what you would expect from the role impedance matching has in minimizing reflection of acoustic waves. Think of the load as a boundary between t
+- [22] I've been an Amateur Radio operator since 1996 and never seen this put visually before and it was exactly what I needed to see. Thank you.
+- [ ] I cannot express how intuitive and informative this video is. Thank you so much for taking the time to make all those measurements. That animated graph that showed all the waves together with different resistor values is just gold.
+- [85] This doesn't just apply to long wire transmission lines. Changes in impedance on PCB traces or lines connected to them creates reflections and that's generally where noise comes from. Robert Feranec has a bunch of videos talking to a signal
+- [5] I think I am going to have to watch this video 150 more times so I can understand it... My learning impedance seems to also be 150!
+- [4] AlphaPhoenix + Electroboom = a complete and well rounded electronics education.
+- [20] I’ve been trying to understand this for 20 years and this video finally made it click. Thank you so much!
+- [8] This is so insightful as an EE student, this also explains why on an OC one end of the wire has a voltage with respect the other one
+- [12] Im just getting into hobby RF. perfect video to help me understand impedance matching and tuning.
+- [41] When I was a teen, I had a book about electronics by one G.M Scroggie. He described "transmission lines" in terms of a series of inductors in series with the two sides of the line, with capacitors across the two lines between each inductor.
+- [1] From an ag engineering major that never understood how CAN bus terminators work, thank you
+- [9] Your 17 minute explanation has made more sense than an entire semester of transmission lines! Amazing! My circuit has been completed😅
+- [26] At D.C., yes, it reaches an equilibrium quickly but the point of impedance matching is at high frequencies where peaks and dips of frequency response will occur if impedances aren't matched. I find it very interesting and enlightening seein
+- [2] Great physical explanation of impedance. Best I have seen...
+- [20] As a ham radio operator and long time mechanic and experimenter you have just explained something I could not see in my mind for 50 years. Now that I have a visual, it is unbelievably simple. I was like you about the coax cable. I never cou
+- [ ] Thank you! What a beautiful and clear explanation. This 17 minute video would have replaced an entire college semester course I took back in 1984 and actually have left me with clear understanding.  You are brilliant.
+- [236] To have an idea of where the 150 ohm characteristic impedance of the cable is coming from, you can think of the wire having some inductivity and that there is some capacitance between the two twisted wires in the cable. If you would compute
+- [10] the animation with the several different line impedances is fantastic. i wish this video existed way back when i was in engineering school!
+- [4] What I love about this is that it's basically just standard wave mechanics. Like, the graph of the voltages along the wire seemed fairly intuitive to me because it looks pretty well exactly like the wave mechanics I learned in high school p
+- [ ] I've known about this stuff for years, but it was genuinely nice to see your enthusiasm.  I never thought about it like the voltage is 'guessing' before.
+- [19] Never seen this much honesty in anything related to electricity. My heartfelt thanks and prayers to universe that every EE in the world follows you. I hate just assuming things because somebody says so with oomph and authority.  You deserve
+- [1] CAN bus makes so much sense now!
+- [17] This is very visual. Thanks for doing this incredible tedious and crazy task of measuring! You can simulate transmission lines without dirt effects in ltspice or qspice and compare the results.
+- [3] I love the oscilloscope/line plots! I've always understood transmission impedance as the infinite ladder of inductors and capacitors, but never seen it measured/plotted like this -- very helpful!
+- [4] Thanks man, you cleared it up. I'd been stuck with this contradiction (actual resistance of coax vs rated impedance) for about 2 weeks straight, since I started working with an SDR. You made my day!
+- [ ] You are so good at making videos. You are someone who is actually smart not just someone who thinks they are.
+- [23] Now it makes sense, why I had to terminate a Modbus/RS485 wire pair bus with a 120 Ohm resistor, exactly to prevent signal reflection on the line. Thank you so much for all your videos, always looking forward to them!! 😊
+- [2] Scrolled through about 30 comments and seen 5 clippy's already. (6 if I count mine). Understand this audience will be a little biased. I have never changed my profile picture to support something before and been online since before google w
+- [12] The data collection and subsequent visualization / animation here was incredible! This is remarkable to see how the measurements really demonstrated exactly what you were describing. Bravo for what I am sure was a significant undertaking in
+
+=== The effect of a 1:1 balun on a resonant dipole | https://www.youtube.com/watch?v=QFOx7vjchy0 | 40 comments fetched
+- [33] That is the best demo I have ever seen for showing the effects of what happens when a balun is not used. GREAT VIDEO ! Barry, KU3X
+- [26] Count me as one of your subscribers. An excellent, easily followed demonstration. I am now certain installing 1:1 baluns on my dipoles was the right thing to do. VSWR is definitely NOT the only measurement you need to make on an antenna sys
+- [8] Thank you for this most "telling" presentation. Another advantage is a much cleaner radiation pattern. Because it is so easy to tie the coax directly to a dipole antenna, most hams just do it, not caring about the negative effects. Seeing i
+- [5] One more informative test: Measure the antennas field strength at 1/2 mile away. You will see a difference, as the feed-line that radiates causes wave cancellation with the antenna in the near-field.
+- [6] Fantastic! It’s so much easier to understand these kind of things when you see them in practice.
+- [ ] The computer voice is creepy as hell. But the test is pretty damn cool. Really well done setup and execution.
+- [4] There seems to be much debate over whether a balun is necessary. I have heard many insisting that they are not needed and many saying that you should have one. You have put that debate to rest in my mind. From now on, I will always use a ba
+- [1] Very good explanation and demonstration. This makes clear that even with a resonant dipole a balun is a must to avoid common mode current on shield.  73s
+- [1] Would also be interesting to see signal reports on RBN with/without balun. Also using WSPR. Txs for this great comparison.
+- [ ] I already have some on order before the video, but thanks for saving me an experiment! Great information.
+- [3] Very good demonstration! Thank you for putting this discussion to rest.
+- [1] Excellent video.  Very simple, to the point, and easy to understand.  TNX for sharing Davide. (DJ0IP)
+- [ ] Painstaking work there, many thanks for that and the clear commentary.
+- [ ] Interesting. Thank you for video of tests.
+- [1] Thank you for that excellent video!
+- [2] Agree 100 % I'm more into window line now, but when I do make a coax fed dipole I start by making a 1:1 Guanella choke  and run the legs from that.    I operate QRP and  mobile a good part of the time, so I can never trust that my antenna w
+- [ ] Excellent demonstration of practice and theory
+- [ ] Great video. Well done experiment . Thanks much !
+- [ ] GREAT JOB  ONE OF THE BEST DEMOS REGARDING RFI AND STRAY NOISE I HAVE EVERN SEEN ON YOUTUBE. THIS PRESENTATIONS SPEAKS A LOT... specially on receive Not just on Transmit..TYVM...73s
+- [ ] Great video!  Thanks for conducting the experiment and sharing results.
+- [ ] you answered the great question in ham radio thank you.
+- [ ] Excellent presentation! Exactly what the theory predicts.
+- [ ] This answered my question perfectly. Thank you.
+- [ ] An excellent demonstration
+- [ ] Mi hai convinto, prendero il Balun. Grazie!
+- [ ] Very nice demonstration.
+- [ ] Fine Business .Excellent demonstration, This and proper earth grounding is of utmost importance to all that broadcast R.F. energy to minimize the occurrence of encounters with other occupants of space deprived dwellings...73's K5JPD
+- [ ] Great demo!!
+- [1] Very nice and informative video!
+- [1] Without the balun the power radiating from the feedline can cause enough radiation to give little shocks to anyone in the shack when they touch something metal. You can probably guess how I learned that. Ouch! :-Don
+- [1] Good demo!
+- [ ] No question that a 1:1 current balun is necessary for most applications.  On my 80M dipole, there’s one at the feedpoint and another at the window pass-through.  A 1:1 Guanella balun transformer is also called a common mode choke.  Whether 
+- [ ] WELL DONE !
+- [ ] Great Video!
+- [ ] Very interesting.
+- [ ] There is only one 50 ohm un balanced antenna a.f.a.i.k.  and that is is the quarter wave ground plane antenna . All other antenna's are balanced ( equal current in both halves ) A Coaxial screen should prevent the feeder from radiating , bu
+- [ ] excellent
+- [8] Thank you for putting this debate to rest for me...73!
+- [2] The effect on the SWR value might highly depends on the length of the coaxial cable. As this (without balun) is part of the antenna, half wave even multiples of lambda might cause high SWR values on the transmiter
+- [ ] Thank
+
+=== Antennas Part I: Exploring the Fundamentals of Antennas - DC To Daylight | https://www.youtube.com/watch?v=ks8RQ9CD72Q | 40 comments fetched
+- [37] Watch the full interview with Sterling Mann and ask Derek questions on the element14 Community! https://bit.ly/3IIVEKl
+- [68] So much to learn here.  Looking forward to part 2!
+- [189] Hello!  My expertise is Antenna Design with more than 40 years experience and more than 50 US Patents granted.  I also give lectures on the subject; specifically on the Maxwell Equations and how they are used to design antennas.  Keep up th
+- [29] I qualified in both Electrical & Mechanical Engineering at the National University of Ireland back in the early 1960ies  !!!  That means I’m eighty now !!!!     I assume that your intention is to get youngsters interested in the field of ra
+- [18] We really appreciate you, future Derek:hand-pink-waving:
+- [60] Few corrections on Maxwell's Equation - 1. 8:15 Electric fields can exists without a Magnetic field. There are actually two types of electric field - Electrostatic field and Induced Electric field. One is  due to stationary charge distribut
+- [43] Great video.  As for the length, no need to apologize.  I find the amount of information presented was great with the right amount that doesn't overwhelm us.  Thanks and will be watching part 2.
+- [7] Yeah, antennas have always been "black magic" to me, now they are "magic".  Looking forward to part 2.  I am learning a lot from your channel - thanks!
+- [7] Didn't take you even a minute before you started with the formulas and ended up well above my level.
+- [4] Thank you for the informative presentation.    Derek is sporting a sweet looking hat.  🤘
+- [3] I am happy to see this company's growth. Back in 2014 when I was doing my final year project for engineering, we needed an IC for reception of GSM frequency signals using an antenna. We had a hard time getting that IC until element14 helped
+- [51] I hope you take this as a constructive comment because I think it's cool that you make these videos. Consider your audience when getting into technical stuff like Maxwell's equations. There are two kinds of viewers. Ones who are already fam
+- [5] Really appreciate your efforts. Keep it up and waiting for Part-2 🤟
+- [2] Thank you for this video.  I did have trouble in understanding the section on Maxwell's equations.  I will have to spend some time on that.
+- [2] Holy mackerel, I don't know math. I want that Black Sabbs shirt, though!
+- [1] This video alone was enough for a sub. I'm an amateur rf technician working in a professional world (in the public safety field, no less). While some people say I know I ton, I realize I know just enough to get by. Even with my head spinnin
+- [2] Great job Derek 👍
+- [3] Glad to have found your channel. I appreciate information and science rich videos.  You are helping the world become scientifically literate.
+- [3] Great tutorial 👌
+- [21] As a former Amateur Radio Operator (Technician II), I really enjoyed this. I’ve made all sorts of antennas, but I never really understood the math behind what I was doing.
+- [ ] This was very informative, appreciate it.
+- [60] 8:20 No, an electric field can indeed exist without an magnetic field, and vice versa. The time term in Maxwells 3. and 4. equations just tells you than when one field is changed over time, the other is induced.
+- [5] 8:25 an electric field can exist without a changing magnetic field. This only tells you that if you move along a closed loop adding all the tiny vectors of an electric field it will be 0, unless there is a changing magnetic field. Or in oth
+- [400] Don't split videos up into parts.
+- [ ] 1 minute into the video and already seeing the beauty. Thank you
+- [1] Yay! Calculus and linear algebra!
+- [1] Great info mate. It answered a question that I could not find an answer for. Thank you!
+- [1] Glad to see your channel and the information is very use full.
+- [1] I wish you guys were around 55 years ago when I was trying to absorb the concept of divergence and curl after failing differential and integral several times 😢.   (Not that I do now.)
+- [ ] Just found your channel - loved this video, and I'm off to watch part 2
+- [1] I always viewed transmitters as giant lamps and the RF is the light and as long as a radio can see the light it can pick up the station. I know it’s not super accurate to see it that way and much more complicated than that but it simplified
+- [1] The discussion of the transition from separate E and M fields in the nearfield to an EM field in the farfield was a little muddled. The discussion in wiki is pretty good. One picture that is missing is the transition from either a high char
+- [1] Always found this topic fascinating. Often times I wonder how is an antenna capable of picking up and interpreting electric and magnetic fields impinging upon it and turning it into intelligence?
+- [2] Very nice presentation
+- [ ] Wow so well explained 👏
+- [1] "Electromagnetic Fields & Waves" (2nd ed.) by Lorrain & Corson covers antennas in Ch.14 "Radiation of Electromagnetic Waves".  (The 3rd Edition has much of the same content, but the chapters are reorganized.)
+- [1] great explanation ! ♥️🇲🇦
+- [1] Very interesting! Thanks.
+- [3] moving charge creates a magnetic field, changing magnetic fields generate voltage, changing electric field create magnetic fields -- maxwell's laws
+- [ ] Thank you Derek! You are doing good job!
+
+=== Flawless PCB design: RF rules of thumb - Part 1 | https://www.youtube.com/watch?v=EEb_0dja8tE | 40 comments fetched
+- [8] Free mini-course: https://www.hans-rosenberg.com/minicourse_account_youtube?utm_source=yt-p-v1 Full course info: https://www.hans-rosenberg.com/epdc_information_yt?utm_source=yt-p-v1
+- [102] You made a slight error:  Between two traces in a PCB, the dielectric constant is not really 1.  The volume of space between the traces that gets used by the capacitance involves some "fringing" making it use some space that is inside the P
+- [ ] Hi, Hans. Very useful knowledge. Send me the checklist.
+- [ ] Very interesting video, thank you. Please send me the check list.
+- [ ] Send me the checklist!
+- [ ] Send me the checklist
+- [ ] Send me the copy!
+- [ ] Send me tge checklist
+- [ ] send me a checklist
+- [ ] send me the checklist
+- [ ] Send me the checklist
+- [ ] send me the checklist
+- [ ] I know this was 2 years ago, but can you send the checklist?
+- [ ] send me the checklist.
+- [ ] send me the checklist please
+- [ ] send me the checklist please
+- [ ] Send me the checklist please
+- [ ] Send me the checklist
+- [ ] stuur me de checklist ajb :) fijne info dit, dank je
+- [ ] Send me the checklist
+- [1] Really nice video! Learning pcb design and this will help. Thanks. And i also ask you to please send me the checklist
+- [ ] Have you also measured S11 to make sure the signal is actually radiated and not reflected at the obstruction?  Also: Please send me the checklist 😉
+- [ ] Send me the checklist
+- [ ] You have a nice nose.
+- [ ] Send me the checklist please!
+- [ ] Send me the checklist please
+- [ ] send me the checklist
+- [ ] Send me the checklist
+- [ ] Send me the checklist.
+- [ ] Please send ne the checklist, Hans!
+- [ ] Send me a copy
+- [ ] Please send me the checklist! Thanks Hans.
+- [ ] I would like the checklist as well
+- [ ] Please send me the checklist....thank you for your great effort to share the knowledge
+- [ ] Send me the checklist, and thank you for the great video
+- [ ] Amaze amaze amaze! Loved the first circuit you designed to explain the path of least impedance. It helped clear up a lot of things.
+- [ ] Send me the checklist
+- [ ] Please send me the checklist. Very interesting video!
+- [ ] Send me a Checklist
+- [ ] Are you RaceHans from trackmania?!
+
+=== Ground in PCB Layout - Separate or Not Separate? (with Rick Hartley) | https://www.youtube.com/watch?v=vALt6Sd9vlY | 40 comments fetched
+- [87] Since graduating university I've been extremely frustrated at the slow pace and lack of learning opportunities in employment. This is gold, the stuff that companies want to drip feed over a decade, and even then it might not be right! Rick 
+- [111] thank you Rob. This is great. World needs people like you.
+- [100] I'm electronics engineering student and the things I learnt from this video is priceless. These are the things you can not learn in university (mostly). Thank you.
+- [59] Robert, your questions were right from the industry’s heart, you were a great host, please keep making more content like this..
+- [20] More like this? YES!  These are very interesting and informative.  Grounding, EMI and these sorts of issues will never go away.  Every new design opens all new opportunities for these issues.  Hearing this stuff repeated and taught should h
+- [44] I hope you to be very rich Robert. But these lessons you share with us are more important than money. Thanks for everything.
+- [ ] Robert and Rick together - that's awesome!
+- [ ] These are usually the only types of videos I watch
+- [29] Two of 3 people I owe my job in the defense industry to... Thank  you Gentlemen
+- [ ] You are the best with the guests you bring in the show!
+- [ ] This video was amazing, the channel is a gold mine for understanding advanced electronics.
+- [ ] An engineer cannot benefit more from those talks with all the valuable experiences. thx!
+- [ ] Best video I have seen in a while. With a great speaker!
+- [4] The signal to noise ratio on this video is excellent! Thank you for posting this!
+- [13] Hi Robert, your idea of interviewing experts, like in this video, is excellent! It helps confirming some already known facts, and also shines some light on some new problems that we have with hardware design. Keep going, I love your content
+- [ ] This was the mother of all ground lessons! Amazing value delivered! Keep it up!
+- [ ] One of the best videos about this topic . Well done Robert!
+- [4] Young engineer here, 2 years of experience with 3 of internship/apprenticeship before that. This video is beyond informational, and a fountain of knowledge. I'm going to continue with the rest of your videos, thank you!
+- [ ] junior engineer here, what a masterpiece, those calls with rick! thank you and thank rick!
+- [ ] These kinds of videos you are creating are pure gold, thank you Robert.
+- [ ] When AI or old-school textbooks tell you to "tie your circuit ground to safety ground," they are often thinking of old 2-pin devices or isolated DC circuits. Doing this inside a 3-pin mains-powered metal box is exactly what forces noisy bui
+- [ ] Thank you very much. I am a visual artist and a ham operator. My basic knowlege is low and this sort of video gets me closer to solving problems well.  Slowly I am learning to understand them.
+- [1] I was recently allowed the great privilege of attending a 1-day seminar taught by Rick Hartley at the AltiumLive Design Summit in San Diego. Those 8 hours completely changed how I viewed PCB design, and electronics as a whole.
+- [ ] Wish I watched this video 15 years ago. Could have saved me a lot of sleepness nights, frustration and money. Thanks Robert and Rick, true legends...
+- [1] I have one reason to split grounds. If you have two power systems that you want to keep isolated - galvanically isolated. Or you design a fully isolated power supply. In that case if I have to speak between those systems you use coupled coi
+- [1] Bursted all my myths regarding analog and digital ground. Rob i will remember this video through whole of my career.
+- [7] Do I like the kind of video's where you discuss topics with different people? Yes!
+- [ ] This video finally cleared all my doubts regarding ground planes seperation. This is the type of knowledge we are lacking now. Amazing video Robert.
+- [23] I’d like to see a video discussing grounding around connectors more. You see terminations around connectors that separate the connector ground from the PCB ground all the time for ESD or EMI reasons. You see 4n7 caps paralleled with 1Meg re
+- [ ] In RF ASK system I used to separate the RF ground from other parts of circuit, since the regulation require >90dBc of spurious noise, and >110dBc noise level for make sure system meet performance requirement.
+- [ ] I remember meting Rick at FTF 2010 when he was at L3. Great guy
+- [ ] Great video! I'm on a mission to watch as much of your videos as possible.  Is there a continuation of this one, or this was the end? Seems that it ended unexpectedly. At least to me.
+- [ ] Please make a video about: Digging into differential, true and complementary single-ended etc.
+- [ ] i remember you robert before remembering what is impedance, and now you are working on understanding this . Thanks to this effort you re having good guests like Hartley and we all learn new things together.
+- [1] 👍Great, please record more videos like this one. 😂👌
+- [ ] fear is never the answer (not exactly, but spirit is there), very well said sir
+- [38] That was extremely interesting. I would really love a video with Rick going over some BS found in switching mode power supplies application notes or layout guides.
+- [ ] Thank you Robert & Rick for sharing valuable experiences. When we have discussion with subject matter experts, aways we get perfect knowledge. I appreciate if you prepare videos on pcb layout of high voltage dc dc converter (onboard charger
+- [ ] Always learn new stuff you your talks. Knowledge money can't buy, only the years of experience you guys have 😍
+- [ ] This video is gold for emi and power supply design.
+
+=== What is FMCW Radar and why is it useful? | https://www.youtube.com/watch?v=xUGWHGjCtII | 40 comments fetched
+- [32] Nice!   I would say that at 5:40 "beat" is better described  as the difference in frequency between two signals than as the difference in frequency of one signal at different times.
+- [35] Very cool video! 1:48 That's also why pulsed lasers are able to to ablate material while being "only" 2W of average power
+- [140] In sonar we have DELTIC delay line time compression.  Auto correlation you can track a moving submarine with just two hydrophones.  Used by CAPTOR smart mines in the late 70s.   (Band limited white nosie from moving sub is XORed and accumul
+- [109] Very nice video, worth watching! Small typo fix: the acronym FSK at 3:53 is Frequency Shift Keying, not keyring. Pull request sent via Github to fix it in the video.
+- [1] Thank you for explanation. Now I realise how much genius goes into high end radar.
+- [64] I thought it said FWMC at first and wondered what Fuwamoco had to do with wave modulation lol
+- [24] Great video on why chirps are perfect for radar. Keep it up, I'll watch anything you make.
+- [1] Great stuff, keep it up! Super useful for helping things click intuitively
+- [81] Chirps are used in pulse radars as well - because if you cross-correlate a chirp with itself, you get a pulse out. So a pulsed radar doesn't actually send a pulse, it sends a chirp over a longer duration. The received signal is then correla
+- [7] Grant Sanderson(3Blue1Brown) version of rf .Great  Work👍👍
+- [4] 2:20 You can get a range from a continous wave. There is just a lot of ambiguity. Basically you already have to know the range to less than a wavelength in distance and then you can narrow it down further.
+- [20] Why should we care about the average power transmitted? The pulse or the continuous wave will come back at a power following the inverse square law. If your receiver needs a power of one μW (example not realistic) it needs this power from t
+- [1] Great tutoring videos, simplifying down to basic level so new students (like me) can understand the concepts. Thank you a lot for, and I will keep waiting for your new videos
+- [2] this video is really helpful for me understanding FMCW
+- [1] 🚀
+- [4] Very well done explainer
+- [3] That's great. I love radars, Your explanation was excellent and that's why I subscribed to your channel. Keep it up I'm looking forward.
+- [3] Kudos for the great quality and interesting subject not covered a lot on YT
+- [2] An amazing video. I really appreciate it.
+- [2] This is awsome. Nice work dude
+- [1] wow... youre videoes are really informative. im gonna watch all of them
+- [6] incredible video! the animations really did help at explaining the concept very clearly. This should have, at least, 100k views!|
+- [2] Where have you been all my life!? These videos are amazing and the graphical work put into them helps you get a “practical” sense of how it works instead of just numbers on a screen, keep up the more than amazing work!
+- [1] Finally found a guy who give me daily information related to my Research interests
+- [4] I have a radar the size of a pack of cigarettes on my motorcycle for the adaptive cruise control. I was trying to figure out how it works, and it was a huge help in understanding that acronym.
+- [1] A really good video, very clear explanations. Congratulations.
+- [6] Very good video to start with this topic. I work with radars in cars... in this setup it becomes so much more complicated. You have to measure velocity and distance. You have many objects in different locations. You need also a direction to
+- [1] Man, so clear the concept. Awesome. Ty.
+- [8] Amazing video, thanks for putting it together! Please do more if u can!
+- [1] Awesome
+- [1] Great video simple and straight 👌
+- [1] Covering MFCW systems would be awesome
+- [1] This video is gold! I wish I had it while doing my ATPL Exams. Great job!
+- [1] nice work
+- [15] About peak pulsed power versus average power: all radar systems have to cope not with  an inverse square law for detection of echo returns but an inverse FOURTH power law. This is known as the radar equation. RF power, regardless of modulat
+- [4] There is a lot of fun stuff out there that even as a hamradio op i'm not allowed to mess with, radars are one of those. I found out the hard way that many regions don't permit citizens to operate radar transmitters, at the time i was search
+- [1] Thank you for the cool and informative radar videos 🙏
+- [ ] Great videos and helpful for me to learn more about Radar from Scratch, Thank you for your Contribution.
+- [2] one of the better #some4 videos ive seen for sure!
+- [3] Very good! I didn't know the technology. Many thanks!
+
+=== #136 | https://www.youtube.com/watch?v=1mulRI-EZ80 | 40 comments fetched
+- [82] How I explain it: a decibel is a tenth of a Bel, and 1 Bel stands for "an order of magnitude". So when you make the signal 70 dB weaker, that's 7 Bel, or 7 orders of magnitude, or 10 million times as you say.
+- [74] 8 years after you made this video, it's still helping  people like me understand dB's. I followed the reasoning easily but may have to watch a few times more to get the maths to sink in. Thanks for making the video.
+- [371] Probably the best dB explanation video I've seen
+- [78] why cant they explain like this in engineering courses, its mind boggling. All EE college professors need to watch this and learn. i want to go back in engineering college all over again,
+- [53] literally the best video I have seen on this topic. going to a top engineering institution is not for learning, it's just for connections and opportunity. YouTube is for learning.
+- [4] BEST dB explanation!!!
+- [1] Knowledge is a spring that never dries ,thank you for the video❤
+- [5] 6200 people "saved" after failing to be introduced to this at university :D    👍👍
+- [1] How crazy is it that we can take some values, plug them into an equation, and get an actual approximation for a real life value. I realize when the circuits are made and the tools are programmed we use those same equations as a base for the
+- [1] In signals and systems, various ratio values are always confusing, and after normalizing, they multiply again by the ratio coefficient, divide and multiply the signal and the signal. It was really difficult to understand why they were asked
+- [13] I will write without hesitation - the Internet was invented for such amazing leśons and teachers.  👍  Best regards from Warsaw!
+- [24] Excellent video! All lecturers should teach like you, the students would love it.
+- [27] When I saw the handheld camera going from the scope to the paper I thought “oh boy, here we go another junky video” but after I watched the whole presentation I was so pleasantly surprised: There was the math … and up here you can see the r
+- [1] Very long time I Search teaching with real time example finally I got one of the  best teacher. Thanks a lot sir..
+- [2] 🤯🤯🤯🤯🤯 Absolutely the most cogent explanation of dB ever attempted. Thank you.
+- [2] After so many years this is still the best video on this subject. Very helpful!
+- [3] Another area where the decibel is used is in antenna work where common references are dbi (referanced to an Isotropic/Point source) or dbd (referanced to a Dipole). Ted VE6AMR
+- [1] I’m enjoying this while taking my wired, optical and wireless class at DeVry at the moment.  Class similar as your teaching is more of n depth.
+- [1] You are the best teacher in the whole world for RF engg
+- [1] Excellent channel! Sir, I have my parents and my grandfather's slider rulers. My grandfather worked at the radio-telegraph station, in Rio de Janeiro, and during the 1940s he did the first SSB transmission from Brazil to France. My father s
+- [5] Going over the calculations was incredibly helpful. It's like most content creators don't think someone searching for explanations of dB is nerdy.
+- [14] I am an electrical engineer but I have NEVER heard the topic explained as well as this.  THANK YOU for the refresher as well as many new things you taught me!  I need to watch this again!
+- [10] Well, here I am 10 years later thinking: "how did this one slip through the cracks"!  You are truly a master of "de-complification"!  Thanks for this very clear and concise explanation.  Much appreciated!  Hope to catch you on CW POTA again
+- [ ] How to teach is one thing and you do it well. I think that the real brilliance here is in the "What to teach domain".
+- [16] Allan:  As I have remarked previously several times, your speech level never varies, your articulation & grammar are as close to perfect as anyone can reasonably expect, & your descriptions & explanations are without peer. The number of peo
+- [58] This was epic. You are a wonderful teacher. God bless.
+- [3] This video is timeless. I find myself coming back to watch it again and again.
+- [3] That explanation was as succinct and complete as I have ever heard, many thanks.
+- [3] Excellent work, and a refreshingly clear, intuitive teaching style!  Kudos, mon ami … 41 years later, and I STILL enjoyed those fundamental concepts of “WHY dB?!?” In the FIRST PLACE!!  😇😇😇
+- [3] Very great video ever 8 years later! Thanks a lot!
+- [4] Thank you so very much.  I've struggled with this for so long.  I get the theory.  However, I couldn't apply it, I'd end up tying myself in knots.  This has truly lifted the scales from my eyes.  This video is going to be my reference until
+- [2] man, your channel is a masterpiece...i consider myself a quialified systems engineer, but it appears that sometimes I'm missing in depth understanding of some basic concepts...and you've got a talant of explaining things in a simple and str
+- [13] :-) I like how how he said goodbye -- "Thanks for watching and oscillator"  -- classic! Thanks for a great explanation of dB!
+- [1] The fog begins to clear !....cheers.
+- [13] Alan One of the best explanations I have heard on the subject. You have a magic way of cutting through the nonsense with the most practical explanations. Many Thanks.
+- [1] Thank you for this excellent video!! One trait of a good instructor is the ability to explain a complex idea to total beginners or someone with no experience, and you most certainly achieved just that. I'm a mechanic by trade and dabbles wi
+- [ ] Man, these videos of yours are pure gold. Seriously. GOLD.
+- [12] Easily the best explanation of the various DB's I've ever seen or read.  Seriously, the explanation and math on your graph paper complemented with examples on the scope are simply brilliant!
+- [1] Excellent video with a similar presentation. Thanks a lot. Colin (England).
+- [1] I finally have a good understanding of db measurements. This is a great, and underrated channel for those of us coming into ham radio without formal education in electronics and RF theory.
+
+=== #359 | https://www.youtube.com/watch?v=_pjcEKQY_Tk | 40 comments fetched
+- [173] As a telecommunications engineer, is such a joy to watch your videos, you teach some very complex topics with such a simple explanation, I wish I knew you during my college time. Thank you for your videos.
+- [27] Brilliant video I am a retired science teacher and have been a ham more than 50 years. I just bought my first VNA. You clearly explain the device and its calibration and use. A lot easier to follow than most explanations I have read.
+- [11] I've worked with frequencies up to many GHz for many years and have used but never fully understood Smith charts. Thanks to you, I now do.  Your method of explaining a very complex subject in very simple terms is most entertaining. WELL DON
+- [24] Well done. I am an engineer, but my speciality was RF. I was an RF engineer and still have HP and a Anritsu Network analyzers. Unfortunately i suffer pretty bad from MS now and i am disabled, but RF was my favorite thing. You did a very goi
+- [65] An excellent and logical presentation as always, making a complex subject clear and understandable. Thank you.
+- [2] This is by far one of the most important videos for understanding how to use an NanoVNA no matter the version. I learned a lot, thanks Andreas.
+- [19] Very well explained and simple. I love the way you organize "The Lecture". Good teacher! Keep on doing these videos
+- [1] This is THE place to find out about all VNAs, not just the NANO.   Well done and thank you.
+- [6] Thank you for this video, I am a new ham and am trying to build antennas.  I purchased a NanoVNA thinking it would be easy to use and help with building antennas.  I was ignorant and built them poorly.  I tried to read up on the NanoVNA as 
+- [25] Great video, thank you! Sometimes dudes with >$50k VNAs cannot cover the basics at the level of clarity you did. Great explanation on the Smith Chart. While the magnitude of S11 can tell you that things went wrong, the impedance tells you t
+- [4] I've never watched a better video of this type. I enjoyed every second of it.  If I had teachers like you during my schooling days, I would've been a straight A student.
+- [ ] Just ordered my LiteVNA and used the wait for it to arrive as an excuse to watch another great video from your back catalogue. Thanks for the great explanation of the charts and what it all means.
+- [ ] This was an outstanding video. Understandable and informational. Better than several others that put me to sleep, or confused the snot out of me.
+- [5] What a marvelous & concise demo & tutorial. Your presentation of moving the cursor by changing the input really helps many people visualize what, exactly, is happening. Excellent video Sir, & a tip of my hat to you !
+- [3] I have watched this video a few times and found it to be a very useful reference work. Especially if you, like me, come from a non technical background and are learning in your later years. I understand the principles now and feel I can use
+- [8] A wonderful explanation of the Smith chart I never have seen before! Thank you again for this splendid lecture.
+- [ ] Excellent detailed explanations of the NanoVNA. I just bought one for my ham radio activities. I learned a lot in your video. 73
+- [ ] I learned a great deal from you and you are a great teacher.
+- [ ] One of the best videos I've seen on what a VNA is and how to use it.
+- [ ] Brilliantly presented and communicated. We miss you!
+- [18] That was surprisingly helpful. I didn't even know what vector network analyzers where used for before!
+- [4] So much knowledge in your head! I learn so much, I must see your videos several times to get it! Thank you again Andreas!
+- [4] I shared your video with my fellow classmates. I have gone through a electromagnetics course with RF focus, yet your video simplified it for me that much more! Thank you for this amazing piece!
+- [4] I’ll join the chorus in saying this is an amazingly good VNA explanation and demonstration.
+- [3] Wow! Thanks for this Andreas! This is stuff I've desperately wanted to understand for years!
+- [4] Excellent work, thank you very much for your time in making this video!
+- [3] As usual from you excellent explantions and demos of what you do. I learnt some info that I should have known but didnt. Thanks again
+- [3] Thank you for no midroll ads on a 25min video! YT must hate you for that :D
+- [4] As an ‘old ham’ who only ever used SWR meters to check out an aerial,   This video is simply amazing as to just what the Nano can do, always thought this sort of equipment was out of my price range, I’m blown away, Thank you so much for suc
+- [119] Nice job! And thank you for the recommendation for my channel.
+- [15] I enjoy your videos a bit too much at times, Now I find myself spending more money.... My other half will be haunting you down :D
+- [2] Andreas thank you very much mate, I found that video extremely educational and helpful!
+- [1] One of the best tutorials. Thank you. Good to watch this before using the device for the first time.
+- [2] I love this Video! It helps me to use my new device! Thank you!
+- [4] This video is an excellent introduction before one goes to W2AEW excellent series. Thanks Andreas.
+- [3] Well, I definitely learned a lot from this video. Thanks
+- [1] Thank you Andreas for this very helpful video! Now I understand the smith-diagram and ordered the hf-demo-kit test board. Very good explanation and easy to understand!
+- [1] fantastic , just bought one , now I shall use it with confidence . Thank you for another great video.
+- [1] Spectacular video!!!  I understand smith charts much better now.    Also, I now know what the second channel on my Nano-VMA is for.    Thank you for all your works!!!
+- [ ] Thank you so much for the explanation. The breaking up of the topic and the sequence of explanation was fantastic. You also anticipated FAQ questions and answered them pre-emptively. Thank you again on all the efforts. I subscribed :)
+
+=== The Beginner's Guide To Software Defined Radio RTL-SDR | https://www.youtube.com/watch?v=nB6XQSEFwVA | 40 comments fetched
+- [25] No "Zadig" link.
+- [2] Good video but is the only properties that differ quality is an SDR as presented. I was a professional radioman for 20 years and the way we would rate a receiver used completely different specs. Receiver sensitivity and audio quality consis
+- [21] Thousands of dollars in equipment reduced to $20-50 because the computer does all the work. Amazing!
+- [4] Another old SWL who detoured into computer apps for writing and web publishing in the '80s and '90s and only vaguely knew that this stuff existed. Thanks for the introduction!
+- [31] When I was a tech (back in the crimean war) TCXO stood for "temperature compensated crystal oscillator"
+- [138] I've reviewed lots of SDR tutorials, "unboxings" and related videos but this is the most comprehensive and useful video of them all. Keep up the good work and thank you for all of the thought and skill that went into producing this great vi
+- [3] As a newby ( a 62 yr old newby) I find this very helpful. i was looking at the Uniden range of receivers, by my goodness they are expensive for someone on a meagre income, so having found your excellent guide, I shall look into this further
+- [7] I have been using an indoor skeleton discone with a wide band preamp, also suitable for radio scanners. I live on the ground floor, but find this works very well.
+- [ ] Thanks for this video. It was a big help in getting SDR# and my RTL-SDRv4 dongle working.
+- [33] Very grateful that you put this video out.  I've been reading a great deal about these devices with the aim to buy one. However your end to end overview  filled in a lot of gaps including things I needed to understand but didn't realise I h
+- [4] Love it! I just bought my first setup and am super excited to get started.  On a side note, the whole video I am  just waiting for you to say something about 15% and Geicko! Sorry I had to
+- [5] At 01:14 The correct SI spelling is MHz and NOT Mhz as I see here. This may look minor but when you are discussing radio better do it the right way.
+- [1] Thanks I've been playing with web sdr and I'm getting curious about what I could pick up from home with my own sdr set up.. really appreciate your vids!
+- [1] HackRF is in $300 range if bought in the US. On Aliexpress, I am seeing a HackRF with metal case, TCXO and antenna as low as $88.
+- [3] Agreed... We've come a long way since the old days of radio. Thank you for the information on various types of radios, antennas, and accessories. Well made video!
+- [1] 2020:   Was just thinking about the use of a Raspberry Pi with many of these to have a relatively self-contained receiver, given a solid 5-volt battery supply.  I dislike tying up my phone.  Great review!
+- [2] super informative for us nubies
+- [ ] could mention the connector style for the antenna needs to be an SMA connector
+- [ ] Well Done & beg you for yearly updates.
+- [1] A WebSDR is a Software-Defined Radio receiver connected to the internet, ( http://www.websdr.org/   ) allowing many listeners to listen and tune it simultaneously. SDR technology makes it possible that all listeners tune independently, and 
+- [8] Thanks GOD, a channel well explained about SDR loud and clear
+- [ ] I'm new, I' don't know but I love it, going to be your fan!!!
+- [5] I’m just getting started.  This was very helpful!
+- [ ] Thanks Mate! This Video gave me all the help I was looking for. Thanks to share!
+- [2] Subbed. On the basis of your explanation being very clear without a patronising tone! Many thanks buddy.
+- [5] Excellent. Thank you for taking the time  to produce a video for starters. Cheers
+- [9] good explanation of SDR and equipment.....5 Stars!
+- [ ] This vid was so GOOD that i am going to go set up the SDR a friend gave me last Christmas.
+- [1] Excellent and very informative. This is a high quality documentary as they all are from Tech Minds. I wish that many documentaries on You Tube would be as good as this one is. Most of the documentaries and editions are simply rubbish!!! Wel
+- [ ] Excellent presentation !   Thanks.
+- [4] Very good primer to SDR!You know yourstuff! 73s Tom
+- [ ] Excellent work sir
+- [ ] Thank you Sir.  This was EXTREMELY helpful for getting me moving in the right direction.
+- [ ] Excellent presentation!
+- [53] very good vídeo  and explanation  SDR complete   great  informations  thank you
+- [ ] Excellent information
+- [ ] Great video. Just what I needed.
+- [2] Amazingly helpful video! Thank you very much!
+- [ ] Thank you for the video!
+- [ ] Well Done

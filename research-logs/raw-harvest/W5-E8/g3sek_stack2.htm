@@ -1,0 +1,407 @@
+<HTML>
+<HEAD>
+<TITLE>VHF/UHF Long Yagi Workshop</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE> SPAN{font-family:arial}</STYLE>
+</HEAD>
+
+<BODY>
+<SPAN>
+
+
+<H1 ALIGN="CENTER"><A NAME="Top"></A><font color="#0000FF">Stacking Yagi
+Antennas</font></H1>
+
+<TABLE WIDTH="100%">
+
+<TR>
+  <TD VALIGN="TOP" width="20%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">
+  </TD>
+  <TD VALIGN="TOP" width="80%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    &nbsp;<p>
+    <OL>
+      <LI><A HREF="#1.">Fundamentals:</A>  <i>Capture Area</i> or <i>Effective
+      Aperture</i><br>
+      <font color="#FF0000"><a href="#History">&quot;History is Bunk&quot;</a> - old &quot;rules&quot;
+      don't work!</font></LI>
+      <LI><A HREF="#2.">Stacking Two Identical Yagis</A></LI>
+      <LI><A HREF="#3.">Horizontal and Vertical Stacking</A></LI>
+      <LI><A HREF="#4.">Antennas for Different Bands... the Principle</A></LI>
+      <LI><A HREF="#5.">Antennas for Different Bands...In Practice</A></LI>
+      <LI><a href="#6.">How Far Apart?</a> <font color="#FF0000"> <i>A Survival Guide</i></font></LI>
+    </OL>
+    <P>Other references:</P>
+    <ul>
+      <li>
+      <a target="_blank" href="http://www.directivesystems.com/STACKING.htm">
+      Stacking Dissimilar Yagis and Loop Yagis</a> by Directive Systems, Inc 
+      (K1WHS)<br>
+      (very similar to the ideas on this page)</li>
+      <li><a target="_blank" href="http://www.grantronics.com.au/docs/StkYagis.pdf">Stacking,
+        Phasing and Matching Yagis</a> by Gordon McDonald, VK2ZAB</li>
+      <li><a target="_blank" href="http://74.200.68.230/topic-archives-stacking-yagi-antennas.asp">Stacking Yagi
+        Antennas</a> by Joe Reisert, W1JR</li>
+    </ul>
+    <p>&nbsp;
+    </TD>
+</TR>
+
+<TR>
+  <TD VALIGN="TOP" width="20%" style="border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    &nbsp;
+    <p>
+    <font color="#FF0000"><b>
+    CONTENTS</b></font>
+    </p>
+    <OL>
+    <font size ="2">
+      <LI><b><font color="#FF0000">Fundamentals</font></b></LI>
+      <LI><a href="#2."> Identical Yagis</a></LI>
+      <LI><a href="#3.">Horizontal and Vertical Stacking</a></LI>
+      <LI><a href="#4.">Different Bands:<br>
+        the Principle</a></LI>
+      <LI> <a href="#5."> Different Bands:<br>
+        In Practice</a></LI>
+      <LI><a href="#6.">How Far Apart?</a></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    </font>
+    <BR>
+  </TD>
+  <TD VALIGN="TOP" width="80%" style="border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    <H2><B><font color="#FF0000"><a name="1."></a></font></B><font color="#FF0000"><i>Capture Area</i> or <i>Effective
+    Aperture</i></font></H2>
+    <P>The <B><i>capture area</i></B> of an antenna - usually known to
+    professionals as its  <B><i>effective aperture</i></B> - is roughly defined as the
+    area covered by a planar or aperture array with the same gain and beamwidth
+    characteristics.
+    </P>
+    <P>For example, if we built a giant horn antenna with the same gain and
+    beamwidth as the yagi that we're viewing head-on in the diagram below, the front
+    aperture of the horn would be the same as the effective aperture of the yagi.</P>
+    <P ALIGN="CENTER"><IMG SRC="1yagi.gif" ALT="One yagi - front view" width="380" height="213"></P>
+    <P>The effective aperture of a yagi is roughly elliptical, with its longer axis
+    along the length of the elements. Note that the effective aperture extends
+    symmetrically above and below the plane of the elements, and also extends
+    symmetrically out beyond the physical length of the elements. </P>
+    <P><B>More Capture Area = More Gain</B></P>
+    <P>The bigger the capture area of any antenna, the higher is its gain. A longer
+    yagi - if it's well designed - will have more gain and a larger capture area
+    than a shorter yagi; roughly, the gain and capture area of a yagi are both
+    proportional to the boom length (in wavelengths).</P>
+    <P>The gain of an array of antennas is determined by the capture area of the
+    whole array. The fundamental principle of antenna stacking is to space the
+    antennas so that their capture areas <B>just touch</B>. This maximizes the
+    capture area of the whole array without making the array any larger than it
+    needs to be. If the spacing is too small, the capture areas will overlap and the
+    array will not achieve its maximum potential gain. The first two examples show
+    this principle in action.</P>
+    <P>However, it's important to remember that &quot;effective aperture&quot; or &quot;capture area&quot; is a
+    fuzzy concept: for yagi antennas, these areas have no hard physical boundaries.
+    The following examples will explain some of the finer points.</P>
+    <P><b><font size="4" face="arial,helvetica" color="#FF0000"><a name="History"></a>History is Bunk! </font><font size="2">(Henry
+    Ford)</font></b></P>
+    <P>Many older amateur radio books recommend fixed stacking distances like
+    &quot;half-wavelength&quot;, &quot;5/8-wavelength&quot;, &quot;half the boom
+    length&quot; etc. Some of these 'rules'
+    were little more than guesswork. </font>You can still see them in some modern
+    books - but only because they have been copied from the older books without
+    thinking!</P>
+    <P>These old 'rules' will be correct for certain types of yagis (the ones that
+    were popular when the  books were written) but they will be <font color="#FF0000"><b>wrong</b></font>
+    for many modern yagi designs. My recommendation is to forget them, and start
+    again with modern ideas.</P>
+    <P>&nbsp;</P>
+  </TD>
+</TR>
+
+<tr>
+  <TD VALIGN="top" width="20%">
+    <p>&nbsp;
+    
+    </p>
+    <p>
+    <font color="#FF0000"><b>CONTENTS</b></font>
+    </p>
+    <p><font size="2"><a href="#Top">Top</a></p>
+    <OL>
+      <LI><a href="#1.">Fundamentals</a></LI>
+      <LI><b><font color="#FF0000"> Two Identical Yagis</font></b></LI>
+      <LI><a href="#3.">Horizontal and Vertical Stacking</a></LI>
+      <LI><a href="#4.">Different Bands:<br>
+        the Principle</a></LI>
+      <LI><a href="#5.">Different Bands:<br>
+        In Practice</a></LI>
+      <LI><a href="#6.">How Far Apart?</a></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    <p>&nbsp;</font>
+  </TD>
+  <TD VALIGN="TOP" width="80%">
+    <h2><font color="#FF0000"><b><a name="2."></a></b>Vertical Stacking for Two Identical Yagis</font></h2>
+  
+    <p>This example shows how two identical yagis can be stacked so that their
+    <B>capture areas just touch</B>. That distance will give close to the maximum achievable gain.</p>
+    <P align="center"><IMG SRC="2same.gif" ALT="Two identical antennas" ALIGN="TOP" width="450"></P>
+    <H3><font color="#FF0000">Points to note</font></H3>
+    <UL>
+      <LI>
+      <p style="margin-bottom: 6">Stacking two identical antennas can result in 2.5-2.9dB more forward gain - <b>but
+      only if it is done correctly!</b></LI>
+      <LI>
+      <p style="margin-bottom: 6">Vertical stacking will reduce the vertical beamwidth and also will introduce extra
+      sidelobes in the vertical (elevation) radiation pattern. When antennas are
+      stacked only vertically, the horizontal radiation pattern of the array will be the same as the
+      individual yagis.</LI>
+      <LI>
+      <p style="margin-bottom: 6">Stacking too far apart will <SPAN>increase the
+      vertical sidelobe levels, and </SPAN>make the vertical pattern narrower as
+        the sidelobes eat into the main lobe. Wider stacking will also make the
+      antenna bigger and less strong. There are <B>no</B>  practical advantages here, so avoid
+      excessive stacking distance! </LI>
+      <LI>
+      <p style="margin-bottom: 6">Closer stacking will make the vertical pattern wider, and decrease the
+      vertical sidelobe levels. Although this will result in serious loss of gain if
+      taken too far,  it may be a valid trade-off to obtain a cleaner vertical
+      pattern. </LI>
+      <LI>
+      <p style="margin-bottom: 6">
+<SPAN>
+
+
+      For long yagis (more than 10 elements, boom length greater than about 2 
+wavelengths) DL6WU has developed a useful 
+      <a href="#DL6WU">formula</a> based on the beamwidth. This gives a very 
+      good compromise between extra gain and a clean array pattern.</SPAN></LI>
+      <LI> 
+      <p style="margin-bottom: 6"><font color="#FF0000"><b>These are all 
+      approximations! The only way to understand <i>exactly</i> what trade-offs you are making is to
+      run a computer model of the array above reflecting ground.</b> </font> </LI>
+    </UL>
+
+      <p style="margin-bottom: 6">&nbsp;<h3><font color="#FF0000">&nbsp;<B><a name="DL6WU"></a>DL6WU Stacking Formula for Long Yagis </B></font></h3>
+
+    <p>This formula only applies for yagis of more than about 10 elements, boom 
+    length greater than about 2 wavelengths. </p>
+    <blockquote>
+    D = W / (2 * sin(B/2))
+    <p>where<br>
+    D = stacking distance, vertical or horizontal<BR>
+    W = wavelength, in same units as D<BR>
+    B = beamwidth between -3dB points. <BR>
+    Use vertical beamwidth for vertical stacking (as above);<BR> 
+    use horizontal beamwidth for horizontal stacking. </p>
+    </blockquote>
+    <p>&nbsp;
+  </TD>
+</tr>
+
+<tr>
+  <TD VALIGN="top" width="20%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">&nbsp;
+    <p>&nbsp;<font color="#FF0000"><b>CONTENTS</b></font>
+    </p>
+    <p><font size="2"><a href="#Top">Top</a></font></p>
+    <OL>
+    <font size ="2">
+      <LI><a href="#1.">Fundamentals</a></LI>
+      <LI><a href="#2."> Two Identical Yagis</a></LI>
+      <LI><font color="#FF0000"><b>Horizontal and Vertical Stacking</b></font></LI>
+      <LI><a href="#4.">Different Bands:<br>
+        the Principle</a></LI>
+      <LI><a href="#5.">Different Bands:<br>
+        In Practice</a></LI>
+      <LI><a href="#6.">How Far Apart?</a></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    </font>
+    <p>&nbsp;</p>
+  </TD>
+  
+  <TD VALIGN="TOP" width="80%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    <h2><A NAME="3."><font color="#FF0000"> Horizontal and Vertical Stacking</font></A> </h2>
+    This example shows how four identical yagis can
+    be stacked in a &quot;box&quot; formation on an &quot;H-frame&quot;.
+    <P align="center"><IMG SRC="4same.gif" ALT='"Box" array of four antennas' width="450"></P>
+    <H3><font color="#FF0000">Points to note</font></H3>
+    <UL>
+      <LI>The capture areas just touch in both the vertical and the horizontal
+      directions.</LI>
+      <LI>The horizontal spacing is greater than the vertical spacing, because the
+      capture areas are elliptical.</LI>
+      <LI>The horizontal cross-arm of the H-frame is in the  same plane as the yagi
+      elements, but interaction is minimized because the cross-arm is
+      outside of the capture area of the antennas.</LI>
+      <LI>If the top of the tower extends up to the cross-arm  (for mechanical
+      strength) it will be inside the capture areas of the two lower antennas and
+      there may be some interaction.&nbsp; </LI>
+      <LI>If there are metal guys coming up to
+      the top of the tower, expect some interaction. </LI>
+    </UL>
+    <p>&nbsp;
+  </TD>
+</tr>
+
+<tr>
+  <TD VALIGN="top" width="20%">
+    &nbsp;<p>
+    <font color="#FF0000"><b>
+    CONTENTS</b></font>
+    </p>
+    <p><font size="2"><a href="#Top">Top</a></font></p>
+    <OL>
+    <font size ="2">
+      <LI><a href="#1.">Fundamentals</a></LI>
+      <LI><a href="#2."> Two Identical Yagis</a></LI>
+      <LI><a href="#3.">Horizontal and Vertical Stacking</a></LI>
+      <LI><font color="#FF0000"><b>Different Bands:<br>
+        the Principle</b></font></LI>
+      <LI><a href="#5.">Different Bands:<br>
+        In Practice</a></LI>
+      <LI><a href="#6.">How Far Apart?</a></LI>
+      <LI><a href="#50mhz"> Low Noise on 50MHz</a></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    </font>
+    <p>&nbsp;
+  </TD>
+  <TD VALIGN="TOP" width="80%">
+    <h2><A NAME="4."><font color="#FF0000"> Antennas for Different Bands... the Principle</font></A></h2>
+    This example extends the idea of capture areas to
+    show how to stack antennas for different bands in a &quot;Christmas Tree&quot;
+    configuration. The drawing below shows what we're trying to achieve - 
+    but it may not be very practical.
+    <P align="center"><IMG SRC="xmas-max.gif" ALT='"Christmas tree" - idealized configuration' width="480" height="364"></P>
+    <H3><font color="#FF0000">Points to note</font></H3>
+    <UL>
+      <LI>The capture area of the lower-band antenna is physically much larger than the capture
+      area of the higher-band antenna.</LI>
+      <LI>To avoid any interaction between antennas, the capture areas should not
+      overlap.</LI>
+      <LI>To avoid interaction with the tower, the top of the tower should be outside
+      the capture area of the lower-band antenna.</LI>
+      <LI><b>This configuration is very poor mechanically</b> - it puts large wind-loads on
+      the mast, which may bend or break where it enters the tower.</LI>
+    </UL>
+    <p>&nbsp;
+  </TD>
+</tr>
+
+<tr>
+  <TD VALIGN="top" width="20%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    &nbsp;<p>
+    <font color="#FF0000"><b>CONTENTS</b></font>
+    </p>
+    <p><font size="2"><a href="#Top">Top</a></font></p>
+    <OL>
+      <font size ="2">
+      <LI><a href="#1.">Fundamentals</a></LI>
+      <LI><a href="#2.">Two Identical Yagis</a></LI>
+      <LI><a href="#3.">Horizontal and Vertical Stacking</a></LI>
+      <LI><a href="#4.">Different Bands:<br>
+        the Principle</a></LI>
+      <LI><font color="#FF0000"><b>Antennas for Different Bands...In Practice</b></font></LI>
+      <LI><a href="#6.">How Far Apart?</a></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    </font>
+    &nbsp;
+  </TD>
+  <TD VALIGN="TOP" width="80%" style="border-top-style: solid; border-top-color: #C0C0C0; border-bottom-style: solid; border-bottom-color: #C0C0C0">
+    <h2><A NAME="5."><font color="#FF0000"> Antennas for Different Bands... In Practice</font></A></h2>
+    This example shows the <B>absolute minimum</B>
+    configuration for stacking antennas on different bands. Closer stacking than
+    this can lead to <B>serious loss of performance!</B>
+    <P ALIGN="center"><IMG
+    SRC="xmas-min.gif" ALT='"Christmas tree" - minimum configuration' width="475" height="316"></P>
+    <H3><font color="#FF0000">Points to note</font></H3>
+    <UL>
+      <LI>The higher-band antenna is <b> inside</b> the capture area of the lower-band
+      antenna, and so is the tower. This is a compromise, but maybe not so serious
+      because both objects are much smaller (horizontally) than a half-wavelength on
+      the lower band.</LI>
+      <LI>The lower-band antenna looks like a large object to the higher-band antenna
+      - &quot;large&quot; in terms of the wavelength, that is - and will seriously
+      disturb its performance. That's why we always aim to <B>keep lower-band
+      antennas completely outside of the capture area of any higher-band antenna</B>.
+      Breaking this rule is likely to result in <B>serious loss of performance</B>
+      for the higher-band antenna!</LI>
+      <LI>This example has shown all the compromises. Try to make
+      as few of them as possible!</LI>
+      <LI>If you can, try to make your system much taller, more like
+      the  previous example.</LI>
+    </UL>
+    <p>&nbsp;
+  </TD>
+</tr>
+
+<tr>
+  <TD VALIGN="top" width="20%">
+    &nbsp;<p>
+    <font color="#FF0000"><b>
+    CONTENTS</b></font>
+    </p>
+    <p><font size="2"><a href="#Top">Top</a></font></p>
+    <OL>
+    <font size ="2">
+      <LI><a href="#1.">Fundamentals</a></LI>
+      <LI><a href="#2."> Two Identical Yagis</a></LI>
+      <LI><a href="#3.">Horizontal and Vertical Stacking</a></LI>
+      <LI><a href="#4.">Different Bands:<br>
+        the Principle</a></LI>
+      <LI><a href="#5.">Different Bands:<br>
+        In Practice</a></LI>
+      <LI><font color="#FF0000"><b>How Far Apart?</b></font></LI>
+    </OL>
+    <p><a href="#End">End, Back</a></p>
+    </font>
+    &nbsp;
+  </TD>
+  <TD VALIGN="TOP" width="80%">
+    <H2><a NAME="6."><font color="#FF0000"> How Far Apart?</font></a><font color="#FF0000">&nbsp;&nbsp;&nbsp; 
+    A Survival Guide</font></H2>
+    <P>If you don't have much information, check the vertical stacking distance
+    that the manufacturer recommends for two of <b>the same</b> antennas. This
+    distance is the height of the capture area!</P>
+    <P>The minimum clearance distance (for antennas on lower bands, same 
+    polarization) is <b>one-half</b> of the stacking distance for two of the 
+    same antennas.</P>
+    <P><B>Example:</B> The manufacturer recommends that you stack two identical
+    144MHz yagis 10 feet apart. That means that you shouldn't mount one of these
+    yagis any closer than (10 / 2) = 5 feet above a lower-band antenna such as a 50MHz yagi or
+    HF tribander.</P>
+    <P>If you don't even have that much information, for long yagis you can look at
+    the performance table by <a href="../diy-yagi/ve7bqh.htm">VE7BQH</a>. That gives
+    recommended stacking distances for a comprehensive range of 144MHz long yagis.
+    If you can't find your exact yagi design, you should be able to find something
+    comparable as a guide.</P>
+    <P>&nbsp;</P>
+  </TD>
+</tr>
+
+<tr>
+  <TD VALIGN="middle" width="20%">
+    <p>&nbsp;
+  </TD>
+  <TD VALIGN="middle" width="80%">
+    <font size="2"><b><a name="End"></a>
+    Back to:&nbsp; </b></font>
+    <ul>
+      <li><font size="2"><a href="../diy-yagi/index.htm">VHF/UHF Long Yagi
+        Workshop</a></font></li>
+      <li><A HREF="../index.htm"><font size="2">GM3SEK's Amateur Radio Technical Notebook</font></A>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+  </TD>
+</tr>
+</TABLE>
+
+<HR>
+<P ALIGN="CENTER"><font size="1">Updated 
+<!--webbot bot="Timestamp" S-Type="EDITED"
+S-Format="%d %B %Y" startspan -->26 October 2009<!--webbot bot="Timestamp" i-checksum="32671" endspan -->
+<BR>Page © 1997-2007 IFWtech</font></P>
+
+</SPAN>
+</BODY>
+</HTML>

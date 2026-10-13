@@ -1,0 +1,63 @@
+1. MIMO capacity
+[PASS] log-det capacity = sum over singular values  9.7572 b/s/Hz
+   P/N0 =    0 dB: water-filling 3.7610 (numerical 3.7610), equal power 2.8243; powers [0.613 0.387 0.    0.   ]
+[PASS] water-filling closed form = numerical optimum (P/N0 0 dB)  
+   P/N0 =   10 dB: water-filling 10.4524 (numerical 10.4524), equal power 9.7572; powers [3.712 3.485 2.803 0.   ]
+[PASS] water-filling closed form = numerical optimum (P/N0 10 dB)  
+   P/N0 =   20 dB: water-filling 20.7733 (numerical 20.7733), equal power 20.7374; powers [27.196 26.97  26.287 19.547]
+[PASS] water-filling closed form = numerical optimum (P/N0 20 dB)  
+   1x1 Rayleigh  0 dB: Monte Carlo 0.8594, closed form 0.8603, AWGN 1.0000
+[PASS] ergodic 1x1 Rayleigh capacity closed form (0 dB)  
+   1x1 Rayleigh 10 dB: Monte Carlo 2.9093, closed form 2.9065, AWGN 3.4594
+[PASS] ergodic 1x1 Rayleigh capacity closed form (10 dB)  
+   1x1 Rayleigh 20 dB: Monte Carlo 5.8883, closed form 5.8840, AWGN 6.6582
+[PASS] ergodic 1x1 Rayleigh capacity closed form (20 dB)  
+   1x1: ergodic C at 30 dB = 9.14 b/s/Hz, slope per 3 dB = 0.98 (min = 1)
+[PASS] high-SNR slope ~ min(Nt,Nr) for 1x1  0.98
+   2x2: ergodic C at 30 dB = 17.75 b/s/Hz, slope per 3 dB = 1.96 (min = 2)
+[PASS] high-SNR slope ~ min(Nt,Nr) for 2x2  1.96
+   4x4: ergodic C at 30 dB = 34.94 b/s/Hz, slope per 3 dB = 3.88 (min = 4)
+[PASS] high-SNR slope ~ min(Nt,Nr) for 4x4  3.88
+   4x2: ergodic C at 30 dB = 19.07 b/s/Hz, slope per 3 dB = 1.97 (min = 2)
+[PASS] high-SNR slope ~ min(Nt,Nr) for 4x2  1.97
+[PASS] rank-1 LOS 2x2: one singular value, sigma^2 = Nt*Nr = 4  
+2. Diversity: MRC and Alamouti (BPSK, Rayleigh)
+   SNR/branch 10 dB, L = 1: MRC BER sim 2.37e-02, closed form 2.33e-02
+[PASS] MRC BER closed form (L = 1, 10 dB)  
+   SNR/branch 10 dB, L = 2: MRC BER sim 1.68e-03, closed form 1.60e-03
+[PASS] MRC BER closed form (L = 2, 10 dB)  
+   SNR/branch 10 dB, L = 4: MRC BER sim 1.00e-05, closed form 9.70e-06
+[PASS] MRC BER closed form (L = 4, 10 dB)  
+   SNR/branch 15 dB, L = 1: MRC BER sim 7.87e-03, closed form 7.72e-03
+[PASS] MRC BER closed form (L = 1, 15 dB)  
+   SNR/branch 15 dB, L = 2: MRC BER sim 1.90e-04, closed form 1.78e-04
+[PASS] MRC BER closed form (L = 2, 15 dB)  
+   SNR/branch 15 dB, L = 4: MRC BER sim 2.50e-06, closed form 1.22e-07
+[PASS] MRC BER closed form (L = 4, 15 dB)  
+   Alamouti 2x1 at 12 dB: BER 2.51e-03; MRC 1x2 at 12 dB 6.74e-04, at 9 dB 2.45e-03
+[PASS] Alamouti 2x1 = MRC 1x2 with 3 dB less SNR (same diversity order 2)  
+3. MIMO channel estimation: LS vs MMSE (2x2, T = 4 orthogonal pilots)
+   SNR  0 dB: LS MSE 0.2500 (theory 0.2500), MMSE MSE 0.2000 (theory 0.2000)
+[PASS] LS and MMSE MSE match theory (0 dB)  
+   SNR 10 dB: LS MSE 0.0250 (theory 0.0250), MMSE MSE 0.0244 (theory 0.0244)
+[PASS] LS and MMSE MSE match theory (10 dB)  
+4. OFDM comb pilots (N = 64, 8-tap exponential channel)
+   pilot spacing D =  4 (N/D = 16 pilots): MSE DFT-interp  -28.0 dB, linear  -17.4 dB
+   pilot spacing D =  8 (N/D =  8 pilots): MSE DFT-interp  -25.0 dB, linear   -8.4 dB
+   pilot spacing D = 16 (N/D =  4 pilots): MSE DFT-interp   -6.1 dB, linear   -3.5 dB
+[PASS] DFT-interpolation MSE = sigma^2 L/Np when N/D >= L (D = 4, 8; within 0.5 dB)  theory -28.0, -25.0 dB
+[PASS] DFT interpolation aliases when N/D < L (D = 16: MSE > 10 dB worse than D = 8)  
+[PASS] DFT interpolation beats linear interpolation at D = 8  
+5. Ground-station diversity
+   envelope corr ~ rho^2 = 0.00: P(fade > 10 dB) single 0.0952, selection 0.00910 (independent theory 0.00906)
+[PASS] independent selection diversity outage = p^2  
+   envelope corr ~ rho^2 = 0.25: P(fade > 10 dB) single 0.0952, selection 0.01185 (independent theory 0.00906)
+   envelope corr ~ rho^2 = 0.81: P(fade > 10 dB) single 0.0952, selection 0.03322 (independent theory 0.00906)
+   envelope corr ~ rho^2 = 0.98: P(fade > 10 dB) single 0.0952, selection 0.07238 (independent theory 0.00906)
+[PASS] highly correlated branches give little gain (outage > 0.25 x single)  
+   two-ray height-diversity null spacing at 433 MHz, rocket 3 km up at 10 km: lambda/(2 sin psi) = 1.20 m (elevation 16.7 deg)
+   two-ray height-diversity null spacing at 433 MHz, rocket 3 km up at 5 km: lambda/(2 sin psi) = 0.67 m (elevation 31.0 deg)
+   two-ray height-diversity null spacing at 433 MHz, rocket 1 km up at 20 km: lambda/(2 sin psi) = 6.93 m (elevation 2.9 deg)
+[PASS] two-ray null spacing at 16.7 deg elevation, 433 MHz ~ 1.2 m  
+
+Summary: 27/27 checks passed

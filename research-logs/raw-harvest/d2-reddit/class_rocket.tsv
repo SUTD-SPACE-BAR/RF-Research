@@ -1,0 +1,25 @@
+gya17c	Best way to get live telemetry from a Raspberry Pi model rocket?	15	C	15/rocket-telemetry-radio-design	
+bjyixn	Which RF system would you recommend for rocket telemetry?	15	C	15/rocket-telemetry-radio-design; 15/other-ism-radios-fsk-2g4	
+are71f	Looking for an RF modem for rocket telemetry	15	C	15/other-ism-radios-fsk-2g4; 15/lora-modules-ebyte-rfm-heltec	SiK/RFD900x, XBee, LoRa modules
+wes4aj	Is the Featherweight GPS tracker good?	15	C	15/rocket-telemetry-radio-design; 15/lora-sensitivity-and-link-budget	
+1p3eyix	What replaced Com-Spec trackers now they're gone?	15	P	15/rocket-telemetry-radio-design	commercial tracker/beacon landscape (Featherweight, Eggtimer, Big Red Bee, Altus Metrum, RDF beepers) only partly
+141441x	My rocket telemetry link isn't working — help	17	P	17/rf-bring-up-debug-playbook	
+wugu5k	Inexpensive tracker devices for rockets?	15	P	15/rocket-telemetry-radio-design	tracker survey thin
+n4x3db	Can an Apple AirTag find a landed rocket?	15	M	15/rocket-telemetry-radio-design	BLE/UWB crowd-finding range and limits absent
+13eqq79	Best Arduino-compatible GPS module for model rockets?	18	C	18/rf-modules	operational limits, dynamic model, nav rate
+1fajo8p	How can I test a telemetry system without launching?	17	C	17/antenna-range-ota-testing	range test by attenuation
+a91891	How do you locate rockets for recovery?	15	P	15/rocket-telemetry-radio-design; 12/adaptive-beamforming-doa	GPS covered; radio direction-finding of a beeper (handheld Yagi, attenuator) absent — D1 #2
+p8hkyx	Where should I mount the GPS in my rocket?	08	C	08/gnss-antennas; 08/antennas-on-rockets	
+8q2tnj	Do I need a filter with my ground-station Yagi?	15	C	15/ground-station-design	
+v1tf4x	Is there a repository of rocket telemetry/tracker protocols and SDR tools to receive them?	14	P	14/gnu-radio-and-software-stack; 15/rocket-telemetry-radio-design	no catalogue of hobby-tracker air protocols
+1aorq7	Advice on installing a radio telemetry system in a rocket?	08	C	08/antennas-on-rockets; 15/rocket-telemetry-radio-design	
+1ha21cb	Which GPS works at high altitude (above COCOM limits)?	18	C	18/rf-modules	operational limits; enforcement logic flagged as uncertain
+d0jvco	Best-value tracker and telemetry for a hobby rocket?	15	P	15/rocket-telemetry-radio-design	
+1ld0gbb	How can I track a rocket optically (or with an antenna tracker) from the ground?	15	P	15/ground-station-design	"how fast must I track" covered; automatic RF/GPS-driven antenna trackers and optical tracking absent
+c7nctx	Is there a more powerful radio transmitter than this for Arduino rockets?	15	C	15/lora-modules-ebyte-rfm-heltec; 15/rocket-telemetry-radio-design	
+17gvnfp	How do I make a budget RF tracker for a rocket?	15	P	15/rocket-telemetry-radio-design	beacon + handheld DF recipe absent
+13rca4v	Which antenna for model-rocket LoRa telemetry?	08	C	08/antennas-on-rockets	
+e6rr7c	What is a good omnidirectional RP-SMA antenna for a rocket?	08	C	08/antennas-on-rockets; 18/connectors-and-cables-parts	
+1qa331r	Question about telemetry radios and antennas for a rocket	15	C	15/rocket-telemetry-radio-design	
+hojcz4	Telemetry radio and antenna questions for a new rocket project	15	C	15/rocket-telemetry-radio-design; 08/antennas-on-rockets	
+17bxe34	How do I transmit live video from 3 km up?	10	P	10/modulation-choice-guide	video downlink mentioned; 5.8 GHz analog FPV vs digital (DJI/OpenHD) link budgets absent

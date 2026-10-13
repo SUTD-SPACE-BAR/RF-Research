@@ -1,0 +1,169 @@
+=== 0. CP sign check (turnstile, y dipole lags 90 deg -> must be RHCP toward +z, LHCP toward -z) ===
+[PASS] 0a RHCP dominates at zenith, LHCP at nadir (IEEE convention reproduced from NEC E_theta/E_phi) (zenith R/L = 26.9 dB)
+
+=== 1. 90-degree corner reflector (rods 0.75 lambda, spacing 0.08 lambda, sides 2S, vertical polarisation) ===
+  S/lambda   NEC: G dBi   F/B dB   HPBW H x E (deg)   Zin (resonant dipole)   L_dip/lambda   avg-gain | image theory (infinite sheets): D dBi, Zin(exact lambda/2)
+   0.30         8.76      28.0     74.0 x  64.0        42.3  -0.0j        0.4196      1.000 |   12.37     47.6 +99.5j
+   0.40         9.41      31.9     58.0 x  68.0        89.2  -0.0j        0.4274      1.000 |   12.14     95.9 +97.0j
+   0.50         9.70      25.3     50.0 x  70.0       133.4  +0.0j        0.4607      1.000 |   11.81    126.3 +58.7j
+   0.60         9.80      22.1     42.0 x  76.0       144.4  +0.0j        0.5058      1.000 |   11.34    115.3 +12.1j
+   0.70         9.61      19.2     34.0 x  90.0        94.0  -0.0j        0.5148      1.000 |   11.44     73.2  -5.6j
+  reflector-size sensitivity at S = 0.5 lambda (433 MHz): sides x rod length -> NEC gain / F/B / Zin
+    sides 1.0 lambda, rods 0.75 lambda:   9.70 dBi, F/B  25.3 dB, HPBW 50 x 70 deg, Zin 133 ohm, avg 1.000
+    sides 1.0 lambda, rods 1.00 lambda:  10.19 dBi, F/B  32.6 dB, HPBW 50 x 62 deg, Zin 137 ohm, avg 1.000
+    sides 1.5 lambda, rods 1.00 lambda:  11.07 dBi, F/B  37.3 dB, HPBW 38 x 60 deg, Zin 138 ohm, avg 1.000
+    sides 2.0 lambda, rods 1.25 lambda:  12.92 dBi, F/B  31.2 dB, HPBW 26 x 42 deg, Zin 136 ohm, avg 0.999
+    sides 3.0 lambda, rods 1.50 lambda:  13.36 dBi, F/B  29.1 dB, HPBW 34 x 42 deg, Zin 131 ohm, avg 0.999
+  [info] pre-registered 1a (sides 2S, rods 0.75 lambda within 1.5 dB of image theory) MISSED: 9.70 vs 11.81 dBi -- the finite screen costs 2.1 dB
+[PASS] 1a gain approaches image theory as the screen grows: |gap| < 1.0 dB at sides 1.5 lambda x rods 1.0 lambda (rods >= 1.25 lambda then exceed it: the long rods radiate as a collinear array, which the dipole-element image model does not contain) (gap 0.75 dB; 3 x 1.5 lambda screen 13.36 dBi)
+[PASS] 1b average-gain test 0.98-1.02 for every corner model 
+  maximum NEC gain at S = 0.60 lambda (9.80 dBi); feed R rises with S (42 -> 94 ohm)
+  915 MHz, S = 0.5 lambda = 164 mm, sides 328 mm, rods 246 mm x 2 mm at 26 mm: G = 9.65 dBi, F/B 26.3 dB, HPBW 50 x 72 deg, Zin 133+0j, dipole 152.3 mm
+  433 MHz build (S = 0.5 lambda): dipole 319.0 mm at 346 mm from the apex; sides 692 mm; 25 rods of 519 mm, 6 mm dia, every 55 mm
+  bandwidth (S = 0.5 lambda, 433 MHz design): f MHz / Zin / gain dBi / VSWR re R_res:
+     405   105.4 -19.5j    9.51  1.33
+     420   120.8  -7.8j    9.60  1.12
+     433   133.4  +0.0j    9.68  1.00
+     446   145.0  +5.9j    9.76  1.10
+     460   155.8 +10.6j    9.85  1.19
+
+=== 2. Turnstile (crossed lambda/2 dipoles, quadrature, ideal phasing) ===
+  433 MHz, dipoles 319.2 mm, free space: Z = 72.3-0.0j / 72.3-0.0j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      2.12   [  2.12,   2.12]      -26.34            0.7
+       75      1.94   [  1.93,   1.94]      -25.79            0.7
+       60      1.29   [  1.26,   1.31]      -19.36            1.6
+       45      0.39   [  0.31,   0.43]      -13.88            3.4
+       30     -0.97   [ -1.16,  -0.83]       -9.52            6.8
+       20     -1.97   [ -2.25,  -1.75]       -7.48           10.2
+       10     -3.09   [ -3.49,  -2.76]       -5.80           16.2
+        5     -3.58   [ -4.02,  -3.20]       -5.19           20.7
+        0     -4.35   [ -4.87,  -3.90]       -4.35           99.0
+  433 MHz, dipoles 319.2 mm, crossed reflector (0.52 lambda rods) 0.20 lambda below: Z = 74.6+30.5j / 74.6+30.5j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      5.52   [  5.52,   5.52]      -22.95            0.7
+       75      5.27   [  5.26,   5.27]      -22.43            0.7
+       60      4.36   [  4.33,   4.38]      -16.17            1.6
+       45      3.04   [  2.95,   3.09]      -11.13            3.4
+       30      0.90   [  0.70,   1.05]       -7.59            6.9
+       20     -0.78   [ -1.08,  -0.55]       -6.26           10.3
+       10     -2.77   [ -3.18,  -2.42]       -5.46           16.3
+        5     -3.65   [ -4.11,  -3.26]       -5.26           20.7
+        0     -5.07   [ -5.60,  -4.61]       -5.07           99.0
+  433 MHz, dipoles 319.2 mm, crossed reflector (0.52 lambda rods) 0.25 lambda below: Z = 86.3+20.3j / 86.3+20.3j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      5.06   [  5.06,   5.06]      -23.41            0.7
+       75      4.85   [  4.85,   4.86]      -22.85            0.7
+       60      4.08   [  4.05,   4.10]      -16.45            1.6
+       45      2.92   [  2.84,   2.97]      -11.24            3.4
+       30      0.99   [  0.79,   1.13]       -7.50            6.9
+       20     -0.58   [ -0.88,  -0.35]       -6.06           10.3
+       10     -2.47   [ -2.89,  -2.13]       -5.16           16.3
+        5     -3.33   [ -3.79,  -2.93]       -4.94           20.7
+        0     -4.72   [ -5.25,  -4.25]       -4.72           99.0
+  433 MHz, dipoles 319.2 mm, crossed reflector (0.52 lambda rods) 0.30 lambda below: Z = 90.5+8.4j / 90.5+8.4j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      4.38   [  4.38,   4.38]      -24.09            0.7
+       75      4.22   [  4.22,   4.23]      -23.48            0.7
+       60      3.64   [  3.61,   3.65]      -16.90            1.6
+       45      2.71   [  2.62,   2.76]      -11.46            3.4
+       30      1.05   [  0.85,   1.20]       -7.43            6.9
+       20     -0.36   [ -0.66,  -0.12]       -5.83           10.3
+       10     -2.11   [ -2.53,  -1.77]       -4.80           16.3
+        5     -2.92   [ -3.39,  -2.53]       -4.53           20.7
+        0     -4.26   [ -4.79,  -3.79]       -4.26           99.0
+  433 MHz: dipoles 319.2 mm (6 mm dia); with reflector 0.25 lambda below (173 mm): zenith RHCP 5.06 dBic, at 30 deg el 0.99 dBic, horizon -4.72 dBic
+  915 MHz: dipoles 150.8 mm (3 mm dia); with reflector 0.25 lambda below (82 mm): zenith RHCP 5.07 dBic, at 30 deg el 0.99 dBic, horizon -4.73 dBic
+[PASS] 2a free-space turnstile: zenith ~ +2 dBic RHCP, horizon AR -> linear (> 15 dB) (zenith 2.12 dBic)
+[PASS] 2b average-gain test for turnstile models 
+
+=== 3. Eggbeater (two crossed circular full-wave loops in quadrature, crossed reflector below) ===
+  single loop (4 mm wire, 40-gon) resonant at C = 1.0878 lambda (753 mm, dia 240 mm); Z = 146.8-0.0j ohm
+  433 MHz eggbeater, no reflector: Z = 147-0j / 147-0j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90     -0.35   [ -0.35,  -0.35]      -20.84            1.6
+       75     -0.29   [ -0.31,  -0.28]      -20.74            1.6
+       60     -0.15   [ -0.23,  -0.09]      -17.45            2.2
+       45     -0.05   [ -0.20,   0.04]      -12.77            4.0
+       30     -0.14   [ -0.37,  -0.02]       -8.45            7.0
+       20     -0.40   [ -0.67,  -0.25]       -6.43            9.5
+       10     -0.88   [ -1.17,  -0.69]       -4.86           13.0
+        5     -1.15   [ -1.43,  -0.94]       -4.33           14.8
+        0     -1.64   [ -1.90,  -1.40]       -3.65           18.8
+  433 MHz eggbeater, reflector 0.10 lambda below the loop bottoms: Z = 150+21j / 150+21j ohm, avg 0.998
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      2.34   [  2.34,   2.34]      -18.15            1.6
+       75      2.30   [  2.29,   2.32]      -18.14            1.6
+       60      2.13   [  2.06,   2.19]      -15.15            2.3
+       45      1.78   [  1.62,   1.87]      -10.78            4.1
+       30      0.97   [  0.72,   1.12]       -7.01            7.3
+       20      0.19   [ -0.12,   0.37]       -5.47           10.0
+       10     -0.87   [ -1.18,  -0.64]       -4.48           13.8
+        5     -1.37   [ -1.67,  -1.13]       -4.21           15.8
+        0     -2.21   [ -2.48,  -1.96]       -3.95           20.0
+  433 MHz eggbeater, reflector 0.20 lambda below the loop bottoms: Z = 159-0j / 159-0j ohm, avg 0.998
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90      0.46   [  0.46,   0.46]      -20.03            1.6
+       75      0.59   [  0.57,   0.61]      -19.87            1.6
+       60      0.95   [  0.88,   1.01]      -16.51            2.2
+       45      1.20   [  1.05,   1.28]      -11.72            3.9
+       30      1.06   [  0.81,   1.19]       -7.38            6.9
+       20      0.61   [  0.32,   0.78]       -5.51            9.4
+       10     -0.20   [ -0.51,   0.03]       -4.23           12.8
+        5     -0.63   [ -0.94,  -0.39]       -3.88           14.6
+        0     -1.40   [ -1.68,  -1.13]       -3.51           18.3
+  433 MHz eggbeater, reflector 0.30 lambda below the loop bottoms: Z = 150-8j / 150-8j ohm, avg 0.999
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90     -1.97   [ -1.97,  -1.97]      -22.46            1.6
+       75     -1.69   [ -1.71,  -1.68]      -22.13            1.6
+       60     -0.83   [ -0.90,  -0.77]      -18.19            2.2
+       45      0.07   [ -0.08,   0.15]      -12.83            3.9
+       30      0.70   [  0.46,   0.82]       -7.78            6.9
+       20      0.67   [  0.38,   0.84]       -5.47            9.4
+       10      0.20   [ -0.12,   0.42]       -3.82           12.9
+        5     -0.13   [ -0.45,   0.11]       -3.34           14.8
+        0     -0.78   [ -1.07,  -0.50]       -2.80           18.7
+[PASS] 3a eggbeater average-gain tests 0.97-1.03 
+  915 MHz eggbeater (2 mm wire): loop C = 1.0898 lambda = 357 mm (dia 114 mm), reflector 0.2 lambda (66 mm) below: zenith 0.44 dBic, 30 deg 1.07 dBic, 10 deg -0.18 dBic, Z 159-0j ohm
+
+=== 4. Lindenblad (4 dipoles on a lambda/3-diameter circle, tilted 30 deg, fed in phase, free space) ===
+  433 MHz Lindenblad, dipoles 319.2 mm, circle dia 231 mm: Z = 102+40j ohm each, avg 1.000
+    el(deg)  RHCP mean  [min, max] dBic   LHCP mean dBic   AR(az-mean) dB
+       90    -300.00   [-300.00, -300.00]      -300.00          -38.1
+       60     -2.78   [ -2.79,  -2.77]      -23.89            1.5
+       45     -0.55   [ -0.56,  -0.54]      -26.93            0.8
+       30      0.61   [  0.60,   0.63]      -44.93            0.1
+       20      0.93   [  0.90,   0.96]      -29.29            0.5
+       10      1.08   [  1.04,   1.12]      -25.03            0.9
+        5      1.11   [  1.06,   1.15]      -24.28            0.9
+        0      1.12   [  1.08,   1.17]      -23.88            1.0
+      -10      1.08   [  1.04,   1.12]      -25.03            0.9
+  915 MHz Lindenblad: dipoles 150.8 mm, circle dia 109 mm: horizon RHCP 1.11 dBic, 30 deg 0.62, zenith -300.00 dBic
+[PASS] 4a Lindenblad: zenith null (< -10 dBic) and near-omni CP at the horizon (azimuth ripple < 1.5 dB) (zenith -300.0 dBic, horizon ripple 0.09 dB)
+
+=== 5. Crossed 7-element Yagi (two DL6WU Yagis, boom along +z, quadrature) for comparison ===
+  7 elements per plane, boom 831 mm (1.20 lambda); driven elements 321.7 mm; Z = 39-0j / 39-0j ohm; avg 0.997
+    off-axis angle (deg)   RHCP mean [min,max] dBic
+        0                  12.00  [ 12.00,  12.00]
+       10                  11.55  [ 11.55,  11.56]
+       20                  10.10  [ 10.08,  10.12]
+       25                   8.90  [  8.87,   8.93]
+       30                   7.29  [  7.24,   7.33]
+       40                   2.26  [  2.16,   2.32]
+       50                  -7.90  [ -8.03,  -7.79]
+       60                  -8.92  [ -9.26,  -8.74]
+  crossed-Yagi boresight 12.00 dBic, -3 dB cone half-angle 24 deg
+[PASS] 5a crossed 7-el Yagi (1.2 lambda boom) boresight 11-13 dBic (DL6WU estimate 12.0 dBi per plane) and AGT 0.98-1.02 (12.00 dBic, avg 0.997)
+
+=== 6. Comparison at 433 MHz: RHCP gain (azimuth mean, dBic) vs elevation; Yagi aimed at 45 deg elevation, rocket in the Yagi's azimuth plane ===
+   el   eggbeater(0.2)  turnstile+refl(0.25)  Lindenblad   crossed-7el@45deg
+    90       0.46            5.06            -300.00         -1.81
+    75       0.59            4.85             -8.59          7.29
+    60       0.95            4.08             -2.78         10.96
+    45       1.20            2.92             -0.55         12.00
+    30       1.06            0.99              0.61         10.96
+    20       0.61           -0.58              0.93          8.90
+    10      -0.20           -2.47              1.08          5.15
+     5      -0.63           -3.33              1.11          2.26
+
+SUMMARY: ALL PASS

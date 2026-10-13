@@ -1,0 +1,36 @@
+=== 1. Capacitor-input rectifiers (9 V rms, 50 Hz, 4700 uF, 1.2 A) ===
+  half-wave: peak 9.50 V, trough 5.68 V, mean 7.62 V, ripple 3.82 V p-p (I/1fC = 5.11 V), diode peak current 7.0 A, conduction 93 deg per pulse
+  bridge   : peak 9.04 V, trough 7.49 V, mean 8.28 V, ripple 1.54 V p-p (I/2fC = 2.55 V), diode peak current 4.3 A, conduction 76 deg per pulse
+  ideal peak sqrt2*Vrms = 12.73 V; the bridge loses 2 V_F at the peak current plus I_pk*R_w
+
+=== 2. Linear 5 V / 1.2 A bench supply for an E22-400T33D, vs a buck ===
+  regulator dropout 1.3 V: need trough >= 6.3 V; nominal trough 7.49 V, at -10 % mains ~6.59 V -> OK
+  regulator dropout 2.0 V: need trough >= 7.0 V; nominal trough 7.49 V, at -10 % mains ~6.59 V -> FAILS
+  regulator dissipation (continuous TX) = (V_in,avg - 5) x 1.2 A = (8.28 - 5) x 1.2 = 3.9 W; at 10 % TX duty 0.44 W average
+  heatsink for continuous TX at T_A 40 C, T_J 125 C, theta_JC 3, theta_CS 0.5 K/W: theta_SA <= 18.1 K/W
+  efficiency: linear from the rectified rail 60 % (input 9.9 W), transformer VA ~ 1.6-1.8 x DC power for capacitor input -> 17 VA
+  from a 12 V adapter: linear 42 % (8.4 W lost); buck at ~90 % loses 0.67 W
+
+=== 3. Zener shunt regulator: 5.1 V, 0-20 mA load, from 12 V +/- 1 V ripple (100 Hz) ===
+  R = (Vin_min - Vz)/(I_Lmax + I_Zmin) = 236 ohm (use 220 ohm); worst Zener dissipation at no load, 13 V in: 183 mW; R dissipation 284 mW
+  ngspice output ripple, 2 V p-p 100 Hz input: 100.1 mV without bypass (r_z/(R+r_z), r_z ~ 16 ohm at 5 mA + 8 ohm RS), 81.8 mV with 100 uF, 14.3 mV with 1000 uF across the Zener
+  (a bypass C must beat r_z at the ripple frequency: 100 uF = 15.9 ohm at 100 Hz does little; it mainly removes avalanche noise above ~1 kHz)
+  series vs shunt: series pass element draws ~I_load (+I_Q); a shunt regulator draws I_Lmax + I_Zmin all the time
+
+=== 4. Batteries ===
+  Peukert LiPo/Li-ion (k = 1.05), 1 Ah rated at 1 h: at 2 A runtime 29.0 min (0.97 Ah delivered, ideal 30 min)
+  Peukert lead-acid (k = 1.25), 1 Ah rated at 1 h: at 2 A runtime 25.2 min (0.84 Ah delivered, ideal 30 min)
+  1S 1000 mAh (3.7 Wh), load 1.21 W (0.40 W logic + 0.67 W radio at 10 % TX, /0.88): 25 C, 80 % usable: 2.45 h
+  1S 1000 mAh (3.7 Wh), load 1.21 W (0.40 W logic + 0.67 W radio at 10 % TX, /0.88): 0 C, ~70 % usable (assumed): 2.14 h
+  1S 1000 mAh (3.7 Wh), load 1.21 W (0.40 W logic + 0.67 W radio at 10 % TX, /0.88): -20 C, ~50 % usable (assumed): 1.53 h
+  constant-power burst 7.27 W from the cell (6 W radio + 0.4 W logic, eta 0.88):
+    +25 C, R_cell 50 mOhm (+30 wiring), V_oc 4.00 V: I = 1.89 A, terminal 3.85 V
+    +25 C, R_cell 50 mOhm (+30 wiring), V_oc 3.70 V: I = 2.06 A, terminal 3.54 V
+     +0 C, R_cell 125 mOhm (+30 wiring), V_oc 4.00 V: I = 1.97 A, terminal 3.69 V
+     +0 C, R_cell 125 mOhm (+30 wiring), V_oc 3.70 V: I = 2.16 A, terminal 3.37 V
+    -20 C, R_cell 300 mOhm (+30 wiring), V_oc 4.00 V: I = 2.23 A, terminal 3.26 V
+    -20 C, R_cell 300 mOhm (+30 wiring), V_oc 3.70 V: I = 2.54 A, terminal 2.86 V  < 3.0 V UVLO/brown-out
+  ngspice +25 C cell (R0 35 + R1 15 mOhm, tau 1 s): terminal 3.88 V just after the step, 3.86 V after 1 s of TX (closed-form steady state with R = 50 + 30 mOhm: 3.85 V)
+  ngspice -20 C cell (R0 210 + R1 90 mOhm, tau 1 s): terminal 3.49 V just after the step, 3.36 V after 1 s of TX (closed-form steady state with R = 300 + 30 mOhm: 3.26 V)
+
+ALL S3 RECTIFIER/BATTERY CHECKS PASS

@@ -1,0 +1,53 @@
+1q8r4p4	A black box appeared on the lamp post outside — what might I detect from it with an SDR?	08	M	NEW 08/antenna-identification-field-guide	street equipment (small cells, LPR cameras with LTE modems, smart-meter collectors) ID absent
+1ileuy7	The previous owner left a big antenna — is it usable with my SDR?	08	P	NEW 08/antenna-identification-field-guide; 08/yagi-uda-and-log-periodic	estimating band from element lengths not described
+p7tgm1	Can I connect this (75 Ω TV) antenna to my USB dongle?	03	C	03/coax-and-cables; 03/reflections-vswr-return-loss-mismatch	50/75 Ω mismatch costs ~0.2 dB
+ij2c0h	How do I build a self-contained, automated NOAA/Meteor station?	20	P	08/helical-antennas	reception recipe (QFH/V-dipole, LNA+SAW, scheduler, decoders) absent
+gjrsyu	Can I use an old satellite dish with my SDR?	08	P	08/horn-reflector-aperture-antennas	dish gain covered; feed/LNB choice for L-band/Ku absent
+qp7941	Suggestions before I finalise my outdoor ADS-B station?	20	P	15/ground-station-design; 07/noise-figure-and-friis	LNA/SAW/coax principles covered; ADS-B (1090 MHz) station recipe absent
+fzq9cc	My laminated-foil biconical antenna doesn't work — why?	08	P	08/antenna-measurement	biconical/discone designs absent
+fhsee6	Why are my NOAA APT images wavy?	20	P	14/sampling-aliasing-bandpass-sampling	sample-rate/clock error and Doppler in APT decoding not covered
+71z1rl	I can't get a decent NOAA image no matter what — what's wrong?	20	P	08/helical-antennas; 09/multipath-fading-doppler
+xeex5r	Picking up Starlink beacons with a cheap SDR and a TV LNB — how?	20	M	06/receiver-architectures	Ku-band LNB as a downconverter absent
+1ruge8w	NESDR v5 or RTL-SDR Blog V4?	14	C	14/sdr-hardware-survey
+1qlkyho	Does it matter if a satellite dish is mounted upside down?	08	P	08/horn-reflector-aperture-antennas	offset-fed dish geometry absent
+1t02muj	What did my neighbour install on his roof, and why?	08	M	NEW 08/antenna-identification-field-guide
+1waz8cd	What is the digital pattern on medium wave (AM band)?	14	M	NEW 14/signal-identification	HD Radio AM / DRM absent
+ufknk8	Does cooling my RTL-SDR help (it runs hot)?	14	P	04/crystals-and-resonators; 14/sdr-hardware-survey	temperature drift of dongle oscillators and TCXO vs heat not discussed for SDRs
+bsvuyl	What's the point of the tiny antenna that ships with an RTL-SDR?	08	C	08/small-antenna-limits; 08/dipoles-and-monopoles
+amo9oa	Do exposed cable runs between antenna elements affect the signal?	08	C	08/antenna-matching-and-baluns	feedline common-mode
+10pyeta	The small stock antenna can't hear ATC from inside my building — why?	09	P	09/atmospheric-rain-attenuation; 08/dipoles-and-monopoles	airband (118–137 MHz AM, aircraft vs ground stations, indoor loss) not tied together
+1ksgcum	My QFH's reception quality dropped — what to check?	20	P	08/helical-antennas	QFH troubleshooting absent
+p3arts	Review my DIY 137 MHz band-pass filter	01	C	01/passive-filter-design-prototypes
+ovjt4m	My outdoor LED light makes noise on the SDR — fix?	13	P	07/thermal-noise-and-noise-temperature; 04/ferrites-and-beads	RFI from LED drivers and how to suppress not covered — D1 #7
+hf2k4d	Long wire + 9:1 balun + ground into my SDR — is this right?	08	P	08/antenna-matching-and-baluns	random wire with 9:1 unun absent — D1 #8
+gio017	Are these dishes any good for HRPT?	20	P	08/horn-reflector-aperture-antennas	HRPT dish/feed/tracking needs absent
+l4ya4f	How do I wire the second dipole of a turnstile antenna?	08	C	08/antenna-polarization-and-circular-polarization	crossed-dipole CP phasing
+jajlhl	Why are there diagonal lines in my WXtoImg decode?	20	P	14/sampling-aliasing-bandpass-sampling	APT timing/clock error not covered
+gfyuw9	RFI drops when I tilt my monitor — why?	13	P	13/emc-emi-fundamentals (planned)	display emissions/TEMPEST-style radiation absent
+oy7jfv	Is RG6 CATV coax fine for my ADS-B receiver?	03	C	03/coax-and-cables
+1l8d5yg	Sharing one antenna between two dongles — LNA or not?	06	P	06/couplers-dividers-combiners; 07/noise-figure-and-friis	LNA-then-split multicoupler rule not stated explicitly
+1r55ehi	Telemetry reception and fox hunting with an RTL-SDR?	12	P	12/adaptive-beamforming-doa	practical handheld DF absent — D1 #2
+e2wfr7	NOAA APT satellites are retired — what else can I receive?	20	M	NEW 20/satellite-reception-recipe	Meteor LRPT, GOES HRIT, cubesats; current-status table absent
+l0bi55	What did my DIY 137 MHz filter do to nearby strong signals?	07	C	07/dynamic-range-sfdr-blocking; 01/passive-filter-design-prototypes
+fn57my	Is analog FM bleeding into the HD Radio signal my receiver or the broadcaster?	14	M	NEW 14/signal-identification	IBOC hybrid mode absent
+fiewjv	Weird bursts on 137 MHz — what are they?	14	M	NEW 14/signal-identification	ORBCOMM etc.
+1qhtkc0	What is this strange moving signal between 57 and 58 MHz?	14	M	NEW 14/signal-identification
+lumlx5	Why does rtl_test show a high, fluctuating ppm on my new V3?	04	P	04/crystals-and-resonators	TCXO warm-up and measurement method (rtl_test vs known carrier) not covered
+xe820h	Why did a simple coax stub filter improve my ADS-B reception?	03	C	03/input-impedance-stubs-quarter-wave	λ/4 stub notch/trap
+1lpcbpm	No NOAA-19 signal with a V-dipole and LNA — why?	20	P	08/antenna-polarization-and-circular-polarization	V-dipole for LEO satellites absent
+1ocp505	My QFH isn't fully omnidirectional — is that normal?	08	C	08/helical-antennas	QFH pattern
+15bng17	Can this 4G panel antenna receive GOES satellites (1.69 GHz)?	20	P	08/horn-reflector-aperture-antennas; 09/link-budget-methodology	GOES HRIT link budget / feed choice absent
+13wm88s	Why did I get nothing from a NOAA pass?	20	P	09/multipath-fading-doppler
+1dye0xj	V-dipole or double-cross antenna for weather satellites?	20	P	08/antenna-polarization-and-circular-polarization
+41xym5	Build notes for a cheap LNA like the LNA4ALL	06	C	06/lna-design
+ontskd	Why couldn't I hear ATC less than a mile from the airport?	09	P	09/fresnel-zones-los-radio-horizon	ground-to-ground vs air-to-ground airband paths not explained
+osa3m9	Are there reference waterfall screenshots of common modulations?	14	M	NEW 14/signal-identification
+ix8k65	Why are the four lower elements of a double-cross antenna unconnected?	08	C	08/yagi-uda-and-log-periodic	parasitic reflectors
+lliyz7	Why does moving the coax change my noise floor?	08	C	08/antenna-matching-and-baluns	common-mode pickup
+lmd46l	Which clip-on ferrites should I buy for 2 m?	04	C	04/ferrites-and-beads	mix 31/43/61
+10da8zd	Can an SDR be overloaded — what does it look like?	14	P	07/dynamic-range-sfdr-blocking; 17/sdr-as-test-equipment	symptoms (spur forests, raised floor, images) not shown — D1 #12
+olhemk	Does a band-pass filter (Nooelec Flamingo) let me run more gain?	14	P	07/dynamic-range-sfdr-blocking	gain staging with a pre-filter not explained
+2lr8ja	How do I build a DIY bias-T?	06	C	06/amplifier-stability-and-biasing
+mm7a0k	Why does an RTL dongle do 8 MHz in DVB-T mode but only ~2.4 MHz as an SDR?	14	P	14/sdr-hardware-survey; 14/sampling-aliasing-bandpass-sampling	RTL2832 USB/sample-rate limits vs on-chip DVB-T demod not explained
+rxqlzz	Is my LNA working as intended (tested with the SDR)?	17	P	17/sdr-as-test-equipment	relative gain test with a noise source/beacon not stepwise
+n8ivgr	Can a Raspberry Pi Zero W run an RTL-SDR plus LNA?	14	P	14/sdr-hardware-survey	host limits for SBCs

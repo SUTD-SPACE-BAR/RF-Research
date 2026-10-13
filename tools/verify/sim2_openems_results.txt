@@ -1,0 +1,107 @@
+[2026-10-13 18:08] sim2_openems_nosecone f915_bare_m1       cells  1.01 M (88x88x131),     13 s: f_res(X=0)   932.87 MHz, R  25.2 ohm, S11min  -10.2 dB @   959.1 MHz, e_rad  97.9 %, D  2.12 dBi
+[2026-10-13 18:08] sim2_openems_nosecone f915_cone_m1       cells  1.01 M (88x88x131),     15 s: f_res(X=0)   921.24 MHz, R  23.4 ohm, S11min   -9.3 dB @   947.1 MHz, e_rad  96.7 %, D  2.47 dBi
+[2026-10-13 18:11] sim2_openems_nosecone f915_bare_m2       cells  2.37 M (115x115x179),     26 s: f_res(X=0)   934.93 MHz, R  25.0 ohm, S11min  -10.1 dB @   960.6 MHz, e_rad  98.1 %, D  2.12 dBi
+[2026-10-13 18:12] sim2_openems_nosecone f915_cone_m2       cells  2.37 M (115x115x179),     30 s: f_res(X=0)   923.59 MHz, R  23.2 ohm, S11min   -9.2 dB @   948.9 MHz, e_rad  96.9 %, D  2.46 dBi
+[2026-10-13 18:13] sim2_openems_nosecone f915_bare_m3       cells  4.85 M (143x143x237),     46 s: f_res(X=0)   936.38 MHz, R  24.9 ohm, S11min  -10.1 dB @   961.8 MHz, e_rad  98.0 %, D  2.11 dBi
+[2026-10-13 18:14] sim2_openems_nosecone f915_cone_m3       cells  4.85 M (143x143x237),     52 s: f_res(X=0)   925.28 MHz, R  23.1 ohm, S11min   -9.1 dB @   950.1 MHz, e_rad  96.8 %, D  2.47 dBi
+[2026-10-13 18:14] sim2_openems_nosecone f915_cone_er4_m2   cells  2.37 M (115x115x179),     31 s: f_res(X=0)   924.53 MHz, R  23.6 ohm, S11min   -9.4 dB @   950.1 MHz, e_rad  97.0 %, D  2.40 dBi
+[2026-10-13 18:15] sim2_openems_nosecone f915_bay_m2        cells  2.68 M (115x115x203),     41 s: f_res(X=0)   966.39 MHz, R  33.5 ohm, S11min  -14.1 dB @   972.3 MHz, e_rad  99.0 %, D  4.37 dBi
+[2026-10-13 18:16] sim2_openems_nosecone f915_bay_cone_m2   cells  2.68 M (115x115x203),     56 s: f_res(X=0)   950.04 MHz, R  25.2 ohm, S11min   -9.7 dB @   959.7 MHz, e_rad  97.6 %, D  4.35 dBi
+[2026-10-13 18:17] sim2_openems_nosecone f915_cone_pml_m2   cells  2.37 M (115x115x179),     88 s: f_res(X=0)   919.86 MHz, R  21.7 ohm, S11min   -8.6 dB @   949.2 MHz, e_rad  98.3 %, D  1.75 dBi
+[2026-10-13 18:18] sim2_openems_nosecone f433_bare_m1       cells  1.35 M (92x92x159),     24 s: f_res(X=0)   497.94 MHz, R  31.7 ohm, S11min  -13.5 dB @   505.2 MHz, e_rad  96.6 %, D  2.70 dBi
+[2026-10-13 18:18] sim2_openems_nosecone f433_cone_m1       cells  1.35 M (92x92x159),     29 s: f_res(X=0)   483.79 MHz, R  30.0 ohm, S11min  -12.6 dB @   492.0 MHz, e_rad  95.7 %, D  2.68 dBi
+[2026-10-13 18:19] sim2_openems_nosecone f433_bare_m2       cells  3.07 M (119x119x217),     73 s: f_res(X=0)   497.93 MHz, R  31.5 ohm, S11min  -13.4 dB @   505.1 MHz, e_rad  96.7 %, D  2.67 dBi
+[2026-10-13 18:21] sim2_openems_nosecone f433_cone_m2       cells  3.07 M (119x119x217),     69 s: f_res(X=0)   483.98 MHz, R  29.8 ohm, S11min  -12.4 dB @   492.1 MHz, e_rad  95.7 %, D  2.66 dBi
+[2026-10-13 18:23] sim2_openems_nosecone f433_bare_m3       cells  6.31 M (147x147x292),    148 s: f_res(X=0)   497.90 MHz, R  31.4 ohm, S11min  -13.3 dB @   504.9 MHz, e_rad  96.7 %, D  2.67 dBi
+[2026-10-13 18:26] sim2_openems_nosecone f433_cone_m3       cells  6.31 M (147x147x292),    169 s: f_res(X=0)   484.11 MHz, R  29.7 ohm, S11min  -12.4 dB @   492.1 MHz, e_rad  96.0 %, D  2.66 dBi
+[2026-10-13 18:28] sim2_openems_nosecone f915_bare_pml_m2   cells  2.37 M (115x115x179),    101 s: f_res(X=0)   931.50 MHz, R  23.2 ohm, S11min   -9.4 dB @   960.6 MHz, e_rad  99.1 %, D  1.70 dBi
+[2026-10-13 18:30] sim2_openems_nosecone f915_bare_big_m2   cells  3.77 M (137x137x201),    150 s: f_res(X=0)   929.95 MHz, R  23.1 ohm, S11min   -9.4 dB @   960.9 MHz, e_rad  97.3 %, D  2.17 dBi
+[2026-10-13 18:31] sim2_openems_nosecone f915_cone_big_m2   cells  3.77 M (137x137x201),     72 s: f_res(X=0)   918.49 MHz, R  21.7 ohm, S11min   -8.7 dB @   949.5 MHz, e_rad  96.1 %, D  2.40 dBi
+[2026-10-13 18:42] sim2_openems_broken ref      : 55575 cells, 3 s; |S11| max  -53.7 dB @ 2.429 GHz, median  -55.9 dB; |S21| min  -0.01 dB; 57 VTK dump files in /var/folders/x8/mfcjg14n6d9g07flts5lnbkh0000gn/T/rfkb_broken_ref
+[2026-10-13 18:42] sim2_openems_broken pec_box  : 103180 cells, 121 s; |S11| max    0.2 dB @ 0.761 GHz, median   -0.0 dB; |S21| min -57.39 dB
+[2026-10-13 18:42] sim2_openems_broken            spikes > -20 dB at: 0.450 GHz (0.0 dB), 0.502 GHz (0.0 dB), 0.554 GHz (0.0 dB), 0.606 GHz (0.1 dB), 0.658 GHz (0.1 dB), 0.709 GHz (0.1 dB), 0.761 GHz (0.2 dB), 0.839 GHz (0.1 dB), 0.890 GHz (0.1 dB), 0.941 GHz (0.1 dB), 0.993 GHz (0.0 dB), 1.044 GHz (0.0 dB)
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_110 2.120 GHz
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_210 3.352 GHz
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_120 3.352 GHz
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_310 4.740 GHz
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_220 4.240 GHz
+[2026-10-13 18:42] sim2_openems_broken            empty-box TE_130 4.740 GHz
+[2026-10-13 18:42] sim2_openems_broken port_pml : 55575 cells, 37 s; |S11| max  -11.3 dB @ 0.475 GHz, median  -11.4 dB; |S21| min -17.70 dB
+[2026-10-13 18:42] sim2_openems_broken ungraded : 182115 cells, 9 s; |S11| max  -38.9 dB @ 2.900 GHz, median  -47.9 dB; |S21| min  -0.02 dB
+[2026-10-13 18:42] sim2_openems_broken stl      : whip + bulkhead from STL (AddPolyhedronReader): f_res 919.64 MHz, R 25.5 ohm, 474 s  (primitives, same mesh: see f915_bare_m1)
+[2026-10-13 18:45] sim2_openems_broken patch_ec : EndCriteria 0.01: f_res 2.3860 GHz, S11min -19.2 dB, BW(VSWR2) 2.18 %, e_rad 43.8 %, 8 s
+[2026-10-13 18:45] sim2_openems_broken patch_ec : EndCriteria 0.001: f_res 2.3860 GHz, S11min -19.3 dB, BW(VSWR2) 2.18 %, e_rad 43.9 %, 8 s
+[2026-10-13 18:45] sim2_openems_broken patch_ec : EndCriteria 0.0001: f_res 2.3860 GHz, S11min -19.6 dB, BW(VSWR2) 2.14 %, e_rad 44.3 %, 8 s
+[2026-10-13 18:45] sim2_openems_broken patch_ec : EndCriteria 1e-05: f_res 2.3860 GHz, S11min -19.6 dB, BW(VSWR2) 2.14 %, e_rad 44.3 %, 8 s
+[2026-10-13 18:46] sim2_openems_array_blindness array_blindness d0586: d 30.3 mm (0.586 lambda @ 5.8 GHz), 0.88 M cells, 43 s; centre element S11 min -41.2 dB @ 5.160 GHz
+[2026-10-13 18:46] sim2_openems_array_blindness    Eplane at 5.800 GHz: deepest residual -1.6 dB at 53 deg (cos^q fit q = 0.39); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 18:46] sim2_openems_array_blindness    Hplane at 5.800 GHz: deepest residual -2.7 dB at 57 deg (cos^q fit q = 2.00); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 18:46] sim2_openems_array_blindness    Eplane at 5.160 GHz: deepest residual -1.5 dB at 75 deg (cos^q fit q = 1.27); Floquet estimate theta_b = 65.0 deg
+[2026-10-13 18:46] sim2_openems_array_blindness    Hplane at 5.160 GHz: deepest residual -4.0 dB at 54 deg (cos^q fit q = 1.96); Floquet estimate theta_b = 65.0 deg
+[2026-10-13 18:47] sim2_openems_array_blindness array_blindness d05: d 25.8 mm (0.5 lambda @ 5.8 GHz), 0.80 M cells, 47 s; centre element S11 min -22.9 dB @ 5.155 GHz
+[2026-10-13 18:47] sim2_openems_array_blindness    Eplane at 5.800 GHz: deepest residual -2.4 dB at 75 deg (cos^q fit q = 0.56); Floquet estimate theta_b = 81.1 deg
+[2026-10-13 18:47] sim2_openems_array_blindness    Hplane at 5.800 GHz: deepest residual -2.7 dB at 57 deg (cos^q fit q = 1.93); Floquet estimate theta_b = 81.1 deg
+[2026-10-13 18:47] sim2_openems_array_blindness    Eplane at 5.155 GHz: deepest residual -0.9 dB at 75 deg (cos^q fit q = 0.59); Floquet estimate theta_b = 90.0 deg
+[2026-10-13 18:47] sim2_openems_array_blindness    Hplane at 5.155 GHz: deepest residual -3.8 dB at 53 deg (cos^q fit q = 1.80); Floquet estimate theta_b = 90.0 deg
+[2026-10-13 18:48] sim2_openems_broken pec_box2 : 104720 cells, 46 s; |S11| max   -1.9 dB @ 2.063 GHz, median  -26.8 dB; |S21| min -13.07 dB
+[2026-10-13 18:48] sim2_openems_broken            spikes > -20 dB at: 2.029 GHz (-19.6 dB), 2.035 GHz (-18.7 dB), 2.041 GHz (-17.5 dB), 2.048 GHz (-15.5 dB), 2.054 GHz (-12.0 dB), 2.063 GHz (-1.9 dB), 2.071 GHz (-14.2 dB), 2.078 GHz (-18.9 dB)
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_110 2.120 GHz
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_210 3.352 GHz
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_120 3.352 GHz
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_310 4.740 GHz
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_220 4.240 GHz
+[2026-10-13 18:48] sim2_openems_broken            empty-box TE_130 4.740 GHz
+[2026-10-13 18:48] sim2_openems_broken stl_whip : whip only from STL (AddPolyhedronReader): f_res 832.32 MHz, R 23.6 ohm, 14 s  (primitives, same mesh: see f915_bare_m1)
+[2026-10-13 18:48] sim2_openems_pcb slot0_m1   slot    0 mm, mesh 1: 0.23 M cells,    6 s | S21 433/915/1575/2450 MHz  -0.01 /   0.00 /  -0.00 /   0.00 dB | S21 min  -0.01 dB @ 0.481 GHz | L_fit 0.00 nH -> Z_slot nan ohm
+[2026-10-13 18:48] sim2_openems_pcb slot10_m1  slot   10 mm, mesh 1: 0.25 M cells,    7 s | S21 433/915/1575/2450 MHz  -0.01 /  -0.01 /  -0.03 /  -0.07 dB | S21 min  -0.13 dB @ 3.000 GHz | L_fit 1.20 nH -> Z_slot 87 ohm
+[2026-10-13 18:48] sim2_openems_pcb slot20_m1  slot   20 mm, mesh 1: 0.27 M cells,    7 s | S21 433/915/1575/2450 MHz  -0.01 /  -0.05 /  -0.18 /  -0.62 dB | S21 min  -1.27 dB @ 3.000 GHz | L_fit 1.95 nH -> Z_slot 70 ohm
+[2026-10-13 18:48] sim2_openems_pcb slot40_m1  slot   40 mm, mesh 1: 0.26 M cells,    8 s | S21 433/915/1575/2450 MHz  -0.05 /  -0.29 /  -1.46 / -14.81 dB | S21 min -19.56 dB @ 2.573 GHz | L_fit 4.35 nH -> Z_slot 79 ohm
+[2026-10-13 18:49] sim2_openems_pcb slot60_m1  slot   60 mm, mesh 1: 0.26 M cells,    8 s | S21 433/915/1575/2450 MHz  -0.17 /  -0.97 / -10.04 /  -2.52 dB | S21 min -17.28 dB @ 1.741 GHz | L_fit 7.63 nH -> Z_slot 92 ohm
+[2026-10-13 18:49] sim2_openems_pcb slot0_m2   slot    0 mm, mesh 2: 0.29 M cells,   12 s | S21 433/915/1575/2450 MHz  -0.01 /   0.00 /   0.00 /   0.01 dB | S21 min  -0.01 dB @ 0.483 GHz | L_fit 0.00 nH -> Z_slot nan ohm
+[2026-10-13 18:49] sim2_openems_pcb slot60_m2  slot   60 mm, mesh 2: 0.35 M cells,   17 s | S21 433/915/1575/2450 MHz  -0.17 /  -1.01 /  -9.74 /  -2.81 dB | S21 min -17.47 dB @ 1.758 GHz | L_fit 7.82 nH -> Z_slot 94 ohm
+[2026-10-13 18:53] sim2_openems_pcb pad_solid_m1 void False, mesh 1: 0.08 M cells,  229 s | feed-line Z0 (port) 51.7 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  14.0 /  14.2 /  13.3 /   8.0 dB
+[2026-10-13 18:58] sim2_openems_pcb pad_solid_m2 void False, mesh 2: 0.13 M cells,  281 s | feed-line Z0 (port) 52.1 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  21.0 /  15.7 /  10.5 /   3.6 dB
+[2026-10-13 23:02] sim2_openems_broken patch_ecx: EndCriteria 0.01 (exact_endcriteria): f_res 2.3890 GHz, S11min -12.1 dB, BW(VSWR2) 2.39 %, e_rad 31.8 %, 4 s
+[2026-10-13 23:02] sim2_openems_broken patch_ecx: EndCriteria 0.001 (exact_endcriteria): f_res 2.3870 GHz, S11min -16.6 dB, BW(VSWR2) 2.35 %, e_rad 40.1 %, 5 s
+[2026-10-13 23:02] sim2_openems_broken patch_ecx: EndCriteria 0.0001 (exact_endcriteria): f_res 2.3870 GHz, S11min -18.7 dB, BW(VSWR2) 2.22 %, e_rad 43.1 %, 6 s
+[2026-10-13 23:02] sim2_openems_broken patch_ecx: EndCriteria 1e-05 (exact_endcriteria): f_res 2.3860 GHz, S11min -19.3 dB, BW(VSWR2) 2.14 %, e_rad 43.9 %, 7 s
+[2026-10-13 23:03] sim2_openems_broken stl_whip eps 0.01 mm : whip only from STL (AddPolyhedronReader): f_res 932.87 MHz, R 25.2 ohm, 12 s  (primitives, same mesh: see f915_bare_m1)
+[2026-10-13 23:14] sim2_openems_pcb pad_void_m1 void True , mesh 1: 0.09 M cells,  688 s | feed-line Z0 (port) 56.2 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  38.8 /  26.4 /  22.4 /  13.2 dB
+[2026-10-13 23:16] sim2_openems_pcb ifa_L50_m1       L_arm  50.0 mm, tube False, mesh 1: 1.07 M cells,   97 s | f(X=0) 1355.00 MHz, R  83.0 ohm, S11min   -8.6 dB @ 1355.00 MHz (Z 83.0+39.9j), BW nan %, e_rad 44.6 %, D 9.95 dBi
+[2026-10-13 23:18] sim2_openems_pcb ifa_L62_m1       L_arm  62.0 mm, tube False, mesh 1: 1.07 M cells,   90 s | f(X=0) 1161.41 MHz, R  64.8 ohm, S11min   -8.6 dB @ 1161.41 MHz (Z 64.8+43.1j), BW nan %, e_rad 43.7 %, D 8.72 dBi
+[2026-10-13 23:19] sim2_openems_pcb ifa_L75_m1       L_arm  75.0 mm, tube False, mesh 1: 1.07 M cells,   71 s | f(X=0) 1036.67 MHz, R  56.8 ohm, S11min  -10.1 dB @ 1036.67 MHz (Z 56.8+34.6j), BW 3.93 %, e_rad 42.1 %, D 8.32 dBi
+[2026-10-13 23:23] sim2_openems_pcb ifa_L50_m1       L_arm  50.0 mm, tube False, mesh 1: 1.09 M cells,   82 s | f(X=0) 1355.00 MHz, R  85.6 ohm, S11min   -8.4 dB @ 1355.00 MHz (Z 85.6+39.9j), BW nan %, e_rad 44.6 %, D 9.95 dBi
+[2026-10-13 23:24] sim2_openems_pcb ifa_L62_m1       L_arm  62.0 mm, tube False, mesh 1: 1.09 M cells,   46 s | f(X=0) 1161.41 MHz, R  64.9 ohm, S11min   -8.6 dB @ 1161.41 MHz (Z 64.9+43.0j), BW nan %, e_rad 43.7 %, D 9.19 dBi
+[2026-10-13 23:25] sim2_openems_pcb ifa_L75_m1       L_arm  75.0 mm, tube False, mesh 1: 1.09 M cells,   51 s | f(X=0) 1036.67 MHz, R  56.9 ohm, S11min  -10.1 dB @ 1036.67 MHz (Z 56.9+34.5j), BW 4.01 %, e_rad 42.1 %, D 9.01 dBi
+[2026-10-13 23:25] sim2_openems_array_blindness array_blindness single: d 30.3 mm (0.586 lambda @ 5.8 GHz), 0.14 M cells, 14 s; centre element S11 min -38.2 dB @ 5.150 GHz
+[2026-10-13 23:25] sim2_openems_array_blindness    Eplane at 5.800 GHz: deepest residual -6.5 dB at 75 deg (cos^q fit q = 2.95); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Hplane at 5.800 GHz: deepest residual -2.4 dB at 56 deg (cos^q fit q = 2.07); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Eplane at 5.150 GHz: deepest residual -2.7 dB at 75 deg (cos^q fit q = 3.31); Floquet estimate theta_b = 65.5 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Hplane at 5.150 GHz: deepest residual -3.7 dB at 54 deg (cos^q fit q = 2.13); Floquet estimate theta_b = 65.5 deg
+[2026-10-13 23:25] sim2_openems_array_blindness array_blindness single_fine: d 30.3 mm (0.586 lambda @ 5.8 GHz), 0.49 M cells, 33 s; centre element S11 min -28.7 dB @ 5.188 GHz
+[2026-10-13 23:25] sim2_openems_array_blindness    Eplane at 5.800 GHz: deepest residual -6.5 dB at 75 deg (cos^q fit q = 2.88); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Hplane at 5.800 GHz: deepest residual -0.8 dB at 53 deg (cos^q fit q = 1.80); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Eplane at 5.188 GHz: deepest residual -5.3 dB at 75 deg (cos^q fit q = 2.43); Floquet estimate theta_b = 63.6 deg
+[2026-10-13 23:25] sim2_openems_array_blindness    Hplane at 5.188 GHz: deepest residual -3.0 dB at 53 deg (cos^q fit q = 1.87); Floquet estimate theta_b = 63.6 deg
+[2026-10-13 23:28] sim2_openems_array_blindness array_blindness d0586_fine: d 30.3 mm (0.586 lambda @ 5.8 GHz), 2.83 M cells, 128 s; centre element S11 min -27.9 dB @ 5.200 GHz
+[2026-10-13 23:28] sim2_openems_array_blindness    Eplane at 5.800 GHz: deepest residual -2.2 dB at 53 deg (cos^q fit q = 0.15); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:28] sim2_openems_array_blindness    Hplane at 5.800 GHz: deepest residual -0.9 dB at 54 deg (cos^q fit q = 1.98); Floquet estimate theta_b = 44.0 deg
+[2026-10-13 23:28] sim2_openems_array_blindness    Eplane at 5.200 GHz: deepest residual -1.1 dB at 7 deg (cos^q fit q = 1.27); Floquet estimate theta_b = 63.0 deg
+[2026-10-13 23:28] sim2_openems_array_blindness    Hplane at 5.200 GHz: deepest residual -3.8 dB at 55 deg (cos^q fit q = 2.03); Floquet estimate theta_b = 63.0 deg
+[2026-10-13 23:28] sim2_openems_pcb ifa_L82_m1       L_arm  82.0 mm, tube False, mesh 1: 1.09 M cells,   45 s | f(X=0)  970.25 MHz, R  53.6 ohm, S11min  -10.9 dB @  970.25 MHz (Z 53.6+30.8j), BW 4.93 %, e_rad 41.6 %, D 8.80 dBi
+[2026-10-13 23:29] sim2_openems_pcb ifa_L87_m1       L_arm  87.0 mm, tube False, mesh 1: 1.09 M cells,   48 s | f(X=0)  923.54 MHz, R  51.7 ohm, S11min  -11.3 dB @  923.54 MHz (Z 51.7+28.8j), BW 4.91 %, e_rad 41.3 %, D 8.58 dBi
+[2026-10-13 23:30] sim2_openems_pcb ifa_L92_m1       L_arm  92.0 mm, tube False, mesh 1: 1.09 M cells,   55 s | f(X=0)  881.96 MHz, R  50.6 ohm, S11min  -12.2 dB @  881.96 MHz (Z 50.6+25.4j), BW 4.87 %, e_rad 41.1 %, D 8.33 dBi
+[2026-10-13 23:31] sim2_openems_pcb ifa_L88.0_free_m1 L_arm  88.0 mm, tube False, mesh 1: 1.09 M cells,   50 s | f(X=0)  914.90 MHz, R  51.5 ohm, S11min  -11.4 dB @  914.90 MHz (Z 51.5+28.2j), BW 4.90 %, e_rad 41.4 %, D 8.53 dBi
+[2026-10-13 23:32] sim2_openems_pcb ifa_L88.0_tube_m1 L_arm  88.0 mm, tube True , mesh 1: 1.09 M cells,   55 s | f(X=0)  921.11 MHz, R  51.9 ohm, S11min  -12.7 dB @  921.11 MHz (Z 51.9+24.2j), BW 5.69 %, e_rad 39.3 %, D 8.65 dBi
+[2026-10-13 23:33] sim2_openems_pcb ifa_L88.0_free_m2 L_arm  88.0 mm, tube False, mesh 2: 1.80 M cells,   72 s | f(X=0)  917.60 MHz, R  51.7 ohm, S11min  -11.4 dB @  917.60 MHz (Z 51.7+28.4j), BW 4.86 %, e_rad 41.4 %, D 8.55 dBi
+[2026-10-13 23:34] sim2_openems_pcb ifa_L88.0_tube_m2 L_arm  88.0 mm, tube True , mesh 2: 1.80 M cells,   71 s | f(X=0)  923.81 MHz, R  52.1 ohm, S11min  -12.6 dB @  923.81 MHz (Z 52.1+24.4j), BW 5.67 %, e_rad 39.2 %, D 8.67 dBi
+[2026-10-13 23:38] sim2_openems_pcb ifa_L88.0_free_m3 L_arm  88.0 mm, tube False, mesh 3: 4.16 M cells,  246 s | f(X=0)  917.87 MHz, R  51.9 ohm, S11min  -11.4 dB @  917.87 MHz (Z 51.9+28.4j), BW 4.85 %, e_rad 41.7 %, D 8.54 dBi
+[2026-10-13 23:43] sim2_openems_pcb ifa_L88.0_tube_m3 L_arm  88.0 mm, tube True , mesh 3: 4.16 M cells,  252 s | f(X=0)  924.08 MHz, R  52.3 ohm, S11min  -12.7 dB @  924.08 MHz (Z 52.3+24.4j), BW 5.67 %, e_rad 39.4 %, D 8.66 dBi
+[2026-10-13 23:45] sim2_openems_pcb ifa_L88.0_free_m1 L_arm  88.0 mm, tube False, mesh 1: 1.09 M cells,  142 s | f(X=0)  911.93 MHz, R  52.6 ohm, S11min  -12.9 dB @  911.93 MHz (Z 52.6+23.6j), BW 5.48 %, e_rad 33.8 %, D 4.90 dBi
+[2026-10-13 23:50] sim2_openems_pcb pad_solid_m1 void False, mesh 1: 0.14 M cells,  303 s | feed-line Z0 (port) 51.1 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  16.2 /  14.0 /  10.8 /   8.7 dB
+[2026-10-13 23:58] sim2_openems_pcb pad_void_m1 void True , mesh 1: 0.16 M cells,  464 s | feed-line Z0 (port) 51.1 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  27.9 /  25.9 /  21.6 /  17.0 dB
+[2026-10-13 23:59] sim2_openems_pcb pad_solid_m1 void False, mesh 1: 0.18 M cells,    9 s | feed-line Z0 (port) 50.5 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  19.5 /  15.1 /  11.5 /   5.5 dB
+[2026-10-13 23:59] sim2_openems_pcb pad_void_m1 void True , mesh 1: 0.21 M cells,   38 s | feed-line Z0 (port) 50.5 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  28.5 /  24.3 /  21.2 /  16.2 dB
+[2026-10-14 00:00] sim2_openems_pcb pad_solid_m2 void False, mesh 2: 0.34 M cells,   45 s | feed-line Z0 (port) 49.9 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  19.7 /  15.0 /  11.4 /   5.7 dB
+[2026-10-14 00:02] sim2_openems_pcb pad_void_m2 void True , mesh 2: 0.41 M cells,  116 s | feed-line Z0 (port) 49.8 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  29.2 /  24.7 /  21.3 /  15.5 dB
+[2026-10-14 00:28] sim2_openems_pcb pad_void_m3 void True , mesh 3: 1.08 M cells,   86 s | feed-line Z0 (port) 49.9 ohm | RL re 50 ohm at 0.915/1.575/2.45/5.8 GHz:  29.8 /  24.8 /  20.9 /  15.5 dB

@@ -1,0 +1,3668 @@
+Design of Monopulse Antenna Difference 
+Patterns with Low Sidelobes* 
+
+By E. T. BAYLISS 
+
+(Manuscript received August 9, 1967) 
+
+The flexibility of modern monopulse radar antenna systems makes 
+possible the independent optimization of sum and difference patterns. 
+The two parameter difference pattern, developed here for the circular 
+aperature antenna, is designed to have nearly equal sidelobes similar to 
+those of the Taylor sum pattern. The difference pattern is asymptotic to 
+a model difference pattern which has the greatest slope (angle sensitivity) 
+for a given sidelobe level. The model function is unrealizable because it 
+has uniform sidelobes which arc infinite in extent. The two parameter 
+difference pattern is realizable and is expressed in a Fourier-Bessel series 
+of N terms in a manner similar to Taylor's treatment of the sum pattern. 
+The other parameter, A, controls sidelobe level. 
+
+Comprehensive tables of the Fourier-Bessel coefficients are given for 
+both the circular aperture series and the difference pattern series. Directivity 
+and angle sensitivity are investigated and found to have maximum values 
+that decrease as sidelobe level decreases. The monopulse system performance 
+using the asymptotic difference pattern and the Taylor sum pattern compares 
+favorably with a maximum likelihood angle estimation system. Development 
+of a line source difference pattern is presented in the appendix. 
+
+I. INTRODUCTION 
+
+Monopulse radar systems have, in recent years, achieved a high 
+degree of flexibility in their antenna patterns. This flexibility is the 
+result of development of multihorn feed structures and array anten- 
+nas. It now appears feasible to optimize independently the sum and 
+difference patterns of the monopulse system. A good deal of work has 
+been done to improve the sidelobe performance for sum beam pat- 
+
+
+
+*This work was supported by the Army Materiel Command under Contract 
+DA-30-069-AMC-333(Y) through the Nike-X Project Office, Redstone Arsenal, 
+Alabama. 
+
+623 
+
+
+
+624 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+terns. 1 However, less attention has been paid to improving the angle 
+sensitivity and sidelobe performance of the circular aperture dif- 
+ference pattern. 
+
+The objective of this investigation was to develop a difference pat- 
+tern which possesses characteristics that are compatible with those of 
+the Taylor sum pattern. Specifically, the goal was to obtain the maxi- 
+mum angle sensitivity commensurate with a given sidelobe level. Low 
+sidelobes are desirable in both sum and difference patterns for the 
+suppression of near-target clutter, ground clutter, and jammers. Re- 
+quiring large angle sensitivity and low sidelobes for the difference 
+pattern is analogous to requiring a narrow beamwidth and low 
+sidelobes in the case of the sum beam. The pattern that meets these 
+requirements must be produced by a reasonably well behaved aper- 
+ture illumination. 
+
+This paper solves the problem of generating difference patterns by 
+using a technique that parallels Taylor's approach to the sum pattern 
+design. The problem is first detailed in terms of making good angle 
+estimates. It is attacked by applying a general synthesis technique 
+to the approximation of a model difference pattern. Finally, the re- 
+sulting asymptotic difference pattern is examined for angle sensi- 
+tivity. Pertinent design information is presented. 
+
+II. THE PROBLEM — ANGULAR ESTIMATION IN NOISE USING 
+ANTENNA DIFFERENCE PATTERNS 
+
+A monopulse system can make a maximum likelihood angle esti- 
+mate 2 under one of the following assumptions: 
+
+(i) The primary source of noise is spatially and temporally uncor- 
+rected noise from the radiation field 
+
+(ii) The primary source of noise is thermal noise which is independ- 
+ent in the sum and difference channels. 
+
+The angle estimate is made by correlating the sum and difference 
+channel outputs. The sum and difference patterns required to make 
+the maximum likelihood estimate unfortunately have quite high side- 
+lobes (for example, the difference pattern first sidelobe is only 14.5 
+dB below the sum beam maximum). For applications where clutter 
+or active noise sources are a problem, such high sidelobes are clearly 
+unacceptable. Techniques used to suppress sidelobes can be expected 
+to reduce the angle sensitivity. (This tradeoff is examined in Section 
+IV.) Thus, the problem is to suppress antenna sidelobes in both the 
+
+
+
+ANTENNA PATTERNS 625 
+
+difference and sum patterns without severely degrading the angle 
+sensitivity of the system. 
+
+The objective of this paper is to provide a unified approach to dif- 
+ference pattern design for the monopulse system. Specifically, the 
+objectives are to: 
+
+(i) Design a difference pattern with equal sidelobes, similar to side- 
+lobes of Taylor sum pattern. 
+
+(u) Solve the practical problem of generating the aperture function 
+for the circular aperture. 
+
+{Hi) Balance sidelobe level and angle sensitivity to get the best 
+angle sensitivity for a given sidelobe level. 
+
+(iv) Compute and tabulate such design parameters as angle sensi- 
+tivity, directivity, sidelobe level and, of course, the aperture generat- 
+ing functions. 
+
+III. THE SOLUTION — AN ASYMPTOTIC PATTERN FUNCTION WITH 
+UNIFORM SIDELOBE LEVEL 
+
+3.1 Aperture and Pattern Functions 
+
+The aperture screen concept is very useful in the analysis of planar 
+antennas. It is well known that from the tangential E and H fields on 
+a surface enclosing a source one can, in principle, calculate the radi- 
+ated fields. If the enclosing surface is an infinite plane, then some 
+useful simplifications can be made. The equivalence principle and 
+image theory 3 can be used to determine the field in the source-free 
+half-space (z > 0) from its tangential components on the plane (z = 
+in Fig. 1). For this special case the E-field can be determined solely 
+from the E-field on the plane. 3 
+
+Plonsey 4 has pointed out that it is possible to describe the field in 
+the Fraunhofer region for all 6 < tt/2 where the usual Kirchhoff scalar 
+diffraction approximation 5 is good only for small 8. 
+
+The aperture and pattern expression can be put in standard form 
+by making the following change of variables: 
+
+u = — sin and p = - a (1) 
+
+X a ' 
+
+where u is the angle variable measured in standard beamwidths, p 
+is the normalized aperture variable and a is the radius of the antenna, 
+(Fig. 1). It is of interest to consider the case where the vector field 
+
+
+
+626 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+
+
+TO 
+
+OBSERVATION 
+POINT 
+R,0,*) 
+
+
+
+
+Fig. 1 — Aperture geometry. 
+
+
+
+in the aperture is factorable : 
+
+
+
+E 
+
+
+
+= f(a a + y&u)g(p, v); p ^ *■ 
+(.0; elsewhere 
+
+
+
+(2) 
+
+
+
+where 7 is a complex constant, a,- is a unit vector and g(p, <p) is the 
+complex scalar aperture function. Notice for linear polarization, 7 = 0, 
+and for circular polarization, 7 = ±j. Under the above assumptions 
+and with the usual Fraunhofer approximations (that is, p <3C R, 1 <3C kR) 
+
+
+
+E(R, e, $) = 
+
+
+
+where 
+
+
+
+-je 
+
+
+
+kR 
+
+
+
+[a R X [a, X (a, + 7 a„)] } (y) V(«, *); * < | 
+
+
+
+(3) 
+
+
+
+F(w, <i>) = =- / d*> / 0(p, <p) exp Op cos ($ - <*)]p dp. (4) 
+
+The pattern function, F(u, $), which is the Fourier-Hankel transform 
+of the aperture function, g{p, if), will be the starting point for the 
+next section. 
+
+
+
+ANTENNA PATTERNS 627 
+
+3.2 Synthesis Method for Circular Apertures 
+
+The procedure for synthesizing an arbitrary pattern function with 
+a circular aperture is an application of Woodward's technique to the 
+circular aperture synthesis problem. 6 
+
+The aperture function can be represented as a Fourier-Bessel series 
+
+q(p,<p)= Z Ea 1 /v t .( Ml . /P ); P ^T. (5) 
+
+k = -x> 1=0 
+
+This series has orthogonality and completeness properties for appro- 
+priately chosen n kl . It converges in the mean to an arbitrary aperture 
+function, §(p, <p), when the complex coefficients, a kl , are found by taking 
+the inner product of the function with each orthogonal function. 
+
+The Sturm-Liouville boundary conditions give rise to the eigenvalues 
+for the angular and radial eigenf unctions: 
+
+(i) The angular eigenfunctions must satisfy periodic boundary condi- 
+tions. Thus their eigenvalues are the integers k. 
+
+(ii) The radial eigenfunctions must satisfy one of two cases: 
+
+1. J k (p u v) = 0; n kl > 0, k ^ 0, I = 0, 1, 2, • • • . 
+
+2. cJ k (n„v) + fiurJLfau*) = 0; c £ 0, c 2 + k 2 > 0, /z*i > for 
+
+I = 0, 1, 2, • • • except when c = k = then moo = 0. 
+
+The selection of case 1 or 2 and the constant c determine the set of 
+positive distinct eigenvalues to be used in the radial eigenfunctions 
+of (5). 
+
+The aperture function expansion that allows nonzero boundary 
+values (case 2) is to be preferred in the expansion of equal sidelobe 
+patterns because: 
+
+(i) As Taylor 1 has shown, the slowest far sidelobe decay rate results 
+from nonzero boundary values. 
+
+(ii) The "central region" (| u | < n kN ) zeros are confined to a smaller 
+region. This means that better sidelobe control can be obtained in 
+the central region for a given main-beam performance and a fixed 
+number of terms, N. 
+
+Thus, choosing case 2, let c = 0. The synthesis of a difference pattern 
+allows simplification of (5) because of the symmetry required. The 
+difference pattern requires an antiphase aperture [one sign reversal, 
+F(u, <i>) = —F(u,<b + ir)], thus only first order Fourier components 
+are required (k = ±1). Thus choosing k = 1, the boundary conditions 
+reduce to* 
+
+
+
+* Primes denote differentiation with respect to the argument. 
+
+
+
+628 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+J[(U,T) = I = 0,1, ■■■ (6) 
+
+where the k subscript on p kl has been dropped. See Table I for values 
+of n, . 
+
+To further simplify the choice of coefficients, let the difference axis 
+be tp = $ = 0. This requires setting a n = -o_,, = B t /2 and gives 
+
+
+
+iV-l 
+
+g(p, <p) = cos <p Yi,BiJi(niV)) V ^ *■ 
+
+
+
+(7) 
+
+
+
+The N-term approximation to the required function <? or F is designated 
+by a tilde g or P. The pattern function expansion corresponding to 
+g(p, <p) in equation (7), that is, transformed by (4), is 
+
+
+
+F(u, <£>) = j cos <t> ^BiJiiniir) 
+
+
+
+N-l 
+
+E 
+
+J=0 
+
+
+
+uJ[(tvu) 
+Hi — u 
+
+
+
+(8) 
+
+
+
+The terms of (8) 
+
+
+
+. uJjiru) 
+Hi — u 
+
+
+
+are shown in Figure 2. 
+
+The pattern function series (8) has the important "sampling" 
+property which many approximation techniques use. If (8) is set equal 
+to the required pattern function, F(u, $), at the sample point (/x m , 0) 
+then the with coefficient, B m , can be evaluated because all other terms 
+of (8) are zero there. Equation (8) is evaluated at (n m , 0) by applying 
+L'Hospital's rule, substituting BesseFs equation and the boundary 
+value (6) to obtain 
+
+
+
+F( M „, , 0) = BJ^ JW)tf - (*tO" 8 ]. 
+
+
+
+(9) 
+
+
+
+
+
+Table I — Bessel Function Zeros, Ji(j» 
+
+
+it) = 
+
+
+
+
+
+{ 
+
+
+Mi 
+
+
+l Hi 
+
+
+I M: 
+
+
+I 
+
+
+Mi 
+
+
+
+
+1 
+
+2 
+3 
+4 
+
+
+0.5860670 
+1.6970509 
+2.7171939 
+3.7261370 
+4.7312271 
+
+
+5 
+6 
+7 
+8 
+9 
+
+
+5.7345205 
+6.7368281 
+7.7385356 
+8.7398505 
+9.7408945 
+
+
+10 
+
+11 
+
+12 
+13 
+14 
+
+
+10.7417435 
+11.7424475 
+12.7430408 
+13.7435477 
+14.7439856 
+
+
+15 
+16 
+17 
+18 
+19 
+
+
+15.7443679 
+16.7447044 
+17.7450030 
+18.7452697 
+19.7455093 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+629 
+
+
+
+0.9 
+
+
+
+-0.3 
+
+
+
+t = 
+
+A 
+
+
+
+2 3 4 5 6 7 
+
+U, STANDARD BEAMWIDTHS 
+
+
+
+Fig. 2 — Bossel scries pattern function terms. 
+
+
+
+Now setting (9) equal to F(u, <p) at the sample points, the coefficients 
+of (8) are evaluated 
+
+
+
+J* 
+
+
+
+m = 0, 1,2, ... , N - 1. 
+
+
+
+(10) 
+
+
+
+In Section 3.4 (10) is used to evaluate the coefficients from sample 
+points on the model function, F v , and thus determine the aperture 
+function (7) and pattern function (S). 
+
+3.3 Construction o] a Model Pattern Function 
+
+The previous section provides a method of expanding any realizable 
+pattern function. In this section a model difference pattern function is 
+developed. It will serve as a model for the construction of the asymp- 
+totic difference pattern in the next section. Thus its role is analogous 
+to Taylor's "ideal function." 1 
+
+The main characteristic desired in a model function is maximum 
+angular sensitivity for a given sidelobe level. It has been shown 7 for 
+an array that the pattern function that produces the greatest angular 
+sensitivity with a given sidelobe level must also have sidelobes of 
+equal height. This theorem is analogous to that proved by Dolph for 
+the sum pattern. 8 
+
+Two important differences occur when the above result for an 
+array is extended to the case of the continuous aperture: 
+
+
+
+630 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+(i) The pattern function has maximum slope for a given sidelobe 
+level (not maximum sensitivity) . 
+
+(n) The pattern function is not a realizable antenna pattern. 
+
+These two characteristics result from requiring the difference pat- 
+tern to have sidelobes of equal height. These equal sidelobes now are 
+infinite in extent (for all u). Any pattern function whose sidelobes do 
+not decay at least as vr a/2 is not realizable because it requires an un- 
+bounded aperture function. Because the function is unrealizable its 
+angular sensitivity is undefined. Nevertheless it does have the maxi- 
+mum slope for a given sidelobe level and will serve as a model func- 
+tion for synthesis of a realizable asymptotic difference pattern in Sec- 
+tion 3.4. 
+
+Thus, the main characteristics of the model function are: 
+
+(i) Maximum slope at the origin for a given peak-to-sidelobe ratio. 
+{ii) Sidelobes of uniform magnitude and infinite in extent. 
+
+Price and Hyneman pointed out that an exact functional form for 
+such a function is not known. What follows is a method for construct- 
+ing a very close approximation to the equal sidelobe difference pat- 
+tern function. 
+
+The ideal sum pattern used by Taylor 1 is of the form 
+
+
+
+F x (u) = cosw\/u 2 - A 2 (11) 
+
+where A is a parameter that determines the sidelobe level. This func- 
+tion has equal sidelobes that are infinite in extent. Taking the deriva- 
+tive of the ideal sum pattern a difference pattern is obtained. 
+
+FM = t(u 2 - A 2 y 1/S u8m v(u* - A 2 y 1/2 . (12) 
+
+The first few sidelobes of this function are not of equal height as 
+can be seen from the dashed curves in Figure 3. However, it is pos- 
+sible to modify the first few sidelobes of the above function so that 
+they are equal to the asymptotic sidelobe level. The zeros of the 
+above function are given by 
+
+n = ° • (13) 
+
+n = 1,2,3, ••• 
+
+A model difference function can be constructed by moving the 
+first T zeros on either side of the origin so that the sidelobes are made 
+
+
+
+
+ANTENNA PATTERNS 
+
+
+
+631 
+
+
+
+
+4 6 
+
+U, STANDARD BEAMWIDTHS 
+
+
+
+Fig. 3 — Model difference pattern compared with unmodified function for 
+sidelobe levels of 25, 35, and 45 dB. 
+
+
+
+equal. The model difference function is given by 
+
+f m {u) = fm n ^$ 
+
+
+
+(14) 
+
+
+
+where the zeros, z n , are moved to $„ . The location of the new zero £„ 
+which make the sidelobes equal can be found by an iterative proce- 
+dure. 8 Very good results were obtained by moving only the first four 
+zeros on either side of the origin. The constructed model functions 
+are shown in Figure 3 as solid curves. 
+
+To expedite future computations the sidelobe parameter A and the 
+zeros were fitted as polynomial functions of the sidelobe level in dB. 
+Fourth degree polynomials were fitted to values of A, £„, and the loca- 
+tion of the difference peak, p , that were obtained from the iterative 
+computation. Curves of the parameters along with their polynomial 
+coefficients can be found in Figure 4. 
+
+The use of fitted polynomials inevitably leads to errors in the re- 
+sults. The effect of these errors is more pronounced in the low side- 
+
+
+
+632 
+
+
+
+THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE l!)Gfl 
+
+
+
+-20 
+
+
+
+
+
+
+\ 
+
+
+\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\ 
+
+
+\ 
+
+
+
+
+
+
+\ 
+
+
+
+
+
+
+
+
+111 
+
+m 
+U-30 
+
+LU 
+
+Q 
+
+Z -35 
+
+_l 
+
+LU 
+
+"j-40 
+111 
+
+CD 
+
+g-45 
+
+LU 
+
+o 
+t/l-50 
+
+-55 
+
+
+
+
+
+
+
+
+\\ 
+
+
+
+
+
+
+\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\ 
+
+
+\ 
+
+
+
+
+1 
+
+
+
+
+\ 
+
+
+
+
+
+
+
+
+5 ° 
+
+
+\ 
+
+
+c\ 
+
+
+ui 2 
+
+
+V* 
+
+
+\ 
+
+
+«4 
+
+
+
+
+
+
+
+
+
+
+V > 
+
+
+
+
+
+
+\ 
+
+
+
+
+1 
+
+
+
+
+
+
+
+
+
+
+
+
+\ 
+
+
+\ 
+
+
+\ 
+
+
+
+
+\ 
+
+
+
+
+
+
+
+
+
+
+
+
+A 
+
+
+\ 
+
+
+\ 
+
+
+
+
+\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\\ 
+
+
+
+
+\ 
+
+
+\ 
+
+
+
+2 3 
+
+FUNCTION VALUE 
+
+
+
+Fig. 4 — Model difference pattern parameters. 
+
+
+
+Polynomial 
+
+Name 
+
+
+Polynomial Coefficients 
+
+
+Co 
+
+
+C, Ci Cn 
+
+
+c« 
+
+
+A 
+Po 
+
+
+0.30387530 
+0.98583020 
+2.00337487 
+3.00636321 
+4.00518423 
+0.47972120 
+
+
+-0.05042922 
+-0.03338850 
+-0.01141548 
+-0.00683394 
+-0.00501795 
+-0.01456692 
+
+
+-0.00027989 
+0.00014064 
+0.00041590 
+0.00029281 
+0.00021735 
+
+-0.00018739 
+
+
+-0.00000343 
+0.00000190 
+0.00000373 
+0.00000161 
+0.00000088 
+
+-0.00000218 
+
+
+-0.00000002 
+0.00000001 
+0.00000001 
+0.00000000 
+0.00000000 
+
+-0.00000001 
+
+
+
+lobe pattern. For example, notice the depressed first sidelobc in the 
+-45 dB pattern of Figure 3 (and later in Figure 8) . If good fidelity is 
+desired for low sidelobe patterns it is advisable to use the calculated 
+zeros directly and avoid use of the polynomials. 
+
+3.4 Synthesis of Asymptotic Difference Patterns 
+
+Now the problem of approximating the model function using the 
+synthesis method described in Section 3.2 is considered. In this sec- 
+tion an asymptotic form of the model function is developed. The 
+asymptotic form is expressed in terms of the Fourier-Bessel series. 
+
+In Section 3.3 the model function for the ideal difference pattern 
+F M is generated in equations (12) and (14). The outstanding feature 
+of this model function is its equal sidelobes. F it is an entire function 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+633 
+
+
+
+of u and is completely described by its zeros, 
+r 0; n = 
+
+
+
+Z n = 
+
+
+
+±*.; » = 1, ■ • ,T 
+
+L±(A 2 + /r) J ; » = r + i, •• 
+
+
+
+(15) 
+
+
+
+For large | u | the zeros approach ±n asymptotically. The model 
+function is not realizable because it does not have decaying sidelobes 
+(nonfinite energy). 
+
+The steps in constructing the asymptotic difference pattern are 
+illustrated in Figure 5. The behavior of the model function in the far 
+sidelobe region is changed so that it conforms to the asymptotic be- 
+havior of a realizable pattern function with decaying sidelobes. To 
+do this, the zeros, Z n , of F M for all n ^ N are moved to n„ . These 
+new far sidelobe zeros are zeros of the truncated pattern function 
+series (8) . This series must represent a realizable pattern function. 
+
+These zeros also satisfy (6). By changing only the far sidelobe zeros 
+we have retained the essential model function characteristics in the 
+central region. This central region behavior is embodied in the central 
+zeros, Z n for n < N. The JVth zero pair of the model function, ±Z N , 
+and the iVth zero pair of the realizable function, ±/ia> , do not coincide. 
+
+
+
+|fiu)| 
+
+
+
+FAR SIDELOBE 
+REGION 
+
+
+
+
+-, " Z N 
+
+
+
+crp aZ, aZ 2 <rZ N _ ( 
+Fig. 5 — Construction of asymptotic difference pattern. 
+
+
+
+634 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1068 
+
+Usually, the distance between Z N . X and y. N is somewhat greater than 
+one. Such a situation will give rise to a rather large sidelobe at the 
+transition between central region and far sidelobe region. 
+
+To eliminate this high transition sidelobe the zeros of the central 
+region will be dilated by a factor a which makes Z N and n N coincide 
+
+<r = £*" (16) 
+
+
+
+Z 
+
+
+
+-V 
+
+
+
+For sufficiently large N, a will always be greater than one. 
+The steps illustrated by Figure 5 are: 
+
+(i) A realizable pattern function with decaying sidelobes replaces the 
+model function in the far sidelobe region. 
+
+(fj) The model function (dashed curve) is dilated so that the zero 
+(aZ N ) coincides with the first zero of the far sidelobe region at u = n N . 
+
+The asymptotic form of the model function is essentially complete. 
+It can be expressed as a cononical product of its zeros 
+
+fm *> = a- «. * n [i - {£)] n [i - £) 2 ] d7) 
+
+where C is a constant. The second product term must be reduced to 
+closed functional form for this expression to have any practical value. 
+The zeros in the second product of (17) satisfy J[(n n ir) = 0. Thus 
+the second product term in (17) in closed form is equal to the first 
+term of (8) with all zeros removed for | u | < mat • 
+
+Combining (17) and (18) 
+
+n[i -(£)'] 
+
+F a (u, #) = C (cos *)2iru./{(tor) ^TT H?T ' ( 19 > 
+
+' lit \ \ 
+
+
+
+F a (u, <i>) is a realizable asymptotic difference pattern. It is nearly equal 
+to the model function in the central region (that is, | it | < hn). In fact, 
+as the size of the central region increases without bound, the asymptotic 
+function approaches the model function 
+
+him F a (u, <*>) = F M (u, *). (20) 
+
+N—oo 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+635 
+
+
+
+The limit can be deduced from (17) by noting that asymptotic behavior 
+of n„ (6) gives 
+
+
+
+M-v 
+
+
+
+I + i , 1 < T « N. 
+
+
+
+(21) 
+
+
+
+a ~ [A 5 + iV 2 ]' 
+
+Now as N is increased a — > 1. Thus as iV goes to infinity (and a — ► 1) 
+the second product term (17) disappears and only the first remains. 
+The first product term (with a = 1) is exactly equal to the model 
+function. Thus F a (u, #) is truly asymptotic to F M (u, *)• 
+
+The asymptotic function (19) is expressed as a Fourier-Bessel series 
+using equation (10) to evaluate the coefficients. First evaluate F a (u, <i>) 
+at the sample points (fi m , 0) 
+
+
+
+F(jx m , 0) = F a fa m , 0) = C27TM,,, 
+
+
+
+A'-l 
+
+n 
+
+n-l 
+
+
+1 - 
+
+
+- H 1 ' 
+
+\crZj J 
+
+
+AT-1 
+
+n 
+
+1=0 
+
+
+1 " 
+
+
+- fen 
+
+
+
+=r Lim i= 
+
+
+
+J{(ut) 
+
+
+
+^ 
+
+
+
+fe)1 
+
+
+
+m = 0, 1, ••• ,N - 1. (22) 
+Evaluating the limit and substituting Bessel's equation yields 
+
+2[i-(s-T] 
+
+m = 0, 1, ••• , N - 1. (23) 
+
+Notice also that because of the construction of the asymptotic function 
+F a (n m , 0) = for m ^ N. Finally the coefficients from (10) are: 
+
+
+
+B m = \ 
+
+
+
+
+"' - (ft)'] 
+
+
+
+
+1=0 
+l*m 
+
+
+
+
+:■ - fen ' 
+
+
+m = N, N + 1, 
+
+
+
+,-V- i 
+
+
+
+(24) 
+
+
+
+where n m is given by (6), Z n by (15) and a by (16). The constant C 
+is evaluated so that the peak of the asymptotic difference pattern is 
+unity, that is, F a (<rp ,0) = 1. 
+
+The pattern function expansion (8) is identically equal to the asymp- 
+
+
+
+636 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+totic difference pattern, F a (u, <i>), because only the first N coefficients 
+(24) are nonzero, thus the series terminates. Furthermore, the expan- 
+sion (7) is equal to the aperture function of the asymptotic difference 
+pattern. Thus equations (24), (8), and (7) define the solution to the 
+problem of finding a difference pattern compatible with the Taylor 
+sum pattern. (A similar function is developed for the line source in 
+the appendix.) This realizable two-parameter difference pattern is 
+asymptotic to the model function. The parameter A controls the 
+sidelobe level of the pattern. The parameter N controls the size of the 
+central region; hence, it controls the degree of approximation to the 
+model function. 
+
+IV. THE RESULT — DESIGN DATA AND PATTERN CHARACTERISTICS 
+
+4.1 Pattern and Aperture Functions 
+
+The usefulness of a pattern function is determined largely by the 
+availability of design data about the pattern. Coefficients B l .were 
+calculated in equation (24) for sidelobe levels from —17.5 dB to —45 dB 
+at 2.5 dB intervals and for N = 3 to 30. Coefficients for selected values 
+of JV appear in Tables II and III. The coefficients are normalized to 
+make the difference pattern peak equal to unity. 
+
+The coefficients are used, in equation (7), to generate the aperture 
+function with <p = (Figures 6 and 7). Some observations can be 
+made regarding the effects of the parameters on the aperture function: 
+
+Table 1 1 — Coefficients For 5 n , n x Patterns 
+
+\ N = 5 7 B II 14 17 21 27 30 30 3D 30 
+
+COEFFICIENTS \ SLL= 17.5 -20.0 22.5 -25.0 -27.5 -30.0 -32.5 -35.0 -37.5 40.0 -42.6 -45.0 
+
+B 0.79738 0.7942? 0.78677 0.78215 0.77598 0.7687B 0.76183 0.76508 0.74706 0.73851 0.730O9 0.72200 
+
+B 1 0.14654 0.20764 0.30017 036076 042971 0.49981 056485 0.62432 0.68863 0.76578 0.B1714 0.87470 
+
+B 2 0.13474 0.11727 0.06774 0.04336 0.01691 -0.00460 -0.01B48 -0.02572 -0.02B77 -0.02588 -0.01699 -0.00303 
+
+B 3 -0.16632 -0.18338 -0.13874 -0.12031 -0.09011 -0.06174 -0O40O6 -0.02421 -0.01019 0.00022 0.00651 0.00973 
+
+B 4 0.09650 0.18907 0.16174 0.16100 0.13248 0.10080 0.07503 0.05602 0.03628 0.02125 0.01070 0.00375 
+
+B 5 -0.15105 -0.16245 -0.1B152 -0.16116 -0.12935 -0.10140 -0.07855 -0.05604 -0.03749 -0.02412 -0.OI464 
+
+B 6 O.OB042 0.11498 0.1B236 0.17722 0.14914 0.12134 0.09701 0.07139 0.04984 0.03410 0.02272 
+
+B7 -0.059B3 -0.16641 -0.18258 -0.16223 -0.13703 -0.11266 -0.0B443 -0.06016 -0.04233 -0.O2032 
+
+B 8 0.13589 0.17757 0.16881 0.14884 0.12604 0.09575 0.06D0O 0.04929 0.03485 
+
+B 9 -009434 -0.16273 -0.16888 -0.15679 -0.13730 -0.10558 -007661 -0.05523 -0.03952 
+
+Bio 0.04678 0.13912 0.16253 0.16080 0.14645 0.11398 0.08307 0.06024 0.04344 
+
+BI1 -0.10843 -0.15009 -0.16080 -0.15342 -0.12094 -0.08B41 -0.06437 -0.04667 
+
+BI2 0.07294 0.13214 0.15681 15811 0.12642 0.09261 0.06762 0.04921 
+
+B13 -0.03554 -0.10956 -0.14893 -0.16046 -0.13036 -0.09565 -0.06999 -0.O5I07 
+
+B)4 0.0834B 0.13742 0.16040 0.13271 0.09750 0.07146 0.05226 
+
+BIS -005531 -0.12261 -0 15794 -0.13343 -0.09813 -0.07202 -0.05276 
+
+B16 002676 10500 0.15309 13250 0.09753 007167 005258 
+
+B17 -0.08518 -0.14594 -0.12993 -0.09572 -0.07040 -0.05177 
+
+Bis 006387 0.13661 0.12575 009270 0.06825 0.05010 
+
+B |g -0.04188 
+B20 02018 
+
+
+
+-0.12528 
+
+
+-0.12000 
+
+
+008853 
+
+
+- 06574 
+
+
+-0.04803 
+
+
+0.11216 
+
+
+0.11275 
+
+
+08324 
+
+
+0.06140 
+
+
+0.04525 
+
+
+-0 09749 
+
+
+-0.10409 
+
+
+007691 
+
+
+-005677 
+
+
+-0.04188 
+
+
+0.08144 
+
+
+009395 
+
+
+0.06947 
+
+
+0.05133 
+
+
+0.03790 
+
+
+-0 07256 
+
+
+-0.0B964 
+
+
+-006646 
+
+
+-004925 
+
+
+-0.03649 
+
+
+004915 
+
+
+0.07314 
+
+
+0.05417 
+
+
+0.04010 
+
+
+0.07067 
+
+
+- 031B5 
+
+
+-0.06044 
+
+
+-0.04481 
+
+
+-003320 
+
+
+-0.02460 
+
+
+0.01530 
+
+
+0.04762 
+
+
+0.03534 
+
+
+0.02621 
+
+
+0.01944 
+
+
+
+
+-0 03472 
+
+
+-0.02579 
+
+
+-0.01915 
+
+
+-O.01422 
+
+
+
+
+0.02199 
+
+
+0.01635 
+
+
+0.01215 
+
+
+0.00903 
+
+
+
+
+-0.00976 
+
+
+-0.00725 
+
+
+-0.00539 
+
+
+-0.00400 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+637 
+
+
+
+Table III — Coefficients For Difference Patterns 
+
+
+
+COEFFICIENTS \ SLL- 
+
+
+
+N=S 
+
+-17.5 -200 -22.6 -25.0 -27.5 -30.0 -32 5 -35.0 -37.5 -40.0 -42.5 -45 
+
+0.7973B 0.78751 0.77BOS 0.75893 076033 0.75219 0.7445B 0.73722 0.73042 0.72392 071792 0.71213 
+
+0.14654 26831 0.37445 0.46772 55036 0.62400 0.69001 0.74921 080278 0.85116 0.89522 0.93516 
+
+0.13474 0.06408 0.01520 -0.01692 -0.03613 -0.04535 -0.04690 -0.04252 -0.03364 -0.02137 -0.00658 0.01005 
+
+-0.15632 -0.09756 -0.05612 -002743 -0.00808 0.00445 0.01209 0.01623 0.01796 0.01B04 001706 0.01544 
+
+09660 0.06431 004125 02488 0.01343 0.00556 0.00029 -0.00311 -O.O0517 -0.00631 - 0.0O6B0 -0.00686 
+
+
+
+COEFFICIENTS ' 
+
+
+^SLL- 
+
+
+176 
+
+
+-20.0 
+
+
+-22.5 
+
+
+-25.0 
+
+
+-27.5 
+
+
+-30.0 
+
+
+-32.5 
+
+
+-35.0 
+
+
+-37.5 
+
+
+-40.0 
+
+
+-42.6 
+
+
+-45.0 
+
+
+B 
+
+
+
+
+0.81073 
+
+
+0.80063 
+
+
+0.79056 
+
+
+0.7B064 
+
+
+0.77095 
+
+
+0.76154 
+
+
+0.76248 
+
+
+0.74367 
+
+
+0.73523 
+
+
+0.72715 
+
+
+0.71935 
+
+
+0.711B9 
+
+
+B 1 
+
+
+
+
+0.02204 
+
+
+0.16201 
+
+
+026817 
+
+
+37274 
+
+
+0.46739 
+
+
+0.55343 
+
+
+0.63195 
+
+
+0.70372 
+
+
+0.76956 
+
+
+0B30O4 
+
+
+O.B8560 
+
+
+0.93694 
+
+
+B 2 
+
+
+
+
+0.26540 
+
+
+0.16480 
+
+
+00021 
+
+
+0.03653 
+
+
+0.00030 
+
+
+-0.02345 
+
+
+-0.03549 
+
+
+-0.03846 
+
+
+-003404 
+
+
+-0.02362 
+
+
+-0.00834 
+
+
+0.010B5 
+
+
+B 3 
+
+
+
+
+■ 0.37699 
+
+
+-0.25068 
+
+
+0.17324 
+
+
+-0.11027 
+
+
+-0.06513 
+
+
+-0.03349 
+
+
+-0.01200 
+
+
+0.00191 
+
+
+0.01023 
+
+
+001451 
+
+
+0.01598 
+
+
+0.01549 
+
+
+B 4 
+
+
+
+
+0.43812 
+
+
+030930 
+
+
+0.21485 
+
+
+0.14597 
+
+
+0.09622 
+
+
+0.06071 
+
+
+0.03576 
+
+
+0.01B58 
+
+
+000708 
+
+
+-0.0O031 
+
+
+0.004 78 
+
+
+-0.0072 1 
+
+
+B 6 
+
+
+
+
+-045439 
+
+
+32444 
+
+
+-0.22918 
+
+
+-0 15972 
+
+
+-0.10940 
+
+
+-0.07324 
+
+
+-0.04751 
+
+
+-0.02942 
+
+
+-0.01690 
+
+
+-0 0OB41 
+
+
+-0.00281 
+
+
+0.00074 
+
+
+B 6 
+
+
+
+
+0.42252 
+
+
+030349 
+
+
+021625 
+
+
+15259 
+
+
+0.10637 
+
+
+007303 
+
+
+0.04915 
+
+
+0.03219 
+
+
+0.02027 
+
+
+0.01201 
+
+
+0.00638 
+
+
+0.00262 
+
+
+B 7 
+
+
+
+
+-034848 
+
+
+-025158 
+
+
+0.1BO48 
+
+
+-0.12849 
+
+
+-0.09065 
+
+
+-0.06323 
+
+
+-0.04349 
+
+
+-0.02935 
+
+
+-0.01932 
+
+
+-0.01227 
+
+
+-000737 
+
+
+-0 00401 
+
+
+B B 
+
+
+
+
+0.24219 
+
+
+O.I7S70 
+
+
+0.17694 
+
+
+0.09111 
+
+
+0.0G493 
+
+
+0.04586 
+
+
+0.03205 
+
+
+0.02206 
+
+
+0.01496 
+
+
+000987 
+
+
+0.00629 
+
+
+0.00380 
+
+
+B B 
+
+
+
+
+-0.11903 
+
+
+008696 
+
+
+0OC320 
+
+
+-004580 
+
+
+-0 03297 
+
+
+002356 
+
+
+-0.01670 
+
+
+-0.01171 
+
+
+-000810 
+
+
+-000550 
+
+
+-0 00364 
+
+
+-0.00232 
+
+
+
+first, when N is fixed (Figure 6), one sees that increasing the sidelobe 
+level decreases the peak but increases the edge illumination. Con- 
+versely, when the sidelobe level is held constant (Figure 7), the effect 
+of increasing N reduces the peak only slightly but increases the edge 
+illumination tremendously. One of the prominent characteristics of this 
+type of pattern synthesis is that the edge illumination increases as N 
+increases. 
+
+
+
+1.0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>- 
+1- 
+
+g 0.6 
+
+ui 
+
+F- 
+
+z 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+w 
+
+
+
+
+
+
+^"* >s v > ' 
+
+
+
+
+
+
+
+
+
+
+111 
+
+a. 
+
+3 
+1- 
+
+
+
+
+
+
+v// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a 
+< 
+
+
+
+
+
+
+
+
+S^ 1 
+
+/^LL=-17.5 
+
+
+
+
+
+
+
+
+
+
+0.2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-20.0 3 
+
+
+
+> 
+
+UJ 
+
+■25.0 ^ 
+
+CD 
+
+3 
+
+UJ 
+
+27.5 O 
+in 
+
+30.0 O 
+
+32.5 g 
+
+35.0 
+•37.5 
+40.0 
+42.5 
+45.0 
+
+
+
+0.2 
+
+
+
+0.4 0.6 
+
+RADIUS, p/ir 
+
+
+
+1.0 
+
+
+
+Fig. 6 — Circular aperture functions for N = 10. 
+
+
+
+638 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+1.0, 1 1 1 1 1 1 1 1 1 1 30 
+
+
+
+0.4 
+
+
+
+0.2 
+
+
+
+0.4 0.6 
+
+RADIUS, p/u 
+
+
+
+0.8 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/ 
+
+
+
+
+
+
+
+
+
+
+N = 4 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^=30 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.0 
+
+
+
+Fig. 7 — Circular aperture functions for —30 dB sidelobo level. 
+
+
+
+The pattern functions exhibit a more straightforward dependence 
+on the two parameters. The sidelobe envelopes are plotted in Figure 8 
+and 9 that correspond to the aperture functions in Figures 6 and 7. 
+Only the envelope is plotted with a O to mark the sidelobe peak. 
+Obviously the sidelobe parameter controls the maximum sidelobe level. 
+The suppression of the first few sidelobes for very low sidelobe levels 
+(Figure 8) is caused by using too small an N. When nondecreasing 
+sidelobes are encountered the pattern is in a nonasymptotic region 
+indicating that there are not enough terms in the series. 
+
+The effect of changing N can best be seen by keeping the sidelobe 
+level fixed (Figure 9). As N is increased the sidelobes become more 
+nearly equal as well as increasing the region affected. If we examine 
+the sidelobe more closely we see that an inflection occurs at about 
+u = N. The inflection results from the transition between the central 
+region where the zeros have been modified and the far sidelobe region 
+where the natural decay envelope is u' 3/2 (Figure 10). 
+
+The asymptotic behavior of a given pattern function for large u can 
+be examined in a manner similar to Taylor's 1 , giving the asymptotic 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+639 
+
+
+
+form of the pattern function as 
+
+(2*r +1 r(a + 1) 
+
+
+
+F(u, <S>) 
+
+
+
+tt-s/2 
+
+
+
+,(§> + <• 
+
+
+
+h(w, $) exp \JTT\u - - - |J + /i(tt, <t> + tt) exp I -jtt(u - - - |j J 
+
+
+
+for | u | -> co and Re w > 0. (25) 
+
+The above notation follows Taylor's except that the aperture function 
+is defined over the entire aperture not just on a line. The function 
+
+
+
+Q -37.5 
+
+
+
+-42.5 
+
+
+
+-47.5 
+
+
+
+
+8 12 
+
+U, STANDARD BEAMWIDTHS 
+
+
+
+16 
+
+
+
+20 
+
+
+
+Fig. 8 — Sidelobe envelope of pattern functions for N = 10. 
+
+
+
+640 
+
+
+
+THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+
+
+h(p, <i>) is the analytic part of the aperture function, that is, g(p, 3>) = 
+h(p, <p)(ir 2 — p 2 ) a . For nonzero boundary values a - and h(p, ip) = 
+g(p, ip). Evaluating (25) for the difference pattern gives 
+
+
+
+ev ja /o i ,x sin t(u - f) 
+
+
+
+(26) 
+
+
+
+As one might expect when dealing with aperture-limited functions 
+the asymptotic form of the pattern function depends only on the 
+aperture function behavior at the boundary of the aperture. The 
+asymptote in Figure 10 was computed from equation (26). 
+
+To pursue the topic of asymptotic behavior further leads to con- 
+sidering the superdirectivity ratio and "Q" of the antenna. A rough 
+qualitative definition would describe the superdirectivity ratio as the 
+ratio of total power flow through the aperture to the power that is 
+actually radiated. The definition of Q is the ratio of energy stored in 
+the near field (evanescent waves) to that radiated per cycle. Increasing 
+the superdirectivity increases the reactive component of power flow 
+(also Q) and thus increases the ohmic losses in the antenna. 
+
+
+
+-27.5 
+
+
+
+
+-52.5 
+
+
+
+8 12 
+
+U. STANDARD BEAMWIDTHS 
+
+
+
+Pjg. 9_ Sidelobe envelope of pattern functions for —30 db sidelobe level. 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+641 
+
+
+
+
+8 12 16 
+
+u. STANDARD BEAMWIDTHS 
+
+
+
+Fig. 10 — Asymptotic sidelobe behavior for — 25dB sidelobe level and N = 11. 
+
+
+
+Large superdirectivity ratios are to be avoided (expect in very small 
+antennas) for a number of practical reasons: high ohmic losses, high 
+error sensitivity, and narrow bandwidth. How then is superdirectivity 
+affected by the choice of difference pattern? Superdirectivity increases 
+as the integrated power of the pattern function in the region u > 2a/X 
+increases. This means that for a given sidelobe level superdirectivity 
+increases with N. However, for a given pattern function, superdirectivity 
+decreases with increasing antenna diameter. Because of the undesirable 
+effect of the reactive component, the parameter N should bo chosen 
+so that N < 2a/\. 
+
+The asymptotic behavior of the pattern function as N is increased 
+is best illustrated by the dilation factor, a (Figure 11). The dilation 
+factor decreases to one as N is increased toward infinity. In the non- 
+asymptotic region (Figure 11) the dilation actually increases with N. 
+Because of severe sidelobe anomalies it is best to avoid using patterns 
+with N in the nonasymptotic region. For N = 30 the pattern dilation 
+is less than 3 per cent for all sidelobe levels. 
+
+
+
+
+
+
+642 
+
+
+
+THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 19G8 
+
+
+
+z 
+o 
+
+5 106 
+
+
+
+
+1.00 
+
+
+
+'-40 X REGION OF 
+
+I NON-ASYMPTOTIC N'S 
+
+
+
+10 20 
+
+N 
+
+
+
+Fig. 11 — Pattern dilation factor, a. 
+
+4.2 Pattern Characteristics 
+
+A figure of merit by which the performance of a pattern can be 
+measured against other patterns is a great help in selecting a specific 
+pattern. Two such figures are directivity and angular sensitivity. 
+
+The directivity function is defined so that the aperture function 
+can be used to find the total power 
+
+
+
+G(u, *) = 
+
+
+
+4*V 
+
+
+
+- I F(u, <*>) | 2 
+
+7T 
+
+
+
+(27) 
+
+
+
+,.2* ..T 
+
+\ d<p \ g(p, <p) | 2 p dp 
+
+Jo •'0 
+
+This definition is based on Silver's work, 10 and makes the following 
+assumptions : 
+
+(i) The effect of the obliquity factor is neglected. 
+
+(ii) The antenna is large in wavelengths. 
+
+{Hi) The effects of ohmic losses in the antenna are neglected. 
+
+The maximum directivity of a uniform-phase circular aperture is 
+
+4tV 
+
+
+
+Go = 
+
+
+
+(28) 
+
+
+
+The maximum directivity of a difference pattern naturally occurs at 
+
+the peak of the difference beam (itj, <i>i) rather than at boresight. 
+
+The directivity at the pattern maximum normalized by the maxi- 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+643 
+
+
+
+mum aperture directivity is defined as the relative directivity, 77: 
+
+
+
+v = 
+
+
+
+g(t i, , »,) 
+
+r? 
+
+
+
+; I *•(*! , *i) 
+
+
+
+f ^ / 
+
+
+
+(29) 
+
+
+
+g(p, *) | 2 p rfp 
+
+
+
+where (wi , $1) is the pattern maximum. 
+
+This quantity is similar to aperture taper efficiency. Computation 
+of relative directivity can now be carried out for the asymptotic dif- 
+ference pattern by noting that the coefficients computed for Tables II 
+and III were normalized to make F(mj , $1) = 1 and that the aperture 
+function series is orthogonal. 
+
+
+
+8 
+
+
+
+v - 3 i Z I B, I 2 Jfariil - (mi*)" 2 ] 
+
+
+
+(30) 
+
+
+
+Relative directivity in dB (10 log 77) was plotted as a function of N 
+and sidelobe level (Figure 12). It can be seen that there is one N that 
+gives a maximum relative directivity. The maximum is obtained when, 
+as N increases, the power removed from the main beam by narrowing 
+is just offset by the power added to the sidelobes by raising more 
+sidelobes. The maximum relative directivity that can be achieved in 
+any difference pattern (antiphase aperture) is —2.47 dB. 11 
+
+The most important characteristic of a difference pattern is its angle 
+sensitivity. The angle sensitivity function is defined 12 using equation (27) 
+
+
+
+K(u) = — |^volt/volt/std.BW 
+
+
+
+(31) 
+
+
+
+
+
+'max 
+
+
+
+
+10 / / 
+
+18/ 30/ 
+
+
+
+
+
+
+
+
+
+-3.5 - 
+
+
+
+.-4.5 
+
+
+
+-20 -30 -40 
+
+SIDELOBE LEVEL IN DECIBELS 
+
+
+
+Fig. 12 — Difference pattern relative directivity, 17. 
+
+
+
+644 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+where $1 is the difference pattern axis. The angle sensitivity of a 
+pattern is K (0) which is the maximum value at boresight. The maxi- 
+mum angle sensitivity for any aperture is produced by a linear odd 
+aperture function 12 (that is, g = jx) . For a circular aperture its pat- 
+tern function is 
+
+
+
+F(U, 0) = 7T 
+
+
+
+J 2 (tu) 
+
+
+
+(32) 
+
+
+
+This pattern has -11.6 dB sidelobes and angle sensitivity 
+
+K =^Gl volt/volt/std. BW. (33) 
+
+Again it is convenient to normalize to this maximum angular sensi- 
+tivity and thus define relative angle sensitivity to be 
+
+
+
+
+
+
+dF{u, g,) 
+du 
+
+
+
+(34) 
+
+
+
+where F(u, *) is normalized to unity. 
+
+By evaluating the partial derivative of the difference pattern func- 
+tion at u = the relative angle sensitivity is calculated as 
+
+
+
+V-l 
+
+
+
+S = tf £fl, 
+
+
+
+./,(M(7r) 
+
+
+
+Ml 
+
+
+
+(35) 
+
+
+
+Relative angle sensitivity in dB (20 log 8) was plotted as a function 
+of N (Figure 13). The curves are very similar in behavior to those for 
+
+
+
+
+Fig. 13 — Difference pattern relative angular sensitivity, 5. 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+645 
+
+
+
+relative directivity as might be expected from equation (35) . Certainly 
+it is not unreasonable for the derivative of the directivity function 
+at boresight to be strongly influenced by the magnitude of the peaks 
+on either side. The dependence on sidelobe level is greater than for 
+relative directivity. The dashed curve in Figure 13 is the maximum 
+angle sensitivity (8 max ) for each sidelobe level. The pattern coefficients 
+are given in Table II for 12 sidelobe levels with N chosen to maximize 5. 
+The decrease in angle sensitivity as the target moves off boresight 
+is of interest in determining the linearity and useful angular sector 
+of operation. The normalized angular sensitivity function, K(u)/K is 
+plotted for six 5 mai patterns in Figure 14. Although the boresight 
+sensitivity is higher for high sidelobes than for low sidelobes, it also 
+decreases more rapidly as a function of angle. 
+
+4.3 System Performance 
+
+The sum and difference signals derived from the antenna just 
+discussed can easily be put in a form that allows processing by any 
+of the three types of angle detection systems. 13 The system generally 
+used makes the angle estimate by forming a ratio of the difference to 
+
+
+
+> 0.6 
+
+
+
+or 
+< 
+
+D 0.4 
+O 
+
+Z 
+< 
+
+
+
+
+
+- -N = 7,SLL = -20| 
+V Sr -N=11,SLL=-2S 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+S^.-N=17. SLL = -30 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-N=27.SLL=-35 
+JV_N = 30.SLL=-40 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s^ 
+
+
+-N = 30. SLL = - 
+
+
+45 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\\ 
+
+
+
+
+
+
+
+0.4 0.6 
+
+U. STANDARD BEAMWIDTHS 
+
+
+
+Fig. 14 — Normalized angular sensitivity function, K(u)/K . 
+
+
+
+646 THE BELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1968 
+
+sum signal. The statistic of this ratio was recently treated 14 with 
+regard to maximum likelihood estimates of angle. For the high signal- 
+to-noise case the variance of the maximum likelihood angle esti- 
+mate 2, 14 is shown to be: 
+
+where A and B correspond to (? J and K in our notation, * E is the signal 
+energy and N is the noise power per cycle of receiver bandwidth. 
+
+Manasse had shown earlier 2 that the minimum standard deviation 
+for the maximum likelihood angle estimate made using a circular 
+aperture is 
+
+where 2E /N is the output peak signal-to-noise power ratio in a per- 
+fectly matched receiver with optimum antenna system (that is, uni- 
+form aperture function). 
+
+The effects of antenna illumination on system performance can be 
+expressed noting that realized signal energy E is also affected by antenna 
+sum directivity. Thus E = E vxL where L accounts for losses such as 
+niter mismatch loss, integration loss, and transmitter and propagation 
+losses. Then (36) expressed in standard beamwidths is 
+
+
+
+Now by noting that 
+
+
+
+-=, . ; std.BW. (38) 
+
+K(u) \ N 
+
+
+
+~KV ~ 8 and G ~ ,s ' K(0) = X and Gs(0) ~ 
+for | u | « 1, and for a circular aperture K = (v/2)G\, then (38) becomes 
+
+^ = ~{^Y std.BW. (39) 
+
+Thus at high signal-to-noise ratios the antenna dependence is 
+
+1 
+
+This dependence shows that the difference pattern angle sensitivity is 
+of prime importance in determining the over-all system angle accuracy. 
+
+* The subscript S refers to sum pattern parameters. 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+647 
+
+
+
+The optimum system from the standpoint of angle estimation is one 
+with 5 and 772 equal to unity. As we pointed out before such a system 
+would have unacceptably high sidelobes. The price of lower sidelobes 
+is reduced sensitivity (Figure 15). The top curve shows the maximum 
+relative directivity, i? m «x(S), obtainable from a Taylor sum pattern.* 
+Similarly, the N can be selected to maximize relative angle sensitivity, 
+8 mnx , for the asymptotic difference pattern (Figure 15). 
+
+
+
+0.0 
+
+
+
+
+-20 -30 -40 
+
+SIDELOBE LEVEL IN DECIBELS 
+
+
+
+Fig. 15 — Relative directivity and angular sensitivity for maximum sensitivity 
+pattern. 
+
+
+
+The relative directivity (77) of the 5 mox pattern is shown at the bottom 
+of Figure 15. Notice that it is 3 dB below the sum pattern relative 
+directivity. Thus, to equalize the sidelobe clutter returns from the 
+highest sidelobes in the sum and difference patterns, the difference 
+pattern sidelobe level should be 3 dB greater than the sum patterns 
+sidelobe level. For example, if a sum pattern with —30 dB sidelobe 
+level is chosen (N = 8) the difference pattern sidelobe level should 
+be -27 dB, and 8 m „ is -1 dB when N = 14. 
+
+One of the major reasons for suppression of sidelobes is the presence 
+of clutter. Although clutter can be a problem throughout the pattern 
+it is often more prevalent at low angles. If clutter does not occur near 
+the main beam it might be advantageous to choose a small value of N 
+so that the sidelobes decay rapidly (Figure 9). If clutter is very bad 
+it may be necessary to taper the transmitter illumination, too. 
+
+* Where .V corresponds to n in Taylor's notation. 
+
+
+
+648 THE HELL SYSTEM TECHNICAL JOURNAL, MAY-JUNE 1908 
+
+A second reason for suppression of sidelobes is the presence of active 
+noise sources. These are the essence of the radio astronomy problem. 
+For the radar problem they are jammers (electronic countermeasures) . 
+They generally are considered to be point sources which may appear 
+anywhere in the pattern. Hence the requirement to minimize the 
+maximum sidelobe level. 
+
+In selecting a difference pattern a major practical consideration is 
+that the aperture function be realizable. Remember that the aperture 
+function represents the resulting field on the face of the aperture (that is, 
+after all ohmic losses and mutual couplings have been accounted for). 
+Certainly one could not choose an aperture function with a lip or 
+spike at the edge for use with a horn fed antenna or array. Even in 
+an array of independent elements it usually is not desirable to let the 
+edge excitation exceed the peak. 
+
+These considerations along with constraints of the system problem 
+such as required accuracy, clutter, noise, and so on, influence the 
+selection of sidelobe level and .V. 
+
+v. SUMMARY 
+
+Full theoretical and design documentation has been given to a new 
+two-parameter difference pattern. The salient features of the pattern 
+are asymptotically equal sidelobes and near optimum angle sensitivity. 
+The two parameters, A and N, give complete control of the sidelobe 
+level and decay behavior. The difference pattern was designed to be 
+compatible with monopulse systems using the Taylor sum beam 
+illumination. 
+
+ACKNOWLEDGMENT 
+
+The author wishes to thank G. J. Libretti for computer programing. 
+
+APPENDIX 
+
+Asymptotic Difference Pattern for a Line Source 
+
+The construction of an asymptotic difference pattern for a line 
+source can be carried out in a manner similar to that described for 
+the circular aperture. The equations for the line source difference 
+pattern, which parallel those in the body of this report, are outlined 
+here. 
+
+The line-source-to-pattern-function transform is a finite Fourier 
+
+
+
+ANTENNA PATTERNS 
+
+
+
+649 
+
+
+
+transform. 
+
+
+
+F(u) = f g(x)e iuz dx 
+
+
+
+(40) 
+
+
+
+where u = 2a/\ sin 0, 8 is measured from the normal, 2a is the length 
+of the line source and x is normalized to v/a. Expand g(x) in a sine 
+series because an odd function is required 
+
+
+
+g(x) = < 
+
+
+
+N-l 
+
+E 
+
+1-0 
+
+10; 
+
+
+
+2J B t sin nix; —ir ^ x ^ tt 
+
+
+
+elsewhere. 
+
+
+
+(41) 
+
+
+
+A nonzero boundary value is again required for the truncated series. 
+The eigenvalues must be Wj = I + 1/2. Now transforming the series 
+by (40) and setting u t = I + 1/2 yields 
+
+
+
+n/ \ «■ V* r> ( — l)' w COSM T 
+
+
+
+(42) 
+
+
+
+The desired model function, Fm(u) (see equations 12 and 14) is again 
+described by its zeros. 
+The dilation factor is 
+
+
+
+
+
+
+N + ± 
+
+
+
+The asymptotic function is given by the canonical product 
+
+
+
+F a (u) = Cm II SI - 
+
+
+
+u 
+
+
+
+n i- 
+
+
+
+in 
+
+
+
+(43) 
+
+
+
+(44) 
+
+
+
+where C is a constant. 
+The asymptotic difference pattern in closed form is: 
+
+
+
+F a (u) = Cu cos (ttu){ ^tz[ 
+
+
+
+m- 
+
+
+
+M/ 
+
+
+
+(45) 
+
+
+
+The function may be expressed in series form by evaluating (45) 
+at u = n„, and setting it equal to (42) to find B,„. Evaluating the 
+series (42) at u = /jl„, gives 
+
+
+
+F(ji m ) = Lim F n (u) = jirB m . 
+
+
+
+(46) 
+
+
+
+
+
+
+650 
+
+
+
+THE BELL SYSTEM TECHNICAL JOURNAL. MAY-JUNE 1968 
+
+
+
+Substituting fi n = n + 1/2, the coefficients are: 
+
+m 
+
+
+
+B m = 
+
+
+
+c n 
+
+|-.(-ir(m-i) 2 ^ 
+
+3 n 
+
+1=0 
+l*m 
+
+
+
+1 - 
+
+
+
+£*)'] 
+
+
+
+m 
+
+
+
+l + h 
+
+
+
+i\ 2 
+
+2 
+
+
+
+(47) 
+
+
+
+m = 0, 1,2, ••■ ,N - 1 
+
+.0; to = iV, iV+ 1, ••■ 
+
+As JV is allowed to increase without bound it may be noticed that or — >1 
+from above and the zeros of F a (u) approach those of F M (u). Thus 
+
+LimF a (w) = F M {u). 
+
+AT-.0O 
+
+For small N the values of B m can be evaluated by hand by using the 
+model function parameters from Figure 4. 
+
+REFERENCES 
+
+1. Taylor, T. T., "Design of Circular Apertures for Narrow Beam width and 
+
+Low Sidelobes," IRE Trans. Antennas and Propagation, APS (January 
+1960), pp. 17-22. 
+
+2. Manasse, R., "Maximum-Angular Accuracy of Tracking a Radio Star by 
+
+Lobe Comparison," IRE Trans. Antennas and Propagation, APS (January 
+1960), pp. 50-56. 
+
+3. Harrington, R. F., Time-Harmonic Electromagnetic Fields, New York: Mc- 
+
+Graw-Hill, 1961, pp. 110-112. 
+
+4. Plonsey, R., "Aperture Fields," IRE Trans. Antennas and Propagation, AP-9 
+
+(November 1961), p. 577. 
+
+5. Hansen, R. C, Microwave Scanning Antennas, New York: Academic Press, 
+
+1964, vol. 1, pp. 5-11. 
+
+6. Ruze, J., "Circular Aperture Synthesis," IEEE Trans. Antennas and Propaga- 
+
+tion, AP-12 (November 1964), pp. 691-694. 
+
+7. Price, O. R. and Hyneman, R. F., "Distribution Functions for Monopulse 
+
+Antenna Difference Patterns," IRE Trans. Antennas and Propagation, 
+APS (November 1960), pp. 567-576. 
+
+8. Dolph, C. L., "A Current Distribution for Broadside Arrays Which Optimizes 
+
+the Relationship between Beamwidth and Sidelobe Level," Proc. IRE, 84 
+(June 1946), pp. 335-348. 
+
+9. Sinclair, G. and Cairns, F. V., "Optimum Patterns for Arrays of Non-Isotropic 
+
+Sources," IRE Trans. Antenna and Propagation, AP-1 (February 1952), 
+pp. 50-61. 
+
+10. Silver, S., Microwave Antenna Theory and Design, MIT Radiation Labora- 
+
+tory Series, vol. 12, New York: McGraw-Hill, 1949, p. 177. 
+
+11. Kinsey, R. R., "Monopulse Difference Slope and Gain Standards," IRE 
+
+Trans. Antennas and Propagation, AP-10 (May 1962), pp. 343-344. 
+
+12. Kirkpatrick, G. M., "Aperture Illuminations for Radar Angle-of-Arrival 
+
+Measurements," IRE Trans. Aeronautical and Navigational Elec, AE-9 
+(September 1953), pp. 20-27. 
+
+13. Rhodes, D. R., Introduction to Monopulse, New York: McGraw-Hill, 1959, 
+
+p. 56. 
+
+14. McGinn, J. W., Jr., "Thermal Noise in Amplitude Comparison Monopulse 
+
+Systems," IEEE Trans. Aerospace Elec. Syst., AES-2, (September 1966). 
+pp. 550-556. 
+
+
+

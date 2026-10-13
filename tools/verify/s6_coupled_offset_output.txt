@@ -1,0 +1,29 @@
+=== 1. coupled microstrip closed forms vs FD (t = 0, er 4.4, h = 1 mm)
+   u 0.3 g 0.2: FD Ze  159.9 Zo  64.1 ee_e 3.115 ee_o 2.716 | KJ  159.4  64.0 3.115 2.722 | HJ  138.1  76.2 3.115 2.720
+   u 0.3 g 0.5: FD Ze  144.5 Zo  81.9 ee_e 3.148 ee_o 2.735 | KJ  144.5  81.6 3.145 2.742 | HJ  131.6  90.3 3.145 2.739
+   u 0.3 g 1.0: FD Ze  131.1 Zo  96.1 ee_e 3.164 ee_o 2.772 | KJ  131.5  95.8 3.155 2.777 | HJ  125.2 100.4 3.155 2.773
+   u 0.3 g 2.0: FD Ze  120.8 Zo 106.8 ee_e 3.131 ee_o 2.842 | KJ  121.1 106.6 3.120 2.839 | HJ  119.4 108.0 3.120 2.836
+   u 1.0 g 0.2: FD Ze   92.1 Zo  43.8 ee_e 3.364 ee_o 2.782 | KJ   92.2  43.8 3.366 2.787 | HJ   82.8  50.4 3.366 2.782
+   u 1.0 g 0.5: FD Ze   86.4 Zo  53.1 ee_e 3.384 ee_o 2.824 | KJ   86.6  53.1 3.382 2.828 | HJ   80.4  57.6 3.382 2.824
+   u 1.0 g 1.0: FD Ze   80.5 Zo  60.6 ee_e 3.386 ee_o 2.884 | KJ   80.9  60.5 3.382 2.887 | HJ   77.5  63.0 3.382 2.886
+   u 1.0 g 2.0: FD Ze   75.3 Zo  66.4 ee_e 3.339 ee_o 2.979 | KJ   75.6  66.4 3.342 2.975 | HJ   74.5  67.2 3.342 2.972
+   u 3.0 g 0.2: FD Ze   43.7 Zo  27.2 ee_e 3.702 ee_o 3.020 | KJ   44.0  27.2 3.706 3.020 | HJ   41.3  29.8 3.706 3.018
+   u 3.0 g 0.5: FD Ze   42.4 Zo  30.7 ee_e 3.705 ee_o 3.090 | KJ   42.6  30.7 3.711 3.090 | HJ   40.7  32.4 3.711 3.092
+   u 3.0 g 1.0: FD Ze   40.9 Zo  33.3 ee_e 3.694 ee_o 3.168 | KJ   41.0  33.3 3.703 3.166 | HJ   39.9  34.2 3.703 3.170
+   u 3.0 g 2.0: FD Ze   39.3 Zo  35.4 ee_e 3.644 ee_o 3.267 | KJ   39.3  35.4 3.663 3.260 | HJ   39.0  35.7 3.663 3.248
+   worst relative error vs FD: KJ 0.54 %, HJ 18.91 % (HJ eps_eff only 0.59 %)
+[PASS] Kirschning-Jansen within 2 % of FD over u 0.3-3, g 0.2-2 
+[PASS] Hammerstad-Jensen coupled (as coded in qucsator): eps_eff within 1 % but Z off by > 5 % -> use KJ 
+   JLC-7628 pair 0.1722/0.15 mm, t = 0: KJ Zdiff 124.0, Zcomm 46.3; FD Zdiff 124.1, Zcomm 46.2 ohm (t = 35 um FD on the page: 109 ohm)
+[PASS] KJ Zdiff of the JLC pair within 2 % of FD (t = 0) 
+=== 2. trapezoidal etch, JLC04161H-7628 single microstrip, 35 um, bare
+   W1 = 0.377 mm: rectangle 49.59 ohm, trapezoid (W2 = W1 - 12.7 um) 49.86 ohm, rectangle at mean width 50.06 ohm
+[PASS] trapezoid = rectangle at the mean width within 0.3 ohm 
+[PASS] etch-back of 0.5 mil raises Z0 by < 1 ohm on this stackup +0.27 ohm
+=== 3. offset stripline on L3, JLC 6-layer (L2 and L4 ground; trace 15.2 um on the core face)
+   JLC06161H-3313: near plane 0.1088 mm (er 4.16), far plane 0.55 mm (er 4.6): 50-ohm width 0.136 mm (eeff 4.30); as microstrip over the near plane only it would be 61.9 ohm
+[PASS] JLC06161H-3313: offset stripline Z below the near-plane microstrip value 
+   JLC06161H-1080: near plane 0.2104 mm (er 4.4), far plane 0.55 mm (er 4.6): 50-ohm width 0.241 mm (eeff 4.47); as microstrip over the near plane only it would be 64.3 ohm
+[PASS] JLC06161H-1080: offset stripline Z below the near-plane microstrip value 
+
+ALL PASS

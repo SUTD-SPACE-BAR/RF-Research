@@ -1,0 +1,43 @@
+=== 1. Why 32 768 Hz ===
+2^15 = 32768 -> 15 divide-by-2 stages give exactly 1 Hz
+AT-cut plate for 32.768 kHz would be 50.7 mm thick (vs ~0.05 mm for 32 MHz: 52 um)
+-> 32 kHz uses a flexural tuning fork (f ~ w/L^2), a few mm long
+
+=== 2. Parabolic tempco of a tuning-fork crystal ===
+ T (C)   typ ppm  typ s/day   worst ppm (B -0.04, T0 20/30, -20 ppm tol)  worst s/day
+   35       -3.4      -0.29        -29.0         -2.51
+   25       -0.0      -0.00        -21.0         -1.81
+   15       -3.4      -0.29        -29.0         -2.51
+    5      -13.6      -1.18        -45.0         -3.89
+    0      -21.2      -1.84        -56.0         -4.84
+  -10      -41.7      -3.60        -84.0         -7.26
+  -20      -68.9      -5.95       -120.0        -10.37
+  -40     -143.7     -12.41       -216.0        -18.66
+   60      -41.7      -3.60        -84.0         -7.26
+   85     -122.4     -10.58       -189.0        -16.33
+1 s/day = 11.57 ppm; 1 min/month (30 d) = 23.1 ppm
+
+=== 3. Launch-day temperature cycles (sinusoidal day, mean error) ===
+tropical (Singapore) 25-33 C    : mean   -0.8 ppm =  -0.07 s/day; over a 4 h pad wait    -12 ms
+desert spring 5-30 C            : mean   -4.6 ppm =  -0.39 s/day; over a 4 h pad wait    -66 ms
+cold-soak winter -10-10 C       : mean  -22.9 ppm =  -1.98 s/day; over a 4 h pad wait   -330 ms
+pad in direct sun 20-55 C       : mean  -10.5 ppm =  -0.91 s/day; over a 4 h pad wait   -151 ms
+
+=== 4. MCU internal RC vs crystal ===
+STM32F412 HSI16, 25 C (factory trim)                      :   1.0000 %  =     10000 ppm =     864.0 s/day
+STM32F412 HSI16, -40..125 C (-8/+5.5 %)                   :   8.0000 %  =     80000 ppm =    6912.0 s/day
+STM32F417 LSI 32 kHz (17-47 kHz)                          :  47.0000 %  =    470000 ppm =   40608.0 s/day
+ESP32-S3 RC_SLOW 90-150 kHz, uncalibrated                 :  25.0000 %  =    250000 ppm =   21600.0 s/day
+ESP32-S3 RC after calibration: 'several s/day' (3 s/day)  :   0.0035 %  =        35 ppm =       3.0 s/day
+32.768 kHz crystal at -10 C (typ)                         :   0.0042 %  =        42 ppm =       3.6 s/day
++-20 ppm crystal tolerance                                :   0.0020 %  =        20 ppm =       1.7 s/day
++-2.5 ppm TCXO                                            :   0.0003 %  =         2 ppm =       0.2 s/day
+needs: UART ~ +-2 % per side (8N1, 16x oversampling, Maxim AN2141), CAN ~ <=0.5 % (bit-timing dependent), USB full speed +-0.25 % (USB 2.0: 12 Mb/s +-0.25 %)
+
+=== 5. BVD of a 32.768 kHz tuning fork (Epson FC-135 typical) ===
+L1 = 6.94 kH, Q (R1 70 k max) = 20,408, pulling = -9.3 ppm/pF at CL 12.5 pF
+   CL  6.0 pF: pulling  -34.7 ppm/pF; equal caps for 2 pF stray =  8.0 pF
+   CL  7.0 pF: pulling  -26.6 ppm/pF; equal caps for 2 pF stray = 10.0 pF
+   CL  9.0 pF: pulling  -17.0 ppm/pF; equal caps for 2 pF stray = 14.0 pF
+   CL 12.5 pF: pulling   -9.3 ppm/pF; equal caps for 2 pF stray = 21.0 pF
+g_m,crit (AN2867) at CL 12.5 pF = 2.16 uA/V ; at 6 pF = 0.58 uA/V

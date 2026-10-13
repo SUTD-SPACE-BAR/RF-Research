@@ -1,0 +1,20 @@
+=== sim2_nec_yagi_optimise.py 2026-10-13 18:17 (PyNEC PyNEC) ===
+3-element 433 MHz Yagi, 4 mm rod, 21 seg/element, free space, 50-ohm direct feed; band 433.05-434.79 MHz
+Unconstrained max-gain (DE, 16500 evals): L_ref 337.6, L_drv 345.4, L_dir 307.5 mm, s_ref 55.3, s_dir 195.9 mm (boom 0.363 lam) | G_min 9.90 dBi, FB_min 6.5 dB, VSWR_max 30.38, Z(433.92) 3.8+55.8j
+Nelder-Mead start 1: J -8.353, 927 evals | L_ref 324.7, L_drv 318.2, L_dir 291.7 mm, s_ref 177.0, s_dir 125.4 mm (boom 0.438 lam) | G_min 8.35 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 33.7+0.9j
+Nelder-Mead start 2: J -7.233, 468 evals | L_ref 366.2, L_drv 323.0, L_dir 276.4 mm, s_ref 106.7, s_dir 139.6 mm (boom 0.356 lam) | G_min 7.23 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 42.9+16.2j
+Nelder-Mead start 3: J -8.479, 413 evals | L_ref 331.9, L_drv 320.7, L_dir 295.3 mm, s_ref 200.1, s_dir 123.5 mm (boom 0.468 lam) | G_min 8.48 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 35.5+6.5j
+Nelder-Mead start 4: J -8.540, 612 evals | L_ref 332.8, L_drv 315.2, L_dir 290.9 mm, s_ref 169.4, s_dir 140.3 mm (boom 0.448 lam) | G_min 8.54 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 33.8+2.1j
+Nelder-Mead start 5: J -7.888, 897 evals | L_ref 366.2, L_drv 322.6, L_dir 296.0 mm, s_ref 156.2, s_dir 112.0 mm (boom 0.388 lam) | G_min 7.89 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 34.4+2.9j
+Differential evolution: J -8.548, 19626 evals | L_ref 332.8, L_drv 315.7, L_dir 292.5 mm, s_ref 177.1, s_dir 135.4 mm (boom 0.452 lam) | G_min 8.55 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 33.8+1.4j
+Particle swarm: J -8.526, 3630 evals | L_ref 333.9, L_drv 314.2, L_dir 289.7 mm, s_ref 162.7, s_dir 144.7 mm (boom 0.445 lam) | G_min 8.53 dBi, FB_min 15.0 dB, VSWR_max 1.50, Z(433.92) 33.6+1.4j
+--- pre-registered checks ---
+Y1 MISS: unconstrained G 9.90 dBi (expect 7.5-8.5); MISS: constrained G_min 8.55 dBi (expect 6.5-7.8), cost of constraints 1.35 dB
+Y2 PASS: DE J -8.548 vs PSO -8.526; NM J = -8.353, -7.233, -8.479, -8.540, -7.888 (2 of 5 starts >= 0.3 worse)
+Y3 MISS: evals DE 19626, PSO 3630, NM mean 663 (ratios 29.6x, 5.5x)
+Y4 PASS: 500 builds (+-1 mm lengths, +-2 mm spacings): gain loss p95 0.071 dB (max 0.107); VSWR_max median 1.50, p95 1.55, < 2.0 in 100.0 % of builds
+Y5 MISS: 3-element optimum 9.90 dBi vs the 9 dBi assumed in 08/antennas-on-rockets Example 1 (9 dBi minus optimum = -0.90 dB; practical constrained optimum 8.55 dBi)
+--- POST-HOC diagnostics (added after the first run; not pre-registered) ---
+unconstrained optimum: lossless G 9.91 dBi, AGT 0.999; aluminium (3.5e7 S/m) G 9.68 dBi (AGT = efficiency 0.949, -0.23 dB)
+constrained DE optimum: lossless G 8.58 dBi, AGT 0.999; aluminium (3.5e7 S/m) G 8.57 dBi (AGT = efficiency 0.995, -0.02 dB)
+runtime 141 s

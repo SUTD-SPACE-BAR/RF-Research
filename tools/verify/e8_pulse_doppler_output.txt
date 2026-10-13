@@ -1,0 +1,117 @@
+=== 1. Data cube simulation ===
+  cube: 4 channels x 128 pulses x 1000 range samples = 512 k complex samples (3.9 MiB as complex64); CPI = 6.4 ms
+  resolutions: dR = c/2B = 15.0 m (sample spacing 7.5 m); dv = lam/(2 N PRI) = 4.04 m/s; R_u = 7.49 km; v_u = +-258.4 m/s
+  2-D CA-CFAR: 248 reference cells, alpha = 11.5 dB for design Pfa 1e-6; 19 peak detections
+  target R=1200 m v=+60 m/s ang=+10 deg in-SNR -12 dB/sample -> detected at R=1199.2 m, v(apparent)=+60.57 m/s, ang=+10.6 deg, out SNR 22.8 dB
+  target R=3150 m v=-35 m/s ang=-20 deg in-SNR -15 dB/sample -> detected at R=3147.8 m, v(apparent)=-36.34 m/s, ang=-20.1 deg, out SNR 18.5 dB
+  target R=5000 m v=+300 m/s ang=+0 deg in-SNR -18 dB/sample -> detected at R=4999.0 m, v(apparent)=-218.06 m/s, ang=+1.6 deg, out SNR 17.2 dB
+  zero-Doppler (clutter) detections: 16 at ranges [525, 547, 570, 607, 802, 997, 1034, 1057, 1094, 2226, 2271, 2301, 2503, 2698, 2728, 2758] m
+[PASS] 1a all three targets detected in the right range/Doppler cell 
+    R=1200: non-coherent-sum gain 34.8 dB (tau*fs*N + window = 35.3); coherent beam gain 40.8 dB (tau*fs*N*M + window = 41.3); residual = Doppler/range straddle
+    R=3150: non-coherent-sum gain 33.5 dB (tau*fs*N + window = 35.3); coherent beam gain 39.4 dB (tau*fs*N*M + window = 41.3); residual = Doppler/range straddle
+    R=5000: non-coherent-sum gain 35.2 dB (tau*fs*N + window = 35.3); coherent beam gain 41.1 dB (tau*fs*N*M + window = 41.3); residual = Doppler/range straddle
+[PASS] 1b processing gain: non-coherent channel sum ~ tau*fs*N, coherent beam ~ tau*fs*N*M (each within 1.5 dB, on-grid target) (34.8 vs 35.3; 40.8 vs 41.3)
+[PASS] 1c 300 m/s target aliases to v - 2 v_u = -216.8 m/s (Doppler ambiguity visible in the map) (apparent -218.1 m/s)
+
+=== 2. PRF regimes ===
+  X-band 10 GHz  LPRF     1 kHz: R_u =  149.90 km, v_u = +-    7.5 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 1 in range, 81 in velocity
+  X-band 10 GHz  LPRF     3 kHz: R_u =   49.97 km, v_u = +-   22.5 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 2 in range, 27 in velocity
+  X-band 10 GHz  MPRF    10 kHz: R_u =   14.99 km, v_u = +-   74.9 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 4 in range, 9 in velocity
+  X-band 10 GHz  MPRF    30 kHz: R_u =    5.00 km, v_u = +-  224.8 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 11 in range, 3 in velocity
+  X-band 10 GHz  HPRF   100 kHz: R_u =    1.50 km, v_u = +-  749.5 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 34 in range, 1 in velocity
+  X-band 10 GHz  HPRF   300 kHz: R_u =    0.50 km, v_u = +- 2248.4 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 101 in range, 1 in velocity
+  C-band 5.8 GHz LPRF     1 kHz: R_u =  149.90 km, v_u = +-   12.9 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 1 in range, 47 in velocity
+  C-band 5.8 GHz LPRF     3 kHz: R_u =   49.97 km, v_u = +-   38.8 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 2 in range, 16 in velocity
+  C-band 5.8 GHz MPRF    10 kHz: R_u =   14.99 km, v_u = +-  129.2 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 4 in range, 5 in velocity
+  C-band 5.8 GHz MPRF    30 kHz: R_u =    5.00 km, v_u = +-  387.7 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 11 in range, 2 in velocity
+  C-band 5.8 GHz HPRF   100 kHz: R_u =    1.50 km, v_u = +- 1292.2 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 34 in range, 1 in velocity
+  C-band 5.8 GHz HPRF   300 kHz: R_u =    0.50 km, v_u = +- 3876.6 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 101 in range, 1 in velocity
+  S-band 3 GHz   LPRF     1 kHz: R_u =  149.90 km, v_u = +-   25.0 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 1 in range, 25 in velocity
+  S-band 3 GHz   LPRF     3 kHz: R_u =   49.97 km, v_u = +-   74.9 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 2 in range, 9 in velocity
+  S-band 3 GHz   MPRF    10 kHz: R_u =   14.99 km, v_u = +-  249.8 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 4 in range, 3 in velocity
+  S-band 3 GHz   MPRF    30 kHz: R_u =    5.00 km, v_u = +-  749.5 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 11 in range, 1 in velocity
+  S-band 3 GHz   HPRF   100 kHz: R_u =    1.50 km, v_u = +- 2498.3 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 34 in range, 1 in velocity
+  S-band 3 GHz   HPRF   300 kHz: R_u =    0.50 km, v_u = +- 7494.8 m/s; ambiguity intervals to cover 50 km / +-600 m/s: 101 in range, 1 in velocity
+  R_u * v_u = c lambda / 8 = 1.124e+06 m^2/s at 10 GHz (any PRF)
+
+=== 3. Eclipsing ===
+  duty    1 %: fully eclipsed  0.0 % of ranges, partially  1.9 %; average loss 0.04 dB (energy) / 0.06 dB (fixed full-pulse filter)
+  duty    5 %: fully eclipsed  0.0 % of ranges, partially 10.0 %; average loss 0.22 dB (energy) / 0.30 dB (fixed full-pulse filter)
+  duty   10 %: fully eclipsed  0.0 % of ranges, partially 20.0 %; average loss 0.46 dB (energy) / 0.62 dB (fixed full-pulse filter)
+  duty   35 %: fully eclipsed  0.1 % of ranges, partially 69.8 %; average loss 1.87 dB (energy) / 2.73 dB (fixed full-pulse filter)
+  duty   50 %: fully eclipsed  0.1 % of ranges, partially 99.8 %; average loss 3.01 dB (energy) / 4.77 dB (fixed full-pulse filter)
+[PASS] 3 HPRF 35 % duty: average eclipsing loss is 1-3 dB (MIT LL: 1-2 dB if unmitigated) (1.87 dB)
+
+=== 4. Blind-zone map for a 7-PRF medium-PRF set (10 GHz) ===
+  >= 1 of 7 PRFs clear: 97.6 % of the (1-80 km, +-600 m/s) space
+  >= 2 of 7 PRFs clear: 97.5 % of the (1-80 km, +-600 m/s) space
+  >= 3 of 7 PRFs clear: 97.5 % of the (1-80 km, +-600 m/s) space
+  >= 4 of 7 PRFs clear: 96.3 % of the (1-80 km, +-600 m/s) space
+  each single PRF: clear in range 98.2 %, in velocity 74.0 %
+[PASS] 4 a 7-PRF set gives >= 3-of-7 visibility over > 90 % of range-velocity space (97.5 %)
+  |v| < notch (15.0 m/s): visible in 0 PRFs by construction -- the irreducible blind zone
+
+=== 5. Ambiguity resolution: Chinese remainder theorem ===
+  2 PRFs with unambiguous intervals of 7 and 8 range cells: residues [3, 5] -> CRT 45 (true 45), unambiguous to 56 cells
+[PASS] 5a CRT exact (2 PRFs) 
+[PASS] 5b CRT exact (3 PRFs, 11/12/13 -> 1716 cells) (1234)
+  residue error sigma = 0.1 cell: correct unfolding exact-CRT 83.8 %, coincidence search 99.8 %
+  residue error sigma = 0.25 cell: correct unfolding exact-CRT 59.2 %, coincidence search 72.5 %
+  residue error sigma = 0.4 cell: correct unfolding exact-CRT 35.8 %, coincidence search 40.4 %
+[PASS] 5c with noisy residues the coincidence search beats exact CRT ((0.592, 0.7246666666666667))
+  Doppler unfolding, PRFs 20/23 kHz at 5.8 GHz: apparent +140.0 / +140.0 m/s -> best unfolding +140.0 m/s (true 140.0); unambiguous span 11888 m/s 
+[PASS] 5d two-PRF Doppler unfolding recovers 140 m/s 
+
+=== 6. Doppler filter bank / MTD clutter rejection ===
+  N =  8, rect        : clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 26.2 dB (filters next to zero), median 31.6 dB
+  N =  8, Hamming     : clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 6.1 dB (filters next to zero), median 25.7 dB
+  N =  8, Chebyshev-40: clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 8.0 dB (filters next to zero), median 40.8 dB
+  N =  8, Chebyshev-60: clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 6.2 dB (filters next to zero), median 30.9 dB
+  N = 16, rect        : clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 20.3 dB (filters next to zero), median 31.8 dB
+  N = 16, Hamming     : clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 6.6 dB (filters next to zero), median 46.9 dB
+  N = 16, Chebyshev-40: clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 7.9 dB (filters next to zero), median 49.1 dB
+  N = 16, Chebyshev-60: clutter improvement in filters 1..N-1 (sigma_v 0.3 m/s, 3 GHz, 1 kHz): worst 5.5 dB (filters next to zero), median 63.1 dB
+  (3-pulse canceller for the same clutter: I2 = 60 dB average, kb/11-radar/clutter-and-mti.md)
+[PASS] 6a N = 8: Chebyshev-40 is the best window (beats rect by > 5 dB and Chebyshev-60); N = 16: Chebyshev-60 beats rect by > 20 dB (N=8: rect 31.6, C40 40.8, C60 30.9; N=16: rect 31.8, C60 63.1 dB)
+  scalloping loss (target half a bin off), rect: 3.92 dB
+  scalloping loss (target half a bin off), Hamming: 1.72 dB
+  scalloping loss (target half a bin off), Chebyshev-60: 1.39 dB
+
+=== 7. CA-CFAR on a noise-only range-Doppler map: measured vs designed Pfa ===
+  window rect    : design Pfa 1e-03 (126 ref cells) -> measured 1.00e-03
+  window rect    : design Pfa 1e-04 (126 ref cells) -> measured 8.79e-05
+  window Hamming : design Pfa 1e-03 (126 ref cells) -> measured 1.11e-03
+  window Hamming : design Pfa 1e-04 (126 ref cells) -> measured 1.21e-04
+[PASS] 7a rect window (independent cells): measured Pfa within a factor 1.5 of design ([np.float64(0.0010032552083333334), np.float64(8.7890625e-05)])
+[PASS] 7b Hamming-correlated Doppler cells change the realised Pfa (ratio differs from rect by > 20 %) ([np.float64(0.0011080729166666667), np.float64(0.00012109375)])
+
+=== 8. CPI limit for an accelerating target ===
+  rocket 10 g, 5.8 GHz: T_max = sqrt(lambda/(2a)) = 16.2 ms (Doppler drift a*T = 1.59 m/s = one bin lambda/(2T))
+  rocket 5 g, 5.8 GHz: T_max = sqrt(lambda/(2a)) = 23.0 ms (Doppler drift a*T = 1.13 m/s = one bin lambda/(2T))
+  rocket 10 g, 10 GHz: T_max = sqrt(lambda/(2a)) = 12.4 ms (Doppler drift a*T = 1.21 m/s = one bin lambda/(2T))
+  car 1 g, 77 GHz: T_max = sqrt(lambda/(2a)) = 14.1 ms (Doppler drift a*T = 0.14 m/s = one bin lambda/(2T))
+  T = 0.5 T_max (8.1 ms): coherent integration loss 0.01 dB
+  T = 1.0 T_max (16.2 ms): coherent integration loss 0.24 dB
+  T = 2.0 T_max (32.5 ms): coherent integration loss 4.04 dB
+  T = 3.0 T_max (48.7 ms): coherent integration loss 7.67 dB
+[PASS] 8 at T = T_max the acceleration loss is small (< 1 dB): quadratic phase pi/4 at the ends (0.24 dB)
+
+=== 9. DIY 5.8 GHz SDR pulse-Doppler design ===
+  f = 5.8 GHz, LFM B = 10 MHz, tau = 1 us (TB = 10), PRF = 20 kHz, N = 256 pulses -> CPI 12.8 ms
+  dR = 15.0 m, R_u = 7.49 km, v_u = +-258.4 m/s, dv = 2.02 m/s, duty 2 %, blind range (tau + 1 us T/R recovery) 300 m
+  fast-time samples per PRI 1000; cube per channel 256 k complex samples per CPI; stream 20 MS/s complex = 80 MB/s at 16-bit I/Q
+  drone 0.01 m^2 at 0.5 km: SNR after 256-pulse coherent integration = -4.6 dB (single pulse -28.7 dB)
+  drone 0.01 m^2 at 1.0 km: SNR after 256-pulse coherent integration = -16.7 dB (single pulse -40.7 dB)
+  rocket -20 dBsm at 2.0 km: SNR after 256-pulse coherent integration = -28.7 dB (single pulse -52.8 dB)
+  rocket -20 dBsm at 3.0 km: SNR after 256-pulse coherent integration = -35.7 dB (single pulse -59.8 dB)
+  baseline energy per CPI 25.6 uJ; 29.9 dB more energy needed for 13.2 dB at 1 km
+  B: 10 W PA, tau 4 us (TB 40), 1024 pulses (CPI 51 ms): drone@1 km 15.4 dB, 0.01 m^2 rocket@2 km 3.3 dB; energy 40.96 mJ; blind range 749 m
+  C: 10 W PA, tau 10 us (TB 100), 1024 pulses: drone@1 km 19.4 dB, 0.01 m^2 rocket@2 km 7.3 dB; energy 102.40 mJ; blind range 1649 m
+  FMCW, 100 mW continuous for the same 12.8 ms: drone@1 km 0.3 dB, 0.01 m^2 rocket@2 km -11.7 dB; energy 1.28 mJ; blind range nan m
+[PASS] 9 energy-scaled design B (10 W, 4 us, 1024 pulses) reaches >= 13.2 dB on the drone at 1 km (15.4 dB, blind range 749 m)
+  rocket radial speed 100 m/s: unambiguous at PRF 20 kHz (needs PRF >= 7.7 kHz)
+  rocket radial speed 250 m/s: unambiguous at PRF 20 kHz (needs PRF >= 19.3 kHz)
+  rocket radial speed 300 m/s: ALIASED at PRF 20 kHz (needs PRF >= 23.2 kHz)
+  wrote figure kb/11-radar/figures/e8-range-doppler-and-blind-zones.png
+
+SUMMARY: ALL PASS

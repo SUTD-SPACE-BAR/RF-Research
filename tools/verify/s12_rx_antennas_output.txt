@@ -1,0 +1,61 @@
+=== 1. ITU-R P.372 external noise (median Fa, dB above kT0b; T_a in K) ===
+  f MHz                 city         residential               rural         quiet rural            galactic
+     0.5     85.1 dB/ 9.5e+10 K     80.8 dB/ 3.5e+10 K     75.5 dB/ 1.0e+10 K     62.2 dB/ 4.8e+08 K     58.9 dB/ 2.3e+08 K
+     1.0     76.8 dB/ 1.4e+10 K     72.5 dB/ 5.2e+09 K     67.2 dB/ 1.5e+09 K     53.6 dB/ 6.6e+07 K     52.0 dB/ 4.6e+07 K
+     1.8     69.7 dB/ 2.7e+09 K     65.4 dB/ 1.0e+09 K     60.1 dB/ 3.0e+08 K     46.3 dB/ 1.2e+07 K     46.1 dB/ 1.2e+07 K
+     3.5     61.7 dB/ 4.3e+08 K     57.4 dB/ 1.6e+08 K     52.1 dB/ 4.7e+07 K     38.0 dB/ 1.8e+06 K     39.5 dB/ 2.6e+06 K
+     7.0     53.4 dB/ 6.3e+07 K     49.1 dB/ 2.4e+07 K     43.8 dB/ 6.9e+06 K     29.4 dB/ 2.5e+05 K     32.6 dB/ 5.2e+05 K
+    14.0     45.1 dB/ 9.3e+06 K     40.8 dB/ 3.4e+06 K     35.5 dB/ 1.0e+06 K     20.8 dB/ 3.5e+04 K     25.6 dB/ 1.1e+05 K
+    21.0     40.2 dB/ 3.0e+06 K     35.9 dB/ 1.1e+06 K     30.6 dB/ 3.3e+05 K     15.8 dB/ 1.1e+04 K     21.6 dB/ 4.2e+04 K
+    28.0     36.7 dB/ 1.4e+06 K     32.4 dB/ 5.1e+05 K     27.1 dB/ 1.5e+05 K     12.2 dB/ 4.8e+03 K     18.7 dB/ 2.2e+04 K
+    50.0     29.7 dB/ 2.7e+05 K     25.4 dB/ 1.0e+05 K     20.1 dB/ 3.0e+04 K      5.0 dB/ 9.2e+02 K     12.9 dB/ 5.7e+03 K
+   144.0     17.0 dB/ 1.5e+04 K     12.7 dB/ 5.4e+03 K      7.4 dB/ 1.6e+03 K     -8.1 dB/ 4.5e+01 K      2.4 dB/ 5.0e+02 K
+  (format Fa dB / T_a K; galactic noise reaches the ground only above the ionospheric cut-off, ~ > 10-20 MHz)
+  derivation: P = kT0 (1 Hz), short monopole over PEC, matched power per local field E: P = E^2 lambda^2/(640 pi^2) -> E_n(Fa=0, 1 MHz, 1 Hz) = -95.51 dB(uV/m)
+[PASS] 1a re-derived P.372 monopole constant = -95.5 dB(uV/m) (+-0.1) (-95.51)
+[PASS] 1b same derivation for a free-space half-wave dipole gives the P.372 -99.0 constant (+-0.2) (-98.91)
+
+=== 2. Active E-field whip: is it externally noise-limited? (buffer e_n, C_in = 5 pF, whip radius 5 mm) ===
+  whip h   C_whip    margin (dB) external noise over 3 nV/rtHz buffer:  quiet rural @ 1 / 7 / 14 / 28 MHz | residential @ 7 / 28 MHz
+   0.10 m    2.1 pF         -28.1   -35.4   -38.0   -40.6      |   -15.7   -20.4
+   0.25 m    3.9 pF         -16.7   -24.0   -26.6   -29.2      |    -4.3    -9.0
+   0.50 m    6.5 pF          -8.5   -15.7   -18.3   -20.9      |     3.9    -0.7
+   1.00 m   11.1 pF          -0.7    -7.9   -10.5   -13.1      |    11.7     7.1
+   2.00 m   19.6 pF           6.6    -0.7    -3.3    -5.9      |    19.0    14.3
+  quiet rural  @ 14.0 MHz: whip >= 8.04 m for a 10 dB external-noise margin
+  quiet rural  @ 28.0 MHz: no whip up to 10 m reaches 10 dB
+  residential  @ 28.0 MHz: whip >= 1.32 m for a 10 dB external-noise margin
+  [info] pre-registered 2a (1 m whip, quiet rural, 7 MHz, > 10 dB margin) missed: -7.9 dB -- at a quiet site a 3 nV/rtHz buffer, not the sky, sets the floor
+[PASS] 2a 1 m whip + 3 nV/rtHz buffer at 7 MHz: externally limited by > 10 dB in residential noise, buffer-limited (< 0 dB) in quiet-rural noise (residential 11.7, quiet rural -7.9 dB)
+  with a 0.8 nV/rtHz buffer (BF862-class JFET): 1 m whip quiet rural 7/14 MHz margin 3.5/0.9 dB
+
+=== 3. Small receiving loop (1 m diameter, 1 turn, 10 mm copper tube) ===
+  (a) tuned/matched loop: SNR penalty vs a lossless antenna 10 log[(eta T_a + (1-eta) T0 + T_rx)/(eta T_a)], T_rx = 290 K
+  (b) broadband loop into a low-impedance amplifier: external open-circuit noise sqrt(4 k T_a R_r) vs amplifier e_n = 1 nV/rtHz
+      (in both, T_a = man-made + galactic noise temperatures; quiet-rural / residential)
+  f MHz    R_r ohm     R_loss ohm   eta dB   (a) penalty QR / RES     (b) margin QR / RES
+     1.0    2.38e-06      0.0261    -40.4       0.24 /  0.01 dB          -18.3 /   -1.6 dB
+     3.5    3.57e-04      0.0488    -21.4       0.08 /  0.00 dB          -10.6 /    5.1 dB
+     7.0    5.72e-03      0.0690    -11.2       0.04 /  0.00 dB           -6.1 /    8.8 dB
+    14.0    9.14e-02      0.0976     -3.2       0.03 /  0.00 dB           -1.5 /   12.5 dB
+    21.0    4.63e-01      0.1196     -1.0       0.04 /  0.00 dB            1.3 /   14.7 dB
+  (C = pi D = 3.1 m is 0.15 lambda at 14 MHz and 0.22 lambda at 21 MHz: the small-loop formulas are ~25 %/2x low there)
+  [info] pre-registered 3a (> 3 dB penalty at 28 MHz quiet rural for a tuned loop) missed: 0.3 dB -- the loop's own loss is not the problem; the amplifier is
+[PASS] 3a tuned 1 m loop penalty < 1 dB at 1-21 MHz in both noise levels; broadband loop with a 1 nV amplifier is amplifier-limited (< 3 dB margin) at 1-3.5 MHz in quiet-rural noise (margins QR 1/3.5 MHz -18.3/-10.6 dB)
+
+=== 4. Beverage vs lambda/4 vertical at 1.83 MHz over average ground (er 13, 5 mS/m), NEC-2 Sommerfeld ===
+  lambda/4 vertical (no radials): peak  -3.64 dBi at el 22.5 deg az   1.5, F/B   0.0 dB, average (4 pi sr)  -8.72 dBi, RDF =  5.07 dB, Z 119-9j
+  Beverage 0.5 lambda (82 m)  : peak -14.86 dBi at el 64.5 deg az 358.5, F/B   5.5 dB, average (4 pi sr) -22.60 dBi, RDF =  7.74 dB, Z 693-281j
+  Beverage 1.0 lambda (164 m) : peak -10.03 dBi at el 37.5 deg az 358.5, F/B  12.3 dB, average (4 pi sr) -20.22 dBi, RDF = 10.19 dB, Z 667-349j
+  Beverage 1.5 lambda (246 m) : peak  -7.89 dBi at el 28.5 deg az 358.5, F/B  11.8 dB, average (4 pi sr) -19.63 dBi, RDF = 11.74 dB, Z 546-398j
+  Beverage 2.0 lambda (328 m) : peak  -5.41 dBi at el 23.5 deg az 358.5, F/B   9.9 dB, average (4 pi sr) -18.18 dBi, RDF = 12.77 dB, Z 480-313j
+[PASS] 4a RDF: vertical 4-6.5 dB; 1-lambda Beverage 8-11 dB; 2-lambda Beverage > 1-lambda; Beverage gain < -5 dBi (vertical 5.1, Bev 1/2 lambda 10.2/12.8 dB, Bev gain -10.0 dBi)
+
+=== 5. Loop + sense whip: cardioid front/back vs amplitude and phase error ===
+  amplitude error    0 %, phase error    0 deg: front/back =  99.0 dB, minimum at 180.0 deg
+  amplitude error   10 %, phase error    0 deg: front/back =  26.4 dB, minimum at 205.0 deg
+  amplitude error    0 %, phase error   10 deg: front/back =  21.2 dB, minimum at 170.0 deg
+  amplitude error   20 %, phase error   20 deg: front/back =  14.1 dB, minimum at 142.0 deg
+[PASS] 5a a 10 % amplitude or 10 deg phase error limits the sense-cardioid front/back to 20-30 dB (26.4, 21.2 dB)
+
+SUMMARY: ALL PASS

@@ -1,0 +1,116 @@
+=== 1. Exact cylinder solutions and their checks ===
+  TM line source, a = 0.50 lambda, standoff 0.25 lambda: series vs MoM max |dB diff| (where > -20 dB) = 0.009 dB; F/B = 26.4 dB
+  TM line source, a = 1.00 lambda, standoff 0.25 lambda: series vs MoM max |dB diff| (where > -20 dB) = 0.016 dB; F/B = 36.4 dB
+  TM line source, a = 0.20 lambda, standoff 0.10 lambda: series vs MoM max |dB diff| (where > -20 dB) = 0.004 dB; F/B = 19.9 dB
+[PASS] 1a TM series == independent 2-D MoM within 0.1 dB (a = 1 lambda, standoff lambda/4) (0.016 dB)
+  TM, thin PEC wire ka = 1e-04 at lambda/4 from the source: ripple 1.65 dB (|J0/H0| = 0.166)
+  TM, thin PEC wire ka = 1e-08 at lambda/4 from the source: ripple 0.82 dB (|J0/H0| = 0.084)
+  TM, thin PEC wire ka = 1e-16 at lambda/4 from the source: ripple 0.41 dB (|J0/H0| = 0.042)
+[PASS] 1b TM thin cylinder (a = 0.01 lambda) series == MoM within 0.1 dB (2-D thin-wire scattering is real) (0.002 dB; ripple 5.25 dB)
+  TE: magnetic line source at rho' -> a vs slot series (ka = 0.5): max rel diff 1.2e-14
+  TE: magnetic line source at rho' -> a vs slot series (ka = 3.0): max rel diff 2.4e-13
+[PASS] 1c TE magnetic line source on the surface == axial-slot series (Wronskian identity) (2.4e-13)
+  TE axial slot, ka =   0.3 (C = 0.10 lambda diam.): ripple over |phi|<60 deg 0.85 dB, level at 90 deg -1.4 dB, behind -1.1 dB
+  TE axial slot, ka =   1.0 (C = 0.32 lambda diam.): ripple over |phi|<60 deg 0.97 dB, level at 90 deg -3.3 dB, behind -5.7 dB
+  TE axial slot, ka =   3.0 (C = 0.95 lambda diam.): ripple over |phi|<60 deg 1.30 dB, level at 90 deg -3.2 dB, behind -9.8 dB
+  TE axial slot, ka =  10.0 (C = 3.18 lambda diam.): ripple over |phi|<60 deg 0.76 dB, level at 90 deg -3.3 dB, behind -16.2 dB
+  TE axial slot, ka =  30.0 (C = 9.55 lambda diam.): ripple over |phi|<60 deg 0.37 dB, level at 90 deg -3.2 dB, behind -25.1 dB
+  TE slot small-ka check ka = 0.005: ripple 0.0002 dB vs leading-order 0.0002 dB
+  TE slot small-ka check ka = 0.01: ripple 0.0009 dB vs leading-order 0.0009 dB
+  TE slot small-ka check ka = 0.05: ripple 0.0257 dB vs leading-order 0.0233 dB
+  TE slot small-ka check ka = 0.1: ripple 0.1209 dB vs leading-order 0.0984 dB
+  TE slot small-ka check ka = 0.3: ripple 1.5615 dB vs leading-order 0.9446 dB
+[PASS] 1d TE small-ka slot ripple -> leading-order 10log[(1+3x^2+pi x^3)/(1+x^2)] (ratio within 3% at ka = 0.01) (ratio 1.0173)
+[PASS] 1e TE slot: grazing (90 deg) level converges to a ka-independent value as ka grows (spread < 0.3 dB for ka = 3-30) and the shadow deepens (< -20 dB behind at ka = 30) ([-3.2  -3.33 -3.21] dB; behind -25.1 dB)
+
+=== 2. Element-pattern rotation and the failure of pattern multiplication ===
+  32-element ring, a = 2.55 lambda, 12-element cos-tapered sector beam at 0 deg: exact (rotated element patterns) peak sidelobe -15.4 dB, 2-D directivity 14.27 dB;
+    'pattern multiplication' with the centre element's pattern: sidelobe -15.0 dB, max main-region shape error 1.71 dB
+[PASS] 2 pattern multiplication is not exact on a cylinder (shape differences > 0.1 dB somewhere above -20 dB) (1.71 dB)
+
+=== 3. Wraparound (in-phase) arrays on rocket body tubes: roll ripple ===
+  tube  54 mm @  433.92 MHz: circumference  0.25 lambda | TE (phi-pol slots): 1 el ripple   1.0 dB, N for <3 dB = 1, <1 dB = 1 | TM (z-pol apertures): 1 el   1.3 dB, <3 dB N = 1, <1 dB N = 2
+  tube  54 mm @  915.00 MHz: circumference  0.52 lambda | TE (phi-pol slots): 1 el ripple   4.3 dB, N for <3 dB = 2, <1 dB = 3 | TM (z-pol apertures): 1 el   8.9 dB, <3 dB N = 2, <1 dB N = 2
+  tube  54 mm @ 2450.00 MHz: circumference  1.39 lambda | TE (phi-pol slots): 1 el ripple   9.9 dB, N for <3 dB = 4, <1 dB = 4 | TM (z-pol apertures): 1 el  23.1 dB, <3 dB N = 4, <1 dB N = 4
+  tube  54 mm @ 5800.00 MHz: circumference  3.28 lambda | TE (phi-pol slots): 1 el ripple  17.1 dB, N for <3 dB = 6, <1 dB = 7 | TM (z-pol apertures): 1 el  35.8 dB, <3 dB N = 6, <1 dB N = 7
+  tube  75 mm @  433.92 MHz: circumference  0.34 lambda | TE (phi-pol slots): 1 el ripple   2.0 dB, N for <3 dB = 1, <1 dB = 3 | TM (z-pol apertures): 1 el   1.9 dB, <3 dB N = 1, <1 dB N = 2
+  tube  75 mm @  915.00 MHz: circumference  0.72 lambda | TE (phi-pol slots): 1 el ripple   6.4 dB, N for <3 dB = 3, <1 dB = 3 | TM (z-pol apertures): 1 el  13.9 dB, <3 dB N = 2, <1 dB N = 2
+  tube  75 mm @ 2450.00 MHz: circumference  1.93 lambda | TE (phi-pol slots): 1 el ripple  12.7 dB, N for <3 dB = 4, <1 dB = 4 | TM (z-pol apertures): 1 el  27.7 dB, <3 dB N = 4, <1 dB N = 5
+  tube  75 mm @ 5800.00 MHz: circumference  4.56 lambda | TE (phi-pol slots): 1 el ripple  20.3 dB, N for <3 dB = 8, <1 dB = 9 | TM (z-pol apertures): 1 el  41.5 dB, <3 dB N = 8, <1 dB N = 8
+  tube  98 mm @  433.92 MHz: circumference  0.45 lambda | TE (phi-pol slots): 1 el ripple   3.4 dB, N for <3 dB = 2, <1 dB = 3 | TM (z-pol apertures): 1 el   6.4 dB, <3 dB N = 2, <1 dB N = 2
+  tube  98 mm @  915.00 MHz: circumference  0.94 lambda | TE (phi-pol slots): 1 el ripple   7.8 dB, N for <3 dB = 3, <1 dB = 3 | TM (z-pol apertures): 1 el  17.7 dB, <3 dB N = 2, <1 dB N = 2
+  tube  98 mm @ 2450.00 MHz: circumference  2.52 lambda | TE (phi-pol slots): 1 el ripple  14.7 dB, N for <3 dB = 5, <1 dB = 6 | TM (z-pol apertures): 1 el  31.6 dB, <3 dB N = 5, <1 dB N = 5
+  tube  98 mm @ 5800.00 MHz: circumference  5.96 lambda | TE (phi-pol slots): 1 el ripple  23.2 dB, N for <3 dB = 10, <1 dB = 10 | TM (z-pol apertures): 1 el  46.6 dB, <3 dB N = 9, <1 dB N = 11
+  tube 152 mm @  433.92 MHz: circumference  0.69 lambda | TE (phi-pol slots): 1 el ripple   6.2 dB, N for <3 dB = 3, <1 dB = 3 | TM (z-pol apertures): 1 el  13.3 dB, <3 dB N = 2, <1 dB N = 2
+  tube 152 mm @  915.00 MHz: circumference  1.46 lambda | TE (phi-pol slots): 1 el ripple  10.3 dB, N for <3 dB = 4, <1 dB = 4 | TM (z-pol apertures): 1 el  23.8 dB, <3 dB N = 4, <1 dB N = 4
+  tube 152 mm @ 2450.00 MHz: circumference  3.90 lambda | TE (phi-pol slots): 1 el ripple  18.9 dB, N for <3 dB = 7, <1 dB = 7 | TM (z-pol apertures): 1 el  38.7 dB, <3 dB N = 6, <1 dB N = 6
+  tube 152 mm @ 5800.00 MHz: circumference  9.24 lambda | TE (phi-pol slots): 1 el ripple  28.2 dB, N for <3 dB = 14, <1 dB = 14 | TM (z-pol apertures): 1 el  55.9 dB, <3 dB N = 13, <1 dB N = 14
+  circumferential spacing (lambda) of the minimal <1 dB designs with N > 1: min 0.11, max 0.66, median 0.36
+[PASS] 3a minimal <1 dB wraparound designs have circumferential spacing <= ~1 lambda (max 0.66 lambda)
+  TE, ka =  2.52, N =  4: |j^N H'_0/H'_N| = 0.345, phase -111 deg -> two-term ripple 3.55 dB (bounds 1.69..14.74), full series 3.55 dB
+  TE, ka =  2.52, N =  6: |j^N H'_0/H'_N| = 0.018, phase +73 deg -> two-term ripple 0.19 dB (bounds 0.01..0.63), full series 0.19 dB
+  TE, ka =  5.96, N =  8: |j^N H'_0/H'_N| = 0.381, phase +57 deg -> two-term ripple 5.39 dB (bounds 1.98..17.35), full series 5.39 dB
+  TE, ka =  5.96, N = 12: |j^N H'_0/H'_N| = 0.003, phase +60 deg -> two-term ripple 0.05 dB (bounds 0.00..0.11), full series 0.05 dB
+[PASS] 3b two-term aliasing model (modes 0 and +-N) reproduces the roll ripple within 0.05 dB when |ratio| < 0.05 ([(np.float64(0.188), np.float64(0.188)), (np.float64(0.055), np.float64(0.055))])
+
+=== 4. Commutated sector beam on a cylindrical array (32 elements, a = 2.55 lambda, TE slots) ===
+  sector M =  6 (68 deg of arc): 2-D directivity 11.85 dB, ripple over one element step 0.18 dB, worst sidelobe -12.9 dB
+  sector M =  8 (90 deg of arc): 2-D directivity 12.95 dB, ripple over one element step 0.17 dB, worst sidelobe -17.5 dB
+  sector M = 12 (135 deg of arc): 2-D directivity 14.24 dB, ripple over one element step 0.09 dB, worst sidelobe -15.4 dB
+  sector M = 16 (180 deg of arc): 2-D directivity 14.71 dB, ripple over one element step 0.02 dB, worst sidelobe -13.2 dB
+  M =  8: directivity with geometric co-phasing 13.00 dB, with conjugate element-pattern phases 13.00 dB
+  M = 12: directivity with geometric co-phasing 14.27 dB, with conjugate element-pattern phases 14.26 dB
+  M = 16: directivity with geometric co-phasing 14.70 dB, with conjugate element-pattern phases 14.72 dB
+  all 32 elements, conjugate-matched (maximum-directivity) excitation: 13.74 dB
+[PASS] 4a commutated sector beam: scan ripple between commutation steps < 0.5 dB (M = 12) (0.09 dB)
+  directivity gain from M = 8 -> 12 -> 16: 12.95 -> 14.24 -> 14.71 dB (diminishing: far elements face away)
+
+=== 5. Polarization on curved surfaces (3-D, free-space short dipoles; cylinder scattering ignored) ===
+  12-element sector, circumferential (phi-hat) dipoles -> co-pol horizontal: peak Ludwig-3 cross-pol inside the -10 dB beam = -15.5 dB
+  12-element sector, axial (z-hat) dipoles: peak Ludwig-3 cross-pol inside the -10 dB beam = -35.3 dB
+  flat 12-element array of y-dipoles (reference): peak cross-pol inside -10 dB beam = -36.0 dB
+[PASS] 5a rotated (circumferential) element polarizations raise cross-pol above the flat-array reference (-15.5 vs -36.0 dB)
+  axial-ish dipoles along cone generators, half-angle 10 deg: peak cross-pol in beam -22.8 dB
+  axial-ish dipoles along cone generators, half-angle 20 deg: peak cross-pol in beam -17.5 dB
+
+=== 6. Uniform circular arrays and phase modes ===
+  mode m = 0: |principal amplitude| J_m(kr) = 0.146; largest aliased |J_(m+-N)| = 0.0096 (-23.7 dB); Jacobi-Anger+aliasing identity error 4.2e-16
+  mode m = 1: |principal amplitude| J_m(kr) = 0.564; largest aliased |J_(m+-N)| = 0.0430 (-22.4 dB); Jacobi-Anger+aliasing identity error 6.1e-16
+  mode m = 2: |principal amplitude| J_m(kr) = 0.382; largest aliased |J_(m+-N)| = 0.1514 (-8.0 dB); Jacobi-Anger+aliasing identity error 7.9e-16
+[PASS] 6a phase-mode identity (Jacobi-Anger with aliasing) exact 
+  kr = 2.136: first zero of J0 is 2.405 -> mode 0 is weak (0.146); at 433.92 MHz r = 23.5 cm
+  5-el UCA, SNR 10 dB/element, 200 snapshots: arg(y1/y0) estimator rms 9.09 deg (max 18.2); arg(y+1/y-1)/2 estimator rms 0.52 deg (max 1.7) [MUSIC on the same geometry: ~0.3 deg, adaptive-beamforming-doa page]
+[PASS] 6b mode+1/mode-1 estimator beats mode1/mode0 when J0(kr) is small ((np.float64(9.090296093294539), np.float64(0.517036999438382), np.float64(18.164830870471665), np.float64(1.71619594196969)))
+  aliasing bias of the mode+-1 estimator (noise-free): max |bias| = 0.17 deg (periodic in azimuth with period 360/N = 72 deg)
+  r = 0.20 lambda (kr = 1.26): modes up to |m| ~ 1 have |J_m| >= 0.51; needs N >= 3 elements (spacing 0.42 lambda)
+  r = 0.34 lambda (kr = 2.14): modes up to |m| ~ 2 have |J_m| >= 0.38; needs N >= 5 elements (spacing 0.43 lambda)
+  r = 0.50 lambda (kr = 3.14): modes up to |m| ~ 3 have |J_m| >= 0.33; needs N >= 7 elements (spacing 0.45 lambda)
+  r = 1.00 lambda (kr = 6.28): modes up to |m| ~ 6 have |J_m| >= 0.28; needs N >= 13 elements (spacing 0.48 lambda)
+  source at elevation 0 deg: effective kr = 2.14, |J1| = 0.564
+  source at elevation 30 deg: effective kr = 1.85, |J1| = 0.582
+  source at elevation 60 deg: effective kr = 1.07, |J1| = 0.461
+
+=== 7. Pseudo-Doppler (commutated ring) DF ===
+  8-element ring, r = 0.15 lambda, 1 kHz commutation: true bearing 73.0 deg, estimated 73.00 deg; peak phase swing +-54 deg (FM deviation ~0.94 kHz equiv.)
+[PASS] 7 pseudo-Doppler bearing from the commutation-tone phase within 0.5 deg (73.00)
+
+=== 7b. Adcock / Watson-Watt (4 elements on a ring, two orthogonal difference pairs) ===
+  Adcock spacing d = 0.1 lambda: max octantal bearing error 0.237 deg (small-spacing estimate (pi d/lambda)^2/24 rad = 0.236 deg)
+  Adcock spacing d = 0.2 lambda: max octantal bearing error 0.971 deg (small-spacing estimate (pi d/lambda)^2/24 rad = 0.942 deg)
+  Adcock spacing d = 0.3 lambda: max octantal bearing error 2.272 deg (small-spacing estimate (pi d/lambda)^2/24 rad = 2.121 deg)
+  Adcock spacing d = 0.4 lambda: max octantal bearing error 4.274 deg (small-spacing estimate (pi d/lambda)^2/24 rad = 3.770 deg)
+  Adcock spacing d = 0.5 lambda: max octantal bearing error 7.218 deg (small-spacing estimate (pi d/lambda)^2/24 rad = 5.890 deg)
+[PASS] 7b Adcock octantal error matches (pi d/lambda)^2/24 within 10 % at d = 0.2 lambda (0.971 vs 0.942 deg)
+
+=== 8. GNSS L1 wraparound cases, UCA geometry table, figures ===
+  GNSS L1 1575.42 MHz, tube 98 mm (C = 1.62 lambda): TE 1-el 11.3 dB, <1 dB N = 4; TM 1-el 25.2 dB, <1 dB N = 4
+  GNSS L1 1575.42 MHz, tube 152 mm (C = 2.51 lambda): TE 1-el 14.7 dB, <1 dB N = 6; TM 1-el 31.6 dB, <1 dB N = 5
+  5-element UCA at 433.92 MHz, spacing 0.4 lambda: r = 23.5 cm, kr = 2.14, J0 = +0.145, J1 = 0.564
+  5-element UCA at 433.92 MHz, spacing 0.5 lambda: r = 29.4 cm, kr = 2.67, J0 = -0.130, J1 = 0.450
+  5-element UCA at 868.00 MHz, spacing 0.4 lambda: r = 11.8 cm, kr = 2.14, J0 = +0.145, J1 = 0.564
+  5-element UCA at 868.00 MHz, spacing 0.5 lambda: r = 14.7 cm, kr = 2.67, J0 = -0.130, J1 = 0.450
+  5-element UCA at 915.00 MHz, spacing 0.4 lambda: r = 11.1 cm, kr = 2.14, J0 = +0.145, J1 = 0.564
+  5-element UCA at 915.00 MHz, spacing 0.5 lambda: r = 13.9 cm, kr = 2.67, J0 = -0.130, J1 = 0.450
+  wrote figure e8-wraparound-and-phase-modes.png
+
+SUMMARY: ALL PASS

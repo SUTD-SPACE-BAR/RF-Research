@@ -1,0 +1,24 @@
+1rfhqel	Is Proakis's DSP book worth reading (vs others)?	LRN	P	14/_index	books listed as references, not compared/recommended by level
+12u3oin	Losing MATLAB — is Python a realistic replacement for DSP work?	16	C	16/python-rf-toolkit	
+1sm5o9p	How do I start learning DSP?	LRN	P	14/_index; 00/math-roadmap-for-rf	reading order exists; beginner book/course picks (Lyons, PySDR, Smith's free DSP guide) not
+1t3jx93	Why can an FFT of a shorter signal take longer than a longer one?	14	P	14/fft-spectral-analysis-windows; 00/numerical-methods-overview	radix-2 derivation covered; prime/mixed-radix sizes and FFTW planning not
+1gtqxb2	Why isn't my evenly spaced pole set a Butterworth filter, and why is it unstable?	14	C	14/digital-filters-fir-iir	pole placement/stability
+vb117u	How can I teach myself DSP?	LRN	P	14/_index	
+1bbftzp	How can the sampling rate be so low for this signal?	14	C	14/sampling-aliasing-bandpass-sampling	bandpass sampling
+q9drlv	Beginner DSP project ideas?	LRN	M	NEW 20/first-rf-projects (SDR/DSP track)	
+hy9mzv	Recommended DSP books for complete beginners?	LRN	M	NEW 00/rf-learning-roadmap	
+efudgc	Good YouTube channels that explain digital filters?	LRN	M	NEW 00/rf-learning-roadmap	
+11mcqe3	Resources to learn DSP using an SDR?	LRN	P	14/gnu-radio-and-software-stack	"where do I start" covered; PySDR-style curriculum not named
+pq3i4b	Why use Fourier series rather than a Taylor expansion?	00	C	00/fourier-series-and-transform; 00/linear-systems-convolution	sinusoids as LTI eigenfunctions
+nrea15	How do I separate three sine waves with very close frequencies?	14	C	14/fft-spectral-analysis-windows; 12/adaptive-beamforming-doa	record-length resolution; MUSIC/ESPRIT super-resolution
+svulph	A question about the Nyquist–Shannon theorem	14	C	14/sampling-aliasing-bandpass-sampling	
+q0qlp5	Resources for learning beamforming and its algorithms?	12	C	12/adaptive-beamforming-doa; 12/beamforming-architectures	
+13l1hds	Can an IIR filter have this impulse response?	14	C	14/digital-filters-fir-iir	
+1u86mex	How does the FFT butterfly diagram make sense?	14	C	14/fft-spectral-analysis-windows	even/odd split derivation
+uz1dy8	What does K mean in the Hann window formula for my STFT?	14	C	14/fft-spectral-analysis-windows	
+hv0ybm	Is this aliasing?	14	C	14/sampling-aliasing-bandpass-sampling	
+npstds	What does it mean to use only the real part of a Fourier transform?	00	C	00/complex-numbers-and-phasors; 14/iq-complex-baseband	
+142cjii	How do I analyse signals longer than my FFT size?	14	C	14/fft-spectral-analysis-windows	averaging/Welch/spectrogram
+10u7ntt	Why does my ASK spectrum look triangular instead of sinc-shaped?	10	P	10/digital-modulation-psk-qam-fsk; 14/fft-spectral-analysis-windows	dB-scale envelope of sinc² and random data not explained
+voovxk	When are wavelets better than Fourier or STFT?	14	M	14/fft-spectral-analysis-windows	wavelets absent (low relevance for RF)
+1c5klfj	How do I estimate a tone's frequency between FFT bins?	14	P	14/fft-spectral-analysis-windows	zero-padding interpolation covered; parabolic/Jacobsen estimators and CRB not

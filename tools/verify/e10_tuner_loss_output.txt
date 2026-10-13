@@ -1,0 +1,83 @@
+1. Mismatched-line total loss, 30 m of line (formula; exact bookkeeping check)
+  RG-58 14 MHz A=1.31 dB, SWR 3.0: formula 1.924 dB, exact 1.924 dB
+PASS formula == exact (SWR 3.0)
+  RG-58 14 MHz A=1.31 dB, SWR 10.0: formula 4.142 dB, exact 4.142 dB
+PASS formula == exact (SWR 10.0)
+
+  cable                          f MHz matched dB  SWR 1.5    SWR 3   SWR 10   SWR 20
+  RG-58                            3.6       0.65     0.70     1.01     2.49     4.02
+  RG-58                            7.0       0.92     0.98     1.39     3.22     4.99
+  RG-58                           14.0       1.31     1.39     1.92     4.14     6.15
+  RG-58                           28.0       1.89     1.99     2.65     5.26     7.47
+  LMR-400                          3.6       0.23     0.25     0.37     1.03     1.85
+  LMR-400                          7.0       0.32     0.34     0.51     1.38     2.41
+  LMR-400                         14.0       0.45     0.49     0.72     1.86     3.13
+  LMR-400                         28.0       0.64     0.69     1.00     2.46     3.98
+  450-ohm ladder (dry, assumed)    3.6       0.10     0.11     0.16     0.48     0.90
+  450-ohm ladder (dry, assumed)    7.0       0.14     0.15     0.23     0.65     1.21
+  450-ohm ladder (dry, assumed)   14.0       0.20     0.21     0.32     0.90     1.63
+  450-ohm ladder (dry, assumed)   28.0       0.28     0.30     0.45     1.23     2.16
+PASS RG-58 30 m at 28 MHz with SWR 10 loses > 4 dB
+PASS ladder line 30 m at 28 MHz with SWR 10 loses < 1.5 dB (RG-58: > 4 dB)
+  (SWR for ladder line is referred to its own 450 ohm, so the same antenna gives a different SWR on each line; see the page)
+
+1b. Same antenna (Z = 10 - j400 ohm at 3.6 MHz; 2000 + j500 ohm at 14 MHz) on each line, 30 m
+   3.6 MHz RG-58                         : SWR on line   325.2, total loss  14.07 dB (  3.9 % reaches antenna)
+   3.6 MHz LMR-400                       : SWR on line   325.2, total loss   9.82 dB ( 10.4 % reaches antenna)
+   3.6 MHz 450-ohm ladder (dry, assumed) : SWR on line    80.6, total loss   2.85 dB ( 51.9 % reaches antenna)
+  14.0 MHz RG-58                         : SWR on line    42.5, total loss   8.79 dB ( 13.2 % reaches antenna)
+  14.0 MHz LMR-400                       : SWR on line    42.5, total loss   5.09 dB ( 30.9 % reaches antenna)
+  14.0 MHz 450-ohm ladder (dry, assumed) : SWR on line     4.7, total loss   0.47 dB ( 89.8 % reaches antenna)
+PASS dipole off-band on RG-58 at 3.6 MHz loses > 6 dB
+
+2. SWR the rig sees vs SWR at the antenna (RL_in = RL_load + 2A)
+  RG-58  7.0 MHz (A=0.92 dB): SWR    10 at antenna ->  4.92 at rig
+  RG-58  7.0 MHz (A=0.92 dB): SWR    20 at antenna ->  6.48 at rig
+  RG-58  7.0 MHz (A=0.92 dB): SWR  1000 at antenna ->  9.42 at rig
+  RG-58 28.0 MHz (A=1.89 dB): SWR    10 at antenna ->  3.26 at rig
+  RG-58 28.0 MHz (A=1.89 dB): SWR    20 at antenna ->  3.83 at rig
+  RG-58 28.0 MHz (A=1.89 dB): SWR  1000 at antenna ->  4.66 at rig
+PASS an OPEN at the end of 30 m RG-58 at 28 MHz reads below 5:1 at the rig
+
+3. Matching-network efficiency with lossy parts (exact ABCD, R_s = 50 ohm)
+  load                          Q_u L-net loss dB  T best dB  T small-C dB    Q_n
+  5 - j500 (short HF whip)      100          3.01       3.71          4.36   10.0
+  5 - j500 (short HF whip)      200          1.76       2.28          2.79   10.0
+  5 - j500 (short HF whip)      300          1.25       1.68          2.10   10.0
+  10 - j400 (dipole at 1/2 f)   100          1.46       2.04          3.77    6.2
+  10 - j400 (dipole at 1/2 f)   200          0.79       1.17          2.40    6.2
+  10 - j400 (dipole at 1/2 f)   300          0.54       0.83          1.82    6.2
+  12.5 + j0                     100          0.08       0.09          3.66    1.7
+  12.5 + j0                     200          0.04       0.05          2.36    1.7
+  12.5 + j0                     300          0.03       0.03          1.82    1.7
+  25 + j25                      100          0.00       0.06          3.15    1.0
+  25 + j25                      200          0.00       0.03          1.99    1.0
+  25 + j25                      300          0.00       0.03          1.52    1.0
+  200 + j0                      100          0.08       0.10          2.20    1.7
+  200 + j0                      200          0.04       0.05          1.34    1.7
+  200 + j0                      300          0.03       0.04          1.00    1.7
+  2000 + j500 (EFHW-ish)        100          0.29       0.29          1.79    6.3
+  2000 + j500 (EFHW-ish)        200          0.16       0.16          1.06    6.3
+  2000 + j500 (EFHW-ish)        300          0.12       0.12          0.79    6.3
+PASS L-network into 12.5 ohm with Q_u 200 loses < 0.1 dB
+PASS matching a 5 - j500 whip loses > 1 dB even with Q_u 300 (loading-coil loss)
+
+4. L-network rule of thumb: loss fraction ~ Q_n/Q_u (series-element loss, resistive loads)
+  R  12.5 ohm, Q_u 100: exact loss fraction 0.0170, Q_n/Q_u 0.0173
+PASS rule within 20 % (R=12.5, Q=100)
+  R  12.5 ohm, Q_u 300: exact loss fraction 0.0057, Q_n/Q_u 0.0058
+PASS rule within 20 % (R=12.5, Q=300)
+  R   5.0 ohm, Q_u 100: exact loss fraction 0.0291, Q_n/Q_u 0.0300
+PASS rule within 20 % (R=5.0, Q=100)
+  R   5.0 ohm, Q_u 300: exact loss fraction 0.0099, Q_n/Q_u 0.0100
+PASS rule within 20 % (R=5.0, Q=300)
+  R   2.0 ohm, Q_u 100: exact loss fraction 0.0467, Q_n/Q_u 0.0490
+PASS rule within 20 % (R=2.0, Q=100)
+  R   2.0 ohm, Q_u 300: exact loss fraction 0.0161, Q_n/Q_u 0.0163
+PASS rule within 20 % (R=2.0, Q=300)
+
+5. Relay auto-tuner state space
+  7 L x 7 C relays + C-side relay: 32768 states; at ~5 ms relay settle + measure, exhaustive = 164 s; coarse-fine search (e.g. 2 x (16 + 16) steps per axis pass) ~ 0.48 s
+PASS state count 32768
+
+RESULT: ALL PASS

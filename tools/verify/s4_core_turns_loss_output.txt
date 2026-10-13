@@ -1,0 +1,142 @@
+=== 1. Mix data (datasheets) and complex permeability at the bands we use (Fair-Rite CSV) ===
+Fair-Rite 31: MnZn mu_i 1500, tempco 1.3 %/C, Tc >130 C, rho 3e3 ohm-cm
+Fair-Rite 43: NiZn mu_i 800, tempco 1.25 %/C, Tc >130 C, rho 1e5 ohm-cm
+Fair-Rite 52: NiZn mu_i 250, tempco 0.8 %/C, Tc >250 C, rho 1e9 ohm-cm
+Fair-Rite 61: NiZn mu_i 125, tempco 0.1 %/C, Tc >300 C, rho 1e8 ohm-cm
+Micrometals -2: mu 10, tempco +95 ppm/C, max f 45 MHz, red
+Micrometals -6: mu 8.5, tempco +35 ppm/C, max f 55 MHz, yellow
+Micrometals -10: mu 6, tempco +150 ppm/C, max f 83 MHz, black
+Micrometals -17: mu 4, tempco +50 ppm/C, max f 170 MHz, blue/yellow
+f (MHz)   31: mu' / mu'' (Q)         43: mu' / mu'' (Q)         52: mu' / mu'' (Q)         61: mu' / mu'' (Q)      
+   1.80   1044.6 /  693.5 (  1.51)    911.3 /  177.2 (  5.14)    267.0 /    4.4 ( 60.00)    123.6 /    0.5 (247.32)
+   3.60    584.4 /  654.3 (  0.89)    687.6 /  423.3 (  1.62)    277.4 /   10.4 ( 26.79)    124.0 /    0.6 (201.64)
+   7.10    332.6 /  448.3 (  0.74)    394.5 /  394.6 (  1.00)    299.0 /   68.6 (  4.36)    126.0 /    1.0 (132.34)
+  14.20    210.0 /  303.3 (  0.69)    224.3 /  291.1 (  0.77)    187.0 /  148.2 (  1.26)    134.2 /    3.2 ( 41.72)
+  28.50    119.7 /  214.2 (  0.56)    123.4 /  208.0 (  0.59)    107.4 /  107.9 (  0.99)    157.0 /   60.0 (  2.62)
+ 100.00     25.3 /  103.2 (  0.24)     21.8 /   92.7 (  0.23)     47.9 /   69.0 (  0.69)     39.8 /   60.0 (  0.66)
+ 433.92      0.0 /   27.1 (  0.00)     -1.2 /   24.1 ( -0.05)      0.6 /   29.4 (  0.02)      3.3 /   24.9 (  0.13)
+ 915.00      0.0 /   13.6 (  0.00)     -2.3 /   12.5 ( -0.18)     -3.9 /   15.1 ( -0.26)     -2.0 /   13.1 ( -0.15)
+
+=== 2. Mix-2 / mix-6 core Q from the Micrometals eddy-current term d*B^2*f^2 ===
+mix -2 f   3.6 MHz: mu''_eddy = 0.0138  ->  Q_core = mu'/mu'' =   723
+mix -2 f   7.1 MHz: mu''_eddy = 0.0273  ->  Q_core = mu'/mu'' =   367
+mix -2 f  14.2 MHz: mu''_eddy = 0.0545  ->  Q_core = mu'/mu'' =   183
+mix -2 f  28.5 MHz: mu''_eddy = 0.1094  ->  Q_core = mu'/mu'' =    91
+mix -6 f   3.6 MHz: mu''_eddy = 0.0093  ->  Q_core = mu'/mu'' =   918
+mix -6 f   7.1 MHz: mu''_eddy = 0.0183  ->  Q_core = mu'/mu'' =   465
+mix -6 f  14.2 MHz: mu''_eddy = 0.0365  ->  Q_core = mu'/mu'' =   233
+mix -6 f  28.5 MHz: mu''_eddy = 0.0733  ->  Q_core = mu'/mu'' =   116
+mix -2 at 7.1 MHz, B = 10 G: total     6.12 mW/cm^3, eddy part     4.84
+mix -2 at 7.1 MHz, B = 50 G: total   217.77 mW/cm^3, eddy part   120.98
+mix -2 at 7.1 MHz, B = 200 G: total  4820.28 mW/cm^3, eddy part  1935.74
+(43 at 7.1 MHz: Q = 1.0; 61 at 7.1 MHz: Q = 132)
+
+=== 3. Tuned-circuit drift over a 40 C swing (all inductance in the core, f ~ 1/sqrt(L)) ===
+ -6: dmu/mu =   0.14 %  ->  df/f =  0.070 %  =     5.0 kHz at 7.1 MHz
+ -2: dmu/mu =   0.38 %  ->  df/f =  0.190 %  =    13.5 kHz at 7.1 MHz
+ 61: dmu/mu =   4.00 %  ->  df/f =  2.000 %  =   142.0 kHz at 7.1 MHz
+ 52: dmu/mu =  32.00 %  ->  df/f = 16.000 %  =  1136.0 kHz at 7.1 MHz
+ 43: dmu/mu =  50.00 %  ->  df/f = 25.000 %  =  1775.0 kHz at 7.1 MHz
+
+=== 4. A_L -> turns,  N = sqrt(L / A_L) ===
+  1.0 uH on T50-2     (A_L    4.9 nH/N^2): N =  14.3 turns
+  2.0 uH on T68-6     (A_L    4.7 nH/N^2): N =  20.6 turns
+  4.7 uH on T68-2     (A_L    5.7 nH/N^2): N =  28.7 turns
+  5.7 uH on T200-2    (A_L   12.0 nH/N^2): N =  21.8 turns
+ 10.0 uH on FT240-61  (A_L  170.0 nH/N^2): N =   7.7 turns
+  4.3 uH on FT240-43  (A_L 1075.0 nH/N^2): N =   2.0 turns
+FT240-43 air L0/N^2 from Ae/le = 1.369 nH  -> A_L(10 kHz) = 1095 nH (datasheet 1075 +-20 %)
+  2 turns at  3.6 MHz: L_s =  3.77 uH, R_s =   52.4 ohm (A_L says 4.30 uH)
+  2 turns at  7.1 MHz: L_s =  2.16 uH, R_s =   96.4 ohm (A_L says 4.30 uH)
+  2 turns at 28.5 MHz: L_s =  0.68 uH, R_s =  204.0 ohm (A_L says 4.30 uH)
+
+=== 5. Gapped core: mu_e = mu/(1 + mu g/le); tempco and tan(delta) dilute by mu_e/mu ===
+43 FT240, gap  0.0 mm: mu_e =  800.0; tempco   12500 ppm/C; tan(d) at 7.1 MHz 1.000 (Q   1.0)
+43 FT240, gap  0.1 mm: mu_e =  515.6; tempco    8056 ppm/C; tan(d) at 7.1 MHz 0.644 (Q   1.6)
+43 FT240, gap  0.5 mm: mu_e =  212.8; tempco    3326 ppm/C; tan(d) at 7.1 MHz 0.266 (Q   3.8)
+43 FT240, gap  1.0 mm: mu_e =  122.8; tempco    1918 ppm/C; tan(d) at 7.1 MHz 0.153 (Q   6.5)
+43 FT240, gap  3.4 mm: mu_e =   40.5; tempco     633 ppm/C; tan(d) at 7.1 MHz 0.051 (Q  19.8)
+gap for mu_e 40: 3.44 mm
+
+=== 6. EFHW 49:1 (1:7 turns) on FT240-43: magnetising-branch loss at 100 W ===
+FT240 outer surface (geometry) = 77.1 cm^2 per core
+Config        f MHz  |Zm| ohm  loss %  loss dB  Bpk mT  Pcore@100W cont  dT cont  dT SSB(20%)  dT FT8(50%)
+2:14 x1      3.6     100.0    20.8    1.01    14.0         20.8 W      106         28          59
+2:14 x1      7.1     136.3    20.6    1.00     7.1         20.6 W      105         27          59
+2:14 x1     14.2     179.6    18.1    0.87     3.5         18.1 W       94         25          53
+2:14 x1     28.5     237.2    15.3    0.72     1.8         15.3 W       82         22          46
+3:21 x1      3.6     225.1    10.4    0.48     9.3         10.4 W       60         16          33
+3:21 x1      7.1     306.7    10.3    0.47     4.7         10.3 W       59         15          33
+3:21 x1     14.2     404.1     8.9    0.41     2.4          8.9 W       52         14          29
+3:21 x1     28.5     533.7     7.5    0.34     1.2          7.5 W       45         12          25
+2:14 x2      3.6     200.1    11.6    0.53     7.0         11.6 W       37         10          20
+2:14 x2      7.1     272.7    11.5    0.53     3.5         11.5 W       36          9          20
+2:14 x2     14.2     359.2     9.9    0.45     1.8          9.9 W       32          8          18
+2:14 x2     28.5     474.4     8.3    0.38     0.9          8.3 W       28          7          16
+3:21 x2      3.6     450.2     5.5    0.25     4.7          5.5 W       20          5          11
+3:21 x2      7.1     613.5     5.4    0.24     2.4          5.4 W       19          5          11
+3:21 x2     14.2     808.1     4.7    0.21     1.2          4.7 W       17          4          10
+3:21 x2     28.5    1067.5     3.9    0.17     0.6          3.9 W       15          4           8
+ON5UK data 2:14 at 3.6 MHz: |Zm| 64.5 ohm, Q 2.1 -> loss 25.0 %
+ON5UK data 2:14 at 7.1 MHz: |Zm| 98.3 ohm, Q 1.46 -> loss 22.3 %
+2:14 x1 3.6 MHz: 25 C rise allows Pcore 3.7 W -> 18 W average input
+2:14 x1 7.1 MHz: 25 C rise allows Pcore 3.7 W -> 18 W average input
+3:21 x1 3.6 MHz: 25 C rise allows Pcore 3.7 W -> 35 W average input
+3:21 x1 7.1 MHz: 25 C rise allows Pcore 3.7 W -> 36 W average input
+2:14 x2 3.6 MHz: 25 C rise allows Pcore 7.4 W -> 63 W average input
+2:14 x2 7.1 MHz: 25 C rise allows Pcore 7.4 W -> 64 W average input
+
+--- large-signal correction from Fair-Rite 61 B-Pv data (proxy for NiZn above ~7 mT) ---
+61    2 MHz B  3.0 mT: small-signal      1.5  measured fit      1.9 mW/cm^3  ratio  1.31
+61    2 MHz B  7.0 mT: small-signal      7.9  measured fit     18.1 mW/cm^3  ratio  2.29
+61    2 MHz B 14.0 mT: small-signal     31.7  measured fit    114.1 mW/cm^3  ratio  3.60
+61    5 MHz B  3.0 mT: small-signal      5.3  measured fit      6.1 mW/cm^3  ratio  1.16
+61    5 MHz B  7.0 mT: small-signal     28.8  measured fit     62.7 mW/cm^3  ratio  2.18
+61    5 MHz B 14.0 mT: small-signal    115.3  measured fit    419.5 mW/cm^3  ratio  3.64
+61    7 MHz B  3.0 mT: small-signal      9.3  measured fit      9.9 mW/cm^3  ratio  1.06
+61    7 MHz B  7.0 mT: small-signal     50.8  measured fit    106.4 mW/cm^3  ratio  2.10
+61    7 MHz B 14.0 mT: small-signal    203.1  measured fit    740.5 mW/cm^3  ratio  3.64
+61   10 MHz B  3.0 mT: small-signal     19.6  measured fit     34.4 mW/cm^3  ratio  1.75
+61   10 MHz B  7.0 mT: small-signal    106.9  measured fit    297.9 mW/cm^3  ratio  2.79
+61   10 MHz B 14.0 mT: small-signal    427.6  measured fit   1741.5 mW/cm^3  ratio  4.07
+61   15 MHz B  3.0 mT: small-signal     68.9  measured fit     83.6 mW/cm^3  ratio  1.21
+61   15 MHz B  7.0 mT: small-signal    375.1  measured fit    775.9 mW/cm^3  ratio  2.07
+61   15 MHz B 14.0 mT: small-signal   1500.3  measured fit   4801.2 mW/cm^3  ratio  3.20
+61   20 MHz B  3.0 mT: small-signal    253.8  measured fit    224.0 mW/cm^3  ratio  0.88
+61   20 MHz B  7.0 mT: small-signal   1381.8  measured fit   1605.2 mW/cm^3  ratio  1.16
+61   20 MHz B 14.0 mT: small-signal   5527.2  measured fit   8038.3 mW/cm^3  ratio  1.45
+
+--- iron powder for the same job: turns needed for |Xm| >= 250 ohm at 3.6 MHz ---
+T200-2: L 11.1 uH -> primary 30 turns, secondary 212 turns (impractical: self-resonance)
+T130-2: L 11.1 uH -> primary 32 turns, secondary 222 turns (impractical: self-resonance)
+
+--- compensation capacitor: pi low-pass C_comp - L_lk - C_s' (ILLUSTRATIVE parasitics) ---
+C_comp     0 pF: VSWR 7/14/21/28 MHz = 1.43 / 1.51 / 1.81 / 2.35
+C_comp    50 pF: VSWR 7/14/21/28 MHz = 1.35 / 1.41 / 1.57 / 1.71
+C_comp   100 pF: VSWR 7/14/21/28 MHz = 1.31 / 1.45 / 1.55 / 1.38
+C_comp   150 pF: VSWR 7/14/21/28 MHz = 1.32 / 1.61 / 1.76 / 1.57
+C_comp   200 pF: VSWR 7/14/21/28 MHz = 1.36 / 1.85 / 2.14 / 2.13
+sqrt(L_lk/C_s') = 50 ohm -> symmetric pi needs C_comp ~ C_s' = 100 pF
+100 pF at 28.5 MHz, 100 W: I_C = 1.27 A rms, V = 70.7 V rms (100 V pk); secondary 495 V rms (700 V pk) at VSWR 1
+
+=== 7. 433.92 MHz common-mode choke: slip-on beads on RG-316, 2 W transmitter ===
+mix 31: mu'   0.0 mu''  27.1 -> Z per bead =  135.6   +0.0j ohm
+mix 43: mu'  -1.2 mu''  24.1 -> Z per bead =  120.5   -5.9j ohm
+mix 52: mu'   0.6 mu''  29.4 -> Z per bead =  146.9   +3.0j ohm
+mix 61: mu'   3.3 mu''  24.9 -> Z per bead =  124.5  +16.4j ohm
+L0 per bead = 1.83 nH; 5 beads R = 622 ohm; feed V = 10.0 V rms
+worst-case dissipation if the full feed voltage drives the shield path: V^2/R = 161 mW (8.0 % of 2 W), 32 mW per bead
+bead surface 4.04 cm^2 -> dT = 5.6 C per bead (Amidon rule)
+lambda/4 at 433.92 MHz in air = 17.3 cm (sleeve-balun alternative)
+
+=== 8. Iron-powder physics: packing fraction -> mu_e (Maxwell Garnett, mu_particle -> inf), eddy loss ===
+-2/-6 (5.0 g/cm3): fill p = 0.64 -> Maxwell-Garnett mu_e = 6.2 (catalogue: 10/8.5, 20/25, 35/35)
+-1/-15 (6.4 g/cm3): fill p = 0.81 -> Maxwell-Garnett mu_e = 14.1 (catalogue: 10/8.5, 20/25, 35/35)
+-3/-8 (6.5 g/cm3): fill p = 0.83 -> Maxwell-Garnett mu_e = 15.2 (catalogue: 10/8.5, 20/25, 35/35)
+iron skin depth at    1 MHz (sigma 1e7, mu_r 100 assumed) =  15.9 um
+iron skin depth at   10 MHz (sigma 1e7, mu_r 100 assumed) =   5.0 um
+iron skin depth at   30 MHz (sigma 1e7, mu_r 100 assumed) =   2.9 um
+sphere d = 3.0 um: eddy coefficient 4.44e-05 W/m^3/(T^2 Hz^2) vs Micrometals -2 d*1e11 = 9.60e-05
+sphere d = 5.0 um: eddy coefficient 1.23e-04 W/m^3/(T^2 Hz^2) vs Micrometals -2 d*1e11 = 9.60e-05
+sphere d = 8.0 um: eddy coefficient 3.16e-04 W/m^3/(T^2 Hz^2) vs Micrometals -2 d*1e11 = 9.60e-05
+gap raises NI to reach a given B by mu/mu_e: 43 with mu_e 40 -> x20

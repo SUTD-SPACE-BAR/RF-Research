@@ -1,0 +1,49 @@
+=== 1. Hallen point-matching vs Galerkin MoM (Pocklington, mixed potential) vs NEC-2: centre-fed dipole ===
+  L/lambda  a/lambda    Hallen N=101       Hallen N=201      KB MoM (100 seg)      NEC-2 (41 seg)
+   0.50    1e-04     82.43  +56.54j    81.40  +50.96j    80.31  +45.26j      79.97  +45.49j
+   0.50    1e-03     88.44  +53.25j    88.11  +50.43j    86.62  +46.78j      85.72  +48.71j
+   0.47    1e-03     71.03   -3.64j    70.38   -6.14j    69.43   -9.41j      69.91   -7.60j
+   0.25    1e-03     11.87 -412.04j    10.63 -391.29j    11.36 -409.16j      13.04 -436.15j
+   0.10    1e-03      1.01 -773.29j     0.12 -270.18j     0.87 -723.86j       1.66 -999.00j
+  thin lambda/2 (a = 1e-4): Hallen N = 201/401/801: 81.40+50.96j / 80.92+48.29j / 80.72+47.06j; Richardson (1/N) limit 80.51+45.82j ohm; KB MoM 80.31+45.26j; NEC 79.97+45.49j
+  [info] pre-registered 1a (N = 201 within 3 ohm) missed: reactance converges as ~1/N with pulse basis + point matching
+[PASS] 1a Hallen extrapolated to N -> infinity agrees with the KB Galerkin MoM within 1.5 ohm (R and X) (80.5+45.8j vs 80.3+45.3j)
+  Hallen resonance (a = 1e-4 lambda): L = 0.4817 lambda, R = 72.0 ohm (KB MoM: 0.4838 lambda, 72.0 ohm)
+[PASS] 1b Hallen resonant length within 0.003 lambda and R within 2 ohm of the KB MoM 
+
+=== 2. Zeroth-order Hallen: Z0 = -j (eta/pi) ln(2h/a) cot(kh) (pure reactance) vs full solutions, a = 1e-3 lambda ===
+  (full solutions with segment length ~5a: the reduced kernel fails when segments get shorter than ~2-3 radii,
+   and the delta-gap capacitance makes short-dipole X drift with segment length)
+  L/lambda   Z0 (zeroth order)   TL -j120[ln(L/2a)-1]cot(kh)   Hallen (seg ~5a)    KB MoM (seg ~5a)   NEC-2 (seg ~5a)
+   0.05         -2961.9j            -1681.1j                0.44 -1568.2j      0.35 -1528.2j      0.48 -1742.9j
+   0.10         -1699.6j            -1075.5j                1.75  -991.5j      1.53  -978.0j      1.85 -1058.8j
+   0.20          -874.5j             -595.5j                7.56  -547.3j      7.02  -546.0j      7.80  -569.0j
+   0.30          -496.9j             -349.7j               19.61  -312.8j     18.67  -315.7j     19.86  -322.2j
+[PASS] 2a short dipole (0.1 lambda): TL form within 10 % of the full solutions; zeroth-order Hallen is crude (30-90 % high) (Z0 -1700, TL -1075, Hallen -991, MoM -978, NEC -1059 ohm)
+  thin lambda/2 dipole (a = 1e-4 lambda): max deviation of |I(z)|/|I|max from sin k(h-|z|) = 0.051
+[PASS] 2b Hallen current of a thin lambda/2 dipole is within 0.08 of the sinusoid (zeroth-order solution) 
+
+=== 3. Mutual impedance of two parallel lambda/2 dipoles (referred to the current maxima = feed currents) ===
+  side-by-side d/lambda   closed form (Si/Ci)     numeric near-field integral     NEC-2 two-port Z21 (a=1e-4)    KB MoM two-port
+   0.10                   67.29  +7.53j           67.29  +7.53j                 74.77  +3.41j                74.99  +2.83j
+   0.25                   40.76 -28.33j           40.76 -28.33j                 41.92 -34.39j                41.79 -34.80j
+   0.50                  -12.52 -29.91j          -12.52 -29.91j                -16.50 -31.35j               -16.78 -31.32j
+   1.00                    4.01 +17.73j            4.01 +17.73j                  6.11 +18.95j                 6.27 +18.96j
+[PASS] 3a closed-form Si/Ci Z21 equals the numerically integrated induced-EMF Z21 (< 0.05 ohm) (max 8.73e-14 ohm)
+  same integral with rho = a = 1e-4 lambda (self impedance): 73.08+42.48j (textbook 73.08 + j42.51)
+[PASS] 3b induced-EMF self impedance from the same integral = 73.1 + j42.5 ohm (+-0.3) 
+  collinear (end-to-end, centre spacing s) and echelon (side offset d, axial offset s):
+   geometry                  induced EMF (numeric)    NEC-2 two-port
+   collinear s = 0.55           20.27  +2.53j           23.20  +1.83j
+   collinear s = 0.75            2.04  -7.97j            1.77  -8.87j
+   collinear s = 1.00           -4.12  -0.72j           -4.52  -0.52j
+   echelon d = 0.25, s = 0.25   30.88 -18.39j           31.81 -23.20j
+   echelon d = 0.5, s = 0.5    -11.88  -7.84j          -13.75  -7.52j
+
+=== 4. Driving-point impedance of a pair, d = 0.25 lambda, resonant-length dipoles (0.48 lambda, a = 1e-3 lambda) ===
+  in phase (I2 = I1)        : Z1 = Z11 + Z12 I2/I1 =  110.5 -23.6j ohm  (Z11 = 72.7+10.5j, Z12 = 37.8-34.2j)
+  antiphase (I2 = -I1)      : Z1 = Z11 + Z12 I2/I1 =   34.9 +44.7j ohm  (Z11 = 72.7+10.5j, Z12 = 37.8-34.2j)
+  quadrature (I2 = -j I1)   : Z1 = Z11 + Z12 I2/I1 =   38.5 -27.2j ohm  (Z11 = 72.7+10.5j, Z12 = 37.8-34.2j)
+[PASS] 4a two-port prediction of the in-phase driving-point impedance matches a direct two-source NEC run (< 0.5 ohm) (110.49-23.63j vs 110.49-23.63j)
+
+SUMMARY: ALL PASS

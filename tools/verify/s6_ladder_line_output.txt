@@ -1,0 +1,28 @@
+=== 1-2. check against N7WS's home-made open-wire line (16 AWG = 1.291 mm, 0.75 in = 19.05 mm, air)
+   Z0 = 406 ohm (measured 399); loss at 50 MHz = 0.297 dB/100 ft (measured 0.30)
+[PASS] two-wire Z0 within 3 % of the measured 399 ohm 
+[PASS] conductor-loss model within 10 % of the measured 0.30 dB/100 ft 
+   commercial 450-ohm window line, dry, scaled sqrt(f) to 14 MHz: 0.175-0.217 dB/100 ft (ATU page assumes 0.20)
+[PASS] the ATU page's 0.2 dB/100 ft at 14 MHz lies in the scaled measured range 
+   wet/dry ratio at 50 MHz: 12-18x (water film on the web: dielectric loss)
+=== 3. matched loss, dB/100 m
+   Z0: 600-ohm open wire 598, twin-lead model 311, 24 AWG PVC twisted pair 111 ohm; Cat 6A fit k1 1.816, k2 0.00937
+   f (MHz) | 600 open | 450 window (meas. scaled) | 300 twin | Cat6A | 24AWG TP | RG-58 | LMR-400
+       3.6 |     0.11 |  0.29- 0.36              |     0.69 |   3.5 |      3.6 |   2.2 |    0.77
+      14.0 |     0.22 |  0.57- 0.71              |     1.38 |   6.9 |      8.6 |   4.4 |    1.52
+      28.0 |     0.31 |  0.81- 1.01              |     1.96 |   9.9 |     13.8 |   6.3 |    2.16
+      50.0 |     0.42 |  1.08- 1.35              |     2.64 |  13.3 |     21.0 |   8.6 |    2.89
+     144.0 |     0.71 |  1.84- 2.28              |     4.58 |  23.1 |     47.6 |  15.2 |    4.95
+     433.0 |     1.22 |  3.19- 3.96              |     8.25 |  41.9 |    119.8 |  28.7 |    8.74
+[PASS] at 14 MHz ladder line is > 5x lower loss than RG-58 
+[PASS] home-made twisted pair at 433 MHz is lossier than RG-58 120 vs 29 dB/100 m
+[PASS] Cat 6A at 433 MHz (~42 dB/100 m) is within 2x of RG-58 
+=== 4. total loss vs SWR, 30 m at 14 MHz
+   RG-58 (KB fit)                                      : matched  1.31 dB | SWR 3  1.92 | 10  4.14 | 20  6.15 dB
+   LMR-400                                             : matched  0.46 dB | SWR 3  0.72 | 10  1.87 | 20  3.14 dB
+   450 ladder, 0.20 dB/100 ft (ATU page)               : matched  0.20 dB | SWR 3  0.32 | 10  0.90 | 20  1.63 dB
+   450 ladder, measured-dry scaled (0.41 high end)     : matched  0.21 dB | SWR 3  0.35 | 10  0.97 | 20  1.74 dB
+   450 ladder, wet (6.1 dB/100 ft @50 MHz scaled by f) : matched  1.68 dB | SWR 3  2.40 | 10  4.89 | 20  7.04 dB
+[PASS] reproduces the ATU page ladder row (0.20 / 0.32 / 0.90 / 1.63 dB) 
+
+ALL PASS

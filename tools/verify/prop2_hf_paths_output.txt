@@ -1,0 +1,123 @@
+=== 1. Hop geometry ===
+  E       h=110 km, take-off  0 deg: max one-hop ground range   2351 km; sec(i) at layer = 5.45
+  E       h=110 km, take-off  3 deg: max one-hop ground range   1776 km; sec(i) at layer = 5.25
+  E       h=110 km, take-off 10 deg: max one-hop ground range   1004 km; sec(i) at layer = 3.99
+  F2      h=300 km, take-off  0 deg: max one-hop ground range   3836 km; sec(i) at layer = 3.37
+  F2      h=300 km, take-off  3 deg: max one-hop ground range   3225 km; sec(i) at layer = 3.33
+  F2      h=300 km, take-off 10 deg: max one-hop ground range   2193 km; sec(i) at layer = 2.94
+  F2 high h=350 km, take-off  0 deg: max one-hop ground range   4130 km; sec(i) at layer = 3.14
+  F2 high h=350 km, take-off  3 deg: max one-hop ground range   3515 km; sec(i) at layer = 3.10
+  F2 high h=350 km, take-off 10 deg: max one-hop ground range   2448 km; sec(i) at layer = 2.79
+  [PASS] E-layer one-hop range at 3 deg (km) [pre-registered 1900..2100 was wrong: 0 deg gives 2351 km]: 1775.582 (expected 1700..1850)
+  [PASS] E-layer one-hop range at 0 deg (km): 2350.954 (expected 2300..2400)
+  [PASS] F2 one-hop range at 0 deg, 300 km (km): 3835.826 (expected 3800..3950)
+  -> exam rules of thumb: E ~1200 mi (= 1931 km), F2 ~2500 mi (= 4022 km)
+  Critical angle: for a given foF2 and frequency f, rays steeper than the angle where f = foF2 sec(i) penetrate.
+   f=7 MHz <= foF2=8: reflected even at vertical incidence (no skip zone)
+   f=14 MHz, foF2=8: critical incidence 55.2 deg -> highest take-off angle that returns ~30.8 deg
+   f=21 MHz, foF2=12: critical incidence 55.2 deg -> highest take-off angle that returns ~30.8 deg
+
+=== 2. Singapore paths, October ===
+  Singapore-Perth: great-circle 3914 km; long path 36116 km
+  Singapore-Darwin: great-circle 3355 km; long path 36675 km
+  Singapore-Sydney: great-circle 6306 km; long path 33724 km
+  R12= 53 Singapore-Perth  : path MUF max  28.3 MHz at 08 UT (16 SGT), min  11.0 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 53 Singapore-Darwin : path MUF max  37.0 MHz at 08 UT (16 SGT), min  11.8 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 53 Singapore-Sydney : path MUF max  26.3 MHz at 04 UT (12 SGT), min  12.9 MHz at 18 UT (02 SGT); lowest-order mode 2F
+  R12= 78 Singapore-Perth  : path MUF max  29.8 MHz at 08 UT (16 SGT), min  12.6 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 78 Singapore-Darwin : path MUF max  38.4 MHz at 08 UT (16 SGT), min  17.0 MHz at 22 UT (06 SGT); lowest-order mode 2F
+  R12= 78 Singapore-Sydney : path MUF max  28.3 MHz at 04 UT (12 SGT), min  14.4 MHz at 18 UT (02 SGT); lowest-order mode 2F
+  R12= 88 Singapore-Perth  : path MUF max  30.3 MHz at 08 UT (16 SGT), min  13.2 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 88 Singapore-Darwin : path MUF max  38.9 MHz at 08 UT (16 SGT), min  17.6 MHz at 22 UT (06 SGT); lowest-order mode 2F
+  R12= 88 Singapore-Sydney : path MUF max  29.0 MHz at 04 UT (12 SGT), min  14.9 MHz at 18 UT (02 SGT); lowest-order mode 2F
+  R12= 10 Singapore-Perth  : path MUF max  25.4 MHz at 08 UT (16 SGT), min   8.2 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 10 Singapore-Darwin : path MUF max  34.1 MHz at 08 UT (16 SGT), min   8.2 MHz at 20 UT (04 SGT); lowest-order mode 2F
+  R12= 10 Singapore-Sydney : path MUF max  22.3 MHz at 04 UT (12 SGT), min  10.1 MHz at 20 UT (04 SGT); lowest-order mode 3F
+
+  Detail: Singapore-Perth, R12 = 78 (UT, SGT, F2 BMUF, E BMUF, FOT=0.85*MUF, n0, take-off(300 km))
+   00 UT / 08 SGT: F2  23.7  E 12.0  FOT  20.2  2F  12.4 deg
+   02 UT / 10 SGT: F2  25.0  E 16.1  FOT  21.2  2F  14.3 deg
+   04 UT / 12 SGT: F2  26.8  E 17.3  FOT  22.8  2F  15.8 deg
+   06 UT / 14 SGT: F2  29.2  E 17.0  FOT  24.8  2F  15.4 deg
+   08 UT / 16 SGT: F2  29.8  E 15.2  FOT  25.3  2F  14.7 deg
+   10 UT / 18 SGT: F2  28.5  E 10.6  FOT  24.2  2F  14.2 deg
+   12 UT / 20 SGT: F2  25.1  E  2.5  FOT  21.3  2F  14.2 deg
+   14 UT / 22 SGT: F2  22.3  E  2.2  FOT  18.9  2F  14.5 deg
+   16 UT / 00 SGT: F2  19.0  E  2.2  FOT  16.1  2F  14.2 deg
+   18 UT / 02 SGT: F2  15.5  E  2.2  FOT  13.2  2F  14.6 deg
+   20 UT / 04 SGT: F2  12.6  E  2.2  FOT  10.7  2F  15.1 deg
+   22 UT / 06 SGT: F2  14.3  E  3.2  FOT  12.1  2F  13.4 deg
+  [PASS] Sing-Perth noon (04 UT) F2 BMUF, R12 = 78 (MHz): 26.807 (expected 20..40)
+  [PASS] Sing-Perth 04 SGT (20 UT) F2 BMUF lower than noon: 14.242 (expected 0.5..30)
+  Solar-min (R12=10) noon MUF 21.8 MHz vs R12=78 26.8 MHz (ratio 0.81)
+  Perth path midpoint (-15.4, 109.3) at 04 UT: foF2 11.54 MHz, M(3000)F2 2.72, foE 3.78, fH 1.19, hr 372 km, D 3914 km, dmax 4000
+
+=== 3. D-layer absorption estimate (P.533 form), Singapore-Perth, noon ===
+  fL (Singapore, 100 km) = |fH sin I| = 0.25 MHz
+  R12= 78,  5 MHz, 2 hop(s), sec i110 = 3.60: Li ~ 119.5 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 78,  7 MHz, 2 hop(s), sec i110 = 3.60: Li ~  62.6 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 78, 10 MHz, 2 hop(s), sec i110 = 3.60: Li ~  31.3 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 78, 14 MHz, 2 hop(s), sec i110 = 3.60: Li ~  16.2 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 78, 21 MHz, 2 hop(s), sec i110 = 3.60: Li ~   7.3 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 10,  5 MHz, 2 hop(s), sec i110 = 3.60: Li ~  83.7 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 10,  7 MHz, 2 hop(s), sec i110 = 3.60: Li ~  43.9 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 10, 10 MHz, 2 hop(s), sec i110 = 3.60: Li ~  22.0 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 10, 14 MHz, 2 hop(s), sec i110 = 3.60: Li ~  11.4 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  R12= 10, 21 MHz, 2 hop(s), sec i110 = 3.60: Li ~   5.1 dB (phi_n = 1; x1.5 if phi_n = 1.5)
+  [PASS] noon absorption at 7 MHz, R12 = 78, 2 hops (dB): 62.624 (expected 25..80)
+  (vertical, 1 crossing pair, 7 MHz: ATnoon*(1+0.0067R)/(f+fL)^2 = 8.7 dB; ~26 dB at 2.2 MHz with fL = 1.2 MHz at mid-latitude, the classic A1-method order of magnitude)
+  crude 'absorption LUF' (Li = 10 dB) at noon, R12 = 78: 17.9 MHz (real LUF needs SNR: field strength + P.372 noise)
+  crude 'absorption LUF' (Li = 10 dB) at noon, R12 = 10: 14.9 MHz (real LUF needs SNR: field strength + P.372 noise)
+
+=== 3b. Rough P.533 link budget, Singapore-Perth 2F, noon, R12 = 78 (eqs 17-19, 27; Lz = 8.72 dB) ===
+  hop 1957 km, take-off 12.2 deg, virtual slant range p' = 4177 km
+    7.0 MHz: Li  62.6  Lb  195.1 dB | 100 W, 0 dBi each end: E  -51.6 dBuV/m, Pr  -145.7 dBm, noise(resid., 3 kHz)  -90.1 dBm, SNR -55.6 dB | 100 W, 8 dBi Yagis: SNR -39.6 dB
+   10.0 MHz: Li  31.3  Lb  166.9 dB | 100 W, 0 dBi each end: E  -20.3 dBuV/m, Pr  -117.5 dBm, noise(resid., 3 kHz)  -94.4 dBm, SNR -23.1 dB | 100 W, 8 dBi Yagis: SNR  -7.1 dB
+   14.0 MHz: Li  16.2  Lb  154.7 dB | 100 W, 0 dBi each end: E   -5.2 dBuV/m, Pr  -105.3 dBm, noise(resid., 3 kHz)  -98.5 dBm, SNR  -6.8 dB | 100 W, 8 dBi Yagis: SNR   9.2 dB
+   18.1 MHz: Li   9.8  Lb  150.5 dB | 100 W, 0 dBi each end: E    1.2 dBuV/m, Pr  -101.1 dBm, noise(resid., 3 kHz) -101.6 dBm, SNR   0.5 dB | 100 W, 8 dBi Yagis: SNR  16.5 dB
+   21.0 MHz: Li   7.3  Lb  149.3 dB | 100 W, 0 dBi each end: E    3.7 dBuV/m, Pr   -99.9 dBm, noise(resid., 3 kHz) -103.4 dBm, SNR   3.4 dB | 100 W, 8 dBi Yagis: SNR  19.4 dB
+   24.9 MHz: Li   5.2  Lb  148.7 dB | 100 W, 0 dBi each end: E    5.8 dBuV/m, Pr   -99.3 dBm, noise(resid., 3 kHz) -105.4 dBm, SNR   6.1 dB | 100 W, 8 dBi Yagis: SNR  22.1 dB
+   28.0 MHz: Li   4.1  Lb  156.2 dB | 100 W, 0 dBi each end: E   -0.7 dBuV/m, Pr  -106.8 dBm, noise(resid., 3 kHz) -106.8 dBm, SNR  -0.0 dB | 100 W, 8 dBi Yagis: SNR  16.0 dB
+  [PASS] Lb at 14 MHz (dB): 154.716 (expected 140..165)
+  SSB needs ~+10 dB SNR in 3 kHz; FT8 decodes to ~-20 dB in 2.5 kHz; CW ~0 dB in 3 kHz-equivalent.
+
+=== 4. Skip distance and NVIS over Singapore (October, R12 = 78) ===
+  Singapore 12 SGT: foF2 10.63 MHz, M(3000)F2 2.33, foE 3.77
+   10 MHz: below foF2-ish vertical limit -> no skip zone
+   14 MHz: skip distance ~ 735 km (ground wave dies within tens of km -> silent zone in between)
+   21 MHz: skip distance ~ 1949 km (ground wave dies within tens of km -> silent zone in between)
+   28 MHz: above even the 4000 km MUF -> no F2 skywave (skips everything)
+  foF2 over Singapore: max 12.4 MHz at 17 SGT, min 4.9 MHz at 06 SGT
+  NVIS working window ~ (absorption floor, ~0.85-0.9 foF2): by day ~5-11 MHz, at night ~3-0.85*min(foF2)
+  [PASS] Singapore noon foF2 Oct R12=78 (MHz): 10.628 (expected 8..16)
+
+=== 5. Grey line (mid-October, declination -8.4 deg) ===
+  Singapore: sunrise 23.09 UT, sunset 11.07 UT
+  Perth    : sunrise 21.92 UT, sunset 10.63 UT
+  London   : sunrise  6.72 UT, sunset 17.30 UT
+  New York : sunrise 11.42 UT, sunset 22.45 UT
+  Grey-line paths: stations simultaneously near their terminators (e.g. Singapore sunset ~11 UT with European sunrise in winter) — low D absorption at both ends while F2 still ionised.
+
+=== 6. Magneto-ionic splitting at Singapore ===
+  fH (300 km) = 1.012 MHz -> fxF2 - foF2 ~ fH/2 = 0.51 MHz (for foF2 >> fH)
+  exact: foF2 = 10.0 MHz -> fxF2 = 10.519 MHz (difference 0.519 MHz)
+  [PASS] fx - fo ~ fH/2 (MHz): 0.519 (expected 0.45..0.55)
+
+=== 7. P.372 man-made and galactic noise, Fam = c - d log10(f_MHz) (dB above kT0b) ===
+  city        : 3.5 MHz  61.7  7 MHz  53.4  14 MHz  45.1  28 MHz  36.7 dB
+  residential : 3.5 MHz  57.4  7 MHz  49.1  14 MHz  40.8  28 MHz  32.4 dB
+  rural       : 3.5 MHz  52.1  7 MHz  43.8  14 MHz  35.5  28 MHz  27.1 dB
+  quiet rural : 3.5 MHz  38.0  7 MHz  29.4  14 MHz  20.8  28 MHz  12.2 dB
+  galactic    : 3.5 MHz  39.5  7 MHz  32.6  14 MHz  25.6  28 MHz  18.7 dB
+  [PASS] residential at 10 MHz vs ITURHFProp 44.80 dB: 44.800 (expected 44.75..44.85)
+  [PASS] rural at 6.2 MHz vs ITURHFProp 45.251 dB: 45.251 (expected 45.2..45.3)
+  [PASS] galactic at 10 MHz vs ITURHFProp 29.00 dB: 29.000 (expected 28.95..29.05)
+  kT0 = -174 dBm/Hz, so Fa = 45 dB in 3 kHz bandwidth means a noise floor of -174 + 34.8 + 45 = -94 dBm.
+
+=== 8. Solar-cycle decline (NOAA predicted F10.7 -> effective R12 via Phi = 63.7 + 0.728R + 0.00089R^2) ===
+  Oct 2026: F10.7 125.9 -> R12  78.0; Singapore-Perth MUF 12/16/04 SGT =  26.8/ 29.8/ 12.6 MHz; Singapore noon foF2 10.63 MHz
+  Oct 2027: F10.7 103.8 -> R12  51.8; Singapore-Perth MUF 12/16/04 SGT =  25.0/ 28.2/ 10.9 MHz; Singapore noon foF2  9.83 MHz
+  Oct 2028: F10.7  85.1 -> R12  28.4; Singapore-Perth MUF 12/16/04 SGT =  23.3/ 26.7/  9.4 MHz; Singapore noon foF2  9.12 MHz
+  Oct 2030: F10.7  70.8 -> R12   9.6; Singapore-Perth MUF 12/16/04 SGT =  21.8/ 25.3/  8.2 MHz; Singapore noon foF2  8.55 MHz
+
+ALL PASS

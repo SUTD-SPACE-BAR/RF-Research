@@ -1,0 +1,57 @@
+=== 1. Hyperbolic lens: equal path from the focus to the exit plane ===
+  n = 1.612, F = 100.0 mm: aperture radius at th_max = 148.9 mm, vertex at z = 100.0 mm
+  path spread over the aperture = 8.53e-14 mm
+[PASS] equal electrical path (hyperbola) 
+
+=== 3. Lens gain and dielectric loss ===
+  77 GHz, PTFE          : D =     50 mm =  12.8 lambda, F/D 1.0: convex height   11.0 mm (edge ray 22 deg), G(e_ap 0.55) =  29.5 dBi, HPBW ~  5.5 deg, dielectric loss ~ 0.02 dB, 2-face reflection loss ~ 0.30 dB, convex-cap volume ~ 11 cm^3 -> 0.02 kg (density 2.2 g/cm^3, excl. base)
+  77 GHz, printed PLA   : D =     50 mm =  12.8 lambda, F/D 1.0: convex height    8.4 mm (edge ray 23 deg), G(e_ap 0.55) =  29.5 dBi, HPBW ~  5.5 deg, dielectric loss ~ 0.71 dB, 2-face reflection loss ~ 0.49 dB, convex-cap volume ~ 8 cm^3 -> 0.01 kg (density 1.24 g/cm^3, excl. base)
+  24 GHz, printed PLA   : D =    100 mm =   8.0 lambda, F/D 1.0: convex height   16.7 mm (edge ray 23 deg), G(e_ap 0.55) =  25.4 dBi, HPBW ~  8.7 deg, dielectric loss ~ 0.44 dB, 2-face reflection loss ~ 0.49 dB, convex-cap volume ~ 66 cm^3 -> 0.08 kg (density 1.24 g/cm^3, excl. base)
+  24 GHz, printed ABS   : D =    100 mm =   8.0 lambda, F/D 1.0: convex height   17.0 mm (edge ray 23 deg), G(e_ap 0.55) =  25.4 dBi, HPBW ~  8.7 deg, dielectric loss ~ 0.14 dB, 2-face reflection loss ~ 0.48 dB, convex-cap volume ~ 67 cm^3 -> 0.07 kg (density 1.05 g/cm^3, excl. base)
+  10 GHz, PTFE          : D =    200 mm =   6.7 lambda, F/D 1.0: convex height   43.9 mm (edge ray 22 deg), G(e_ap 0.55) =  23.8 dBi, HPBW ~ 10.5 deg, dielectric loss ~ 0.01 dB, 2-face reflection loss ~ 0.30 dB, convex-cap volume ~ 689 cm^3 -> 1.52 kg (density 2.2 g/cm^3, excl. base)
+  433 MHz, PTFE (why not): D =   3460 mm =   5.0 lambda, F/D 1.0: convex height  759.0 mm (edge ray 22 deg), G(e_ap 0.55) =  21.3 dBi, HPBW ~ 14.0 deg, dielectric loss ~ 0.01 dB, 2-face reflection loss ~ 0.30 dB, convex-cap volume ~ 3568449 cm^3 -> 7850.59 kg (density 2.2 g/cm^3, excl. base)
+  zone step lambda/(n-1) for er 2.1: 2.23 lambda (24 GHz: 27.8 mm)
+  zone step lambda/(n-1) for er 2.6: 1.63 lambda (24 GHz: 20.4 mm)
+
+=== 2. Luneburg lens ray trace (R = 1, source on the surface at z = -1) ===
+  launch    5 deg: exits at x = +0.0872, z = +0.9962, direction -0.0000 deg from axis
+  launch   15 deg: exits at x = +0.2588, z = +0.9659, direction -0.0000 deg from axis
+  launch   25 deg: exits at x = +0.4226, z = +0.9063, direction -0.0000 deg from axis
+  launch   35 deg: exits at x = +0.5736, z = +0.8192, direction -0.0000 deg from axis
+  launch   45 deg: exits at x = +0.7071, z = +0.7071, direction -0.0000 deg from axis
+  launch   55 deg: exits at x = +0.8192, z = +0.5736, direction -0.0000 deg from axis
+  launch   65 deg: exits at x = +0.9063, z = +0.4226, direction -0.0000 deg from axis
+  launch   75 deg: exits at x = +0.9659, z = +0.2588, direction -0.0000 deg from axis
+  launch   85 deg: exits at x = +0.9962, z = +0.0872, direction -0.0000 deg from axis
+[PASS] Luneburg: all exit rays parallel to the axis (< 0.1 deg) (max 3.85e-07 deg)
+
+=== 4. Phase quantisation loss (uniform aperture, random phases) ===
+  1-bit: simulated  -3.93 dB, theory sinc^2(1/2^b) =  -3.92 dB
+  2-bit: simulated  -0.91 dB, theory sinc^2(1/2^b) =  -0.91 dB
+  3-bit: simulated  -0.22 dB, theory sinc^2(1/2^b) =  -0.22 dB
+  4-bit: simulated  -0.06 dB, theory sinc^2(1/2^b) =  -0.06 dB
+[PASS] 1-bit loss = -3.92 dB 
+
+=== 5. Reflectarray bandwidth from the spatial phase delay (centre-fed, element response ignored) ===
+  D = 30 cm (10 lambda), F/D = 0.8; edge-centre path difference = 1.43 lambda
+   f =  9.00 GHz (-10 %): boresight gain change from spatial phase delay =  -0.29 dB
+   f =  9.50 GHz (-5 %): boresight gain change from spatial phase delay =  -0.07 dB
+   f = 10.00 GHz (+0 %): boresight gain change from spatial phase delay =   0.00 dB
+   f = 10.50 GHz (+5 %): boresight gain change from spatial phase delay =  -0.07 dB
+   f = 11.00 GHz (+10 %): boresight gain change from spatial phase delay =  -0.29 dB
+  D = 100 cm (33 lambda), F/D = 0.8; edge-centre path difference = 4.78 lambda
+   f =  9.00 GHz (-10 %): boresight gain change from spatial phase delay =  -3.54 dB
+   f =  9.50 GHz (-5 %): boresight gain change from spatial phase delay =  -0.83 dB
+   f = 10.00 GHz (+0 %): boresight gain change from spatial phase delay =   0.00 dB
+   f = 10.50 GHz (+5 %): boresight gain change from spatial phase delay =  -0.83 dB
+   f = 11.00 GHz (+10 %): boresight gain change from spatial phase delay =  -3.54 dB
+  D = 300 cm (100 lambda), F/D = 0.8; edge-centre path difference = 14.35 lambda
+   f =  9.00 GHz (-10 %): boresight gain change from spatial phase delay = -13.15 dB
+   f =  9.50 GHz (-5 %): boresight gain change from spatial phase delay =  -9.15 dB
+   f = 10.00 GHz (+0 %): boresight gain change from spatial phase delay =   0.00 dB
+   f = 10.50 GHz (+5 %): boresight gain change from spatial phase delay =  -9.15 dB
+   f = 11.00 GHz (+10 %): boresight gain change from spatial phase delay = -13.15 dB
+[PASS] reflectarray (30 cm) loses < 1 dB at +5 % (spatial delay only) (-0.07 dB)
+  (a real reflectarray's bandwidth is usually limited first by the element phase-vs-frequency slope)
+
+ALL PASS

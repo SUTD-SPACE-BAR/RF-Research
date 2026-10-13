@@ -1,0 +1,30 @@
+1js5rd4	I reached a repeater 100 miles away with a handheld — how is that possible?	09	C	09/fresnel-zones-los-radio-horizon	radio horizon from a hilltop repeater; add a worked "HT to mountaintop" example
+1t7ji62	Is this huge array on a house a ham antenna? (photo ID)	08	M	NEW 08/antenna-identification-field-guide	HF beams/log-periodics/stacked arrays
+1opdevp	What is the military purpose of these ring-shaped antenna arrays? (photo ID)	08	M	NEW 08/antenna-identification-field-guide	circularly disposed arrays / HF DF sites
+16wu8wt	Can a splitter be used backwards — one antenna for two radios?	06	C	06/couplers-dividers-combiners	reciprocity; isolation; never TX into a shared receiver port
+1ppna66	How can I tell whether my coax is 50 Ω or 75 Ω if a multimeter shows nothing?	03	C	03/telegrapher-equations-characteristic-impedance; 03/coax-and-cables	dimension ratio or NanoVNA measurement
+1jtpemy	Total newbie — what kind of antenna is this?	08	M	NEW 08/antenna-identification-field-guide
+1eh1g88	Why does my 2 m tape-measure Yagi also pick up UHF?	08	P	08/yagi-uda-and-log-periodic	off-band response / harmonic resonance of antennas not discussed
+1ep8z7b	New to HF — what is this strange signal on 40 m?	14	M	NEW 14/signal-identification	HF digital modes / OTH radar ID
+1vwqp8k	Can I talk to my kids' toy walkie-talkies (FRS 467 MHz) from my ham handheld?	19	P	19/spectrum-allocation-ism-bands	type-approval/service rules (FRS/PMR446 vs ham) not covered — reinforces D1 #5
+1u4uyxa	I opened a cheap 1:64 unun — is this construction any good?	08	P	08/antenna-matching-and-baluns; 06/baluns-and-rf-transformers	EFHW 49:1/64:1 core choice, saturation/heating, compensation capacitor not covered
+1007ecw	What are the canisters at the bottom of a repeater's antenna rack?	06	M	06/rf-filters-lc-saw-baw-cavity-microstrip	cavity duplexers (pass/notch) — reinforces D1 #23
+1uf2ofq	Does the compact "Isotron" HF antenna really work?	08	C	08/small-antenna-limits	tiny-antenna claims vs Chu/efficiency
+1u7w21s	Am I allowed to transmit a 77 GHz radar signal?	19	C	19/spectrum-allocation-ism-bands; 19/singapore-imda-rules	hobby radar bands
+xiw3ag	Am I doing ISS-repeater reception right?	20	P	09/multipath-fading-doppler; 08/antenna-polarization-and-circular-polarization	satellite Doppler + CP principles; amateur-satellite station recipe absent
+1t4dshg	Can I turn my new dipole into a Yagi?	08	C	08/yagi-uda-and-log-periodic
+1ir9h6j	Can I use a fixed external antenna with my handheld?	08	P	08/dipoles-and-monopoles; 03/coax-and-cables	HT whip vs external antenna — reinforces D1 #39
+zkbibg	Awkward mount — does this antenna need a ground plane?	08	C	08/dipoles-and-monopoles
+1vjzoaj	What is the big blob of signals next to 7.2 MHz?	14	M	NEW 14/signal-identification	broadcast/OTH radar/jamming ID on HF
+13q490t	Will this coil of coax work as a common-mode choke?	08	C	08/antenna-matching-and-baluns
+11m5gic	A V-dipole is supposed to be directional — why do I hit a repeater 16 miles away?	08	P	08/dipoles-and-monopoles	V/inverted-V patterns not covered; "directional ≠ deaf off-axis"
+1edexe5	Do I need to call utilities before driving ground rods for lightning protection?	19	M	19/lab-safety-esd-high-power	station lightning protection/grounding absent — reinforces D1 #15
+1rujhp6	I only want to listen — are there receive-only radios?	14	C	14/sdr-hardware-survey
+1tppped	How do I add lightning protection to a random-wire antenna?	19	M	19/lab-safety-esd-high-power	D1 #15
+1clx9k8	Thoughts on my SWR plot?	03	C	03/reflections-vswr-return-loss-mismatch
+1oa9ioi	Is a turkey roasting pan a good enough ground plane for 50 W?	08	P	08/dipoles-and-monopoles	ground-plane size covered; improvised/mag-mount capacitive ground absent — D1 #39
+1o5ih4j	Can a 10 m antenna be tuned for VHF/UHF?	08	P	08/dipoles-and-monopoles	harmonic (3λ/4, 5λ/4) operation and patterns not covered
+1ka2e4l	Why does the ISS signal shift in frequency during a pass?	09	C	09/multipath-fading-doppler	Doppler principle (worked for rockets; LEO pass example would help)
+1kp7074	Is 10–12 h a day in a car with a transmitting radio safe?	19	C	19/rf-exposure-safety
+13emwge	Will this kit make a 10 m dipole if I mount it vertically on PVC?	08	C	08/dipoles-and-monopoles
+1n1hrpv	Best antenna for a small space or stealth install?	08	P	08/small-antenna-limits; 08/loop-antennas	random-wire/end-fed and attic options absent — D1 #8

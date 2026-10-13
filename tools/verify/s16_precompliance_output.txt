@@ -1,0 +1,62 @@
+================================================================================================
+1. LISN impedance seen by the EUT (port terminated in the 50 ohm receiver)
+================================================================================================
+     0.010 MHz: |Z| 50 uH LISN  12.7 ohm, 5 uH AN  14.9 ohm
+     0.150 MHz: |Z| 50 uH LISN  36.2 ohm, 5 uH AN   5.7 ohm
+     0.500 MHz: |Z| 50 uH LISN  48.2 ohm, 5 uH AN  14.4 ohm
+     1.000 MHz: |Z| 50 uH LISN  49.5 ohm, 5 uH AN  25.3 ohm
+     5.000 MHz: |Z| 50 uH LISN  50.0 ohm, 5 uH AN  47.3 ohm
+    30.000 MHz: |Z| 50 uH LISN  50.0 ohm, 5 uH AN  49.9 ohm
+   108.000 MHz: |Z| 50 uH LISN  50.0 ohm, 5 uH AN  50.0 ohm
+[PASS] 50 uH LISN within 40-52 ohm from 1 to 30 MHz 
+[PASS] 5 uH AN is < 15 ohm at 150 kHz (low-impedance battery model) 
+
+================================================================================================
+2. Buck converter DM conducted emission (8.4 V -> 3.3 V, 1 A, 2 MHz, D = 0.39), 50 uH LISN
+================================================================================================
+  n= 1   2.0 MHz: I_in harmonic  600.9 mA ->  76.3 dBuV at the LISN port (Class B AV limit 46; +30.3 dB)
+  n= 2   4.0 MHz: I_in harmonic  198.5 mA ->  62.6 dBuV at the LISN port (Class B AV limit 46; +16.6 dB)
+  n= 3   6.0 MHz: I_in harmonic  112.9 mA ->  64.2 dBuV at the LISN port (Class B AV limit 50; +14.2 dB)
+  n= 5  10.0 MHz: I_in harmonic   14.3 mA ->  52.2 dBuV at the LISN port (Class B AV limit 50; +2.2 dB)
+  n=10  20.0 MHz: I_in harmonic   14.2 mA ->  58.8 dBuV at the LISN port (Class B AV limit 50; +8.8 dB)
+[PASS] bare buck fails Class B conducted by > 20 dB 
+  LC input filter 1.0 uH + 10 uF (resonance 50 kHz), and with R-C damping 0.5 ohm + 47 uF:
+  n= 1   2.0 MHz:   6.8 dBuV undamped /   6.7 dBuV damped (-39.2 dB vs limit)
+  n= 2   4.0 MHz:  -8.8 dBuV undamped /  -8.8 dBuV damped (-54.8 dB vs limit)
+  n= 3   6.0 MHz:  -5.2 dBuV undamped /  -5.2 dBuV damped (-55.2 dB vs limit)
+  n= 5  10.0 MHz: -16.2 dBuV undamped / -16.3 dBuV damped (-66.2 dB vs limit)
+  n=10  20.0 MHz:  -9.3 dBuV undamped /  -9.4 dBuV damped (-59.3 dB vs limit)
+[PASS] filtered buck passes Class B average 
+  filter output-impedance peak: 4.35 ohm undamped, 0.45 ohm damped; converter |negative input R| = V^2/P = 19.2 ohm -> keep the peak well below it (Middlebrook)
+[PASS] damping lowers the filter Z peak by > 5x 
+
+================================================================================================
+3. LPDA antenna factor and a radiated pre-scan reading
+================================================================================================
+[PASS] AF constant: 20 log(sqrt(4 pi eta0/50)/c[Mm/s]) = -29.77 dB (-29.774)
+  300 MHz, 6 dBi LPDA: AF = 13.8 dB/m; 0 dBi: 19.8 dB/m
+  433 MHz, 6 dBi LPDA: AF = 17.0 dB/m; 0 dBi: 23.0 dB/m
+  1000 MHz, 6 dBi LPDA: AF = 24.2 dB/m; 0 dBi: 30.2 dB/m
+  reading -85.0 dBm (= 22 dBuV) at 400 MHz, AF 16.3 dB/m, cable 1.0 dB -> E = 39.3 dBuV/m at 3 m
+  FCC 15.109 Class B 3 m (216-960 MHz): 46.0 dBuV/m -> margin 6.7 dB; CISPR 32 Class B 37 dBuV/m @10 m scaled to 3 m: 47.5 dBuV/m -> margin 8.2 dB
+  RBW correction, noise-like emission, 100 kHz analyser vs 120 kHz CISPR: +0.8 dB; impulsive (coherent) noise: +1.6 dB; CW harmonics: 0 dB
+
+================================================================================================
+4. Fixed-height pre-scan error over a conducting ground (horizontal polarisation, EUT at 0.8 m, d = 3 m)
+================================================================================================
+   100 MHz: a 1 m fixed antenna reads -3.3 dB vs the 1-4 m height-scan maximum
+   150 MHz: a 1 m fixed antenna reads -2.0 dB vs the 1-4 m height-scan maximum
+   200 MHz: a 1 m fixed antenna reads -0.9 dB vs the 1-4 m height-scan maximum
+   300 MHz: a 1 m fixed antenna reads +0.0 dB vs the 1-4 m height-scan maximum
+   500 MHz: a 1 m fixed antenna reads -4.3 dB vs the 1-4 m height-scan maximum
+   900 MHz: a 1 m fixed antenna reads -0.0 dB vs the 1-4 m height-scan maximum
+[PASS] fixed height under-reads by > 3 dB at some frequency 
+
+================================================================================================
+5. Current-probe reading -> field at 3 m (CM formula E = 1.26e-6 f L I / r, L capped at lambda/pi)
+================================================================================================
+    30 MHz: probe 20 dBuV, Zt -5 dBohm -> I_cm 25.0 dBuA (17.78 uA) on 1 m -> E(3 m) 47.0 dBuV/m vs FCC B 40.0
+   100 MHz: probe 10 dBuV, Zt +0 dBohm -> I_cm 10.0 dBuA (3.16 uA) on 1 m -> E(3 m) 42.1 dBuV/m vs FCC B 43.5
+   200 MHz: probe 5 dBuV, Zt +3 dBohm -> I_cm 2.0 dBuA (1.26 uA) on 1 m -> E(3 m) 34.1 dBuV/m vs FCC B 43.5
+
+ALL PASS

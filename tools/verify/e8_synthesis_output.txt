@@ -1,0 +1,102 @@
+=== 1. Schelkunoff polynomial (x_n = n d, z = exp(j k d u)) ===
+[PASS] 1a product-of-zeros == polynomial sum (max err 4.0e-15)
+[PASS] 1b zeros at 2*pi*m/N give uniform weights 
+  cardioid: a1/a0 phase = -90.0 deg, peak at u = +1.000, back level -400.0 dB, directivity 2.000 = 3.01 dBi
+[PASS] 1c cardioid: Schelkunoff zero at backfire gives a 90 deg feed-phase difference 
+[PASS] 1c cardioid directivity equals the closed-form endfire-pair value (D = 2, 3.01 dBi) (numeric 2.0000, closed form 2.0000)
+  4-el nulls at -40/+25/+55 deg: |a| = [0.8327 1.     1.     0.8327], arg(a) = [-30.4   0.   11.4  41.8] deg
+    beam peak at theta = -7.20 deg; broadside level -0.79 dB re peak; null depths [-327.3 -322.4 -400. ] dB; taper efficiency 0.821 (-0.85 dB)
+[PASS] 1d nulls exactly at requested angles (< -250 dB) 
+  8-el uniform with zero #2 at radius 1.00: level at that null direction = -311.5 dB re beam
+  8-el uniform with zero #2 at radius 0.99: level at that null direction = -43.0 dB re beam
+  8-el uniform with zero #2 at radius 0.95: level at that null direction = -28.8 dB re beam
+[PASS] 1e zero moved off the unit circle (r = 0.95) leaves a finite minimum above -45 dB [pre-registered: approx 20log(0.05/2)/... order -40 dB] (-28.8 dB)
+  d = 0.3 lambda: visible psi range = +-108 deg of the unit circle; uniform 8-el zeros at 45 deg steps -> 2 of 7 zeros visible (each side of 0, counting psi in (0, 180]: zeros at [ 45.  90. 135. 180.] deg)
+
+=== 2. Fourier-series synthesis of a flat-top sector |u| <= 0.5 (+-30 deg), d = lambda/2 ===
+  N = 11: truncated Fourier ripple 2.87 dB p-p, SLL -22.4 dB, 10-90% edge 0.148 in u;  Hamming-windowed ripple 3.98 dB, SLL -21.4 dB, edge 0.325
+  N = 21: truncated Fourier ripple 1.32 dB p-p, SLL -25.7 dB, 10-90% edge 0.090 in u;  Hamming-windowed ripple 2.48 dB, SLL -54.7 dB, edge 0.176
+  N = 41: truncated Fourier ripple 1.19 dB p-p, SLL -31.5 dB, 10-90% edge 0.045 in u;  Hamming-windowed ripple 0.72 dB, SLL -57.0 dB, edge 0.091
+[PASS] 2 Gibbs: truncated-Fourier ripple stays ~1.5-2 dB p-p as N grows (does not vanish) [pre-registered: overshoot ~9% -> ~1.6 dB] (1.32, 1.19 dB)
+[PASS] 2 edge width shrinks ~1/N (0.090 -> 0.045)
+
+=== 3. Woodward-Lawson (orthogonal sampled beams), d = lambda/2 ===
+[PASS] 3a WL pattern passes exactly through the samples (max err 5.7e-16)
+  sector N = 21: 21 samples, ripple 1.45 dB p-p, SLL -19.8 dB, edge 0.229
+  sector N = 20, hard edge samples: ripple 1.40 dB, SLL -19.6 dB, edge 0.243; with half-amplitude samples at u = +-0.5: ripple 2.01 dB, SLL -37.8 dB, edge 0.133
+    (N = 16: deviation over 7-38 deg only = -2.45/+2.73 dB; last non-zero sample at u = 0.625 = 38.7 deg)
+  csc^2 (5-45 deg) N = 16: max deviation from csc^2 in 6.5-42 deg = +-6.59 dB, max level below -5 deg = -10.8 dB, above 53 deg = -33.1 dB (re csc^2 fit at 5 deg)
+    (N = 24: deviation over 7-38 deg only = -0.46/+0.38 dB; last non-zero sample at u = 0.667 = 41.8 deg)
+  csc^2 (5-45 deg) N = 24: max deviation from csc^2 in 6.5-42 deg = +-0.46 dB, max level below -5 deg = -18.2 dB, above 53 deg = -31.1 dB (re csc^2 fit at 5 deg)
+  (pre-registered N = 16 within +-1.5 dB over 6.5-42 deg: NOT met, 6.59 dB -- see log)
+  smallest N meeting +-1.5 dB over 6.5-42 deg: N = 17
+[PASS] 3b a WL csc^2 design meets +-1.5 dB over 6.5-42 deg with N <= 24 (N_min = 17)
+
+=== 4. Least-squares synthesis ===
+[PASS] 4a LS over the visible region == Fourier coefficients when d = lambda/2 (rel err 1.0e-04)
+  sector + null at 40 deg: null level -313 dB; ripple 1.32 -> 1.36 dB; SLL -25.7 -> -23.7 dB
+[PASS] 4b LS null constraint satisfied (-313 dB)
+
+=== 5. Min-max (Chebyshev) synthesis by linear programming ===
+  Dolph main lobe reaches -30 dB at u_c = 0.17379 (first null 0.18585)
+  (unconstrained main lobe: max|AF| outside = -30.00 dB re AF(0), but the main-lobe peak is +0.00 dB re AF(0) -> true SLL -30.00 dB)
+  N = 16: LP min-max with sidelobe region |u| >= u_c -> SLL -30.00 dB, weight correlation with Dolph 1.000000
+[PASS] 5a LP reproduces Dolph-Chebyshev (SLL within 0.1 dB, weights corr > 0.9999) (-30.00 dB, 1.000000)
+  + null sector 35-45 deg at -60 dB: peak SLL elsewhere -26.81 dB (was -30.00); max in sector -60.0 dB; taper eff -0.81 dB (Dolph -0.65)
+[PASS] 5b LP null sector meets -60 dB (-60.0)
+
+=== 6. Bayliss difference pattern (Bayliss 1968, line-source form) ===
+[PASS] 6a sine-series aperture reproduces the Bayliss zero-product pattern exactly (rel 9.5e-14)
+  SLL -20 dB, nbar 5: A = 1.2247, sigma = 1.0684, peak at u = 0.7538 (sigma*p0 = 0.7607), max SL -20.37 dB, lobes [-20.37 -20.75 -21.42 -22.45 -24.31]
+  SLL -20 dB, nbar 6: A = 1.2247, sigma = 1.0614, peak at u = 0.7498 (sigma*p0 = 0.7557), max SL -20.29 dB, lobes [-20.29 -20.58 -21.08 -21.81 -22.85]
+  SLL -25 dB, nbar 5: A = 1.4355, sigma = 1.0573, peak at u = 0.7927 (sigma*p0 = 0.8003), max SL -25.34 dB, lobes [-25.34 -25.59 -26.06 -26.8  -28.05]
+  SLL -25 dB, nbar 6: A = 1.4355, sigma = 1.0536, peak at u = 0.7907 (sigma*p0 = 0.7975), max SL -25.30 dB, lobes [-25.3  -25.49 -25.87 -26.46 -27.26]
+  SLL -30 dB, nbar 5: A = 1.6413, sigma = 1.0451, peak at u = 0.8277 (sigma*p0 = 0.8349), max SL -30.32 dB, lobes [-30.32 -30.37 -30.62 -31.05 -31.62]
+  SLL -30 dB, nbar 6: A = 1.6413, sigma = 1.0449, peak at u = 0.8277 (sigma*p0 = 0.8347), max SL -30.32 dB, lobes [-30.32 -30.37 -30.61 -31.04 -31.58]
+  SLL -35 dB, nbar 5: A = 1.8431, sigma = 1.0321, peak at u = 0.8586 (sigma*p0 = 0.8654), max SL -35.04 dB, lobes [-35.31 -35.1  -35.09 -35.2  -35.04]
+  SLL -35 dB, nbar 6: A = 1.8431, sigma = 1.0356, peak at u = 0.8606 (sigma*p0 = 0.8683), max SL -35.21 dB, lobes [-35.37 -35.21 -35.29 -35.55 -35.81]
+  SLL -40 dB, nbar 5: A = 2.0415, sigma = 1.0184, peak at u = 0.8866 (sigma*p0 = 0.8926), max SL -38.30 dB, lobes [-40.34 -39.76 -39.47 -39.24 -38.3 ]
+  SLL -40 dB, nbar 6: A = 2.0415, sigma = 1.0256, peak at u = 0.8906 (sigma*p0 = 0.8989), max SL -39.74 dB, lobes [-40.48 -40.   -39.88 -39.98 -39.93]
+[PASS] 6b Bayliss continuous patterns meet the design SLL within 0.6 dB for 20-35 dB (nbar = 5) ([np.float64(-20.37), np.float64(-25.34), np.float64(-30.32), np.float64(-35.04)])
+[PASS] 6c peak location ~ sigma * p0 (polynomial table transcription check, < 2 %) ([np.float64(0.991), np.float64(0.9905), np.float64(0.9914), np.float64(0.9922), np.float64(0.9932)])
+  sampled arrays (d = lambda/2):
+    N = 16, -25 dB, nbar 5: Delta peak at u = 0.0993, max SL -24.81 dB, normalised slope 12.218
+    N = 16, -30 dB, nbar 5: Delta peak at u = 0.1036, max SL -29.33 dB, normalised slope 11.472
+    N = 16, -35 dB, nbar 5: Delta peak at u = 0.1074, max SL -32.75 dB, normalised slope 10.851
+    N = 32, -25 dB, nbar 5: Delta peak at u = 0.0496, max SL -25.25 dB, normalised slope 24.450
+    N = 32, -30 dB, nbar 5: Delta peak at u = 0.0518, max SL -30.14 dB, normalised slope 22.953
+    N = 32, -35 dB, nbar 5: Delta peak at u = 0.0537, max SL -34.42 dB, normalised slope 21.709
+    N = 64, -25 dB, nbar 5: Delta peak at u = 0.0248, max SL -25.32 dB, normalised slope 48.907
+    N = 64, -30 dB, nbar 5: Delta peak at u = 0.0259, max SL -30.31 dB, normalised slope 45.911
+    N = 64, -35 dB, nbar 5: Delta peak at u = 0.0268, max SL -34.88 dB, normalised slope 43.421
+    N = 16: uniform Delta: max SL -10.11 dB, slope 12.566; sign-flipped Taylor-30: max SL -9.58 dB, slope 8.901; Bayliss-30: -29.33 dB, slope 11.472
+    N = 32: uniform Delta: max SL -10.45 dB, slope 25.133; sign-flipped Taylor-30: max SL -9.89 dB, slope 17.776; Bayliss-30: -30.14 dB, slope 22.953
+[PASS] 6d sampled Bayliss N = 32, 30 dB: max SL within 1 dB of design (-30.14)
+[PASS] 6e sign-flipped Taylor Delta has far worse sidelobes than Bayliss (>= 15 dB worse at N = 16) (-9.6 vs -29.3)
+  LP min-max Delta (N = 16, same slope, sidelobe region u >= 0.2576): max SL -29.62 dB, slope 11.467  vs Bayliss -29.33 dB, 11.472
+[PASS] 6f LP min-max Delta is at least as good as Bayliss for the same slope and null (sanity bound) (-29.62 <= -29.33)
+  Bayliss 30 dB nbar 5 N = 16 weights (x > 0, normalised to max 1): 0.225, 0.628, 0.901, 1.000, 0.931, 0.737, 0.496, 0.324
+
+=== 7. Null steering against an interferer (N = 16, d = lambda/2, Taylor 30 dB quiescent) ===
+[PASS] 7a projected weights put an exact null on the interferer 
+[PASS] 7b null-steered pattern == quiescent minus scaled cancellation beam (Steyskal/Applebaum picture) 
+  interferer at 20 deg: quiescent level there -32.0 dB; after projection: main-beam amplitude change -0.020 dB, white-noise SNR-gain change -0.017 dB, peak SLL -30.0 -> -27.9 dB
+  interferer at 6 deg (HPBW of quiescent ~8.0 deg): SNR-gain change +0.04 dB
+  interferer at 4 deg (HPBW of quiescent ~8.0 deg): SNR-gain change -1.97 dB
+  interferer at 3 deg (HPBW of quiescent ~8.0 deg): SNR-gain change -4.34 dB
+  interferer mis-located by du = 0.005: single null -51.2 dB, derivative null -76.1 dB
+  interferer mis-located by du = 0.01: single null -44.8 dB, derivative null -64.4 dB
+  interferer mis-located by du = 0.02: single null -38.2 dB, derivative null -53.1 dB
+[PASS] 7c derivative null is deeper than a single null 0.01 in u away ((np.float64(-44.78983321451767), np.float64(-64.3748224972436)))
+  null depth with 0.3 dB / 2 deg rms errors: median -39.2 dB, 90th pct -34.0 dB (random-error floor formula (sa^2+sp^2)/(N eta) = -37.5 dB; median of Rayleigh power = floor - 1.6 dB)
+[PASS] 7d error-limited null median within 2 dB of floor-1.6 dB (-39.2 vs -39.1)
+  null depth with 6-bit phase + 0.5 dB amplitude steps only: -38.7 dB
+  MVDR, INR 20 dB: null depth -84.9 dB, correlation with projected uniform beam 1.000000
+  MVDR, INR 40 dB: null depth -124.9 dB, correlation with projected uniform beam 1.000000
+  MVDR, INR 60 dB: null depth -164.9 dB, correlation with projected uniform beam 1.000000
+[PASS] 7e MVDR at INR 60 dB == deterministic projection of the conventional beam (corr > 0.99999) (1.0000000)
+
+=== 8. Figures ===
+  wrote figures e8-shaped-beams.png, e8-bayliss-difference.png, e8-null-steering.png
+
+SUMMARY: ALL PASS

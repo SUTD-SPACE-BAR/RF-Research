@@ -1,0 +1,219 @@
+
+S0  Decision rules
+   band B = sqrt(U_pred^2 + U_meas^2) (k = 2). Examples:
+     meas 2.38 +- 0.01, pred 2.397 +- 0.02, competing-hypothesis separation 0.053: CONFIRMED
+     meas 2.45 +- 0.01, pred 2.397 +- 0.02, competing-hypothesis separation 0.053: REFUTED
+     meas 2.4 +- 0.04, pred 2.397 +- 0.02, competing-hypothesis separation 0.053: INCONCLUSIVE
+   [PASS] decide(): far miss is REFUTED 
+   [PASS] decide(): imprecise measurement is INCONCLUSIVE 
+   [PASS] guarded(): -37.0 +- 1.5 vs -36 dBm limit is INDETERMINATE 
+   [PASS] guarded(): -40.0 +- 1.5 vs -36 dBm limit is PASS 
+
+S1  Antennas
+   A1a dipole 327.9 mm: f_res = 433.125 MHz, band +-1.05 % = +-4.5 MHz (k=2)
+   A1b installed: 2-5 % low (P9) -> accept 403-433 MHz before trimming
+   A2 433 MHz, 130 mm tube, 2.5 mm wall: on-axis -1.0 .. -1.6 %; wire taped to wall -15.1 .. -23.2 %
+   A2 915 MHz, 100 mm cone, 3 mm wall: on-axis -1.4 .. -2.7 %; wire taped to wall -18.4 .. -27.1 %
+   [PASS] F2 bracket: on-axis detuning in a fibreglass tube is small (< 3 %) -- consistent with 08 'a few %' 
+   [PASS] F2 bracket: wall-taped wire detunes several times more than on-axis (> 3x) 
+   A3 TL model of the reference patch: 2.4500 GHz (design 2.45 GHz); openEMS 2.397 GHz
+   [PASS] TL model reproduces the 2.45 GHz design within 0.5 % (2.4500 GHz)
+      er 4.3: h 1.43 / 1.51 / 1.60 mm -> openEMS-transported 2.4286 / 2.4263 / 2.4237 GHz
+      er 4.4: h 1.43 / 1.51 / 1.60 mm -> openEMS-transported 2.4018 / 2.3996 / 2.3970 GHz
+      er 4.5: h 1.43 / 1.51 / 1.60 mm -> openEMS-transported 2.3758 / 2.3737 / 2.3712 GHz
+      er 4.6: h 1.43 / 1.51 / 1.60 mm -> openEMS-transported 2.3507 / 2.3486 / 2.3461 GHz
+      sensitivity: -10.98 % per unit er, -1.17 % per mm of h
+      er unknown (4.3-4.7 -> +-0.2): prediction band +-2.26 % vs TL-vs-openEMS separation 2.2 % -> discrimination ratio 1.0
+      er from ring (U 0.06): prediction band +-0.85 % vs TL-vs-openEMS separation 2.2 % -> discrimination ratio 2.6
+   [PASS] without a measured er the patch test cannot separate TL from openEMS (band >= separation/2) 
+   [PASS] with a ring-measured er it can (band < separation/2) (+-0.85 %)
+   A4 AR measurement error from a stray wave rho (relative amplitude):
+      stray -15 dB -> AR reading error up to +-3.12 dB
+      stray -20 dB -> AR reading error up to +-1.74 dB
+      stray -25 dB -> AR reading error up to +-0.98 dB
+      stray -30 dB -> AR reading error up to +-0.55 dB
+      stray -35 dB -> AR reading error up to +-0.31 dB
+   [PASS] stray -30 dB gives <= 0.6 dB AR error (needed to test AR <= 1.5 dB) 
+   A5 Yagi gain transfer: predicted dP = 9.05 dB; U_meas = +-1.35 dB (k=2)
+      u = 0.100 dB  reference dipole gain (2.15 dBi, matched, mismatch-corrected)
+      u = 0.064 dB  mismatch of each antenna (|G| <= 0.1 vs instrument 0.1)
+      u = 0.231 dB  ground-reflection range field taper (+-0.4 dB)
+      u = 0.173 dB  re-positioning repeatability (+-0.3 dB)
+      u = 0.115 dB  receiver linearity over 9 dB (SDR/tinySA, +-0.2 dB)
+      u = 0.100 dB  RSSI averaging, sigma 1 dB, N=100
+      u = 0.577 dB  different ground illumination of Yagi vs dipole (+-1 dB)
+      acceptance band vs Q2 (+-1 dB): +-1.68 dB
+
+S2  Transmit
+   T1 33 dBm +- 0.5 dB (datasheet) with power sensor (U 0.33 dB): accept +-0.60 dB
+   T1 33 dBm +- 0.5 dB (datasheet) with tinySA only (U 1.5 dB): accept +-1.58 dB
+   T1 supply model (saturated PA on the supply rail, P ~ V^2): 4.5 V -0.92 dB, 5.0 V +0.00 dB, 5.5 V +0.83 dB; regulated-PA hypothesis: 0 dB. Relative U (same set-up) ~ +-0.2 dB -> separable.
+   T3 E22-400T33D burst-current model (sqrt-P, idle 0.1 A assumed): 24 dBm 0.37-0.49 A; 27 dBm 0.48-0.65 A; 30 dBm 0.63-0.88 A; 33 dBm 0.85-1.20 A
+   T3 E220-900T30D burst-current model (sqrt-P, idle 0.05 A assumed): 21 dBm 0.25 A; 24 dBm 0.34 A; 27 dBm 0.45 A; 30 dBm 0.62 A
+      droop at 1.2 A through 50 mOhm source+ESR: 60 mV (1.2 % of 5 V)
+      droop at 1.2 A through 100 mOhm source+ESR: 120 mV (2.4 % of 5 V)
+      droop at 1.2 A through 200 mOhm source+ESR: 240 mV (4.8 % of 5 V)
+   T2 harmonic suppression needed at the antenna port (2f < 1 GHz, 3f > 1 GHz for 433 MHz):
+      E22 33 dBm (licensed): 2f >= 69.0 dBc, 3f >= 63.0 dBc
+      E22 24 dBm + 13.5 dB pad (10 mW e.r.p. test): 2f >= 46.5 dBc, 3f >= 40.5 dBc
+      E220 24 dBm 868 MHz (2f/3f both > 1 GHz): 2f, 3f >= 54.0 dBc
+   [PASS] 2f requirement at 33 dBm is 69 dBc (KB 17/bench R6) 
+      analyser own H2 with no HPF, -7 dBm at analyser: -49 dBm
+      analyser own H2 with HPF 40 dB at f0, -47 dBm: -129 dBm
+   [PASS] analyser H2 without HPF ~ -49 dBm (e3_bench R6) 
+   T4 simulated 99 % OBW = 1.046 x BW  -> 125 kHz: 131 kHz, 250: 261, 500: 523 kHz
+   [PASS] 99 % OBW of SF7/125 ~ 133 kHz (meas_sa.py) (130.7 kHz)
+   T4 6 dB BW at 500 kHz with 100 kHz RBW: averaging 551 kHz, peak max-hold model 641 kHz (>= 500 kHz needed for IREC Mode A / DTS)
+   [PASS] 6 dB bandwidth of a 500 kHz LoRa signal exceeds 500 kHz under both detector models 
+   T5 static frequency-error bands (one end):
+      433.125 MHz: crystal +-10 ppm typ 4.33 kHz, +-30 ppm max 13.0 kHz; TCXO +-2.5 ppm 1.08 kHz; LoRa window +-25 % of 125 kHz = 31.25 kHz
+      868.125 MHz: crystal +-10 ppm typ 8.68 kHz, +-30 ppm max 26.0 kHz; TCXO +-2.5 ppm 2.17 kHz; LoRa window +-25 % of 125 kHz = 31.25 kHz
+      920.125 MHz: crystal +-10 ppm typ 9.20 kHz, +-30 ppm max 27.6 kHz; TCXO +-2.5 ppm 2.30 kHz; LoRa window +-25 % of 125 kHz = 31.25 kHz
+      thermal discriminator (AN1200.37 via KB 15): crystal ~2.2 kHz over a 48 K swing at 868 MHz (0.046 kHz/K) vs TCXO ~0.2 kHz -> over a 25 K self-heat: crystal ~1.1 kHz, TCXO ~0.10 kHz
+   T6 EBYTE air-rate candidates (KB 15 / sdr recipe D5): symbol time, chirp slope, bit rate (CR4/5)
+      2.4k: SF9/125 kHz  Ts 4.096 ms  slope 0.031 GHz/s  Rb 1758 b/s
+      2.4k: SF10/250 kHz  Ts 4.096 ms  slope 0.061 GHz/s  Rb 1953 b/s
+      2.4k: SF11/500 kHz  Ts 4.096 ms  slope 0.122 GHz/s  Rb 2148 b/s
+      4.8k: SF7/125 kHz  Ts 1.024 ms  slope 0.122 GHz/s  Rb 5469 b/s
+      4.8k: SF8/250 kHz  Ts 1.024 ms  slope 0.244 GHz/s  Rb 6250 b/s
+      4.8k: SF9/500 kHz  Ts 1.024 ms  slope 0.488 GHz/s  Rb 7031 b/s
+      9.6k: SF7/250 kHz  Ts 0.512 ms  slope 0.488 GHz/s  Rb 10938 b/s
+      9.6k: SF8/500 kHz  Ts 0.512 ms  slope 0.977 GHz/s  Rb 12500 b/s
+      19.2k: SF7/500 kHz  Ts 0.256 ms  slope 1.953 GHz/s  Rb 21875 b/s
+   [PASS] all three 2.4k candidates share Ts = 4.096 ms (so BW, not symbol time, identifies them) 
+
+S3  Receive
+   R1 predicted conducted sensitivity (dBm, 1 % PER) = -174 + 10logBW + NF + SNR_req:
+      SF   125k(NF6) 125k(NF3) 250k(NF6) 500k(NF6)
+       7    -124.5   -127.5   -121.5   -118.5
+       8    -127.0   -130.0   -124.0   -121.0
+       9    -129.5   -132.5   -126.5   -123.5
+      10    -132.0   -135.0   -129.0   -126.0
+      11    -134.5   -137.5   -131.5   -128.5
+      12    -137.0   -140.0   -134.0   -131.0
+   [PASS] SF12/125 NF 6 dB = -137 dBm (SX1262 datasheet, KB 15) 
+   R1 isolation budget (leakage >= attenuation + 20 dB):
+      SX1262 dev board at -9 dBm, SF7/125: attenuation 116 dB, leakage suppression >= 136 dB
+      SX1262 dev board at -9 dBm, SF12/125: attenuation 128 dB, leakage suppression >= 148 dB
+      same + 40 dB pad inside the TX box, SF7/125: attenuation 76 dB, leakage suppression >= 96 dB
+      same + 40 dB pad inside the TX box, SF12/125: attenuation 88 dB, leakage suppression >= 108 dB
+   R1 ideal SF7 (64 B) PER = 1 % at SNR -6.86 dB; slope there -2.9 %/dB
+      5 steps x  100 packets: sigma(S_1%) = 0.105 dB (shape known); ~0.149 dB if slope fitted too
+      5 steps x  300 packets: sigma(S_1%) = 0.061 dB (shape known); ~0.086 dB if slope fitted too
+      5 steps x 1000 packets: sigma(S_1%) = 0.033 dB (shape known); ~0.047 dB if slope fitted too
+   R1 level uncertainty (sensor-referenced source, VNA-calibrated attenuator): U = +-0.43 dB; with the waterfall fit U_R1 = +-0.48 dB (k=2)
+   [PASS] R1 can separate a 3 dB-NF module from a 6 dB-NF bare chip (U_R1 < 1.5 dB) 
+      acceptance vs datasheet (+-2 dB): +-2.06 dB
+   R5 Y-factor readings, ENR 15 dB (T_hot 9461 K), DUT alone (no second stage):
+      NF 0.45 dB -> Y = 14.70 dB
+      NF 0.80 dB -> Y = 14.36 dB
+      NF 1.00 dB -> Y = 14.17 dB
+      NF 2.20 dB -> Y = 13.02 dB
+      NF 5.40 dB -> Y = 10.05 dB
+      NF 12.00 dB -> Y = 4.76 dB
+   [PASS] Y for a 0.97 dB chain = 14.20 dB (LNA recipe, T_hot 9461 K) (14.20 dB)
+      NF uncertainty = ENR uncertainty (1:1, KB 17/NF): uncalibrated cheap source (+-1 dB assumed) -> +-1 dB; calibrated (+-0.2 dB) -> +-0.25 dB with Y noise. N2 band +-0.4 dB needs the calibrated source.
+   R3 RTL NF(G) model: NF_a + 10log10(1 + 10^((G_x - G)/10)); KB anchor NF 5.4 dB @437 MHz (V3, LSF)
+      G - G_x = -15 dB -> NF = NF_a + 15.14 dB
+      G - G_x = -10 dB -> NF = NF_a + 10.41 dB
+      G - G_x =  -5 dB -> NF = NF_a + 6.19 dB
+      G - G_x =  +0 dB -> NF = NF_a + 3.01 dB
+      G - G_x =  +5 dB -> NF = NF_a + 1.19 dB
+      G - G_x = +10 dB -> NF = NF_a + 0.41 dB
+
+S4  Link
+   L1 15-km-equivalent attenuation at 1 km: 39.7 dB
+   L1 15-km-equivalent attenuation at 2 km: 33.7 dB
+   [PASS] A_eq(1 km) = 39.7 dB (link recipe ex. 7) 
+   L1 free-space P_rx(1 km, 0 dB inserted) = -66.0 dBm -> A_fail = 59.5 dB (SF7/250, S -125.5 dBm)
+   [PASS] A_fail(1 km) ~ 59.5 dB (link recipe ex. 7) 
+      attenuation error 0.5 dB -> range error +6 % / -6 %
+      attenuation error 1 dB -> range error +12 % / -11 %
+      attenuation error 2 dB -> range error +26 % / -21 %
+      attenuation error 3 dB -> range error +41 % / -29 %
+   L2 ground range test, both dipoles 1.5 m, 10 mW e.r.p.; P_rx (dBm) vs model:
+      d(km)  two-ray V   two-ray H   plane-earth  Egli(+20log(f/40))  free space
+       0.2      -69.9      -70.7       -70.7          -91.4           -56.9
+       0.5      -85.5      -86.6       -86.6         -107.3           -64.9
+       1.0      -97.5      -98.7       -98.7         -119.3           -70.9
+       2.0     -109.5     -110.7      -110.7         -131.4           -76.9
+       3.0     -116.5     -117.7      -117.7         -138.4           -80.4
+   L2 plane-earth range with 10 dB margin (SF9/125, S -129.5 dBm): 3.32 km
+   [PASS] ground range ~3.3 km (beginner ladder rung 7) (3.32 km)
+   L2 two-ray (V) slope 0.5-2 km: n = 3.97 (pre-register n = 4 +- 0.5)
+   L3 landed path loss (dB), rocket 0.2 m above ground:
+      0.5 km: plane-earth 2 m 115.9, 6 m 106.4; two-ray V 2 m 107.7
+      1.0 km: plane-earth 2 m 128.0, 6 m 118.4; two-ray V 2 m 119.7
+      2.0 km: plane-earth 2 m 140.0, 6 m 130.5; two-ray V 2 m 131.7
+      3.0 km: plane-earth 2 m 147.0, 6 m 137.5; two-ray V 2 m 138.7
+   L3 recipe band '-50 %/+0 %' in range == PL excess 0 .. +12.0 dB over plane-earth
+
+S5  Rocket-specific
+   K1 Doppler-rate thresholds, 40 B frame CR4/5, 8-sym preamble, explicit header:
+      setting    ToA(ms) limit(Hz) Semtech(Hz/s) no-track(Hz/s)  g@433  g@868  g@905 (Semtech rule)
+      SF 7/125k     82.2    325.5       3961.3        7012.3   279.6  139.5  133.8
+      SF 8/125k    154.1    162.8       1056.1        1892.2    74.5   37.2   35.7
+      SF 9/125k    287.7     81.4        282.8         513.8    20.0   10.0    9.6
+      SF10/125k    534.5     40.7         76.1         140.6     5.4    2.7    2.6
+      SF12/125k   1974.3    162.8         82.4          38.8     5.8    2.9    2.8
+      SF 9/250k    143.9    162.8       1131.3        2055.3    79.8   39.8   38.2
+      SF10/250k    267.3     81.4        304.5         562.3    21.5   10.7   10.3
+      SF 9/500k     71.9    325.5       4525.1        8221.3   319.4  159.3  152.9
+      SF11/500k    246.8     81.4        329.8         620.9    23.3   11.6   11.1
+   [PASS] SF9/125 40 B ToA = 288 ms (link recipe) (287.7)
+   [PASS] SF9/125 drift limit = 81 Hz 
+   K2 3rd-order PLL steady-state error to jerk J (deg) = 360 J / (lambda w0^3):
+      Bn 10 Hz: 10 g/s 90 deg, 50 g/s 448 deg, 100 g/s 896 deg, 300 g/s 2687 deg
+      Bn 15 Hz: 10 g/s 27 deg, 50 g/s 133 deg, 100 g/s 265 deg, 300 g/s 796 deg
+      Bn 25 Hz: 10 g/s 6 deg, 50 g/s 29 deg, 100 g/s 57 deg, 300 g/s 172 deg
+   [PASS] 26.5 deg per 10 g/s at Bn 15 Hz (21/gnss-on-rockets) 
+   K3 L2 C/N0_eff vs CW jammer power J at the GNSS input (S = -130 dBm, 45 dB-Hz clean):
+      J -120 dBm: 43.8 dB-Hz
+      J -110 dBm: 38.9 dB-Hz
+      J -105 dBm: 34.7 dB-Hz
+      J -100 dBm: 30.0 dB-Hz
+      J -98 dBm: 28.0 dB-Hz
+      J -95 dBm: 25.1 dB-Hz
+      J -90 dBm: 20.1 dB-Hz
+      J for 25 dB-Hz (tracking lost): -94.9 dBm; for 28 dB-Hz: -98.0 dBm
+   [PASS] loss-of-L2 threshold ~ -95 dBm (GNSS front-end recipe G5) (-94.9 dBm)
+      E22 3rd harmonics: CH0 1230.375, CH2 1236.375, CH3 1239.375, CH5 1245.375, CH6 1248.375, CH23 1299.375, CH24 1302.375 MHz
+   K4 HERO: induced current scales sqrt(P): flight/test = x13.3 (+22.5 dB in power)
+      pass threshold 15 % of 130 mA: flight 19.50 mA -> test 1.462 mA -> 1.462 mV on 1 ohm -> -43.7 dBm into a 50 ohm SA (high-Z tap)
+      spread leads 0.2 m upper bound: flight 145.00 mA -> test 10.873 mA -> 10.873 mV on 1 ohm -> -26.3 dBm into a 50 ohm SA (high-Z tap)
+      twisted pair 0.2 m: flight 0.40 mA -> test 0.030 mA -> 0.030 mV on 1 ohm -> -77.4 dBm into a 50 ohm SA (high-Z tap)
+   K5 RF-rectification offset ~ V^2 ~ P: flight/test = x178 (+22.5 dB); a 10 mW test bounds flight only if its detection floor is 22.5 dB below the allowed offset
+
+S6  Materials and PCB
+   M1 ring r_mean 35 mm, W 2.9 mm, h 1.51 mm, er 4.5: f_n = 0.7411, 1.4786, 2.2118, 2.9403 GHz (Kirschning-Jansen dispersion)
+      mode 2: extracted er = 4.486, U(k=2) = +-0.052 (bias from gap loading included as a uniform 0..0.3 %)
+      mode 3: extracted er = 4.486, U(k=2) = +-0.053 (bias from gap loading included as a uniform 0..0.3 %)
+      if h were 1.43 mm but analysed as 1.51 mm: er error = +0.021
+      if h were 1.60 mm but analysed as 1.51 mm: er error = -0.022
+   M2 JLC04161H-7628 masked 0.359 mm: FD 49.5 ohm; with impedance control ~98 % in 45-55 ohm (sigma ~2.1 ohm); 2-layer 2.692 mm: FD 49.2 ohm
+      TDR NanoVNA-H4 1.5 GHz: normal-window rise 660 ps -> 54 mm of microstrip (eps_eff 3.3); a flat plateau needs a coupon >= 109 mm
+      TDR LiteVNA 6.3 GHz: normal-window rise 157 ps -> 13 mm of microstrip (eps_eff 3.3); a flat plateau needs a coupon >= 26 mm
+      quarter-wave ripple check: peak |S11| of a Z0 line between 50 ohm ports:
+         Z0 45 ohm -> |G|max 0.105 (RL 19.6 dB)
+         Z0 47.5 ohm -> |G|max 0.051 (RL 25.8 dB)
+         Z0 52.5 ohm -> |G|max 0.049 (RL 26.2 dB)
+         Z0 55 ohm -> |G|max 0.095 (RL 20.4 dB)
+   M3 via-fence single-row isolation, 0.3 mm drill (r 0.15 mm), FR-4 er 4.4:
+      pitch 1 mm (r/a 0.150) at 1.575 GHz: FDFD 44.3 dB, textbook 57.7 dB, difference +13.4 dB
+      pitch 1 mm (r/a 0.150) at 2.450 GHz: FDFD 40.5 dB, textbook 53.8 dB, difference +13.4 dB
+   [PASS] 1 mm pitch at 2.45 GHz: FDFD ~41 dB, textbook ~13 dB higher (13/vias page) 
+      pitch 2 mm (r/a 0.075) at 1.575 GHz: FDFD 28.6 dB, textbook 29.6 dB, difference +1.0 dB
+      pitch 2 mm (r/a 0.075) at 2.450 GHz: FDFD 24.8 dB, textbook 25.8 dB, difference +1.0 dB
+   [PASS] 2 mm pitch at 2.45 GHz: FDFD ~25 dB 
+
+S7  Environment
+   E2 noise rise antenna vs 50 ohm load, chain NF 0.8 dB (Te 59 K): sky/ground 100 K -3.4 dB; rural 580 K +2.6 dB; residential 730 K +3.5 dB; city 1150 K +5.4 dB
+   E2 noise rise antenna vs 50 ohm load, chain NF 2.0 dB (Te 170 K): sky/ground 100 K -2.3 dB; rural 580 K +2.1 dB; residential 730 K +2.9 dB; city 1150 K +4.6 dB
+   E2 noise rise antenna vs 50 ohm load, chain NF 6.0 dB (Te 865 K): sky/ground 100 K -0.8 dB; rural 580 K +1.0 dB; residential 730 K +1.4 dB; city 1150 K +2.4 dB
+      (P.372-13 Table 3 values exist only at 425 MHz; 868/915 MHz: no KB prediction -- measurement fills it)
+   E1 survey threshold, K = 10: 3.55 dB above the mean floor (P_fa 1e-3)
+   E1 survey threshold, K = 100: 1.26 dB above the mean floor (P_fa 1e-3)
+   E1 survey threshold, K = 1000: 0.42 dB above the mean floor (P_fa 1e-3)
+   [PASS] K = 100 threshold = 1.3 dB (14/signal-ID page) 
+
+CHECKS: 28/28 PASS

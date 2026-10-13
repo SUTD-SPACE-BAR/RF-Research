@@ -1,0 +1,36 @@
+=== sim2_phase_noise_transient.py 2026-10-13 18:10 ===
+Tank L 10.0 nH, C 13.453 pF, R 817.9 ohm (Q 30), G1 1.834 mS, G3 0.8151 mA/V^3, target A 1.0 V; dt = T0/64; 16 x 20 us
+P_sig (dissipated in R) -2.14 dBm; P_s (available) -8.16 dBm; Leeson corner f0/2Q 7.23 MHz
+F = 1, no observation noise: measured amplitude 1.0046 V, f_osc 434.607 MHz (integrator shift +0.158 %)
+   fm   0.3 MHz: sim -141.90 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -141.73 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -141.73 | diff -0.17 dB
+   fm   1.0 MHz: sim -151.52 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -151.55 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -151.55 | diff +0.03 dB
+   fm   3.0 MHz: sim -161.43 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -161.21 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -161.21 | diff -0.22 dB
+   fm  10.0 MHz: sim -171.61 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -171.66 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -171.66 | diff +0.05 dB
+   fm  30.0 MHz: sim -181.17 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -181.22 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -181.22 | diff +0.04 dB
+   E1 PASS: max |sim - theory| 0.22 dB over 0.3-30 MHz
+   theory at 100 kHz (below the record's resolution, extrapolated 1/f^2): -131.68 dBc/Hz
+F = 2, no observation noise: measured amplitude 1.0046 V, f_osc 434.607 MHz (integrator shift +0.158 %)
+   fm   0.3 MHz: sim -136.78 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -138.72 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -138.72 | diff +1.94 dB
+   fm   1.0 MHz: sim -148.19 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -148.54 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -148.54 | diff +0.35 dB
+   fm   3.0 MHz: sim -158.22 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -158.20 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -158.20 | diff -0.02 dB
+   fm  10.0 MHz: sim -168.89 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -168.65 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -168.65 | diff -0.23 dB
+   fm  30.0 MHz: sim -178.07 dBc/Hz | Lee-Hajimiri 2FkT/P_sig -178.21 | Leeson FkT/(2P_s), P_s = P_sig/4 (1/f^2 part) -178.21 | diff +0.14 dB
+   E1 MISS: max |sim - theory| 1.94 dB over 0.3-30 MHz
+   theory at 100 kHz (below the record's resolution, extrapolated 1/f^2): -128.67 dBc/Hz
+E3 PASS: F=2 vs F=1 mean ratio 3.18 dB (expect 3.01)
+F = 2 with observation noise: Leeson fit Q_L 29.4 (true 30), floor -165.90 dBc/Hz (theory FkT0/(2P_s) -165.86) -> E4 PASS
+   fm   1.00 MHz: sim -148.25 dBc/Hz, Leeson -148.46 dBc/Hz (same bins)
+   fm   7.23 MHz: sim -162.67 dBc/Hz, Leeson -162.82 dBc/Hz (same bins)
+   fm  30.00 MHz: sim -165.39 dBc/Hz, Leeson -165.61 dBc/Hz (same bins)
+   fm 100.00 MHz: sim -165.87 dBc/Hz, Leeson -165.83 dBc/Hz (same bins)
+E5 at fm   0.3 MHz: L_PM -141.39, L_AM -168.69 dBc/Hz, (AM+PM)/PM +0.01 dB
+E5 at fm   1.0 MHz: L_PM -150.84, L_AM -168.43 dBc/Hz, (AM+PM)/PM +0.07 dB
+E5 at fm  10.0 MHz: L_PM -171.95, L_AM -173.71 dBc/Hz, (AM+PM)/PM +2.22 dB
+E5 at fm  50.0 MHz: L_PM -185.79, L_AM -185.77 dBc/Hz, (AM+PM)/PM +3.02 dB
+E5 at fm 200.0 MHz: L_PM -197.90, L_AM -197.91 dBc/Hz, (AM+PM)/PM +3.01 dB
+   amplitude-restoring bandwidth (cubic limiter, 2Q/w0 envelope time constant x gain margin): ~7.2 MHz
+runtime 51 s
+POST-HOC (not pre-registered; does not change the verdict): F = 2 single-bin 0.3 MHz offset with seeds 3 and 4
+(16 x 20 us each): sim - theory = +0.41 dB and +0.88 dB (1 MHz, 4 bins: +0.11, -0.37 dB). The pre-registered
+seed gave +1.94 dB (MISS of the +-1 dB tolerance). The 0.3 MHz point rests on ONE 106 kHz Welch bin; scatter of
+~+-0.6 dB (1 sigma) plus a small positive bias from per-segment linear detrending of a random-walk phase.

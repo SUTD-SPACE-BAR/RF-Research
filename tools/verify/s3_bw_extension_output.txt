@@ -1,0 +1,40 @@
+=== 1. Shunt peaking ===
+  m = 0.000: BW = 1.000 x 1/(2piRC), peaking -0.00 dB, group-delay spread in band  50.0 %
+  m = 0.320: BW = 1.568 x 1/(2piRC), peaking -0.00 dB, group-delay spread in band  32.6 %
+  m = 0.414: BW = 1.722 x 1/(2piRC), peaking -0.00 dB, group-delay spread in band  40.8 %
+  m = 0.500: BW = 1.799 x 1/(2piRC), peaking +0.25 dB, group-delay spread in band  70.5 %
+  m = 0.710: BW = 1.848 x 1/(2piRC), peaking +1.53 dB, group-delay spread in band 281.3 %
+  ngspice m = 0.414: BW 1.722 x (Python 1.722)
+
+=== 2. Series peaking (C1 at the device, L, C2 || R at the load; C1 + C2 = 1 pF) ===
+  best maximally-flat-ish (<= 0.1 dB peaking): BW = 3.68 x with C1/C = 0.55, m = 0.32
+  ngspice: BW 3.68 x
+
+=== 3. Bridged T-coil (R = 1k, C = 1 pF) ===
+  k = 0.200: L1 = L2 = 417 nH, C_B = 167 fF; |Z_in| = 1000.0-1000.0 ohm (constant R); BW at the load capacitor = 2.77 x 1/(2pi RC), peaking +0.28 dB
+  k = 0.333: L1 = L2 = 375 nH, C_B = 125 fF; |Z_in| = 1000.0-1000.0 ohm (constant R); BW at the load capacitor = 2.83 x 1/(2pi RC), peaking +0.00 dB
+  k = 0.500: L1 = L2 = 333 nH, C_B = 83 fF; |Z_in| = 1000.0-1000.0 ohm (constant R); BW at the load capacitor = 2.72 x 1/(2pi RC), peaking +0.00 dB
+
+=== 4. Distributed amplifier: 4 sections, gm 20 mS, Cgs = Cds = 0.5 pF, 50-ohm lines ===
+  line cut-off 1/(pi sqrt(LC)) = 12.7 GHz; |S21| at LF = 2.000 (n gm Z0/2 = 2.00); -3 dB at 12.8 GHz
+  lumped (the same 4 devices in parallel, 50-ohm shunt-terminated input, 50-ohm load): |S21| = 4.00, -3 dB at 1.33 GHz -> DA: x 9.6 bandwidth at x 0.50 gain (gain-bandwidth x 4.8), and matched to the line cut-off
+
+=== 5. Balanced amplifier, branch-line hybrids at 433 MHz, amps with Rin = 25 ohm (|Gamma| = 1/3), gain 10 dB ===
+  single amp: |S11| = -9.5 dB, |S21| = 10.00 dB
+  balanced:   |S11| = -122.2 dB at 433 MHz, worst -15.8 dB over +/-10 %; |S21| = 10.00 dB at 433 MHz
+
+=== 6. Noise figure of the resistive-feedback gain block (R_F 500, R_E 3.7) at 433 MHz ===
+  ngspice NF at 433 MHz = 1.77 dB (estimate 1 + R_s/R_F alone = 0.41 dB, plus R_E, r_b and shot noise)
+
+=== 7. Push-pull emitter-follower output stage, +/-5 V, 100 ohm load, 2 V peak 1 kHz ===
+  class B (no bias): THD 22.1 %, fundamental 1.12 V peak (dead band +/- V_BE ~ 0.6 V)
+  class AB (2 diodes, 2 mA bias, 1 ohm emitter resistors): THD 0.42 %, fundamental 1.92 V peak
+  ideal class-B efficiency at Vp = 2.0 V on +/-5 V: pi/4 * Vp/Vcc = 31 %; class A (resistor-biased follower) <= 25 %
+  ideal class-B efficiency at Vp = 5.0 V on +/-5 V: pi/4 * Vp/Vcc = 79 %; class A (resistor-biased follower) <= 25 %
+
+=== 8. Why an LNA is a poor TX driver: class-A linear output capability P ~ (1/2) V_swing I_bias ===
+  GNSS/ISM LNA, 3 V, 5 mA (V_swing ~2.5 V): P_max ~ 6.2 mW = 8.0 dBm (ideal class-A ceiling; P1dB is lower)
+  driver/gain block, 5 V, 60 mA (V_swing ~4 V): P_max ~ 120.0 mW = 20.8 dBm (ideal class-A ceiling; P1dB is lower)
+  BGA524N6 (canonical page): gain 19.6 dB, IP1dB -16 dBm -> OP1dB ~ +2.6 dBm
+
+ALL S3 BANDWIDTH-EXTENSION / OUTPUT-STAGE CHECKS PASS

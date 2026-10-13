@@ -1,0 +1,117 @@
+
+1. Meshtastic preset time on air (npre=16, explicit header, CRC, LDRO auto, SX126x)
+preset         SF BW kHz   CR   Ts ms ToA 50B ms ToA 255B ms pkts/min @25% CU 1% duty: s between 50B pkts
+SHORT_TURBO     7    500  4/5   0.256       26.4       102.0              567                         2.6
+SHORT_FAST      7    250  4/5   0.512       52.9       203.9              284                         5.3
+SHORT_SLOW      8    250  4/5   1.024       95.5       361.7              157                         9.5
+MEDIUM_FAST     9    250  4/5   2.048      180.7       641.5               83                        18.1
+MEDIUM_SLOW    10    250  4/5   4.096      341.0      1180.7               44                        34.1
+LONG_TURBO     11    500  4/8   4.096      443.4      1655.8               34                        44.3
+LONG_FAST      11    250  4/5   8.192      641.0      2156.5               23                        64.1
+LONG_MODERATE  11    125  4/8  16.384     2035.7      7934.0                7                       203.6
+LONG_SLOW      12    125  4/8  32.768     3547.1     14295.0                4                       354.7
+PASS LongFast symbol time 8.192 ms
+PASS ShortTurbo is ~25x faster than LongFast for 50 B
+
+2. ALOHA: analytic vs Monte-Carlo
+G=0.05: pure P_s analytic 0.905 MC 0.903 | slotted analytic 0.951 MC 0.951 | pure S=0.045
+PASS pure ALOHA MC within 0.01 at G=0.05
+PASS slotted ALOHA MC within 0.01 at G=0.05
+G=0.10: pure P_s analytic 0.819 MC 0.818 | slotted analytic 0.905 MC 0.902 | pure S=0.082
+PASS pure ALOHA MC within 0.01 at G=0.1
+PASS slotted ALOHA MC within 0.01 at G=0.1
+G=0.25: pure P_s analytic 0.607 MC 0.606 | slotted analytic 0.779 MC 0.782 | pure S=0.152
+PASS pure ALOHA MC within 0.01 at G=0.25
+PASS slotted ALOHA MC within 0.01 at G=0.25
+G=0.50: pure P_s analytic 0.368 MC 0.367 | slotted analytic 0.607 MC 0.608 | pure S=0.184
+PASS pure ALOHA MC within 0.01 at G=0.5
+PASS slotted ALOHA MC within 0.01 at G=0.5
+G=1.00: pure P_s analytic 0.135 MC 0.137 | slotted analytic 0.368 MC 0.367 | pure S=0.135
+PASS pure ALOHA MC within 0.01 at G=1.0
+PASS slotted ALOHA MC within 0.01 at G=1.0
+PASS pure ALOHA max throughput 1/(2e)=0.184
+G for 90 % pure-ALOHA success = 0.0527 (channel busy 5.3 % of the time)
+PASS G for 90 % success = 0.0527
+
+2b. Non-persistent CSMA with Meshtastic's slot time (all nodes hear each other)
+SHORT_TURBO : slot   8.2 ms, a = 0.312, max S = 0.31
+MEDIUM_FAST : slot  12.7 ms, a = 0.070, max S = 0.57
+LONG_FAST   : slot  28.1 ms, a = 0.044, max S = 0.65
+PASS CSMA (a=0.044) beats pure ALOHA at G=1 (0.47 vs 0.135)
+PASS CSMA a->0 tends to G/(1+G)
+
+3. Managed-flooding Monte-Carlo on random geometric graphs
+clique, 40 nodes, managed, hop 3: 2.00 tx/message, reach 1.00
+PASS clique managed flood ~2 transmissions per message
+clique, 40 nodes, UNmanaged (every node repeats once): 40.0 tx/message
+PASS unmanaged clique flood = N transmissions
+clique, 40 nodes,  0 ROUTERs: 2.00 tx/message
+clique, 40 nodes,  3 ROUTERs: 4.36 tx/message
+clique, 40 nodes, 10 ROUTERs: 10.92 tx/message
+PASS each router in a clique adds ~1 transmission
+60 nodes in a 10 x 10 km area; managed flooding
+range km hop  tx/msg  reach
+     2.0   1    3.12   0.22
+     2.0   3    7.91   0.41
+     2.0   7   15.99   0.66
+     3.0   1    3.44   0.44
+     3.0   3    9.97   0.82
+     3.0   7   14.91   0.97
+     5.0   1    3.40   0.83
+     5.0   3    7.42   1.00
+     5.0   7    7.77   1.00
+    10.0   1    2.51   1.00
+    10.0   3    2.81   1.00
+    10.0   7    2.77   1.00
+PASS more hops never reduce transmissions per message (r=3 km)
+
+3c. Transmissions heard by the central node per 'round' (each of 150 nodes in 30x30 km sends 1 msg)
+range km hop  tx heard by centre node
+     3.0   1                     15.8
+     3.0   3                     19.5
+     3.0   7                     61.7
+     5.0   3                    168.8
+     8.0   3                    414.8
+PASS raising hop limit 1->7 raises the load on a node (r=3 km)
+PASS raising range 3->8 km raises the load on a node (hop 3)
+
+4. End-to-end delivery p^h (no retries)
+p=0.95: h=1:0.95 h=2:0.90 h=3:0.86 h=5:0.77 h=7:0.70
+p=0.9: h=1:0.90 h=2:0.81 h=3:0.73 h=5:0.59 h=7:0.48
+p=0.8: h=1:0.80 h=2:0.64 h=3:0.51 h=5:0.33 h=7:0.21
+PASS 0.9^7 = 0.478
+
+5a. Rocket telemetry on one shared channel (pure ALOHA, no capture)
+32 B SF7/125 ToA = 71.9 ms
+  1 rockets x  1 Hz: G= 0.07  P_success(each pkt)=0.866
+  1 rockets x  5 Hz: G= 0.36  P_success(each pkt)=0.487
+  1 rockets x 10 Hz: G= 0.72  P_success(each pkt)=0.237
+  2 rockets x  1 Hz: G= 0.14  P_success(each pkt)=0.750
+  2 rockets x  5 Hz: G= 0.72  P_success(each pkt)=0.237
+  2 rockets x 10 Hz: G= 1.44  P_success(each pkt)=0.056
+  4 rockets x  1 Hz: G= 0.29  P_success(each pkt)=0.562
+  4 rockets x  5 Hz: G= 1.44  P_success(each pkt)=0.056
+  4 rockets x 10 Hz: G= 2.88  P_success(each pkt)=0.003
+  8 rockets x  1 Hz: G= 0.58  P_success(each pkt)=0.316
+  8 rockets x  5 Hz: G= 2.88  P_success(each pkt)=0.003
+  8 rockets x 10 Hz: G= 5.75  P_success(each pkt)=0.000
+PASS one rocket at 10 Hz SF7/125 32 B occupies >50 % of a channel
+
+5a'. Channels available (BW + 25 kHz guard), FDMA
+  SG/EU 433.05-434.79 MHz SRD           : 11 @125k, 6 @250k, 3 @500k
+  70 cm amateur 430-440 MHz (licensed)  : 66 @125k, 36 @250k, 19 @500k
+  SG 917-925 MHz                        : 53 @125k, 29 @250k, 15 @500k
+  US 902-928 MHz                        : 173 @125k, 94 @250k, 49 @500k
+  IREC Mode A 902-909 MHz               : 46 @125k, 25 @250k, 13 @500k
+PASS 433 SRD band holds 11 x 125 kHz channels
+
+5b. Launch-site Meshtastic mesh, LongFast, one collision domain
+   20 nodes:    373 tx/h, channel utilisation   6.6 %, pure-ALOHA P_success 0.88
+   50 nodes:    753 tx/h, channel utilisation  13.4 %, pure-ALOHA P_success 0.76
+  100 nodes:   1387 tx/h, channel utilisation  24.7 %, pure-ALOHA P_success 0.61
+  200 nodes:   2653 tx/h, channel utilisation  47.2 %, pure-ALOHA P_success 0.39
+  nodes at which LongFast reaches Meshtastic's 25 % 'polite' limit: 101
+  same with SHORT_TURBO: 2679
+PASS LongFast hits 25 % CU at about a hundred default-config nodes
+
+RESULT: ALL PASS

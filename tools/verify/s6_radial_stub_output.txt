@@ -1,0 +1,34 @@
+=== 1. low-frequency limit = sector capacitor
+[PASS] Z_in(10 MHz) is a capacitor equal to the sector parallel-plate C C = 1.4496 pF vs 1.4496 pF
+=== 2. thin-sector limit = uniform parallel-plate stub
+[PASS] thin sector -> -j Zpp cot(kl) -4119.38 vs -4120.80 ohm
+=== 3. outer radius for resonance at 2.45 GHz, JLC0216A (h 1.43 mm, er 4.5), r_i from 0.8 mm feed
+   50-ohm width (t = 0, bare) = 2.691 mm; feed 0.8 mm -> 90.5 ohm
+   alpha  60 deg, r_i = 0.800 mm:  A: r_o =   9.62 mm  B: r_o =  10.36 mm  C: r_o =   9.74 mm  D: r_o =   9.22 mm
+   alpha  90 deg, r_i = 0.566 mm:  A: r_o =   8.98 mm  B: r_o =   9.57 mm  C: r_o =   8.95 mm  D: r_o =   8.59 mm
+   uniform 50-ohm open stub: lambda_g/4 - dl = 16.05 mm (eeff 3.394)
+[PASS] model variants disagree by > 5 % in r_o (so an EM check is needed) spread 12.4 %
+[PASS] radial stub (60 deg) is shorter than a uniform 50-ohm lambda/4 stub 
+=== PRE-REGISTRATION for s6_radial_stub_openems.py (2026-10-13, before the run)
+   geometry: alpha 60 deg, r_i 0.800 mm, r_o 9.70 mm, feed 0.8 mm, h 1.43, er 4.5 (lossless)
+   model A: f_res = 2.425 GHz
+   model B: f_res = 2.669 GHz
+   model C: f_res = 2.463 GHz
+   model D: f_res = 2.302 GHz
+   expectation: openEMS f_res within +-4 % of model C; A (eps_r, no fringe) high by > 5 %; |Z_in| model C within 15 % of openEMS at 1.5 GHz (capacitive region).
+=== 4. stop-band width of shunt stubs on a 50-ohm line (|S21| < -20 dB)
+   radial 60         : |S21| < -20 dB over    117 MHz (4.8 %)
+   butterfly 2x60    : |S21| < -20 dB over    235 MHz (9.6 %)
+   radial 90         : |S21| < -20 dB over    156 MHz (6.4 %)
+   butterfly 2x90    : |S21| < -20 dB over    313 MHz (12.8 %)
+   uniform 91 ohm    : |S21| < -20 dB over     86 MHz (3.5 %)
+   uniform 91 ohm width: 0.80 mm
+   uniform 50 ohm    : |S21| < -20 dB over    156 MHz (6.4 %)
+   uniform 50 ohm width: 2.69 mm
+   uniform 20 ohm    : |S21| < -20 dB over    388 MHz (15.8 %)
+   uniform 20 ohm width: 9.79 mm
+[PASS] radial 60 deg stop band wider than a uniform stub of the same 0.8 mm contact width 
+[PASS] faithful: a wide 20-ohm uniform stub beats a 60-deg radial stub on bandwidth (but needs a 9.8 mm contact) 
+[PASS] butterfly wider than single radial 
+
+ALL PASS

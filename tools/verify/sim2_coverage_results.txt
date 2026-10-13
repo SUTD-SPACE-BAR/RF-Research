@@ -1,0 +1,32 @@
+=== Part 1: ITM on a real launch-range profile vs flat-earth models (433.92 MHz, H-pol, GS 5 m, rocket 0.5 m) ===
+Profile: 100 SRTM90 points, spacing 150.7 m, length 14.92 km, elevation 1386-1552 m
+  d km |   FSPL | 2-ray 0.5m | 2-ray 0.1m | ITM flat | ITM real |        mode |  dh m | margin ITM-real / 2-ray 0.5 m (dB)
+  1.06 |   85.7 |      113.0 |      126.6 |    112.3 |    109.5 | line-of-sight |  17.5 |  +58.5 /  +55.0  [WARN__RX_TERMINAL_HEIGHT, WARN__TX_HORIZON_DISTANCE_1, WARN__RX_HORIZON_DISTANCE_1]
+  1.96 |   91.0 |      123.7 |      137.3 |    123.3 |    115.7 | line-of-sight |  20.7 |  +52.3 /  +44.3  [WARN__RX_TERMINAL_HEIGHT, WARN__RX_HORIZON_DISTANCE_1]
+  3.01 |   94.8 |      131.2 |      144.8 |    131.3 |    113.0 | line-of-sight |  21.2 |  +55.0 /  +36.8  [WARN__RX_TERMINAL_HEIGHT]
+  4.97 |   99.1 |      139.9 |      153.5 |    141.0 |    122.8 | line-of-sight |  45.8 |  +45.2 /  +28.1  [WARN__RX_TERMINAL_HEIGHT, WARN__RX_HORIZON_DISTANCE_1]
+  6.93 |  102.0 |      145.7 |      159.3 |    148.0 |    128.8 | line-of-sight |  56.8 |  +39.2 /  +22.3  [WARN__RX_TERMINAL_HEIGHT, WARN__RX_HORIZON_DISTANCE_1]
+  9.95 |  105.2 |      151.9 |      165.6 |    156.2 |    109.3 | line-of-sight |  76.5 |  +58.7 /  +16.1  [WARN__RX_TERMINAL_HEIGHT]
+ 12.96 |  107.5 |      156.5 |      170.2 |    162.0 |    110.9 | line-of-sight |  84.1 |  +57.1 /  +11.5  [WARN__RX_TERMINAL_HEIGHT]
+ 14.92 |  108.7 |      159.0 |      172.6 |    164.6 |    111.9 | line-of-sight |  91.9 |  +56.1 /   +9.0  [WARN__RX_TERMINAL_HEIGHT]
+T1 PASS: ITM(flat) - two-ray over 2-15 km: +0.1 ... +5.6 dB
+T2 MISS: ITM(real) - ITM(flat): -52.6 ... -2.8 dB
+T3 PASS: ITM rejects h = 0.1 m (ITM error 1001: ERROR__RX_TERMINAL_HEIGHT (RX terminal height out of range))
+T4 PASS: margins at 15 km: ITM +56.1 dB, two-ray(0.5 m) +9.0 dB
+   post-hoc convex control at  4.97 km: ITM 131.3 dB (line-of-sight), vs flat 141.0 dB
+   post-hoc convex control at  9.95 km: ITM 147.5 dB (line-of-sight), vs flat 156.2 dB
+   post-hoc convex control at 14.92 km: ITM 153.7 dB (diffraction), vs flat 164.6 dB
+Area mode at 14.94 km with the profile's delta_h 91.9 m: 150.6 dB (p2p 111.9 dB); area mode with delta_h 90 m (ITM default 'average terrain'): 150.6 dB
+   mobile-mode variability, time 50 % / location 50 %: A = 111.9 dB
+   mobile-mode variability, time 90 % / location 50 %: A = 124.3 dB
+   mobile-mode variability, time 50 % / location 90 %: A = 111.9 dB
+   mobile-mode variability, time 90 % / location 90 %: A = 124.3 dB
+=== Part 2: censored mapper data ===
+Mapper simulation: 4000 attempts 0.2-20 km, n = 3.5, sigma = 8.0 dB, threshold -120.0 dBm: 800 received (20 %)
+  naive OLS on received packets: n 1.70, sigma 6.08 dB, PL(1 m) 81.8 dB
+  Tobit MLE (failed attempts' positions known): n 3.60, sigma 8.06 dB, PL(1 m) 37.7 dB
+  truncated MLE (received only + known threshold): n 4.32, sigma 8.65 dB, PL(1 m) 20.9 dB
+C1 MISS: naive n low by 1.80, sigma low by 1.92 dB
+C2 MISS: Tobit n error +0.10, sigma error +0.06 dB; truncated n error +0.82
+C3 PASS: median range where PL = 134 dB: true 0.48 km, naive fit 1.17 km (+142 %), Tobit 0.47 km
+  received fraction beyond 5 km: 0 % — the far points that ARE logged are the lucky (low-loss) tail, so a map of logged points shows coverage where the median link fails

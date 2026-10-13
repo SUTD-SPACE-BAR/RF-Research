@@ -1,0 +1,85 @@
+=== a. Conductor material: loss of a resonant half-wave dipole (sinusoidal current) ===
+  f = 433.0 MHz, wire diameter 2 mm, L = 0.329 m:
+    copper                                    : skin depth       3.2 um, R_loss     0.142 ohm, efficiency  99.80 % ( -0.01 dB)
+    aluminium                                 : skin depth       4.1 um, R_loss     0.183 ohm, efficiency  99.75 % ( -0.01 dB)
+    brass                                     : skin depth       6.2 um, R_loss     0.279 ohm, efficiency  99.61 % ( -0.02 dB)
+    stainless 304                             : skin depth      20.4 um, R_loss     0.914 ohm, efficiency  98.75 % ( -0.05 dB)
+    mild steel (mu_r ~ 100 assumed)           : skin depth       0.8 um, R_loss      3.42 ohm, efficiency  95.46 % ( -0.20 dB)
+    copper-clad steel (Cu skin)               : skin depth       3.2 um, R_loss     0.142 ohm, efficiency  99.80 % ( -0.01 dB)
+    conductive PLA (rho 0.15 ohm m)           : skin depth    9367.5 um, R_loss  7.85e+03 ohm, efficiency   0.91 % (-20.42 dB)
+    high-conductivity filament (rho 6e-5 ohm m): skin depth     187.3 um, R_loss      8.38 ohm, efficiency  89.57 % ( -0.48 dB)
+  f = 7.1 MHz, wire diameter 2 mm, L = 20.057 m:
+    copper                                    : skin depth      24.8 um, R_loss      1.11 ohm, efficiency  98.48 % ( -0.07 dB)
+    aluminium                                 : skin depth      31.9 um, R_loss      1.43 ohm, efficiency  98.05 % ( -0.09 dB)
+    brass                                     : skin depth      48.8 um, R_loss      2.18 ohm, efficiency  97.06 % ( -0.13 dB)
+    stainless 304                             : skin depth     159.6 um, R_loss      7.14 ohm, efficiency  90.98 % ( -0.41 dB)
+    mild steel (mu_r ~ 100 assumed)           : skin depth       6.0 um, R_loss      26.7 ohm, efficiency  72.93 % ( -1.37 dB)
+    copper-clad steel (Cu skin)               : skin depth      24.8 um, R_loss      1.11 ohm, efficiency  98.48 % ( -0.07 dB)
+    conductive PLA (rho 0.15 ohm m)           : skin depth   73153.7 um, R_loss  4.79e+05 ohm, efficiency   0.02 % (-38.23 dB)
+    high-conductivity filament (rho 6e-5 ohm m): skin depth    1463.1 um, R_loss       192 ohm, efficiency  27.32 % ( -5.63 dB)
+[PASS] 433 MHz copper dipole > 99 % efficient (99.80 %)
+[PASS] conductive-PLA dipole < 1 % efficient (0.909 %)
+  resonant LENGTH depends on diameter/insulation, not on the metal (current is on the surface for all metals)
+
+=== b. Tip voltage (thin-wire transmission-line estimate V_tip ~ I0 * Z_a, Z_a = 120 [ln(L/2a) - 1]) ===
+  433 MHz dipole, 2 W, 2 mm wire      : I0 =  0.24 A peak, Z_a =   492 ohm -> tip ~    116 V peak (vs centre)
+  433 MHz dipole, 0.1 W               : I0 =  0.05 A peak, Z_a =   492 ohm -> tip ~     26 V peak (vs centre)
+  14 MHz dipole, 100 W, 2 mm wire     : I0 =  1.67 A peak, Z_a =   902 ohm -> tip ~   1504 V peak (vs centre)
+  14 MHz dipole, 1500 W               : I0 =  6.45 A peak, Z_a =   902 ohm -> tip ~   5825 V peak (vs centre)
+  EFHW feed point, 100 W into 2500 ohm: V = sqrt(2 P R) = 707 V peak
+  EFHW feed point, 10 W into 2500 ohm: V = sqrt(2 P R) = 224 V peak
+
+=== c. Using an antenna on the wrong band (monopole over a large ground; MoM dipole/2) ===
+  2.45 GHz lambda/4 (29.3 mm) at 2.45 GHz     : Z =    40.8    +7.9j ohm, |Gamma| = 0.133, mismatch loss   0.1 dB
+  2.45 GHz lambda/4 (29.3 mm) at 915 MHz      : Z =     2.5  -257.4j ohm, |Gamma| = 0.996, mismatch loss  21.4 dB
+  2.45 GHz lambda/4 (29.3 mm) at 433 MHz      : Z =     0.5  -596.3j ohm, |Gamma| = 1.000, mismatch loss  35.4 dB
+  915 MHz lambda/4 (78 mm) at 915 MHz         : Z =    36.8    +2.4j ohm, |Gamma| = 0.154, mismatch loss   0.1 dB
+  915 MHz lambda/4 (78 mm) at 2.45 GHz        : Z =    36.0  -115.1j ohm, |Gamma| = 0.807, mismatch loss   4.6 dB
+  433 MHz lambda/4 (164 mm) at 915 MHz        : Z =   314.6  -452.0j ohm, |Gamma| = 0.902, mismatch loss   7.3 dB
+  433 MHz lambda/4 (164 mm) at 868 MHz        : Z =   526.3  -459.2j ohm, |Gamma| = 0.898, mismatch loss   7.1 dB
+[PASS] 2.45 GHz whip at 915 MHz: mismatch loss > 6 dB (21.4 dB)
+
+=== d. Half-wave dipole parallel to a large conducting sheet at spacing s (image = antiphase dipole) ===
+  s = 0.250 lambda (173.1 mm at 433 MHz): Z =  89.91  +27.7j ohm (free space 72 ohm); with 2 ohm of loss: efficiency  97.8 %
+  s = 0.125 lambda ( 86.5 mm at 433 MHz): Z =  34.03  +33.7j ohm (free space 72 ohm); with 2 ohm of loss: efficiency  94.4 %
+  s = 0.100 lambda ( 69.2 mm at 433 MHz): Z =  22.37  +24.9j ohm (free space 72 ohm); with 2 ohm of loss: efficiency  91.8 %
+  s = 0.050 lambda ( 34.6 mm at 433 MHz): Z =   5.57   -0.2j ohm (free space 72 ohm); with 2 ohm of loss: efficiency  73.6 %
+  s = 0.020 lambda ( 13.8 mm at 433 MHz): Z =   0.86  -15.7j ohm (free space 72 ohm); with 2 ohm of loss: efficiency  30.0 %
+  s = 0.010 lambda (  6.9 mm at 433 MHz): Z =   0.21  -17.8j ohm (free space 72 ohm); with 2 ohm of loss: efficiency   9.4 %
+[PASS] dipole at lambda/50 from metal: R < 10 ohm (0.9 ohm)
+
+=== e. Bent dipole tips (433 MHz, 2 mm wire, total wire length kept) ===
+  straight 328 mm (this solver): resonance 433.1 MHz
+  outer 30 mm bent 90 deg               : resonance 445.5 MHz (+2.9 %)
+  outer 30 mm bent 45 deg               : resonance 435.7 MHz (+0.6 %)
+  outer 60 mm bent 90 deg               : resonance 452.9 MHz (+4.6 %)
+  outer 30 mm folded back (10 mm gap)   : resonance 468.0 MHz (+8.0 %)
+[PASS] 30 mm tips bent 90 deg: resonance shift < 6 % (+2.9 %)
+
+=== f. Series-RLC equivalent of a 433 MHz dipole near resonance (MoM) ===
+  resonant length 327.9 mm: R = 72.1 ohm, L_s = 150 nH, C_s = 0.902 pF, Q = 5.7 -> VSWR-2 (to R) bandwidth ~ 1/(Q sqrt2) = 12.5 %
+    check at 0.9 f0: MoM 50.6-81.5j vs RLC 72.1-86.0j ohm
+    check at 1.1 f0: MoM 103.1+82.6j vs RLC 72.1+77.8j ohm
+[MISS] dipole Q in 6-14 (pre-registered; X-slope only) (5.7)
+  Yaghjian-Best Q_Z (incl. dR/dw) = 5.93; MoM VSWR<=2 band re 72 ohm: 410.3-461.1 MHz = 11.8 %
+  Yaghjian-Best Q_Z (incl. dR/dw) = 5.93; MoM VSWR<=2 band re 50 ohm: 413.5-449.2 MHz = 8.2 %
+
+=== g. HT antennas at 146 MHz: 15 cm loaded stubby vs 49 cm lambda/4 (good-ground estimate) ===
+  15 cm stubby, coil Q 50   : R_rad 2.11 ohm, X_C 487 ohm -> coil 9.7 ohm, efficiency 17 % (-7.6 dB)
+  15 cm stubby, coil Q 100  : R_rad 2.11 ohm, X_C 487 ohm -> coil 4.9 ohm, efficiency 29 % (-5.3 dB)
+  49 cm lambda/4 whip       : R ~ 36.5 ohm (on a large ground), efficiency ~ 99 %
+  (on a real HT the radio body + hand is a small, lossy counterpoise for both, which costs more dB)
+
+=== h. Mag-mount base capacitance ===
+  base 90 mm, 0.5 mm paint+rubber (er 3.0): C = 338 pF; X_C at 27 MHz: 17.4 ohm, 146 MHz: 3.2 ohm, 446 MHz: 1.1 ohm
+  base 125 mm, 0.5 mm paint+rubber (er 3.0): C = 652 pF; X_C at 27 MHz: 9.0 ohm, 146 MHz: 1.7 ohm, 446 MHz: 0.5 ohm
+  base 90 mm, 1.0 mm paint+rubber (er 3.0): C = 169 pF; X_C at 27 MHz: 34.9 ohm, 146 MHz: 6.5 ohm, 446 MHz: 2.1 ohm
+
+=== i. Far-field RF energy harvesting (Friis) ===
+  EIRP 1.0 W at 0.915 GHz, d = 10.0 m, G_rx 2 dBi: P_avail =  -19.7 dBm (   10.74 uW)
+  EIRP 4.0 W at 0.915 GHz, d = 3.0 m, G_rx 2 dBi: P_avail =   -3.2 dBm (  477.37 uW)
+  EIRP 1.0 W at 2.450 GHz, d = 1.0 m, G_rx 2 dBi: P_avail =   -8.2 dBm (  149.81 uW)
+  EIRP 0.2 W at 2.450 GHz, d = 5.0 m, G_rx 2 dBi: P_avail =  -29.2 dBm (    1.20 uW)
+  ambient (cell/TV/Wi-Fi) at typical urban distances: -40 to -60 dBm (0.1-100 nW); rectifier efficiency falls steeply below ~ -20 dBm
+
+SOME MISSES (see above)

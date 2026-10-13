@@ -1,0 +1,1744 @@
+                          Radar Systems Engineering
+                                  Lecture 13
+                               Clutter Rejection
+                               Part 2 - Doppler Filtering
+
+                                 Dr. Robert M. O’Donnell
+                              IEEE New Hampshire Section
+                                      Guest Lecturer
+
+
+
+                                                        IEEE New Hampshire Section
+Radar Systems Course 1
+Pulse Doppler 11/1/2009                                     IEEE AES Society
+                               Block Diagram of Radar System
+                                                          Transmitter
+
+                                                    Power             Waveform
+                      Propagation                  Amplifier          Generation
+                        Medium
+
+ Target
+  Radar                                   T/R
+  Cross                                  Switch
+ Section
+                           Antenna
+
+                                                                    Signal Processor Computer
+
+                                             A/D                  Pulse          Clutter Rejection
+                             Receiver
+                                           Converter           Compression      (Doppler Filtering)
+  User Displays and Radar Control
+
+                                                    General Purpose Computer
+
+
+                                                       Parameter
+                                        Tracking                       Thresholding      Detection
+                                                       Estimation
+                    Data
+                  Recording
+Photo Image
+Courtesy of US Air Force
+
+                                                                                   IEEE New Hampshire Section
+  Radar Systems Course 2
+  Pulse Doppler 11/1/2009                                                                IEEE AES Society
+                                                Outline
+                    •     Introduction
+
+                    •     Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                    •     Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                    •     Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 3
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                                        The Problem- Not Just Ground Clutter
+
+      •      Ground Clutter                                                         •       Sea Clutter
+                                   –    Can be intense and discrete                          –   Less intense than ground
+                                   –    Can be 50 to 60 dB > than target                             By 20 to 30 dB
+                                   –    Doppler velocity zero for ground                             Often more diffuse
+                                        based radars                                         –   Doppler velocity varies for based
+                                             Doppler spread small                                radars (ship speed & wind speed)
+                                                                                                     Doppler spread moderate
+      •        Rain Clutter
+                                   –     Diffuse and windblown        •                 Bird Clutter
+                                   –     Can be 30 + dB > than target                       –    100s to 10,000s to point targets
+                                   –     Doppler zero for ground                            –    Doppler velocity - 0 to 60 knots
+                                         based radars                                               Doppler of single bird has little change
+                                             Doppler spread small                                   Flocks of birds can fill 0 to 60 knots of
+                                                                                                    Doppler space
+                                       Doppler Spectrum of Rain
+                                                                                                    Big issue for very small targets
+
+
+
+
+             Received Power (dB)
+                                   80
+
+                                   60
+
+                                   40
+                                                                                        A one filter with a notch at zero
+                                   20
+                                                                                 Doppler will not adequately reject rain
+                                   0
+                                   – 60 Kt          0           + 60 Kt   Courtesy of FAA
+                                             Doppler Velocity
+                                                                                                          IEEE New Hampshire Section
+Radar Systems Course 4
+Pulse Doppler 11/1/2009                                                                                         IEEE AES Society
+                               Issues with MTI Cancellers
+
+         •      Typically they process a few (2-5) pulses at a time, so it is
+                near to impossible to shape them as well as you could if
+                filter had an input of 8-10 pulses
+                    –     2 pulse MTI canceller is very broad in Doppler space
+
+         •      A set of pass band Doppler filters, using 8-10 pulses) can
+                be constructed having:
+                            A notch at zero Doppler to reject ground clutter
+                            A set of passband filters that can detect targets where no rain is
+                            present
+
+
+         •      Before the mid 1970s, the technology, to cost effectively
+                implement pulse Doppler solutions to the simultaneous
+                ground and rain clutter was not available
+
+
+
+                                                                       IEEE New Hampshire Section
+Radar Systems Course 5
+Pulse Doppler 11/1/2009                                                      IEEE AES Society
+                                                Outline
+                    •     Introduction
+
+                    •     Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                    •     Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                    •     Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 6
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                               Utility of Burst Waveforms
+                                   for Clutter Rejection
+
+
+                                                                                           Time
+                                                                                           Range
+                                             Pulse 3
+                                                         Samples at 13th ‘range gate’ for Mth pulse
+            Pulse 1            Pulse 2
+          Sample 13          Sample 13     Sample 13
+          e.g. 4.6 km        e.g. 4.6 km   e.g. 4.6 km
+
+
+          •      A burst waveform offers a method of collecting M sequential
+                 samples an each range - CPI cell.
+          •      These samples can be linearly processed through a set of
+                 pass band filters that will
+                    – Detect targets within a range of Doppler velocities and
+                      simultaneously reject clutter that is in their low sidelobes
+                    – If the pass band filters are narrow enough in frequency, a
+                      measurement of the Doppler velocity of the target that passes
+                      through them can be made
+
+                                                                  IEEE New Hampshire Section
+Radar Systems Course 7
+Pulse Doppler 11/1/2009                                                 IEEE AES Society
+                                                Outline
+                    •     Introduction
+
+                    •     Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on Radar Signal Processing
+                                 Past, and present, and the future
+
+
+                    •     Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                    •     Summary
+                                                                     IEEE New Hampshire Section
+Radar Systems Course 8
+Pulse Doppler 11/1/2009                                                    IEEE AES Society
+          Impact of Moore’s Law of Radar Processing
+        •      Tremendous advances in A/D Converter technology
+        •      In the 1970s, a 10 bit 5 MHz A//D was near the commercial state of
+               the art
+                   –      30 lbs and 3” of rack space
+                   –      Now it is not only on a chip, but many more bits and much higher
+                          sample rates are available
+
+        •      For a 60 nmi aircraft surveillance radar, with a mechanically
+               scanning antenna, the new computational processing advances
+               allowed the number of range-azimuth-Doppler cells being
+               individually thresholded from a several thousand to several million
+               per radar scan
+                   –      These advances allowed aircraft to be reliably detected in rain
+                   –      Much better detection of aircraft in ground clutter
+                   –      Low false alarm rates that allowed the radar and beacon sensor
+                          systems to be seamlessly integrated
+
+        •      In the future, expect that advances in processing technology will
+               allow, implementation of new techniques, which today are
+               seemingly impossible to implement
+                                                                        IEEE New Hampshire Section
+Radar Systems Course 9
+Pulse Doppler 11/1/2009                                                       IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of Pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 10
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                      Waveforms for Pulse Doppler Processing
+                                    Revisited
+                                                    TCPI = NTPRI
+                              TPRI
+
+
+Radar Signal
+                              T                                • • •
+
+
+
+                                                                                              Time
+                                                           For Airport Surveillance Radar
+                T        =           Pulse Length                                    1 μsec
+                B        = 1/T       Bandwidth                                       1 MHz
+
+                TPRI =               Pulse Repetition Interval (PRI)                 1 msec
+                fP = 1/TPRI          Pulse Repetition Frequency (PRF)                1 KHz
+                δ    = T /TPRI       Duty Cycle (%)                                  .1 %
+
+                TCPI = NTPRI         Coherent Processing Interval (CPI)           10 pulses
+                N    =               Number of pulses in the CPI
+                                      N = 2, 3, or 4 for MTI
+                                      N usually much greater (8 to ~1000) for Pulse Doppler
+
+
+                                                                        IEEE New Hampshire Section
+    Radar Systems Course 11
+    Pulse Doppler 11/1/2009                                                   IEEE AES Society
+                   Data Collection for Doppler Processing
+
+
+
+
+                                                                                                                   Time
+                                                                                                                   Range
+                                                  Pulse 3
+                                                                                 Samples at 13th ‘range gate’ for Mth pulse
+           Pulse 1             Pulse 2
+         Sample 13           Sample 13          Sample 13
+         e.g. 4.6 km         e.g. 4.6 km        e.g. 4.6 km
+                                                                        M
+
+
+                                              Complex
+                             I&Q
+                                                              Pulse Number
+                                           I / Q samples
+          A/D               Samples
+        Converter          (Real and       (the complex
+                          Imaginary)
+                                                               (Slow time)
+                                            envelope of
+                                              received
+                                             waveform)
+
+What is the optimum way to process the M                                     1
+                                                                                 1                                                     L
+voltage samples in a range gate to detect                                                      Sample No.
+                                                                                                 Range
+       the target and reject clutter?                                                   Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                                                        Used with permission
+                                                                                          IEEE New Hampshire Section
+Radar Systems Course 12
+Pulse Doppler 11/1/2009                                                                         IEEE AES Society
+                          Pulse Doppler Processing - Cartoon
+                                                                            Frequency Response of the M Filters
+                                                Doppler Filter Bank
+                                                       Filter 1
+                                                       (f1, v1)
+r
+S = {s1 , s 2 , s 3 , ... , s M }
+                                                       Filter 2
+ M radar echo samples                                  (f2, v2)
+ for each range – CPI cell
+                                                       Filter 3
+                                                        (f3,v3)
+
+                                                                      M Doppler velocity
+                                                                          ‘bins’ out
+
+                                                       Filter M
+                                                        (fM,vM)
+
+
+        •      Coherent integration of all pulses of a CPI               Doppler Frequency
+                                                                          Doppler Velocity
+        •      Clutter rejection
+        •      Resolving targets into different velocity segments and allowing for fine-grain
+               target radial velocity estimation
+ Viewgraph Courtesy of MIT Lincoln Laboratory
+ Used with permission
+                                                                                 IEEE New Hampshire Section
+Radar Systems Course 13
+Pulse Doppler 11/1/2009                                                                IEEE AES Society
+                Optimization of Pulse Doppler Processing
+
+        •      MTI Improvement Factor, I , already introduced in previous
+               lecture is
+                                     (Signal / Clutter)out
+                          I (fd) =
+                                     (Signal / Clutter)in
+
+        •      The next question “In the presence of “colored noise”
+               (ground clutter, rain & noise), what are the weights, Wi (f D ) ,
+               by which the M input signal (+ clutter) samples, S i , should
+               by multiplied by so that the S/(C+N) will be maximized?
+                  – Note that the optimum set on weights depends on f D
+                  – Also on the number of pulses processed, M
+
+        •      In the late 1960s, the solution was developed by 2
+               independent sets of researchers (See Reference14 and 15)
+
+
+                                                             IEEE New Hampshire Section
+Radar Systems Course 14
+Pulse Doppler 11/1/2009                                            IEEE AES Society
+                           Optimum MTI Improvement Factor
+
+      •     Problem
+                – What is the optimum way (maximize S /( N + C + I ) to linearly
+                  process M complex radar echoes,Vi , in the presence of noise,
+                  clutter returns (ground, rain, sea, etc.) and interference?
+      •     Answer:                       M          2
+
+                                 R = ∑ Wi Vi
+                                       i =1                       I OPT = ∑ Sk WkOPT
+                                              M                                i
+                – where W
+                                   i
+                                    OPT
+                                          = k∑ M Sj      −1
+                                                         ij
+                                              j= 1
+
+                           Vi = Sampled voltage (sum of target echo, clutter, noise, etc.)
+                          M ij = Covariance matrix of clutter, noise, etc
+                          Si   = Signal vector
+
+                          k    = arbitrary constant
+                                                                    See De Long et al, Reference 14 for detailed derivation
+                          M    = Number of pulses processed
+                                                                             IEEE New Hampshire Section
+Radar Systems Course 15
+Pulse Doppler 11/1/2009                                                            IEEE AES Society
+                                  Pulse Doppler Processing
+                                                                                      M
+         •     The optimum weights are given by:                       W  i
+                                                                           OPT
+                                                                                 = k ∑ M ij−1S j
+                                                                                     j= 1
+
+                   –      The optimum filter weights are a function of Doppler frequency
+
+         •     In lecture 18, these issues will be studied in more detail.
+                   –      Also, see Reference 9
+                             It’s a great, instructive readable reference for this material
+
+
+         •     Because of the variable nature of ground clutter and rain, a simple
+               high pass filter (MTI canceller) using a few (2-5) pulses will not come
+               close to simultaneously rejecting both ground and rain clutter
+                   –      At least 8 to 10 pulses are required for good rain rejection
+                   –      Much of the rain clutter will pass through a high pass filter
+
+         •     Typically, a set (bank) of Doppler filters are used, in parallel, to
+               given good target detection over the range of Doppler frequencies
+                   –      0 to the PRF (Blind Speed)
+                   –      The number of filters usually is equal to the number of pulses
+                          processed
+                                                                                 IEEE New Hampshire Section
+Radar Systems Course 16
+Pulse Doppler 11/1/2009                                                                IEEE AES Society
+                                  MTI Improvement Factor Comparison
+                         60                                                           Typical Airport
+                                                                                       Surveillance
+                                              10 Pulse Optimum Processor                  Radar
+
+
+
+
+MTI Improvement Factor
+                         40
+
+                                      3 Pulse Canceller
+
+                                                                                  Courtesy of Frank Sanders
+
+                         20                                                       Wavelength S-Band
+                                                                                      10.7 cm
+                                                                                  Antenna width 17.5 ft
+                                                                                  Rotation rate 13 rpm
+                                                                                  PRF 1000Hz
+                                                                                  C/N =40 dB
+
+                         0
+                              0                  500                       1000
+                                            Doppler Frequency (Hz)
+                                                                     IEEE New Hampshire Section
+Radar Systems Course 17
+Pulse Doppler 11/1/2009                                                    IEEE AES Society
+                                     MTI Improvement for One Optimum Filter
+                                  Filter optimized to reject ground clutter and noise
+                         60                                                                    Typical Airport
+                                  Envelope of all optimum filters                               Surveillance
+                                                                                                   Radar
+
+
+
+
+MTI Improvement Factor
+                                                        Optimum filter tuned
+                         40                             to 300 Hz
+
+
+
+                         20
+
+                                                                                           Courtesy of Frank Sanders
+
+
+                         0                                                                Wavelength S-Band
+                              0          200       400        600       800          1000     10.7 cm
+                                                 Doppler Frequency (Hz)                   Antenna width 17.5 ft
+                                                                                          Rotation rate 13 rpm
+                              0                           55                          110 PRF 1000Hz
+                                                Radial Velocity (knots)                   C/N =40 dB
+                                                                                          No. of pulses 10
+
+
+                                                                                 IEEE New Hampshire Section
+  Radar Systems Course 18
+  Pulse Doppler 11/1/2009                                                              IEEE AES Society
+                                   Implementations of a Set of Doppler Filters
+                                   Doppler Filter Bank (linear scale)                                            Doppler Filter Bank
+                                   8 Filters - DFT- 13 dB Sidelobes                                 8 Filters - Shaped - Low Doppler Sidelobes
+                                                                                                    10
+
+
+
+
+Magnitude (linear scale)
+                                                                                                     0
+
+
+
+
+                                                                                   Magnitude (dB)
+                                                                                                    -10
+                                                                                                    -20
+                                                                                                    -30
+                                                                                                    -40
+                                                                                                    -50
+                                                                                                    -60
+                                                                                                    -70
+                               0          0.25       0.5       0.75          1.0                      0      0.25       0.5       0.75   1.0
+                                         Doppler Frequency (f/PRF)                                          Doppler Frequency (f/PRF)
+
+                           •       The simplest way to implement a bank of filters is with a Discrete
+                                   Fourier Transform (DFT)
+                                     –   Note the 13 dB sidelobes will give poor suppression of rain clutter
+                                     –   Weighting the input signal or use of other techniques, to be discussed
+                                         in the next lecture, along with integrating an adequate number of
+                                         pulses will give excellent target detection in the presence in even
+                                         heavy rain                                         Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                                                                                  Used with permission
+
+                                                                                                                 IEEE New Hampshire Section
+       Radar Systems Course 19
+       Pulse Doppler 11/1/2009                                                                                         IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 20
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                Aircraft Surveillance Radar (ASR) Problem
+                                                                                         Range
+        Courtesy of MIT Lincoln Laboratory   ASR-9                                       60 nmi.
+        Used with permission
+
+
+
+
+                                                                            Range
+                                                                          Resolution
+                                                                           1/16 nmi
+
+                                                                              Rotation
+                                                                               Rate
+                                                                              12. rpm
+
+                                                                          Transmits
+  Range - Azimuth - Doppler Cells                                         Pulses at
+             ~1000 Range cells                                            ~ 1250 Hz
+            ~500 Azimuth cells                          Az
+            ~8-10 Doppler cells                      Beamwidth
+    5,000,000 Range-Az-Doppler Cells                   ~1.2 °
+       to be threshold every 4.7 sec.
+                                                                  As Antenna Rotates
+                                                                 ~22 pulses / Beamwidth
+                                                                      IEEE New Hampshire Section
+Radar Systems Course 21
+Pulse Doppler 11/1/2009                                                     IEEE AES Society
+               Moving Target Detector (MTD) Processor
+
+                   Issue                          Solution
+       Ground Clutter                     1. Eight Pulse Doppler
+                                          Linear Coherent Filters (10
+                                          pulses)
+
+       Second Time Around Clutter         2. Coherent Transmitter
+                                          3. Constant PRF within
+                                          coherent processing interval
+
+       Rain                               4. Doppler Filter Bank
+                                          5. Adaptive Thresholding for
+                                          each (Range Azimuth
+                                          Doppler) Cell - 3.9 million cell
+
+       Tangential Targets, Blind Speeds   6. Fine Grained Clutter Map
+                                          7. Multiple PRFs
+                                                 IEEE New Hampshire Section
+Radar Systems Course 22
+Pulse Doppler 11/1/2009                                IEEE AES Society
+                               Moving Target Detector (MTD)
+
+      I and Q                                     8 or Greater
+                                                 Pulse Doppler
+Digitized Radar                                   Filter Bank                Adaptive         Post
+ Echoes From                                                               Thresholding    Processing
+Each Range Cell                                                                           Thresholding
+                                            Zero
+                                           Velocity          Clutter Map                            Output
+                                            Filter              Filter                             Detections
+
+
+
+
+        •      Pulse Doppler filtering on groups of 8 or more pulses with a fine
+               grained clutter map.
+
+        •      Aircraft are detected in ground clutter and / or rain with the Doppler
+               filter bank & use of 2 PRFs.
+
+        •      Birds and ground traffic are rejected in post processing, using
+               Doppler velocity and a 2nd fine grained clutter map
+  Viewgraph Courtesy of MIT Lincoln Laboratory
+  Used with permission
+                                                                                IEEE New Hampshire Section
+  Radar Systems Course 23
+  Pulse Doppler 11/1/2009                                                             IEEE AES Society
+                                      ASR-9 8-Pulse Filter Bank
+
+
+
+                                                                                                        Note:
+                                                                                                        Doppler sidelobes 40 dB
+                                                                                                        down from peak response
+                                                    Courtesy of MIT Lincoln Laboratory
+                               ASR-9 Filter Bank                                                   ASR-9 One Doppler Filter
+                     10                                                                 10
+                     0                                                                  0
+
+
+
+
+    Magnitude (dB)                                                     Magnitude (dB)
+                 -10                                                                -10
+                 -20                                                                -20
+                                                                                                                          Rain
+                 -30                                                                -30                                   Echo
+                 -40                                                                -40
+                 -50                                                                -50      Aircraft
+                 -60                                                                -60
+                 -70                                                                -70
+                    0     20     40      60        80      100                         0         20        40      60        80   100
+                               Radial Velocity (kts)                                                     Radial Velocity (kts)
+Viewgraph Courtesy of MIT Lincoln Laboratory Used with permission
+                                                                                                            IEEE New Hampshire Section
+Radar Systems Course 24
+Pulse Doppler 11/1/2009                                                                                           IEEE AES Society
+                          Detection in Rain Using Two PRFs
+
+           Filter Number 4            5       6       7       0   1       2       3       4
+
+
+                          PRF 1
+
+
+                                  4       5       6       7   0   1   2       3       4
+
+                          PRF 2
+
+
+              Aliased Values of
+           Aircraft Doppler Velocity
+                                                                                  True Aircraft
+               At Different PRFs
+                                                                                    Velocity
+
+
+                                                              0
+                                              Radial Velocity
+
+
+                                                                              IEEE New Hampshire Section
+Radar Systems Course 25
+Pulse Doppler 11/1/2009                                                             IEEE AES Society
+                                                  MTD Performance in Rain
+
+            Unprocessed Radar Returns                              Time History of MTD Radar Tracker Output
+                                                                        August 1975, FAA Test Center
+
+
+
+
+                             Doppler Spectrum of Rain
+
+
+
+
+      Received Power (dB)
+                            80
+
+                            60
+
+                            40
+
+                            20
+
+                            0
+                            – 60 Kt          0           + 60 Kt
+                                                                                               Photographs Courtesy
+                                      Doppler Velocity                                         of FAA
+
+                                                                                      IEEE New Hampshire Section
+Radar Systems Course 26
+Pulse Doppler 11/1/2009                                                                     IEEE AES Society
+                          Moving Target Detector - I (1975)
+
+                                          •   A/D Converters
+                                               – 10 Bit 2.6 MHz
+                                               – Top one “Q”
+                                               – Bottom one “I”
+
+                                          •   Input Memory
+                                               – Corner turning memory
+
+                                          •   MTD Processor
+                                               – ~1000 TTL Chips
+
+                                          •   Clutter Map
+                                               – Using “Drum” memory
+                                                 technology
+
+                                          •   Analog IF Chassis
+     Courtesy of FAA
+
+                                                      IEEE New Hampshire Section
+Radar Systems Course 27
+Pulse Doppler 11/1/2009                                     IEEE AES Society
+                                     Non-Coherent Integration and the Effect
+                                             of Correlated Clutter
+                                     Doppler Spectrum of Rain                   •   Rain clutter residue that
+
+
+
+              Received Power (dB)
+                                    80                                              leaks through the MTI
+                                    60
+                                                                                    canceller is correlated
+                                                                                    from pulse to pulse
+                                    40
+                                                                                •   Non coherent integration
+                                    20                                              of correlated clutter
+                                    0
+                                                                                    residue is less efficient
+                                    – 60 Kt          0            + 60 Kt
+                                                                                    than with uncorrelated
+                                              Doppler Velocity                      noise
+   Courtesy of FAA
+
+
+                                                Non Coherent Integration Probability Distribution
+
+
+                                                Single                              Sum of 10 Pulse
+                                                Pulse
+
+                                                                 Uncorrelated
+                                                                                                      Correlated
+
+
+
+                                                                                             IEEE New Hampshire Section
+Radar Systems Course 28
+Pulse Doppler 11/1/2009                                                                            IEEE AES Society
+                                                         Independent Pulses for Partially
+                                                             Correlated Waveforms
+                         Correlation Function ρ(T) 0.99                        0.97           0.9 0.7 0.5           0.15     0.02                       N
+                          100                                                                                                                     Number of pulses
+
+
+
+
+ Equivalent number of independent pulses
+                                                  Dependent
+                                                   Sampling
+                                                                                                                                                          σV
+                                           50
+                                                    Region                                                                                        Standard Deviation
+                                                                      30                                                                           of Clutter Velocity
+                                                                         0
+                                                                                                                                                          λ
+                                                                    =
+                                                                  N                   0
+                                           20                                      10
+                                                                               =                                                                      Wavelength
+                                                                           N          50
+                                           10
+                                                                               N
+                                                                                    =
+                                                                                                  30                                                f PRF = 1 / T
+                                                                                              =   20
+                                                                                          N                                                       Pulse Repetition Rate
+                                                                                                           10
+                                                                                              =
+                                                                                          N
+                                            5                                                          =                                            Blue dot is for
+                                                                                                   N
+                                                                                                                                                     an S band 2D
+                                                                                                                                                  radar in rain clutter
+                                                                                                                3
+                                            2                                                          N=                           Independent
+                                                                                                                                      Sampling
+                                                                                                                                       Region
+                                           1
+                                           0.001 0.002    0.005   0.01     0.02               0.05          0.1        0.2            0.5   1.0
+                                                                         σ V / λ f PRF                                               Adapted from Nathanson, Reference 5
+
+                                   •        Non-coherent integration of partially correlated pulses can
+                                                             often be very inefficient
+                                                                                                                                    IEEE New Hampshire Section
+Radar Systems Course 29
+Pulse Doppler 11/1/2009                                                                                                                   IEEE AES Society
+                                 MTD Implementations
+
+         •     The first 2 versions of the MTD were designed, built for the
+               FAA by MIT Lincoln Laboratory from the early to the late
+               1970s and are documented extensively*
+
+         •     After operational testing of MTD II, These concepts were
+               included into the specification of the ASR-9 and
+               incorporated in that radar** along with additional
+               improvements
+
+         •     These concepts are presently implemented in almost all
+               ground based low PRF radars and have influenced the
+               extensive evolution of pulse Doppler processing onto sea
+               based and airborne platforms, as further improvements in
+               digital processing technology and algorithmic techniques
+               have advanced
+
+     *See References 1, 8, 9 , 10, 11, 12 for extensive discussion
+
+    **See Taylor References 15
+                                                                     IEEE New Hampshire Section
+Radar Systems Course 30
+Pulse Doppler 11/1/2009                                                    IEEE AES Society
+                                            MTD Summary
+        •     The MTD proved that, for the first time, digital signal processing
+              hardware and algorithmic technology could be implemented in a
+              manner that would give excellent aircraft detection while rejecting
+              all forms of clutter (ground, rain, etc), under almost all conditions,
+              so that radar and beacon reports could be reliably correlated and
+              displayed to the air traffic controller.
+
+        •     Solving this particular civilian problem has been, over the ensuing
+              years, a catalyst, for the appropriate application of this general
+              approach to many other civilian and military radar problems:
+                  –       Understanding that Moore’s law will allow cost effective use, in the
+                          near future, of processing techniques, seemingly not cost effective
+                          today
+                             Some experts said “ You can never make wire wrapped 1000 IC work
+                             reliably ( Incidentally, they were wrong!)
+                             Now that processing can be done with a few programmable Power PC
+                             cards
+                  –       Integration of many pulses to use low Doppler sidelobes to reject
+                          moving clutter (rain, chaff , sea clutter, etc.)
+                  –       Use of high resolution clutter maps, to detect tangential targets
+                  –       Solving the “signal processing to radar target display” problem in an
+                          integrated manner
+
+                                                                          IEEE New Hampshire Section
+Radar Systems Course 31
+Pulse Doppler 11/1/2009                                                         IEEE AES Society
+                              MTD Clutter Map Techniques
+
+        •      Clutter maps are a memory which stores for each range-CPI
+               cell in the radar’s coverage the value of the noise and
+               clutter echo in that cell
+                   – Clutter maps are usually implemented using a recursive filter
+                   – For each range – CPI cell, the clutter map is updated using
+                     the following algorithm
+                          A(n + 1) =
+                                       1
+                                         (A(n)) + ⎛⎜ 1 − 1 ⎞⎟(A(n − 1))
+                                       N           ⎝     N⎠
+                   – N = 8 for the MTD                n = scan number
+
+        •      They are used to detect targets whose radial velocity is at of
+               near zero and whose backscatter echo is greater than the
+               clutter and / or noise amplitude stored in the clutter map
+                   – The clutter map channel offers a method of detecting targets
+                     that are not detected by the subset of the Doppler filters, that
+                     are adjacent to zero Doppler and whose shape is designed to
+                     strongly reject ground echoes near zero Doppler
+
+                                                                          IEEE New Hampshire Section
+Radar Systems Course 32
+Pulse Doppler 11/1/2009                                                         IEEE AES Society
+                                   Clutter Map Thresholding
+
+        •      Clutter map detection techniques use temporal thresholding
+               techniques
+                   –      Spatial CFAR techniques would detect the edges of moving rain
+                          clouds
+
+        •      Target detection is declared if the size of the average of the
+               coherently integrated return is M times the previous scan’s value,
+               which is stored on the clutter map
+
+        •      This process is performed for each Range CPI cell every scan of
+               the radar
+                   –      ~350,000 cell for an ASR radar
+
+        •      Additional Points
+                   –      This technique makes possible detection of tangential aircraft flying
+                          tangentially near large discrete pieces of ground clutter
+                             Called “Inter-clutter visibility” in the literature
+                   –      Aircraft moving tangentially to the radar are give large specular
+                          echoes, which enhances this detection mode
+
+
+
+                                                                                   IEEE New Hampshire Section
+Radar Systems Course 33
+Pulse Doppler 11/1/2009                                                                  IEEE AES Society
+                          Post Signal Processing Clutter Map
+                                      Techniques
+        •      Even with these, relatively sophisticated signal processing
+               and thresholding techniques, performed on single range –
+               CPI basis, sometimes excessive false detections do occur
+
+        •      These can be caused by
+                  –       Heavy bird migration
+                  –       Ground clutter whose echoes exceed the A/D dynamic range
+                  –       Automobile traffic
+                  –       And other sources
+
+        •      More sophisticated Area CFAR very similar to clutter maps
+               have been developed to effectively deal with these problems
+                  – This set of thresholding techniques are employed before the
+                    tracking function
+                  – Good places to learn more detail about these “post
+                    processing” techniques are detailed ;
+                            References 11 and 12;
+                            Reference 6, pp 284-285
+
+                                                                IEEE New Hampshire Section
+Radar Systems Course 34
+Pulse Doppler 11/1/2009                                               IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 35
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                              Unambiguous Doppler Velocity and Range
+                                            Unambiguous Range (nmi)
+                                      400            100           40             10           4   1
+                             3000
+
+                                                            Hz                                                   λ f PRF
+                                                        M                                                   VB =
+
+
+
+
+ First Blind Speed (knots)
+                                                    0
+                             1000                 22          Hz                                                    2
+                                              nd             G
+                                            a           5
+                                           B         43         Hz                                                and
+                                         F        nd           G
+                                      VH       Ba          .3            Hz
+                              300                         1            G                                            c
+                                         U
+                                           HF
+                                                   B a nd
+                                                               nd
+                                                                  3 .2
+                                                                              4
+                                                                                G
+                                                                                  Hz
+                                                                                                            RU =
+                                                 L           a             9.             Hz                     2 f PRF
+                                                           B            nd               G
+                              100                       S            Ba               35
+                                                                  X
+                                                                                 a nd
+                                                                               B                                 Yields
+                                                                           K a
+
+
+                               30
+                                                                                                                   λc
+                                                                                                             VB =
+                              10                                                                                  4 RU
+                                0.1                          1                       10            100
+                                            Pulse Repetition Rate (KHz)
+
+
+                                                                                                         IEEE New Hampshire Section
+Radar Systems Course 36
+Pulse Doppler 11/1/2009                                                                                        IEEE AES Society
+                                 Sensitivity Time Control
+
+
+                                                                           Aircraft at 200 nmi, RCS = 1 m2
+
+
+                                         Bird at 89 nmi, RCS = 0.0015 m2
+
+                   •      These two targets have the same detectability, because in
+                          the radar equation: S    σ
+                                                     ∝
+                                                 N       R4
+                   •      This false target issue can be mitigated by attenuating to
+                          the received signal by a factor which varies as 1/R4
+                           – Can also be accomplished by injecting noise into the
+                             receive channel , which falls off as 1/R4
+
+                   •       Radars that utilize range ambiguous waveforms, cannot
+                          use STC, because long range targets which alias down in
+                          range, would be adversely attenuated by the STC
+                           – For these waveforms, other techniques must be used to
+                             mitigate the false target problem due to birds
+
+                                                                       IEEE New Hampshire Section
+Radar Systems Course 37
+Pulse Doppler 11/1/2009                                                      IEEE AES Society
+                          Classes of MTI and Pulse Doppler
+                                      Radars
+                                     Low PRF        Medium PRF           High PRF
+
+                   Range          Unambiguous        Ambiguous            Very
+                   Measurement                                          Ambiguous
+
+
+                   Velocity           Very           Ambiguous        Unambiguous
+                                    Ambiguous
+                   Measurement
+
+            Low PRF                         Medium PRF                         High PRF
+  • Wind blown clutter           • Wind blown clutter may be a        • Range eclipsing losses
+  may be a problem               problem
+                                                                      • Distant targets compete
+  • Can use STC                  • Range eclipsing losses             with near in clutter
+
+                                 • Far out targets compete with       • Can’t use STC
+                                 near in clutter
+
+                                 • Can’t use STC
+                                                                     Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                                     Used with permission
+                                 • Ambiguities difficult to remove
+                                                                     IEEE New Hampshire Section
+Radar Systems Course 38
+Pulse Doppler 11/1/2009                                                    IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 39
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                              Velocity Ambiguity Resolution
+                                    Unfold detections out to some maximum velocity
+                                                                                                   Blind
+    CPI #1                                                                                         Zones
+    PRF = f1
+
+                                     f1          2f1            3f1              4f1         5f1      Doppler
+    CPI #2                                                                                            (Velocity)
+    PRF = f2
+
+         Individual CPI                   f2            2f2                3f2               4f2      Doppler
+      unambiguous velocity                                                                            (Velocity)
+             regions
+         •     Split dwell into multiple CPIs at different PRFs
+                   –      Scan to scan, even pulse-to-pulse changes also possible
+         •     Moves blind velocities to ensure detection of all non-zero velocity
+               targets
+         •     True target velocity is where best correlation across CPIs occurs
+         •     Choose PRFs so that least common multiple occurs above
+               desired                                        Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                              Used with permission
+               maximum unambiguous velocity
+                                                                           IEEE New Hampshire Section
+Radar Systems Course 40
+Pulse Doppler 11/1/2009                                                          IEEE AES Society
+                          Chinese Remainder Theorem
+                Rc = ( C1A1 + C2A2 + C3A3 ) modulo (m1 m2 m3 )
+                          (assumes 3 PRFs)
+                Rc = True range/Doppler cell number
+                          Cell number is range expressed in pulse widths or Doppler
+                          velocity expressed in Doppler filter widths
+
+                Ai = Ambiguous range or Doppler cell number for ith PRF
+
+                PRFi = 1 / t mi     t = pulsewidth
+
+                m1 m2 m3 are relatively prime numbers
+
+                C1 C2 and C3 are related to m1 m2 and m3 by
+
+                 C1 = b1 x m2 m3 = 1 modulo m1
+                 C2 = b2 x m3 m1 = 1 modulo m2
+                 C3 = b3 x m1 m2 = 1 modulo m3
+                where b1 = smallest positive integer which, when multiplied
+                by m2 m3 and divided by m1 gives unity as the remainder
+                                                                  IEEE New Hampshire Section
+Radar Systems Course 41
+Pulse Doppler 11/1/2009                                                 IEEE AES Society
+                  Example - Chinese Remainder Theorem
+  Doppler Filters at PRF1                                                                      S Band Radar
+
+  1    2     3     4      5    6    7   8   1   2   3    4   5   6   7   8   1   2   3          PRF1 = 800Hz
+                                                                                            Blind Sped = 80 knots
+
+ Doppler Filters at PRF2
+                                                                                                 PRF1 = 500Hz
+                                                                                            Blind Speed = 50 knots
+  1    2     3     4      5     1   2   3   4   5   1    2   3   4   5   1   2   3   4
+
+                                                Doppler velocity
+                                                                                            Each filter 100 Hz wide
+                                                                                                  (10 knots)
+                       A1 = 5                   m1 = 8
+                                                                                         C1 = b1 m2 = 1 modulo m1
+                       A2 = 3                   m2 = 5
+                                                                                         C2 = b2 m1 = 1 modulo m2
+                       Rc = (C1A1 + C2A2) modulo (40)
+                                                                                         C1 = b1 m2 = 1 modulo m1
+                              = [5(5x5) + 3(8x2)] modulo (40)
+                                                                                         C1 = b1 5 = 1 modulo 8
+                              = (125+48) modulo (40)
+                                                                                         b1 = 5
+                              = 173 modulo (40)
+                              = 13
+                                                                                         C2 = b2 8 = 1 modulo 5
+                                                                                         b2 = 2
+                       True velocity = 130 knots
+                                                                                         IEEE New Hampshire Section
+Radar Systems Course 42
+Pulse Doppler 11/1/2009                                                                        IEEE AES Society
+                  Example - Chinese Remainder Theorem
+            Shoe Length of 4 Men’s Feet                           Measure of a Room (Remainder)
+            Bob    m1 = 7 inches                        Bob     2 inches remainder = A1
+            Larry m2 = 8 inches                         Larry   5 inches remainder = A2
+            Moe    m3 = 9 inches                        Moe     5 inches remainder = A3
+            Curly m4 = 11 inches                        Curly   6 inches remainder = A4
+
+                                  WHAT IS THE LENGTH OF THE ROOM ??
+
+                          L = ( C1A1 + C2A2 + C3A3 + C4A4 ) modulo (m1 m2 m3 m4 )
+                          m1 m2 m3 m4 = 5544
+                          C1 = b1 x m2 m3 m4 = 1 modulo m1
+                          b1 x 8 x 9 x 11 = 1 modulo 7
+                          b1 x (7+1) x (7+2) x (7+4) = 1 modulo 7
+                          8 b1 = 1 modulo 7
+                          b1 = 1
+
+                 L = [A1(792x1) + A2(693x5) + A3(616x7) + A4(504x5)] modulo 5544
+                    = [2(792) + 5(3465) + 5(4312) + 6(2520)] modulo 5544
+                    = [1584 + 17,325 + 21,560 + 15,120] modulo 5544
+                    = 149 inches
+                                                                      IEEE New Hampshire Section
+Radar Systems Course 43
+Pulse Doppler 11/1/2009                                                     IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 44
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                           Quick Matched Filter Review
+
+         •     Matched Filter is the cross correlation between :
+                   – Received signal (plus noise) , and
+                   – A replica of the transmitted signal                       s( t ) = u ( t ) e 2 π j f T t
+                                            ∞
+
+                                            ∫
+                                                          ∗
+                  Matched Filter Output =     s R ( t ) s   (t − TR )dt       TR = Round trip time
+                                            −∞                                     delay to target
+         •     For low S/N assumed:
+                   – Autocorrelation of transmitted signal
+                   – It is assumed that Doppler velocity of target is zero
+
+         •     Usually the target is moving and the Doppler frequency of
+               the target is not zero
+
+         •     Then, the output of matched filter is the cross correlation of
+               the transmitted signal and the received Doppler shifted
+               echo.
+
+
+                                                                          IEEE New Hampshire Section
+Radar Systems Course 45
+Pulse Doppler 11/1/2009                                                         IEEE AES Society
+                                  The Ambiguity Function
+
+        •     The Ambiguity Function is the squared magnitude of the
+              cross correlation (output of matched filter) of the
+              transmitted signal and the received Doppler shifted echo.
+
+        •     Studying (analytically and graphically) the two dimensional
+              properties of the Ambiguity Function as both :
+                  – Time delay (range), and
+                  – Doppler frequency ( Doppler velocity)
+              are varied, can give great insight into understanding many
+              of the waveforms properties, in particular:
+                  –       Target resolution,
+                  –       Waveform measurement accuracy,
+                  –       Response to various types of clutter, and
+                  –       Ambiguities in Doppler velocity and range
+
+
+
+                                                                  IEEE New Hampshire Section
+Radar Systems Course 46
+Pulse Doppler 11/1/2009                                                 IEEE AES Society
+                               The Ambiguity Function
+
+       •      The Ambiguity Function is the squared magnitude of the cross
+              correlation (output of matched filter) of the transmitted signal
+              and the received Doppler shifted echo.
+
+       •      Thus, with some algebraic manipulation *
+                                               ∞
+                           χ(TR , f D ) = ∫ u(t ) u ∗ (t + TR ) e 2 π j f D t dt
+                                              −∞
+                                                                               2
+       • Thus, the ambiguity function is χ(TR , f D )
+          – TR is the round trip time delay to the target
+          – f D is the Doppler shift of the target
+                                          2 π j fT t
+                 – and s(t ) = u( t ) e
+
+
+
+     * See Skolnik Reference 1, pp 329-330 for details
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course 47
+Pulse Doppler 11/1/2009                                                           IEEE AES Society
+                      Properties of the Ambiguity Function
+
+        •      Maximum value of the ambiguity function = (2 E )2
+                – At true location of target TD = 0
+                – When, f D = 0                     Note: s(t ) = u(t )e 2 π j f0 t
+
+        •      Total volume under surface of ambiguity function = (2 E )2
+                                                                                2
+               Behavior along TR axis χ(TR ,0) = ∫ u(t ) u (t + TR ) dt
+                                                    2           ∗
+        •
+                – Square of autocorrelation function of u(t )
+                                                                                                      2
+               Behavior along frequency, f D , axis χ(0, f D ) = ∫ u (t ) e
+                                                                     2              2 π j f0 t
+        •                                                                   2
+                                                                                                 dt
+                – Square of inverse Fourier Transform of u 2 (t )
+
+
+        •      A good model of the ambiguity function, suggested by
+               Skolnik, is a “box of sand”
+                – Total volume of sand is = (2 E ) , The sand may be
+                                                  2
+                                                                        in different
+                   piles, but its volume is constrained to be = (2 E )
+                                                                      2
+
+
+                                                                    IEEE New Hampshire Section
+Radar Systems Course 48
+Pulse Doppler 11/1/2009                                                   IEEE AES Society
+                          Three General Classes of Ambiguity
+                                      Functions
+ Typically, the magnitude,                           χ(TR , f D )
+    not the magnitude
+                                                                         fD
+    squared is plotted
+
+
+
+
+                                                                    TR
+
+                                              Knife Edge (ridge)          χ(TR , f D )
+                          χ(TR , f D )
+                                                fD                                                  fD
+
+
+
+                                         TR
+                                                                                               TR
+                                                                                         Bed of Spikes
+                                    Thumbtack
+                                                                              IEEE New Hampshire Section
+Radar Systems Course 49
+Pulse Doppler 11/1/2009                                                             IEEE AES Society
+                          Three General Classes of Ambiguity
+                                      Functions
+Linear FM
+                            χ(TR , f D )
+pulse, where                                              f D • Knife Edge (ridge)
+range and                                                     • Used to measure one parameter:
+Doppler are                                                      range , Doppler, or a linear
+coupled                                                          combination of range and
+                                                                 Doppler
+                                                TR           •   Examples : a single rectangular
+                                                                 pulsed sine wave or a single
+                                                                 rectangular linear FM pulse
+               Knife Edge (ridge)                                           χ(TR , f D )
+                          χ(TR , f D )
+                                                     fD                                            fD
+
+
+
+                                           TR
+                                                                                              TR
+                                                                                       Bed of Spikes
+                                    Thumbtack
+                                                                              IEEE New Hampshire Section
+Radar Systems Course 50
+Pulse Doppler 11/1/2009                                                             IEEE AES Society
+                          Three General Classes of Ambiguity
+                                      Functions
+                           χ(TR , f D )
+                                                     fD
+                                                          •   Bed of Spikes
+                                                          •   Used to measure both range ,
+                                                              Doppler with ambiguities
+                                                          •   Example : a burst of N pulses of
+                                           TR                 sine wave
+
+               Knife Edge (ridge)                                        χ(TR , f D )
+                          χ(TR , f D )
+                                                                                               fD
+                                                fD
+
+
+
+                                          TR
+                                                                                          TR
+                                                                                    Bed of Spikes
+                                     Thumbtack
+                                                                          IEEE New Hampshire Section
+Radar Systems Course 51
+Pulse Doppler 11/1/2009                                                         IEEE AES Society
+                          Three General Classes of Ambiguity
+                                      Functions
+                          χ(TR , f D )
+                                                     fD
+                                                          •   Thumbtack
+
+                                                          •   Examples : pseudorandom noise
+                                                              waveforms (rarely used in radar)
+                                           TR
+
+               Knife Edge (ridge)                                         χ(TR , f D )
+                           χ(TR , f D )
+                                                fD                                             fD
+
+
+
+                                          TR                                                TR
+                                                                                     Bed of Spikes
+                                    Thumbtack
+                                                                           IEEE New Hampshire Section
+Radar Systems Course 52
+Pulse Doppler 11/1/2009                                                          IEEE AES Society
+                      Ambiguity Function – Rectangular Pulse
+       •     Ambiguity Function for two simple single sine wave pulses,
+             each with different pulse widths
+       •     Examples - 2D slices across Ambiguity Function
+                                                         fD
+                             f       D
+
+
+
+                     −τ
+
+             1/ τ                           τ                 −τ           τ
+                                                TR                                    TR
+                                                                               1/ τ
+
+
+                                 τ
+                                                                     τ
+                          Long pulsewidth                     Short pulsewidth
+
+       f D = Doppler frequency shift        TR = Time delay        τ = pulsewidth
+
+                                                                    IEEE New Hampshire Section
+Radar Systems Course 53
+Pulse Doppler 11/1/2009                                                   IEEE AES Society
+                     Ambiguity Function of Rectangular Pulse
+
+                                                χ(TR , f D )
+          τ = pulsewidth                                            fD
+
+
+
+
+                          −τ
+                                                                              τ               TR
+                                                      1/ τ
+
+                                               2/ τ
+
+                                       3/ τ
+
+                          Triangular shape along time axis
+
+                   (sin x ) / x shape along frequency axis     Adapted from Rihaczek, in Skolnik, Reference 13
+
+                                                                IEEE New Hampshire Section
+Radar Systems Course 54
+Pulse Doppler 11/1/2009                                               IEEE AES Society
+                   Ambiguity Function of Linear FM Pulse
+                                 χ(TR , f D )           fD
+
+
+
+
+                                                                                 TR
+
+
+
+
+                                                Adapted from Rihaczek, in Skolnik, Reference 13
+
+                                                 IEEE New Hampshire Section
+Radar Systems Course 55
+Pulse Doppler 11/1/2009                                IEEE AES Society
+                   Ambiguity Function of Linear FM Pulse
+
+                                  f D = kTR      •   Ridge (knife edge) in
+                          fD                         Ambiguity diagram
+                                                     illustrates range Doppler
+                                                     coupling in linear FM
+                                                     waveform
+
+                                                 •   In this case, BT >> 1
+ B 1/ T
+       −T                         T        TR
+                                                 •   Angle of ridge is determined
+                                                     by the slope B / T
+
+
+                           1/ B
+
+                           T            T = Pulsewidth
+                                      B = Bandwidth = f 2 − f1
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 56
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                    Ambiguity Function for a Burst of Five
+                            Rectangular Pulses
+                                              fD   Spikes Illustrate:
+  “Bed of Spikes”
+                                                   Blind Speeds & Blind ranges
+
+
+
+
+                                                              1 / TP
+                                                                       TR
+
+
+
+                                                       Pulse radars usually use a
+                                                       filter matched to one pulse
+TD     = total duration                                and then integrate the N
+                                        TP
+                                                       pulses
+TP     = pulse repetition period    τ
+τ     = pulse duration
+                                                            5 pulse burst
+
+                               TP            TD
+                                                       IEEE New Hampshire Section
+Radar Systems Course 57
+Pulse Doppler 11/1/2009                                      IEEE AES Society
+                  Ambiguity Diagram for Phase Coded Pulse
+
+    13 Bit Barker Code          χ(TR , f D )
+                                                           fD
+
+
+
+
+                                                                              TR
+
+
+
+
+                                               Adapted from Rihaczek, in Skolnik, Reference 13
+
+                                               IEEE New Hampshire Section
+Radar Systems Course 58
+Pulse Doppler 11/1/2009                              IEEE AES Society
+                                                Outline
+                   •      Introduction
+
+                   •      Problem perspective
+                           – Burst Waveforms and their properties
+                           – The impact of Moore’s Law on radar Signal Processing
+                                 Past, present, and the future
+
+
+                   •      Pulse Doppler Processing Techniques
+                           –   Description of pulse Doppler processing
+                           –   Low PRF Example – Moving Target Detector (MTD)
+                           –   Range and Doppler Ambiguities
+                           –   Ambiguity Resolution - Chinese remainder theorem
+                           –   The “Ambiguity Function”
+                           –   Preview of Airborne Pulse Doppler issues
+
+
+                   •      Summary
+                                                                 IEEE New Hampshire Section
+Radar Systems Course 59
+Pulse Doppler 11/1/2009                                                IEEE AES Society
+                          Pulse Doppler Radar Techniques
+                               on Airborne Platforms
+
+                                   F-16
+                                 APG-66 , 68
+
+
+
+
+                                Courtesy of US Air Force
+
+
+
+
+                                                                         E-2C
+                                                                        APS-125
+                                                                  Courtesy of US Navy
+
+
+
+             AWACS
+              E-3A
+              APY-1
+
+                              Courtesy of US Air Force
+
+
+                                                           IEEE New Hampshire Section
+Radar Systems Course 60
+Pulse Doppler 11/1/2009                                          IEEE AES Society
+                              Doppler Velocity - Range Ambiguity Issues
+                                            Unambiguous Range (nmi)
+                                      400            100           40           10             4                1             Combining
+                             3000
+
+                                                            Hz                                                                    λ f PRF
+                                                        M                                                                    VB =
+
+
+
+
+ First Blind Speed (knots)
+                                                    0
+                             1000                 22          Hz                                                                     2
+                                              nd             G
+                                            a           5
+                                           B         43         Hz                                         Hz                      and
+                                         F        nd           G                                          G
+                                      VH       Ba          .3             Hz                         35
+                              300                         1             G                        d                                   c
+                                         U
+                                           HF
+                                                   B a nd         3 .2                     B   an
+                                                                                                                             RU =
+                                                 L           a nd          Hz         Ka
+                                                                                                                                  2 f PRF
+                                                           B              G
+                                                        S             . 4
+                              100                                    9
+                                                                n d
+                                                             Ba                                                                   Yields
+                                                          X
+
+                               30
+                                                                                                                                    λc
+                                                                                                                              VB =
+                              10                                                                                                   4 RU
+                                0.1                          1                   10                                 100
+             Pulse Repetition Rate (KHz)
+Example
+X-Band Fighter Radar        R U = 10 nmi − f PRF ~ 8 KHz − VB ~ 270 knots
+                                                                                                                          IEEE New Hampshire Section
+Radar Systems Course 61
+Pulse Doppler 11/1/2009                                                                                                         IEEE AES Society
+                    Airborne Radar Clutter Characteristics
+
+                 Illustrative example       Without Pulse-Doppler ambiguities
+
+
+
+
+          •     Doppler frequency of mainbeam clutter depends on scan direction
+
+          •     Doppler frequency of target depends on scan direction and aspect angle
+                                                              Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                              Used with permission
+                                                                  IEEE New Hampshire Section
+Radar Systems Course 62
+Pulse Doppler 11/1/2009                                                 IEEE AES Society
+                                     Summary
+
+         •     Pulse Doppler techniques can be used to optimally reject
+               various forms of radar clutter
+
+         •     Moving Target Detector is an example of near-optimum
+               Doppler processing and associated adaptive thresholding
+               techniques implemented in low PRF radars
+
+         •     Ambiguities in range and Doppler velocity can be resolved
+               by transmitting multiple bursts of pulses with different PRFs
+                – The Chinese remainder Theorem is a useful tool in
+                    resolving these ambiguities
+
+         •     The ambiguity function is a useful tool to understand the
+               time and frequency properties of different waveforms
+
+
+
+                                                        IEEE New Hampshire Section
+Radar Systems Course 63
+Pulse Doppler 11/1/2009                                       IEEE AES Society
+                                    Homework Problems
+
+
+         •     From Skolnik (Reference 1)
+                   –      Problems 3-9, 3-10, 3-11, 3-12, 3-13, 3-14 and 3-15
+
+
+
+
+                                                                    IEEE New Hampshire Section
+Radar Systems Course 64
+Pulse Doppler 11/1/2009                                                   IEEE AES Society
+                                References
+
+         1. Skolnik, M., Introduction to Radar Systems, McGraw-Hill, New
+            York, 3rd Ed., 2001
+         2. Barton, D. K., Modern Radar System Analysis, Norwood,
+            Mass., Artech House, 1988
+         3. Skolnik, M., Editor in Chief, Radar Handbook, New York,
+            McGraw-Hill, 3rd Ed., 2008
+         4. Skolnik, M., Editor in Chief, Radar Handbook, New York,
+            McGraw-Hill, 2nd Ed., 1990
+         5. Nathanson, F. E., Radar Design Principles, New York,
+            McGraw-Hill, 1st Ed., 1969
+         6. Richards, M., Fundamentals of Radar Signal Processing,
+            McGraw-Hill, New York, 2005
+         7. Schleher, D. C., MTI and Pulsed Doppler Radar, Artech,
+            Boston, 1991
+         8. O’Donnell, R. M. and Cartledge, L., Description and
+            Performance Evaluation of the Moving Target Detector,
+            Project Report ATC-69, MIT Lincoln Laboratory, 1977
+
+                                                    IEEE New Hampshire Section
+Radar Systems Course 65
+Pulse Doppler 11/1/2009                                   IEEE AES Society
+                          References (continued)
+
+        9. Rohling, H., Doppler Processing, Waveform Design and
+            Performance Measures for Some Doppler and MTD Radars,
+            “Ortung und Navigation”, March 1988 and January 1982
+        10. Bassford, R. et al, Test and Evaluation of the Moving Target
+            Detector (MTD) Radar, FAA Report, FAA-RD-77-118, 1977
+        11. Rabinowitz, S. J., et. al, “Applications of Digital Technology to
+            Radar”, Proceedings of the IEEE, Vol. 73, No 2, pp 325-339
+        12 Karp, D. Moving Target Detector Mod II Summary Report, Project
+            Report ATC 96, MIT Lincoln Laboratory. 1981
+        13. Skolnik, M., Editor in Chief, Radar Handbook, New York, McGraw-
+            Hill, 1st Ed., 1970
+        14. Delong, D. F. and Hofffsteter, E., “On the Design of Optimum
+            Waveforms for Clutter Rejection”, IEEE Information Theory, Vol IT-
+            13, no. 3, July 1967
+        15. Taylor, J. W. et. al., “Design of a New Airport Surveillance Radar
+            ASR-9”, Proceedings of the IEEE, Vol. 73, No 2, pp 284-289
+
+
+
+                                                         IEEE New Hampshire Section
+Radar Systems Course 66
+Pulse Doppler 11/1/2009                                        IEEE AES Society
+                             Acknowledgements
+
+
+         •     Mr. C. E. Muehe
+         •     Dr James Ward
+
+
+
+
+                                            IEEE New Hampshire Section
+Radar Systems Course 67
+Pulse Doppler 11/1/2009                           IEEE AES Society
+

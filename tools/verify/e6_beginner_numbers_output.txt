@@ -1,0 +1,112 @@
+
+§1 Photon energy E = h f
+source                                  f (Hz)      E (eV)  E / 12.4 eV
+mains 50 Hz                          5.000e+01   2.068e-13    1.668e-14
+AM broadcast 1 MHz                   1.000e+06   4.136e-09    3.335e-10
+LoRa 433.92 MHz                      4.339e+08   1.795e-06    1.447e-07
+LoRa 915 MHz                         9.150e+08   3.784e-06    3.052e-07
+GPS L1 1575.42 MHz                   1.575e+09   6.515e-06    5.254e-07
+Wi-Fi / microwave oven 2.45 GHz      2.450e+09   1.013e-05    8.171e-07
+5.8 GHz                              5.800e+09   2.399e-05    1.934e-06
+HB100 10.525 GHz                     1.052e+10   4.353e-05    3.510e-06
+automotive radar 77 GHz              7.700e+10   3.184e-04    2.568e-05
+top of RF, 300 GHz                   3.000e+11   1.241e-03    1.001e-04
+red light 700 nm                     4.283e+14   1.771e+00    1.428e-01
+green light 550 nm                   5.451e+14   2.254e+00    1.818e-01
+UV-C lamp 254 nm                     1.180e+15   4.881e+00    3.937e-01
+EU ionising boundary 100 nm          2.998e+15   1.240e+01    9.999e-01
+medical X-ray ~ 60 keV               1.451e+19   6.000e+04    4.839e+03
+[PASS] 433.92 MHz photon = 1.79 micro-eV (1.7945e-06 eV)
+[PASS] 2.45 GHz photon = 1.01e-5 eV 
+[PASS] 77 GHz photon = 0.318 meV 
+[PASS] 100 nm photon = 12.4 eV (hc = 1239.84 eV nm) 
+[PASS] 100 nm <-> 3.0e15 Hz (2.9979e+15 Hz)
+[PASS] 433 MHz photon is ~7 million times below 12.4 eV (ratio 6.910e+06)
+[PASS] even 77 GHz is ~39 000 times below (ratio 3.894e+04)
+[PASS] 10 eV photon is at 2.42e15 Hz (124 nm, far UV) (2.4180e+15 Hz, 124.0 nm)
+[PASS] kT at 37 C = 26.7 meV (26.73 meV)
+[PASS] 433 MHz photon is ~15 000 x smaller than kT (thermal jiggling) (ratio 14893)
+[PASS] visible green photon ~2.25 eV (a million times an RF photon, still below 12.4 eV) 
+[PASS] 2 W at 433.92 MHz = 7.0e24 photons/s (6.956e+24 /s)
+
+§2 Wavelengths
+  ADS-B 1090 MHz       lambda =      0.27504 m
+  LoRa 433.92 MHz      lambda =      0.69089 m
+  LoRa 868 MHz         lambda =      0.34538 m
+  LoRa 915 MHz         lambda =      0.32764 m
+  SG LoRa 923 MHz      lambda =       0.3248 m
+  GPS L1               lambda =      0.19029 m
+  2.45 GHz             lambda =      0.12236 m
+  HB100 10.525 GHz     lambda =     0.028484 m
+  Meteor 137.9 MHz     lambda =        2.174 m
+  FM 100 MHz           lambda =       2.9979 m
+  AM 1 MHz             lambda =       299.79 m
+  mains 50 Hz          lambda =   5.9958e+06 m
+[PASS] 433.92 MHz: lambda = 0.691 m 
+[PASS] 915 MHz: lambda = 0.328 m 
+[PASS] 2.45 GHz: lambda = 12.2 cm 
+[PASS] 50 Hz: lambda = 6000 km 
+
+§3 dB / dBm
+[PASS] 2 W = 33.0 dBm (33.01 dBm)
+[PASS] 10 mW = 10 dBm 
+[PASS] +3 dB = x1.995 power 
+[PASS] -100 dBm = 0.1 pW 
+[PASS] -100 dBm across 50 ohm = 2.24 uV rms (2.236 uV)
+[PASS] 2 W across 50 ohm = 10 V rms 
+[PASS] 2 W TX vs -120 dBm RX = 153 dB = 2e15 power ratio (153.0 dB)
+
+§4 Antenna lengths
+[PASS] 433.92 MHz free-space lambda/2 = 345 mm (345.4 mm)
+  practical thin-wire dipole ~0.95-0.97 x lambda/2 = 328-335 mm tip to tip
+[PASS] 433.92 MHz lambda/4 whip = 173 mm (before end-effect shortening) 
+[PASS] 137.5 MHz lambda/4 = 545 mm; 9A4QV's 53.4 cm arms = 0.98 lambda/4 (545 mm, ratio 0.980)
+[PASS] 1090 MHz lambda/4 ground-plane whip = 68.8 mm (68.8 mm)
+
+§5 Cable velocity factor (open stub, first S11 phase = -180 deg point)
+  L = 2.0 m, VF 0.66: quarter-wave resonance at 24.73 MHz
+  L = 2.0 m, VF 0.695: quarter-wave resonance at 26.04 MHz
+  L = 2.0 m, VF 0.8: quarter-wave resonance at 29.98 MHz
+  L = 2.0 m, VF 0.85: quarter-wave resonance at 31.85 MHz
+[PASS] 2.000 m cable resonant at 26.03 MHz -> VF 0.695 (PTFE, RG-316 class) (VF 0.6946)
+[PASS] open-end return loss 0.835 dB -> one-way loss 0.42 dB 
+
+§6 kTB noise floor at 290 K
+[PASS] kT0 = -173.98 dBm/Hz (-173.98)
+  APRS/AIS 12.5 kHz        kTB =  -133.0 dBm
+  LoRa 125 kHz             kTB =  -123.0 dBm
+  Meteor LRPT 120 kHz      kTB =  -123.2 dBm
+  FM broadcast 200 kHz     kTB =  -121.0 dBm
+  ADS-B 2 MHz              kTB =  -111.0 dBm
+  RTL-SDR full 2.4 MHz     kTB =  -110.2 dBm
+[PASS] LoRa 125 kHz kTB = -123.0 dBm 
+
+§7 Radio horizon, 4/3 earth
+[PASS] ADS-B: 10 m antenna to 35 000 ft aircraft LOS = 439 km (439 km)
+  same with a 2 m (window-sill) antenna: 432 km
+[PASS] rule of thumb d[km] = 4.12 (sqrt h1 + sqrt h2) [m] 
+
+§8 Doppler, f_d = 2 v f0 / c
+[PASS] HB100: 70.2 Hz per m/s (70.22)
+[PASS] HB100: 19.5 Hz per km/h (19.50)
+[PASS] HB100: 31.4 Hz per mph (31.39)
+  walking 1.4 m/s -> 98 Hz; car 50 km/h -> 975 Hz; ball 30 m/s -> 2106 Hz
+  sample rate for 120 km/h with margin (Nyquist x2.5): 5851 S/s
+
+§9 LEO Doppler for an overhead pass (circular orbit, non-rotating earth)
+[PASS] Meteor-M (830 km) at 137.9 MHz: max Doppler ~ +/-3.0 kHz at the horizon (+/-3028 Hz, v = 7440 m/s)
+[PASS] ISS (420 km) at 145.8 MHz: max Doppler ~ +/-3.5 kHz (+/-3496 Hz)
+  ISS 437.80 MHz repeater downlink: +/-10496 Hz (tune during the pass)
+
+§10 Free-space path loss at 1 km
+[PASS] FSPL(1 km): 85.2 dB at 433.92 MHz, 100.2 dB at 2.45 GHz (isotropic antennas) (85.2, 100.2 dB)
+[PASS] with equal 0.05 m^2 apertures the 2.45 GHz link is ~13 dB BETTER (aperture effect) (+13.1 dB)
+
+§11 Ground-to-ground LoRa range test: two-ray prediction (ladder rung 7)
+[PASS] two-ray breakpoint 4 h1 h2 / lambda for 1.5 m handheld heights at 433.92 MHz = 13 m (13.0 m; at 923 MHz 27.7 m)
+[PASS] two-ray loss at 1 km, both ends 1.5 m: 113 dB (vs 85 dB free space) (113.0 dB)
+[PASS] 10 mW e.r.p., dipoles, SF9/125: -98.7 dBm at 1 km, 30.8 dB margin; ~3.3 km with 10 dB fade margin (P_rx -98.7 dBm, margin 30.8 dB, d_max 3.32 km)
+  raising one end to a 6 m mast: d_max ~ 6.6 km (+6 dB per doubling of one height)
+
+43/43 PASS
+ALL PASS

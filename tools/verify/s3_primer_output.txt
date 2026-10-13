@@ -1,0 +1,28 @@
+=== 1. DC basics ===
+  red LED (V_F 2.0 V) at 10 mA from 3.3 V: R = (3.3-2.0)/10 mA = 130 ohm, P_R = 13 mW, P_LED = 20 mW
+  2S pack 8.4 V into 100k + 33k: I = 63.2 uA, P = 0.53 mW
+  E22 module 5 V x 1.2 A = 6.0 W; igniter 1 ohm across 8.4 V: 8.4 A, 71 W (why the pyro FET must stay off)
+  0603 resistor rated 0.1 W: max V across 1 k = sqrt(P R) = 10.0 V; max I in 1 ohm = 0.32 A
+  1 m of 0.5 mm^2 copper = 34.4 mOhm: at 2 A drops 69 mV and dissipates 0.14 W
+  energy: 1000 mAh x 3.7 V = 3.7 Wh = 13320 J
+  ngspice: LED node 2.030 V, I = 9.77 mA; divider 2.084 V at 63.2 uA
+
+=== 2. pn junction primer (silicon, 300 K) ===
+  N_A 1e17, N_D 1e16 cm^-3: phi = V_T ln(N_A N_D/n_i^2) = 0.776 V; depletion W = 0.332 um at 0 V, 0.906 um at 5 V reverse; C/A = 312 -> 114 pF/mm^2
+  (C/A in nF/cm^2: 31.2 -> 11.4); fraction of W on the lightly doped side = 0.91
+  LED IR 940 nm    : photon energy hc/lambda = 1.32 eV -> V_F >= ~1.32 V
+  LED red 630 nm   : photon energy hc/lambda = 1.97 eV -> V_F >= ~1.97 V
+  LED amber 590 nm : photon energy hc/lambda = 2.10 eV -> V_F >= ~2.10 V
+  LED green 525 nm : photon energy hc/lambda = 2.36 eV -> V_F >= ~2.36 V
+  LED blue 470 nm  : photon energy hc/lambda = 2.64 eV -> V_F >= ~2.64 V
+  ngspice V_F 1N4148 (IS 2.52n, N 1.752, RS 0.568)                : 0.589 V at 1 mA, 0.698 V at 10 mA
+  ngspice V_F Schottky HSMS-282x (IS 22n, N 1.08, RS 6)           : 0.311 V at 1 mA, 0.429 V at 10 mA
+  ngspice V_F zero-bias Schottky HSMS-2850 (IS 3u, N 1.06, RS 25) : 0.191 V at 1 mA, 0.479 V at 10 mA
+  ngspice V_F red LED model                                       : 1.890 V at 1 mA, 2.026 V at 10 mA
+
+=== 3. BJT: V_BE, f_beta, f_T, f_alpha (2N3904-like model of the BJT page) ===
+  I_S = 1e-14 A: V_BE at 1 mA = V_T ln(I_C/I_S) = 0.651 V (25 C); per decade 59.2 mV
+  I_S = 1e-15 A: V_BE at 1 mA = V_T ln(I_C/I_S) = 0.710 V (25 C); per decade 59.2 mV
+  I_C = 5.29 mA, beta0 = 211: f_beta = 2.25 MHz, f_T = 477 MHz (f_beta*beta0 = 476 MHz), f_alpha = 500 MHz (= 1.05 f_T; single-pole model predicts (beta0+1)/beta0)
+
+ALL S3 PRIMER CHECKS PASS

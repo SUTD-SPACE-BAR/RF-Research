@@ -1,0 +1,84 @@
+A: universal LNB plan
+  low: LO 9.75 GHz, RF 10.70-11.70 GHz -> IF 950-1950 MHz
+  high: LO 10.60 GHz, RF 11.70-12.75 GHz -> IF 1100-2150 MHz
+PASS A1 IF spans 950-2150 MHz
+  QO-100 NB beacon region 10489.55 MHz -> IF 739.55 MHz (inside RTL-SDR range)
+  PLL LNB, 25 MHz crystal x390: 30 ppm -> LO error +/-292.5 kHz
+  PLL LNB, 25 MHz crystal x390: 2 ppm -> LO error +/-19.5 kHz
+  PLL LNB, 25 MHz crystal x390: 0.5 ppm -> LO error +/-4.9 kHz
+PASS A2 x390: 30 ppm -> 292.5 kHz (matches +/-300 kHz PLL-LNB specs)
+  DRO LNB +/-2.5 MHz over temperature = 256 ppm; a 2.7 kHz SSB signal drifts across ~1852 channel widths
+
+B: LNB (NF 0.8 dB, G 55 dB) + 20 m RG-6 (~20 dB/100 m at 1.5 GHz) + SDR (NF 6 dB)
+  cascade NF = 0.800 dB (LNB alone 0.800 dB)
+PASS B1 cable and SDR add < 0.01 dB after 55 dB of LNB gain
+  total IF noise (T_ant 50 K, T_e 59 K, 1.2 GHz) at the SDR: -36.4 dBm — an 8-bit SDR front end sees this whole block: add 10-20 dB of pad or low tuner gain
+PASS B2 broadband IF noise into the SDR ~ -40 dBm
+
+C: offset dish (parent paraboloid y = x^2/4f; aperture from x = h to h + D)
+  f = 0.5 m, h = 0.05 m, D = 0.8 m: rim-plane (offset) angle 24.2 deg; feed tilted 43.2 deg off the paraboloid axis; half-angle subtended 37.5 deg -> equivalent f/D 0.74
+PASS C1 offset angle ~ 20-28 deg and f/D_eq ~ 0.5-0.8 for this TV-like geometry
+  Singapore -> GEO 105.5E: elevation 87.4 deg, slant 35791 km; dish face (rim-plane normal) at 63.2 deg
+  Singapore -> GEO 146E: elevation 41.3 deg, slant 37685 km; dish face (rim-plane normal) at 17.0 deg
+  Singapore -> GEO 57E: elevation 36.2 deg, slant 38084 km; dish face (rim-plane normal) at 11.9 deg
+  Singapore -> GEO QO-100 25.9E: elevation 3.4 deg, slant 41301 km; dish face (rim-plane normal) at -20.8 deg
+PASS C3 QO-100 (25.9E) is only ~3-4 deg above the horizon from Singapore
+PASS C2 near-overhead GEO from Singapore (~86 deg): offset dish face only ~62 deg up
+
+D: TV dish re-fed at 1694.1 MHz
+  D = 0.8 m (4.5 lambda), eta 0.5: G = 20.0 dBi, HPBW ~ 15.5 deg
+  D = 1.0 m (5.7 lambda), eta 0.5: G = 22.0 dBi, HPBW ~ 12.4 deg
+  D = 1.2 m (6.8 lambda), eta 0.5: G = 23.6 dBi, HPBW ~ 10.3 deg
+PASS D1 0.8 m dish at 1.69 GHz ~ 20 dBi, 1.9 dB below a 1.0 m dish
+  T_sys = 60 K antenna + 35 K LNA (NF 0.5 dB) = 95 K -> G/T = 0.2 dB/K (0.8 m)
+  slant 37618 km, FSPL 188.5 dB; if 1.0 m is just enough (C/N0 61.0 dB-Hz: Eb/N0 3 dB coded + 2 dB), implied EIRP = 18.8 dBW (48.8 dBm); a 0.8 m dish then gets C/N0 59.1 dB-Hz (margin -1.9 dB)
+PASS D2 0.8 m margin vs a 1.0 m minimum = -1.9 dB
+
+E: receiver power budgets
+  SX1262 RX, DC-DC  :    4.6 mA at 3.3 V =    15.2 mW
+  SX1262 RX, LDO    :    8.8 mA at 3.3 V =    29.0 mW
+  RTL-SDR Blog V3   :  275.0 mA at 5.0 V =  1375.0 mW
+  RTL-SDR / SX1262: 91 x (before the host computer)
+PASS E1 SDR receiver ~90x the power of a LoRa chip in RX
+  duty-cycled RX (SF7/125, T_sym 1.024 ms): 3 ms on / 97 ms sleep -> 139 uA average; transmitter preamble must span >= 101 symbols (103 ms)
+PASS E2 duty-cycled average ~ 139 uA (33x lower)
+  2000 mAh cell: continuous 18 days, duty-cycled 601 days (chip only)
+
+F: LO leakage at the antenna port
+  superhet: +7 dBm LO, DBM LO-RF 30 dB, LNA reverse 20 dB, SAW 2 dB: -45 dBm -> OVER (+12 dB vs -57 dBm)
+  same with a 35 dB-reverse-isolation LNA and +4 dBm LO: -63 dBm -> ok (-6 dB vs -57 dBm)
+  zero-IF: -60 dBm at the LNA input, LNA reverse 20 dB: -80 dBm -> ok (-23 dB vs -57 dBm)
+PASS F1 first superhet case 12 dB over -57 dBm
+
+G: can a transmitter detect a receiver? (monostatic echo off the receiving antenna)
+  1 W, dipoles, R = 100 m, matched load  sigma 0.102 m^2: echo -91.8 dBm
+  1 W, dipoles, R = 100 m, shorted (max) sigma 0.411 m^2: echo -85.8 dBm
+  1 W, dipoles, R = 1000 m, matched load  sigma 0.102 m^2: echo -131.8 dBm
+  1 W, dipoles, R = 1000 m, shorted (max) sigma 0.411 m^2: echo -125.8 dBm
+  the echo is co-channel with the 30 dBm transmitter: detecting it needs ~162 dB of self-interference cancellation, and the on/off change is only 6.0 dB amid building clutter
+PASS G1 matched dipole sigma = G^2 lambda^2/4pi = 0.10 m^2
+PASS G2 echo at 1 km ~ -132 dBm
+
+H: SA612 drive
+  200 mVpp sine = 70.7 mV rms = -10.0 dBm across 50 ohm
+  300 mVpp sine = 106.1 mV rms = -6.5 dBm across 50 ohm
+PASS H1 200-300 mVpp = -10.0 to -6.5 dBm (50 ohm)
+  50 ohm -> 1.5 kohm single-ended at 7.1 MHz: Q = 5.39, series L 6.04 uH, shunt C 80.5 pF (minus 3 pF pin capacitance -> 77.5 pF); balanced 3 kohm by transformer: turns ratio 7.75:1
+PASS H2 L-match gives 50 ohm
+  Si5351 3.3 Vpp CMOS into a 1000/68 ohm divider: 210 mVpp at the square-wave fundamental x4/pi = 268 mVpp — inside 200-300 mVpp
+PASS H3 divider lands the fundamental in 200-300 mVpp
+
+I: dot polarity
+  Q leg correct: IRR(g=1, 1 deg) = 41.2 dB; one balun reversed (g = -1): IRR = -41.2 dB -> the receiver now selects the image (sideband swapped)
+PASS I1 reversed leg swaps wanted and image (IRR -> -IRR in dB)
+  class-B push-pull halves: correct dots -> fundamental 1.000, 2nd 8.3e-17; one winding reversed -> fundamental 5.6e-17, 2nd 0.424
+PASS I2 reversed winding cancels the fundamental and keeps the 2nd harmonic
+
+J: an empty 0402 pad pair (~0.15 pF) left across/at a 50 ohm line
+  0.434 GHz: |X| =   2445 ohm, return loss 39.8 dB
+  0.915 GHz: |X| =   1160 ohm, return loss 33.3 dB
+  2.450 GHz: |X| =    433 ohm, return loss 24.8 dB
+  5.800 GHz: |X| =    183 ohm, return loss 17.4 dB
+PASS J1 negligible at 433 MHz (RL > 39 dB), matters at 5.8 GHz (RL < 25 dB)
+
+ALL PASS

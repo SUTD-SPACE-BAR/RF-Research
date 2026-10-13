@@ -1,0 +1,32 @@
+1. FCC field-strength limits at 3 m -> EIRP (average; Part 15 peak limit is 20 dB higher, 15.35)
+  15.209 general, >960 MHz                      :     0.500 mV/m -> EIRP  -41.2 dBm (   0.0001 mW)
+  15.239 FM broadcast band 88-108 MHz           :     0.250 mV/m -> EIRP  -47.3 dBm (   0.0000 mW)
+  15.249 902-928 / 2400 / 5800 MHz              :    50.000 mV/m -> EIRP   -1.2 dBm (   0.7500 mW)
+  15.249 24.0-24.25 GHz                         :   250.000 mV/m -> EIRP   12.7 dBm (  18.7500 mW)
+  15.245 FDS 902-928, 2435-2465, 5785-5815 MHz  :   500.000 mV/m -> EIRP   18.8 dBm (  75.0000 mW)
+  15.245 FDS 10.50-10.55, 24.075-24.175 GHz     :  2500.000 mV/m -> EIRP   32.7 dBm (1875.0000 mW)
+PASS 500 uV/m at 3 m = -41.2 dBm EIRP
+PASS 2500 mV/m at 3 m = 32.7 dBm EIRP
+PASS 50 mV/m at 3 m = -1.2 dBm EIRP
+
+2. Hopping channels: 26 MHz today vs 11 MHz (907-918) under NextNav's proposed plan
+  channel spacing = 20 dB BW = 125 kHz: 208 in 26 MHz,  88 in 11 MHz; 15.247 needs 50 -> OK in 11 MHz
+  channel spacing = 20 dB BW = 200 kHz: 130 in 26 MHz,  55 in 11 MHz; 15.247 needs 50 -> OK in 11 MHz
+  channel spacing = 20 dB BW = 250 kHz: 104 in 26 MHz,  44 in 11 MHz; 15.247 needs 25 -> OK in 11 MHz
+  channel spacing = 20 dB BW = 500 kHz:  52 in 26 MHz,  22 in 11 MHz; 15.247 needs 25 -> NOT POSSIBLE in 11 MHz
+PASS 500 kHz channels: only 22 fit in 11 MHz (< 25)
+PASS 125 kHz LoRa hopping: 88 fit in 11 MHz (>= 50)
+
+3. Handheld power vs limits (ERP; whip assumed 0 dBd, i.e. ERP = conducted power)
+   0.5 W ->  27.0 dBm ERP; vs 0.5 W PMR446-style:  +0.0 dB; vs SG amateur 10 W ERP: -13.0 dB
+   1.0 W ->  30.0 dBm ERP; vs 0.5 W PMR446-style:  +3.0 dB; vs SG amateur 10 W ERP: -10.0 dB
+   4.0 W ->  36.0 dBm ERP; vs 0.5 W PMR446-style:  +9.0 dB; vs SG amateur 10 W ERP:  -4.0 dB
+   5.0 W ->  37.0 dBm ERP; vs 0.5 W PMR446-style: +10.0 dB; vs SG amateur 10 W ERP:  -3.0 dB
+   8.0 W ->  39.0 dBm ERP; vs 0.5 W PMR446-style: +12.0 dB; vs SG amateur 10 W ERP:  -1.0 dB
+PASS 5 W is 10 dB above 0.5 W
+
+4. 30 dBm conducted, 250 kHz non-hopping LoRa with a 2.15 dBi antenna vs 15.249 limit
+  EIRP 32.1 dBm vs 15.249 average limit -1.2 dBm -> 33.4 dB over, IF judged under 15.249
+PASS gap ~33 dB
+
+RESULT: ALL PASS

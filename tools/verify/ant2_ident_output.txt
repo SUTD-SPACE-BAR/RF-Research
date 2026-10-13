@@ -1,0 +1,49 @@
+=== 1. Element lengths ===
+  band                    f (MHz)  lambda/4 (mm)  0.95 x lambda/4  lambda/2 (mm)
+  CB 27 MHz                  27.2           2757             2619           5514
+  6 m ham                    50.5           1484             1410           2968
+  FM broadcast               98.0            765              727           1530
+  airband                   127.0            590              561           1180
+  NOAA APT / 2 m            137.5            545              518           1090
+  2 m ham                   146.0            513              488           1027
+  marine VHF                158.0            474              451            949
+  315 MHz SRD               315.0            238              226            476
+  433 MHz ISM/70 cm         433.0            173              164            346
+  446 MHz PMR               446.1            168              160            336
+  UHF TV (centre)           600.0            125              119            250
+  868 MHz SRD               868.0             86               82            173
+  915 MHz ISM               915.0             82               78            164
+  ADS-B 1090               1090.0             69               65            138
+  GNSS L1                  1575.4             48               45             95
+  cellular 1.8-2.1 GHz     1950.0             38               37             77
+  2.4 GHz ISM              2450.0             31               29             61
+  3.5 GHz 5G               3500.0             21               20             43
+  5.8 GHz ISM              5800.0             13               12             26
+  inverse rule: f(MHz) = 0.95 * 299.79/(4 L) = 71.2/L_quarter(m) = 142.4/L_half(m)
+
+=== 2. Mismatch loss of reported stock-antenna SWRs ===
+  SWR 1.20: |Gamma| = 0.091, mismatch loss = 0.04 dB, return loss = 20.8 dB
+  SWR 1.30: |Gamma| = 0.130, mismatch loss = 0.07 dB, return loss = 17.7 dB
+  SWR 1.50: |Gamma| = 0.200, mismatch loss = 0.18 dB, return loss = 14.0 dB
+  SWR 2.00: |Gamma| = 0.333, mismatch loss = 0.51 dB, return loss = 9.5 dB
+  SWR 2.02: |Gamma| = 0.338, mismatch loss = 0.53 dB, return loss = 9.4 dB
+  SWR 2.90: |Gamma| = 0.487, mismatch loss = 1.18 dB, return loss = 6.2 dB
+  SWR 3.30: |Gamma| = 0.535, mismatch loss = 1.46 dB, return loss = 5.4 dB
+  SWR 4.00: |Gamma| = 0.600, mismatch loss = 1.94 dB, return loss = 4.4 dB
+  SWR 6.00: |Gamma| = 0.714, mismatch loss = 3.10 dB, return loss = 2.9 dB
+  SWR 10.00: |Gamma| = 0.818, mismatch loss = 4.81 dB, return loss = 1.7 dB
+
+=== 3. Collinear omni: gain and elevation beamwidth vs radiating length ===
+  L = 0.5 lambda: D ~  2.1 dBi, elevation HPBW ~   78 deg (915 MHz: L = 164 mm; 433 MHz: 346 mm)
+  L = 1.0 lambda: D ~  3.0 dBi, elevation HPBW ~   51 deg (915 MHz: L = 328 mm; 433 MHz: 692 mm)
+  L = 2.0 lambda: D ~  6.0 dBi, elevation HPBW ~   25 deg (915 MHz: L = 655 mm; 433 MHz: 1385 mm)
+  L = 3.0 lambda: D ~  7.8 dBi, elevation HPBW ~   17 deg (915 MHz: L = 983 mm; 433 MHz: 2077 mm)
+  L = 4.0 lambda: D ~  9.0 dBi, elevation HPBW ~   13 deg (915 MHz: L = 1311 mm; 433 MHz: 2769 mm)
+  L = 6.0 lambda: D ~ 10.8 dBi, elevation HPBW ~    8 deg (915 MHz: L = 1966 mm; 433 MHz: 4154 mm)
+
+=== 4. Dish gain (e_ap 0.6) ===
+  D = 0.6 m at 11.70 GHz: G = 35.1 dBi, HPBW ~ 3.0 deg
+  D = 0.9 m at 11.70 GHz: G = 38.6 dBi, HPBW ~ 2.0 deg
+  D = 1.2 m at 1.70 GHz: G = 24.4 dBi, HPBW ~ 10.3 deg
+  D = 0.45 m at 5.80 GHz: G = 26.5 dBi, HPBW ~ 8.0 deg
+  D = 1.0 m at 2.45 GHz: G = 26.0 dBi, HPBW ~ 8.6 deg

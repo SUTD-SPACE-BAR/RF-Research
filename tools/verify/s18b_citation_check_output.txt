@@ -1,0 +1,40 @@
+
+kb/03-transmission-lines-matching/microstrip-discontinuities.md:248
+  KB: 8. P. Silvester, P. Benedek, "Equivalent capacitances of microstrip open circuits," *IEEE Trans. MTT*, 20(8):511–516, 1972 (excess-charge method). (peer-reviewed; cited from knowledge)
+  CR: Silvester, Benedek (1972) 'Equivalent Capacitances of Microstrip Open Circuits' IEEE Transactions on Microwave Theory and Techniques 20(8):511-516 doi:10.1109/tmtt.1972.1127798
+  AUTO: consistent
+
+kb/03-transmission-lines-matching/periodic-structures-ebg.md:216
+  KB: 5. C. Caloz, T. Itoh, *Electromagnetic Metamaterials: Transmission Line Theory and Microwave Applications*, Wiley/IEEE 2006, ch. 3 (CRLH transmission lines, balanced condition, dispersion) and ch. 6 (leaky-wave antennas). (textbook; cited from knowledge, dispe
+  CR: Caloz, Itoh (2005) 'Electromagnetic Metamaterials: Transmission Line Theory and Microwave Applications'  (): doi:10.1002/0471754323
+  AUTO: CHECK
+
+kb/03-transmission-lines-matching/periodic-structures-ebg.md:217
+  KB: 6. D. R. Jackson, N. G. Alexopoulos, "Simple approximate formulas for input resistance, bandwidth, and efficiency of a resonant rectangular patch," *IEEE Trans. AP* 39(3):407–410, 1991 (bibliographic details cited from knowledge) — HED surface-wave efficiency 
+  CR: Jackson, Alexopoulos (1991) 'Simple approximate formulas for input resistance, bandwidth, and efficiency of a resonant ' IEEE Transactions on Antennas and Propagation 39(3):407-410 doi:10.1109/8.76341
+  AUTO: consistent
+
+kb/03-transmission-lines-matching/periodic-structures-ebg.md:218
+  KB: 7. K. N. Rozanov, "Ultimate thickness to bandwidth ratio of radar absorbers," *IEEE Trans. AP* 48(8):1230–1234, 2000. (peer-reviewed; cited from knowledge)
+  CR: Rozanov (2000) 'Ultimate thickness to bandwidth ratio of radar absorbers' IEEE Transactions on Antennas and Propagation 48(8):1230-1234 doi:10.1109/8.884491
+  AUTO: consistent
+
+kb/03-transmission-lines-matching/periodic-structures-ebg.md:219
+  KB: 8. L. Brillouin, *Wave Propagation in Periodic Structures*, McGraw-Hill 1946 (Dover 1953) — space harmonics, Brillouin zones, backward waves. (textbook; cited from knowledge)
+  CR: Vasseur (2021) 'Periodic Structures, Irreducible Brillouin Zone, Dispersion Relations and the Plane Wave E' Topics in Applied Physics ():3-42 doi:10.1007/978-3-030-84300-7_1
+  AUTO: CHECK
+
+kb/03-transmission-lines-matching/periodic-structures-ebg.md:220
+  KB: 9. R. E. Collin, *Foundations for Microwave Engineering*, 2nd ed., IEEE Press 2001, ch. 8 (periodic structures and filters: loaded lines, k–β diagram, Floquet's theorem). (textbook; cited from knowledge)
+  CR:  (2009) 'Periodic Structures and Filters' Foundations for Microwave Engineering (): doi:10.1109/9780470544662.ch8
+  AUTO: CHECK
+
+kb/03-transmission-lines-matching/time-domain-reflectometry.md:206
+  KB: 8. L. Bergeron, *Water Hammer in Hydraulics and Wave Surges in Electricity*, Wiley 1961 — the graphical (characteristic) method behind lattice diagrams, including non-linear ends. (textbook; cited from knowledge)
+  CR: Chau (None) 'Computation of tidal hydraulics and water quality using the Characteristic Galerkin method'  (): doi:10.5353/th_b3121213
+  AUTO: consistent
+
+kb/03-transmission-lines-matching/time-domain-reflectometry.md:207
+  KB: 9. H. W. Johnson, M. Graham, *High-Speed Digital Design: A Handbook of Black Magic*, Prentice Hall 1993, ch. 4 (transmission lines, reflections, ringing) and ch. 6 (terminations). (textbook; cited from knowledge)
+  CR: Alverson (1993) 'Book Review: High-Speed Digital Design: A Handbook of Black Magic by Howard W. Johnson and' ACM SIGARCH Computer Architecture News 21(5):85-86 doi:10.1145/165660.858358
+  AUTO: CHECK

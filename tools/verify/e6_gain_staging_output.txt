@@ -1,0 +1,114 @@
+
+§1 ADC noise penalty vs analog 'floor lift' X (analog noise above ADC floor)
+ X (dB)  penalty (dB)
+      0          3.01
+      3          1.76
+      5          1.19
+      6          0.97
+     10          0.41
+     15          0.14
+     20          0.04
+[PASS] X = 0 dB (analog = ADC floor): 3.0 dB penalty 
+[PASS] X = 6 dB: ~1 dB penalty 
+[PASS] X = 10 dB: 0.41 dB penalty 
+[PASS] X = 20 dB: 0.04 dB penalty (10 more dB of gain bought 0.37 dB) 
+
+  ADC floor -43.9 dBFS total = -107.7 dBFS/Hz; analog noise -169.5 dBm/Hz
+  analog noise equals the ADC floor at total gain G = 61.8 dB (model reference)
+[PASS] model: crossover gain ~62 dB for NF 4.5 dB and ENOB 7 at 2.4 MS/s (61.8 dB)
+
+ G (dB)  N_in (dBm/Hz)  MDS 12.5k (dBm)  clip (dBm)  window (dB)
+     40         -147.7           -106.7       -43.0         63.7
+     50         -157.4           -116.5       -53.0         63.5
+     55         -161.9           -120.9       -58.0         62.9
+     60         -165.5           -124.5       -63.0         61.5
+     65         -167.8           -126.8       -68.0         58.8
+     70         -168.9           -127.9       -73.0         54.9
+     75         -169.3           -128.3       -78.0         50.3
+     80         -169.4           -128.4       -83.0         45.4
+[PASS] window (clip - MDS) is largest at LOW gain and shrinks ~1 dB per dB once analog noise dominates 
+[PASS] but sensitivity (MDS) at G = 40 is ~20 dB worse than at G = 70 (21.2 dB)
+
+§2 Monte-Carlo: weak -115 dBm tone beside a stronger in-band signal, 8-bit ADC
+  analog-only SNR limit of the weak tone in 12.5 kHz: 13.5 dB
+
+  Scenario A: quiet band, neighbour at -75 dBm
+   G (dB)  SNR weak 12.5k (dB)  floor (dBFS/Hz)  clipped %  max spur (dBc)
+       30                -22.0           -107.7      0.000           -40.0
+       36                -12.5           -107.7      0.000           -46.3
+       42                 -6.6           -107.6      0.000           -52.3
+       46                 -2.5           -107.6      0.000           -56.6
+       50                  1.4           -107.4      0.000           -60.6
+       54                  5.0           -107.0      0.000           -63.5
+       58                  8.2           -106.2      0.000           -67.0
+       62                 10.6           -104.6      0.000           -69.2
+       66                 12.1           -102.1      0.000           -69.9
+       70                 12.9            -98.9      0.000           -71.0
+       74                 13.2            -95.2      0.000           -71.3
+       78                 -5.5            -78.6     98.912           -17.7
+
+  Scenario B: strong neighbour at -45 dBm
+   G (dB)  SNR weak 12.5k (dB)  floor (dBFS/Hz)  clipped %  max spur (dBc)
+       30                -18.8           -107.7      0.000           -70.7
+       36                -12.9           -107.7      0.000           -76.7
+       42                 -6.4           -107.6      0.000           -82.5
+       46               -252.5            -88.4     59.430           -28.3
+       50               -266.3            -74.7    100.000           -13.9
+       54               -270.0            -71.0    100.000           -11.1
+       58               -271.5            -69.5    100.000           -10.2
+       62               -272.3            -68.7    100.000            -9.8
+       66               -273.0            -67.9    100.000            -9.6
+       70               -273.0            -67.9    100.000            -9.6
+       74               -273.0            -67.9    100.000            -9.6
+       78               -273.0            -67.9    100.000            -9.6
+[PASS] A: SNR rises ~dB-for-dB with gain while the ADC floor dominates (G 30 -> 50 gains > 15 dB) (-22.0 -> 1.4 dB)
+[PASS] A: best unclipped SNR is within 1.5 dB of the analog-only limit (best G = 74 dB: 13.2 vs 13.5 dB)
+[PASS] A: the lowest gain within 1 dB of the analog limit shows a floor lift of ~5-12 dB over the ADC floor (G = 70 dB, lift 8.9 dB, SNR 12.9 dB)
+[PASS] A: going from 62 to 70 dB gain (floor lift 3 -> 9 dB) buys < 2.5 dB SNR (2.3 dB)
+[PASS] A: once the -75 dBm neighbour clips, SNR collapses or clipping spurs appear (> -50 dBc) (clipping from G = 78 dB; SNR at 78 dB -5.5 dB, spur -17.7 dBc)
+[PASS] B: the -45 dBm neighbour clips the ADC from G ~ 46 dB (0 dBFS at G = 45 dB plus noise peaks) (first clipping at G = 46 dB)
+[PASS] B: best achievable weak-tone SNR is > 10 dB worse than the analog limit (dynamic-range limited) (best -6.4 dB at G = 42)
+  ADC-limited window in 12.5 kHz = 66.7 dB; needed here: 80 dB (70 dB spread + 10 dB SNR)
+[PASS] B: the spread (-45 to -115 dBm, +10 dB SNR) exceeds the 8-bit ADC's 66.7 dB window in 12.5 kHz 
+[PASS] B: the strong signal, not the floor-lift rule (G ~ 70 dB), sets the usable gain 
+
+§3 librtlsdr R820T/R828D gain table (tenths of dB) and LNA/mixer step tables (src/tuner_r82xx.c)
+[PASS] 29 settings from 0 to 49.6 dB 
+[PASS] LNA steps total 33.5 dB, mixer steps total 15.3 dB (measured relative gains, 928 MHz) 
+  request   0.0 dB -> LNA index  0, mixer index  0 (sum of steps 0.0 dB)
+  request  19.7 dB -> LNA index  6, mixer index  5 (sum of steps 19.7 dB)
+  request  29.7 dB -> LNA index  8, mixer index  8 (sum of steps 29.7 dB)
+  request  40.2 dB -> LNA index 11, mixer index 11 (sum of steps 40.2 dB)
+  request  49.6 dB -> LNA index 15, mixer index 14 (sum of steps 49.6 dB)
+[PASS] 49.6 dB request -> LNA index 15 and mixer index 14-15 
+
+§4 Broadcast-FM harmonics (n x 87.5-108 MHz) and LO-harmonic responses (k f_LO +/- f_IF)
+  weather sats 137-138     FM harmonic orders landing inside: []
+  2 m 144-146              FM harmonic orders landing inside: []
+  AIS 161.95-162.05        FM harmonic orders landing inside: []
+  433 ISM 433.05-434.79    FM harmonic orders landing inside: []
+  SG LoRa 917-925          FM harmonic orders landing inside: [9, 10]
+  ADS-B 1089-1091          FM harmonic orders landing inside: [11]
+[PASS] 433 ISM band is hit by NO FM harmonic (4 x 108 = 432 MHz just misses; 5 x 87.5 = 437.5) 
+[PASS] FM 4th harmonic covers 350-432 MHz, e.g. 102.5 MHz -> 410 MHz 
+[PASS] ADS-B 1090 MHz lies inside the 10th-12th harmonic span? (not hit up to n = 11 by 87.5-108) 
+  tuned  137.90 MHz (LO 141.47): k=3: 420.8/428.0 MHz; k=5: 703.8/710.9 MHz
+  tuned  145.00 MHz (LO 148.57): k=3: 442.1/449.3 MHz; k=5: 739.3/746.4 MHz
+  tuned  162.00 MHz (LO 165.57): k=3: 493.1/500.3 MHz; k=5: 824.3/831.4 MHz
+  tuned  433.92 MHz (LO 437.49): k=3: 1308.9/1316.0 MHz; k=5: 2183.9/2191.0 MHz
+[PASS] tuned to Meteor 137.9 MHz, the 3rd-LO-harmonic response sits near 421-428 MHz (UHF land-mobile) 
+
+§5 SNR gain from a masthead LNA (NF 1 dB, G 20 dB) vs SDR at the end of 5 m RG-58
+  Meteor 137.9 MHz  city            T_a =   16436 K, 5 m RG-58 = 0.74 dB -> LNA improves SNR by   0.2 dB
+  Meteor 137.9 MHz  residential     T_a =    6107 K, 5 m RG-58 = 0.74 dB -> LNA improves SNR by   0.6 dB
+  Meteor 137.9 MHz  rural           T_a =    1802 K, 5 m RG-58 = 0.74 dB -> LNA improves SNR by   1.7 dB
+  Meteor 137.9 MHz  galactic only   T_a =     551 K, 5 m RG-58 = 0.74 dB -> LNA improves SNR by   3.9 dB
+  ADS-B 1090 MHz    sky/ground mix  T_a =     150 K, 5 m RG-58 = 2.52 dB -> LNA improves SNR by  14.2 dB
+[PASS] Meteor in a city (P.372 man-made Fa ~ 17.5 dB): masthead LNA buys < 1 dB (0.24 dB)
+[PASS] Meteor at a rural site: LNA buys ~1.5-2 dB (1.74 dB)
+[PASS] Meteor at a quiet site (galactic noise only, ~560 K): LNA buys ~3-5 dB (3.92 dB)
+[PASS] ADS-B 1090 MHz (RTL NF ~12 dB at 1.28 GHz, 2.5 dB cable): LNA buys > 8 dB (14.2 dB)
+  P.372 city/residential/rural Fam at 137.9 MHz: 17.5 / 13.2 / 7.9 dB
+
+27/27 PASS
+ALL PASS

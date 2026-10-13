@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html itemscope="itemscope" itemtype="http://schema.org/Article" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="dQIcgy2eQ8-zyE6l15aOsCdxiVDUKl84C_zi-lJivYE" />
+<meta name="google-site-verification" content="I41e_5mBeAM8AcOI8rSwPioPyN1DXJomC2U2trjvVTI" />
+<meta name="google-site-verification" content="6Gb3Ixn4gUMYU0fTQZ18k328dvAXT1p2PxHWcWXUWcQ" />
+<meta name="robots" content="max-image-preview:large">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1a1a">
+<title>The Dipole Antenna Isn&#8217;t As Simple As It Appears | Hackaday</title>
+<script>document.documentElement.className = "js"</script>
+
+<link rel="shortcut icon" href="https://hackaday.com/wp-content/themes/hackaday-2/favicon.ico?v=3" />
+<link rel="apple-touch-icon" sizes="192x192" href="https://hackaday.com/wp-content/themes/hackaday-2/img/hackaday-logo_1024x1024.png?v=3" />
+<link href="https://hackaday.com/wp-content/themes/hackaday-2/img/logo.svg?v=3" rel="mask-icon" color="#000000">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://hackaday.com/xmlrpc.php">
+
+<!--[if lt IE 9]>
+    <script src="https://hackaday.com/wp-content/themes/hackaday-2/js/html5.js"></script>
+<![endif]-->
+
+<meta name='robots' content='max-image-preview:large' />
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="I41e_5mBeAM8AcOI8rSwPioPyN1DXJomC2U2trjvVTI">
+<script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="nGzoxtrm7X0KC5" async></script>
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel='dns-prefetch' href='//jetpack.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//public-api.wordpress.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel="alternate" type="application/rss+xml" title="Hackaday &raquo; Feed" href="https://hackaday.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Hackaday &raquo; Comments Feed" href="https://hackaday.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Hackaday &raquo; The Dipole Antenna Isn&#8217;t As Simple As It Appears Comments Feed" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://hackaday.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://hackaday.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="jetpack-stats-inline-css">
+img#wpstats{display:none}
+/*# sourceURL=jetpack-stats-inline-css */
+</style>
+<link rel='stylesheet' id='all-css-14' href='https://hackaday.com/wp-content/themes/hackaday-2/style.css?m=1774554023g' type='text/css' media='all' />
+<script type="text/javascript" src="https://hackaday.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSpUsX2uraG5pYGBhYWZpVEWAK+qIio=" ></script><script id="srcmnt-ajax-request-js-extra">
+var SafeCommentsAjax = {"ajaxurl":"https://hackaday.com/wp-admin/admin-ajax.php"};
+//# sourceURL=srcmnt-ajax-request-js-extra
+</script>
+<script type="text/javascript" src="https://hackaday.com/_static/??/wp-content/themes/hackaday-2/js/share.js,/wp-content/plugins/safe-report-comments/js/ajax.js?m=1774554023j" ></script><link rel="https://api.w.org/" href="https://hackaday.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://hackaday.com/wp-json/wp/v2/posts/609442" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hackaday.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.2" />
+<link rel="canonical" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" />
+<link rel='shortlink' href='https://wp.me/paBn4l-2yxI' />
+
+<link rel="image_src" href="https://hackaday.com/wp-content/uploads/2023/08/dipole-thumb.png?w=600&amp;h=600"/>
+<meta itemprop="name" content="The Dipole Antenna Isn&#8217;t As Simple As It Appears">
+<meta itemprop="description" content="Dipole antennas are easy, right? Just follow the formula, cut two pieces of wire, attach your feedline, and you&#039;re on the air.  But then again, maybe not. You&#039;re always advised to cut the legs a litt...">
+<meta itemprop="image" content="https://hackaday.com/wp-content/uploads/2023/08/dipole-thumb.png?w=600&amp;h=600">
+
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Dipole Antenna Isn&#8217;t As Simple As It Appears" />
+<meta property="og:url" content="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" />
+<meta property="og:description" content="Dipole antennas are easy, right? Just follow the formula, cut two pieces of wire, attach your feedline, and you&#8217;re on the air.  But then again, maybe not. You&#8217;re always advised to cut t…" />
+<meta property="article:published_time" content="2023-08-17T02:00:35+00:00" />
+<meta property="article:modified_time" content="2023-08-16T11:42:28+00:00" />
+<meta property="og:site_name" content="Hackaday" />
+<meta property="og:image" content="https://hackaday.com/wp-content/uploads/2023/08/dipole.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="The Dipole Antenna Isn&#8217;t As Simple As It Appears" />
+<meta name="twitter:image" content="https://hackaday.com/wp-content/uploads/2023/08/dipole.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<style id="wp-custom-css">
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+
+If you need any further help, ask in the CSS Customization forum.
+*/
+
+.prize-footer-2020 {
+  padding: 15px;
+  float: left;
+  height: 110px;
+}
+
+@media only screen and (max-width:1150px) {
+  .prize-footer-2020 {
+    width: 100%;
+    padding: 0 0 12px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/***
+ * Embedded Gist Styling
+ * 
+ * https://github.com/lonekorean/gist-syntax-themes/blob/master/stylesheets/monokai.css
+ ***/
+body .gist .highlight {
+    background: #272822;
+}
+body .gist .blob-num,
+body .gist .blob-code-inner,
+body .gist .pl-s2,
+body .gist .pl-stj {
+    color: #f8f8f2;
+}
+body .gist .pl-c1 {
+    color: #ae81ff;
+}
+body .gist .pl-enti {
+    color: #a6e22e;
+    font-weight: 700;
+}
+body .gist .pl-st {
+    color: #66d9ef;
+}
+body .gist .pl-mdr {
+    color: #66d9ef;
+    font-weight: 400;
+}
+body .gist .pl-ms1 {
+    background: #fd971f;
+}
+body .gist .pl-c,
+body .gist .pl-c span,
+body .gist .pl-pdc {
+    color: #75715e;
+    font-style: italic;
+}
+body .gist .pl-cce,
+body .gist .pl-cn,
+body .gist .pl-coc,
+body .gist .pl-enc,
+body .gist .pl-ens,
+body .gist .pl-kos,
+body .gist .pl-kou,
+body .gist .pl-mh .pl-pdh,
+body .gist .pl-mp,
+body .gist .pl-mp1 .pl-sf,
+body .gist .pl-mq,
+body .gist .pl-pde,
+body .gist .pl-pse,
+body .gist .pl-pse .pl-s2,
+body .gist .pl-mp .pl-s3,
+body .gist .pl-smi,
+body .gist .pl-stp,
+body .gist .pl-sv,
+body .gist .pl-v,
+body .gist .pl-vi,
+body .gist .pl-vpf,
+body .gist .pl-mri,
+body .gist .pl-va,
+body .gist .pl-vpu {
+    color: #66d9ef;
+}
+body .gist .pl-cos,
+body .gist .pl-ml,
+body .gist .pl-pds,
+body .gist .pl-s,
+body .gist .pl-s1,
+body .gist .pl-sol {
+    color: #e6db74;
+}
+body .gist .pl-e,
+body .gist .pl-ef,
+body .gist .pl-en,
+body .gist .pl-enf,
+body .gist .pl-enm,
+body .gist .pl-entc,
+body .gist .pl-entm,
+body .gist .pl-eoac,
+body .gist .pl-eoac .pl-pde,
+body .gist .pl-eoi,
+body .gist .pl-mai .pl-sf,
+body .gist .pl-mm,
+body .gist .pl-pdv,
+body .gist .pl-som,
+body .gist .pl-sr,
+body .gist .pl-vo {
+    color: #a6e22e;
+}
+body .gist .pl-ent,
+body .gist .pl-eoa,
+body .gist .pl-eoai,
+body .gist .pl-eoai .pl-pde,
+body .gist .pl-k,
+body .gist .pl-ko,
+body .gist .pl-kolp,
+body .gist .pl-mc,
+body .gist .pl-mr,
+body .gist .pl-ms,
+body .gist .pl-s3,
+body .gist .pl-smc,
+body .gist .pl-smp,
+body .gist .pl-sok,
+body .gist .pl-sra,
+body .gist .pl-src,
+body .gist .pl-sre {
+    color: #f92672;
+}
+body .gist .pl-mb,
+body .gist .pl-pdb {
+    color: #e6db74;
+    font-weight: 700;
+}
+body .gist .pl-mi,
+body .gist .pl-pdi {
+    color: #f92672;
+    font-style: italic;
+}
+body .gist .pl-pdc1,
+body .gist .pl-scp {
+    color: #ae81ff;
+}
+body .gist .pl-sc,
+body .gist .pl-sf,
+body .gist .pl-mo,
+body .gist .pl-entl {
+    color: #fd971f;
+}
+body .gist .pl-mi1,
+body .gist .pl-mdht {
+    color: #a6e22e;
+    background: rgba(0, 64, 0, .5);
+}
+body .gist .pl-md,
+body .gist .pl-mdhf {
+    color: #f92672;
+    background: rgba(64, 0, 0, .5);
+}
+body .gist .pl-mdh,
+body .gist .pl-mdi {
+    color: #a6e22e;
+    font-weight: 400;
+}
+body .gist .pl-ib,
+body .gist .pl-id,
+body .gist .pl-ii,
+body .gist .pl-iu {
+    background: #a6e22e;
+    color: #272822;
+}
+
+body .gist .gist-meta {
+    background-color: #1a1a1a;
+}
+/*** End gist styling ***/
+
+#newsletter-blurb {
+	margin: 1em;
+	font-style: italic;
+	padding: 10px 60px;
+	color: #ddd;
+	background-color: #222;
+	border-left: 4px solid #f3bf10;
+}
+
+/* In-Body CSS Buttons */
+.cssbutton {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #f3bf10;
+  color: #000;
+  font-family: "proxima-nova-n7", "proxima-nova-n6", "proxima-nova", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 10px;
+  text-transform: uppercase;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cssbutton:hover, .button-demo:active {
+	background-color: #ffffff;
+}
+.cssbutton:visited {
+  color: #000;
+}
+
+/* code for two-column responsive */
+.two_col {
+  float: left;
+  width: 50%;
+	padding:8px;
+}
+
+/* Clear floats after the columns */
+.two_col_container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .two_col {
+    width: 100%;
+		padding: 0;
+  }
+}
+
+/* Above, below space for SyntaxHighlighterEvolved sourcecode blocks */
+.syntaxhighlighter {
+    padding: 1rem 0;
+}
+</style>
+
+<script src="//use.typekit.net/mpm6gph.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- Supplyframe Ads for rv-ads -->
+	<script type='text/javascript'>
+		function OA_show(e){if(typeof OA_output[e]=="undefined"){return}else{document.write(OA_output[e])}}function OA_showpop(e){zones=window.OA_zones?window.OA_zones:false;var t=e;if(typeof window.OA_zones!="undefined"){if(typeof zones[e]=="undefined"){return}t=zones[e]}var n="<"+"script type='text/javascript' ";n+="src='"+OA_p+"?zoneid="+t;n+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";if(window.location)n+="&loc="+escape(window.location);if(document.referrer)n+="&referer="+escape(document.referrer);n+="'><"+"/script>";document.write(n)}if(typeof OA_zones!="undefined"){var OA_zoneids="";for(var zonename in OA_zones)OA_zoneids+=escape(zonename+"="+OA_zones[zonename]+"|");OA_zoneids+="&nz=1"}else{var OA_zoneids=escape("426|427|428|429|464")}if(typeof OA_source=="undefined"){OA_source=""}var OA_p=location.protocol=="https:"?"https://rv-ads.supplyframe.com/openads/www/delivery/spc.php":"http://rv-ads.supplyframe.com/openads/www/delivery/spc.php";var OA_r=Math.floor(Math.random()*99999999);OA_output=new Array;var OA_spc="<"+"script type='text/javascript' ";OA_spc+="src='"+OA_p+"?zones="+OA_zoneids;OA_spc+="&source="+escape(OA_source)+"&r="+OA_r;OA_spc+="&amp%3Bblock=1";OA_spc+=document.charset?"&charset="+document.charset:document.characterSet?"&charset="+document.characterSet:"";if(window.location)OA_spc+="&loc="+escape(window.location);if(document.referrer)OA_spc+="&referer="+escape(document.referrer);OA_spc+="'><"+"/script>";document.write(OA_spc);var OA_fo="";OA_fo+="<"+"script type='text/javascript' src='//rv-ads.supplyframe.com/openads/www/delivery/fl.js'><"+"/script>\n";document.write(OA_fo);
+	</script>
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-609442 single-format-standard wp-theme-hackaday-2 geo-region-other group-blog">
+<div id="page" class="hfeed site">
+    <div id="leaderboard">
+        <script type='text/javascript'>
+            OA_show(426);
+        </script>
+    </div>
+
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <a href="https://hackaday.com/" rel="home">
+                <img src="https://hackaday.com/wp-content/themes/hackaday-2/img/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <h1 class="site-title">
+                <a href="https://hackaday.com/" rel="home">Hackaday</a>
+            </h1>
+        </div>
+
+        <button class="menu-toggle"><span class="icon icon-navbar-toggle">Primary Menu</span></button>
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-90201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90201"><a href="https://www.hackaday.com/">Home</a></li>
+<li id="menu-item-136904" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-136904"><a href="https://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-115276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115276"><a href="https://hackaday.io?from=had&#038;utm_source=hackaday&#038;utm_medium=menu&#038;utm_campaign=blog">Hackaday.io</a></li>
+<li id="menu-item-136905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136905"><a href="https://hackaday.io/contests" title="Build Something that Matters">Contests</a></li>
+<li id="menu-item-77211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77211"><a href="https://hackaday.com/submit-a-tip/">Submit</a></li>
+<li id="menu-item-101802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101802"><a href="https://hackaday.com/about/">About</a></li>
+<li class="menu-item-mobilesearch-top"><form role="search" method="get" class="search-form" action="https://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></li></ul></div>		<aside id="hackaday_calendar-2" class="widget widget_hackaday_calendar"><div id="hackaday_calendar_wrap"><label class="calendar_current_time">September 28, 2026</label></div></aside>        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+            
+<article itemscope itemtype="http://schema.org/Article" id="post-609442" class="post-609442 post type-post status-publish format-standard has-post-thumbnail hentry category-radio-hacks tag-antenna tag-bandwidth tag-dipole tag-frequency tag-impedance tag-reactive tag-resistive tag-vna tag-wavelength">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="name">The Dipole Antenna Isn&#8217;t As Simple As It Appears</h1>
+        <div class="entry-meta">
+            <a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comments" class="comments-counts"><span class="icon-hackaday icon-hackaday-comment"></span>
+                47 Comments            </a>
+            <ul class="meta-authors vcard author">
+                <li>by:</li>
+                <span class="fn"><a href="https://hackaday.com/author/dpsm64/" rel="author">Dan Maloney</a></span>
+            </ul>
+        </div><!-- .entry-meta -->
+
+        <div class="entry-meta entry-meta-last">
+            <span class="entry-date published updated" itemprop="datePublished" content="August 16, 2023"><a href="https://hackaday.com/2023/08/16/" title="August 16, 2023 - 7:00 pm">August 16, 2023</a></span>
+            <ul class="share-post">
+                <li><a title="Share on Facebook" onclick="ga('send', 'event', 'ShareSingle', 'click', 'facebook');" href="https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" target="_blank"><span class="icon-hackaday icon-hackaday-facebook"></span></a></li>
+                <li><a title="Share on Twitter" onclick="ga('send', 'event', 'ShareSingle', 'click', 'twitter');" href="https://twitter.com/intent/tweet?text=The%20Dipole%20Antenna%20Isn&#8217;t%20As%20Simple%20As%20It%20Appears%20via%20@hackaday&#038;url=https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" target="_blank"><span class="icon-hackaday icon-hackaday-twitter"></span></a></li>
+                <li><a title="Share on Hacker News" onclick="ga('send', 'event', 'ShareSingle', 'click', 'hackernews');" href="https://news.ycombinator.com/submitlink?u=https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/&#038;t=The%20Dipole%20Antenna%20Isn&#8217;t%20As%20Simple%20As%20It%20Appears" target="_blank"><span class="icon-hackaday icon-hackaday-hackernews"></span></a></li>
+                <li><a title="Share on Reddit" onclick="ga('send', 'event', 'ShareSingle', 'click', 'reddit');" href="https://www.reddit.com/submit?url=https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" target="_blank"><span class="icon-hackaday icon-hackaday-reddit"></span></a></li>
+                <li>
+                    <div class="dropdown">
+                        <button title="Copy title or shortlink" class="icon-hackaday icon-hackaday-clipboard" id="toggle-share-dialog"></button>
+                        <div class="share-dialog-chevron"></div>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- .entry-meta -->
+        <div class="share-dialog-content">
+            <form onsubmit="return false;" id="share-menu">
+                <label>Title:</label>
+                <div class="share-entry">
+                    <input type="text" id="article-title" readonly="true" value="The Dipole Antenna Isn’t As Simple As It Appears">
+                    <button id="copy-title">Copy</button>
+                </div>
+                <label>Short Link:</label>
+                <div class="share-entry">
+                    <input type="text" id="article-link" readonly="true" value="https://hackaday.com/?p=609442">
+                    <button id="copy-link" onclick="">Copy</button>
+                </div>
+            </form>
+        </div>
+        <div class="entry-featured-image"><img itemprop="image" content="https://hackaday.com/wp-content/uploads/2023/08/dipole-thumb.png?w=600&#038;h=600" src="https://hackaday.com/wp-content/uploads/2023/08/dipole.png?w=800" alt=""></div>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content" itemprop="articleBody">
+        <p>Dipole antennas are easy, right? Just follow the formula, cut two pieces of wire, attach your feedline, and you&#8217;re on the air.  But then again, maybe not. You&#8217;re always advised to cut the legs a little long so you can trim to the right length, but why? Shouldn&#8217;t the math just be right? And what difference does wire choice make on the antenna&#8217;s characteristics? The simple dipole isn&#8217;t really that simple at all.</p>
+<p>If you&#8217;ve got antenna questions, check out [FesZ]&#8217;s <a href="https://www.youtube.com/watch?v=fj-QwJ8jXJk" target="_blank">new video on resonant dipoles</a>, which is a deep dive into some of the mysteries of the humble dipole. In true [FesZ] fashion, he starts with simulations of various dipole configurations ranging from the ideal case &#8212; a lossless conductor in free space with as close to zero diameter conductors as <a href="http://gal-ana.de/basicmm/en/" target="_blank">the MMANA antenna simulator</a> can support &#8212; and gradually build up to more practical designs.<span id="more-609442"></span></p>
+<p>We&#8217;ve got to admit that we were surprised by how much the wire diameter affects the resonant frequency of these theoretical antennas &#8212; the chunkier the wire, the lower the resonant frequency, which is defined as the frequency at which the antenna&#8217;s impedance has only a resistive component. On the other hand, material selection plays a role, too, with copper wire being the best choice in terms of loss, followed by aluminum wire and then iron pipe, which is very lossy at small diameters. Luckily, these differences even out with increasing conductor diameter.</p>
+<p>The most interesting part of the video for us was the experiments with practical antennas, which he builds from different materials and tests on a LiteVNA &#8212; kind of like <a href="https://hackaday.com/2019/08/11/nanovna-is-a-50-vector-network-analyzer/">a NanoVNA</a> on steroids. As expected, wire thickness plays a part in antenna bandwidth &#8212; the finer the wire, the narrower the bandwidth &#8212; and the measured resonant frequency worked out to be pretty much what it was in simulation. Insulation on the wire had an unexpectedly huge effect too, pushing the resonant frequency down around 25 MHz.</p>
+<p>Thanks to [FesZ] for this effective demonstration of designing antennas for the real world.</p>
+<p><iframe title="Resonant Dipoles" width="800" height="450" src="https://www.youtube.com/embed/fj-QwJ8jXJk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+	            </div><!-- .entry-content -->
+    <ul class="sharing">
+    					<li class="">
+    				<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F" target="_blank">
+    					<i class="socicon-facebook"><img src="https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png"> </i>
+    									</a>
+    			</li>
+    					<li class="">
+                        <a class="twitter" href="https://twitter.com/intent/tweet?text=The%20Dipole%20Antenna%20Isn&#8217;t%20As%20Simple%20As%20It%20Appears%20via%20@hackaday&#038;url=https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/" target="_blank">
+    					<i class="socicon-twitter"><img src="https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png"></i>
+    									</a>
+    			</li>
+    					<li class="">
+    				<a class="linkedin" href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F" target="_blank">
+    					<i class="socicon-linkedin"><img src="https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png"></i>
+    									</a>
+    			</li>
+    					<li class="">
+                <a class="mail" href="mailto:?subject=The+Dipole+Antenna+Isn%E2%80%99t+As+Simple+As+It+Appears | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F">
+    					<i class=""><img src="https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png"></i>
+    									</a>
+    			</li>
+    			</ul>
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in <a href="https://hackaday.com/category/radio-hacks/" rel="category tag">Radio Hacks</a></span><span class="tags-links">Tagged <a href="https://hackaday.com/tag/antenna/" rel="tag">antenna</a>, <a href="https://hackaday.com/tag/bandwidth/" rel="tag">bandwidth</a>, <a href="https://hackaday.com/tag/dipole/" rel="tag">dipole</a>, <a href="https://hackaday.com/tag/frequency/" rel="tag">frequency</a>, <a href="https://hackaday.com/tag/impedance/" rel="tag">impedance</a>, <a href="https://hackaday.com/tag/reactive/" rel="tag">Reactive</a>, <a href="https://hackaday.com/tag/resistive/" rel="tag">resistive</a>, <a href="https://hackaday.com/tag/vna/" rel="tag">vna</a>, <a href="https://hackaday.com/tag/wavelength/" rel="tag">wavelength</a></span><meta itemprop="url" content="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/"/>    </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+            	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://hackaday.com/2023/08/16/a-nifty-tool-for-counting-neopixels/" rel="prev"><span class="meta-nav">&larr;</span>&nbsp;A Nifty Tool For Counting Neopixels</a></div><div class="nav-next"><a href="https://hackaday.com/2023/08/16/bringing-an-adm-3a-back-to-life/" rel="next">Bringing An ADM-3A Back To Life&nbsp;<span class="meta-nav">&rarr;</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+            <div class="content-ads-holder">
+                <script type='text/javascript'>
+                    /* [id429] 300x250 */
+                    OA_show(429);
+                </script>
+            </div>
+
+            
+<div id="comments" class="comments-area">
+
+    
+            <h2 class="comments-title">
+            47 thoughts on &ldquo;<span>The Dipole Antenna Isn&#8217;t As Simple As It Appears</span>&rdquo;        </h2>
+
+        
+        <ol class="comment-list">
+            	<li id="comment-6673577" class="comment even thread-even depth-1 parent ">
+		<article id="div-comment-6673577" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Dude</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673577">
+						<time datetime="2023-08-16T23:10:42-07:00">
+							August 16, 2023 at 11:10 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Long story short: the math assumes things like the speed of light in vacuum, but adding air and other media in between changes the speed of light slightly, so the math goes off.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673577"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673577', '25821119d0', 'safe-comments-result-6673577');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673577#respond" data-commentid="6673577" data-postid="609442" data-belowelement="div-comment-6673577" data-respondelement="respond" data-replyto="Reply to Dude" aria-label="Reply to Dude">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673674" class="comment odd alt depth-2 parent ">
+		<article id="div-comment-6673674" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Brian Jorgensen</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673674">
+						<time datetime="2023-08-17T07:04:53-07:00">
+							August 17, 2023 at 7:04 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>In labs where we had access to top of the line network analyzers, when lab time was running short… our error bars were always attributed to multipath propogation. Our Professor agreed (!?)</p>
+<p>What a lab report hack!</p>
+<p>Because no realizable system exists in isolation, besides possibly the universe, everything is slightly off when considered as an ideal system for very-near approximation purposes.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673674"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673674', '25821119d0', 'safe-comments-result-6673674');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673674#respond" data-commentid="6673674" data-postid="609442" data-belowelement="div-comment-6673674" data-respondelement="respond" data-replyto="Reply to Brian Jorgensen" aria-label="Reply to Brian Jorgensen">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673675" class="comment even depth-3 parent ">
+		<article id="div-comment-6673675" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Dude</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673675">
+						<time datetime="2023-08-17T07:07:58-07:00">
+							August 17, 2023 at 7:07 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Is it meaningful to say that the universe exists in isolation, when there&#8217;s nothing outside of it? (Technically, not even &#8220;nothing&#8221;).</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673675"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673675', '25821119d0', 'safe-comments-result-6673675');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673675#respond" data-commentid="6673675" data-postid="609442" data-belowelement="div-comment-6673675" data-respondelement="respond" data-replyto="Reply to Dude" aria-label="Reply to Dude">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673711" class="comment odd alt depth-4 parent ">
+		<article id="div-comment-6673711" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Blue Footed Booby</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673711">
+						<time datetime="2023-08-17T09:10:25-07:00">
+							August 17, 2023 at 9:10 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Tautologically, yes, there can only be one everything. The challenge is figuring out whether what you call everything actually is.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673711"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673711', '25821119d0', 'safe-comments-result-6673711');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673711#respond" data-commentid="6673711" data-postid="609442" data-belowelement="div-comment-6673711" data-respondelement="respond" data-replyto="Reply to Blue Footed Booby" aria-label="Reply to Blue Footed Booby">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673753" class="comment even depth-5  max-depth">
+		<article id="div-comment-6673753" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Dude</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673753">
+						<time datetime="2023-08-17T11:07:28-07:00">
+							August 17, 2023 at 11:07 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Yes, but how many everythings there are is not the same question as whether it is &#8220;isolated&#8221;. From what would it be?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673753"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673753', '25821119d0', 'safe-comments-result-6673753');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6674553" class="comment odd alt depth-2  ">
+		<article id="div-comment-6674553" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Drone</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674553">
+						<time datetime="2023-08-20T22:21:19-07:00">
+							August 20, 2023 at 10:21 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Humans on Earth have a saying: &#8220;Cut it long and trim &#8217;til it works.&#8221;</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674553"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674553', '25821119d0', 'safe-comments-result-6674553');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674553#respond" data-commentid="6674553" data-postid="609442" data-belowelement="div-comment-6674553" data-respondelement="respond" data-replyto="Reply to Drone" aria-label="Reply to Drone">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673578" class="comment even thread-odd thread-alt depth-1 parent ">
+		<article id="div-comment-6673578" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Joshua</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673578">
+						<time datetime="2023-08-16T23:24:15-07:00">
+							August 16, 2023 at 11:24 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>It&#8217;s also important to keep the symmetric/unsymmetric relationship in mind.<br />
+The dipole is usually symmetric, but the coaxial cable is not (it&#8217;s unsymmetric).</p>
+<p>So you can&#8217;t just attach an dipole to an RG58U or RG213.<br />
+Welly, you technically can, but this results in sheet waves and RF in the shack.<br />
+The coaxial cable will also radiate, which is unwanted.</p>
+<p>That&#8217;s what many CBers in my place didn&#8217;t understand, btw.<br />
+They simply made a dipole and wired it to coaxial cable, then blaming the 1/2 lambda dipole for being a troublemaker.<br />
+They now use a DV27 long, Gainmaster or similar antenna instead. </p>
+<p>To fix that dipole problem, an 1:1 Balun can be used. It can even be bought in assembled form nowadays.<br />
+Or, someone can use a &#8220;stub&#8221; made of coaxial cable. It will directly be attached to the dipole and handle high power. </p>
+<p>Another workaround is to use ferrites to block sheet waves. They come in various forms and are always recommend.<br />
+Especially on power cords of appliances and accessories.</p>
+<p>Last but not least, there&#8217;s another problem.<br />
+Reflections in cheap coaxial waves, even if new. They can be seen in combination with a VNA and a dummy load/terminator connected on the cable that&#8217;s being tested.</p>
+<p>Another factor is the lenght of the coaxial cable itself.<br />
+At one point, an unlucky lenght can cause high SWR (1/4 lambda or a multiple, I vaguely remember).</p>
+<p>In old days, hams made sure the lenght of the coaxial cable matched the operating frequency/the band of choice accordingly.<br />
+Coaxial cable lenght weren&#8217;t random, by any means.</p>
+<p>PS: Another tip: A tuner/matchbox doesn&#8217;t belong in the shack, but directly to the feed point of the antenna. Otherwise, the coaxial cable will be &#8220;tuned&#8221; and may start to radiate, as well.<br />
+An except is, maybe, if the coaxial cable is 1/4l. In that case the cable impedance is equally to the antenna feed point.<br />
+The radiation problem still persists, though. Lots of ferrites or a &#8220;coil&#8221; (ring) made of coaxial cable is required.</p>
+<p>PS: RG58U is outdated, please consider using RG213 or any other high quality vable.<br />
+It&#8217;s not about losses and power, but QRM. The shielding of RG58 is too poor nowadays.<br />
+QRM in your home or garden will sneak through the RG58 inside the receiver.<br />
+I&#8217;m talking from experience, btw. </p>
+<p>Anyway, these are just suggestions, as a start. Please double check what I wrote. Vy73s.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673578"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673578', '25821119d0', 'safe-comments-result-6673578');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673578#respond" data-commentid="6673578" data-postid="609442" data-belowelement="div-comment-6673578" data-respondelement="respond" data-replyto="Reply to Joshua" aria-label="Reply to Joshua">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673678" class="comment odd alt depth-2 parent ">
+		<article id="div-comment-6673678" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673678">
+						<time datetime="2023-08-17T07:16:38-07:00">
+							August 17, 2023 at 7:16 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>To clarify a bit for non-HAMs (such as me ;).</p>
+<p>QRM is man made interference, so a more specific version of RFI (radio frequency interference).</p>
+<p>QRM is not a classical three letter abbreviation. It is part of a standardized collection of three-letter codes, called Q-code. While QR has no official meaning, it can be taken as a prefix meaning &#8220;(q)uery in (r)adio communication&#8221;.<br />
+See also <a href="https://en.wikipedia.org/wiki/Q_code" rel="nofollow ugc" target="_blank">https://en.wikipedia.org/wiki/Q_code</a></p>
+<p>The initial list seems to be mostly alphabetical with no clear correlation between meaning and the last letter, which could be because it was meant to be a language neutral code.<br />
+See <a href="https://en.wikipedia.org/wiki/Q_code#Early_development" rel="nofollow ugc" target="_blank">https://en.wikipedia.org/wiki/Q_code#Early_development</a></p>
+<p>QRM and QRN however do have a convenient correlation with their meaning: &#8220;(m)an-made interference&#8221; and &#8220;(n)atural interference&#8221;.</p>
+<p>Suggestion: when sharing knowledge, it helps to introduce special terms with a brief explanation, as otherwise it&#8217;s just experts &#8220;teaching&#8221; experts. Or reduce specialty terminology and simply say, man made RFI.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673678"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673678', '25821119d0', 'safe-comments-result-6673678');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673678#respond" data-commentid="6673678" data-postid="609442" data-belowelement="div-comment-6673678" data-respondelement="respond" data-replyto="Reply to None" aria-label="Reply to None">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673707" class="comment even depth-3 parent ">
+		<article id="div-comment-6673707" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Ken de AC3DH</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673707">
+						<time datetime="2023-08-17T08:44:23-07:00">
+							August 17, 2023 at 8:44 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>It would take a long time to teach Q-Codes, I am still learning.  QRM and QRN are used all the time though, and are the first ones I learned. Another non Q-Code is &#8216;Alpha Hotel&#8217; which is the cause of some QRM ;)</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673707"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673707', '25821119d0', 'safe-comments-result-6673707');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673707#respond" data-commentid="6673707" data-postid="609442" data-belowelement="div-comment-6673707" data-respondelement="respond" data-replyto="Reply to Ken de AC3DH" aria-label="Reply to Ken de AC3DH">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673717" class="comment odd alt depth-4  ">
+		<article id="div-comment-6673717" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673717">
+						<time datetime="2023-08-17T09:26:46-07:00">
+							August 17, 2023 at 9:26 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>If you know what QRM and QRN mean it&#8217;s obvious, but if not and it appears without more context in a phrase (&#8220;QRM in your home&#8221; could mean anything), it&#8217;s quite confusing. Had to search the web for longer until I knew it&#8217;s a Q-Code.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673717"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673717', '25821119d0', 'safe-comments-result-6673717');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673717#respond" data-commentid="6673717" data-postid="609442" data-belowelement="div-comment-6673717" data-respondelement="respond" data-replyto="Reply to None" aria-label="Reply to None">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673685" class="comment even depth-2 parent ">
+		<article id="div-comment-6673685" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Then</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673685">
+						<time datetime="2023-08-17T07:31:14-07:00">
+							August 17, 2023 at 7:31 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>What about chicken ladder balanced line?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673685"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673685', '25821119d0', 'safe-comments-result-6673685');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673685#respond" data-commentid="6673685" data-postid="609442" data-belowelement="div-comment-6673685" data-respondelement="respond" data-replyto="Reply to Then" aria-label="Reply to Then">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673690" class="comment odd alt depth-3  ">
+		<article id="div-comment-6673690" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Joshua</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673690">
+						<time datetime="2023-08-17T08:01:06-07:00">
+							August 17, 2023 at 8:01 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Um, it&#8217;s great if the shack is in a hen house? :)</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673690"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673690', '25821119d0', 'safe-comments-result-6673690');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673690#respond" data-commentid="6673690" data-postid="609442" data-belowelement="div-comment-6673690" data-respondelement="respond" data-replyto="Reply to Joshua" aria-label="Reply to Joshua">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673751" class="comment even depth-3  ">
+		<article id="div-comment-6673751" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Charles Lamb</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673751">
+						<time datetime="2023-08-17T10:55:36-07:00">
+							August 17, 2023 at 10:55 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Or why not 300Ω twin lead?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673751"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673751', '25821119d0', 'safe-comments-result-6673751');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673751#respond" data-commentid="6673751" data-postid="609442" data-belowelement="div-comment-6673751" data-respondelement="respond" data-replyto="Reply to Charles Lamb" aria-label="Reply to Charles Lamb">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6681530" class="comment odd alt depth-2  ">
+		<article id="div-comment-6681530" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Steve Withnell</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6681530">
+						<time datetime="2023-09-11T10:07:27-07:00">
+							September 11, 2023 at 10:07 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>What on earth is a &#8216;sheet wave&#8217;?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6681530"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6681530', '25821119d0', 'safe-comments-result-6681530');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6681530#respond" data-commentid="6681530" data-postid="609442" data-belowelement="div-comment-6681530" data-respondelement="respond" data-replyto="Reply to Steve Withnell" aria-label="Reply to Steve Withnell">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673615" class="comment even thread-even depth-1 parent ">
+		<article id="div-comment-6673615" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">thom</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673615">
+						<time datetime="2023-08-17T02:29:59-07:00">
+							August 17, 2023 at 2:29 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>&#8220;sheet waves&#8221;<br />
+?????????<br />
+Standing wave?????</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673615"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673615', '25821119d0', 'safe-comments-result-6673615');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673615#respond" data-commentid="6673615" data-postid="609442" data-belowelement="div-comment-6673615" data-respondelement="respond" data-replyto="Reply to thom" aria-label="Reply to thom">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673622" class="comment odd alt depth-2 parent ">
+		<article id="div-comment-6673622" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Peter/DL3PB</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673622">
+						<time datetime="2023-08-17T03:32:53-07:00">
+							August 17, 2023 at 3:32 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Undesired common mode : <a href="https://en.wikipedia.org/wiki/Common-mode_signal" rel="nofollow ugc" target="_blank">https://en.wikipedia.org/wiki/Common-mode_signal</a></p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673622"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673622', '25821119d0', 'safe-comments-result-6673622');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673622#respond" data-commentid="6673622" data-postid="609442" data-belowelement="div-comment-6673622" data-respondelement="respond" data-replyto="Reply to Peter/DL3PB" aria-label="Reply to Peter/DL3PB">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673635" class="comment even depth-3  ">
+		<article id="div-comment-6673635" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Joshua</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673635">
+						<time datetime="2023-08-17T04:45:38-07:00">
+							August 17, 2023 at 4:45 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Excellent! Thank you very much! ^^ vy73s</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673635"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673635', '25821119d0', 'safe-comments-result-6673635');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673635#respond" data-commentid="6673635" data-postid="609442" data-belowelement="div-comment-6673635" data-respondelement="respond" data-replyto="Reply to Joshua" aria-label="Reply to Joshua">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673634" class="comment odd alt depth-2 parent ">
+		<article id="div-comment-6673634" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Joshua</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673634">
+						<time datetime="2023-08-17T04:43:57-07:00">
+							August 17, 2023 at 4:43 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>My bad. The online dictionaries say &#8220;sheath waves&#8221; and &#8220;jacket waves&#8221;..<br />
+In the commenting block above I was referring to what we casually call &#8220;Mantelwellen&#8221; and I didn&#8217;t want to make the mistake to do a litetal translate to &#8220;mantle waves&#8221;. So I tried to remember that alternative term. 🙂</p>
+<p>For someone like me, English is a really really weird language sometimes. It has sayings and terms that are so strange. I never occured me that something like &#8220;(undesired) common mode&#8221; could have any relationship with the matter, for example. I&#8217;m not saying it&#8217;s wrong. It&#8217;s just the weird English terminology, that catches me off guard (do you say so?). In my native language, there are short and precise casual terms for certain technical things.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673634"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673634', '25821119d0', 'safe-comments-result-6673634');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673634#respond" data-commentid="6673634" data-postid="609442" data-belowelement="div-comment-6673634" data-respondelement="respond" data-replyto="Reply to Joshua" aria-label="Reply to Joshua">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673662" class="comment even depth-3 parent ">
+		<article id="div-comment-6673662" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673662">
+						<time datetime="2023-08-17T06:29:55-07:00">
+							August 17, 2023 at 6:29 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Wikipedia says &#8220;Sheath current&#8221; is the English term for &#8220;Mantelwelle&#8221;. A web search seems to confirm the meaning of this term.</p>
+<p>German can be a clear language, but I don&#8217;t think that &#8220;Mantelwellen&#8221; is a good example (sheath current has the same problem). It suggests that the waves are in the &#8220;Ummantelung&#8221; so the outer isolation/plug, not the &#8220;Schirm&#8221;/mesh of a coax cable. Außenleiterwelle would be more clear.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673662"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673662', '25821119d0', 'safe-comments-result-6673662');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673662#respond" data-commentid="6673662" data-postid="609442" data-belowelement="div-comment-6673662" data-respondelement="respond" data-replyto="Reply to None" aria-label="Reply to None">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673665" class="comment odd alt depth-4 parent ">
+		<article id="div-comment-6673665" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673665">
+						<time datetime="2023-08-17T06:34:14-07:00">
+							August 17, 2023 at 6:34 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p><a href="https://en.wikipedia.org/wiki/Braid-breaker" rel="nofollow ugc" target="_blank">https://en.wikipedia.org/wiki/Braid-breaker</a></p>
+<p>Braid breaker is also quite clear, since a coax cable has only one braid. Less ambiguous than sheath or Mantel which could make you think a dielectric is somehow involved.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673665"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673665', '25821119d0', 'safe-comments-result-6673665');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673665#respond" data-commentid="6673665" data-postid="609442" data-belowelement="div-comment-6673665" data-respondelement="respond" data-replyto="Reply to None" aria-label="Reply to None">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673680" class="comment even depth-5  max-depth">
+		<article id="div-comment-6673680" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Paul</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673680">
+						<time datetime="2023-08-17T07:23:47-07:00">
+							August 17, 2023 at 7:23 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Brain breaker is an awful term.  It&#8217;s not breaking the braid in any way, and doesn&#8217;t even operate on (just) the braid.  It even works when there IS no braid.</p>
+<p>A common-mode choke is inserting a high impedance for electrical signals than are common (in phase) to the two conductors, whether it&#8217;s coax or twinlead.  </p>
+<p>So call it a common-mode choke.  That&#8217;s exactly what it is and does.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673680"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673680', '25821119d0', 'safe-comments-result-6673680');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673720" class="comment odd alt depth-5  max-depth">
+		<article id="div-comment-6673720" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673720">
+						<time datetime="2023-08-17T09:40:19-07:00">
+							August 17, 2023 at 9:40 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>(Cant reply to Paul, so reply goes here): Some actually *do* break the braid and use capacitors to bridge the break in the braid (and the center conductor):<br />
+<a href="https://en.wikipedia.org/wiki/Braid-breaker" rel="nofollow ugc" target="_blank">https://en.wikipedia.org/wiki/Braid-breaker</a></p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673720"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673720', '25821119d0', 'safe-comments-result-6673720');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673723" class="comment even depth-5  max-depth">
+		<article id="div-comment-6673723" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673723">
+						<time datetime="2023-08-17T09:44:24-07:00">
+							August 17, 2023 at 9:44 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Also, no it&#8217;s *not* the same as a choke, see the link.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673723"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673723', '25821119d0', 'safe-comments-result-6673723');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673724" class="comment odd alt depth-5  max-depth">
+		<article id="div-comment-6673724" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Paul</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673724">
+						<time datetime="2023-08-17T09:44:34-07:00">
+							August 17, 2023 at 9:44 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Actually breaking the braid (and the centre conductor) and inserting a capacitor is called a &#8220;DC block&#8221;, describing exactly what it does.  Which will work on ladder line or twinlead too, not just coax cable.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673724"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673724', '25821119d0', 'safe-comments-result-6673724');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673731" class="comment even depth-5  max-depth">
+		<article id="div-comment-6673731" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">None</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673731">
+						<time datetime="2023-08-17T10:05:48-07:00">
+							August 17, 2023 at 10:05 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>The term describes the circuit (and it&#8217;s circumstances) correctly, it&#8217;s not merely a DC block, that can be a simple capacitor.</p>
+<p>A braid breaker is more, see the schematic (and the scenario of use):<br />
+<a href="https://upload.wikimedia.org/wikipedia/en/9/94/TVIdiagram.png" rel="nofollow ugc" target="_blank">https://upload.wikimedia.org/wikipedia/en/9/94/TVIdiagram.png</a></p>
+<p>Furthermore it&#8217;s not like the shielding and the one inner conductor will pick up the exact same noise, like for twisted pair cabling or in differential signaling, so it does make sense to focus on the braid in the naming.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673731"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673731', '25821119d0', 'safe-comments-result-6673731');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6676984" class="comment odd alt depth-2  ">
+		<article id="div-comment-6676984" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Ernest KA9UCE</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6676984">
+						<time datetime="2023-08-29T01:40:57-07:00">
+							August 29, 2023 at 1:40 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>&#8216;Sheet waves&#8217;?<br />
+Standing waves, possibly, or radiative losses due to mismatch of feedline and antenna, causing RF signal to be fed back to the transmitter, which can be negated by use of an isolator(or circulator if you prefer), which is a directional coupler that uses magnetics to &#8216;isolate&#8217; the transmitted forward signal, and the reflected mismatch fed back to the transmitter, is routed to a 50Ω load and not directly towards the transmitter.<br />
+RG-58 is junk, plain and simple.<br />
+For best performance, use Heliax, which is a corrugated solid copper shield around a copper plated aluminum center conductor.<br />
+Common size is 1/2&#8243;, and has low loss by design per 100&#8242;.<br />
+Any angles in a dipole antenna must be accounted for in measurements, as must element diameter.<br />
+You also change the radiation pattern of a dipole when you introduce angles into the design, instead of actual 90° from the feedpoint.<br />
+Obtain a VNA and learn it&#8217;s use, they are cheap, but highly recommended, far better than a simple SWR bridge.<br />
+You might also look into an actual SWR bridge to use with a service monitor.<br />
+They have 3 ports, and are highly accurate to test a complete system, or individual antenna components such as feedlines and antennas separately. I have an Eagle SWR  bridge I use with my service monitor, a model RLB150X3, ports are: Source, Reflected, and Combined.<br />
+The source and reflected ports connect to your equipment, and the combined port connects to you DUT (Device Under Test).<br />
+I hope this helps with your design planning..</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6676984"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6676984', '25821119d0', 'safe-comments-result-6676984');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6676984#respond" data-commentid="6676984" data-postid="609442" data-belowelement="div-comment-6676984" data-respondelement="respond" data-replyto="Reply to Ernest KA9UCE" aria-label="Reply to Ernest KA9UCE">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673646" class="comment even thread-odd thread-alt depth-1 parent ">
+		<article id="div-comment-6673646" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Jeff Jackson</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673646">
+						<time datetime="2023-08-17T05:36:02-07:00">
+							August 17, 2023 at 5:36 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>What I&#8217;ve always appreciated about antennas is that, while you can do the math to run simulations to compare various modifications, it all makes sense. In other words, once you develop an understanding for how they work, you can estimate what a given change will have on performance. And, there won&#8217;t be surprises!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673646"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673646', '25821119d0', 'safe-comments-result-6673646');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673646#respond" data-commentid="6673646" data-postid="609442" data-belowelement="div-comment-6673646" data-respondelement="respond" data-replyto="Reply to Jeff Jackson" aria-label="Reply to Jeff Jackson">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673650" class="comment odd alt depth-2  ">
+		<article id="div-comment-6673650" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Joshua</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673650">
+						<time datetime="2023-08-17T06:07:59-07:00">
+							August 17, 2023 at 6:07 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Personally, I find the effect of the immediate environment on the antenna very difficult to &#8220;calculate&#8221;.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673650"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673650', '25821119d0', 'safe-comments-result-6673650');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673650#respond" data-commentid="6673650" data-postid="609442" data-belowelement="div-comment-6673650" data-respondelement="respond" data-replyto="Reply to Joshua" aria-label="Reply to Joshua">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673698" class="comment even thread-even depth-1  ">
+		<article id="div-comment-6673698" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://ygdes.com" class="url" rel="ugc external nofollow">YGDES</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673698">
+						<time datetime="2023-08-17T08:23:13-07:00">
+							August 17, 2023 at 8:23 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Radioelectricity is really a black art&#8230;</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673698"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673698', '25821119d0', 'safe-comments-result-6673698');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673698#respond" data-commentid="6673698" data-postid="609442" data-belowelement="div-comment-6673698" data-respondelement="respond" data-replyto="Reply to YGDES" aria-label="Reply to YGDES">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673700" class="comment odd alt thread-odd thread-alt depth-1 parent ">
+		<article id="div-comment-6673700" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://slagc.wordpress.com" class="url" rel="ugc external nofollow">abjq</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673700">
+						<time datetime="2023-08-17T08:30:11-07:00">
+							August 17, 2023 at 8:30 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>I can see several issues with this analysis:</p>
+<p>1. The NanaoVNA calibation is sone with 50 ohms, but the antenna is 73 ohms. Why not calibrate for 73 ohms?<br />
+2. Do this stuff in an anechoic chamber, not holding it up with a wet salty bag near a parallel steel ruler.<br />
+3. Who cares about the resonant frequency or &#8220;bandwidth&#8221;? The interesting part is radiation efficiency, I learned this years ago. Tune your antenna by maximising RSSI while listening to a distant source. You might find the best result isn&#8217;t predicted exactly by return loss/VSWR. The TX performance is a mirror of the RX performance in this respect (for the same frequency).</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673700"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673700', '25821119d0', 'safe-comments-result-6673700');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673700#respond" data-commentid="6673700" data-postid="609442" data-belowelement="div-comment-6673700" data-respondelement="respond" data-replyto="Reply to abjq" aria-label="Reply to abjq">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673701" class="comment even depth-2 parent ">
+		<article id="div-comment-6673701" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="http://slagc.wordpress.com" class="url" rel="ugc external nofollow">abjq</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673701">
+						<time datetime="2023-08-17T08:31:41-07:00">
+							August 17, 2023 at 8:31 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>and I wish there was an edit button!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673701"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673701', '25821119d0', 'safe-comments-result-6673701');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673701#respond" data-commentid="6673701" data-postid="609442" data-belowelement="div-comment-6673701" data-respondelement="respond" data-replyto="Reply to abjq" aria-label="Reply to abjq">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6674557" class="comment odd alt depth-3  ">
+		<article id="div-comment-6674557" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Drone</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674557">
+						<time datetime="2023-08-20T22:30:48-07:00">
+							August 20, 2023 at 10:30 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>There&#8217;s been wishin&#8217; like that around here for a loooong time. Please keep it up, maybe your wish will come true &#8211; someday&#8230;</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674557"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674557', '25821119d0', 'safe-comments-result-6674557');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674557#respond" data-commentid="6674557" data-postid="609442" data-belowelement="div-comment-6674557" data-respondelement="respond" data-replyto="Reply to Drone" aria-label="Reply to Drone">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673807" class="comment even depth-2  ">
+		<article id="div-comment-6673807" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn"><a href="https://github.com/AD0MZ/All-Band-Adjustable-Dipole" class="url" rel="ugc external nofollow">Old Guy</a></b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673807">
+						<time datetime="2023-08-17T14:38:04-07:00">
+							August 17, 2023 at 2:38 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>This!</p>
+<p>I&#8217;m an old ham and former broadcast engineer (AM radio mostly).  We almost always designed the antenna (usually the tower) for best radiation, and then designed transmitter, final, transmission lines, and other equipment to efficiently feed this antenna.  (Usually with a matching network at the base of the tower fed by ladder line to the shack.   The towers were closer to &#8220;end-fed&#8221; antenna&#8217;s than dipoles, and used a LOT of radials and other tricks. )  SWR was never a goal.</p>
+<p>During Covid, I designed and built an adjustable dipole to test various theories that I had been taught over the years.  (A ham antenna must operate over a lot of different frequencies. so a single channel AM radio station&#8217;s example can only go so far.)  HAM&#8217;s really need an adjustable solution.</p>
+<p><a href="https://github.com/AD0MZ/All-Band-Adjustable-Dipole" rel="nofollow ugc" target="_blank">https://github.com/AD0MZ/All-Band-Adjustable-Dipole</a></p>
+<p>A similar design&#8230;<br />
+<a href="https://tune-a-tenna.com" rel="nofollow ugc" target="_blank">https://tune-a-tenna.com</a></p>
+<p>This article by AE4YW  was very helpful in understanding that a good ham might want to use practices the broadcast guys have used for years.</p>
+<p><a href="http://www.hamuniverse.com/ae4ywresonance.html" rel="nofollow ugc" target="_blank">http://www.hamuniverse.com/ae4ywresonance.html</a></p>
+<p>No matter what the band, I was able to confirm that adjusting the radiator length close to the theoretical optimum length worked best.<br />
+At first I had forgotten about a dipole&#8217;s impedance of 70 ohms when I noticed that resonant point was not the lowest SWR.  This is why you have to think of transmitting equipment as a &#8220;system&#8221;.</p>
+<p>BTW&#8230;</p>
+<p>I knew a guy who guilt a dipole of soldered together aluminum cans to get extra bandwidth.  Too bad we couldn&#8217;t afford a VNA back in the 70&#8217;s.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673807"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673807', '25821119d0', 'safe-comments-result-6673807');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673807#respond" data-commentid="6673807" data-postid="609442" data-belowelement="div-comment-6673807" data-respondelement="respond" data-replyto="Reply to Old Guy" aria-label="Reply to Old Guy">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673712" class="comment odd alt thread-even depth-1  ">
+		<article id="div-comment-6673712" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Jay</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673712">
+						<time datetime="2023-08-17T09:12:03-07:00">
+							August 17, 2023 at 9:12 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>The math does work when you use the right math and factor in the correct variables, like others have mentioned cat connect coax directly to a dipole without accounting for coax. also the space between leads, feedlines etc. &#8211; So in my opinion this post seam more like trollolling post my someone without RF experience, and if they do, omg, super troll post</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673712"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673712', '25821119d0', 'safe-comments-result-6673712');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673712#respond" data-commentid="6673712" data-postid="609442" data-belowelement="div-comment-6673712" data-respondelement="respond" data-replyto="Reply to Jay" aria-label="Reply to Jay">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+	<li id="comment-6673758" class="comment even thread-odd thread-alt depth-1 parent ">
+		<article id="div-comment-6673758" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Kenny C</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673758">
+						<time datetime="2023-08-17T11:22:32-07:00">
+							August 17, 2023 at 11:22 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>i always see and hear to divide the frequency by 468 to get a half wave dipole, but in the real world that always came up a little short and had much better luck dividing 492 by the frequency for half-wave dipoles in the HF part of the spectum</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673758"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673758', '25821119d0', 'safe-comments-result-6673758');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673758#respond" data-commentid="6673758" data-postid="609442" data-belowelement="div-comment-6673758" data-respondelement="respond" data-replyto="Reply to Kenny C" aria-label="Reply to Kenny C">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673821" class="comment odd alt depth-2 parent ">
+		<article id="div-comment-6673821" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Paul</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673821">
+						<time datetime="2023-08-17T15:47:52-07:00">
+							August 17, 2023 at 3:47 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Hmm.  Something funny with that math.  Got your numerator and denominator mixed up?<br />
+And what kind of units are they in?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673821"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673821', '25821119d0', 'safe-comments-result-6673821');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673821#respond" data-commentid="6673821" data-postid="609442" data-belowelement="div-comment-6673821" data-respondelement="respond" data-replyto="Reply to Paul" aria-label="Reply to Paul">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673830" class="comment even depth-3 parent ">
+		<article id="div-comment-6673830" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Kenny C</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673830">
+						<time datetime="2023-08-17T16:24:54-07:00">
+							August 17, 2023 at 4:24 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>yeah i backasswarded the first example, divide the frequency by the formula is how its done</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673830"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673830', '25821119d0', 'safe-comments-result-6673830');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673830#respond" data-commentid="6673830" data-postid="609442" data-belowelement="div-comment-6673830" data-respondelement="respond" data-replyto="Reply to Kenny C" aria-label="Reply to Kenny C">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673832" class="comment odd alt depth-4 parent ">
+		<article id="div-comment-6673832" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Paul</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673832">
+						<time datetime="2023-08-17T16:46:57-07:00">
+							August 17, 2023 at 4:46 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Still out by a factor of Pi or so.  7 Mhz is 40 m band, so half wave would be 20 m long, not the 66 or 70 your formula says.   Is that in feet?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673832"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673832', '25821119d0', 'safe-comments-result-6673832');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673832#respond" data-commentid="6673832" data-postid="609442" data-belowelement="div-comment-6673832" data-respondelement="respond" data-replyto="Reply to Paul" aria-label="Reply to Paul">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673840" class="comment even depth-5  max-depth">
+		<article id="div-comment-6673840" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Kenny C</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673840">
+						<time datetime="2023-08-17T18:31:28-07:00">
+							August 17, 2023 at 6:31 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>i am sticking with 492 it seems to work for me no matter what part of the HF spectrum i build an antenna for, and when it comes to trimming a dipole its easier to cut a little off than it is to put it back on</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673840"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673840', '25821119d0', 'safe-comments-result-6673840');">Report comment</a></span>            </div>
+					</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673820" class="comment odd alt thread-even depth-1 parent ">
+		<article id="div-comment-6673820" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">David</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673820">
+						<time datetime="2023-08-17T15:43:44-07:00">
+							August 17, 2023 at 3:43 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>The insulation certainly has an effect, and that&#8217;s because the wire has both inductance as well as capacitive effects to itself &#8230; which is also why thickness matters.  I once modeled in EZNEC+ a 3.5 MHz vertical as a wire enclosed in a PVC tube with pure water (which is an insulator with a dielectric constant of roughly 3 if I remember correctly) inside the PVC tube.  By pumping water to various levels from the base of the PVC tube I could (according to the model) tune the antenna over quite a large frequency range.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673820"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673820', '25821119d0', 'safe-comments-result-6673820');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673820#respond" data-commentid="6673820" data-postid="609442" data-belowelement="div-comment-6673820" data-respondelement="respond" data-replyto="Reply to David" aria-label="Reply to David">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6673946" class="comment even depth-2 parent ">
+		<article id="div-comment-6673946" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">WillPunForFood</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673946">
+						<time datetime="2023-08-18T06:35:08-07:00">
+							August 18, 2023 at 6:35 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>So you could tune in that pirate station with the good dance tunes by pumping up the volume?</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673946"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673946', '25821119d0', 'safe-comments-result-6673946');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673946#respond" data-commentid="6673946" data-postid="609442" data-belowelement="div-comment-6673946" data-respondelement="respond" data-replyto="Reply to WillPunForFood" aria-label="Reply to WillPunForFood">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6674036" class="comment odd alt depth-3 parent ">
+		<article id="div-comment-6674036" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">David</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674036">
+						<time datetime="2023-08-18T11:12:26-07:00">
+							August 18, 2023 at 11:12 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>No &#8230; so I could transmit with a matched load.  I&#8217;ll leave the funky dance tunes to you.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674036"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674036', '25821119d0', 'safe-comments-result-6674036');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674036#respond" data-commentid="6674036" data-postid="609442" data-belowelement="div-comment-6674036" data-respondelement="respond" data-replyto="Reply to David" aria-label="Reply to David">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6674205" class="comment even depth-4  ">
+		<article id="div-comment-6674205" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Albumen</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674205">
+						<time datetime="2023-08-19T04:11:38-07:00">
+							August 19, 2023 at 4:11 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Pump up the volume&#8230;of water in the tube, I think he meant. Ahh puns!</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674205"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674205', '25821119d0', 'safe-comments-result-6674205');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674205#respond" data-commentid="6674205" data-postid="609442" data-belowelement="div-comment-6674205" data-respondelement="respond" data-replyto="Reply to Albumen" aria-label="Reply to Albumen">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6673967" class="comment odd alt thread-odd thread-alt depth-1 parent ">
+		<article id="div-comment-6673967" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Mystick</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6673967">
+						<time datetime="2023-08-18T07:47:24-07:00">
+							August 18, 2023 at 7:47 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Even with the incorrectly-sized dipole, you&#8217;ll still be &#8220;on the air&#8221;; just not as efficiently or with the best ERP you could possibly have(and associated reception). And even if it is &#8220;correctly&#8221; sized, that size only works &#8220;perfectly&#8221; for a very narrow frequency range(and its harmonics). You&#8217;ll be &#8220;off&#8221; to some degree within any given band. Only if you are tuned to the nadir of the wave will you start getting SWR damage, and then only at higher power, depending on the quality and design of your radio.</p>
+<p>There&#8217;s a lot of wiggle-room with RF.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6673967"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6673967', '25821119d0', 'safe-comments-result-6673967');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6673967#respond" data-commentid="6673967" data-postid="609442" data-belowelement="div-comment-6673967" data-respondelement="respond" data-replyto="Reply to Mystick" aria-label="Reply to Mystick">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6674039" class="comment even depth-2 parent ">
+		<article id="div-comment-6674039" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">David</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674039">
+						<time datetime="2023-08-18T11:16:20-07:00">
+							August 18, 2023 at 11:16 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>That&#8217;s not really true.  Many of the current low power (and low cost) rigs that have become very popular lately will blow the output stage with an SWR as low as 2:1 depending upon the phase.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674039"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674039', '25821119d0', 'safe-comments-result-6674039');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674039#respond" data-commentid="6674039" data-postid="609442" data-belowelement="div-comment-6674039" data-respondelement="respond" data-replyto="Reply to David" aria-label="Reply to David">Reply</a></div>		</article><!-- .comment-body -->
+	<ol class="children">
+	<li id="comment-6680886" class="comment odd alt depth-3  ">
+		<article id="div-comment-6680886" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">Mystick</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6680886">
+						<time datetime="2023-09-09T04:46:49-07:00">
+							September 9, 2023 at 4:46 am						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>That&#8217;s why they invented tuners.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6680886"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6680886', '25821119d0', 'safe-comments-result-6680886');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6680886#respond" data-commentid="6680886" data-postid="609442" data-belowelement="div-comment-6680886" data-respondelement="respond" data-replyto="Reply to Mystick" aria-label="Reply to Mystick">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li id="comment-6674118" class="comment even thread-even depth-1  ">
+		<article id="div-comment-6674118" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+										<b class="fn">12AU76L6GC</b> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+				<div class="comment-metadata">
+					<a href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#comment-6674118">
+						<time datetime="2023-08-18T17:58:39-07:00">
+							August 18, 2023 at 5:58 pm						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Reflected power is reflected power. It means what it says. A high return loss or low vswr is an indicator that that the power is going to either coupling to the ether or dissipated in the transmission line. Now an antenna can be inefficient, have power absorbed by nearby obstructions, coupled into other antennas or things that act as antennas, reflected by other stuff to point in a different direction than desired, etc. In fact one or more of these things happens in nearly all &#8220;in the real world&#8221; installations.<br />
+I managed a rooftop (horizontal array) with over 100 vertical antennas and you could measure about 1/2 to 1 watt being received (coupled by the array) from each antenna. Times 100 antennas. Do the math&#8230;.<br />
+There&#8217;s a lot more to it than matching return loss with a network analyzer.</p>
+			</div><!-- .comment-content -->
+			<div class="report-abuse">
+                
+			<span id="safe-comments-result-6674118"><a class="hide-if-no-js" href="javascript:void(0);" onclick="safe_report_comments_flag_comment( '6674118', '25821119d0', 'safe-comments-result-6674118');">Report comment</a></span>            </div>
+			<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/?replytocom=6674118#respond" data-commentid="6674118" data-postid="609442" data-belowelement="div-comment-6674118" data-respondelement="respond" data-replyto="Reply to 12AU76L6GC" aria-label="Reply to 12AU76L6GC">Reply</a></div>		</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+
+        
+    
+    
+    
+		<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply<small><a rel="nofollow" id="cancel-comment-reply-link" href="/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/#respond" style="display:none;">Cancel reply</a></small></h3>			<form id="commentform" class="comment-form">
+				<iframe
+					title="Comment Form"
+					src="https://jetpack.wordpress.com/jetpack-comment/?blogid=156670177&#038;postid=609442&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=1&#038;stb_enabled=0&#038;show_avatars=0&#038;avatar_default=mystery&#038;greeting=Leave+a+Reply&#038;jetpack_comments_nonce=1a8889570c&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=dark&#038;lang=en_US&#038;jetpack_version=16.2&#038;iframe_unique_id=1&#038;show_cookie_consent=10&#038;has_cookie_consent=0&#038;is_current_user_subscribed=0&#038;token_key=%3Bnormal%3B&#038;sig=927027f59a6179daab3fed2cff0d84ccc77bf32d#parent=https%3A%2F%2Fhackaday.com%2F2023%2F08%2F16%2Fthe-dipole-antenna-isnt-as-simple-as-it-appears%2F"
+											name="jetpack_remote_comment"
+						style="width:100%; height: 430px; border:0;"
+										class="jetpack_remote_comment"
+					id="jetpack_remote_comment"
+					sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups"
+				>
+									</iframe>
+									<!--[if !IE]><!-->
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});
+					</script>
+					<!--<![endif]-->
+							</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+		<p>Please be kind and respectful to help make the comments section excellent. (<a href="https://hackaday.com/policies/">Comment Policy</a>)</p><p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed.</a></p>
+</div><!-- #comments -->
+
+        
+        
+<div class="sidebar-ads-holder-top ads-one">
+
+    <!-- top right -->
+    <div class="sidebar-top-ad">
+        <script type='text/javascript'>
+            /* [id466] 300x250 */
+            OA_show(428);
+        </script>
+    </div>
+
+</div>
+        <div id="sidebar-mobile-1" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="https://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div><div id="sidebar-mobile-1" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</div><div id="sidebar-mobile-1" class="widget widget-had-subscribe"><h1 class="widget-title">Subscribe</h1>
+            <form role="subscribe" action="//hackaday.us11.list-manage.com/subscribe/post?u=80fc49ec84df168e48c00c18a&amp;id=a428253bfe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">
+                    <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required>
+                </label>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_80fc49ec84df168e48c00c18a_a428253bfe" tabindex="-1" value=""></div>
+                <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+                </div>
+            </form>
+		</div><div id="sidebar-mobile-1" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/FPGAchronicles_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/">The FPGA Chronicles: Exploring The Tang Nano 20K</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/marsnet_thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays/">After Decades, NASA May Finally Replace Mars Relays</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 16 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/08/supercon_x.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers/">2026 Hackaday Supercon: Announcing Our First Round Of Speakers</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> No comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2022/02/RaspberryPi10_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly/">Raspberry Pi RAM Restrictions No Big Deal, Frankly</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 155 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/Undated_image_of_STURGIS_operating_in_the_Panama_Canal_Zone_-_180914-A-WZ074-002_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station/">The First Floating Nuclear Power Station</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 20 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="https://hackaday.com/category/featured/">More from this category</a>
+	</div>
+        
+<div class="sidebar-ads-holder-top ads-two">
+
+    <!-- store ad -->
+    <div class="sidebar-store-ad">
+        <script type='text/javascript'>
+            OA_show(464);
+        </script>
+    </div>
+</div>
+        <div id="sidebar-mobile-2" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/duisberg-noord-thumbnail_d9dfe5.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/">Places To Visit: Landschaftspark Duisburg-Nord</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 2 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2015/09/links-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026/">Hackaday Links: September 27, 2026</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 2 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2017/08/memory-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils/">The Least Annoying Of All Evils</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 61 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2016/05/microphone-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh/">Hackaday Podcast Episode 388: RAM-Swapping On Raspberry Pi, Raindrops On Radar, And A Fine Mesh</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 1 Comment				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2016/01/darkarts-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa/">This Week In Security: FBI Gets Hacked, Muse Vulnerable To ClickFix, Popular Rust Developers At Risk, And New Attacks Against RSA</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 13 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="https://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+    
+    <div class="sidebar-widget-wrapper">
+      <aside id="search-2" class="widget widget_search"><h1 class="widget-title">Search</h1><form role="search" method="get" class="search-form" action="https://hackaday.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="hackadayfollowus-2" class="widget widget-follow-us"><h1 class="widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadaysubscribe-3" class="widget widget-had-subscribe"><h1 class="widget-title">Subscribe</h1>
+            <form role="subscribe" action="//hackaday.us11.list-manage.com/subscribe/post?u=80fc49ec84df168e48c00c18a&amp;id=a428253bfe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">
+                    <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required>
+                </label>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_80fc49ec84df168e48c00c18a_a428253bfe" tabindex="-1" value=""></div>
+                <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+                </div>
+            </form>
+		</aside><aside id="hackadayrecentposts-2" class="widget widget-recent-posts"><h1 class="widget-title">If you missed it</h1>
+	<ul>
+			<li>
+			<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/FPGAchronicles_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/">The FPGA Chronicles: Exploring The Tang Nano 20K</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 8 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/marsnet_thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays/">After Decades, NASA May Finally Replace Mars Relays</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/24/after-decades-nasa-may-finally-replace-mars-relays//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 16 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/08/supercon_x.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers/">2026 Hackaday Supercon: Announcing Our First Round Of Speakers</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/23/2026-hackaday-supercon-announcing-our-first-round-of-speakers//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> No comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2022/02/RaspberryPi10_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly/">Raspberry Pi RAM Restrictions No Big Deal, Frankly</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/22/raspberry-pi-ram-restrictions-no-big-deal-frankly//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 155 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/Undated_image_of_STURGIS_operating_in_the_Panama_Canal_Zone_-_180914-A-WZ074-002_thumbnail.png?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station/">The First Floating Nuclear Power Station</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 20 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="https://hackaday.com/category/featured/">More from this category</a>
+	</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><form action="https://hackaday.com" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform'>
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="114554125">3d Printer hacks</option>
+	<option class="level-0" value="18020710">Android Hacks</option>
+	<option class="level-0" value="18020705">Arduino Hacks</option>
+	<option class="level-0" value="27981650">ARM</option>
+	<option class="level-0" value="422579952">Art</option>
+	<option class="level-0" value="422589899">Artificial Intelligence</option>
+	<option class="level-0" value="422573560">Ask Hackaday</option>
+	<option class="level-0" value="64298109">ATtiny Hacks</option>
+	<option class="level-0" value="422590491">Battery Hacks</option>
+	<option class="level-0" value="25122024">Beer Hacks</option>
+	<option class="level-0" value="422577767">Biography</option>
+	<option class="level-0" value="12115263">blackberry hacks</option>
+	<option class="level-0" value="422570206">Business</option>
+	<option class="level-0" value="422573558">car hacks</option>
+	<option class="level-0" value="11894719">Cellphone Hacks</option>
+	<option class="level-0" value="35745764">chemistry hacks</option>
+	<option class="level-0" value="422573559">classic hacks</option>
+	<option class="level-0" value="31677810">clock hacks</option>
+	<option class="level-0" value="18755632">cnc hacks</option>
+	<option class="level-0" value="568165">computer hacks</option>
+	<option class="level-0" value="422573570">cons</option>
+	<option class="level-0" value="5738">contests</option>
+	<option class="level-0" value="422573551">cooking hacks</option>
+	<option class="level-0" value="2588813">Crowd Funding</option>
+	<option class="level-0" value="421976847">Curated</option>
+	<option class="level-0" value="422570209">Current Events</option>
+	<option class="level-0" value="422590009">Cyberdecks</option>
+	<option class="level-0" value="10969032">digital audio hacks</option>
+	<option class="level-0" value="10969033">digital cameras hacks</option>
+	<option class="level-0" value="10969034">downloads hacks</option>
+	<option class="level-0" value="107827385">drone hacks</option>
+	<option class="level-0" value="63176382">Engine Hacks</option>
+	<option class="level-0" value="422570207">Engineering</option>
+	<option class="level-0" value="212825112">Fail of the Week</option>
+	<option class="level-0" value="35890">Featured</option>
+	<option class="level-0" value="422570208">Fiction</option>
+	<option class="level-0" value="551890">firefox hacks</option>
+	<option class="level-0" value="53446541">FPGA</option>
+	<option class="level-0" value="18020562">g1 hacks</option>
+	<option class="level-0" value="422578065">Games</option>
+	<option class="level-0" value="320557">google hacks</option>
+	<option class="level-0" value="10969036">gps hacks</option>
+	<option class="level-0" value="24535490">green hacks</option>
+	<option class="level-0" value="190105353">Hackaday Columns</option>
+	<option class="level-0" value="27311668">Hackaday links</option>
+	<option class="level-0" value="289711781">Hackaday Store</option>
+	<option class="level-0" value="21755374">Hackerspaces</option>
+	<option class="level-0" value="422573553">HackIt</option>
+	<option class="level-0" value="10969037">handhelds hacks</option>
+	<option class="level-0" value="422573549">hardware</option>
+	<option class="level-0" value="422590036">High Voltage</option>
+	<option class="level-0" value="421979219">History</option>
+	<option class="level-0" value="66307084">Holiday Hacks</option>
+	<option class="level-0" value="10969038">home entertainment hacks</option>
+	<option class="level-0" value="5660882">home hacks</option>
+	<option class="level-0" value="422573566">how-to</option>
+	<option class="level-0" value="422570204">Interest</option>
+	<option class="level-0" value="908478">internet hacks</option>
+	<option class="level-0" value="831">Interviews</option>
+	<option class="level-0" value="1416772">iphone hacks</option>
+	<option class="level-0" value="1275163">ipod hacks</option>
+	<option class="level-0" value="4157506">Kindle hacks</option>
+	<option class="level-0" value="46717088">Kinect hacks</option>
+	<option class="level-0" value="10969048">laptops hacks</option>
+	<option class="level-0" value="422573554">Laser Hacks</option>
+	<option class="level-0" value="422573557">LED Hacks</option>
+	<option class="level-0" value="422573568">Lifehacks</option>
+	<option class="level-0" value="729674">Linux Hacks</option>
+	<option class="level-0" value="20732807">lockpicking hacks</option>
+	<option class="level-0" value="10969060">Mac Hacks</option>
+	<option class="level-0" value="422582715">Machine Learning</option>
+	<option class="level-0" value="422573573">Major Tom</option>
+	<option class="level-0" value="11284667">Medical Hacks</option>
+	<option class="level-0" value="139916">Microcontrollers</option>
+	<option class="level-0" value="5611793">Misc Hacks</option>
+	<option class="level-0" value="18020730">Multitouch Hacks</option>
+	<option class="level-0" value="22652725">Musical Hacks</option>
+	<option class="level-0" value="18020722">Netbook Hacks</option>
+	<option class="level-0" value="6166512">Network Hacks</option>
+	<option class="level-0" value="103">News</option>
+	<option class="level-0" value="1861880">Nintendo DS Hacks</option>
+	<option class="level-0" value="114555425">Nintendo Game Boy Hacks</option>
+	<option class="level-0" value="18020685">Nintendo Hacks</option>
+	<option class="level-0" value="422573552">Nintendo Wii Hacks</option>
+	<option class="level-0" value="118011206">Nook Hacks</option>
+	<option class="level-0" value="422570205">Original Art</option>
+	<option class="level-0" value="114556430">Palm Pre Hacks</option>
+	<option class="level-0" value="422573571">Parts</option>
+	<option class="level-0" value="422592105">PCB Hacks</option>
+	<option class="level-0" value="10969081">Peripherals Hacks</option>
+	<option class="level-0" value="16325149">Phone Hacks</option>
+	<option class="level-0" value="10969088">Playstation Hacks</option>
+	<option class="level-0" value="2060">Podcasts</option>
+	<option class="level-0" value="10969096">Portable Audio Hacks</option>
+	<option class="level-0" value="10969099">Portable Video Hacks</option>
+	<option class="level-0" value="588444">PSP Hacks</option>
+	<option class="level-0" value="23971578">Radio Hacks</option>
+	<option class="level-0" value="47">Rants</option>
+	<option class="level-0" value="69218551">Raspberry Pi</option>
+	<option class="level-0" value="21870780">Repair Hacks</option>
+	<option class="level-0" value="422578063">Retrocomputing</option>
+	<option class="level-0" value="212824350">Retrotechtacular</option>
+	<option class="level-0" value="422590062">Reverse Engineering</option>
+	<option class="level-0" value="422573565">Reviews</option>
+	<option class="level-0" value="10969101">Robots Hacks</option>
+	<option class="level-0" value="422573563">Roundup</option>
+	<option class="level-0" value="422578013">Science</option>
+	<option class="level-0" value="10969111">Security Hacks</option>
+	<option class="level-0" value="422570203">Skills</option>
+	<option class="level-0" value="422573572">Slider</option>
+	<option class="level-0" value="2301">Software Development</option>
+	<option class="level-0" value="3796421">Software Hacks</option>
+	<option class="level-0" value="10969116">Solar Hacks</option>
+	<option class="level-0" value="422577709">Space</option>
+	<option class="level-0" value="10969121">Tablet Hacks</option>
+	<option class="level-0" value="3075183">Teardown</option>
+	<option class="level-0" value="12936984">Tech Hacks</option>
+	<option class="level-0" value="227104736">The Hackaday Prize</option>
+	<option class="level-0" value="10969130">Tool Hacks</option>
+	<option class="level-0" value="25277004">Toy Hacks</option>
+	<option class="level-0" value="10969134">Transportation Hacks</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="422573556">Video Hacks</option>
+	<option class="level-0" value="34942364">Virtual Reality</option>
+	<option class="level-0" value="50802420">Weapons Hacks</option>
+	<option class="level-0" value="12552193">Wearable Hacks</option>
+	<option class="level-0" value="39510952">Weekly Roundup</option>
+	<option class="level-0" value="4891215">Wireless Hacks</option>
+	<option class="level-0" value="7079455">Xbox Hacks</option>
+</select>
+</form><script>
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value && parseInt( dropdown.value ) > 0 && dropdown instanceof HTMLSelectElement ) {
+				dropdown.parentElement.submit();
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "cat" );
+
+//# sourceURL=WP_Widget_Categories%3A%3Awidget
+</script>
+</aside><aside id="hackadayrecentposts-3" class="widget widget-recent-posts"><h1 class="widget-title">Our Columns</h1>
+	<ul>
+			<li>
+			<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2026/09/duisberg-noord-thumbnail_d9dfe5.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/">Places To Visit: Landschaftspark Duisburg-Nord</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 2 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2015/09/links-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026/">Hackaday Links: September 27, 2026</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 2 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2017/08/memory-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils/">The Least Annoying Of All Evils</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 61 Comments				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2016/05/microphone-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh/">Hackaday Podcast Episode 388: RAM-Swapping On Raspberry Pi, Raindrops On Radar, And A Fine Mesh</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/25/hackaday-podcast-episode-388-ram-swapping-on-raspberry-pi-raindrops-on-radar-and-a-fine-mesh//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 1 Comment				</a>
+			</div>
+		</li>
+			<li>
+			<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa/" class="recent-image">
+							<img src="https://hackaday.com/wp-content/uploads/2016/01/darkarts-thumb.jpg?w=600&#038;h=600" alt="">
+			</a>
+			<div class="entry-intro">
+				<h2>
+					<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa/">This Week In Security: FBI Gets Hacked, Muse Vulnerable To ClickFix, Popular Rust Developers At Risk, And New Attacks Against RSA</a>
+				</h2>
+				<a href="https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa//#comments" class="comment-link">
+					<span class="icon-hackaday icon-hackaday-comment"></span> 13 Comments				</a>
+			</div>
+		</li>
+		</ul>
+	<a href="https://hackaday.com/category/hackaday-columns/">More from this category</a>
+	</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent comments</h1><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">D</span> on <a href="https://hackaday.com/2026/09/28/using-the-snes-super-fx-chip-to-run-super-mario-64/#comment-8345990">Using The SNES Super FX Chip To Run <i>Super Mario 64</i></a></li><li class="recentcomments"><span class="comment-author-link">Nik</span> on <a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/#comment-8345989">The FPGA Chronicles: Exploring The Tang Nano 20K</a></li><li class="recentcomments"><span class="comment-author-link">David H</span> on <a href="https://hackaday.com/2026/09/28/an-ir-blaster-project-in-a-nutshell/#comment-8345986">An IR Blaster Project, In A Nutshell</a></li><li class="recentcomments"><span class="comment-author-link">craig</span> on <a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/#comment-8345985">Places To Visit: Landschaftspark Duisburg-Nord</a></li><li class="recentcomments"><span class="comment-author-link">Kaiser</span> on <a href="https://hackaday.com/2026/09/28/places-to-visit-landschaftspark-duisburg-nord/#comment-8345984">Places To Visit: Landschaftspark Duisburg-Nord</a></li><li class="recentcomments"><span class="comment-author-link">DerAxeman</span> on <a href="https://hackaday.com/2026/09/26/the-least-annoying-of-all-evils/#comment-8345983">The Least Annoying Of All Evils</a></li><li class="recentcomments"><span class="comment-author-link">prosper</span> on <a href="https://hackaday.com/2026/09/28/the-fpga-chronicles-exploring-the-tang-nano-20k/#comment-8345982">The FPGA Chronicles: Exploring The Tang Nano 20K</a></li><li class="recentcomments"><span class="comment-author-link">brian</span> on <a href="https://hackaday.com/2026/09/27/hackaday-links-september-27-2026/#comment-8345981">Hackaday Links: September 27, 2026</a></li><li class="recentcomments"><span class="comment-author-link">Tony M</span> on <a href="https://hackaday.com/2026/09/26/you-can-make-a-microprocessor-thats-all-your-own/#comment-8345977">You Can Make A Microprocessor That&#8217;s All Your Own</a></li><li class="recentcomments"><span class="comment-author-link">RF Dude</span> on <a href="https://hackaday.com/2026/09/27/center-pivot-system-modified-to-mow-lawn/#comment-8345976">Center-Pivot System Modified To Mow Lawn</a></li></ul></aside>    </div>
+    
+    <div class="sidebar-ads-holder-bottom" id="secondary-bottom-ad">
+        <script type='text/javascript'>
+            /* [id465] 160x600 */
+            OA_show(427);
+        </script>
+    </div>
+
+</div><!-- #secondary -->
+
+
+    </div><!-- #content -->
+
+</div><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div id="footer" class="site-footer-container">
+
+        <a href="https://hackaday.com/" rel="home">
+            <img src="https://hackaday.com/wp-content/themes/hackaday-2/img/logo.png" alt="Logo" class="logo-img">
+        </a>
+
+        <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-141410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-141410"><a href="https://hackaday.com/">Home</a></li>
+<li id="menu-item-141411" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-141411"><a href="https://hackaday.com/blog/">Blog</a></li>
+<li id="menu-item-141412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141412"><a href="http://hackaday.io">Hackaday.io</a></li>
+<li id="menu-item-152823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152823"><a href="http://www.youtube.com/user/hackaday/videos">Video</a></li>
+<li id="menu-item-141415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141415"><a href="https://hackaday.com/submit-a-tip/">Submit A Tip</a></li>
+<li id="menu-item-141417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141417"><a href="https://hackaday.com/about/">About</a></li>
+<li id="menu-item-141418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141418"><a href="https://hackaday.com/contact-us/">Contact Us</a></li>
+</ul></div>
+        <aside id="hackadayfollowus-3" class="widget widget-follow-us"><h1 class="footer-widget-title">Never miss a hack</h1>
+			<a href="https://www.facebook.com/pages/Hack-a-Day/136115233068429" target="_blank" class="icon-social icon-facebook">Follow on facebook</a>
+			<a href="https://twitter.com/hackaday" target="_blank" class="icon-social icon-twitter">Follow on twitter</a>
+			<a href="https://www.youtube.com/user/hackaday" target="_blank" class="icon-social icon-youtube">Follow on youtube</a>
+			<a href="https://hackaday.com/blog/feed/" target="_blank" class="icon-social icon-rss">Follow on rss</a>
+			<a href="mailto:tips@hackaday.com" class="icon-social icon-contact">Contact us</a>
+		</aside><aside id="hackadaysubscribe-2" class="widget widget-had-subscribe"><h1 class="footer-widget-title">Subscribe to Newsletter</h1>
+            <form role="subscribe" action="//hackaday.us11.list-manage.com/subscribe/post?u=80fc49ec84df168e48c00c18a&amp;id=a428253bfe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">
+                    <input type="email" value="" name="EMAIL" class="subscribe-field" placeholder="Enter Email Address" id="mce-EMAIL" required>
+                </label>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_80fc49ec84df168e48c00c18a_a428253bfe" tabindex="-1" value=""></div>
+                <input type="submit" class="subscribe-submit" id="mc-embedded-subscribe" value="Subscribe">
+                </div>
+            </form>
+		</aside>
+        <div class="site-info">
+            Copyright &copy; 2026            <span class="sep"> | </span>
+            <strong>Hackaday, Hack A Day, and the Skull and Wrenches Logo are Trademarks of Hackaday.com</strong>
+            <span class="sep"> | </span>
+            <a href="https://supplyframe.com/company/privacy" target="_blank">Privacy Policy</a>
+            <span class="sep"> | </span>
+            <a href="https://supplyframe.com/company/terms" target="_blank">Terms of Service</a>
+            <span class="sep"> | </span>
+            <a href="/digital-services-act/">Digital Services Act</a>
+            <span class="sep"> | </span><a href="#" id="hd-cookie-link-amer" style="display:none;" onclick="if(typeof UC_UI!=='undefined'){UC_UI.showFirstLayer();}return false;">Do not sell or share my personal information</a><a href="#" id="hd-cookie-link-other" style="display:none;" onclick="if(typeof UC_UI!=='undefined'){UC_UI.showSecondLayer();}return false;">Cookie Management</a><script>(function(){  function showCookieLink(){    var el=document.getElementById("usercentrics-cmp");    if(!el){return;}    var sid=el.getAttribute("data-settings-id");    if(sid==="-CfZGBFlc-oz0y"){      document.getElementById("hd-cookie-link-amer").style.display="inline";    }else{      document.getElementById("hd-cookie-link-other").style.display="inline";    }  }  if(document.readyState!=="loading"){showCookieLink();}  else{document.addEventListener("DOMContentLoaded",showCookieLink);}})();</script>            <br />Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&#038;utm_medium=web&#038;utm_campaign=VIP%20Footer%20Credit&#038;utm_term=hackaday.com" rel="generator nofollow" class="powered-by-wpcom">WordPress VIP</a>        </div><!-- .site-info -->
+
+    </div>
+</footer><!-- #colophon -->
+
+<img src="//analytics.supplyframe.com/trackingservlet/impression?action=pageImpression&amp;zone=HDay_article&amp;extra=title%3DThe+Dipole+Antenna+Isn%26%238217%3Bt+as+Simple+as+it+Appears" id="hdTrack" class="trackImg"><script type="text/plain" data-usercentrics="Google Analytics">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42734042-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script type="text/plain" data-usercentrics="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-5XSENH6S7G"></script>
+<script type="text/plain" data-usercentrics="Google Analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5XSENH6S7G');
+</script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hackaday-2/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://hackaday.com/_static/??-eJyNz0sOwjAMBNALkaRlAe0CcZbIcVvnTz5Abk8kJLZE8m7ejGTxigyCL+iLKAc6zOKQYKSSjZ2FzsLLJ+2yUPBc55P4x7OhyCx5w7YANbON3mM9S2CGpH5UTI2rUL43Ng+J4o+SB1tVRz2B4FyvsYTRNu5o7M0dQ3d3d5uv6zQty2Wd9QcANngF" ></script><script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"156670177","post":"609442","tz":"-7","srv":"hackaday.com","hp":"vip","j":"1:16.2"} ]);
+_stq.push([ "clickTrackerInit", "156670177", "609442" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202640.js"></script>
+<script type="text/javascript" src="https://hackaday.com/wp-content/mu-plugins/akismet/_inc/akismet-frontend.js?m=1790178483g" ></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://hackaday.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://hackaday.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		<script type="text/javascript">
+			(function () {
+				const iframe = document.getElementById( 'jetpack_remote_comment' );
+								const watchReply = function() {
+					// Check addComment._Jetpack_moveForm to make sure we don't monkey-patch twice.
+					if ( 'undefined' !== typeof addComment && ! addComment._Jetpack_moveForm ) {
+						// Cache the Core function.
+						addComment._Jetpack_moveForm = addComment.moveForm;
+						const commentParent = document.getElementById( 'comment_parent' );
+						const cancel = document.getElementById( 'cancel-comment-reply-link' );
+
+						function tellFrameNewParent ( commentParentValue ) {
+							const url = new URL( iframe.src );
+							if ( commentParentValue ) {
+								url.searchParams.set( 'replytocom', commentParentValue )
+							} else {
+								url.searchParams.delete( 'replytocom' );
+							}
+							if( iframe.src !== url.href ) {
+								iframe.src = url.href;
+							}
+						};
+
+						cancel.addEventListener( 'click', function () {
+							tellFrameNewParent( false );
+						} );
+
+						addComment.moveForm = function ( _, parentId ) {
+							tellFrameNewParent( parentId );
+							return addComment._Jetpack_moveForm.apply( null, arguments );
+						};
+					}
+				}
+				document.addEventListener( 'DOMContentLoaded', watchReply );
+				// In WP 6.4+, the script is loaded asynchronously, so we need to wait for it to load before we monkey-patch the functions it introduces.
+				document.querySelector('#comment-reply-js')?.addEventListener( 'load', watchReply );
+
+								
+				const commentIframes = document.getElementsByClassName('jetpack_remote_comment');
+
+				window.addEventListener('message', function(event) {
+					if (event.origin !== 'https://jetpack.wordpress.com') {
+						return;
+					}
+
+					if (!event?.data?.iframeUniqueId && !event?.data?.height) {
+						return;
+					}
+
+					const eventDataUniqueId = event.data.iframeUniqueId;
+
+					// Change height for the matching comment iframe
+					for (let i = 0; i < commentIframes.length; i++) {
+						const iframe = commentIframes[i];
+						const url = new URL(iframe.src);
+						const iframeUniqueIdParam = url.searchParams.get('iframe_unique_id');
+						if (iframeUniqueIdParam == event.data.iframeUniqueId) {
+							iframe.style.height = event.data.height + 'px';
+							return;
+						}
+					}
+				});
+			})();
+		</script>
+		
+</body>
+</html>

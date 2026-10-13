@@ -1,0 +1,21 @@
+1p29kow	Is it OK to route a power trace under the RF network if it is three layers away?	13	P	13/grounding-and-return-paths; 13/stackups-and-materials	plane shielding between layers implied; explicit rule absent (13/rf-layout-rules planned)
+1rtwg03	What causes this narrow spike in my HFSS S11?	16	P	16/simulation-validation	box/cavity resonances and port artefacts not listed as causes
+1pdbj4t	I tried designing a direct-conversion radio — what did I miss?	06	C	06/receiver-architectures	zero-IF pitfalls
+1nv3ro7	Low-noise amplifier design help	06	C	06/lna-design	
+1qvuiv1	How should impedance matching be done in practice?	03	C	03/impedance-matching-lumped-and-distributed	
+1sta6e7	How does this PCB coupler work?	06	C	06/couplers-dividers-combiners	
+1rh1vhm	How do I split power over a 20:1 bandwidth (0.4–8 GHz) on chip?	06	P	06/couplers-dividers-combiners	multi-section/resistive broadband splitters only briefly
+1qmzqev	What's the densest practical single-carrier modulation?	10	C	10/digital-modulation-psk-qam-fsk; 10/ber-ebn0-and-shannon	
+1vwwcjx	What happens in a radar if the image frequency isn't rejected?	11	P	06/receiver-architectures; 11/fmcw-radar	real vs complex IF in FMCW (folding, noise doubling) not worked
+1sjz7jh	How do RF "phone detectors" work, and can they be defeated?	06	P	06/detectors-and-power-meters	broadband detector principle covered; cellular burst detection not
+1qngymn	My QPSK TX/RX in GNU Radio (B200 + HackRF) doesn't work — what's wrong?	14	C	14/software-demodulation; 10/synchronization-carrier-timing	
+1pwoa4t	Advice for designing a 24 GHz microstrip patch array	12	C	12/planar-arrays-element-pattern-coupling; 08/patch-antennas	
+1pb3gvy	Best layout for a 3rd-order tubular band-pass filter at 149 MHz?	06	P	06/rf-filters-lc-saw-baw-cavity-microstrip	tubular/combline mechanical filters not covered
+1vtm13h	How does a power amplifier achieve such a wide bandwidth?	06	P	06/power-amplifiers; 03/broadband-matching-bode-fano	distributed/feedback/transformer-coupled broadband PAs not described
+1u48iyv	Python or MATLAB for RF work?	16	C	16/python-rf-toolkit	
+1tjk0mm	Advice on an FPGA ADC-streaming design flow	14	C	14/fpga-for-sdr	
+1nx5pzy	Are these generic LMX2595 synthesizer boards legit?	18	P	18/mixers-plls-vcos-parts	ADF4351 boards covered; LMX2595 clones not
+1w0pfdt	Which VNA should I buy?	17	C	17/nanovna-librevna-practical	
+1to1us2	Which RF PCB material should I use?	18	C	18/pcb-substrates-parts; 13/stackups-and-materials	
+1v9fl84	RF, microwave and antenna engineering for beginners — where to start?	LRN	P	00/math-roadmap-for-rf	
+1un27xi	Good RF engineering project ideas?	20	M	NEW 20/first-rf-projects	

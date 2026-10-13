@@ -1,0 +1,65 @@
+=== 1. WGS-84 geodetic <-> ECEF ===
+Singapore 1.3521N 103.8198E h 15 m -> ECEF = [-1523121.698  6191802.975   149494.235] m
+[PASS] round trip (incl. h = 15 m): 9.31e-07 mm < 1 mm
+[PASS] inverse over lat +-89.9 deg, h -100 m ... 20 200 km: worst 1.12e-05 mm
+[PASS] astropy EarthLocation agrees: 0.000 mm
+1 deg latitude at the equator = 110574.3 m; 1 deg longitude = 111319.5 m
+
+=== 3. Satellite position from a real broadcast ephemeris ===
+G01: a = 26561.1 km, e = 0.00203, i0 = 54.79 deg, tk = 0 s, E = -26.408 deg
+     ECEF at 12:00 GPST = (-14880.983, 20963.731, -6481.975) km, |r| = 26512.972 km
+     sat clock = 156.6328 us (relativistic part 2.07 ns = 0.62 m)
+     from Singapore: az 126.72 deg, el 55.86 deg, range 20990.9 km
+[PASS] G01: |r| within [a(1-e), a(1+e)] + 2 km
+E19: a = 29600.5 km, e = 0.00013, i0 = 55.85 deg, tk = 0 s, E = 160.268 deg
+     ECEF at 12:00 GPST = (-4068.554, 27589.605, -9932.937) km, |r| = 29604.099 km
+     sat clock = 3250.8453 us (relativistic part -0.11 ns = -0.03 m)
+     from Singapore: az 194.00 deg, el 62.71 deg, range 23790.8 km
+[PASS] E19: |r| within [a(1-e), a(1+e)] + 2 km
+GPS period 11.9668 h (1.0000 x half sidereal day)
+Galileo period 14.0785 h (1.1764 x half sidereal day)
+[PASS] G01 inertial speed 3881.01 m/s vs vis-viva 3880.91 m/s (< 1 m/s; harmonics in the Cxx terms)
+G01 ECEF speed 3150.5 m/s; inertial 3881.0 m/s
+
+=== 4. Broadcast vs IGS rapid orbit, 2026-10-05, every 15 min ===
+G01 12:00 GPST: SP3 [-14880.983  20963.733  -6481.977] km; broadcast - SP3 = [ 0.26 -1.77  1.85] m (|d| 2.58 m)
+GPS: 3072 epochs x sats (32 sats); RMS radial 1.46 m, along 1.09 m, cross 0.49 m, 3-D 1.89 m; median radial -1.42 m
+   radial scatter about each satellite's daily mean (removes the constant antenna offset): 0.15 m
+[PASS] P2 GPS along 1.09 m and cross 0.49 m < 2 m
+[PASS] P2 GPS 3-D RMS 1.89 m < 5 m
+Galileo: no precise orbits in this SP3 (IGS rapid is GPS-only) - P2 for Galileo NOT TESTED
+
+--- real sky over Singapore, 2026-10-05, 10 deg mask, every 10 min ---
+GPS only                          : sats median 10.0 (min 8); HDOP median 0.81 (max 1.08); VDOP median 1.45 (max 2.07)
+GPS+GAL, one clock (GGTO known)   : sats median 20.0 (min 15); HDOP median 0.58 (max 0.71); VDOP median 1.05 (max 1.36)
+GPS+GAL, two clocks               : sats median 20.0 (min 15); HDOP median 0.58 (max 0.72); VDOP median 1.05 (max 1.40)
+[PASS] P4 GPS-only median HDOP 0.81 within 0.3 of synthetic 0.89
+[PASS] P4 GPS-only median VDOP 1.45 within 0.5 of synthetic 1.70
+GPS satellites healthy in file: 32; Galileo: 28
+
+=== 5. Simulated pseudoranges (light time + Earth rotation) -> least squares ===
+13 satellites above 5 deg in the synthetic set
+[PASS] P3 LS from the Earth's centre in 6 iterations: position error 0.000 mm, clock error 0.000 mm
+Sagnac range term omega_E (x_s y_r - y_s x_r)/c for these satellites: -29.6 ... 32.2 m
+
+=== 6. RAIM (snapshot least-squares residual test) ===
+n = 8, dof = 4, threshold T_D = 35.70 (chi2, Pfa 3.33e-07); lambda for Pmd 0.001 = 78.5
+slopes = [0.8  0.37 0.75 0.32 0.69 0.43 0.41 0.08]; HDOP 0.95; HPL = max slope x sigma x sqrt(lambda) = 21.3 m (sigma 3.0 m)
+[PASS] P5 bias 41.3 m on sat 0: P_d MC 0.900 vs theory 0.900
+[PASS] false-alarm MC at Pfa 1e-2 threshold: 0.0099
+with that bias: horizontal error median 17.0 m; undetected cases' max 24.3 m (HPL 21.3 m)
+exclusion by largest normalised residual, bias 41 m: correct satellite 99.7 %
+exclusion by largest normalised residual, bias 83 m: correct satellite 100.0 %
+largest residual correlation between satellites: 0.76 (limits exclusion)
+
+=== 7. 3rd-order IMD frequencies: Wi-Fi ch 6/11 and LoRa 434.125 MHz (frequencies only) ===
+ch  1 (2412 MHz, +-11 MHz): f_WiFi - 2 f_LoRa = 1543.75 MHz, span 1532.62 ... 1554.88 MHz; 2 f_LoRa - f_WiFi < 0 (no product)
+ch  6 (2437 MHz, +-11 MHz): f_WiFi - 2 f_LoRa = 1568.75 MHz, span 1557.62 ... 1579.88 MHz; 2 f_LoRa - f_WiFi < 0 (no product)
+ch 11 (2462 MHz, +-11 MHz): f_WiFi - 2 f_LoRa = 1593.75 MHz, span 1582.62 ... 1604.88 MHz; 2 f_LoRa - f_WiFi < 0 (no product)
+ch 13 (2472 MHz, +-11 MHz): f_WiFi - 2 f_LoRa = 1603.75 MHz, span 1592.62 ... 1614.88 MHz; 2 f_LoRa - f_WiFi < 0 (no product)
+[PASS] ch 6 product 1557.62-1579.88 MHz covers GPS L1 C/A 1574.40-1576.44
+[PASS] ch 11 product 1582.62-1604.88 MHz overlaps GLONASS G1 1597.55-1605.89
+[PASS] ch 11 product misses GPS L1 C/A main lobe
+ch 1 product 1532.62-1554.88 MHz (BeiDou B1I 1561.098 MHz +-2.046 inside: False)
+
+ALL PASS

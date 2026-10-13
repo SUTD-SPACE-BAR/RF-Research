@@ -1,0 +1,84 @@
+
+§1 Collinear arrays of half-wave dipoles (uniform, in phase)
+  N  best s (lambda)  D (dBi)  HPBW elev (deg)  length (lambda)  D at s=0.5 (dBi)
+  1             0.00     2.15             78.1             0.50              2.15
+  2             0.97     5.42             28.1             1.47              3.82
+  3             0.98     7.31             17.8             2.46              5.33
+  4             0.98     8.64             13.2             3.44              6.42
+  5             0.99     9.66             10.4             4.46              7.31
+  6             0.99    10.49              8.6             5.45              8.04
+  7             0.99    11.19              7.4             6.44              8.68
+  8             0.99    11.80              6.4             7.43              9.23
+[PASS] single half-wave dipole: 2.15 dBi, 78 deg elevation beamwidth (2.15 dBi, 78.1 deg)
+[PASS] 2 elements: ~5 dBi; 4 elements: ~8.5 dBi; 8 elements: ~11.6 dBi (upper bounds, best spacing) (5.4, 8.6, 11.8 dBi)
+[PASS] elevation beamwidth shrinks roughly as 1/N (8 el: < 12 deg) (4 el 13.2 deg, 8 el 6.4 deg)
+
+§2 Gain toward the rocket (vertical omni at the ground station)
+  realistic collinears: s = 0.75 lambda (phasing-coil type, no grating lobe) -- best-s patterns above have
+  near-axis grating lobes; §3 searches all spacings for the size bound
+  N = 2, s = 0.75: peak 5.04 dBi, elevation HPBW 35.1 deg
+  N = 4, s = 0.75: peak 7.90 dBi, elevation HPBW 17.1 deg
+  N = 8, s = 0.75: peak 10.85 dBi, elevation HPBW 8.5 deg
+geometry                               elev      N=1      N=2      N=4      N=8
+pad, rocket at 100 m from 2 km          2.9      2.1      5.0      7.6      9.5
+1 km altitude from 2 km                26.6      0.8     -2.5     -5.4     -8.9
+3 km altitude from 2 km                56.3     -4.4     -9.9    -10.0    -45.4
+apogee 10 km from 5 km                 63.4     -6.5     -9.4    -13.0    -15.3
+apogee 10 km from 2 km                 78.7    -14.0    -14.5    -32.5    -29.7
+landed rocket 5 km away (horizon)       0.0      2.2      5.0      7.9     10.9
+  N = 1: worst gain over 5-80 deg elevation  -15.1 dBi; fraction of 5-80 deg below 0 dBi: 0.62
+  N = 2: worst gain over 5-80 deg elevation  -67.7 dBi; fraction of 5-80 deg below 0 dBi: 0.77
+  N = 4: worst gain over 5-80 deg elevation  -64.8 dBi; fraction of 5-80 deg below 0 dBi: 0.89
+  N = 8: worst gain over 5-80 deg elevation  -66.6 dBi; fraction of 5-80 deg below 0 dBi: 0.97
+[PASS] at the horizon the 8-element collinear wins by ~7 dB over the dipole (8.7 dB)
+[PASS] toward apogee (79 deg) every vertical omni is >= 12 dB below its own peak (dipole -14.0, N2 -14.5, N4 -32.5, N8 -29.7 dBi)
+[PASS] the dipole has no null between 5 and 80 deg; collinears have deep nulls there (worst < -20 dBi) (worst: dipole -15.1, N4 -64.8, N8 -66.6 dBi)
+[PASS] the 4- and 8-element collinears are below 0 dBi over most of 5-80 deg elevation (> 70 %) (N4 0.89, N8 0.97; dipole 0.62)
+[PASS] early boost (27 deg elevation): dipole beats the 4- and 8-element omnis (dipole 0.8, N4 -5.4, N8 -8.9 dBi)
+
+§3 Minimum radiator length for a claimed omni gain (search over N = 1..10, s = 0.5..1.0 lambda)
+claim (dBi)  min length (lambda)         N, s  433 MHz (cm)  868 MHz (cm)  915 MHz (cm)  line source 2L/lambda (dBi)
+          3                 1.00      2, 0.50            69            35            33                          3.0
+          5                 1.24      2, 0.74            86            43            41                          3.9
+          6                 1.74      3, 0.62           120            60            57                          5.4
+          8                 2.84      4, 0.78           196            98            93                          7.5
+         10                 4.70      7, 0.70           325           162           154                          9.7
+[PASS] an honest 8 dBi omni at 915 MHz needs >= ~2.5 lambda (~80 cm) of radiator, before losses (2.84 lambda = 93 cm)
+[PASS] even 5 dBi needs >= ~1.2 lambda (two stacked half-waves): ~40 cm at 915 MHz, ~85 cm at 433 MHz (1.24 lambda)
+[PASS] cross-check: uniform line source D ~ 2L/lambda agrees within ~1.5 dB for the 8-10 dBi cases 
+[PASS] quarter-wave monopole over an INFINITE perfect ground = 5.16 dBi (half-space), not achievable on a small board (5.16 dBi)
+
+§4 Mismatch loss
+ VSWR  |Gamma|  RL (dB)  mismatch loss (dB)
+  1.2    0.091     20.8                0.04
+  1.5    0.200     14.0                0.18
+  2.0    0.333      9.5                0.51
+  3.0    0.500      6.0                1.25
+  5.0    0.667      3.5                2.55
+ 10.0    0.818      1.7                4.81
+[PASS] VSWR 2 costs only 0.51 dB; VSWR 3 1.25 dB; VSWR 5 2.55 dB 
+[PASS] an antenna at VSWR 10 (e.g. a 915 MHz whip used at 433 MHz) loses ~4.8 dB of mismatch alone 
+
+§5 Feeder loss vs antenna upgrade (loss per 10 m from 03/coax-and-cables, interpolated datasheets)
+  RG-174   3 m:  1.9 dB at 433 MHz,  3.0 dB at 915 MHz
+  RG-316   3 m:  2.2 dB at 433 MHz,  3.5 dB at 915 MHz
+  RG-58    3 m:  0.9 dB at 433 MHz,  1.3 dB at 915 MHz
+  LMR-240  3 m:  0.5 dB at 433 MHz,  0.8 dB at 915 MHz
+  LMR-400  3 m:  0.3 dB at 433 MHz,  0.4 dB at 915 MHz
+[PASS] 3 m of RG-174 at 915 MHz (3.0 dB) cancels a +3 dB antenna upgrade 
+[PASS] range factor of a net +3 dB (free space) = x1.41; of -3 dB = x0.71 
+
+§6 Comparative RSSI test: samples per antenna for 80 % power at alpha = 0.05 (two-sided)
+sigma (dB)  D=0.5 dB    D=1 dB    D=2 dB    D=3 dB
+         1        63        16         4         2
+         2       252        63        16         7
+         4      1005       252        63        28
+         6      2261       566       142        63
+         8      4019      1005       252       112
+[PASS] formula: sigma 4 dB, difference 2 dB -> 63 packets per antenna 
+[PASS] Monte-Carlo: 63 packets/antenna at sigma 4 dB detect a 2 dB difference ~80 % of the time (1 dB RSSI steps) (power 0.80, mean estimate 2.01 dB)
+[PASS] with slow drift and NO real difference, interleaved A/B stays near 5 % false alarms (false-alarm rate 0.04, mean diff +0.01 dB)
+[PASS] ... while 'all A, then all B' flags a fake difference far more often (false-alarm rate 0.40, |mean| spread larger)
+
+20/20 PASS
+ALL PASS

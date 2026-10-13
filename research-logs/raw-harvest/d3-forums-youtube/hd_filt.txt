@@ -1,0 +1,280 @@
+=== The Dipole Antenna Isn’t as Simple as it Appears | https://hackaday.com/2023/08/16/the-dipole-antenna-isnt-as-simple-as-it-appears/ | 47 comments
+- In labs where we had access to top of the line network analyzers, when lab time was running short… our error bars were always attributed to multipath propogation. Our Professor agreed (!?) What a lab 
+- Is it meaningful to say that the universe exists in isolation, when there’s nothing outside of it? (Technically, not even “nothing”).
+- Tautologically, yes, there can only be one everything. The challenge is figuring out whether what you call everything actually is.
+- Yes, but how many everythings there are is not the same question as whether it is “isolated”. From what would it be?
+- It’s also important to keep the symmetric/unsymmetric relationship in mind. The dipole is usually symmetric, but the coaxial cable is not (it’s unsymmetric). So you can’t just attach an dipole to an R
+- What about chicken ladder balanced line?
+- Um, it’s great if the shack is in a hen house? :)
+- Or why not 300Ω twin lead?
+- What on earth is a ‘sheet wave’?
+- “sheet waves” ????????? Standing wave?????
+- https://en.wikipedia.org/wiki/Braid-breaker Braid breaker is also quite clear, since a coax cable has only one braid. Less ambiguous than sheath or Mantel which could make you think a dielectric is so
+- Brain breaker is an awful term. It’s not breaking the braid in any way, and doesn’t even operate on (just) the braid. It even works when there IS no braid. A common-mode choke is inserting a high impe
+- (Cant reply to Paul, so reply goes here): Some actually *do* break the braid and use capacitors to bridge the break in the braid (and the center conductor): https://en.wikipedia.org/wiki/Braid-breaker
+- Actually breaking the braid (and the centre conductor) and inserting a capacitor is called a “DC block”, describing exactly what it does. Which will work on ladder line or twinlead too, not just coax 
+- ‘Sheet waves’? Standing waves, possibly, or radiative losses due to mismatch of feedline and antenna, causing RF signal to be fed back to the transmitter, which can be negated by use of an isolator(or
+- I can see several issues with this analysis: 1. The NanaoVNA calibation is sone with 50 ohms, but the antenna is 73 ohms. Why not calibrate for 73 ohms? 2. Do this stuff in an anechoic chamber, not ho
+- The math does work when you use the right math and factor in the correct variables, like others have mentioned cat connect coax directly to a dipole without accounting for coax. also the space between
+- Hmm. Something funny with that math. Got your numerator and denominator mixed up? And what kind of units are they in?
+- Still out by a factor of Pi or so. 7 Mhz is 40 m band, so half wave would be 20 m long, not the 66 or 70 your formula says. Is that in feet?
+- So you could tune in that pirate station with the good dance tunes by pumping up the volume?
+- That’s not really true. Many of the current low power (and low cost) rigs that have become very popular lately will blow the output stage with an SWR as low as 2:1 depending upon the phase.
+- Reflected power is reflected power. It means what it says. A high return loss or low vswr is an indicator that that the power is going to either coupling to the ether or dissipated in the transmission
+=== Identify That Antenna By Sight | https://hackaday.com/2022/11/01/identify-that-antenna-by-sight/ | 75 comments
+- Isn’t an antenna just a device to match the impedance of the cable to the impedance of the air? 😉
+- I always thought it was just nonsense, some schematic symbols that didn’t mean anything. And that goes back 51 years, to when it was the American Radio Relay League, rather than now when “ARRL” seems 
+- In the old days, no cable to connect the transmitter to the anttenna. Later, there was open line feeder. Coax wasn’t a ham thing until after WWII.
+- ” no cable to connect the transmitter to the antenna” So, they were using waveguide prior to WWII? B^)
+- How about a dummy load? It’s isotropic, but it have *very* little gain.
+- You’re defending the guy who thinks it’s cute to pick on “baby engineers” with stuff that he doesn’t even understand himself?
+- “Antennas do not have power gain. They may have directional ‘gain’” Yep, I have a humorous example of that power gain misconception. While in the USAF, I was a microwave and satellite communications m
+- And where are all the wire antennas? End Fed Half Wave? Inverted L and V?
+- I only just discovered that while a discone can be an swr match over a very wide range, it only directs it’s power toward the horizon over one octave. Beyond that the pattern rises and breaks into lob
+- Great article! I’m in the phase of being a radio amateur where I can safely go into a hardware store and not have to keep asking myself “Could I make an antenna with this?”
+- I heard that on 10 meters once, the four yorkshiremen crappiest antenna sketch. “Wet string?! We were lucky to have string, we ‘ad to pick apart our own jumper and spit on it…”
+- No salt water nearby? :)
+- Thank you for this introduction. I’m still an amateur myself, but I would recommend “Handbook of Radio and Wireless Technology” by Stan Gibilisco. The later chapters have pretty good descriptions of a
+- I would guess that horizontal crossed dipoles would closely approximate a dome-shaped radiation pattern with gain over isotropic due to ground reflection.
+- This fascinates me. It would serve me well to actually do some reading on antennas (antennae?) since my two main hobbies are electronics and R/C vehicles. Instead, I resorted to purchasing a set of ea
+- What about these antennas that are just a cunningly shaped PCB trace? Maybe with a little tiny SMD cap(?) for matching… Or those tiny SMDs that ARE the antenna? I would definitely read an article on t
+=== Build a Phased-Array Radar in Your Garage that Sees Through Walls | https://hackaday.com/2015/04/07/build-a-phased-array-radar-in-your-garage-that-sees-through-walls/ | 63 comments
+- where do i need to live to be able to get 80/20 out of a junk yard?!
+- Aren’t there any legal obligations operation a radar device?
+- It’s “bigger THAN”, but don’t let that stop from writing “then” for the entire rest of your life, like most moronic AMERICANS. Cretin. How can you NOT know what the words “than” and “then” mean?
+- Since when is mistaken “then” for “than” purely an American thing? Go back to fucking kangaroos or swilling shitty tea, you ignorant fuckwit.
+- How well do cellphone frequencies do through a faraday shield?
+- Which is great….except that doesnt stop them from using it, finding someone worth bothering, figuring out when they’re doing something illegal, then setup a ‘random’ traffic stop. “Do you mind if I se
+- Tried to find it, but failed…is there any detail on WHAT the switches actually are???? Even the paper does not mention this crucial detail…
+- So the switches themselves are pretty damn fast, albeit quite lossy… Did you get yours through the university or on your own? (will have to look up if there are export restrictions, but might want to 
+- Given this, would it be possible to integrate the electronics with the antenna board? If so, I’m sure someone has thought of this. Would it be possible to design a phased array using individual antenn
+- This looks like a time-division multiplexed MIMO radar to me. Could be wrong. Interesting arrangement. Splitting the (I assume) transmitter antenna array as Gregory has done reduces the required separ
+- Your garage sees through walls? Do they even teach English anymore? Look up “misplace modifier.”
+- Or misplaced double quotes (i.e. period inside or outside)? Gotta love it when the grammar-(Godwin’s Law) folks use poor grammar to complain about grammar errors. Back on topic, I love this project an
+- Yeah, that isn’t one. If the garage were able to see through walls, you’d say “which sees through walls”, and even then it’d be tortured grammar. The sentence is perfectly clear, is English your first
+- Please can anyone tell me what would detect and esp shield from these super military grade advanced surviellance weapons? I am a victim of electronic terrorism. Thank you for any help on this.
+- This’ll be handy for scanning the sky for drones. Any ideas how to slave a servoed shotgun to the PPI?
+=== Open Source Radar Has Up To 20 KM Range | https://hackaday.com/2026/03/12/open-source-radar-has-up-to-20-km-range/ | 50 comments
+- Is that even legal in most of the world? Radio emissions are very controlled in most countries, I imagine that blasting the environment with microwaves is probably not going to go too well.
+- Where is there any mention of amateur radio in this or in any of the linked materials? No call sign mentioned either. Found via the linked Hackaday project, he’s an EE in Morocco, so he has no FCC iss
+- I don’t know much about ARRL/FCC and the situation in the US. But generally speaking: Actually, many “rules” used to be recommendations by nature, originally. Such as bandwidth of an SSB signal or the
+- New to this site ? Wait to post a reply to a nested comment (you can’t pas a certain level)
+- You use it as an audio telescope… 3.5kHz sound in air makes for 10cm in wavelength, 500Hz is 69cm. If that works even in the slightest, 2.4GHz will also work to some degree, as it works out to 12.5cm.
+- Is there any way to filter out articles like this one that are based on LLM slop? Hackaday writers can’t get enough of it, apparently.
+- thank you…actually I speak 4 languages (Arabic-French-English-Spanish)….Being a Moroccan citizen I am more comfortable using my native language (Arabic) and French…I obtained my degree in UK…My Englis
+- Actually, none of this directly violates regulations, at least in most of the higher microwave bands. This was what originally allowed EME work, for example. And one-way, telecommand, telecontrol allo
+- Do you have any videos showing it in action tracking real flying objects like planes OE drones? I’m an EE myself. With a project this difficult if there is a not a clear demonstration that it works, I
+=== How Much Bandwidth Does CW Really Occupy? | https://hackaday.com/2024/03/30/how-much-bandwidth-does-cw-really-occupy/ | 48 comments
+- Wasn’t ~800 c/s the “ideal” tone frequency, though? Because human hearing is most sensitive here. Or so I heard.
+- The answer actually is that CW uses nearly infinite bandwidth. It’s a square wave. The bandwidth 60db down isn’t that big though. Worst station at Field Day is always the CW station with it’s keying h
+- What would it look like with even longer rise-and-fall times? What shape and duration of the rise- and fall-time curves gives the narrowest bandwidth for a given words-per-minute?
+- Don’t all digital signals take infinite bandwidth in a pure mathematical sense? But practically because they are digital (quantized) signals, upon reception we can discount those errors introduced by 
+- How do we define “digital” here? As two states? On/off? If so, isn’t that more specifically binary, rather? “Digital” originates from Latin digitus, finger. So a digital signal is a fingered signal, m
+- Sometimes it’s more like just because the math says the universe works a certain way behind the scenes doesn’t mean it will actually appear that way when you observe it the normal way. There might be 
+- The trapezoidal envelopes used in the signal generator in the demonstration are unrealistic, unless you’re actually modulating your transmitter with a trapezoid wave, which nobody does. A more realist
+=== TinySA is a $49 Spectrum Analyzer | https://hackaday.com/2020/09/01/tinysa-is-a-49-spectrum-analyzer/ | 48 comments
+- Well it doesn’t work as a spectrum analyzer, so if that’s what you need you’d be out of luck. You could probably modify the firmware to get some functionality, but I would guess the frontend would not
+- Dreaming of one with bigger screen. Badly. Those 3” displays are ridiculously limited wrt resolution and hard to read for us poor old greybeards. Is it asking too much to bump the screen size to 7”? T
+- Don’t you mean kHz and MHz? Watch your prefix and unit.
+- How does it compare to the RTL-SDR?
+- “How does it compare to the RTL-SDR?” Significantly better bandwidth and a lower noise floor ~100dB for the frequency range spec. Works well below -30dB so consider using with attenuation or signals o
+- Hi, is there a similar device, but with a proper BAS output ? I’d like to have a very basic spectrum analyer, but with a real screen. LCDs are cute, but don’t offer a lot of comfort. I’d rather use an
+- Actually, the hacked NanoVNA-saver isn’t the only application and not being as actively updated as the new app tinySA. There is another application specific to the TinySA here, appropriately named tin
+- IMSAI Guy did an updated video teardown also. Really isn’t the same as the NanoVNA design at all. Here’s the teardown video link: https://www.youtube.com/watch?v=s-oADu3SdEw Here’s a neat video testin
+- Hi.. I’m having trouble exporting a usable CSV for Shure’s wireless workbench.. do you have any solutions or links that would explain how to go about this? Much thanks in advance!
+- I’m facing the same problem. Have you found a solution to import the data into the WWB?
+- An indispensable spec-an function is max/min-hold, but I’m not seeing it in the tinySA. Am I missing something? I searched here: https://tinysa.org/wiki/pmwiki.php?n=Main.MenuTree
+- There is some discussion on using another tinySA as a tracking generator here: https://groups.io/g/tinysa/topic/73309964 And an example of measuring a mixer with a tracking setup here: https://tinysa.
+- This thing is obviously a NanoVNA hardware, the labels are painted a bit differently and it’s running an entire new software. Is it possible to combine the two softwares into one on a single device?
+- I bought (something like?) this earlier this year… https://www.banggood.com/Geekcreit-Spectrum-Analyzer-USB-LTDZ-35-4400M-Signal-Source-with-Tracking-Source-Module-RF-Frequency-Domain-Analysis-Tool-Wi
+- Greetings, I could create a small osiloscope with this tiny analyzer and if I can, how could it be done?
+=== Simple Antenna Makes for Better ESP32-C3 WiFi | https://hackaday.com/2025/04/07/simple-antenna-makes-for-better-esp32-c3-wifi/ | 46 comments
+- Would replacing the onboard antenna with a pigtail work? I’d have some more freedom to attach different antennae then.
+- A good external antenna will actually be the best solution. My intention was to make the mod as simple and effective as possible . In contrary to the video I compared a modified board with the origina
+- From their website ….. ” It optimizes connectivity by modulating ambient light sources, achieving 100% signal coverage while minimizing noise and latency.” HUH? RF? Sorry If I missed something.
+- Is it legal though? In most countries, you don’t need to have a radio operator license to operate and buy these kind of modules because they’re pre-tested for EMI compliance, radio spectrum and transm
+- The answer you going to find for these kinds of videos is always “no, but who cares?”
+- 34 or 31 mm is all the same for the antenna radiating performance itself. The main thing is that you tweak the mismatch loss/VSWR interaction. (absolute gain vs realized gain). By making the antenna s
+- does xaio esp32 os use debian? AI Overview. No, the XIAO ESP32 (and other ESP32-based boards) do not use Debian as their operating system. They typically run a real-time operating system (RTOS) called
+- Why do you post ai replies to questions nobody asked?
+- I don’t know anything about antennas but shouldn’t you remove the old antenna, since it has quite high (dielectric) loss?
+- A got a bunch of these. You can get them barely working by reducing the power. I put them in the bin eventually. The Xaoi is a similar size and way better for the more expensive price, where ‘better’,
+=== NanoVNA is a $50 Vector Network Analyzer | https://hackaday.com/2019/08/11/nanovna-is-a-50-vector-network-analyzer/ | 45 comments
+- Geekcreit is a 30(?) – 3 GHz sweep osc, mixer, log detector & tracking osc. $35-$60 You’ll find these obscure links useful. No specs from BG, but hardware schem appears similar to ‘D6’ at github but I
+- Another review video: https://www.youtube.com/watch?v=mKi6s3WvBAM
+- I was intrigued by this but had no idea what it actually did in terms I could understand. https://en.wikipedia.org/wiki/Network_analyzer_(electrical) Covers it quite well. As far as I understand, it p
+- How do I get the manual for this?
+- I’m interested enough to buy, but I see discussion online of bad versions, manufacturers that don’t use rf shielding, don’t skip with a battery, or even don’t have a touch display. Are there known-goo
+- Well you get connectors and other accessories. Is it really official, or just more prominent/trudtworthy? With a lot of these cheap gadgets, it’s hard to tell if anyone came first. Or something starte
+- Dont worry guys be patient, you never know wats coming next on aliexpress…+10Ghz ? may be.
+=== The Poynting Vector Antenna | https://hackaday.com/2017/01/06/the-poynting-vector-antenna/ | 45 comments
+- I’m sorry Jenny but I have to ask, was this article proofread before it was posted? “Radio amateurs are inventive people, and though not all of them choose to follow it there is a healthy culture of b
+- Why thank you for your feedback, and have a Gold Star for spotting a typo. They happen, life moves on. Long sentences, economy of commas? Years working for the dictionary gave me a training in putting
+- How can you take issue with an alleged allegation when the alleged alleger never once used your moniker or screename? You appear to be very sensitive to what you assume is criticism. I agree with you 
+- Now where’s that high school Physics teacher who I had numerous arguments with over the Poynting vector not being just a mathematical convenience? ….
+- Laughable! Why even discuss different “radiator” shapes, for instance? A capacity hat is a capacity hat! Waves the size of a bus can’t know the difference. Making crossed fields in one local region, d
+- Here is a photo of the late Stefano Galastri (IK5IIR) holding an actual EH ANTENNA for HF Band: http://i2.wp.com/www.iw5edi.com/wp-content/ik5iirT.jpg?resize=233%2C382
+- Ostracus – Actually his website is in Georgia (USA) at http://www.eh-antenna.com/ I do not know why my link was in Russia. I also noticed that the an undo interest in this antenna in Russia. It should
+- Ostracus – I guess that would be Japan Dr. Deming’s case – huh?
+=== Automatic Antenna Tuner | https://hackaday.com/2014/01/06/automatic-antenna-tuner/ | 48 comments
+- Believe it or not, I actually got the idea from a commercial power supply I deinstalled from some equipment that made use of binder clips to hold devices to a heatsink. They actually work quite well. 
+- That’s not really a problem. Obviously k3ng has skills, but his focus is amateur radio and not microcontroller programming. Maybe his Arduino use will be like a gateway drug and suck him in to some ba
+- The hell? This isn’t a microcontroller hack, and it’s not a twittering toilet. It’s a friggin impedance matching system. Why on earth shouldn’t he use the simplest logic controller he can? I suppose h
+- are the relays on those relay boards wideband enough for this application? RF-rated relays aren’t usually very cheap…
+- I didn’t understand SWR and wave behavior until I saw this 1959 film from AT&T Bell Labs. Its old, but everything still applies. Watch it when you have half an hour. http://techchannel.att.com/play-vi
+- The capacitance and inductance is basically selected using trial and error to see what combination has the lowest swr (best impedance matching). Some tuners save that combination with the frequency so
+- The easiest way I could get my head around it was this: You can lengthen or shorten an antenna to get a good SWR match (best use of power on that freq). An antenna tuner adds or subtracts wire to the 
+- So. Is this something along the lines of a Tesla coil and resonant circuits? You are trying to find the tuned sweet spot for powerful energy transmission?
+- Being a novice regarding the subject of antennas, Could something like this be used to improve TV signal reception?
+- I used to agonize about minimal SWR. After playing with 6M beams and HF wire antennas a while, I realized the infamous 3.0 SWR means 75% of the signal gets out/through. On HF, I doubt anyone would not
+- Have you thought about coupling this with a phase detector? I’m trying to build something like this right now that responds to the output from a diode ring phase detector. Joseph
+- Have you considered implementing a strictly analog impedance detector? I enjoy the analog aspect of circuit design, partly because I don’t like coding. It would be more of an impedance comparator than
+=== Bringing A Yagi Antenna to 915MHz LoRa | https://hackaday.com/2025/12/31/bringing-a-yagi-antenna-to-915mhz-lora/ | 36 comments
+- I wonder if that simulated plot includes the big steel bolt and infinite plane of dielectric right in front of the director. Maybe that’s why they got such a horrible match in the built version?
+- Yea, I was looking at it and thought “did they build it backwards?”
+- Jon, do you realize that the antenna is radiating towards the white board?
+- No military radars nor public radars use ISM. FULL STOP. NONE. It’s a historic point, not necessarily reflecting modern use. The point is that an imperfect radio transmitter at one frequency will will
+- To wit: you can transmit at 4 Watts from a static base station and 1 Watts from a mobile station if your antenna gain doesn’t exceed 6 dBi, without special license, as far as I can tell by the FCC rul
+- Not true. You’d have to be using it INSIDE a ham radio band. Your ham license isnt a blanket authorization to broadcast at the 1.5kw level.
+- They dont have a clue as to what the terms mean Forward gain is one thing Feont to back is ENTIRELY different. As is front to side. These morons could have created just as much gain with a better swr 
+- “There’s just too much nonsense here” What do you expect? We are in the “license in a day” times. Most folks(hams) don’t even know how to build a simple dipole.
+- CBers, neither! They always forgot two important things! a) to use a coaxial stub in the middle (feedpoint) to connect to coaxial cable b) to use an 1:1 balun to connect the dipole to a coaxial cable 
+- PS: a, b and c are alternative options. They’re not meant to be combined, of course. Sorry for the poor wording. A simple coaxial stub is an alternative to using an balun. A stub also can handle lots 
+- Thanks for the clarifications Jon. Say, do you want to write for HaD? ;-)
+=== So. You Bought A VNA. Now What? | https://hackaday.com/2020/04/23/so-you-bought-a-vna-now-what/ | 33 comments
+- You think that’s bad? You should see the original German forum link: https://www.mikrocontroller.net/topic/248078?page=1 Good news, though: it’s all summarized, in multiple languages, with useful link
+- Do you mean EU1KY? https://kuchura.bitbucket.io/
+- Just to add to the confusion “Gabriel Tenma White” is a pseudonym as well. see https://groups.io/g/nanovna-users/message/12051?p= ,,,20,0,0,0::Created,,posterid%3A1988907,20,2,0,72621610
+- I feel your pain. Not specifically about the VNA stuff, but about having to make/build the package in order to make/build some other package in order to be able to install the thing that you actually 
+- The first VNA I saw (but was not allowed to touch) cost many times my annual salary at the time (1981). The first I actually really used ‘only’ cost about a year’s salary in 1997. The first I bought f
+- So you are familiar with instruments that display voltage vs time (oscilloscopes), and voltage vs frequency (spectrum analysers), but what about frequency vs time? They exist, were first called freque
+- If I am looking at the right trace the Bafong whip antenna is surprisingly close to right. Perhaps add a wee tad of inductance and I think you would be hard pressed to do better. On the other hand, I 
+=== Ferrites Versus Ethernet in the Ham Shack | https://hackaday.com/2024/09/17/ferrites-versus-ethernet-in-the-ham-shack/ | 33 comments
+- So what’s it mean that it’s only 25dB down at 12:38 when he has disconnected the wire to put some more turns on his ferrite core? Measuring RF stuff is much more involved then just juggling around wit
+- There’s nothing wrong with that, just with deliberately looking for things to complain about and ignoring the rest of the content as soon as they think they’ve found it.
+- Ethernet (the twisted pair kind, not the old co-ax kind) is terminated by baluns, to make it immune to common-mode interference. So a ferrite around the pairs should make no difference either way – th
+- Ethernet isn’t fully immune from common mode interference. Since the interference is common to both wires, it can sometimes be rejected by the receiver, but only if the interference is perfectly balan
+- “Everything the poster has said is wrong, only I know how to do [arbitrary technology] right. But I’m not going to give you any actual evidence for my claims, I just want an easy ego boost and don’t c
+- Actually, I know enough about how hard it is to accurately test this sort of thing that I know I don’t know how to do it properly either. You should maybe educate yourself similarly.
+- …and a nightmare to terminate. I have never needed STP for Ethernet, but I will acknowledge that there are environments (datacenters?) so noisy that it might be necessary.
+- Maybe go look at Steve G3TXQ, who got tons of his information from Jim, K9YC, on ferrite. They actually explain how to make a real vna test fixture. Jim has spent a dozen years plus going through most
+- Using iPerf to see if the beads affected the Ethernet? And finding that they might even “boost the file transfer speed slightly”? Ummm …. Unless the negotiated speed changes or it starts to get errors
+- Does where these are placed matter? (at router? Mid line? Near terminal?) I have a micro-controlled CNC where the endtops can trigger from EFI that was probably coming from my spindle. I solved the pr
+=== The Power Of Directional Antennas | https://hackaday.com/2019/07/03/the-power-of-directional-antennas/ | 32 comments
+- Since 1977? You dang short timer!!! Kidding, of course. Got my own ticket in 2008. If you’re a short timer, I’m nothing.
+- Wasn’t WLW an experiment at one point, allowed to broadcast at 500kW instead of the normal 50?
+- Grew up in Pittsburgh with “clear channel ” KDKA AM 1020 , ( 50,000 watts ) . .. but could listen to lots others at night! .. anyone remember AM Stereo ? ..
+- Which one of them?
+- BIGGER IS BETTER HUH? WELL I don’t know all that there is to know about radio or antennas, I’ve only been a RF Engineer specializing in Antennas since the 1970’s and a Ham since 1966 so my time on boa
+- mHz ????? Difference between m and M is enormous.
+- What happened to kilohertz?
+=== DIY Yagi Antenna Sends LoRa Signals Farther | https://hackaday.com/2025/02/20/diy-yagi-antenna-sends-lora-signals-farther/ | 31 comments
+- https://www.youtube.com/watch?v=exCYSfQod14
+- Good start. Now add a balun, then stick it on a VNA and learn the joy of a gamma match. Then fine tune the element lengths. Betcha there’s at least 3 dB sitting on the table.
+- Really difficult to get a gammaatch right at those frequencies because the dimensions are tiny and critical. Far easier to match it with a coax transformer
+- Tiny? looking at the one sitting on the bench next to me : This one is 27 mm long, 12 mm spacing, with 2 mm conductors. Coax transformer is great for production, once you get it dialed in, but it’s pr
+- And? No and. Just that 40 km is not very far at all. I’ve had farther than that with the bent wire on a Semtech module.
+- Does a $40k motorcycle you can buy “off the shelf” go faster than a bike you can build from spare parts and a $100 trip to a hardware store? What do you mean “No and”? Yes and. As in, “your comparison
+- These distances that are being stated “40 km” are imo amazing. How can a yagi operate at such distances? I have a purpose built yagi & its connected via my favourite wifi adapter. A TP LINK WN722 n, v
+- LoRa? Does that mean this is meshtastic capable? Thanks
+- actually was going to watch video but it is 32 min long and contains paid promotional material. So I’ll be annoying and ask- did he compare that antenna to… not that antenna? I was under impression LO
+- Is it CB radio signal or Ham radio ? Depends on use TV’s don’t need antenna’s anymore because signal(I think from 2008) is digital not analog .
+- The video image is wrong – you want to use a yagi vertically. I got about a dozen yagi antennas with a bunch of other gear a business was getting rid of. Works great for a helium hotspot. In my area a
+- Vertical? You don’t antenna do ya?
+=== LoRa Repeater Lasts 5 Years on PVC Pipe and D Cells | https://hackaday.com/2025/12/02/lora-repeater-lasts-5-years-on-pvc-pipe-and-d-cells/ | 64 comments
+- What failure mode do you predict? Moisture? Heat? Any engineering trick to ameliorate this in such an application?
+- Caused by…? Mine don’t seem to do that unless they run down very low and nobody takes them out for a long time. Ones experiencing constant use don’t seem to, but I could believe that if you stuffed th
+- there was a 5+ year period where basically all alkaline batteries leaked Funny I didn’t notice anything. When was this?
+- Like anything, it depends on exactly what subset of batteries you’re looking at. All alkaline batteries everywhere? Yeah, there’s no widespread leakage issue that affects every factory. Duracells manu
+- OK. Given the dogs breakfast of non-metric pipe and tube IDs available in the typical Home Despot, what’s the appropriate type/size/schedule of pipe available here? Because sure as heck, if you try to
+- “It’s not exactly a secret that CTS and ID are not the same units.” It is new to me? I always thought that units are things like mm, cm, sec or godforbid Inches. I’ve never heard of CTS, ID as in Inte
+- Is pipe or tube speced by ID or OD? It depends on the pipe/tube… No substitute for knowing what you’re doing. The nominal size thing is pipe that is speced by OD. Improved material and process means t
+- Buy the one that fits? Nah. For my luck there is something that is a little too big but is cheap. And the one that fits perfect is some sort of high pressure chemical resistant super material that pas
+- Has anybody tried to build something like the mechanism from the clock of the long now foundation with a big weight, a long way for it to drop, and some kind of escapement to power an electronic devic
+- We were actually very near to have acceleration be 10, because meters were about to be based on 1 second pendulum, but this was abandoned because it depends on local acceleration.
+- This is somewhat similar to what you’re asking, I’m sure you will find it interesting but no comments from me on the practicality. He has some newer videos on it too. https://youtu.be/BSxK5VagSb8?si=U
+- I don’t like plastic. It doesn’t belong into untouched nature, it feels wrong. And I don’t like LoRa, it’s proprietary. It’s the MS Windows of radio technology. Where are the open source/open hardware
+- Do you have a preferred alternative to LoRa?
+- Birds sit and shit on your solar panel. snow falls onto your solar panel, solar panel dies because you’ve bought the cheapest ones or solar panel dies because you’ve bought the wrong one, solar panel 
+=== Meshtastic: A Tale of Two Cities | https://hackaday.com/2025/10/09/meshtastic-a-tale-of-two-cities/ | 84 comments
+- For areas with high RF interference have you considered ground wave trasmitters? This technology is used with mining disaster comms. It works better in damp soil than dry. Learned about this when Ham 
+- The things you used, like client from the play store and web-based flasher, are made purely for your convenience. It was your choice to make it “practically not true”. You don’t need internet connecti
+- ok, why not installing meshtastic on church building?
+- How is your experience regarding powering the SenseCAP fully off solar and battery? On the roof of your house I guess it wouldn’t be hard to run up a power cable. But what if you want to place a node 
+- You dropped $200 on a meshtastic device? Do you feel it was worth the cost now?
+- Kinda buried a lede though: The issue of the ambient electronic smog killing our radio services is getting serious and getting worse by the day. Hamstringing and gutting the FCC is going in the wrong 
+- To parrot Orzel, even your explanation of demographic specific jargon contains demographic specific jargon…. What is Sheetz?
+- I actually intended that as demographic-specific jargon, as you say. Sheetz is a competing gas (petrol) station/convenience store/restaurant in central Pennsylvania and West Virginia. Sheetz-Wawa Riva
+- Where in NJ? There’s a lot of little gnarly pine trees and sand down there….
+- Any recommendations for a weather proof antenna including 5 m of coax cable? I don’t feel fine putting it at the highest point, though… (fear of lighting strike)
+- It’s best to keep any coax as short as possible, preferably mount the antenna right on top of the node. Other than the ipex to sma/n pigtail, I would use lmr-400 or better. I just mounted an antenna i
+- How is MeshCore adoption?
+=== All Handheld Antennas Are Not Born The Same | https://hackaday.com/2025/11/30/all-handheld-antennas-are-not-born-the-same/ | 15 comments
+- Colour me impressed, the dirt cheap £1.50 Nagoya clones I bought from TIDRadio have the coil, the cap and are actually tuned, I think perhaps I need to revisit my NanoVNA skills.
+- HT antennas are really hard to properly measure with a VNA. You need an antenna connector attached to something that will act as a ground plane. The gutted chassis of a broken HT will work for that. Y
+- Title needs editing. All handheld antennas are unique?
+=== What’s Wrong With This Antenna Tuner? | https://hackaday.com/2025/03/10/whats-wrong-with-this-antenna-tuner/ | 16 comments
+- Sure about that? Sure you found the right manual? This is yet another variant of the (in)famous and much-cloned N7DDC 7×7 tuner: It can tune far more than just 7 “channels”: Those toroid inductors and
+- You’re right, I was wrong. I was looking too hard at the manual, and not enough at the board. On the bright side, I note that the comments all note my mistake, but don’t bother to explain how this tun
+- Literally explained by Paul in the first reply to you and Paul even corrected a mistake. Maybe it’s you and not the hams?
+- Just wondering…. Has anybody made an antenna tuner with toroidal inductors and a stepper motor, just like in a variac? It should not be very difficult to print some bracket to put a carbon brush in a 
+=== Calibrating a VNA The Proper Way | https://hackaday.com/2021/05/08/calibrating-a-vna-the-proper-way/ | 16 comments
+- I don’t really see the benefit of DIY your own calibrators, when the BOM seems to be going over 50$, considering what the NanoVNA costs from china. The most interesting part is definately the 50 Ohm l
+- > Would have been interesting to compare his DIY efforts with the calibration standards that come with the high end VNAs that were used to make the measurements. That is *exactly* what those measureme
+- Do people actually use these things. Mine cost £35 k when I bought it new in the mid 90s and has been sitting in a pelican case in the back yard for at least 20 years along with its HP calibration set
+- Sure they do! I use VNA’s at the very least weekly along with my spectrum analyzer. I use them more than my oscilloscope! And as said the professional calibration standards cost a lot, so diying them 
+- Uhh… yeah? I use one every couple months, a coworker uses them weekly and another uses a third daily. You making a bad purchase doesn’t mean the tool is useless. Anybody doing RF, transmission lines o
+- I really like the approach and effort James has taken to get to better characterised MSO calibration standards in the first place, he’s certainly up the right path, however there are a few things that
+- Great comments! The web page doesn’t seem to show part numbers for the short or through parts. Does that mean they’re all the same, or is there something specific to look for? Thanks!
+- Just saw this posted a thanks for the info! I’m curious to see how well I can do a ripple test with the equipment I have. Many VNAs (including mine) now have the ability to accept full S1P characteriz
+- What I’m missing in this article and the creation of the calibration set is that you need to calibrate your VNA every time you start a new measurement. Sometimes it is even preferable to calibrate the
+=== Near Field EMI Probes: Any Good? | https://hackaday.com/2023/01/03/near-field-emi-probes-any-good/ | 17 comments
+- > The probes arrived as a kit with four problems Did you mean to say “problems”?
+- That is of course easy enough, but it’s still an un-calibrated relative measurement. It’s fine for finding the strongest emission points, but it does not help for absolute field strength. This would n
+- Those look pretty nice. Any chance you can generate the gerbers or somehow export to Kicad?
+- The difference between the good probes and the cheap ones is the common mode rejection. The best are made by Langer EMV. They are precise and calibrated. At the other end a coax with the center cable 
+=== Proper Routing Makes for Many Happy Return Paths | https://hackaday.com/2024/03/18/proper-routing-makes-for-many-happy-return-paths/ | 18 comments
+- No GND vias wherefore switching layers? Hmmmm…
+=== Cavity Filters, The Black Art You Have A Chance Of Pursuing | https://hackaday.com/2024/07/04/cavity-filters-the-black-art-you-have-a-chance-of-pursuing/ | 12 comments
+- Witchcraft indeed! VHF radios use racks of these when the antennas are in close proximity, tuning them can be quite a pain. Had to deal with one that was sensitive to vibration (walking past the rack 
+=== What Makes A Good Antenna? | https://hackaday.com/2021/01/24/what-makes-a-good-antenna/ | 13 comments
+- Does it beat a rusty nail? https://www.youtube.com/watch?v=uObC2VHCFKU
+- Brilliant video, It demystified the antenna stuff for me. I have always wondered how antennas works (via black magic?), and this video helped me a bit out of the dark, I am looking forward to a sequel
+=== Antenna Basics by Whiteboard | https://hackaday.com/2017/09/11/antenna-basics-by-whiteboard/ | 16 comments
+- I haven’t had opportunity to watch this video yet, but this one is pretty amazing too. I learned a lot from it: Everything you always wanted to know About Antennas (but were afraid to ask) || Frank Ru
+- Antenna companies sell monopole antennas, but when mounted to a ground plane they combine with their reflection to form a virtual dipole with altered propagation characteristics.
+=== Open-Source ExpressLRS Receiver Reaches for Range | https://hackaday.com/2026/08/22/open-source-expresslrs-receiver-reaches-for-range/ | 33 comments
+- 433 mhz gfsk @20 dBm gives 50 km range. Why to bother with any 2.4?
+- With 1-10W you can’t do an EME bounce, especially for a complex modulation. People are bouncing kW CW signals with huge antennas just to get a recognizable above-the-noise-floor reflection.
+- With such long ranges, how many communication channels of this (in terms of how many units talking to how many receivers), can operate in a given area? Is some sort of error correction or other method
+- If there are hundreds or thousands of drones in the air can you keep them apart with this technology?
+- If they are, then they are breaking the law in three ways: – illegal frequency – illegal transmit power (if they are actually at 868, max is 500mW) – illegal duty cycle usage So is Hackaday basically 
+- That’s very funny. Writing articles is not regulated by the law, and transmitting RF power actually is, across the globe. Comparing those 2 is basically pointless. Several people already commented tha
+- That’s gatekeeping nonsense, and while douyarou might not have picked the right analogy, his point is valid. FWIW, I do hold an extra class US ticket, so I’m qualified to comment. :) That said, it IS 
+- Aww, I thought my analogy was apt. Jouni said, “So is Hackaday basically publishing article which breaks laws on three points?” and my reply was to the both of them. In any case, thank you for seeing 
+- A catty, rather useless response to a post that was actually informative. You feel better now?
+- Thanks to Stan for the nice video and for the efforts to represent a reasonable amount of RF theory. One comment from me regarding this statement: “Everything in RF is 50-ohms”. Sorry, but this is not
+- What about feeder lines used with radio towers?
+=== Increasing Local GPS Accuracy for a Small Robot | https://hackaday.com/2026/06/25/increasing-local-gps-accuracy-for-a-small-robot/ | 32 comments
+- How about this? Set up a fixed GPS receiver on the property. Log GPS data over days or weeks, average all the data, and call the resulting, composite, value your “reference” location value. After that
+- Maybe an ultrasonic ranging system measuring the distance to a couple of reference points? Using sound, means that you don’t need picosecond accuracy.
+- Would you have a few minutes to sketch out how you would reproduce that system with what is available tody?
+- Topcon? I spent 3 years installing rtk positioning and blade control on bull dozers and the number of times the customer setup the base station tilted was frustrating.
+- Why wasn’t the base station auto levelling? I know some are and a field install is never going to be perfect.
+=== Writing a GPS Receiver from Scratch | https://hackaday.com/2025/03/18/writing-a-gps-receiver-from-scratch/ | 23 comments
+- Why stop with one?
+- What recent event are you referring to? TDS?
+- What does Total Dissolved Solids have to do with GPS?
+- What is “Omuusv”?
+- Based on the context, it’s probably “Russia” encrypted with some kind a of substitution cipher. Not ROT13 though (or should I say РОТ13?)
+- What about this project, does it used to “bypass sanctions”: https://github.com/gnss-sdr/gnss-sdr ?
+- I didn’t actually click through the link to the repo but if it uses the “coarse” gps signal (accurate to around 40ft in the X & Y radius) then no it’s not. There is no restriction on anything that ope
+- https://hackaday.com/?p=767470
+- So, what happens if a non American writes software with the same functionality? Are they subject to ITAR? Just like the plentiful 25Hz thermal cameras you can buy now from China, but not from the US…
+=== The Things Network Sets 702 km Distance Record For LoRaWAN | https://hackaday.com/2017/09/11/the-things-network-sets-702-km-distance-record-for-lorawan/ | 17 comments
+- But, but, the earth is flat! No?
+- Does anyone know the LoRa radio parameters that allowed this range: Spreading Factor, Coding Rate and Bandwidth? I’ve played with the radios but don’t know much about LoRaWAN itself. The code base the
+=== Making a 9GHz doppler radar | https://hackaday.com/2013/10/03/making-a-9ghz-doppler-radar/ | 29 comments
+- Any possibility of using this for weather radar? I’ve been drying to see Amateur Radio Weather Radar
+- I assume you need a license to use this?
+- Do you guys know if you need a license to operate an off the shelf radar like on boats?

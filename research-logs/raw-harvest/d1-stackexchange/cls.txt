@@ -1,0 +1,686 @@
+1|12|partial|12/beam-steering-grating-lobes#Level 2|squint/TTD covered; per-element-ADC wideband digital beamforming (fractional-delay FIR, sub-band FFT beamforming) not yet (beamforming-architectures planned)
+2|12|covered|12/array-factor-linear-arrays|array pattern ↔ Fourier transform/FIR analogy is a listed question
+3|12|partial|00/matrices-and-linear-algebra-for-networks|weight-vector maths only; no delay-and-sum vs frequency-domain vs analog/hybrid implementation comparison
+4|12|missing||adaptive null width vs beamwidth (MVDR/SMI) not discussed; adaptive-beamforming-doa page planned
+5|12|partial|00/matrices-and-linear-algebra-for-networks|MUSIC stated in one paragraph + verified eigenvalues; no practical DOA recipe (snapshots, source-count estimation, coherent sources)
+6|12|partial|00/matrices-and-linear-algebra-for-networks|MVDR/R^-1 a given; derivation of max-SNR (unconstrained) array gain not shown
+7|12|covered|00/matrices-and-linear-algebra-for-networks|signal/noise subspace meaning of covariance eigenvalues explained and verified
+8|11|partial|11/detection-theory-cfar|pieces exist (matched filter, CFAR, pulse compression) but no end-to-end radar processing chain diagram (range FFT → Doppler FFT → CFAR → angle)
+9|12|partial|12/beam-steering-grating-lobes|squint explains why a single wavelength fails for wideband; explicit rule for LFM manifold (use per-bin frequency / TTD) missing
+10|12|missing||multiplicative (product/MIMO-like) array processing not covered (low priority)
+11|11|missing||MIMO virtual array, angle FFT/Capon resolution — mimo-radar-virtual-arrays planned, not written
+12|12|missing||TDOA / GCC cross-correlation direction finding with N sensors not covered
+13|12|missing||DOA estimator bias/grid clustering not covered (planar-arrays page mentions coupling affects DF only)
+14|12|missing||robust adaptive beamforming (diagonal loading, steering-vector mismatch) not covered
+15|12|partial|00/matrices-and-linear-algebra-for-networks|MVDR vs fixed weights only implicit
+16|12|partial|00/matrices-and-linear-algebra-for-networks|no intuitive (non-matrix) explanation of adaptive nulling
+17|12|missing||differential/superdirective beamforming not covered (small-antenna page mentions superdirectivity only)
+18|12|missing||subarray / beamspace (beamforming on beamformed data) not covered
+19|11|covered|11/radar-range-equation|energy form + pulse-compression gain answer LFM SNR
+20|14|covered|14/iq-complex-baseband|complex (analytic) chirp representation; also 15/lora-phy-css-math
+21|11|partial|11/radar-range-equation#Worked examples|coffee-can example shows ADC samples the beat, not the sweep; dedicated FMCW page (planned) needed
+22|11|partial|11/pulsed-radar-and-pulse-compression|chirp instantaneous frequency defined, but the classic sin(2π(f0+kt)t) factor-of-2 error is not called out
+23|11|partial|06/mixers|mixer theory present; no dechirp (stretch) simulation recipe — fmcw-radar planned
+24|14|covered|14/multirate-dsp-decimation-cic|oversampling/decimation trade-offs; also 05/data-converters-adc-dac processing gain
+25|14|covered|14/multirate-dsp-decimation-cic|
+26|14|covered|14/multirate-dsp-decimation-cic|non-integer resampling and polyphase explained (scipy function names not compared)
+27|14|covered|14/multirate-dsp-decimation-cic|resample by 5/24 example
+28|14|covered|14/multirate-dsp-decimation-cic|
+29|10|partial|10/synchronization-carrier-timing|Gardner/M&M covered; polyphase-filterbank timing recovery not
+30|14|partial|10/analog-modulation-am-fm-pm-ssb|AFSK/APRS format described; no software demodulator recipe (software-demodulation planned)
+31|10|covered|10/synchronization-carrier-timing|Costas loop, loop gains
+32|10|covered|10/matched-filter-detection|matched filtering/averaging/processing gain; see also 14/fft-spectral-analysis-windows
+33|10|covered|10/synchronization-carrier-timing|timing recovery; FSK specifics in 10/digital-modulation-psk-qam-fsk
+34|10|covered|10/ofdm|
+35|10|covered|10/ber-ebn0-and-shannon|SNR/Es/N0/C/N0 conversions incl. 3 dB traps
+36|10|covered|10/pulse-shaping-isi|eye diagram + timing recovery (10/synchronization-carrier-timing)
+37|14|covered|14/iq-complex-baseband|
+38|10|covered|10/matched-filter-detection|
+39|10|covered|10/synchronization-carrier-timing|frequency-offset estimation, CRB, rocket Doppler
+40|10|covered|10/ofdm|Schmidl–Cox
+41|10|covered|10/pulse-shaping-isi|RRC split TX/RX
+42|10|covered|10/ber-ebn0-and-shannon|
+43|10|covered|10/matched-filter-detection|
+44|09|partial|09/multipath-fading-doppler|coherence time given; when iid-per-symbol holds vs needs interleaving only implicit (10/channel-coding-fec interleaving)
+45|10|covered|10/matched-filter-detection|non-white noise question
+46|10|partial|10/synchronization-carrier-timing|Costas and M-th power covered; ML/feedforward vs feedback trade-off only cited
+47|10|partial|10/synchronization-carrier-timing|FFT-based symbol-timing estimation not described
+48|00|covered|00/complex-numbers-and-phasors|atan2 question
+49|10|covered|10/synchronization-carrier-timing|with 07/phase-noise-and-jitter
+50|14|covered|14/multirate-dsp-decimation-cic|polyphase channeliser receives many channels at once
+51|12|partial|00/matrices-and-linear-algebra-for-networks|terminology (snapshots, steering vector, pseudo-spectrum) not glossed
+52|12|missing||compressed-sensing DOA (low priority)
+53|09|covered|09/multipath-fading-doppler|Clarke bathtub spectrum, LCR, AFD
+54|10|covered|10/matched-filter-detection|frequency offset vs correlator loss
+55|11|partial|11/detection-theory-cfar|range-Doppler maps + CFAR; MTI/clutter filtering of the matrix not yet (clutter-and-mti planned)
+56|11|partial|11/pulsed-radar-and-pulse-compression|ambiguity function referenced; dedicated page planned
+57|14|partial|14/digital-filters-fir-iir|needs NCO tracking/mix-down then filter (nco-ddc-duc planned)
+58|11|missing||CW Doppler radar basics (cw-and-doppler-radar planned); only HB100 range example in 11/radar-range-equation
+59|11|missing||vital-sign (micro-Doppler/phase) radar not covered
+60|14|missing||why FFT-bin zeroing is a bad filter (time-domain aliasing, ringing) not stated — misconception
+61|14|covered|14/fft-spectral-analysis-windows|zero-padding does not add resolution
+62|00|covered|00/complex-numbers-and-phasors|negative frequencies / conjugate symmetry of real signals
+63|14|covered|14/fft-spectral-analysis-windows|Goertzel mentioned
+64|14|partial|14/digital-filters-fir-iir|overlap-save/add named only
+65|14|covered|14/fft-spectral-analysis-windows|dBFS vs dBFS/Hz; 00/probability-random-processes-and-psd
+66|14|missing||asymmetric windows (niche)
+67|14|partial|14/fft-spectral-analysis-windows|window purpose explained; spectrum-modification alternative not discussed
+68|14|covered|14/fft-spectral-analysis-windows|coherent gain / ENBW correction
+69|10|covered|10/digital-modulation-psk-qam-fsk|BT = 0.3 question
+70|14|missing||unknown-signal identification workflow (baud, modulation, framing) — software-demodulation planned
+71|14|covered|14/iq-complex-baseband|DC spike
+72|10|covered|10/pulse-shaping-isi|RRC length question
+73|10|covered|10/matched-filter-detection|
+74|11|covered|11/detection-theory-cfar|unknown noise level → CFAR
+75|10|partial|10/matched-filter-detection|time-frequency matched filtering not discussed
+76|11|covered|11/pulsed-radar-and-pulse-compression|
+77|10|covered|10/ber-ebn0-and-shannon|
+78|14|covered|14/iq-complex-baseband|
+79|10|covered|10/analog-modulation-am-fm-pm-ssb|
+80|11|partial|11/pulsed-radar-and-pulse-compression|range–Doppler coupling for chirps; FMCW-specific treatment awaits fmcw-radar page
+81|10|covered|10/ofdm|with 09/multipath-fading-doppler coherence bandwidth
+82|11|partial|11/radar-range-equation|bistatic/passive radar eq. present; cross-ambiguity function width not
+83|10|covered|10/synchronization-carrier-timing|type-2 loop gains; 06/vco-and-pll-synthesizers
+84|10|covered|10/synchronization-carrier-timing|
+85|06|partial|06/vco-and-pll-synthesizers|loop-bandwidth theory; no bench method to measure PLL bandwidth (phase-noise hump, step response)
+86|06|covered|06/vco-and-pll-synthesizers|
+87|10|missing||residual-carrier PSK (mod index < 90°) carrier recovery not covered
+88|10|covered|10/synchronization-carrier-timing|
+89|11|partial|11/pulsed-radar-and-pulse-compression|ΔR = c/2B derived for pulses; FMCW beat-frequency derivation awaits fmcw-radar page
+90|11|missing||radar "video" terminology (detected/baseband signal) not glossed
+91|11|missing||fast-time/slow-time terminology absent
+92|11|covered|11/pulsed-radar-and-pulse-compression|
+93|12|partial|00/matrices-and-linear-algebra-for-networks|
+94|11|missing||FMCW IF generation (fmcw-radar planned)
+95|11|missing||Doppler-to-azimuth / DBS / SAR (sar-and-imaging planned)
+96|11|missing||3-D FFT (range-Doppler-angle) for MIMO FMCW (mimo-radar planned)
+97|11|missing||FMCW TX/RX timing, chirp idle/ADC start (fmcw-radar planned)
+98|11|partial|11/pulsed-radar-and-pulse-compression|
+99|11|partial|11/detection-theory-cfar|range-Doppler map mentioned for CFAR; how to form it awaits fmcw-radar
+100|00|covered|00/fourier-series-and-transform|time–bandwidth product; 11/pulsed-radar-and-pulse-compression
+101|07|partial|07/phase-noise-and-jitter|phase noise vs FMCW covered for monostatic (range correlation); bistatic case with independent LOs not
+102|14|covered|14/sampling-aliasing-bandpass-sampling|factor of 2 + anti-alias transition band
+103|14|covered|14/sampling-aliasing-bandpass-sampling|complex sampling shows fs of spectrum (2.4 MS/s → 2.4 MHz)
+104|14|covered|14/sampling-aliasing-bandpass-sampling|bandpass under-sampling
+105|14|partial|14/fft-spectral-analysis-windows|SNR from a spectrum; estimating SNR from a noisy time record (M2M4, split signal/noise bins) not given
+106|10|covered|10/ber-ebn0-and-shannon|SNR, Es/N0, C/N0 definitions
+107|00|covered|00/decibels-and-log-units|
+108|11|covered|11/detection-theory-cfar|threshold/Pfa; also 10/matched-filter-detection
+109|14|covered|14/iq-complex-baseband|IQ imbalance correction
+110|14|covered|14/iq-complex-baseband|Hilbert vs quadrature DDC; fs/4 trick in 14/multirate-dsp-decimation-cic
+111|12|missing||inter-channel delay/phase calibration between receivers (array-calibration planned)
+112|14|partial|14/iq-complex-baseband|SDR vs scope (tuner + IQ + decimation) implied; sdr-hardware-survey planned
+113|14|partial|05/data-converters-adc-dac|ADC architectures covered; SDR-specific (zero-IF RFIC vs direct-sampling) survey planned
+114|14|covered|14/multirate-dsp-decimation-cic|fs/4 trick, real→complex with one ADC
+115|14|partial|10/analog-modulation-am-fm-pm-ssb|theory present; software AM/FM/SSB demodulator recipes (software-demodulation planned)
+116|14|covered|14/iq-complex-baseband|
+117|14|covered|14/iq-complex-baseband|complex sample I+jQ
+118|10|partial|10/synchronization-carrier-timing|correlation peak/CRB; normalised cross-correlation coefficient and sub-sample interpolation not
+119|14|covered|14/multirate-dsp-decimation-cic|arbitrary-ratio resampling
+120|14|partial|14/fft-spectral-analysis-windows|spectral windows covered; windows as smoothing kernels not
+121|14|covered|14/fft-spectral-analysis-windows|
+122|15|partial|15/ism-band-plans-duty-cycle|band limits covered; why 433 is ubiquitous (ITU Region-1 ISM, cheap SAW-resonator OOK TX) not explained (19/spectrum-allocation planned)
+123|08|covered|08/dipoles-and-monopoles|cutting length; longer ≠ better
+124|09|covered|09/friis-free-space-path-loss|433 vs 915 range question; 15/other-ism-radios-fsk-2g4
+125|15|partial|15/ism-band-plans-duty-cycle|same as 433 ubiquity
+126|06|missing||superregenerative OOK receiver modules (XY-MK-5V): how they work, why poor selectivity, how to improve — receiver-architectures planned
+127|09|covered|09/link-budget-methodology|with 09/empirical-path-loss-models (urban)
+128|09|covered|09/link-budget-methodology|antenna height (09/fresnel-zones-los-radio-horizon), antennas (08)
+129|08|partial|08/pcb-and-chip-antennas|433 MHz PCB antenna viability covered; dual-band 315/433 not
+130|05|covered|05/analog-signal-conditioning|level shifting
+131|05|covered|05/analog-signal-conditioning|
+132|05|covered|05/data-converters-adc-dac|differential inputs + FDA drive (05/op-amps-real-limitations)
+133|14|covered|14/multirate-dsp-decimation-cic|wideband capture + channeliser
+134|05|covered|05/data-converters-adc-dac|input kickback/driver
+135|10|covered|10/analog-modulation-am-fm-pm-ssb|
+136|06|partial|07/shot-and-flicker-noise|zero-IF 1/f and DC issues covered; superhet vs direct-conversion trade-off page (receiver-architectures) not yet written
+137|10|partial|06/mixers|mixer as modulator implied; AM modulator circuits not
+138|06|partial|01/resonance-and-q|tuned circuit selectivity covered; superhet IF selectivity (receiver-architectures) not yet
+139|20|missing||beginner "build a simple radio" (crystal/regen/superhet kit) recipe — 20/sdr-receiver-build planned covers SDR only
+140|05|partial|05/diodes-schottky-pin-varactor|diode envelope detection covered; transistor (emitter-follower/infinite-impedance) detector not
+141|08|covered|08/antenna-fundamentals|antenna as 50 Ω ↔ 376.7 Ω transformer; 03/coax-and-cables why 50 Ω
+142|08|covered|08/pcb-and-chip-antennas|meandered IFA
+143|02|covered|02/radiation-from-currents-hertzian-dipole|with 08/antenna-fundamentals
+144|08|covered|08/loop-antennas|small-coil Rrad; 08/small-antenna-limits
+145|08|covered|08/pcb-and-chip-antennas|
+146|08|covered|08/gnss-antennas|ceramic patch, 08/small-antenna-limits
+147|08|missing||dielectric/metal lens antennas (and why lenses are rare below mm-wave) not covered
+148|12|partial|12/array-factor-linear-arrays|beamwidth ~ λ/D resolution; RF imaging camera (aperture size, scanning) not
+149|07|covered|07/sensitivity-and-mds|below-noise reception
+150|08|partial|08/antenna-fundamentals|gain/pattern trade covered; handset antenna pattern needs not
+151|08|covered|08/gnss-antennas|phase centre
+152|08|covered|08/antenna-fundamentals|
+153|11|missing||mechanically scanned mm-wave radar (rotating reflector) not covered
+154|13|missing||via fences around chip antennas (13/vias-stitching-fencing planned, not written)
+155|08|covered|08/yagi-uda-and-log-periodic|
+156|08|covered|08/pcb-and-chip-antennas|
+157|18|partial|08/pcb-and-chip-antennas|U.FL/IPEX mentioned; mating compatibility, cycles, losses — 18/connectors planned
+158|03|covered|03/reflections-vswr-return-loss-mismatch|reflected-power question; 06/power-amplifiers ruggedness
+159|08|covered|08/loop-antennas|ferrite-rod antennas
+160|08|covered|08/dipoles-and-monopoles|
+161|02|covered|02/boundary-conditions-reflection-refraction|radome effects
+162|08|covered|08/gnss-antennas|active antenna, bias over coax
+163|03|covered|03/coax-and-cables|75 vs 50 Ω, loss at 2.4 GHz
+164|02|covered|02/radiation-from-currents-hertzian-dipole|
+165|09|partial|09/atmospheric-rain-attenuation|building/indoor loss; glass (low-E coatings) and through-glass couplers not
+166|05|partial|05/oscillators|one-transistor FM "bug" transmitter not analysed
+167|08|covered|08/antenna-fundamentals|bandwidth
+168|08|covered|08/dipoles-and-monopoles|
+169|08|covered|08/pcb-and-chip-antennas|keep-out
+170|08|partial|08/dipoles-and-monopoles|DC-grounded antennas for static/lightning bleed not discussed (19/lab-safety planned)
+171|08|partial|02/inductance-capacitance-from-fields|NFC/RFID coupled-coil physics only; reader antenna/matching design missing
+172|08|covered|08/pcb-and-chip-antennas|
+173|17|partial|06/rf-switches-attenuators-limiters|attenuators covered; shield box/fading-simulator test setups not (17 pages planned)
+174|08|covered|08/antenna-fundamentals|"does 5 dBi amplify"
+175|08|missing||slot/aperture antennas in metal chassis not covered
+176|06|covered|06/power-amplifiers|load line
+177|03|covered|03/reflections-vswr-return-loss-mismatch|matched line length irrelevant
+178|09|covered|09/multipath-fading-doppler|diversity; MIMO in 00/matrices
+179|14|partial|14/iq-complex-baseband|coherent IQ receivers record phase; phase reference/coherence not
+180|08|covered|08/horn-reflector-aperture-antennas|with 08/yagi-uda-and-log-periodic
+181|08|partial|08/pcb-and-chip-antennas|detuning near metal covered; on-metal antenna types (patch/PIFA, ferrite sheets) not
+182|03|covered|03/impedance-matching-lumped-and-distributed|network Q and bandwidth
+183|01|covered|01/network-theorems-max-power-transfer|available power/noise matching
+184|12|covered|12/array-factor-linear-arrays|
+185|08|covered|08/pcb-and-chip-antennas|
+186|03|covered|03/impedance-matching-lumped-and-distributed|08/pcb-and-chip-antennas pi-match
+187|17|covered|17/nanovna-librevna-practical|low-cost VNA; return-loss-bridge + SA alternative not described
+188|06|covered|06/rf-switches-attenuators-limiters|attenuator values/power; 06/lna-design damage level
+189|02|partial|02/skin-effect-conductor-loss-roughness|skin depth attenuation; shielding effectiveness of enclosures (13/shielding planned)
+190|07|covered|07/dynamic-range-sfdr-blocking|overload at close range
+191|08|covered|08/dipoles-and-monopoles|thick/cage dipoles bandwidth
+192|17|partial|00/decibels-and-log-units|RBW/noise question; SA power measurement (channel power, detectors) — 17/spectrum-analyzers planned
+193|17|covered|17/nanovna-librevna-practical|tuning pi-match
+194|08|covered|08/dipoles-and-monopoles|folded dipole 300 Ω
+195|08|covered|08/dipoles-and-monopoles|current distribution
+196|12|partial|12/planar-arrays-element-pattern-coupling|grids covered; circular/octagonal aperture outline (sidelobes, scan symmetry) not
+197|02|covered|02/maxwells-equations|displacement current closes the loop; 08/dipoles-and-monopoles images
+198|08|covered|08/pcb-and-chip-antennas|
+199|12|covered|12/planar-arrays-element-pattern-coupling|coupling between two λ/2 elements
+200|08|covered|08/pcb-and-chip-antennas|module placement
+201|06|covered|06/baluns-and-rf-transformers|
+202|08|covered|08/antenna-matching-and-baluns|origin of common-mode current
+203|06|partial|06/baluns-and-rf-transformers|why a balun footprint is bridged/0 Ω in single-ended builds not discussed
+204|06|partial|06/mixers|LO isolation/balance covered; SA612 (Gilbert cell) LO feedthrough vs external balun not
+205|08|covered|08/antenna-matching-and-baluns|current vs voltage balun
+206|13|partial|06/baluns-and-rf-transformers|chip-balun use covered; layout review needs 13/rf-layout-rules (planned)
+207|08|covered|08/antenna-matching-and-baluns|
+208|08|covered|08/antenna-matching-and-baluns|
+209|06|partial|06/baluns-and-rf-transformers|phase/amplitude imbalance covered; which terminal is which (dot/polarity) not
+210|06|covered|06/baluns-and-rf-transformers|
+211|08|covered|08/antenna-matching-and-baluns|balun at the feed point
+212|15|partial|15/semtech-chip-family|PA_BOOST/RFO settings covered; walk-through of SX1276 reference matching + harmonic filter + RF switch not
+213|03|covered|03/coax-and-cables|coax field confinement; 08/antenna-matching-and-baluns
+214|03|covered|03/coax-and-cables|higher-order-mode cutoff limits coax frequency
+215|03|partial|03/coax-and-cables|coax loss covered; coax vs twisted pair comparison not
+216|03|covered|03/coax-and-cables|why 50 vs 75 Ω
+217|03|partial|06/rf-switches-attenuators-limiters|cabled Wi-Fi test needs attenuators; not framed
+218|03|covered|03/coax-and-cables|
+219|03|partial|03/coax-and-cables|air-dielectric line construction (beads/spacers) not
+220|03|covered|03/time-domain-reflectometry|small discontinuities (L/C) sizing
+221|03|covered|03/input-impedance-stubs-quarter-wave|quarter-wave transformer bandwidth (odd multiples narrower)
+222|04|covered|04/crystals-and-resonators|XO/TCXO/MEMS; 05/oscillators
+223|04|missing||why 32.768 kHz (2^15, tuning-fork crystal, RTC) not covered
+224|04|partial|04/crystals-and-resonators|load caps/stray covered; crystal PCB layout (ground under, guard, trace length) not
+225|04|covered|04/crystals-and-resonators|BVD model
+226|04|covered|04/crystals-and-resonators|TCXO/OCXO, calibration
+227|06|covered|06/vco-and-pll-synthesizers|PLL multiplies crystal
+228|04|covered|04/crystals-and-resonators|
+229|04|covered|04/pcb-parasitics-traces-vias-pads|ground via at pad; rework not discussed
+230|04|covered|04/capacitors-at-rf-mlcc|DC-block value by band
+231|02|covered|02/radiation-from-currents-hertzian-dipole|
+232|02|covered|02/radiation-from-currents-hertzian-dipole|Rrad of short dipole; 08/small-antenna-limits
+233|08|partial|02/wave-equation-plane-waves-polarization|attenuation in fresh water covered; antenna immersed in water (detuning, insulated dipole) not
+234|08|covered|08/dipoles-and-monopoles|top hats / loading
+235|08|covered|08/dipoles-and-monopoles|
+236|13|missing||Y-capacitors / SMPS common-mode filtering (13/emc-emi-fundamentals planned)
+237|13|partial|02/radiation-from-currents-hertzian-dipole|CM vs DM radiation physics; near-field-probe hunting procedure missing (13/17 planned)
+238|05|partial|05/op-amps-real-limitations|RF rectification at op-amp input (LoRa TX) covered; source-finding for periodic artifacts not
+239|13|missing||ground ring / PCB perimeter ground (13 planned)
+240|02|covered|02/waveguides-and-cavity-resonators|holes as waveguide-below-cutoff
+241|13|partial|00/fourier-series-and-transform|edge rate ↔ harmonics/EMI covered; series termination for EMI in 13 (planned)
+242|13|missing||twisting signal with ground (loop area, CM) not covered
+243|13|missing||digital-interface choice for EMI (low priority)
+244|13|missing||edge plating / plated board perimeter (13 planned)
+245|04|partial|04/pcb-parasitics-traces-vias-pads|return current under trace, plane gaps covered; routing rules page (13) planned
+246|13|missing||ground fill/pour yes-no (13/grounding-and-return-paths planned)
+247|02|covered|02/radiation-from-currents-hertzian-dipole|
+248|13|partial|02/radiation-from-currents-hertzian-dipole|cables radiate CM; USB RE-fix procedure missing
+249|04|covered|04/pcb-parasitics-traces-vias-pads|trace crossing plane gap
+250|04|covered|04/ferrites-and-beads|cable ferrites, CM chokes
+251|13|missing||via stitching along board edge (13/vias-stitching-fencing planned)
+252|04|partial|04/ferrites-and-beads|how cable ferrites work; why consumer designs dropped them not
+253|04|covered|04/ferrites-and-beads|bead placement/when it hurts
+254|02|missing||iron-powder vs ferrite cores, identifying unknown cores (no iron-powder coverage)
+255|04|partial|04/inductors-at-rf|saturation mentioned; gapped cores for power inductors not
+256|17|partial|17/nanovna-librevna-practical|measuring beads/inductors with a VNA; toroid μ/AL extraction not
+257|01|covered|01/lumped-elements-impedance-admittance|
+258|13|partial|04/pcb-parasitics-traces-vias-pads|parallel-via inductance covered; stitching/fencing rationale (13) planned
+259|06|covered|06/rf-filters-lc-saw-baw-cavity-microstrip|
+260|06|covered|06/power-amplifiers|harmonic suppression; 06/rf-filters
+261|01|covered|01/passive-filter-design-prototypes|real-part parasitics; 04 pages
+262|16|partial|04/component-models-s2p-spice|LTspice use of vendor models; spice-circuit-simulation page (16) planned
+263|01|covered|01/energy-storage-and-reactive-power|voltage/current ratings in high-power filters; 01/passive-filter-design-prototypes
+264|03|partial|03/impedance-matching-lumped-and-distributed|L/Pi networks; capacitive-divider (all-C) matching not explicit (tapped-C in 01/transformers-coupled-inductors)
+265|04|covered|04/capacitors-at-rf-mlcc|
+266|06|partial|06/rf-filters-lc-saw-baw-cavity-microstrip|coupling k and Qext covered; the 0.707 loaded-Q result not derived
+267|04|partial|04/resistors-at-rf|terminations covered; AC (series-C) termination not explicit
+268|06|partial|06/lna-design|misconception that an RC after the LNA reduces noise not addressed
+269|08|covered|08/gnss-antennas|
+270|10|covered|10/analog-modulation-am-fm-pm-ssb|
+271|05|partial|05/diodes-schottky-pin-varactor|varactor tuning covered; transistor junction-capacitance FM modulation of hobby bugs not
+272|05|covered|05/oscillators|VCO; 06/vco-and-pll-synthesizers
+273|06|partial|10/analog-modulation-am-fm-pm-ssb|FM theory; discrete FM receiver (superregen/TDA7000-style) architecture not (receiver-architectures planned)
+274|08|missing||GNSS receiver operation: TTFF, almanac/ephemeris, A-GNSS, hot/warm/cold start — nowhere in KB
+275|08|missing||GNSS receiver channels/correlators — missing
+276|08|missing||GNSS system clocks/ephemeris upload — missing
+277|08|missing||1 PPS output, timing receivers — missing
+278|08|missing||GNSS navigation update rate (10–25 Hz), dynamics/filters — missing (relevant to rockets)
+279|02|partial|02/skin-effect-conductor-loss-roughness|skin-depth attenuation of thin foil implied; seams/gaps dominating real foil shielding not
+280|10|covered|10/spread-spectrum-dsss-fhss-css|GPS C/A CDMA
+281|08|covered|08/gnss-antennas|active antenna chain; 07/receiver-cascade-analysis GNSS chain
+282|04|partial|04/crystals-and-resonators|GPSDO mentioned as calibration reference only; 10 MHz vs 1 PPS vs GPSDO explanation missing
+283|13|missing||copper pour between multiple RF sections (13 planned)
+284|13|missing||split analog/digital ground planes (13/mixed-signal-layout planned)
+285|13|missing||power-plane vs ground fill (13 planned)
+286|04|covered|04/pcb-parasitics-traces-vias-pads|via at pad, loop inductance
+287|13|missing||ground fill (13 planned)
+288|19|missing||ESD wrist strap 1 MΩ (19/lab-safety planned)
+289|13|missing||ground plane under crystal/oscillator (13/04 not covered)
+290|02|covered|02/quasi-static-vs-full-wave|λ/10 rule origin (misconception "λ/2" addressed)
+291|01|partial|01/network-theorems-max-power-transfer|Thevenin source; real generator output stages (50 Ω back-termination, ALC) not
+292|03|covered|03/planar-lines-microstrip-stripline-cpwg|with 02/quasi-static-vs-full-wave
+293|04|covered|04/pcb-parasitics-traces-vias-pads|pad capacitance, cutting ground under wide pads
+294|03|covered|03/input-impedance-stubs-quarter-wave|degrees → mm
+295|17|partial|03/s-parameters|S22/Γ; measuring an amplifier/generator output impedance (hot S22, load-pull) not
+296|02|covered|02/skin-effect-conductor-loss-roughness|
+297|03|covered|03/planar-lines-microstrip-stripline-cpwg|differential pairs
+298|02|covered|02/quasi-static-vs-full-wave|
+299|03|covered|03/reflections-vswr-return-loss-mismatch|
+300|01|covered|01/network-theorems-max-power-transfer|"is a matched system only 50 % efficient"
+301|13|missing||soldering coax (RG316) directly to a PCB launch — 13/connectors-and-launches planned
+302|01|covered|01/transient-and-step-response|ringing on edges; 03/reflections-vswr-return-loss-mismatch
+303|03|covered|03/signal-flow-graphs-mason|source mismatch; series source termination for digital not framed
+304|03|covered|03/planar-lines-microstrip-stripline-cpwg|
+305|03|covered|03/telegrapher-equations-characteristic-impedance|
+306|03|covered|03/reflections-vswr-return-loss-mismatch|50/75 Ω Γ
+307|17|partial|03/reflections-vswr-return-loss-mismatch|feed-through 50 Ω terminator at scope (17/oscilloscopes-and-probing planned)
+308|03|covered|03/reflections-vswr-return-loss-mismatch|
+309|03|covered|03/coax-and-cables|why 50 Ω
+310|03|covered|03/planar-lines-microstrip-stripline-cpwg|CPWG
+311|03|covered|03/reflections-vswr-return-loss-mismatch|
+312|03|partial|03/impedance-matching-lumped-and-distributed|how a matching network's internal multiple reflections cancel (energy-conservation view) not explained
+313|03|covered|03/broadband-matching-bode-fano|
+314|03|covered|03/smith-chart|
+315|03|covered|03/impedance-matching-lumped-and-distributed|
+316|06|covered|06/lna-design|SAW before/after LNA
+317|16|partial|07/noise-figure-and-friis|NF theory; LTspice .noise → NF procedure (16/spice planned)
+318|03|covered|03/s-parameters|Touchstone
+319|03|covered|03/signal-flow-graphs-mason|Γin depends on ΓL via S12
+320|06|covered|06/lna-design|
+321|14|covered|14/fft-spectral-analysis-windows|SDR NF with FFT; 50 Ω load reference
+322|05|covered|05/feedback-and-stability|
+323|15|covered|15/lora-phy-css-math|
+324|06|partial|06/rf-switches-attenuators-limiters|switch power handling; hot-switching/ESD/over-drive failure causes not
+325|15|partial|15/lora-impairments-doppler-drift-timing|LoRa interference/capture covered; LoRa vs narrowband (SigFox) coexistence not
+326|15|covered|15/lora-phy-css-math|
+327|15|partial|15/lorawan-vs-raw-lora|multi-SF gateway demodulators (SX1301/2) not explained
+328|10|covered|10/ber-ebn0-and-shannon|LoRa vs Shannon
+329|15|covered|15/lora-impairments-doppler-drift-timing|SF orthogonality
+330|15|partial|15/semtech-chip-family|minimal schematic/BOM for bare SX127x/SX126x not given (20 recipe planned)
+331|15|covered|15/lorawan-vs-raw-lora|
+332|15|covered|15/lora-phy-css-math|
+333|08|covered|08/antenna-fundamentals|resonant size ∝ λ
+334|08|partial|08/dipoles-and-monopoles|diameter effect covered; conductor material effect on length (none) vs loss not stated
+335|15|covered|15/lora-phy-css-math|chip rate = BW
+336|15|partial|15/lorawan-vs-raw-lora|Meshtastic/Reticulum; custom star topology/TDMA design not
+337|15|covered|15/lora-phy-css-math|implicit header
+338|15|covered|15/lora-modules-ebyte-rfm-heltec|current draw
+339|10|covered|10/modulation-choice-guide|
+340|08|partial|08/pcb-and-chip-antennas|footprint option (0 Ω/cap select between PCB antenna and SMA) not described
+341|04|covered|04/pcb-parasitics-traces-vias-pads|pads on microstrip
+342|03|covered|03/planar-lines-microstrip-stripline-cpwg|calculator disagreements, soldermask
+343|03|missing||"negative inductance" in de-embedded/extracted models not explained
+344|03|partial|03/planar-lines-microstrip-stripline-cpwg|diff-pair Z covered; USB series-resistor/termination not
+345|03|covered|03/planar-lines-microstrip-stripline-cpwg|controlled impedance on JLC stackups
+346|03|covered|03/planar-lines-microstrip-stripline-cpwg|
+347|04|partial|04/pcb-parasitics-traces-vias-pads|return path; microstrip referenced to a power plane (decoupling as return) not
+348|04|partial|04/pcb-parasitics-traces-vias-pads|via L/C given; via propagation delay not
+349|13|missing||ground stitching practice (13/vias-stitching-fencing planned)
+350|03|covered|03/planar-lines-microstrip-stripline-cpwg|JLC calculator/stackup
+351|03|covered|03/planar-lines-microstrip-stripline-cpwg|soldermask effect
+352|04|partial|04/pcb-parasitics-traces-vias-pads|power-plane reference for diff pairs not
+353|06|covered|06/mixers|LO drive/switching mixer
+354|14|covered|14/iq-complex-baseband|quadrature mixing
+355|14|covered|14/iq-complex-baseband|with 06/mixers
+356|06|partial|06/mixers|heterodyne mixer theory; low-frequency (ultrasonic) discrete mixer schematics not
+357|11|partial|11/radar-range-equation|24 GHz module examples; IF amplifier design for Doppler modules (HB100 IF) not (cw-and-doppler-radar planned)
+358|10|covered|10/analog-modulation-am-fm-pm-ssb|
+359|10|covered|10/analog-modulation-am-fm-pm-ssb|overmodulation mentioned
+360|10|covered|10/ber-ebn0-and-shannon|bandwidth (not carrier) sets capacity
+361|10|missing||FM stereo multiplex (pilot, DSB-SC 38 kHz) not covered
+362|10|partial|10/analog-modulation-am-fm-pm-ssb|AM technical merits; broadcast/regulatory reasons not
+363|04|covered|04/inductors-at-rf|air-coil design
+364|19|missing||band-plan lookup / signal ID (airband 118–137 MHz) — 19/spectrum-allocation planned
+365|10|covered|10/digital-modulation-psk-qam-fsk|
+366|17|covered|17/spectrum-analyzers|detectors, RBW/VBW
+367|00|covered|00/probability-random-processes-and-psd|nV/√Hz
+368|05|covered|05/analog-signal-conditioning|CMRR
+369|05|partial|05/low-noise-analog-design|summing-amp noise gain mistake not specifically
+370|13|partial|02/skin-effect-conductor-loss-roughness|shield skin depth vs frequency; shield grounding at audio (13/shielding planned)
+371|13|missing||analog PCB layout (13/mixed-signal-layout planned)
+372|05|covered|05/op-amps-real-limitations|zero-drift; chopper vs auto-zero distinction brief
+373|05|covered|05/power-supplies-for-rf-and-analog|supply ripple → spurs
+374|17|partial|02/maxwells-equations|probe-loop pickup explained; scope probing page (17) planned
+375|05|covered|05/power-supplies-for-rf-and-analog|
+376|09|covered|09/multipath-fading-doppler|with 10/pulse-shaping-isi equalisers, 10/ofdm
+377|13|partial|02/near-field-far-field|magnetic near-field shielding hard; cable shield construction/grounding (13/shielding planned)
+378|07|covered|07/thermal-noise-and-noise-temperature|antenna noise temperature
+379|07|covered|07/noise-figure-and-friis|
+380|06|partial|06/rf-filters-lc-saw-baw-cavity-microstrip|filter choice; antenna/filter against out-of-band blockers not framed
+381|13|missing||ground fill only in RF section (13 planned)
+382|08|partial|08/antenna-matching-and-baluns|CM chokes; grounding coax shield at entry (13/19) not
+383|05|partial|05/op-amps-real-limitations|noise/bias-current trade-offs; resistor-value selection guide not explicit
+384|05|covered|05/feedback-and-stability|noise gain
+385|05|covered|05/feedback-and-stability|
+386|05|covered|05/feedback-and-stability|decompensated op-amps
+387|05|partial|05/feedback-and-stability|noise gain < 1 attenuator stability trap not explicit
+388|05|partial|05/op-amps-real-limitations|AC-coupled non-inverting (bias path) not explicit
+389|05|partial|05/feedback-and-stability|MOSFET-in-loop (current sink) compensation not specific
+390|05|covered|05/feedback-and-stability|
+391|05|partial|05/oscillators|RC oscillator temperature drift not quantified
+392|04|covered|04/crystals-and-resonators|ppm
+393|04|partial|04/crystals-and-resonators|RC internal oscillator accuracy vs crystal not discussed
+394|02|covered|02/quasi-static-vs-full-wave|
+395|13|missing||general RF PCB techniques (13/rf-layout-rules planned)
+396|03|covered|03/planar-lines-microstrip-stripline-cpwg|2-layer 2.4 GHz CPWG
+397|03|missing||trace bends (mitred vs curved) not covered
+398|04|partial|04/pcb-parasitics-traces-vias-pads|via L/C; designing a matched via transition (anti-pads, return vias) not
+399|08|covered|08/pcb-and-chip-antennas|
+400|03|missing||radial (butterfly) stubs for bias decoupling not covered
+401|13|partial|02/dielectrics-permittivity-loss-tangent|resin content/glass weave effect on Dk; core vs prepreg interchangeability (13/stackups-and-materials planned)
+402|03|covered|03/planar-lines-microstrip-stripline-cpwg|CPWG vs microstrip
+403|13|missing||RF layout critique checklist (13/rf-pcb-review-checklist planned)
+404|13|missing||edge-launch connector footprints (13/connectors-and-launches planned)
+405|06|partial|06/baluns-and-rf-transformers|balun placement near IC vs routing differential lines not explicit
+406|06|partial|06/rf-switches-attenuators-limiters|switch specs; 0 Ω-jumper vs switch trade (loss, stub) not
+407|07|partial|07/phase-noise-and-jitter|additive/residual phase noise of amplifiers (op-amp/buffer) not covered
+408|07|partial|07/phase-noise-and-jitter|why averaging a spectrum doesn't remove phase noise (vs cross-correlation measurement) — 17/phase-noise-measurement planned
+409|05|covered|05/oscillators|Leeson: resonator Q sets phase noise
+410|06|partial|06/vco-and-pll-synthesizers|loop filter design for PLL; DLL not covered
+411|07|covered|07/shot-and-flicker-noise|flicker corner vs floor
+412|07|covered|07/phase-noise-and-jitter|L(f) definition vs Sφ
+413|07|covered|07/phase-noise-and-jitter|L(f)=½Sφ; rad/√Hz conversion derivable
+414|07|partial|07/phase-noise-and-jitter|jitter integration over piecewise curve; explicit log-log interpolation rule not
+415|06|missing||PLL vs DLL comparison not covered
+416|06|covered|06/vco-and-pll-synthesizers|phase-frequency detector
+417|01|partial|01/transient-and-step-response|bandwidth-limited edges; probe/scope bandwidth side (17/oscilloscopes planned)
+418|06|partial|06/vco-and-pll-synthesizers|mmWave synthesis (multipliers, 20logN) partly in 07/phase-noise-and-jitter; mm-wave radio overview missing
+419|06|covered|06/vco-and-pll-synthesizers|
+420|06|covered|06/vco-and-pll-synthesizers|loop order/type; 10/synchronization-carrier-timing
+421|06|covered|06/vco-and-pll-synthesizers|
+422|06|covered|06/vco-and-pll-synthesizers|fractional-N / Si5351 alternative
+423|06|missing||dual-modulus (N/N+1) prescalers not explained
+424|06|covered|06/power-amplifiers|class B/AB
+425|06|covered|06/power-amplifiers|with 07/nonlinearity-p1db-ip3-intermod
+426|11|missing||automotive radar mutual interference (FMCW-to-FMCW) not covered
+427|11|partial|11/pulsed-radar-and-pulse-compression|pulse timing/range; historical A-scope display not
+428|11|missing||lidar crosstalk (optical; out of core scope)
+429|11|missing||ultrasonic vs RF ranging trade-off (low priority)
+430|11|covered|11/pulsed-radar-and-pulse-compression|pulse compression overcomes peak-power limits
+431|11|partial|11/radar-range-equation|module examples; adding horn/lens to a patch radar module (08/horn-reflector-aperture-antennas) not tied together
+432|11|partial|05/diodes-schottky-pin-varactor|diode detector theory; wideband radar-detector receivers not
+433|11|partial|11/cw-and-doppler-radar|CW Doppler theory (HB100); RCWL-0516 self-oscillating mixer module not analysed
+434|05|partial|05/oscillators|output waveform of VCOs (sine vs square) not discussed
+435|11|partial|11/pulsed-radar-and-pulse-compression|pulse vs chirp trade (range sidelobes, blind range) — ultrasound case not
+436|11|partial|11/radar-range-equation|FMCW basics await fmcw-radar page; lidar not covered
+437|11|covered|11/cw-and-doppler-radar|2v/λ, Hz per km/h
+438|15|covered|15/other-ism-radios-fsk-2g4|
+439|06|missing||detecting receivers via LO leakage (why a TX can't count receivers) not covered
+440|13|missing||IR-remote/LED-driver harmonics interfering with AM (EMI) not covered
+441|06|partial|06/mixers|IF choice (10.7 MHz) and image; 455 kHz history/selectivity (receiver-architectures planned)
+442|10|covered|10/analog-modulation-am-fm-pm-ssb|capture effect
+443|09|partial|09/friis-free-space-path-loss|power density math present; RF energy-harvesting feasibility not
+444|00|covered|00/decibels-and-log-units|
+445|06|partial|15/semtech-chip-family|RX current figures exist; why receivers burn power (LNA/LO/ADC) not explained
+446|02|covered|02/wave-equation-plane-waves-polarization|
+447|10|covered|10/spread-spectrum-dsss-fhss-css|jamming margin
+448|06|missing||passive-only transmitters (spark gap/crystal set) — low priority
+449|02|covered|02/near-field-far-field|in phase in far field, quadrature in reactive near field
+450|09|missing||wireless power transfer limits (inductive vs radiative, rectenna efficiency, exposure) not covered
+451|06|partial|06/mixers|why superhet IF (selectivity, gain at fixed f) — receiver-architectures planned
+452|15|covered|15/other-ism-radios-fsk-2g4|
+453|01|covered|01/transformers-coupled-inductors|tapped inductor as impedance transformer
+454|03|covered|03/planar-lines-microstrip-stripline-cpwg|CPWG design (gap, via spacing); specific fault analysis not
+455|20|partial|00/math-roadmap-for-rf|learning path exists; "minimum kit + first RF circuit" beginner recipe missing (20 planned)
+456|07|partial|07/dynamic-range-sfdr-blocking|selectivity/linearity; superposition-of-waves explanation not explicit
+457|19|missing||FCC/CE pre-compliance testing and failure fixes (19/certification planned)
+458|03|covered|03/planar-lines-microstrip-stripline-cpwg|soldermask effect on Z0/loss
+459|02|covered|02/poynting-vector-power-flow|energy flows in fields
+460|05|covered|05/diodes-schottky-pin-varactor|envelope detection; crystal radio context not
+461|17|missing||RF "cameras"/near-field scanners and SDR heat-maps not covered
+462|09|covered|09/atmospheric-rain-attenuation|building/vegetation loss vs frequency; misconception addressed in 09/friis-free-space-path-loss
+463|10|covered|10/digital-modulation-psk-qam-fsk|OOK in cheap remotes
+464|03|partial|03/coax-and-cables|size vs loss/power covered; why RF parts stay large (Q, power, connectors) not
+465|02|partial|02/skin-effect-conductor-loss-roughness|skin depth; Faraday-cage apertures/seams (13/shielding planned)
+466|05|partial|05/op-amps-real-limitations|RF rectification in amplifiers; GSM TDMA 217 Hz buzz specifically not
+467|06|partial|06/mixers|diplexer only mentioned; diplexer design missing
+468|03|covered|03/coax-and-cables|semi-rigid, phase-stable
+469|02|covered|02/waveguides-and-cavity-resonators|cavity Q limits
+470|08|covered|08/antenna-matching-and-baluns|CM chokes on coax
+471|09|missing||RF energy harvesting (rectenna efficiency vs input power) not covered
+472|10|covered|10/analog-modulation-am-fm-pm-ssb|
+473|06|partial|06/rf-filters-lc-saw-baw-cavity-microstrip|SAW/BAW tech; multi-band handset front-end architecture not
+474|06|covered|06/lna-design|with 06/power-amplifiers
+475|16|partial|08/antenna-simulation-nec-openems|NEC/openEMS covered; circuit/HB/EM free tool landscape (16) planned
+476|17|partial|17/spectrum-analyzers|SA measurement; quick "is it transmitting" checks (SDR, field-strength meter, current draw) not
+477|13|missing||ground pours on RF top layer (13 planned)
+478|17|covered|17/vna-fundamentals-calibration|cal-kit standard definitions
+479|17|covered|17/vna-fundamentals-calibration|VNA architecture/directivity
+480|03|covered|03/s-parameters|
+481|03|covered|03/smith-chart|
+482|09|covered|09/atmospheric-rain-attenuation|
+483|15|covered|15/other-ism-radios-fsk-2g4|
+484|06|covered|06/mixers|image; sampling-as-mixing noise folding
+485|01|covered|01/resonance-and-q|component Q; 04/inductors-at-rf
+486|05|covered|05/oscillators|start-up conditions
+487|05|covered|05/oscillators|Clapp/Colpitts caps
+488|05|covered|05/oscillators|
+489|16|partial|08/antenna-simulation-nec-openems|openEMS setup for antennas; S-param extraction of a GCPW discontinuity (16/openems-workflow planned)
+490|08|covered|08/gnss-antennas|active antenna bias, LoRa desense; 07/receiver-cascade-analysis
+491|05|covered|05/diodes-schottky-pin-varactor|varactor tuning
+492|14|covered|14/iq-complex-baseband|
+493|14|missing||identifying unknown VHF data signals (POCSAG/FLEX etc.) — signal-ID workflow absent
+494|14|covered|14/sampling-aliasing-bandpass-sampling|
+495|14|partial|14/fft-spectral-analysis-windows|spectrogram basics; capture-to-bits workflow (inspectrum/URH) missing
+496|10|partial|10/synchronization-carrier-timing|pieces present; end-to-end SDR PSK modem design (software-demodulation planned)
+497|06|missing||satellite LNB operation/output levels not covered
+498|08|partial|08/antenna-polarization-and-circular-polarization|polarisation combining of two orthogonal antennas (2 complex signals) not explicit
+499|13|missing||connector shield-to-chassis grounding (13/grounding planned)
+500|13|missing||cable shield termination (one vs both ends) (13/shielding planned)
+501|13|missing||shield-can design/grounding (13/shielding-and-isolation planned)
+502|13|missing||chassis vs signal ground for connector shields (13 planned)
+503|03|partial|03/impedance-matching-lumped-and-distributed|matching to an IC's datasheet impedance covered in general; interpreting S11/Z tables of a receiver IC (MAX41470) not
+504|17|covered|17/nanovna-librevna-practical|NanoVNA artefacts above 300 MHz, cal problems
+505|03|covered|03/smith-chart|conjugate matching on the chart
+506|04|covered|04/inductors-at-rf|SRF
+507|17|covered|17/nanovna-librevna-practical|antenna tuning; 03/smith-chart
+508|03|covered|03/smith-chart|
+509|06|covered|06/rf-filters-lc-saw-baw-cavity-microstrip|distributed microstrip structures (stubs/coupled lines) explained
+510|00|covered|00/fourier-series-and-transform|square-wave harmonics
+511|17|partial|17/spectrum-analyzers|SA dynamic range/RBW; scope-FFT comparison awaits 17/oscilloscopes-and-probing-for-rf
+512|17|partial|00/fourier-series-and-transform|pulse spectrum (sinc); pulse-desensitisation/line vs envelope spectrum on an SA not
+513|17|covered|17/spectrum-analyzers|RBW
+514|17|missing||SA front-panel step sequences (1-2-5, attenuator steps) — trivial, not covered
+515|03|covered|03/reflections-vswr-return-loss-mismatch|intuition section
+516|04|covered|04/ferrites-and-beads|cable ferrites (CM) vs data line
+517|03|partial|03/reflections-vswr-return-loss-mismatch|reflection physics; series termination of digital lines not treated
+518|03|covered|03/planar-lines-microstrip-stripline-cpwg|εeff, velocity
+519|03|covered|03/time-domain-reflectometry|capacitive via dip
+520|03|partial|03/planar-lines-microstrip-stripline-cpwg|impedance tolerance of JLC stackups; when to pay for controlled impedance (13/jlcpcb planned)
+521|03|partial|03/time-domain-reflectometry|TDR principle; DIY fast-edge pulse generator (74AC/avalanche) not
+522|03|partial|03/telegrapher-equations-characteristic-impedance|Z0 vs geometry; power/ termination trade for high-Z lines not
+523|02|covered|02/quasi-static-vs-full-wave|
+524|05|partial|05/analog-signal-conditioning|long sensor lines and RF filtering; 4–20 mA current loop / differential transmission not
+525|17|covered|17/vna-fundamentals-calibration|cal-kit definitions and why standards must be characterised
+526|17|covered|17/vna-fundamentals-calibration|IFBW
+527|17|covered|17/nanovna-librevna-practical|
+528|17|covered|17/nanovna-librevna-practical|shunt-through measurement for low impedances (04/capacitors-at-rf-mlcc)
+529|17|covered|17/vna-fundamentals-calibration|open standard C0–C3
+530|17|covered|17/vna-fundamentals-calibration|SMA-to-U.FL adapter after cal
+531|08|covered|08/antenna-measurement|
+532|04|partial|04/ferrites-and-beads|CM choke behaviour; equivalent-circuit derivation (2Rp, Cp/2) not
+533|03|covered|03/signal-flow-graphs-mason|periodic ripples in cable loss
+534|09|missing||wireless power transmission (why not ubiquitous) — not covered
+535|10|partial|10/ofdm|OFDM/MIMO basics; Wi-Fi vs Ethernet capacity comparison not
+536|19|partial|02/dielectrics-permittivity-loss-tangent|microwave-oven/ISM origin and water-absorption myth only touched (19/spectrum-allocation planned)
+537|15|covered|15/other-ism-radios-fsk-2g4|XBee
+538|08|partial|08/small-antenna-limits|antenna size limits; dongle integration not
+539|09|missing||basic inductive wireless-power circuit not covered
+540|10|partial|10/digital-modulation-psk-qam-fsk|OOK/narrow bandwidth sensitivity implied; CW/Morse efficiency not discussed
+541|08|covered|08/antenna-matching-and-baluns|balun on a dipole
+542|08|partial|02/skin-effect-conductor-loss-roughness|conductivity/skin loss by metal; element-material effect on antenna efficiency not summarised
+543|13|missing||RFI into home broadband (VDSL/cable) and immunity fixes — not covered
+544|09|covered|09/ionospheric-hf-propagation|
+545|07|partial|07/thermal-noise-and-noise-temperature|antenna noise temperature; man-made HF noise mitigation (receive loops, chokes, location) not
+546|09|covered|09/link-budget-methodology|with 08 antennas
+547|09|covered|09/link-budget-methodology|
+548|19|covered|19/amateur-radio-licensing|encryption on amateur bands
+549|03|covered|03/reflections-vswr-return-loss-mismatch|mismatch loss on receive
+550|08|partial|08/dipoles-and-monopoles|small-ground monopole; handheld (body/radio as counterpoise) not specific
+551|19|missing||lightning protection of antennas/equipment (19/lab-safety planned)
+552|19|partial|19/amateur-radio-licensing|Singapore exam syllabus covered; US pool content not
+553|08|covered|08/dipoles-and-monopoles|5/8-wave myth addressed in Common mistakes
+554|08|covered|08/antenna-matching-and-baluns|Guanella vs single-core baluns
+555|10|missing||LSB/USB convention on HF (historic, not technical) not covered
+556|03|covered|03/reflections-vswr-return-loss-mismatch|discontinuity; 08/antenna-matching-and-baluns
+557|08|partial|08/horn-reflector-aperture-antennas|dish gain/feeds; radio-astronomy receiver (hydrogen line, LNB) recipe missing
+558|08|covered|08/antenna-fundamentals|with 03/reflections
+559|02|covered|02/skin-effect-conductor-loss-roughness|wire gauge/material; 08/dipoles-and-monopoles
+560|05|covered|05/data-converters-adc-dac|bits vs dynamic range, ADC NF
+561|14|covered|14/sampling-aliasing-bandpass-sampling|direct RF sampling vs IQ (14/iq-complex-baseband)
+562|09|partial|09/empirical-path-loss-models|Longley–Rice/ITU models; coverage-map tools (Radio Mobile, SPLAT!) workflow not
+563|08|covered|08/antenna-matching-and-baluns|measuring CM current
+564|08|missing||voltage at dipole tips vs power (Q, corona) not computed
+565|08|partial|08/dipoles-and-monopoles|HT whip vs longer whips not specifically
+566|08|partial|03/impedance-matching-lumped-and-distributed|OCF mentioned; feedpoint-offset impedance of dipoles not derived
+567|19|missing||>275 GHz allocations — low priority
+568|08|partial|08/dipoles-and-monopoles|car roof as ground plane; mag-mount capacitive coupling not
+569|08|covered|08/dipoles-and-monopoles|folded dipole bandwidth/impedance
+570|15|partial|09/link-budget-methodology|link budget; cellular power control/short range reasons not
+571|08|covered|08/antenna-matching-and-baluns|choke vs balun terminology
+572|09|partial|09/ionospheric-hf-propagation|takeoff angle; vertical vs horizontal HF choice not
+573|08|missing||random-wire/end-fed non-resonant antennas + unun not covered
+574|14|missing||noise blanker (impulse noise blanking) not covered
+575|08|covered|08/antenna-matching-and-baluns|sleeve/coax baluns at VHF/UHF
+576|06|covered|06/couplers-dividers-combiners|directional coupler/directivity; 03/signal-flow-graphs-mason SWR meter error
+577|09|missing||solar flux index (F10.7) not covered
+578|10|partial|10/analog-modulation-am-fm-pm-ssb|SSB covered; audio bandwidth/"hollow" perception not
+579|09|covered|09/ionospheric-hf-propagation|
+580|19|missing||using ham HTs on FRS/PMR/walkie-talkie channels legality not covered
+581|06|partial|06/rf-filters-lc-saw-baw-cavity-microstrip|cavity filters; repeater duplexers (notch/pass) not
+582|03|covered|03/coax-and-cables|
+583|10|partial|10/digital-modulation-psk-qam-fsk|QAM uses amplitude+phase; AM+FM simultaneous explanation not explicit
+584|03|partial|03/telegrapher-equations-characteristic-impedance|twin-lead mentioned; coax vs ladder-line loss comparison with SWR not
+585|03|partial|03/reflections-vswr-return-loss-mismatch|mismatch consequences; practical safe-TX practices without meters not
+586|08|covered|08/loop-antennas|shielded loop
+587|02|covered|02/magnetic-materials-permeability|μ', μ'' datasheet reading; 04/ferrites-and-beads
+588|00|covered|00/decibels-and-log-units|
+589|08|partial|08/dipoles-and-monopoles|HT aftermarket antenna claims not
+590|09|covered|09/friis-free-space-path-loss|frequency dependence of FSPL (aperture)
+591|09|partial|09/ionospheric-hf-propagation|solar cycle effect not detailed
+592|08|covered|08/antenna-matching-and-baluns|
+593|03|covered|03/coax-and-cables|
+594|08|covered|08/dipoles-and-monopoles|EFHW, 49:1
+595|08|partial|08/antenna-matching-and-baluns|RF vs safety vs DC grounding distinctions not
+596|08|covered|08/dipoles-and-monopoles|why shorter than λ/2 (468/f)
+597|07|covered|07/nonlinearity-p1db-ip3-intermod|linearity; 10/analog-modulation capture
+598|08|covered|08/dipoles-and-monopoles|
+599|03|partial|03/reflections-vswr-return-loss-mismatch|conjugate tuner at the source mentioned; what an ATU does/doesn't fix (feedline loss) not a section
+600|13|missing||RF immunity of household devices (GFCI) — 13/emc-emi-fundamentals planned
+601|12|partial|08/loop-antennas|loop nulls for DF mentioned; practical fox-hunting (body shielding, attenuators, offset attenuator, Doppler DF) missing
+602|08|partial|08/dipoles-and-monopoles|handheld dipole designs not specific
+603|03|covered|03/reflections-vswr-return-loss-mismatch|line length doesn't change true SWR (only CM/meter effects)
+604|08|covered|08/yagi-uda-and-log-periodic|boom correction
+605|14|missing||receiving ATSC/DVB with GNU Radio (gnu-radio-and-software-stack planned)
+606|06|covered|06/power-amplifiers|load line + output match without EDA
+607|09|covered|09/atmospheric-rain-attenuation|vegetation loss
+608|17|partial|06/rf-switches-attenuators-limiters|dummy loads/attenuators; on-air tuning etiquette/low-power practice not
+609|02|covered|02/quasi-static-vs-full-wave|distributed vs lumped view; 08/antenna-fundamentals
+610|19|missing||station grounding/lightning (19/lab-safety planned)
+611|08|partial|08/dipoles-and-monopoles|current/voltage distribution along antenna; feed-point impedance vs position not derived
+612|14|covered|14/iq-complex-baseband|
+613|03|partial|03/telegrapher-equations-characteristic-impedance|RLGC; why twisted pair is lossy/unbalanced-sensitive at RF not
+614|14|missing||AIS reception with RTL-SDR (application recipe) not covered
+615|02|partial|02/boundary-conditions-reflection-refraction|ground constants; mineral/iron-ore conductivity effect not
+616|08|partial|08/antenna-matching-and-baluns|CM chokes; radial-less vertical return-current problem not
+617|19|partial|19/amateur-radio-licensing|mode/band rules; cellular-band SDR legality not
+618|07|partial|07/dynamic-range-sfdr-blocking|co-site desense motivates split bands; satellite uplink/downlink band choice not
+619|06|covered|06/couplers-dividers-combiners|combining; 08/yagi-uda-and-log-periodic stacking with λ/4 transformers
+620|08|covered|08/antenna-matching-and-baluns|gamma/hairpin/T
+621|09|partial|09/ionospheric-hf-propagation|MUF theory; practical band-opening tools (beacons, PSKreporter) not
+622|13|missing||mobile-radio DC power/grounding (low priority)
+623|09|covered|09/fresnel-zones-los-radio-horizon|4/3 earth, ducting; 09/diffraction-knife-edge
+624|13|missing||solar inverter RFI mitigation not covered
+625|08|covered|08/antenna-fundamentals|resonance vs efficiency
+626|08|covered|08/loop-antennas|
+627|03|covered|03/coax-and-cables|
+628|08|missing||fan/multiband dipoles (interaction of joined dipoles) not covered
+629|09|partial|09/multipath-fading-doppler|coherence time/bandwidth generic; HF ionospheric channel (Watterson, Doppler spread) not
+630|03|covered|03/coax-and-cables|loss vs frequency
+631|10|partial|10/analog-modulation-am-fm-pm-ssb|capture effect; co-channel separation limits in SDR not
+632|08|missing||GNSS is receive-only / how navigation works — no GNSS system page
+633|12|partial|12/array-factor-linear-arrays|phasing theory; building coax phasing harness (λ/4 transformers, velocity factor) not
+634|13|missing||neighbour RFI complaint troubleshooting (13 planned)
+635|03|covered|03/coax-and-cables|coax Z0 from dimensions (square coax not)
+636|14|covered|14/iq-complex-baseband|LO vs offset tuning
+637|08|covered|08/antenna-fundamentals|reciprocity
+638|03|partial|03/signal-flow-graphs-mason|SWR meter error on dummy load; calibration procedure not
+639|08|covered|08/pcb-and-chip-antennas|
+640|08|covered|08/antenna-matching-and-baluns|
+641|08|covered|08/antenna-fundamentals|reciprocity (power-handling caveat)
+642|17|partial|14/fft-spectral-analysis-windows|SDR as spectrum display; limitations as SA (17/sdr-as-test-equipment planned)
+643|07|covered|07/noise-figure-and-friis|loss before LNA adds NF
+644|06|covered|06/mixers|
+645|06|covered|06/mixers|
+646|08|missing||niche antenna (E-Z-O / quad variants) — low priority
+647|06|covered|06/power-amplifiers|class-E values; 04/inductors-at-rf
+648|10|covered|10/analog-modulation-am-fm-pm-ssb|phasing (Hilbert) SSB
+649|08|partial|08/pcb-and-chip-antennas|detuning near metal; vehicle mounting not
+650|03|covered|03/smith-chart|
+651|07|partial|07/nonlinearity-p1db-ip3-intermod|IP3; high-IP3 active termination/buffer design not
+652|19|covered|19/amateur-radio-licensing|
+653|08|partial|08/dipoles-and-monopoles|diameter/length effect; material has negligible effect on length — not stated
+654|08|partial|08/small-antenna-limits|short-dipole equivalent C; antenna L/C formula question not direct
+655|08|covered|08/antenna-fundamentals|efficiency independent of impedance level
+656|09|covered|09/link-budget-methodology|with 08/horn-reflector-aperture-antennas
+657|03|covered|03/reflections-vswr-return-loss-mismatch|additional line loss with SWR
+658|02|covered|02/magnetic-materials-permeability|
+659|06|partial|06/power-amplifiers|VSWR ruggedness; frequency dependence of damage risk not
+660|03|partial|03/reflections-vswr-return-loss-mismatch|feedline loss with SWR; tuner location trade not a section
+661|08|covered|08/antenna-matching-and-baluns|
+662|08|covered|08/antenna-matching-and-baluns|
+663|08|covered|08/antenna-matching-and-baluns|choking impedance
+664|03|covered|03/reflections-vswr-return-loss-mismatch|lossy cable masks SWR
+665|18|missing||connector assembly (PL-259/N/SMA crimp/solder) not covered (18/connectors planned)
+666|03|partial|03/telegrapher-equations-characteristic-impedance|loss mechanisms; ladder vs coax comparison not
+667|17|covered|17/nanovna-librevna-practical|cable loss/VF/TDR
+668|17|missing||historic tuning methods (low priority)
+669|06|covered|06/power-amplifiers|VSWR protection
+670|03|covered|03/reflections-vswr-return-loss-mismatch|
+671|17|partial|17/nanovna-librevna-practical|NanoVNA readouts; antenna-analyser displays (R, X, SWR sign ambiguity) not
+672|03|covered|03/reflections-vswr-return-loss-mismatch|
+673|03|partial|03/reflections-vswr-return-loss-mismatch|echo delay vs symbol time argument not made
+674|06|partial|06/couplers-dividers-combiners|directional coupler; cross-needle meter reading not
+675|00|covered|00/decibels-and-log-units|
+676|17|partial|02/magnetic-materials-permeability|μ theory; measuring rod/core μ with coil + VNA/LCR not
+677|02|partial|02/magnetic-materials-permeability|μ'' loss; core efficiency measurement not
+678|09|covered|09/fresnel-zones-los-radio-horizon|refraction k-factor
+679|14|partial|14/iq-complex-baseband|SDR artefacts; USB/host noise mitigation (ferrites, shielding, powered hubs) not
+680|05|partial|05/power-supplies-for-rf-and-analog|switcher spurs explained; identifying comb of spurs on waterfall not
+681|14|covered|14/iq-complex-baseband|
+682|14|covered|14/multirate-dsp-decimation-cic|channeliser; 14/nco-ddc-duc
+683|08|covered|08/yagi-uda-and-log-periodic|
+684|08|partial|08/dipoles-and-monopoles|folded/bent element length effects not
+685|08|covered|08/antenna-measurement|
+686|08|covered|08/antenna-polarization-and-circular-polarization|with 08/yagi-uda-and-log-periodic

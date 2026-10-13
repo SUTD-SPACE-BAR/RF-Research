@@ -1,0 +1,93 @@
+=== A1. 2.4 m mobile whip, 7.15 MHz (h = 0.057 lambda, 8 mm dia), perfect ground; coil solved for X_in = 0 ===
+  coil Q = 300, ground loss 0 ohm:   position (fraction of height): L uH / R_in ohm / efficiency %
+     p = 0.0:  L =   19.40 uH   R_in =   4.20   eta =  30.9 %  ( -5.10 dB)
+     p = 0.1:  L =   21.86 uH   R_in =   5.03   eta =  32.9 %  ( -4.82 dB)
+     p = 0.2:  L =   24.50 uH   R_in =   5.89   eta =  34.1 %  ( -4.67 dB)
+     p = 0.3:  L =   27.75 uH   R_in =   6.88   eta =  34.5 %  ( -4.62 dB)
+     p = 0.4:  L =   31.96 uH   R_in =   8.06   eta =  34.2 %  ( -4.65 dB)
+     p = 0.5:  L =   37.70 uH   R_in =   9.58   eta =  33.1 %  ( -4.80 dB)
+     p = 0.6:  L =   46.10 uH   R_in =  11.65   eta =  30.9 %  ( -5.10 dB)
+     p = 0.7:  L =   59.69 uH   R_in =  14.85   eta =  27.3 %  ( -5.64 dB)
+     p = 0.8:  L =   85.98 uH   R_in =  20.91   eta =  21.7 %  ( -6.64 dB)
+     -> best position p = 0.3 (eta 34.5 %); base loading 30.9 %
+  coil Q = 100, ground loss 0 ohm:   position (fraction of height): L uH / R_in ohm / efficiency %
+     p = 0.0:  L =   19.40 uH   R_in =  10.01   eta =  13.0 %  ( -8.87 dB)
+     p = 0.1:  L =   21.86 uH   R_in =  11.78   eta =  14.1 %  ( -8.52 dB)
+     p = 0.2:  L =   24.50 uH   R_in =  13.66   eta =  14.7 %  ( -8.32 dB)
+     p = 0.3:  L =   27.75 uH   R_in =  15.88   eta =  15.0 %  ( -8.25 dB)
+     p = 0.4:  L =   31.96 uH   R_in =  18.67   eta =  14.8 %  ( -8.30 dB)
+     p = 0.5:  L =   37.71 uH   R_in =  22.39   eta =  14.2 %  ( -8.49 dB)
+     p = 0.6:  L =   46.11 uH   R_in =  27.76   eta =  13.0 %  ( -8.87 dB)
+     p = 0.7:  L =   59.71 uH   R_in =  36.48   eta =  11.1 %  ( -9.54 dB)
+     p = 0.8:  L =   86.02 uH   R_in =  53.77   eta =   8.4 %  (-10.74 dB)
+     -> best position p = 0.3 (eta 15.0 %); base loading 13.0 %
+  coil Q = 300, ground loss 5 ohm:   position (fraction of height): L uH / R_in ohm / efficiency %
+     p = 0.0:  L =   19.40 uH   R_in =   9.20   eta =  14.1 %  ( -8.51 dB)
+     p = 0.1:  L =   21.86 uH   R_in =  10.03   eta =  16.5 %  ( -7.82 dB)
+     p = 0.2:  L =   24.50 uH   R_in =  10.89   eta =  18.4 %  ( -7.34 dB)
+     p = 0.3:  L =   27.75 uH   R_in =  11.88   eta =  20.0 %  ( -6.99 dB)
+     p = 0.4:  L =   31.96 uH   R_in =  13.06   eta =  21.1 %  ( -6.75 dB)
+     p = 0.5:  L =   37.70 uH   R_in =  14.58   eta =  21.8 %  ( -6.63 dB)
+     p = 0.6:  L =   46.10 uH   R_in =  16.65   eta =  21.6 %  ( -6.65 dB)
+     p = 0.7:  L =   59.69 uH   R_in =  19.85   eta =  20.4 %  ( -6.90 dB)
+     p = 0.8:  L =   85.98 uH   R_in =  25.91   eta =  17.5 %  ( -7.57 dB)
+     -> best position p = 0.5 (eta 21.8 %); base loading 14.1 %
+  coil Q = 100, ground loss 5 ohm:   position (fraction of height): L uH / R_in ohm / efficiency %
+     p = 0.0:  L =   19.40 uH   R_in =  15.01   eta =   8.6 %  (-10.63 dB)
+     p = 0.1:  L =   21.86 uH   R_in =  16.78   eta =   9.9 %  (-10.05 dB)
+     p = 0.2:  L =   24.50 uH   R_in =  18.66   eta =  10.8 %  ( -9.68 dB)
+     p = 0.3:  L =   27.75 uH   R_in =  20.88   eta =  11.4 %  ( -9.44 dB)
+     p = 0.4:  L =   31.96 uH   R_in =  23.67   eta =  11.7 %  ( -9.33 dB)
+     p = 0.5:  L =   37.71 uH   R_in =  27.39   eta =  11.6 %  ( -9.37 dB)
+     p = 0.6:  L =   46.11 uH   R_in =  32.76   eta =  11.0 %  ( -9.59 dB)
+     p = 0.7:  L =   59.71 uH   R_in =  41.48   eta =   9.8 %  (-10.10 dB)
+     p = 0.8:  L =   86.02 uH   R_in =  58.77   eta =   7.7 %  (-11.13 dB)
+     -> best position p = 0.4 (eta 11.7 %); base loading 8.6 %
+[PASS] A1a centre-region loading beats base loading (Q = 100 and 300, no ground loss) and the optimum lies at 0.3-0.7 h (Q100 best p = 0.3, Q300 best p = 0.3)
+  with 5 ohm ground loss, Q = 100: best p = 0.4, eta 11.7 % (no ground loss: 15.0 %)
+
+=== A2. 60 mm whip at 433.92 MHz (h = 0.087 lambda, 1 mm wire), perfect ground, coil Q = 50 ===
+     p = 0.0:  L =  136.6 nH   R_in = 10.52 ohm   eta =  29.2 %
+     p = 0.2:  L =  164.9 nH   R_in = 14.31 ohm   eta =  31.8 %
+     p = 0.4:  L =  212.6 nH   R_in = 19.52 ohm   eta =  32.2 %
+     p = 0.5:  L =  258.1 nH   R_in = 23.88 ohm   eta =  31.0 %
+     p = 0.6:  L =  301.9 nH   R_in = 27.83 ohm   eta =  29.3 %
+     p = 0.8:  L =  540.6 nH   R_in = 49.10 ohm   eta =  20.8 %
+  base loading with Q = 100 (the dipoles-page example 4): L = 137 nH, R_in = 6.79 ohm, eta = 45.2 % (page hand estimate: 136 nH, ~7 ohm, 43 %)
+[PASS] A2b NEC base-loaded 60 mm whip (Q = 100) within 10 percentage points and 20 % in L of the hand estimate (43 %, 136 nH) 
+
+=== B. 433 MHz dipole: element diameter vs resonant length, R, Q and VSWR-2 bandwidth (NEC-2) ===
+  dia mm  lambda/d   Omega   L_res mm (K)     R_res   Q_Z    BW(VSWR2 re R_res)   BW(VSWR2 re 50 ohm)
+    0.5      1385    14.4    332.1 (0.959)    71.9   7.75         9.0 %                 6.2 %
+    1.0       692    13.0    329.8 (0.953)    71.8   6.85        10.3 %                 7.0 %
+    2.0       346    11.6    326.7 (0.944)    71.8   5.95        11.8 %                 8.3 %
+    4.0       173    10.2    322.4 (0.931)    72.0   5.04        14.0 %                 9.7 %
+    6.0       115     9.3    319.3 (0.922)    71.9   4.52        15.5 %                11.0 %
+   12.0        58     7.9    313.9 (0.907)    72.8   3.59        20.0 %                13.5 %
+[PASS] B1 2 mm dipole: Q_Z 5-7 and VSWR-2 bandwidth 10-14 % re R_res, 7-10 % re 50 ohm (KB dipoles page: 5.9, 11.8 %, 8.2 %) (Q 5.95, 11.8 %, 8.3 %)
+[PASS] B2 bandwidth rises monotonically with diameter 
+  Q_Z vs Omega linear fit: Q ~ 0.64 Omega -1.48  (thin-dipole theory: Q grows ~linearly with Omega)
+
+=== C. Front-to-side, front-to-back and front-to-rear of the KB 433 MHz Yagis (horizontal, free space) ===
+  3-element (242 mm boom): G = 9.25 dBi, F/B = 13.7 dB, F/R = 13.7 dB, F/S (element plane) = 1009.2 dB, F/S (H-plane, 90 deg up) = 18.3 dB, Z = 10.7+5.0j ohm
+    (element-plane F/S is the dipole-element null: > 60 dB)
+  11-element DL6WU (1.72 m boom): G = 14.31 dBi, F/B = 17.2 dB, F/R = 17.2 dB, F/S (element plane) = 1014.3 dB, F/S (H-plane, 90 deg up) = 21.3 dB, Z = 45.8+0.0j ohm
+    (element-plane F/S is the dipole-element null: > 60 dB)
+[PASS] C1 3-element Yagi reproduces the KB numbers (9.15 dBi, F/B 15 dB) within 0.3 dB / 1.5 dB (9.25 dBi, 13.7 dB)
+[PASS] C2 element-plane F/S >> H-plane F/S (the dipole element null) 
+
+=== D. Two-element Yagi at 433 MHz (6 mm elements): parasitic as reflector vs director ===
+  driven element resonant alone: 319.2 mm (0.4610 lambda)
+  spacing   REFLECTOR: Lp/lambda  G dBi  F/B dB  Z_in            |  DIRECTOR: Lp/lambda  G dBi  F/B dB  Z_in
+   0.050        0.4811    7.23    6.0    3.6  -5.5j      |      0.4610    7.42    9.5    4.2 -21.6j
+   0.075        0.4781    7.19    6.0    8.1  +4.9j      |      0.4545    7.41    7.3    8.1 -16.3j
+   0.100        0.4748    7.14    6.0   14.3 +14.6j      |      0.4469    7.26    6.7   13.7 -11.6j
+   0.125        0.4716    7.06    6.0   22.0 +22.9j      |      0.4400    7.02    5.8   20.0  -6.2j
+   0.150        0.4683    6.97    5.9   30.6 +29.3j      |      0.4338    6.71    4.7   26.6  -0.7j
+   0.200        0.4618    6.73    5.6   49.2 +35.9j      |      0.4228    5.94    2.7   39.8  +8.6j
+   0.250        0.4610    6.36    6.1   70.0 +35.0j      |      0.4134    5.13    1.2   52.3 +14.1j
+   0.300        0.4610    5.81    6.1   85.3 +25.5j      |      0.4053    4.39    0.1   63.0 +15.4j
+  best reflector-type: 7.23 dBi at 0.05 lambda; best director-type: 7.42 dBi at 0.05 lambda
+[PASS] D1 both 2-element types reach 6.5-7.8 dBi; director-type optimum at closer spacing than reflector-type (R 7.23 @ 0.05, D 7.42 @ 0.05)
+
+SUMMARY: ALL PASS

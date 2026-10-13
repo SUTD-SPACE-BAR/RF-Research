@@ -1,0 +1,145 @@
+=== 1. Single DL6WU Yagi (433 MHz, 6 mm elements, 11 elements, NEC-2) ===
+  elements 11, boom 1724 mm (2.49 lambda); driven element resonated: 331.3 mm
+  G = 14.31 dBi, F/B = 17.2 dB, Z = 45.8-0.0j ohm, HPBW E-plane 35.5 deg, H-plane 39.0 deg; NEC average-gain test 1.000, own sphere integration 0.996
+[PASS] 1a NEC single-Yagi gain within 0.4 dB of the KB own-MoM value 14.20 dBi (14.31)
+[PASS] 1b average gain within 0.02 of 1 (energy conservation, lossless): own integration (own 0.996, NEC 1.000)
+
+=== 2. Two-Yagi stacks vs spacing ===
+  E-plane stacking (offset along the elements (collinear)):
+    D = 0.5 lambda (  346 mm): stack gain +0.34 dB, stacking-plane HPBW  28.0 deg, peak sidelobe  -35.9 dB, Zin 122.3-19.2j, F/B 19.0 dB
+    D = 0.6 lambda (  415 mm): stack gain +1.17 dB, stacking-plane HPBW  27.0 deg, peak sidelobe  -40.4 dB, Zin  54.7+21.2j, F/B 26.0 dB
+    D = 0.8 lambda (  554 mm): stack gain +1.66 dB, stacking-plane HPBW  25.0 deg, peak sidelobe  -25.9 dB, Zin  42.7 +8.2j, F/B 20.8 dB
+    D = 1.0 lambda (  692 mm): stack gain +1.99 dB, stacking-plane HPBW  22.5 deg, peak sidelobe  -19.0 dB, Zin  43.9 +5.1j, F/B 19.0 dB
+    D = 1.2 lambda (  831 mm): stack gain +2.33 dB, stacking-plane HPBW  20.0 deg, peak sidelobe  -17.6 dB, Zin  45.5 +3.4j, F/B 18.0 dB
+    D = 1.4 lambda (  969 mm): stack gain +2.67 dB, stacking-plane HPBW  18.0 deg, peak sidelobe  -15.8 dB, Zin  46.5 +2.1j, F/B 17.5 dB
+    D = 1.5 lambda ( 1039 mm): stack gain +2.80 dB, stacking-plane HPBW  17.0 deg, peak sidelobe  -13.6 dB, Zin  46.7 +1.5j, F/B 17.4 dB
+    D = 1.6 lambda ( 1108 mm): stack gain +2.91 dB, stacking-plane HPBW  16.0 deg, peak sidelobe  -11.8 dB, Zin  46.7 +1.0j, F/B 17.3 dB
+    D = 1.8 lambda ( 1246 mm): stack gain +3.03 dB, stacking-plane HPBW  14.5 deg, peak sidelobe   -9.3 dB, Zin  46.6 +0.3j, F/B 17.2 dB
+    D = 2.0 lambda ( 1385 mm): stack gain +3.07 dB, stacking-plane HPBW  13.5 deg, peak sidelobe   -7.5 dB, Zin  46.4 -0.0j, F/B 17.1 dB
+    D = 2.2 lambda ( 1523 mm): stack gain +3.07 dB, stacking-plane HPBW  12.0 deg, peak sidelobe   -6.2 dB, Zin  46.2 -0.3j, F/B 17.1 dB
+    D = 2.4 lambda ( 1662 mm): stack gain +3.04 dB, stacking-plane HPBW  11.0 deg, peak sidelobe   -5.2 dB, Zin  45.9 -0.4j, F/B 17.1 dB
+    D = 2.5 lambda ( 1731 mm): stack gain +3.03 dB, stacking-plane HPBW  11.0 deg, peak sidelobe   -4.8 dB, Zin  45.8 -0.4j, F/B 17.2 dB
+    D = 2.6 lambda ( 1800 mm): stack gain +3.02 dB, stacking-plane HPBW  10.5 deg, peak sidelobe   -4.4 dB, Zin  45.6 -0.3j, F/B 17.3 dB
+    D = 2.8 lambda ( 1939 mm): stack gain +3.00 dB, stacking-plane HPBW   9.5 deg, peak sidelobe   -3.8 dB, Zin  45.5 -0.1j, F/B 17.3 dB
+    D = 3.0 lambda ( 2077 mm): stack gain +2.99 dB, stacking-plane HPBW   9.0 deg, peak sidelobe   -3.3 dB, Zin  45.6 +0.1j, F/B 17.3 dB
+  H-plane stacking (offset perpendicular to the elements):
+    D = 0.5 lambda (  346 mm): stack gain +1.37 dB, stacking-plane HPBW  30.5 deg, peak sidelobe  -17.5 dB, Zin  42.3+11.4j, F/B 23.2 dB
+    D = 0.6 lambda (  415 mm): stack gain +1.58 dB, stacking-plane HPBW  29.0 deg, peak sidelobe  -21.6 dB, Zin  40.0 +8.8j, F/B 28.9 dB
+    D = 0.8 lambda (  554 mm): stack gain +1.57 dB, stacking-plane HPBW  26.0 deg, peak sidelobe  -14.0 dB, Zin  44.5 +8.4j, F/B 17.7 dB
+    D = 1.0 lambda (  692 mm): stack gain +2.00 dB, stacking-plane HPBW  23.0 deg, peak sidelobe  -12.7 dB, Zin  46.3 +3.8j, F/B 17.2 dB
+    D = 1.2 lambda (  831 mm): stack gain +2.45 dB, stacking-plane HPBW  20.5 deg, peak sidelobe  -13.3 dB, Zin  46.5 +2.3j, F/B 17.3 dB
+    D = 1.4 lambda (  969 mm): stack gain +2.87 dB, stacking-plane HPBW  18.5 deg, peak sidelobe  -13.9 dB, Zin  46.7 +1.0j, F/B 17.7 dB
+    D = 1.5 lambda ( 1039 mm): stack gain +3.02 dB, stacking-plane HPBW  17.5 deg, peak sidelobe  -11.9 dB, Zin  46.5 +0.5j, F/B 18.0 dB
+    D = 1.6 lambda ( 1108 mm): stack gain +3.10 dB, stacking-plane HPBW  16.5 deg, peak sidelobe  -10.3 dB, Zin  46.0 +0.5j, F/B 18.3 dB
+    D = 1.8 lambda ( 1246 mm): stack gain +3.05 dB, stacking-plane HPBW  15.0 deg, peak sidelobe   -8.1 dB, Zin  46.5 +1.1j, F/B 17.1 dB
+    D = 2.0 lambda ( 1385 mm): stack gain +3.04 dB, stacking-plane HPBW  13.5 deg, peak sidelobe   -6.5 dB, Zin  47.2 +0.2j, F/B 16.3 dB
+    D = 2.2 lambda ( 1523 mm): stack gain +3.08 dB, stacking-plane HPBW  12.5 deg, peak sidelobe   -5.3 dB, Zin  46.8 -0.9j, F/B 16.6 dB
+    D = 2.4 lambda ( 1662 mm): stack gain +3.09 dB, stacking-plane HPBW  11.5 deg, peak sidelobe   -4.5 dB, Zin  45.7 -1.2j, F/B 17.3 dB
+    D = 2.5 lambda ( 1731 mm): stack gain +3.08 dB, stacking-plane HPBW  11.0 deg, peak sidelobe   -4.1 dB, Zin  45.2 -1.0j, F/B 17.8 dB
+    D = 2.6 lambda ( 1800 mm): stack gain +3.05 dB, stacking-plane HPBW  10.5 deg, peak sidelobe   -3.8 dB, Zin  44.8 -0.5j, F/B 18.1 dB
+    D = 2.8 lambda ( 1939 mm): stack gain +2.96 dB, stacking-plane HPBW   9.5 deg, peak sidelobe   -3.2 dB, Zin  45.1 +0.5j, F/B 17.5 dB
+    D = 3.0 lambda ( 2077 mm): stack gain +2.93 dB, stacking-plane HPBW   9.0 deg, peak sidelobe   -2.7 dB, Zin  45.8 +0.5j, F/B 16.8 dB
+  E-plane: maximum stack gain +3.07 dB at D = 2.1 lambda
+  H-plane: maximum stack gain +3.10 dB at D = 1.6 lambda
+[PASS] 2a two-Yagi stack gain peaks between +2.5 and +3.3 dB [pre-registered: 2.5-2.9 dB amateur literature; > 3.01 dB possible if the mutual resistance is negative] (E 3.07, H 3.10 dB)
+
+=== 3. Coupling-free prediction G2/G1 = 2/(1 + rho(D)) from the single Yagi's power pattern ===
+  E-plane: prediction minus NEC over 0.5-3.0 lambda: mean -0.06 dB, max |diff| 0.34 dB (at D = 0.7); predicted max +3.13 dB at D = 2.1
+    D = 0.5: rho-prediction +0.64 dB vs NEC +0.34 dB
+    D = 1.0: rho-prediction +1.82 dB vs NEC +1.99 dB
+    D = 1.5: rho-prediction +2.71 dB vs NEC +2.80 dB
+    D = 2.0: rho-prediction +3.12 dB vs NEC +3.07 dB
+    D = 2.5: rho-prediction +3.03 dB vs NEC +3.03 dB
+  H-plane: prediction minus NEC over 0.5-3.0 lambda: mean -0.06 dB, max |diff| 0.45 dB (at D = 0.5); predicted max +3.23 dB at D = 1.9
+    D = 0.5: rho-prediction +0.92 dB vs NEC +1.37 dB
+    D = 1.0: rho-prediction +1.90 dB vs NEC +2.00 dB
+    D = 1.5: rho-prediction +2.87 dB vs NEC +3.02 dB
+    D = 2.0: rho-prediction +3.19 dB vs NEC +3.04 dB
+    D = 2.5: rho-prediction +3.01 dB vs NEC +3.08 dB
+[PASS] 3 coupling-free (frozen-current) prediction matches NEC within 0.3 dB for D >= 1 lambda (E 0.17, H 0.24 dB)
+
+=== 4. Stacking-distance formulas vs NEC ===
+  E-plane (single-Yagi HPBW in this plane 35.5 deg, other plane 39.0 deg; A_e = 1.030 m^2):
+    DL6WU/G3SEK lambda/(2 sin(B/2))           : D = 1.64 lambda = 1136 mm -> NEC stack gain +2.94 dB, stacking-plane peak sidelobe -11.3 dB
+    KB yagi page 51/HPBW                      : D = 1.44 lambda = 995 mm -> NEC stack gain +2.72 dB, stacking-plane peak sidelobe -15.0 dB
+    capture-area (rectangle) sqrt(Ae Bo/Bs)   : D = 1.54 lambda = 1063 mm -> NEC stack gain +2.84 dB, stacking-plane peak sidelobe -12.9 dB
+    capture-area (ellipse)                    : D = 1.73 lambda = 1200 mm -> NEC stack gain +3.00 dB, stacking-plane peak sidelobe -10.0 dB
+    NEC maximum gain at D = 2.1 lambda (+3.07 dB); first spacing with sidelobe > -15 dB: 1.5 lambda
+  H-plane (single-Yagi HPBW in this plane 39.0 deg, other plane 35.5 deg; A_e = 1.030 m^2):
+    DL6WU/G3SEK lambda/(2 sin(B/2))           : D = 1.50 lambda = 1037 mm -> NEC stack gain +3.02 dB, stacking-plane peak sidelobe -12.0 dB
+    KB yagi page 51/HPBW                      : D = 1.31 lambda = 905 mm -> NEC stack gain +2.69 dB, stacking-plane peak sidelobe -14.3 dB
+    capture-area (rectangle) sqrt(Ae Bo/Bs)   : D = 1.40 lambda = 968 mm -> NEC stack gain +2.87 dB, stacking-plane peak sidelobe -13.9 dB
+    capture-area (ellipse)                    : D = 1.58 lambda = 1092 mm -> NEC stack gain +3.08 dB, stacking-plane peak sidelobe -10.7 dB
+    NEC maximum gain at D = 1.6 lambda (+3.10 dB); first spacing with sidelobe > -15 dB: 0.8 lambda
+[PASS] 4a DL6WU formula spacing gives within 0.4 dB of the maximum stack gain (both planes) ([np.float64(0.13), np.float64(0.08)] dB)
+[PASS] 4b DL6WU formula spacing is below the NEC max-gain spacing (gain peaks wider, as Cebik reports) ([(np.float64(1.64), np.float64(2.1)), (np.float64(1.5), np.float64(1.6))])
+
+=== 5. 2x2 box and the equivalent single long Yagi ===
+  2x2 box at DL6WU spacings (1136 mm E x 1037 mm H): gain 20.33 dBi (+6.02 dB over one Yagi), HPBW 16.0 x 17.5 deg, sidelobes E -10.9 / H -11.7 dB, Zin 47.9+0.9j
+  separable estimate: +2.94 + +3.02 = +5.96 dB
+[PASS] 4c 2x2 box increment = sum of the E- and H-pair increments within 0.2 dB (separable stacking) (+6.02 vs +5.96 dB)
+  single DL6WU Yagi, boom 4.42 lambda (3.06 m, 16 el): 16.33 dBi (+2.02 dB over the 11-el), HPBW 29.0 x 30.5 deg; DL6WU estimate 16.38 dBi
+  single DL6WU Yagi, boom 5.22 lambda (3.61 m, 18 el): 16.97 dBi (+2.66 dB over the 11-el), HPBW 27.0 x 28.5 deg; DL6WU estimate 16.95 dBi
+  single DL6WU Yagi, boom 5.62 lambda (3.89 m, 19 el): 17.27 dBi (+2.95 dB over the 11-el), HPBW 26.5 x 27.5 deg; DL6WU estimate 17.20 dBi
+
+=== 6. Phasing harness, mismatch, polarisation statistics ===
+  Yagi feed impedance in the H-stack at the DL6WU spacing: 46.5+0.5j ohm
+  lambda/4 of VF-0.66 coax at 433.92 MHz = 114.0 mm (3 lambda/4 = 342.0 mm)
+  2-way harness, two lambda/4 75-ohm branches, 50-ohm Yagis: input 56.2+0.0j ohm at centre, SWR 1.125 (centre) .. 1.129 over 425-445 MHz
+  2-way harness, two 3 lambda/4 75-ohm branches, 50-ohm Yagis: input 56.2+0.0j ohm at centre, SWR 1.125 (centre) .. 1.155 over 425-445 MHz
+[PASS] 6a lambda/4 75-ohm 2-way harness: input 56.25 ohm, SWR <= 1.15 across 425-445 MHz (1.129)
+  5 lambda/4 branches (570 mm each): SWR 1.125 .. 1.199 over 425-445 MHz
+  7 lambda/4 branches (798 mm each): SWR 1.125 .. 1.253 over 425-445 MHz
+  9 lambda/4 branches (1026 mm each): SWR 1.125 .. 1.313 over 425-445 MHz
+  with the modelled Yagi impedance: harness input 60.5-0.7j ohm, SWR 1.21
+  4-way: two 56.25-ohm pairs, each via lambda/4 of 75 ohm, paralleled -> 50.0 ohm
+  branch length >= 0.82 m for spacing 1037 mm: loss 0.24 dB (RG-58 class), 0.07 dB (LMR-400 class)
+  branch length >= 0.87 m for spacing 1136 mm: loss 0.25 dB (RG-58 class), 0.08 dB (LMR-400 class)
+  harness length error 5 mm: phase 3.9 deg -> beam squint 0.42 deg, boresight loss -0.005 dB
+  harness length error 10 mm: phase 7.9 deg -> beam squint 0.84 deg, boresight loss -0.021 dB
+  harness length error 30 mm: phase 23.6 deg -> beam squint 2.51 deg, boresight loss -0.186 dB
+  reactive T with one Yagi detuned to 75+30j: branch power ratio -1.76 dB (an isolated Wilkinson keeps the split equal; the mismatched port's reflection goes to its resistor)
+  beam 35.5 deg: pointing error for 1 dB loss = 10.2 deg, for 3 dB = 17.8 deg
+  beam 39.0 deg: pointing error for 1 dB loss = 11.3 deg, for 3 dB = 19.5 deg
+  beam 16.0 deg: pointing error for 1 dB loss = 4.6 deg, for 3 dB = 8.0 deg
+  beam 17.5 deg: pointing error for 1 dB loss = 5.1 deg, for 3 dB = 8.8 deg
+  E-plane: implied rho at the DL6WU spacing = +0.016; at the gain maximum = -0.014
+  H-plane: implied rho at the DL6WU spacing = -0.002; at the gain maximum = -0.021
+  polarity error (one Yagi's feed reversed, H-stack): boresight -195.0 dBi (-209.4 dB re one Yagi), lobes of 15.14 dBi at elevation 15.0 deg
+[PASS] 6c reversed feed polarity puts a deep null on boresight (< -20 dB re a single Yagi) (-209.4 dB)
+  linear ground antenna vs rolling linear rocket antenna: mean PLF -3.01 dB, P(fade worse than -10 dB) = 0.205, P(< -20 dB) = 0.064; CP ground antenna: constant -3.01 dB
+[PASS] 6b fade probability below -10 dB for a random roll = (2/pi) asin(sqrt(0.1)) = 0.205 
+
+=== 6b. N Yagis in a line (H-plane, DL6WU spacing) ===
+  2 in a line: NEC +3.02 dB (HPBW 17.5 deg, lobes -11.9 dB), frozen-current prediction +2.86 dB, 10logN = 3.01 dB
+  3 in a line: NEC +4.74 dB (HPBW 11.5 deg, lobes -12.4 dB), frozen-current prediction +4.53 dB, 10logN = 4.77 dB
+  4 in a line: NEC +5.99 dB (HPBW 8.5 deg, lobes -12.6 dB), frozen-current prediction +5.74 dB, 10logN = 6.02 dB
+[PASS] 6d 4-in-a-line: NEC within 0.3 dB of the frozen-current formula (+5.99 vs +5.74)
+
+=== 6c. Electrical tilt of a vertical (H-plane) stack at the DL6WU spacing ===
+  requested tilt  5.0 deg (phase step  47.0 deg = 60 mm of VF-0.66 cable): peak at +4.0 deg elevation, 17.20 dBi (+2.89 dB re one Yagi on its boresight), highest other lobe -6.0 dB at +16.2 deg
+  requested tilt 10.0 deg (phase step  93.6 deg = 119 mm of VF-0.66 cable): peak at +8.0 deg elevation, 16.79 dBi (+2.48 dB re one Yagi on its boresight), highest other lobe -4.9 dB at -21.5 deg
+  requested tilt 20.0 deg (phase step 184.4 deg = 234 mm of VF-0.66 cable): peak at -14.8 deg elevation, 15.26 dBi (+0.95 dB re one Yagi on its boresight), highest other lobe -0.2 dB at +15.5 deg
+[PASS] 6e 10-deg electrical tilt: peak moves up by 5-10 deg (element pattern pulls it back) (peak +8.0 deg, +2.48 dB)
+
+=== 7. Sweep table and figure ===
+  D/lambda | E: dG  HPBW  SLL | H: dG  HPBW  SLL
+   0.5 | +0.34  28.0  -35.9 | +1.37  30.5  -17.5
+   0.6 | +1.17  27.0  -40.4 | +1.58  29.0  -21.6
+   0.8 | +1.66  25.0  -25.9 | +1.57  26.0  -14.0
+   1.0 | +1.99  22.5  -19.0 | +2.00  23.0  -12.7
+   1.2 | +2.33  20.0  -17.6 | +2.45  20.5  -13.3
+   1.4 | +2.67  18.0  -15.8 | +2.87  18.5  -13.9
+   1.5 | +2.80  17.0  -13.6 | +3.02  17.5  -11.9
+   1.6 | +2.91  16.0  -11.8 | +3.10  16.5  -10.3
+   1.8 | +3.03  14.5   -9.3 | +3.05  15.0   -8.1
+   2.0 | +3.07  13.5   -7.5 | +3.04  13.5   -6.5
+   2.2 | +3.07  12.0   -6.2 | +3.08  12.5   -5.3
+   2.4 | +3.04  11.0   -5.2 | +3.09  11.5   -4.5
+   2.5 | +3.03  11.0   -4.8 | +3.08  11.0   -4.1
+   2.6 | +3.02  10.5   -4.4 | +3.05  10.5   -3.8
+   2.8 | +3.00   9.5   -3.8 | +2.96   9.5   -3.2
+   3.0 | +2.99   9.0   -3.3 | +2.93   9.0   -2.7
+  wrote figure e8-yagi-stacking.png
+
+SUMMARY: ALL PASS

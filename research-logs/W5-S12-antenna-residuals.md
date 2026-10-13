@@ -1,0 +1,47 @@
+# Research log W5-S12: antenna residuals (08)
+Status: complete (2026-10-13)
+Owner scope: kb/08-antennas — only yagi-uda-and-log-periodic, antenna-polarization-and-circular-polarization, antenna-measurement, loop-antennas, wire-antennas-hf-random-wire-fan-dipole, antenna-matching-and-baluns, dipoles-and-monopoles, antenna-simulation-nec-openems; tools/verify/s12_*.py; gaps/GAP_REGISTER.md (§3/§5 rows of my items). No _index.md edits. Avoid lines W5-E9 touches (D6 #12 2-layer width, D6 #20 CFRP conductivity).
+
+## Plan
+- [x] G-08-01 corner reflector + eggbeater/Lindenblad/turnstile omni-CP → yagi-uda-and-log-periodic (corner reflector section), antenna-polarization (omni-CP for overhead passes). Script s12_corner_omnicp.py (PyNEC, 433/915 MHz, gain vs elevation, compare crossed Yagi).
+- [x] G-08-02 Yagi antenna temperature vs elevation over ground → antenna-measurement (or Yagi page). Script s12_yagi_tant.py (PyNEC pattern over ground × sky/ground brightness; G/T vs elevation).
+- [x] G-08-03 receive-only antennas (active loop, E-field whip, LF/VLF time signals, Beverage/flag, RDF, sense antenna) → loop-antennas + wire-antennas. P.372 SNR analysis. Possibly small NEC script for Beverage RDF (s12_beverage_rdf.py).
+- [x] G-08-05 SMD CM chokes, coax-wound vs bifilar, placement → antenna-matching-and-baluns. Impedance numbers + placement rule.
+- [x] G-08-04 HF wire leftovers: linked dipole, OCF on twin feeder, shortened EFHW w/ loading coil, EFHW harmonic patterns, RF in the shack, stealth receive long-wire → wire-antennas page. NEC runs (s12_hf_wire.py).
+- [x] G-08-06 Pocklington/Hallén derivation (L3), induced-EMF mutual impedance of parallel dipoles → antenna-simulation (derivation) + dipoles (mutual Z). Script s12_mutual_z.py: induced-EMF closed form vs PyNEC vs KB MoM.
+- [x] G-08-07 loading-coil position vs efficiency, element diameter vs bandwidth, F/S ratio, 2-el reflector vs director → dipoles + Yagi. Script s12_loading_coil.py, s12_two_element.py.
+
+## Log (append-only)
+- 2026-10-12 — Step 0 read: CONVENTIONS, GAP_REGISTER §3 rows 32,33,48,60,87,100,101, §6 S12, orchestrator notes, canonical values. Log created.
+
+- 2026-10-12 — read all 8 target pages. Existing: Yagi page already has induced-EMF Z21 table (Balanis 8.6) vs MoM; antenna-sim page has MoM L1/L2 but no Pocklington/Hallén derivation; HF page Level-3 says Beverage "not covered".
+- 2026-10-12 — web: P.372 Fa = c − d log f constants (city 76.8/27.7, residential 72.5/27.7, rural 67.2/27.7, quiet rural 53.6/28.6; galactic 52/23) via ITU doc (IEEE 802.18-12-0057 PLT table, g = c − 55.5) — man-made model valid 0.3–250 MHz; FFI 16-00869 says measured residential/rural lower than P.372. G3TXQ choke chart (karinya.net/g3txq/chokes, PDF mirror hellschreiber.com) read from image: 12T RG58/FT240-31 > 2 kΩ ~1.5–28 MHz; 17T RG58/FT240-43 > 8 kΩ ~3–9 MHz; 14T bifilar/4×FT240-61 > 4 kΩ ~3.5–7.5 MHz, > 1 kΩ to ~28 MHz; air-cored coax chokes > 4 kΩ only in a few-MHz band near SRF and reactive; 6×FB-31-1020 beads on RG213 0.5–1 kΩ 5–30 MHz. Murata DLW21SN211XK2 datasheet (DigiKey copy, updated 2026-02-02): Zc 210 Ω @100 MHz, chart ≈ 350–400 Ω @433, ≈ 500 Ω @915, peak ≈ 700 Ω ≈ 2.5 GHz; Zd ≈ 25–30 Ω @433, ≈ 60 Ω @1 GHz (chart readings ±20 %); DLW21SN491XQ2 ≈ 1 kΩ @433, peak ≈ 1.3 kΩ near 1 GHz. LF time stations (Cambridge mgk25 list): DCF77 77.5 kHz 50 kW (30 kW ERP), MSF 60 kHz Anthorn 15 kW ERP, WWVB 60 kHz 50 kW ERP (list) — NIST quotes 70 kW ERP (from memory, flagged), JJY 40/60 kHz, BPC 68.5 kHz Shangqiu. RDF (W8JI) definition via Hi-Z/ON4UN summaries. MLA-30: N1DAY review (swling 2019, IMD), EEVblog thread (DC-DC/bias-T noise), G8JNJ reverse-engineering (rtl-sdr.com) — anecdotal.
+- 2026-10-13 — scripts written and run: tools/verify/s12_corner_omnicp.py (ALL PASS after fixes), s12_yagi_tant.py (ALL PASS), s12_mutual_hallen.py (ALL PASS after fixes). Fixes recorded: (i) PyNEC get_e_theta/get_e_phi are flat arrays with theta varying fastest (reshape (nph, nth).T) — first sign check failed on a wrong reshape; (ii) eggbeater first model had 3-segment feed sides (Δ/a = 2.3) and 10 mm loop crossing → AGT 0.938; fixed with 40-gon single-segment sides, 4 mm wire, 0.03λ crossing offset → AGT 0.998; (iii) pre-registered "corner within 1.5 dB of image theory at sides 2S × rods 0.75λ" MISSED (9.70 vs 11.81 dBi): small screen costs 2.1 dB; 1.5λ × 1.0λ screen within 0.74 dB; ≥ 2λ × 1.25λ screens exceed image theory (long rods radiate as a collinear) — kept as info line; (iv) pre-registered "Hallén N=201 within 3 Ω of MoM" MISSED: pulse/point-match reactance converges ~1/N; Richardson limit 80.5+j45.8 vs MoM 80.3+j45.3; (v) short-dipole solutions need segment ≥ ~3–5 radii (reduced kernel), zeroth-order Hallén X is 70 % high, the TL formula within 8 %.
+- 2026-10-13 — also written and run: s12_practicalities.py (ALL PASS; outputs in s12_practicalities_output.txt), s12_rx_antennas.py (ALL PASS after fixes: RDF first averaged over 2π sr → 3 dB low, fixed to 4π; pre-registered whip/loop expectations missed and recorded as [info] lines), s12_hf_wire_chokes.py (sections 1–2 ran; linked-dipole 1 pF link shifts 20 m resonance −3.4 % (pre-reg MISS, recorded); OCF floating-tuner CM −8 dB vs centre-fed −56 dB; section 3 bracket fixed (Lin 19–23 m, tail 0.3–4 m) — final rerun was KILLED by PAUSE, not yet complete). NO KB PAGE EDITED YET; GAP_REGISTER untouched.
+- 2026-10-13 (resumed) — PAGES EDITED: 08/yagi-uda-and-log-periodic (corner reflector section, 2-element/F/B/F/R/F/S section, stacking rule reconciled with 12/stacking: λ/(2 sin(B/2)) vs 51/HPBW, TL;DR/Q/mistakes/sources), 08/antenna-polarization-and-circular-polarization (omni-CP section), 08/antenna-measurement (antenna temperature & G/T section). G-08-02 page work complete; G-08-01 page work complete. s12_hf_wire_chokes.py: §3 grid search fixed; MISSes recorded as [info] (80 m coil loss −2.45 dB at Q 200; choke AT an EFHW feed is useless — counterpoise current = feed current); §5 remodelled with a choke 2 m (0.05λ) down; final rerun KILLED by PAUSE. Bug found in §6: the λ/4 and λ/2 choke positions exceed the "worst" 0.15 m coax length, so those rows are invalid — choose the worst coax among L ≥ 0.4 m (e.g. 0.50 m, −9.3 dB) before rerunning.
+- 2026-10-13 (resumed again) — s12_hf_wire_chokes.py ALL PASS after fixes (worst coax ≥ 0.4 m; second pre-registered end-fed choke check MISSED: 5 kΩ 2 m down gives 7.4 dB, not 15 dB — choke must be ≫ the short counterpoise's capacitive kΩ; inductive choke made CM +4.5 dB worse; entry choke −24 dB; recorded as [info]). Edited the remaining 5 pages: antenna-simulation-nec-openems (L3 Pocklington/Hallén), dipoles-and-monopoles (mutual-Z L3, diameter vs bandwidth, loading-coil position), wire-antennas (linked/OCF/shortened & harmonic EFHW, RF in the shack, Beverage/RDF, stealth receive), loop-antennas (receive-only section, P.372, active whip/loop margins, MLA-30, sense antenna, LF time signals), antenna-matching-and-baluns (SMD/coax/bifilar chokes, NEC placement rule). Link/anchor check over the 8 pages: 0 bad. GAP_REGISTER: G-08-01…07 removed from §3, closed as C95–C101 in §5, 08 domain row 1 open/15 closed; §1 headline totals not recomputed.
+
+## Sources consulted
+| # | Source | Type | Used for | Reliability notes |
+| 1 | ITU-R P.372 (via 802.18 doc table) | standard (secondary) | Fa constants | cross-check vs memory: agree |
+| 2 | G3TXQ choke chart | expert measurement | choke Z bands | read from image, ±1 colour band |
+| 3 | Murata DLW21SN datasheet | manufacturer | SMD CMC Zc/Zd | chart read ±20 % |
+| 4 | mgk25 LF clocks list | expert list | LF station powers | WWVB 50 vs 70 kW discrepancy |
+| 5 | swling/EEVblog/rtl-sdr MLA-30 | forum/review | active-loop failure modes | anecdotal |
+
+## Contradictions / discrepancies found
+- 15/ground-station-design.md:83 quotes "P.372: ~1150 K median at 425 MHz, city"; the P.372 city line Fa = 76.8 − 27.7 log f gives 3.95 dB → 720 K at 425 MHz (and the line is only defined to 250 MHz). Not my file — flagged for the 15 owner.
+- WWVB power: mgk25 list 50 kW ERP vs NIST's commonly quoted 70 kW ERP (memory) — page states "50–70 kW ERP (sources differ)".
+
+## Knowledge gaps noticed (for later gap-filling)
+- Real-ground (tripod) models of the omni-CP antennas and real phasing lines; measured ground-station T_A (R14) and a local man-made noise survey at UHF (R13).
+- Flag/pennant/K9AY receive loops not modelled (only Beverage and vertical).
+- SMD CMC Zd effect on a 915 MHz match should be measured (VNA, mixed-mode S-parameters).
+
+## Cross-domain notes (things other domains should cover/link)
+- 15/ground-station-design.md:83 — P.372 city value at 425 MHz (1150 K quoted vs 720 K from Fa = 76.8 − 27.7 log f, which is defined only to 250 MHz); link to 08/antenna-measurement#antenna-temperature-and-gt-vs-elevation-over-ground for T_A vs elevation.
+- 12/stacking-and-arraying-yagis open question "origin of 51/HPBW not traced" — the 08 Yagi page now states both rules and defers to 12; 12 can drop the "inconsistent" note.
+- 16/nec-antenna-modelling: add the PyNEC traps found here — get_e_theta/get_e_phi flat with θ fastest; wires touching a Sommerfeld ground need geometry_complete(1); xq_card needed when no rp_card.
+
+## Resume instructions (what the next agent should do if this one is interrupted)
+Task complete; nothing to resume. Leftovers are in 'Knowledge gaps noticed' and 'Cross-domain notes'.

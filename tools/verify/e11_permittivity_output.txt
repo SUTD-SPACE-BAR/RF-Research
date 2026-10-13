@@ -1,0 +1,62 @@
+2. Resonator coupling: extracting Q0 from QL
+   two-port, Cc = 0.15 pF: f0 = 0.99073 GHz, QL = 351.7, |S21|max = 0.303 (-10.4 dB) -> Q0 = 504.6 (true 504.7)
+[PASS] transmission method recovers Q0 within 1 % (Cc 0.15 pF)  
+   two-port, Cc = 0.40 pF: f0 = 0.97613 GHz, QL = 129.1, |S21|max = 0.748 (-2.5 dB) -> Q0 = 511.8 (true 512.2)
+[PASS] transmission method recovers Q0 within 1 % (Cc 0.40 pF)  
+   two-port, Cc = 1.00 pF: f0 = 0.94686 GHz, QL = 30.3, |S21|max = 0.942 (-0.5 dB) -> Q0 = 522.6 (true 528.1)
+[FAIL] transmission method recovers Q0 within 1 % (Cc 1.00 pF)  
+   one-port, Cc = 0.30 pF: f0 = 0.99079 GHz, QL = 270.6, |S11|min = 0.073, phase swing 120 deg -> under-coupled, beta = 0.864, Q0 = 504.6 (true 504.6)
+[PASS] reflection method recovers Q0 within 1 % (Cc 0.30 pF)  
+   one-port, Cc = 0.60 pF: f0 = 0.98225 GHz, QL = 117.8, |S11|min = 0.536, phase swing 353 deg -> over-coupled, beta = 3.314, Q0 = 508.4 (true 509.0)
+[PASS] reflection method recovers Q0 within 1 % (Cc 0.60 pF)  
+   one-port, Cc = 1.20 pF: f0 = 0.96820 GHz, QL = 40.2, |S11|min = 0.843, phase swing 336 deg -> over-coupled, beta = 11.758, Q0 = 512.6 (true 516.4)
+[PASS] reflection method recovers Q0 within 1 % (Cc 1.20 pF)  
+4. Two-line method with unknown identical connectors (2-layer FR-4, true er 4.35)
+   f = 0.50 GHz: eeff = 3.3047 -> er = 4.3500, tan d = 0.0180
+   f = 1.00 GHz: eeff = 3.3134 -> er = 4.3500, tan d = 0.0180
+   f = 2.45 GHz: eeff = 3.3464 -> er = 4.3500, tan d = 0.0180
+   f = 4.00 GHz: eeff = 3.3881 -> er = 4.3500, tan d = 0.0180
+[PASS] two-line eigenvalue method recovers er (0.2 %) and tan d (2 %) despite the connector boxes  
+5. Free-space transmission through a flat fibreglass coupon (nose-cone witness panel)
+   2 mm panel, er 4.4 - j0.07 (tan d 0.016): insertion phase at 2.45 / 5.8 GHz = -9.8 / -21.7 deg; |S21| = -0.69 dB at 5.8 GHz
+   fitted er' = 4.415, er'' = 0.0683 (tan d 0.0155) with the correct thickness
+[PASS] free-space slab fit recovers er' within 1 % (0.5 deg / 0.3 % noise)  4.415
+   thickness error +0.05 mm -> er' = 4.334 (-1.5 %)
+   thickness error +0.10 mm -> er' = 4.256 (-3.3 %)
+[PASS] a +0.1 mm (5 %) thickness error biases er' by more than 3 % (thickness dominates)  -3.3 %
+   Lichtenecker estimate: glass 0.30, voids 0.00 -> er ~ 4.09
+   Lichtenecker estimate: glass 0.30, voids 0.03 -> er ~ 3.94
+   Lichtenecker estimate: glass 0.40, voids 0.00 -> er ~ 4.35
+   Lichtenecker estimate: glass 0.40, voids 0.03 -> er ~ 4.19
+   Lichtenecker estimate: glass 0.50, voids 0.00 -> er ~ 4.63
+   Lichtenecker estimate: glass 0.50, voids 0.03 -> er ~ 4.46
+3. Ring resonator on 2-layer FR-4 (h 1.51 mm, true er 4.35, tan d 0.018)
+   W = 2.91 mm, mean circumference 164.7 mm (mean radius 26.2 mm), n = 1 at ~1 GHz
+   gap 0.25 mm, n = 1: f_n = 0.9891 GHz, |S21| =  -30.8 dB, QL =   53.5, Q0 =   55.1; eeff = 3.3868 -> er = 4.457, tan d = 0.0175
+   gap 0.25 mm, n = 2: f_n = 1.9719 GHz, |S21| =  -24.8 dB, QL =   54.2, Q0 =   57.5; eeff = 3.4085 -> er = 4.456, tan d = 0.0173
+   gap 0.25 mm, n = 3: f_n = 2.9474 GHz, |S21| =  -21.4 dB, QL =   53.8, Q0 =   58.8; eeff = 3.4328 -> er = 4.453, tan d = 0.0172
+   gap 0.25 mm, n = 4: f_n = 3.9146 GHz, |S21| =  -19.2 dB, QL =   53.2, Q0 =   59.8; eeff = 3.4595 -> er = 4.452, tan d = 0.0170
+   gap 0.25 mm: worst uncorrected er error +2.46 % (gap shunt/series C load the ring)
+   gap 1.00 mm, n = 1: f_n = 0.9919 GHz, |S21| =  -46.6 dB, QL =   54.7, Q0 =   54.9; eeff = 3.3677 -> er = 4.429, tan d = 0.0176
+   gap 1.00 mm, n = 2: f_n = 1.9773 GHz, |S21| =  -40.3 dB, QL =   56.8, Q0 =   57.3; eeff = 3.3899 -> er = 4.429, tan d = 0.0174
+   gap 1.00 mm, n = 3: f_n = 2.9552 GHz, |S21| =  -36.8 dB, QL =   57.9, Q0 =   58.7; eeff = 3.4147 -> er = 4.428, tan d = 0.0172
+   gap 1.00 mm, n = 4: f_n = 3.9248 GHz, |S21| =  -34.3 dB, QL =   58.5, Q0 =   59.7; eeff = 3.4416 -> er = 4.427, tan d = 0.0171
+   gap 1.00 mm: worst uncorrected er error +1.82 % (gap shunt/series C load the ring)
+[PASS] ring, 1 mm gaps: uncorrected er bias < 2.5 % and smaller than with 0.25 mm gaps  1.82 % vs 2.46 %
+[PASS] ring recovers tan d within 15 % (after conductor-Q removal)  worst 5.3 %
+[PASS] model-based extraction (gap model included) removes the bias (< 0.2 %)  er = 4.3500
+1. Cavity perturbation vs 2-D FD eigen-solution (a = d = 100 mm, TE101)
+   empty cavity: FD 2.11984 GHz vs analytic 2.11985 GHz
+[PASS] FD empty-cavity TE101 within 0.01 % of analytic  
+   rod r = 0.75 mm, er = 4.4-j0.088: Vs/V = 1.77e-04; df/f FD 1.1803e-03 vs pert 1.2017e-03 (+1.8 %); 1/Q FD 6.145e-05 vs pert 6.220e-05; recovered er' = 4.340, tan d = 0.0200
+   rod r = 1.50 mm, er = 4.4-j0.088: Vs/V = 7.07e-04; df/f FD 4.8701e-03 vs pert 4.8066e-03 (-1.3 %); 1/Q FD 2.567e-04 vs pert 2.488e-04; recovered er' = 4.445, tan d = 0.0204
+   rod r = 3.00 mm, er = 4.4-j0.088: Vs/V = 2.83e-03; df/f FD 1.9782e-02 vs pert 1.9227e-02 (-2.8 %); 1/Q FD 1.075e-03 vs pert 9.953e-04; recovered er' = 4.498, tan d = 0.0211
+   rod r = 6.00 mm, er = 4.4-j0.088: Vs/V = 1.13e-02; df/f FD 7.7456e-02 vs pert 7.6906e-02 (-0.7 %); 1/Q FD 4.351e-03 vs pert 3.981e-03; recovered er' = 4.424, tan d = 0.0217
+   rod r = 1.50 mm, er = 10.0-j0.200: Vs/V = 7.07e-04; df/f FD 1.3173e-02 vs pert 1.2723e-02 (-3.4 %); 1/Q FD 6.136e-04 vs pert 5.655e-04; recovered er' = 10.318, tan d = 0.0210
+[PASS] perturbation er' error < 2 % for a 1.5 mm-radius FR-4 rod (df/f < 1 %)  4.445
+[PASS] perturbation tan d error < 5 % for the same rod  0.0204
+[FAIL] rod-parallel-to-E perturbation stays within 3 % in er' for every resolved rod (r >= 1.5 mm) with df/f < 2 %  
+   (the r = 0.75 mm rod is only ~4.5 cells across at h = 0.33 mm: its +1.8 % is FD discretisation, not theory)
+[PASS] loss-tangent recovery degrades as the rod grows (r = 6 mm worse than 1.5 mm)  0.0217 vs 0.0204
+
+Summary: 15/17 checks passed

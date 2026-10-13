@@ -1,0 +1,40 @@
+1|12|covered|12/beamforming-architectures|digital beamforming incl. digital true-time delay; RF/IF/LO/digital/hybrid compared (re-checked 09-29)
+3|12|covered|12/beamforming-architectures|RF/IF/LO/digital/hybrid implementations compared (re-checked)
+8|11|covered|11/fmcw-radar#The math|end-to-end chain: range FFT → clutter notch → Doppler FFT → CFAR → angle FFT (re-checked)
+11|11|partial|12/beamforming-architectures|virtual array N_t·N_r and TDM-MIMO step described; resolution/Capon on virtual array awaits mimo-radar-virtual-arrays (planned)
+18|12|partial|12/beamforming-architectures|subarray/hybrid architectures covered; second-stage (beamspace) processing of beamformed outputs not
+21|11|covered|11/fmcw-radar|max range limited by IF bandwidth/ADC rate — the ADC samples the beat, not the sweep (re-checked)
+23|11|covered|11/fmcw-radar#How to simulate|dechirp simulation (tools/verify) (re-checked)
+55|11|partial|11/fmcw-radar|zero-Doppler static-clutter notch; MTI/clutter-map filtering awaits clutter-and-mti (planned)
+56|11|covered|11/ambiguity-function-waveforms|(re-checked)
+57|14|covered|14/nco-ddc-duc|NCO mix-down/Doppler tracking before filtering (re-checked)
+58|11|covered|11/cw-and-doppler-radar|(re-checked)
+59|11|covered|11/cw-and-doppler-radar|micro-Doppler breathing/heartbeat (re-checked)
+80|11|covered|11/fmcw-radar#The math|FMCW range–Doppler coupling derived (re-checked)
+82|11|covered|11/ambiguity-function-waveforms|cross-ambiguity for passive radar (re-checked)
+89|11|covered|11/fmcw-radar|f_b = 2SR/c and resolution derived (re-checked)
+91|11|partial|11/fmcw-radar|concept used (range FFT within chirp, Doppler FFT across chirps) but the terms fast-time/slow-time are never named
+94|11|covered|11/fmcw-radar|(re-checked)
+96|11|covered|11/fmcw-radar|range/Doppler/angle FFTs → point cloud (re-checked)
+97|11|covered|11/fmcw-radar|TI idle time, ADC start, ramp end (re-checked)
+98|11|covered|11/ambiguity-function-waveforms|(re-checked)
+99|11|covered|11/fmcw-radar|range–Doppler map formation (re-checked)
+111|12|partial|12/beamforming-architectures|shared LO/10 MHz reference and coherence of two SDRs covered; measuring/calibrating inter-channel delay awaits array-calibration (planned)
+136|06|covered|06/receiver-architectures|superhet vs zero-IF trade-offs (re-checked)
+138|06|covered|06/receiver-architectures|IF selectivity (re-checked)
+179|14|covered|12/beamforming-architectures|coherent reception needs a shared reference; 14/iq-complex-baseband (re-checked)
+192|17|covered|17/spectrum-analyzers|detectors, channel power (re-checked)
+357|11|covered|11/cw-and-doppler-radar|HB100 IF amplification ("sees nothing") (re-checked)
+401|13|covered|13/stackups-and-materials|core vs prepreg, glass styles (re-checked)
+418|06|covered|06/frequency-multipliers-dividers|multipliers/20 log N; 06/vco-and-pll-synthesizers (re-checked)
+423|06|covered|06/frequency-multipliers-dividers|dual-modulus prescaler, minimum N (re-checked)
+426|11|covered|11/fmcw-radar|FMCW-to-FMCW interference (chirp-crossing bursts, ghosts) described; mitigation not simulated (re-checked)
+436|11|covered|11/fmcw-radar|radar part covered; lidar out of scope (re-checked)
+441|06|covered|06/receiver-architectures|IF choice incl. 455 kHz (re-checked)
+451|06|covered|06/receiver-architectures|(re-checked)
+432|11|partial|06/detectors-and-power-meters|diode detector/TSS now covered; wideband radar-detector receiver not
+520|13|covered|13/stackups-and-materials|impedance control, tolerances, TG155 (re-checked)
+638|17|partial|17/rf-power-measurement|how far to trust a wattmeter SWR reading; calibration procedure not
+674|06|partial|17/rf-power-measurement|through-line wattmeters covered; cross-needle meter reading not
+476|17|partial|17/rf-power-measurement|output-power measurement covered; quick "is it transmitting" checks (SDR, field-strength meter) not
+608|17|partial|17/rf-power-measurement|dummy loads/attenuators covered; on-air tuning practice not

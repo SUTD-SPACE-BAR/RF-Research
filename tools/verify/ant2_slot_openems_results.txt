@@ -1,0 +1,55 @@
+
+=== ant2_slot_openems.py 2026-09-29 02:18 slot 57.0 x 2.45 mm ===
+case A: 942678 cells, 26 s; X=0 (ind->cap) at 2.4433 GHz (L/(lambda/2) = 0.929), R there = 488 ohm; R max 508 ohm at 2.390 GHz
+    f = 2.199 GHz: Z =  296.3 +341.8j ohm
+    f = 2.321 GHz: Z =  471.5 +226.7j ohm
+    f = 2.443 GHz: Z =  488.2   +0.0j ohm
+    f = 2.565 GHz: Z =  368.6 -124.0j ohm
+    f = 2.688 GHz: Z =  261.6 -147.4j ohm
+case B: 997326 cells, 32 s; X=0 (ind->cap) at 1.8584 GHz (L/(lambda/2) = 0.707), R there = 714 ohm; R max 721 ohm at 1.847 GHz
+    f = 1.673 GHz: Z =  156.5 +367.8j ohm
+    f = 1.765 GHz: Z =  434.5 +424.7j ohm
+    f = 1.858 GHz: Z =  713.8   +0.0j ohm
+    f = 1.951 GHz: Z =  398.5 -284.3j ohm
+    f = 2.044 GHz: Z =  201.7 -245.6j ohm
+case C: 340648 cells, 13 s; X=0 (ind->cap) at 1.9227 GHz (L/(lambda/2) = 0.731), R there = 358 ohm; R max 360 ohm at 1.907 GHz; D = 3.11 dBi, radiation efficiency = 95.1 %
+    f = 1.730 GHz: Z =  219.5 +190.8j ohm
+    f = 1.827 GHz: Z =  317.5 +136.6j ohm
+    f = 1.923 GHz: Z =  358.2   -0.0j ohm
+    f = 2.019 GHz: Z =  287.4 -114.0j ohm
+    f = 2.115 GHz: Z =  195.0 -143.8j ohm
+
+=== ant2_slot_openems.py 2026-09-29 02:20 ===
+case C (slot 57.0 x 2.45 mm, feed offset 0.00 mm): 368632 cells, 21 s; X=0 (ind->cap) at 1.8377 GHz (L/(lambda/2) = 0.699), R there = 423 ohm; R max 435 ohm at 1.801 GHz; D = 4.47 dBi, radiation efficiency = 94.6 %
+    f = 1.654 GHz: Z =  254.2 +290.6j ohm
+    f = 1.746 GHz: Z =  402.3 +189.5j ohm
+    f = 1.838 GHz: Z =  422.9   -0.0j ohm
+    f = 1.930 GHz: Z =  330.0 -116.2j ohm
+    f = 2.021 GHz: Z =  235.3 -149.1j ohm
+case D (slot 43.5 x 2.45 mm, feed offset 0.00 mm): 340516 cells, 21 s; X=0 (ind->cap) at 2.4025 GHz (L/(lambda/2) = 0.697), R there = 613 ohm; R max 618 ohm at 2.387 GHz; D = 5.17 dBi, radiation efficiency = 93.3 %
+    f = 2.162 GHz: Z =  216.3 +342.4j ohm
+    f = 2.282 GHz: Z =  448.1 +326.2j ohm
+    f = 2.403 GHz: Z =  612.9   +0.0j ohm
+    f = 2.523 GHz: Z =  394.7 -239.0j ohm
+    f = 2.643 GHz: Z =  213.7 -231.4j ohm
+case E (slot 43.5 x 2.45 mm, feed offset 10.88 mm): 340516 cells, 29 s; X=0 (ind->cap) at 2.4229 GHz (L/(lambda/2) = 0.703), R there = 326 ohm; R max 341 ohm at 2.384 GHz
+    f = 2.181 GHz: Z =  137.6 +229.5j ohm
+    f = 2.302 GHz: Z =  278.0 +198.9j ohm
+    f = 2.423 GHz: Z =  325.5   +0.0j ohm
+    f = 2.544 GHz: Z =  191.4  -93.6j ohm
+    f = 2.665 GHz: Z =  102.5  -73.9j ohm
+
+=== ant2_slot_openems.py 2026-09-29 02:26 ===
+case F (open-ended notch slot 57.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 4.0 mm from the closed end): 319792 cells, 67 s; best match 0.8040 GHz, S11 -5.3 dB, Z 17.3+18.8j; VSWR-2 band 0.000-0.000 GHz; D 2.19 dBi, e_rad 101.3 %; Z(915 MHz) 5.6+15.8j; L/(lambda0/4) at best match = 0.611
+
+=== ant2_slot_openems.py 2026-10-02 02:48 ===
+case F (open-ended notch slot 50.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 8.0 mm from the closed end): 312840 cells, 56 s; best match 0.9330 GHz, S11 -10.6 dB, Z 39.4+25.4j; VSWR-2 band 0.903-0.972 GHz; D 2.22 dBi, e_rad 97.7 %; Z(915 MHz) 42.9+29.3j; L/(lambda0/4) at best match = 0.622
+case F (open-ended notch slot 50.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 12.0 mm from the closed end): 309364 cells, 47 s; best match 1.0005 GHz, S11 -15.5 dB, Z 52.6+17.3j; VSWR-2 band 0.913-1.256 GHz; D 2.27 dBi, e_rad 102.6 %; Z(915 MHz) 78.5+32.9j; L/(lambda0/4) at best match = 0.667
+case F (open-ended notch slot 50.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 16.0 mm from the closed end): 309364 cells, 52 s; best match 1.2490 GHz, S11 -19.3 dB, Z 50.7+11.0j; VSWR-2 band 0.962-1.400 GHz; D 2.21 dBi, e_rad 99.7 %; Z(915 MHz) 121.5+36.1j; L/(lambda0/4) at best match = 0.833
+
+=== ant2_slot_openems.py 2026-10-02 02:50 ===
+case F (open-ended notch slot 53.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 9.0 mm from the closed end): 312840 cells, 56 s; best match 0.8925 GHz, S11 -14.6 dB, Z 44.9+17.2j; VSWR-2 band 0.849-0.957 GHz; D 2.21 dBi, e_rad 102.6 %; Z(915 MHz) 37.5+15.0j; L/(lambda0/4) at best match = 0.631
+case F (open-ended notch slot 55.0 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 9.0 mm from the closed end): 319792 cells, 78 s; best match 0.8630 GHz, S11 -16.9 dB, Z 46.1+13.2j; VSWR-2 band 0.822-0.920 GHz; D 2.20 dBi, e_rad 101.7 %; Z(915 MHz) 28.3+12.2j; L/(lambda0/4) at best match = 0.633
+
+=== ant2_slot_openems.py 2026-10-02 02:51 ===
+case F (open-ended notch slot 51.5 x 2.0 mm from the edge of a 80 x 100 mm FR-4 board, 50-ohm feed 9.0 mm from the closed end): 309364 cells, 56 s; best match 0.9165 GHz, S11 -13.2 dB, Z 44.1+20.2j; VSWR-2 band 0.872-0.986 GHz; D 2.22 dBi, e_rad 103.0 %; Z(915 MHz) 44.6+20.5j; L/(lambda0/4) at best match = 0.630

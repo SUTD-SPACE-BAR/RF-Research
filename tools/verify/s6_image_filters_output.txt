@@ -1,0 +1,37 @@
+constant-k prototype for R0 = 50 ohm, fc = 520 MHz: L = 30.61 nH, C = 12.24 pF
+=== 1. image parameters vs ABCD
+[PASS] T-section image Z and gamma at 200 MHz Z_iT = 46.15+0.00j; formula R0 sqrt(1-(f/fc)^2) = 46.15+0.00j
+[PASS] T-section image Z and gamma at 450 MHz Z_iT = 25.06+0.00j; formula R0 sqrt(1-(f/fc)^2) = 25.06+0.00j
+[PASS] T-section image Z and gamma at 700 MHz Z_iT = 0.00+45.06j; formula R0 sqrt(1-(f/fc)^2) = 0.00+45.06j
+=== 2. stop-band attenuation of one constant-k section
+[PASS] alpha(868 MHz) = 2 acosh(f/fc) 2.200 Np = 19.1 dB per section (image-matched)
+[PASS] alpha(1302 MHz) = 2 acosh(f/fc) 3.136 Np = 27.2 dB per section (image-matched)
+=== 3. m-derived sections
+   pole at 867.8 MHz -> m = 0.8006
+[PASS] m-derived shunt arm is a series-resonant short at f_inf |Z| = 1.1e-14
+   m = 0.5: Z_ipi (m-derived T, cut at shunt arm) within  13.3 % of R0 up to 0.8 fc
+   m = 0.6: Z_ipi (m-derived T, cut at shunt arm) within   4.0 % of R0 up to 0.8 fc
+   m = 0.7: Z_ipi (m-derived T, cut at shunt arm) within  12.3 % of R0 up to 0.8 fc
+   m = 1.0: Z_ipi (m-derived T, cut at shunt arm) within  66.7 % of R0 up to 0.8 fc
+   m = 0.5: Z_ipi (m-derived T, cut at shunt arm) within  13.4 % of R0 up to 0.9 fc
+   m = 0.6: Z_ipi (m-derived T, cut at shunt arm) within  10.5 % of R0 up to 0.9 fc
+   m = 0.7: Z_ipi (m-derived T, cut at shunt arm) within  34.6 % of R0 up to 0.9 fc
+   m = 1.0: Z_ipi (m-derived T, cut at shunt arm) within 129.4 % of R0 up to 0.9 fc
+[PASS] m = 0.6 flattens the pi image impedance (vs constant-k) 10.5 % vs 129 %
+=== 4. composite image-parameter LPF vs insertion-loss designs (50 ohm, Q_L 40, Q_C 300)
+   composite (ideal parts): worst RL 1-300 MHz = 34.2 dB
+   composite (ideal parts): worst RL 1-400 MHz = 30.0 dB
+   composite (ideal parts): worst RL 1-450 MHz = 30.0 dB
+   composite (ideal parts): worst RL 1-480 MHz = 30.0 dB
+   image-param composite (6 L, 4 C)  : IL(433.92)  1.17 dB | atten 2f  79.6 dB, 3f  58.8 dB | worst RL 400-480 MHz  28.1 dB
+   Chebyshev 0.1 dB N=5              : IL(433.92)  0.56 dB | atten 2f  25.6 dB, 3f  45.8 dB | worst RL 400-480 MHz  16.8 dB
+   Chebyshev 0.1 dB N=7              : IL(433.92)  0.85 dB | atten 2f  44.7 dB, 3f  73.1 dB | worst RL 400-480 MHz  17.2 dB
+[PASS] composite image filter reaches > 40 dB at 2f with its m-derived pole 79.6 dB
+   composite |S21| at 490 MHz (ideal parts):  -0.08 dB; RL  17.4 dB
+   composite |S21| at 505 MHz (ideal parts):  -1.00 dB; RL   6.9 dB
+   composite |S21| at 520 MHz (ideal parts):  -4.75 dB; RL   1.8 dB
+   composite |S21| at 540 MHz (ideal parts): -13.42 dB; RL   0.2 dB
+[PASS] faithful: with m = 0.6 ends the composite is well matched to 0.92 fc (RL > 20 dB, ideal parts) 30.0 dB
+[PASS] but it uses 10 reactors vs 7 and loses more in-band than the N = 7 Chebyshev (Q_L 40) 1.17 vs 0.85 dB
+
+ALL PASS

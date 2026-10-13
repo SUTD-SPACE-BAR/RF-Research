@@ -1,0 +1,8 @@
+  L(    10000 Hz) =  -103.29 dBc/Hz  (page: -103)
+  L(   100000 Hz) =  -125.88 dBc/Hz  (page: -126)
+  L(  1000000 Hz) =  -146.22 dBc/Hz  (page: -146)
+  L( 10000000 Hz) =  -163.61 dBc/Hz  (page: -164)
+  floor FkT/(2Ps) = -166.99 dBc/Hz; L(100 MHz) = -166.93; corner f0/2QL = 10.82 MHz
+  frequency where L is within 0.5 dB of the floor: 32 MHz
+  QL = 50 at 100 kHz: -133.8 dBc/Hz (page: -134)
+CHECK: PASS

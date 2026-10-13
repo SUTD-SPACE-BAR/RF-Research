@@ -1,0 +1,130 @@
+=== 1. Two-load output resistance ===
+[PASS] exact recovery R_s = 50 ohm (50/100 ohm loads) 50.000
+[PASS] exact recovery R_s = 10 ohm (50/100 ohm loads) 10.000
+[PASS] exact recovery R_s = 150 ohm (50/100 ohm loads) 150.000
+  loads 50 &     25 ohm, 0.1 dB power error: R_s =   50.0 ohm, spread (16-84 %)   45.5 ..   55.1
+  loads 50 &     75 ohm, 0.1 dB power error: R_s =   50.0 ohm, spread (16-84 %)   42.4 ..   58.6
+  loads 50 &    100 ohm, 0.1 dB power error: R_s =   50.0 ohm, spread (16-84 %)   45.3 ..   55.1
+  loads 50 &    200 ohm, 0.1 dB power error: R_s =   50.0 ohm, spread (16-84 %)   47.3 ..   52.7
+  loads 50 &   1000 ohm, 0.1 dB power error: R_s =   50.0 ohm, spread (16-84 %)   48.2 ..   51.8
+[PASS] widely spaced loads (50 & 1000) beat close ones (50 & 100) spread 3.6 vs 9.8 ohm
+[PASS] loaded-vs-open voltage: R_s = R_L (V_oc/V_L - 1) 
+
+=== 2. Complex source impedance from four loads (linear least squares) ===
+[PASS] four-load solve recovers 30 + j20 ohm exactly 30.0000+20.0000j
+[PASS] with only resistive loads, +jX and -jX give identical powers 
+  0.05 dB power errors: R_s = 29.9 (+/-7.5), X_s = 20.0 (+/-3.7) ohm
+[PASS] 0.05 dB errors give a few-ohm uncertainty 
+
+=== 3. Source match from power ripple into a rotated mismatch ===
+  |Gs| = 0.1: P_max/P_min =  0.58 dB -> recovered |Gs| = 0.100
+[PASS]   inversion |Gs| = 0.1 
+  |Gs| = 0.3: P_max/P_min =  1.74 dB -> recovered |Gs| = 0.300
+[PASS]   inversion |Gs| = 0.3 
+  |Gs| = 0.5: P_max/P_min =  2.92 dB -> recovered |Gs| = 0.500
+[PASS]   inversion |Gs| = 0.5 
+  |Gs| = 0.7: P_max/P_min =  4.13 dB -> recovered |Gs| = 0.700
+[PASS]   inversion |Gs| = 0.7 
+  433 MHz, PTFE coax vf 0.695: lambda_g/2 = 24.1 cm rotates Gamma_L by 360 deg; 8 phases -> steps of 3.0 cm
+  915 MHz, PTFE coax vf 0.695: lambda_g/2 = 11.4 cm rotates Gamma_L by 360 deg; 8 phases -> steps of 1.4 cm
+
+=== 4. SWR meter / coupler directivity ===
+  true SWR 1.2: D 20 dB: 1.00-1.47; D 25 dB: 1.07-1.35; D 30 dB: 1.13-1.28; D 35 dB: 1.16-1.24
+  true SWR 1.5: D 20 dB: 1.22-1.86; D 25 dB: 1.34-1.69; D 30 dB: 1.40-1.60; D 35 dB: 1.45-1.56
+  true SWR 2.0: D 20 dB: 1.61-2.53; D 25 dB: 1.77-2.28; D 30 dB: 1.86-2.15; D 35 dB: 1.92-2.08
+[PASS] 20 dB directivity, SWR 1.22 reads 1.00-1.50 (matches rf-power-measurement Ex. 4) 
+[PASS] rotated-mismatch method recovers directivity and |Gamma| D = 23.00 dB, |G| = 0.3333
+  forward-power error, D 25 dB, |Gamma_L| 0.333: -0.164 / +0.161 dB
+  forward-power error, D 25 dB, |Gamma_L| 0.1: -0.049 / +0.049 dB
+  forward-power error, D 35 dB, |Gamma_L| 0.333: -0.052 / +0.051 dB
+
+=== 5. Shield boxes, apertures, waveguide-below-cutoff, cavity resonances, TEM cell ===
+  conducted test -10.0 dBm -> -130.0 dBm: path attenuation 120 dB, leakage paths >= 140 dB
+[PASS] isolation rule = attenuation + 20 dB 
+  slot SE at    433 MHz: L    1 mm:  50.8 dB, L    5 mm:  36.8 dB, L   10 mm:  30.8 dB, L   30 mm:  21.2 dB, L  100 mm:  10.8 dB
+  slot SE at    915 MHz: L    1 mm:  44.3 dB, L    5 mm:  30.3 dB, L   10 mm:  24.3 dB, L   30 mm:  14.7 dB, L  100 mm:   4.3 dB
+  slot SE at   2450 MHz: L    1 mm:  35.7 dB, L    5 mm:  21.8 dB, L   10 mm:  15.7 dB, L   30 mm:   6.2 dB, L  100 mm:  -4.3 dB
+[PASS] 10 mm slot at 915 MHz ~ 24 dB 
+  10 closely spaced holes: -20 dB vs one hole (rule of thumb, holes within ~lambda/2)
+  circular TE11: 31.99 dB per diameter/width of length (f << fc)
+[PASS]   circular TE11 attenuation rule 32.0 
+  rectangular TE10: 27.29 dB per diameter/width of length (f << fc)
+[PASS]   rectangular TE10 attenuation rule 27.3 
+  10 mm hole: cutoff 17.6 GHz; a 20 mm long tube gives 64 dB at 915 MHz (exact 63.9 dB)
+  box 300x200x100 mm: lowest resonances 901, 1249, 1580, 1580 MHz
+  box 250x180x80 mm: lowest resonances 1026, 1460, 1770, 1967 MHz
+  box 400x300x200 mm: lowest resonances 625, 838, 901, 901 MHz
+[PASS] 300x200x100 mm box lowest mode ~901 MHz 
+  cylindrical tin, radius 100 mm: TM010 1148 MHz
+  TEM cell, P = 1.0 W, septum spacing h = 10 cm: E = sqrt(P Z0)/h = 70.7 V/m
+  TEM cell, P = 0.01 W, septum spacing h = 5 cm: E = sqrt(P Z0)/h = 14.1 V/m
+[PASS] TEM cell 1 W, h 10 cm -> 70.7 V/m 
+
+=== 6. E22-400T33D (33 dBm, 433.125 MHz): pads, harmonics, uncertainty ===
+  20 dB, rated 10 W: in  33.0 dBm (1.995 W) -> dissipates 1.975 W, out  13.0 dBm
+  20 dB, rated 2 W: in  13.0 dBm (0.020 W) -> dissipates 0.020 W, out  -7.0 dBm
+[PASS] first pad dissipates ~1.98 W continuous 
+  harmonic 2: 866.25 MHz, limit -36.0 dBm -> required 69 dBc
+  harmonic 3: 1299.38 MHz, limit -30.0 dBm -> required 63 dBc
+[PASS] 2nd harmonic must be <= -69 dBc 
+  without filter: fundamental at analyser -7 dBm -> analyser H2 -49 dBm = -42 dBc (cannot verify -69 dBc)
+  with HPF (40 dB at f0, 1 dB at 2f0): fundamental -47 dBm -> analyser H2 -129 dBm; a DUT harmonic at the limit arrives at -77 dBm
+[PASS] HPF puts analyser H2 > 30 dB below a limit-level DUT harmonic 
+  +/-0.100 dB  pad calibration (VNA, 2 pads)
+  +/-0.123 dB  mismatch module-pad (|Gs| 0.3 assumed, pad VSWR 1.1)
+  +/-0.200 dB  power sensor (thermal, calibrated)
+  +/-0.100 dB  temperature drift of pads under 2 W
+  RSS (k=1 style combination of limits): +/-0.27 dB; with a tinySA (+/-1.5 dB assumed) instead of a sensor: +/-1.51 dB
+[PASS] power-meter route ~ +/-0.3 dB 
+  GUM combination: standard uncertainty 0.166 dB, expanded (k = 2) +/-0.33 dB
+[PASS] GUM expanded uncertainty ~ +/-0.33 dB 
+
+=== 7. Wheeler cap: uncertainty and cap resonance ===
+  R_free  12.0, R_cap  1.5 ohm: eta  87.5 % (1-sigma  1.0 % for 0.1 ohm + 1 % resistance errors)
+  R_free   2.0, R_cap  0.6 ohm: eta  70.0 % (1-sigma  5.6 % for 0.1 ohm + 1 % resistance errors)
+  R_free   0.9, R_cap  0.5 ohm: eta  44.4 % (1-sigma 13.9 % for 0.1 ohm + 1 % resistance errors)
+[PASS] small antennas (R_free < 1 ohm) give >10 % efficiency uncertainty; R_free 12 ohm < 2 % 
+     433 MHz: radiansphere r = 110.2 mm; cube of side   220 mm resonates at    962 MHz (2.22 x f)
+     868 MHz: radiansphere r =  55.0 mm; cube of side   110 mm resonates at   1928 MHz (2.22 x f)
+     915 MHz: radiansphere r =  52.1 mm; cube of side   104 mm resonates at   2033 MHz (2.22 x f)
+    2450 MHz: radiansphere r =  19.5 mm; cube of side    39 mm resonates at   5443 MHz (2.22 x f)
+[PASS] cube cap with half-side lambda/2pi resonates at pi/sqrt(2) = 2.22 f 
+  sphere of radius lambda/2pi: lowest TM mode at ka = 2.744 -> 2.74 x f
+
+=== 8. Range testing with attenuators ===
+  43.5 dB extra at 200 m -> free-space equivalent 29.9 km; 2-ray (d^-4) regime: 2.45 km
+[PASS] 43.5 dB at 200 m = 29.9 km (matches antenna-range-ota-testing Ex. 3) 
+  attenuator error 0.5 dB -> range error 5.9 %
+  attenuator error 1.0 dB -> range error 12.2 %
+  attenuator error 2.0 dB -> range error 25.9 %
+  leakage around a 100 dB attenuator must be >= 120 dB (else the test overstates margin)
+
+=== 9. Pulse desensitisation (Gaussian RBW) ===
+[PASS] Gaussian impulse bandwidth factor K = 1.505 (AN 150-2 quotes ~1.5) K = 1.5054
+[PASS] impulse response integrates to H(0) = 1 (CW gain) 
+  tau*B = 0.02: peak/CW = -30.43 dB, 20log(K tau B) = -30.43 dB
+  tau*B = 0.05: peak/CW = -22.48 dB, 20log(K tau B) = -22.47 dB
+  tau*B = 0.10: peak/CW = -16.50 dB, 20log(K tau B) = -16.45 dB
+  tau*B = 0.20: peak/CW = -10.63 dB, 20log(K tau B) = -10.43 dB
+  tau*B = 0.50: peak/CW =  -3.68 dB, 20log(K tau B) =  -2.47 dB
+  tau*B = 1.00: peak/CW =  -0.53 dB, 20log(K tau B) =   3.55 dB
+[PASS] approximation within 0.3 dB for tau*B <= 0.2 error 0.20 dB at 0.2
+  0.5 us pulses (ADS-B-like), RBW 300 kHz: desensitisation -12.9 dB
+  1 us radar pulse, RBW 100 kHz: desensitisation -16.4 dB
+  line spectrum (RBW < 0.3 PRF): central line = 20log(tau PRF) = -20 dB below the pulse peak
+
+=== 10. Ferrite core permeability ===
+  FT37-size, mu_i 800: A_L = 353 nH/turn^2
+  FT37-size, mu_i 125: A_L = 55 nH/turn^2
+[PASS] FT37-size with mu 800 -> ~353 nH/turn^2 
+  N = 5, f = 10 MHz, Z = (30+140j) ohm -> L0 = 11.02 nH, mu' = 202, mu'' = 43 (wire and fixture parasitics must be de-embedded)
+
+=== 11. Quick 'is it transmitting' levels ===
+  20 dBm EIRP at  1 m, 433 MHz: E = 1.732 V/m, 0 dBi SDR antenna gets   -5.2 dBm
+  20 dBm EIRP at 10 m, 433 MHz: E = 0.173 V/m, 0 dBi SDR antenna gets  -25.2 dBm
+  33 dBm EIRP at 10 m, 433 MHz: E = 0.774 V/m, 0 dBi SDR antenna gets  -12.2 dBm
+  14 dBm EIRP at  3 m, 915 MHz: E = 0.289 V/m, 0 dBi SDR antenna gets  -27.2 dBm
+[PASS] 100 mW EIRP at 1 m = 1.73 V/m 
+
+33/33 checks passed
+ALL PASS

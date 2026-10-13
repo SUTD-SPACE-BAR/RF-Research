@@ -1,0 +1,207 @@
+{
+"C2": {
+"topic": "PCB ground planes, pours and splits",
+"target": "13/grounding-and-return-paths + 13/mixed-signal-layout (planned)",
+"needs": "When (almost never) to split a plane vs partitioning over one plane; pour or not on 2-layer RF boards; stitching of pours; no floating islands; pour clearance next to CPWG; ground under crystals/oscillators; the return-current picture for each case, using JLC 2/4-layer examples."
+},
+"C22": {
+"topic": "Bench test practice",
+"target": "17/rf-bring-up-debug-playbook, 17/sdr-as-test-equipment, 17/antenna-range-ota-testing (planned); 17/oscilloscopes-and-probing-for-rf (written 09-29) already closed the scope-FFT, probe-pickup and 50 Ω-input questions",
+"needs": "Quick \"is it transmitting\" checks; measuring amplifier/generator output impedance; pulse spectra on an SA (line vs envelope); reading antenna-analyser R/X/SWR (sign ambiguity of X); calibrating an SWR meter with known loads; shield box + step attenuator for sensitivity/\"bad reception\" tests; near-field scanners; on-air tuning practice."
+},
+"C7": {
+"topic": "Adaptive beamforming and DOA estimation",
+"target": "12/adaptive-beamforming-doa (planned)",
+"needs": "A non-matrix explanation of adaptive nulling; conventional vs MVDR/SMI; why adaptive nulls are narrower than the beam; diagonal loading for robustness; MUSIC in practice (snapshots, source-count estimation, coherent sources and spatial smoothing, grid bias); TDOA/GCC; hands-on radio direction finding (fox hunting, Watson-Watt, pseudo-Doppler)."
+},
+"C6": {
+"topic": "RF layout rules, launches and review",
+"target": "13/rf-layout-rules, 13/connectors-and-launches, 13/rf-pcb-review-checklist (planned)",
+"needs": "General RF PCB rules; when trace bends (mitred vs curved) matter, with numbers checked in openEMS; radial/butterfly stubs; matched via transitions (return vias, anti-pads, via delay); soldering RG316 straight to a board and edge-launch SMA/MMCX footprints; a layout-review checklist."
+},
+"C21": {
+"topic": "Spectrum allocation, band ID and certification",
+"target": "19/spectrum-allocation-ism-bands (planned); 19/certification-fcc-ce-imda (written 09-29; add failure-fix section)",
+"needs": "Why 433.05–434.79 MHz is everywhere (ITU Region-1 ISM, cheap SAW-resonator OOK), where the 2.4 GHz ISM band came from (and the water-resonance myth); using band plans to identify signals (e.g. airband); whether ham HTs may be used on FRS/PMR, legality of cellular-band SDR; a pre-compliance test workflow and common fixes."
+},
+"C1": {
+"topic": "**GNSS receiver operation**",
+"target": "**NEW** — e.g. 08/gnss-receiver-operation (20/gnss-front-end-design covers only the RF chain)",
+"needs": "TTFF (cold/warm/hot), almanac vs ephemeris, A-GNSS; channels and correlators; satellite clocks and the control segment; 1 PPS and timing receivers; 10–25 Hz nav rates vs dynamics; GNSS is receive-only; 10 MHz/1 PPS/GPSDO. For rockets add dynamic-platform models, CoCom altitude/velocity limits and re-acquisition after boost."
+},
+"C5": {
+"topic": "EMC/EMI practice and RF immunity",
+"target": "13/emc-emi-fundamentals (planned) + 19/certification (planned)",
+"needs": "Fixing a failed radiated-emissions test on a cable; Y-capacitors and SMPS CM filtering; edge-rate/series-R control; twisting and loop area; immunity (GSM 217 Hz buzz via audio rectification, GFCI trips, VDSL/cable RFI); hunting solar-inverter and neighbour RFI. (Near-field-probe hunting is now in 17/oscilloscopes-and-probing-for-rf.)"
+},
+"C12": {
+"topic": "SDR signal identification and application recipes (unknown-signal ID, pagers, AIS, ATSC)",
+"target": "14/software-demodulation (written 09-29; add a signal-ID section) + 14/gnu-radio-and-software-stack (planned)",
+"needs": "Workflow from an unknown signal to its modulation and baud (bandwidth, spectral lines/cyclostationarity, sigidwiki, inspectrum/URH); worked AIS (GMSK) and POCSAG examples; ATSC/DVB-T reception in GNU Radio. (AFSK, AM/FM/SSB, QPSK and OOK decoding are now covered by 14/software-demodulation.)"
+},
+"C27": {
+"topic": "Antenna types not yet in the KB",
+"target": "**NEW** sections/page in 08 (e.g. 08/other-antenna-types)",
+"needs": "Slot and aperture antennas in metal enclosures (laptops, rocket bodies); lens antennas and why they are rare below mm-wave; random-wire/end-fed non-resonant antennas + unun; fan/multiband dipoles; off-centre-fed dipoles; dual-band 315/433 PCB antennas; on-metal antennas; RFID/NFC reader coils and their matching; lumped L/C models of antennas; how feed-point impedance varies along an antenna."
+},
+"C3": {
+"topic": "Via stitching, via fences and edge plating",
+"target": "13/vias-stitching-fencing (planned)",
+"needs": "Stitch spacing rules (fraction of λ in the dielectric) and where they come from; why boards have plated edges and via rows along the edge; via fences along CPWG vs around chip antennas (never fence the radiator); how many vias is enough (link 04 via inductance)."
+},
+"C4": {
+"topic": "Shielding and shield grounding",
+"target": "13/shielding-and-isolation (planned)",
+"needs": "Connector shell to chassis vs signal ground (direct, RC, ferrite); cable shields bonded at one or both ends (depends on frequency); shield-can design (seams, apertures, via fence under the can lip); electric vs magnetic shielding and why a sheet works but a wrap does not; foil and Faraday-cage tests with seams."
+},
+"C15": {
+"topic": "Superregenerative and simple discrete radios",
+"target": "06/receiver-architectures (add superregen section) + NEW beginner recipe in 20",
+"needs": "How superregen modules (XY-MK-5V) work — quench, poor selectivity, re-radiation — and what to replace them with (superhet OOK modules, CC1101); discrete FM receivers; one-transistor FM \"bug\" transmitters; AM modulator/detector circuits; crystal-radio detectors."
+},
+"C13": {
+"topic": "SDR hardware and practical SDR noise/spurs",
+"target": "14/sdr-hardware-survey (planned), 17/sdr-as-test-equipment (planned)",
+"needs": "SDR vs oscilloscope; SDR architectures (R820T tuner + RTL2832, AD936x zero-IF, direct sampling, RFSoC); USB/host noise fixes (ferrites, shielding, powered hubs); telling switcher spur combs from real signals; limits of an SDR as a spectrum analyser."
+},
+"C35": {
+"topic": "Practical op-amp/analog gaps",
+"target": "05/op-amps-real-limitations, 05/analog-signal-conditioning (add)",
+"needs": "Choosing resistor values (noise vs bias current vs loading); bias path for AC-coupled non-inverting stages; noise gain < 1 stability trap in attenuators; compensating a MOSFET inside the loop; noise gain of summing amps; curing GSM-buzz RF rectification; 4–20 mA and differential long sensor lines."
+},
+"C20": {
+"topic": "Station/lab safety",
+"target": "19/lab-safety-esd-high-power (written 09-29; add sections)",
+"needs": "Why an ESD strap has a 1 MΩ series resistor; lightning protection and station/antenna grounding; DC-grounded antennas for static bleed; RF vs safety vs DC grounds; mobile-install power/ground. (ESD handling, TX-without-antenna and pyro RF safety are now covered.)"
+},
+"C14": {
+"topic": "DSP spectral-analysis pitfalls",
+"target": "14/fft-spectral-analysis-windows + 14/digital-filters-fir-iir (add)",
+"needs": "Why zeroing FFT bins is a poor filter (circular convolution, time-domain aliasing, ringing) and what to do instead; estimating SNR from a noisy record; overlap-add vs overlap-save explained; windowing vs editing the spectrum; windows as smoothing kernels."
+},
+"C32": {
+"topic": "Penetration vs frequency (myth)",
+"target": "09/atmospheric-rain-attenuation (add + Common mistakes)",
+"needs": "Frequency trend of wall, glass and foliage loss from ~0.1 to 100 GHz (ITU-R P.2040/P.2109 data), with the exceptions; say explicitly that \"higher frequency penetrates better\" is wrong in general; metallised glass and through-glass couplers."
+},
+"C38": {
+"topic": "LoRa hardware integration",
+"target": "20/lora-rocket-telemetry-link (planned) + 15/semtech-chip-family (add)",
+"needs": "Walk through the SX127x (RFO/PA_BOOST) and SX126x reference matching, harmonic filter and RF switch; minimal BOM for a bare chip; how multi-SF gateway demodulators (SX1301/2) work; coexistence with ultra-narrowband (SigFox); a simple star/TDMA network."
+},
+"C23": {
+"topic": "Magnetic cores",
+"target": "04/ferrites-and-beads, 04/inductors-at-rf (add); 17/fixtures-and-deembedding (planned)",
+"needs": "Iron powder vs ferrite (mixes, μ, loss, Q); identifying an unknown core by measuring AL and Q; gapped cores; CM-choke equivalent circuits; measuring rod/toroid μ and loss vs frequency with a VNA; why cable ferrites are less common now."
+},
+"C24": {
+"topic": "Simulation tool landscape",
+"target": "16/tool-landscape-overview (planned); 16/spice-circuit-simulation and 16/openems-workflow (written 09-29) closed the LTspice and openEMS questions",
+"needs": "Free RF tools compared (QUCS-S, ngspice/LTspice, openEMS, Sonnet Lite, scikit-rf, NEC) and when to use which."
+},
+"C41": {
+"topic": "RF connectors",
+"target": "18/connectors-and-cables-parts (planned)",
+"needs": "U.FL vs I-PEX MHF generations (which mate), mating cycles, loss and frequency limits; assembling PL-259/N/SMA connectors (crimp vs solder)."
+},
+"C18": {
+"topic": "Crystal/clock practicalities",
+"target": "04/crystals-and-resonators (add)",
+"needs": "Why 32.768 kHz (2^15, tuning-fork cut, parabolic tempco); crystal layout rules and why app notes disagree; MCU internal RC accuracy vs a crystal; RC-oscillator temperature drift."
+},
+"C25": {
+"topic": "Antenna conductor material and construction",
+"target": "08/dipoles-and-monopoles (add)",
+"needs": "Material barely changes resonant length (diameter and insulation do) but does change loss; loss numbers for Cu/Al/steel/brass at HF–UHF; tip voltage vs power (corona, capacitor ratings); effect of bent tips."
+},
+"C37": {
+"topic": "Specialty front-end filtering",
+"target": "06/rf-filters-lc-saw-baw-cavity-microstrip (add), 06/lna-design Common mistakes",
+"needs": "Diplexer design; repeater duplexers (pass/notch cavities); multi-band handset front ends; the \"RC filter after the LNA lowers noise\" myth; rejecting an out-of-band blocker (e.g. 5.8 GHz); loaded Q of critically coupled resonators."
+},
+"C16": {
+"topic": "Beginner starter path for a first RF circuit",
+"target": "**NEW** 20/first-rf-projects (or a section in 00/math-roadmap-for-rf)",
+"needs": "Minimum bench (NanoVNA, tinySA, RTL-SDR, dummy load, attenuators) and three graded first builds with pass/fail tests."
+},
+"C9": {
+"topic": "SAR/DBS and RF imaging (Doppler-to-azimuth, RF cameras, mechanically scanned radars, array outlines)",
+"target": "11/sar-and-imaging (planned); 11/mimo-radar-virtual-arrays (written 09-29) closed the virtual-array question",
+"needs": "Doppler beam sharpening and SAR basics; \"RF camera\" resolution limits (aperture/λ); mechanically scanned radars; why array outlines are octagonal/circular."
+},
+"C40": {
+"topic": "Niche synchronisation methods",
+"target": "10/synchronization-carrier-timing (add)",
+"needs": "Feed-forward ML vs Costas phase recovery; residual-carrier PSK (mod index < 90°); polyphase-filterbank timing recovery; FFT-based symbol sync; normalised cross-correlation for time-delay estimation; time-frequency matched filtering."
+},
+"C30": {
+"topic": "Matching concepts not yet explained",
+"target": "03/impedance-matching-lumped-and-distributed (add)",
+"needs": "How a matching network's internal reflections cancel (energy view); all-capacitor (tapped-C) matching; using an IC's impedance/S11 table; \"negative inductance\" in extracted models; AC (series-C) termination."
+},
+"C10": {
+"topic": "Radar processing terminology (fast/slow time, \"video\", A-scope)",
+"target": "GLOSSARY + 11/pulsed-radar-and-pulse-compression (terms); 11/clutter-and-mti (written 09-29) now covers MTI",
+"needs": "Name fast-time vs slow-time explicitly (the pages use the idea without the words); define radar \"video\" (detected/baseband signal); historical A-scope/PPI displays."
+},
+"C33": {
+"topic": "Receiver power drain and LO leakage",
+"target": "06/receiver-architectures (add)",
+"needs": "Where receiver current goes (LNA, LO/PLL, ADC, DSP) and duty-cycling; why a transmitter cannot sense receivers except through LO leakage; why phones transmit so little."
+},
+"C45": {
+"topic": "Receive-site noise and interference",
+"target": "07/thermal-noise-and-noise-temperature (ITU-R P.372 man-made noise), 07/dynamic-range-sfdr-blocking",
+"needs": "Man-made noise levels and how to reduce them at the antenna; why signals superpose without \"interfering\" (linearity plus selectivity); why satellites split uplink and downlink bands (co-site desense)."
+},
+"C19": {
+"topic": "PLL/DLL comparison and PLL bench tests",
+"target": "06/vco-and-pll-synthesizers (add)",
+"needs": "PLL vs DLL (what each locks, jitter behaviour, uses in MCUs/FPGAs); measuring a PLL's loop bandwidth on the bench (phase-noise hump, step or modulation response)."
+},
+"C39": {
+"topic": "Analog/voice-mode odds and ends",
+"target": "10/analog-modulation-am-fm-pm-ssb, 10/modulation-choice-guide (add)",
+"needs": "FM stereo multiplex (pilot, 38 kHz DSB-SC); the LSB/USB convention; SSB audio bandwidth; why Morse/CW is efficient; AM+FM on one carrier vs QAM; bandwidth (not carrier) sets data rate; Wi-Fi vs Ethernet capacity; co-channel FM separation limits."
+},
+"C8": {
+"topic": "Multichannel coherence and array calibration",
+"target": "12/array-calibration (planned)",
+"needs": "Measuring and correcting inter-channel delay/phase; steering-vector wavelength for wideband (LFM) signals; beamspace/subarray post-processing; building a coax phasing harness (λ/4 transformers, velocity factor)."
+},
+"C42": {
+"topic": "RF switch and PA failure modes",
+"target": "06/rf-switches-attenuators-limiters, 06/power-amplifiers (add)",
+"needs": "Why RF switches die (hot switching, ESD, overdrive, missing DC blocks); switch vs 0 Ω jumper option; how mismatch risk to a PA varies with frequency; reading cross-needle meters."
+},
+"C36": {
+"topic": "Balun practical details",
+"target": "06/baluns-and-rf-transformers (add)",
+"needs": "Why balun footprints get bridged in single-ended builds; polarity/dot convention; where to place the balun; Gilbert-cell (SA612) LO feed-through vs external baluns."
+},
+"C11": {
+"topic": "Hobby radar modules and detectors",
+"target": "11/diy-radar-hardware (planned)",
+"needs": "RCWL-0516 (self-oscillating mixer) analysis; wideband radar-detector receivers; adding a horn or lens to a patch-antenna radar module (gain and legality)."
+},
+"C17": {
+"topic": "Wireless power transfer and RF harvesting",
+"target": "**NEW** page (e.g. 09/wireless-power-and-energy-harvesting)",
+"needs": "Inductive vs resonant vs radiative power transfer and their efficiency/range limits; rectenna efficiency vs input power; exposure limits (link 19/rf-exposure-safety); a simple inductive link circuit."
+},
+"C26": {
+"topic": "Handheld and vehicle antennas",
+"target": "08/dipoles-and-monopoles (add)",
+"needs": "HT whips vs longer aftermarket whips (claims vs physics); the radio and hand as counterpoise; mag-mount capacitive coupling to the roof; bull-bar and roof mounting; radial-less verticals and RF in the shack."
+},
+"C34": {
+"topic": "Phase-noise measurement pitfalls",
+"target": "07/phase-noise-and-jitter (add), 17/phase-noise-measurement (planned)",
+"needs": "Additive (residual) phase noise of amplifiers and buffers; bistatic FMCW with independent LOs; interpolating phase-noise curves on log-log axes. (Averaging vs cross-correlation now covered by 17/phase-noise-measurement.)"
+},
+"C28": {
+"topic": "Feedlines and tuners (ladder line vs coax, twisted pair, ATU placement and function, transmitting without a tuner, SWR \"ghosts\")",
+"target": "03/coax-and-cables, 03/reflections-vswr-return-loss-mismatch (add)",
+"needs": "Loss of ladder/window line vs coax at high SWR; why twisted pair is not used as RF feedline; what an antenna tuner does and does not fix (feedline loss), antenna-end vs shack tuner; safe practice without meters; echo delay vs symbol time for \"ghosts\"."
+}
+}

@@ -1,0 +1,63 @@
+====================================================================================================
+1. Wire-mesh shielding (plane wave, normal incidence)
+====================================================================================================
+  mesh                                                   100     433     915    1800    2450    5800  MHz
+  window insect screen (18x16, 0.28 mm wire)            65.4    52.7    46.2    40.3    37.7    30.2  dB (log form)
+                                                        64.6    51.8    45.3    39.4    36.8    29.3  dB (Marcuvitz csc form)
+[PASS] log and csc forms agree within 1.5 dB for the insect screen 
+  hardware cloth 1/4 in (6.35 mm), 0.64 mm wire         46.2    33.5    27.0    21.2    18.5    11.3  dB (log form)
+                                                        46.1    33.4    26.9    21.0    18.4    11.2  dB (Marcuvitz csc form)
+  chicken wire ~25 mm, 0.7 mm wire                      27.8    15.2     9.2     4.6     3.0     0.7  dB (log form)
+                                                        27.8    15.2     9.2     4.6     3.0     0.7  dB (Marcuvitz csc form)
+  fine brass mesh 100/in (0.25 mm pitch, 0.1 mm wire)    88.9    76.1    69.6    63.8    61.1    53.6  dB (log form INVALID here: a/2πr < 1.5, use csc form)
+                                                       100.3    87.6    81.1    75.2    72.5    65.1  dB (Marcuvitz csc form)
+  single-aperture rule 20 log(lambda/2g) for the insect-screen opening g = 1.22 mm: 62, 49, 43, 37, 34, 27 dB  (one hole; a whole sheet of holes leaks more)
+[PASS] mesh SE falls ~20 dB/decade (20.0 dB)
+
+====================================================================================================
+2. Conductive fabrics and foil (far field)
+====================================================================================================
+  sheet resistance  0.01 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 85.5 dB (frequency-independent while t << delta)
+  sheet resistance  0.05 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 71.5 dB (frequency-independent while t << delta)
+  sheet resistance  0.10 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 65.5 dB (frequency-independent while t << delta)
+  sheet resistance  0.50 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 51.5 dB (frequency-independent while t << delta)
+  sheet resistance  1.00 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 45.5 dB (frequency-independent while t << delta)
+  sheet resistance 10.00 ohm/sq: SE = 20 log(1 + eta0/2Rs) = 25.9 dB (frequency-independent while t << delta)
+  16 um kitchen foil at 433 MHz: delta 4.09 um, absorption A 34 dB, reflection R 80 dB -> material SE > 114 dB
+  16 um kitchen foil at 915 MHz: delta 2.81 um, absorption A 49 dB, reflection R 76 dB -> material SE > 126 dB
+  16 um kitchen foil at 2450 MHz: delta 1.72 um, absorption A 81 dB, reflection R 72 dB -> material SE > 153 dB
+[PASS] 1 ohm/sq fabric gives > 40 dB 
+
+====================================================================================================
+3. Seams: unbonded length s between screws / contact points, SE ~ 20 log(lambda/2s)
+====================================================================================================
+  s =     5 mm: 100 MHz 50 dB, 433 MHz 37 dB, 915 MHz 30 dB, 1800 MHz 24 dB, 2450 MHz 22 dB, 5800 MHz 14 dB
+  s =    25 mm: 100 MHz 36 dB, 433 MHz 23 dB, 915 MHz 16 dB, 1800 MHz 10 dB, 2450 MHz 8 dB, 5800 MHz 0 dB
+  s =    50 mm: 100 MHz 30 dB, 433 MHz 17 dB, 915 MHz 10 dB, 1800 MHz 4 dB, 2450 MHz 2 dB, 5800 MHz 0 dB
+  s =   100 mm: 100 MHz 24 dB, 433 MHz 11 dB, 915 MHz 4 dB, 1800 MHz 0 dB, 2450 MHz 0 dB, 5800 MHz 0 dB
+
+====================================================================================================
+4. Why a phone in a home-made Faraday box still rings
+====================================================================================================
+  downlink RSRP -60 dBm outside: need > 64 dB (+10 dB margin -> 74 dB) to block
+  downlink RSRP -80 dBm outside: need > 44 dB (+10 dB margin -> 54 dB) to block
+  downlink RSRP -100 dBm outside: need > 24 dB (+10 dB margin -> 34 dB) to block
+  cookie-tin lid touching every 30 mm, 700 MHz: seam SE ~ 17 dB (many such gaps: less)
+  cookie-tin lid touching every 60 mm, 700 MHz: seam SE ~ 11 dB (many such gaps: less)
+  cookie-tin lid touching every 30 mm, 1800 MHz: seam SE ~ 9 dB (many such gaps: less)
+  cookie-tin lid touching every 60 mm, 1800 MHz: seam SE ~ 3 dB (many such gaps: less)
+  cookie-tin lid touching every 30 mm, 2600 MHz: seam SE ~ 6 dB (many such gaps: less)
+  cookie-tin lid touching every 60 mm, 2600 MHz: seam SE ~ 0 dB (many such gaps: less)
+[PASS] a 60 mm-contact lid gives < 10 dB at 1800 MHz 
+
+====================================================================================================
+5. SDR cage test: dynamic range budget (CW source inside, RTL-SDR outside at 1 m, 433.92 MHz)
+====================================================================================================
+  FFT bin   1000 Hz: noise floor -138.6 dBm -> measurable SE (10 dB SNR) up to 103 dB
+  FFT bin    100 Hz: noise floor -148.6 dBm -> measurable SE (10 dB SNR) up to 113 dB
+  FFT bin     10 Hz: noise floor -158.6 dBm -> measurable SE (10 dB SNR) up to 123 dB
+  reference (lid open) arrives at -25.2 dBm: above an RTL-SDR's ~ -40 dBm overload -> take the reference through a 30 dB pad (-55.2 dBm), remove the pad for the closed-lid reading, SE = closed-lid drop + 30 dB
+  RTL-SDR TCXO 1 ppm = 434 Hz drift: use a 100 Hz-1 kHz bin with peak-hold, not 10 Hz
+[PASS] 100 Hz bin gives > 100 dB measurable SE 
+
+ALL PASS

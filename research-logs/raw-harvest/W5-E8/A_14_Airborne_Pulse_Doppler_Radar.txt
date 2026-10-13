@@ -1,0 +1,1540 @@
+                    Radar Systems Engineering
+                            Lecture 14
+                   Airborne Pulse Doppler Radar
+
+                            Dr. Robert M. O’Donnell
+                         IEEE New Hampshire Section
+                                 Guest Lecturer
+
+
+
+                                                 IEEE New Hampshire Section
+Radar Systems Course 1
+Airborne PD 1/1/2010                                  IEEE AES Society
+                                 Examples of Airborne Radars
+                                                                                   Courtesy of US Navy
+                             F-16
+                           APG-66 , 68
+
+
+
+                                Courtesy of US Air Force
+
+
+
+                                Boeing 737 AEW&C
+                                                             E-2C
+                                                            APS-125
+
+
+                                                                            Courtesy of US Air Force
+                                   Courtesy of milintelTR   AWACS
+                                                             E-3A
+                                                             APY-1
+      JOINT STARS E-8A
+            APY-3
+
+
+
+
+     Courtesy of US Air Force
+
+                                                                      IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       2
+                                                                            IEEE AES Society
+                                                    Outline
+
+             •         Introduction
+                           – The airborne radar mission and environment
+                                 Clutter is the main issue
+             •         Different airborne radar missions
+                           – Pulse Doppler radar in small fighter / interceptor aircraft
+                                 F-14, F-15, F-16, F-35
+
+                           – Airborne, surveillance, early warning radars
+                                 E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                           – Airborne synthetic aperture radar
+                                 Military and civilian remote sensing missions
+                                 To be covered in lecture 19, later in the course
+
+
+             •         Summary
+
+
+                                                                           IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       3
+                                                                                 IEEE AES Society
+                                 Block Diagram of Radar System
+                                                            Transmitter
+
+                                                      Power             Waveform
+                      Propagation                    Amplifier          Generation
+                        Medium
+
+ Target
+  Radar                                     T/R             Clutter as seen from an airborne platform,
+  Cross                                    Switch           Signal waveforms, and Doppler processing
+ Section                                                          will be the focus in this lecture
+                           Antenna
+
+                                                                      Signal Processor Computer
+
+                                               A/D                  Pulse          Clutter Rejection
+                               Receiver
+                                             Converter           Compression      (Doppler Filtering)
+  User Displays and Radar Control
+
+                                                      General Purpose Computer
+
+
+                                                         Parameter
+                                          Tracking                       Thresholding      Detection
+                                                         Estimation
+                    Data
+                  Recording
+Photo Image
+Courtesy of US Air Force
+
+                                                                                     IEEE New Hampshire Section
+  Radar Systems Course
+  Airborne PD 1/1/2010
+                           4
+                                                                                           IEEE AES Society
+                           First Use of Airborne Radars
+             US APS-3 Radar
+                                                    German “Lichtenstein” Radar
+            with Dish Antenna-
+                                                 Dipole array – 75 / 90 cm wavelength
+             3 cm wavelength
+
+
+
+
+                                                                             Courtesy of Department of Defense
+
+                           Courtesy of US Navy
+
+        •      When they were introduced on airborne platforms during
+               World War II, they were used to detect hostile aircraft at
+               night in either a defensive or an offensive mode
+                                                                      IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       5
+                                                                            IEEE AES Society
+                             Role of Airborne Military Radars
+         •      Missions and Functions
+                       – Surveillance, Tracking, Fire Control
+                       – Reconnaissance
+                       – Intelligence
+
+         •      Examples
+                       – Air-to-air fighter combat
+                              Aircraft interception (against air breathing targets)
+                       –   Airborne Early warning
+                       –   Air to ground missions
+                       –   Close air support
+                       –   Ground target detection and tracking
+
+         •      Radar modes
+                       –   Pulse Doppler radar
+                       –   Synthetic Aperture radar
+                       –   Displaced Phase Center Antenna (DPCA)
+                       –   Ground Moving Target Indication
+                                                                          IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       6
+                                                                                IEEE AES Society
+                           Geometry of Airborne Clutter
+
+
+                                 VP
+
+
+
+        •      Key components of the ground clutter echo from radar’s on
+               an airborne platform:
+                   – Main beam of antenna illuminates the ground
+                   – Antenna sidelobes illuminate clutter over a wide range of
+                     viewing angles
+                   – Altitude return reflects from the ground directly below the radar
+
+        The Doppler frequency distributions of these effects and how
+          they affect radar performance differ with:
+                   1. radar platform velocity (speed and angle), and
+                   2. the geometry (aspect angle of aircraft relative to ground
+                       illumination point)
+
+                                                                 IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       7
+                                                                       IEEE AES Society
+                               Airborne Radar Clutter Spectrum
+                       No Doppler Ambiguities                       VP and VT in same vertical plane
+                                            VP                             Antenna
+                                                                           Mainlobe
+                                                                                                 Outgoing
+                                                                                                  Target
+                              Antenna Sidelobes                                                          VT
+
+
+
+                                                                    Mainlobe
+
+
+
+
+ Relative Power (dB)
+                                                                     Clutter
+                         Clutter Free            Sidelobe Clutter                 Clutter Free
+
+
+
+
+                                                             Outgoing                            Noise
+                          Noise                               Target
+
+                                    − 2VP             0              2VP       Doppler Frequency
+                                      λ                               λ
+                                                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                          8
+                                                                                        IEEE AES Society
+                               Airborne Radar Clutter Spectrum
+                       No Doppler Ambiguities                       VP and VT in same vertical plane
+                                            VP                             Antenna
+                                                                           Mainlobe
+                                                                                                 Incoming
+                                                                                                   Target
+                              Antenna Sidelobes
+                                                                                                         − VT
+
+
+
+                                                                    Mainlobe
+
+
+
+
+ Relative Power (dB)
+                                                                     Clutter
+                         Clutter Free            Sidelobe Clutter                 Clutter Free
+
+                                                                                      Incoming
+                                                                                        Target
+                          Noise                                                                  Noise
+
+
+                                    − 2VP             0              2VP       Doppler Frequency
+                                      λ                               λ
+                                                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                          9
+                                                                                        IEEE AES Society
+                            Viewgraph Courtesy of MIT Lincoln Laboratory Used with permission
+                                           IEEE New MIT
+                                                    Hampshire
+                                                        LincolnSection
+                                                                Laboratory
+Radar Systems Course
+Airborne PD 1/1/2010
+                       10
+                                                 IEEE AES Society
+                            Constant Range Contours on the
+                                       Ground
+              Range to Ground Scenario         Lines of Constant Range to Ground
+
+
+
+
+                             h    RS
+
+
+
+                                       R S2 = h 2 + R G2
+          •      The projections on the ground of the lines of constant
+                 range are a set circles
+
+
+                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       11
+                                                                  IEEE AES Society
+                   Constant Doppler Velocity Contours on
+                               the Ground
+
+
+
+
+          VC = VP cos α             α
+                 = VP cos θ sin φ
+          VC = Clutter velocity
+          VP = Platform velocity
+
+
+
+                                               2VC cos α
+                                        fD =
+•     The projections on the                       λ
+      ground of the lines of
+      constant Doppler velocity
+      are a set hyperbolae
+                                                           IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       12
+                                                                 IEEE AES Society
+                        Constant Doppler Contours on Ground
+                             VC = 0
+                                                  •   The lines of constant
+                                                      Doppler
+                                                      frequency/velocity are
+                                                      called “Isodops”
+                                                  •   The equation for the
+                                                      family of hyperbolae
+                                                      depend on:
+VC = − VP                             VC = + VP        – Airborne radar height
+                                                         above ground
+                                                       – Angle between airborne
+                                                         radar velocity and the
+                                                         point on the ground that
+                                                         is illuminated
+                                                       – Wavelength of radar
+
+                             VC = 0
+
+
+
+                                                            IEEE New Hampshire Section
+ Radar Systems Course
+ Airborne PD 1/1/2010
+                        13
+                                                                  IEEE AES Society
+                 Range-Doppler Ground Clutter Contours
+                                               Cross
+                       Range Contours          Range
+                            Circles            VC = 0
+
+
+
+
+ Down
+                       VC = − VP                           VC = + VP Up
+ Range                                                               Range
+
+
+
+
+                            Doppler Contours
+                              Hyperbolae       VC = 0
+
+                                                        IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       14
+                                                              IEEE AES Society
+                 Range-Doppler Ground Clutter Contours
+          Range Contours            Cross
+                 Circles            Range   Range – Doppler
+                                            Cell on Ground
+
+
+                                                       Δf D
+                                              ΔR
+                                                   x
+
+
+             Down
+             Range                                            Up
+                                                              Range
+
+
+
+                                                   x
+
+
+
+                                              Power
+               Doppler Contours
+                       Hyperbolae
+                                                                 Doppler Frequency
+                                                              IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       15
+                                                                    IEEE AES Society
+                             Unambiguous Doppler Velocity and Range
+                                                Unambiguous Range (nmi)
+                                          400            100           40             10           4   1
+                            3000
+
+                                                                Hz                                                   λ f PRF
+                                                            M                                                   VB =
+
+
+
+
+First Blind Speed (knots)
+                                                        0
+                            1000                      22          Hz                                                    2
+                                                  nd             G
+                                                a           5
+                                               B         43         Hz                                                and
+                                             F        nd           G
+                                          VH       Ba          .3            Hz
+                             300
+                                               HF
+                                                              1            G
+                                                                                      Hz
+                                                                                                                        c
+                                             U
+                                                       B a nd
+                                                                   nd
+                                                                      3 .2
+                                                                                  4
+                                                                                    G                           RU =
+                                                     L           a             9.             Hz                     2 f PRF
+                                                               B            nd               G
+                             100                            S            Ba               35
+                                                                      X
+                                                                                     a nd
+                                                                                   B                                 Yields
+                                                                               K a
+
+
+                              30
+                                                                                                                       λc
+                                                                                                                 VB =
+                             10                                                                                       4 RU
+                               0.1                               1                       10            100
+                                                Pulse Repetition Rate (KHz)
+
+
+                                                                                                             IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                                     16
+                                                                                                                   IEEE AES Society
+                            Classes of Pulse Doppler Radars
+
+
+                                       Range        Doppler
+                                    Measurement   Measurement
+
+
+                                                     Highly
+                       Low PRF      Unambiguous    Ambiguous
+
+
+
+                 Medium PRF          Ambiguous     Ambiguous
+
+
+
+                       High PRF        Highly
+                                                  Unambiguous
+                                     Ambiguous
+
+
+
+
+                                                       IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       17
+                                                             IEEE AES Society
+                           Missions for Airborne Military Radars
+                                     “The Big Picture”
+
+         •      Fighter / Interceptor Radars
+                       –    Antenna size constraints imply frequencies at X-Band or higher
+                               Reasonable angle beamwidths
+                       –    This implies Medium or High PRF pulse Doppler modes for look
+                            down capability
+
+         •      Wide Area Surveillance and Tracking
+                       –    Pulse Doppler solutions
+                               Low, Medium and/or High PRFs may be used depending on the specific
+                               mission
+                       –    E-2C     UHF
+                       –    AWACS S-Band
+                       –    Joint Stars X-Band
+
+         •      Synthetic Aperture Radars will be discussed in a later lecture
+
+
+
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       18
+                                                                                  IEEE AES Society
+                                                     Outline
+
+             •         Introduction
+                            – The airborne radar environment
+
+             •         Different airborne radar missions
+                            – Pulse Doppler radar in small fighter / interceptor aircraft
+                                  F-14, F-15, F-16, F-35
+                                         High PRF Modes
+                                         Medium PRF Modes
+
+
+                            – Airborne, surveillance, early warning radars
+                                  E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                            – Airborne synthetic aperture radar
+                                  Military and civilian remote sensing missions
+                                  To be covered in lecture 19, later in the course
+
+             •         Summary
+
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       19
+                                                                                  IEEE AES Society
+                                    Photographs of Fighter Radars
+                                                                                 Courtesy of Northrop Grumman
+                                                                                 Used with Permission
+
+
+
+
+   APG-65                                                                                                            APG-66
+    (F-18)                                                                                                            (F-16)
+
+
+                              Courtesy of Raytheon
+                              Used with permission
+
+                                                                                                                Courtesy of USAF
+                                               Active Electronically Scanned Arrays (AESA)
+
+
+
+
+APG-63 V(2)
+  (F-15C)
+
+                                                                                                     APG-81 (F-35)
+Radar built by
+                              Courtesy of Boeing
+  Raytheon                    Used with permission                                                  Courtesy of Northrop Grumman
+                                                                                                    Used with Permission
+                                                                                        IEEE New Hampshire Section
+  Radar Systems Course
+  Airborne PD 1/1/2010
+                         20
+                                                                                              IEEE AES Society
+                                                     Outline
+
+             •         Introduction
+                            – The airborne radar environment
+
+             •         Different airborne radar missions
+                            – Pulse Doppler radar in small fighter / interceptor aircraft
+                                  F-14, F-15, F-16, F-35
+                                         High PRF Modes
+                                         Medium PRF Modes
+
+
+                            – Airborne, surveillance, early warning radars
+                                  E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                            – Airborne synthetic aperture radar
+                                  Military and civilian remote sensing missions
+                                  To be covered in lecture 19, later in the course
+
+             •         Summary
+
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       21
+                                                                                  IEEE AES Society
+                              Pulse Doppler PRFs
+
+
+             Frequency      PRF Type          PRF Range*                Duty Cycle*
+
+
+         •      X- Band     High PRF          100 - 300 KHz                < 50%
+
+         •      X- Band     Medium PRF        10 - 30 KHz                  ~ 5%
+
+         •      X- Band     Low PRF           1 - 3 KHz                    ~.5%
+
+         •      UHF         Low PRF           300 Hz                       Low
+
+
+
+
+        * Typical values only; specific radars may vary inside and outside these limits
+                                                                IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       22
+                                                                      IEEE AES Society
+                                            High PRF Mode
+
+            Frequency               PRF Type              PRF Range*                   Duty Cycle*
+
+        •      X- Band              High PRF             100 - 300 KHz                   < 50%
+                            Example:     PRF = 150 KHz             Duty Cycle = 35%
+                                       PRI= 6.67 μsec            Pulsewidth = 2.33 μsec
+
+                                       Unambiguous Range = 1 km
+                                       Unambiguous Doppler Velocity = 4,500 knots
+        •      For high PRF mode :
+                   – Range – Highly ambiguous
+                              Range ambiguities resolved using techniques discussed in Lecture
+                              13
+                   – Doppler velocity – Unambiguous
+                              For nose on encounters, detection is clutter free
+                   – High duty cycle implies significant “Eclipsing Loss”
+                                 Multiple PRFs, or other techniques required
+
+
+                                                                               IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       23
+                                                                                     IEEE AES Society
+                            High PRF Mode – Range Eclipsing
+
+        •      High PRF airborne radars tend to have a High Duty cycle to get
+               high energy on the target
+                  – Pulse compression used            PRI
+
+                                                                       Time
+
+
+             Transmit Pulsewidth                                        Receive Time
+
+
+                                                                        Uneclipsed
+                                                                          Target
+                                                                    Eclipsed
+                                                                     Target
+
+
+
+
+        •      Eclipsing loss is caused because the receiver cannot be
+               receiving target echoes when the radar is transmitting
+                  – Can be significant for high duty cycle radars
+                  – Loss can easily be 1-2 dB, if not mitigated
+                                                              IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       24
+                                                                    IEEE AES Society
+                             High PRF Pulse Doppler Radar
+
+         •      No Doppler velocity ambiguities, many range ambiguities
+                       – Significant range eclipsing loss
+
+         •      Range ambiguities can be resolved by transmitting 3
+                redundant waveforms, each at a different PRF
+                       – Often only a single range gate is employed, but with a large
+                         Doppler filter bank
+
+         •      The antenna side lobes must be very low to minimize
+                sidelobe clutter
+                       – Short range sidelobe clutter often masks low radial velocity
+                         targets
+
+         •      High closing speed aircraft are detected at long range in
+                clutter free region
+
+         •      Range accuracy and ability to resolve multiple targets can
+                be poorer than with other waveforms
+                                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       25
+                                                                        IEEE AES Society
+                                                     Outline
+
+             •         Introduction
+                            – The airborne radar environment
+
+             •         Different airborne radar missions
+                            – Pulse Doppler radar in small fighter / interceptor aircraft
+                                  F-14, F-15, F-16, F-35
+                                         High PRF Modes
+                                         Medium PRF Modes
+
+
+                            – Airborne, surveillance, early warning radars
+                                  E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                            – Airborne synthetic aperture radar
+                                  Military and civilian remote sensing missions
+                                  To be covered in lecture 19, later in the course
+
+             •         Summary
+
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       26
+                                                                                  IEEE AES Society
+                                   Medium PRF Mode
+
+            Frequency         PRF Type          PRF Range*             Duty Cycle*
+
+        •      X- Band       Medium PRF         10 - 30 KHz              ~ 5%
+
+              Example : 7 PRF = 5.75, 6.5, 7.25, 8, 8.75, 9.5 & 10.25 KHz
+                          (From Figure 3.44 in text)
+                  Range Ambiguities = ~14 to 26 km
+                  Blind Speeds = ~175 to 310 knots
+
+        •      For the medium PRF mode :
+                   – Clutter and target ambiguities in range and velocity
+
+                   – Clutter from antenna sidelobes is an significant issue
+
+
+
+
+                                                               IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       27
+                                                                     IEEE AES Society
+                                        Clear Velocity Regions for a Medium
+                                                     PRF Radar
+                                         Clear Radial Velocity Regions for Seven PRF Radar Waveform
+               5750
+               6500
+
+
+PRF (Hz)
+               7250
+               8000
+               8750
+               9500
+              10250
+                              0           100            200          300           400           500         600
+
+
+
+
+   No. of PRFs in Clear
+                                                Number of PRFs in Clear vs. Target Radial Velocity
+                          8
+                          6
+                          4
+                          2
+                          0
+                              0           100            200          300           400           500          600
+                                                      Doppler velocity of target (meters/sec)
+                          •       The multiple PRFs (typically 7) and their associated higher radar
+                                  power are required to obtain sufficient detections to unravel range
+                                  and velocity ambiguities in medium PRF radars
+
+                                                                                       IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                                   28
+                                                                                             IEEE AES Society
+                                        Medium PRF Mode
+                        High PRF Mode                                  Medium PRF Mode
+
+
+                                                  Power
+
+Power
+
+
+                                                                            True Doppler Frequency
+                   True Doppler Frequency   PRF           PRF 1             PRF 5
+                                                                                           True Target
+                                                            PRF 2       PRF 4                Doppler
+                                                                    PRF 1
+
+        •     In the Doppler domain, the target and clutter alias (fold down)
+              into the range 0 to PRF1, PRF2, etc.
+                  – Because of the aliasing of sidelobe clutter, medium PRF radars
+                    should have very low sidelobes to mitigate this problem
+        •     In the range domain similar aliasing occurs
+                  – Sensitivity Time Control (STC) cannot be used to reduce clutter
+                    effects (noted in earlier lectures)
+        •     Range and Doppler ambiguity resolution techniques
+              described in previous lecture
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       29
+                                                                                  IEEE AES Society
+                            Medium PRF Pulse Doppler Radar
+
+         •      Both range and Doppler ambiguities exist
+                       –    Seven or eight different PRFs must be used
+                       –    Insures target seen at enough Doppler frequencies to resolve range
+                            ambiguities
+                       –    Transmitter larger because of redundant waveforms used to resolve
+                            ambiguities
+
+         •      There is no clutter free region
+                       –    Fewer range ambiguities implies less of a problem with sidelobe
+                            clutter
+                       –    Antenna must have low sidelobes to reduce sidelobe clutter
+
+         •      Often best single waveform for airborne fighter / interceptor
+
+         •      More range gates than high PRF, but fewer Doppler filters for each
+                range gate
+
+         •      Better range accuracy and Doppler resolution than high PRF
+                systems
+
+                                                                         IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       30
+                                                                               IEEE AES Society
+                                                     Outline
+
+             •         Introduction
+                            – The airborne radar environment
+
+             •         Different airborne radar missions
+                            – Pulse Doppler radar in small fighter / interceptor aircraft
+                                  F-14, F-15, F-16, F-35
+
+                            – Airborne, surveillance, early warning radars
+                                  E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                            – Airborne synthetic aperture radar
+                                  Military and civilian remote sensing missions
+                                  To be covered in lecture 19, later in the course
+
+
+             •         Summary
+
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       31
+                                                                                  IEEE AES Society
+                             Airborne Surveillance & Tracking
+                                         Radars
+         •      Missions and Functions
+                       – Surveillance, Tracking, Fire Control
+                       – Reconnaissance
+                       – Intelligence
+
+         •      Examples
+                       – Airborne early warning
+                       – Ground target detection and tracking
+
+
+         •      Radar modes
+                       –    Pulse Doppler radar
+                       –    Synthetic Aperture radar
+                       –    Displaced Phase Center Antenna (DPCA)
+                       –    Other modes/techniques
+
+                               Elevated radar platforms provide long range and
+                       over the horizon coverage of airborne and ground based targets
+                                                                    IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       32
+                                                                          IEEE AES Society
+                                    Examples of Airborne Radars
+                                                                                       Courtesy of US Navy
+                            Boeing 737 AEW&C
+
+
+
+
+                                       Courtesy of milintelTR
+
+
+         Global Hawk
+                                                                 E-2C
+                                                                APS-125
+
+
+                                                                                Courtesy of US Air Force
+                            Courtesy of US Air Force
+                                                                AWACS
+                                                                 E-3A
+                                                                 APY-1
+      JOINT STARS E-8A
+            APY-3
+
+
+
+
+     Courtesy of US Air Force
+
+                                                                          IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       33
+                                                                                IEEE AES Society
+                                        AEW Radar Coverage
+
+Ground Based Surveillance Radar Coverage                      Airborne Surveillance Radar Coverage
+
+
+
+
+         •      Elevating the radar can extend radar coverage well out over the
+                horizon
+
+         •      Range Coverage -400 km to 800 km
+                    –        Ground based radars ~400 km
+                    –        Airborne radar ~800 km
+
+         •      Issues
+                    –        High acquisition and operating costs
+                    –        Limited Antenna size
+                    –        Radar Weight and prime power
+                    –        More challenging clutter environment
+
+                                                                         IEEE New Hampshire Section
+ Radar Systems Course
+ Airborne PD 1/1/2010
+                        34
+                                                                               IEEE AES Society
+                              Characteristics of Ground Clutter
+                                  (from Airborne Platform)
+                             vP
+                                                                      Ground Clutter Doppler Frequency
+                                                                          2 vP         2 vP
+                                                                     fC =      cos α =      cos θ sin φ
+                                                                           λ            λ
+
+
+                                                                           Doppler Frequency Width
+                                                           Main         (Sidelobe + Main Beam Clutter)
+                              Δf SL + ML                  Beam
+                                                          Clutter                          4 vP
+                                                                              Δf SL + ML =
+                                                          Sidelobe                          λ
+                                           Δf ML           Clutter
+
+                                                                        Doppler Frequency Width of Main
+                                                                           Beam Clutter (Null to Null)
+
+                                                                                    4 vP λ 4 vP
+       −
+         2 vP
+                               Doppler
+                                                   2 vP                   Δf MB =         =
+          λ                 Frequency (Hz)          λ                                λ L    L
+
+                                                                                    IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       35
+                                                                                          IEEE AES Society
+                                                       Spread of Main Beam Clutter
+                                                                    Beam
+                                                Individual          Center           •     Doppler frequency of
+                                                  Clutter                                  clutter return depends on
+
+
+
+
+        Aircraft Velocity and Trajectory
+                                                 Scatterer
+                                                                                           angle of clutter with
+                                                                                           velocity vector of aircraft
+
+                                                                α
+                                                                                     •     Doppler frequency of
+                                                θ                                          clutter return at center of
+                                                                                           beam
+                                                                                                       2 VP
+                                                                                                  fC =      cos θ
+                                                      θB                                                 λ
+         VP                                                                          •     Doppler spread of main
+                                                                                           beam clutter can be found
+                                                    Radar                                  by differentiating this
+                                                                                           equation
+                                           Spread of Main Beam Clutter
+                                               Maximum at θ = 90°                                     2 VP
+                                                                                               Δf C =      θ B sin θ
+     Adapted from
+                                                      Depression angle of beam neglected                λ
+   Skolnik Reference 1
+                                                                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                                           36
+                                                                                                        IEEE AES Society
+                      Clutter Spread with a UHF Airborne Radar
+                           Speed of aircraft = 400 knots          θ = Angle between radar beam
+
+
+
+
+Clutter Power
+                           Antenna beamwidth = 7 degrees         and the platform velocity vector
+                      θ=90°                              θ=60°                         θ=0°
+                                                                              θ=30°
+                    35Hz                          60Hz                    30Hz
+
+
+                0               100      200      300            400       500         600
+                                          Doppler Frequency (Hz)
+
+                •    Both the width of the clutter spectra and its center frequency
+                     depend on the angle θ
+
+                •    When the antenna points in the direction of the platform velocity
+                     vector, the Doppler shift of the clutter echo is maximum, but the
+                     width of the spectrum is theoretically zero
+
+                •    When the antenna is directed in the direction perpendicular to the
+                     direction of the platform velocity, the clutter center frequency is
+                     zero, but the spread is maximum
+      Adapted from Skolnik Reference 1
+
+                                                                        IEEE New Hampshire Section
+ Radar Systems Course
+ Airborne PD 1/1/2010
+                           37
+                                                                              IEEE AES Society
+                              Aliasing of Clutter in Low PRF UHF
+                                        Airborne Radar
+                                           PRF = 360 Hz
+
+
+
+
+ Clutter Power
+                          θ=90°                                      θ=90°
+
+
+
+
+                     0             100         200         300      360   400
+                                         Doppler Frequency (Hz)
+
+                 •   PRF = 360 Hz corresponds to a maximum unambiguous
+                     range of 225 nmi
+                 •   A relatively large portion of the frequency domain (Doppler
+                     space) is occupied by the clutter spectrum because of
+                     platform motion
+                 •   The widening of the clutter needs to be reduced in order for
+                     standard clutter suppression techniques to be effective
+                                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                         38
+                                                                        IEEE AES Society
+                  AEW Airborne Radar Clutter Rejection
+
+
+       •      There are 2 effects that can seriously degrade the
+              performance of a radar on a moving platform
+                  – A non-zero Doppler clutter shift
+                  – A widening of the clutter spectrum
+
+       •      These may be compensated for by two different techniques
+                  – TACCAR (Time Averaged Clutter Coherent Airborne Radar)
+                            The change in center frequency of the clutter spectrum
+                  – DPCA (Displaced Phase Center Antenna)
+                            The widening of the clutter spectrum
+
+
+       •      Radars which have used these techniques, over the years,
+              to compensate for platform motion are Airborne Early
+              Warning radars
+
+
+                                                                      IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       39
+                                                                            IEEE AES Society
+                       Compensation for Clutter Doppler Shift
+
+         •      TACCAR (Time Averaged Clutter Coherent Airborne Radar)
+                   – Also called “Clutter Lock MTI”
+
+         •      The Doppler frequency shift from ground clutter can be
+                compensated by using the clutter echo signal itself to set
+                the frequency of the reference oscillator (or coho)
+                   – This process centers the ground clutter to zero Doppler
+                     frequency
+                   – The standard MTI filter (notch at zero Doppler) attenuates the
+                     ground clutter
+
+         •      This technique has been used in ground based radars to
+                mitigate the effect of moving clutter
+                   – Not used after the advent of Doppler filter processing
+
+
+
+
+                                                               IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       40
+                                                                     IEEE AES Society
+                            AEW Advances - E-2D and MP-RTIP
+                              E-2D
+                                                              •   E-2D
+                                                                   –   Mechanically Rotating
+                                                                       Active Electronically
+                                                                       Scanned Antenna (AESA)
+                                                                   –   Space Time Adaptive
+                                                                       Processing (STAP)
+
+
+                                        Courtesy of US Navy
+                                                              •   MP-RTIP
+        MP-RTIP mounted on Proteus Aircraft                        –   “Multi-Platform Radar
+                                                                       Technology Insertion
+                                                                       Program”
+                                                                   –   Originally Joint Stars
+                                                                       Upgrade Program
+                                                                          Global Hawk and then a
+                                                                          wide area surveillance
+                                                                          aircraft
+                                                                   –   Advanced ground target
+                                                                       surveillance capability
+
+
+                                 Courtesy of US Air Force
+
+
+                                                                          IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       41
+                                                                                IEEE AES Society
+                                         E-3A Sentry - AWACS
+                            E-3A Sentry Aircraft                                    Radar APY-2
+
+                                                                                S-Band (10 cm wavelength)
+
+                                                                                Range >250 miles
+
+                                                                                High PRF waveform to reject
+                                                                                clutter in look down mode
+
+                                                                                Long range beyond the
+                                                                                horizon surveillance mode
+
+                                                             Courtesy of USAF
+                                                                                Maritime surveillance mode
+               •       AWACS Radar (S-Band)
+                            –   Mission –Long range Surveillance, Command and Control for
+                                air tactical environment
+                            –   Radar System Improvement Program (RSIP)
+                                   Advanced pulse Doppler waveforms
+                                   Pulse compression added
+                                   Detection range doubled (over original radar)
+                                                                                                  See reference 1
+                                                                                   IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       42
+                                                                                         IEEE AES Society
+                                      AWACS Radar Antenna
+                                                                           Radome
+   Radar Antenna
+
+
+
+
+                                                                         Courtesy of martin_julia
+                                          Courtesy of Northrop Grumman                 Radome Diameter 30 ft
+                                          Used with Permission
+
+
+        •      AWACS (APY-1/2) Antenna
+                  – Phased array – 26 ft by 4.5 ft ultralow sidelobe array
+                               Elliptically shaped
+                  –         28 slotted waveguides with a total of over 4000 slots
+                  –         Antenna is mechanically scanned 360° in azimuth
+                  –         Uses 28 ferrite reciprocal phase shifters to scan in elevation
+                  –         10 sec rotation (data) rate
+                                                                                                    See Skolnik reference 1
+                                                                                         IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       43
+                                                                                               IEEE AES Society
+                   Displaced Phase Center Antenna (DPCA)
+                                  Concept
+
+
+
+                                                                         T1
+
+
+                                                                           T2
+
+
+
+
+               If the aircraft motion is exactly compensated by the movement of the
+               phase center of the antenna beam, then there will be no clutter
+               spread due to aircraft motion, and the clutter can be cancelled with a
+               two pulse canceller
+344334_2.ppt
+RMO 9-01-00
+
+   Viewgraph Courtesy of MIT Lincoln Laboratory Used with permission
+                                                                       IEEE New Hampshire Section
+  Radar Systems Course
+  Airborne PD 1/1/2010
+                         44
+                                                                             IEEE AES Society
+        DPCA for Mechanically Scanned AEW Radar
+Individual
+  Clutter                                         A mechanically rotating antenna on a moving
+ Scatterer
+Angle α off
+                                                  platform that generates two overlapping
+                        Beam 1
+  beam                                            (squinted) beams can act as a DCPA when
+  center                                          the outputs of the two squinted beams are
+                                     Beam 2       properly combined
+
+                                 •    The sum and difference of the two squinted beams are
+                                      taken
+                                        –     The sum is used for transmit
+                                        –     The sum and difference are used on receive
+
+ •      A phase advance is added to the first pulse and a phase lag is added to
+        the second pulse beams are taken
+
+ •      The added (or subtracted) phase shift depends on aircraft velocity, the
+        PRF, and the scan angle of the radar relative to the aircraft direction
+
+ •      The two signals are then subtracted, resulting in the cancellation of the
+        Doppler spread of the clutter
+                                                                         IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       45
+                                                                               IEEE AES Society
+                                 DPCA – The Math- Abbreviated
+Individual
+  Clutter
+ Scatterer
+                                                               Σ R = Sum (2 pulses) of receive signal
+Angle α off Beam 1                                             Δ R = Difference (2 pulses) of receive signal
+  beam
+  center                                               The sum and difference of the two squinted beams
+                                    Beam 2             are taken
+                                                                 The sum is used for transmit
+                                                                 The sum and difference are used on
+                                                                 receive
+
+                                                            After MUCH manipulation, the corrected
+        E2                                                  received pulses become:
+                     Phasor
+                                                            Pulse 1
+                                                                Σ R (α ) + j k (v sin θ ) Δ R (α )
+                representation of
+              clutter echoes from
+              2 successive pulses
+     2η                                                     Pulse 2
+
+        E2
+                            E1
+                                 e 2 = − j E 2 tan η           Σ R (α ) − j k (v sin θ ) Δ R (α )
+                               Corrections
+                             applied to pulses              Constant k accounts for differences in   Σ
+                                 allowing                   and Δ patterns, as well as a factor 4 TP / D
+      η                        cancellation
+       η                          e1 = j E1 tan η         For more detail see Skolnik, Reference 1, pp 166-168
+                            E1
+                                                                                   IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       46
+                                                                                         IEEE AES Society
+                            Multiple Antenna Surveillance Radar
+                                          (MASR)
+
+
+
+
+                                CP130-569
+
+
+
+
+                              DPCA Off                   DPCA On
+
+
+
+
+                                                       Viewgraph Courtesy of MIT Lincoln Laboratory
+                                                       Used with permission
+                                                      IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       47
+                                                            IEEE AES Society
+                       Joint Surveillance Target Attack Radar
+                               System (Joint STARS)
+
+
+
+
+                                                                        Courtesy of US Air Force
+
+   •      Employs Interferometric SAR for airborne detection of ground
+          vehicles and imaging of ground and surface targets
+              – Employs APY-3, X Band radar
+   •      Mission in wide area surveillance mode:
+              – Coverage ~50,000 km2
+              – Detect, locate, identify, classify, and track trucks, tanks, and other
+                vehicles
+                            Can differentiate tracked and wheeled vehicles
+                            Can see vehicles at ranges >200 km , moving at walking speeds
+                                                                       IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       48
+                                                                             IEEE AES Society
+                                            Joint Stars Radar
+
+
+
+     JSTARS
+     Antenna
+
+
+                                                                                     Courtesy of Northrop Grumman
+                                                                                     Used with Permission
+
+
+       •      Radar employs a slotted array antenna 24 ft by 2 ft
+                  –         456 x 28 horizontally polarized elements
+                  –         Beam scans± 60° in azimuth; mechanically rotated in elevation
+       •      Aperture can be used as a whole for SAR mapping
+       •      When total aperture is divided into 3 independent apertures in the
+              interferometric mode, it is used for moving target detection
+                  –         Moving targets are separated from clutter by different time of arrivals of
+                            target and clutter in the 3 apertures
+                  –         DPCA techniques are used to cancel main beam clutter
+
+                                                                            IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       49
+                                                                                  IEEE AES Society
+                        Joint Stars Moving Target Detections
+
+           Operation Desert
+                Storm
+                  (Feb 1991)
+
+
+
+
+               Courtesy of Northrop Grumman
+               Used with Permission
+
+
+                                                  IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       50
+                                                        IEEE AES Society
+                                                       Outline
+
+             •         Introduction
+                            – The airborne radar environment
+
+             •         Different airborne radar missions
+                            – Pulse Doppler radar in small fighter / interceptor aircraft
+                                  F-14, F-15, F-16, F-35
+
+                            – Airborne, surveillance, early warning radars
+                                  E-2C (Hawkeye), E-3 (AWACS), E-8A (JOINT STARS)
+
+                            – Airborne synthetic aperture radar
+                                  SAR basics to be covered in lecture 19
+                                  Military and civilian remote sensing missions
+                                     To be covered in lecture 19, later in the course
+
+
+             •         Summary
+
+
+                                                                                 IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       51
+                                                                                       IEEE AES Society
+                            Detection of Ground Moving Targets
+
+
+         •      Ground Moving Target Indication (GMTI)
+                   – Low or medium PRF pulse Doppler radar used
+                   – PRF chosen so that Doppler region of interest is
+                     unambiguous in range and Doppler
+                   – Ku (16 GHz) or Kα (35 GHz) Band often used, since fixed
+                     minimum detectable Doppler frequency will allow detection of
+                     lower velocities than X band
+                   – APG-67 (X-Band) in F-20 fighter has GMTI mode using
+                     medium PRF
+                   – AWACS has low PRF ship detection mode
+
+
+         •      Side-Looking Airborne Radar (SLAR)
+                   – Standard airborne radar subtracts sequential conventional
+                     images of terrain ( Non-coherent MTI) to detect moving targets
+
+
+
+                                                              IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       52
+                                                                    IEEE AES Society
+                            Detection of Ground Moving Targets
+
+         •      Synthetic Aperture Radar (SAR) with MTI
+                       – SARs (discussed in lecture 19) produce excellent images of
+                         fixed targets on the ground
+                              Good cross range resolution obtain by processing sequential
+                              target echoes as aircraft moves a significant distance L
+                                 Cross range resolution inversely proportional to L not antenna size D
+                       – Moving targets distorted and smeared in SAR image
+                       – Can be detected if target Doppler is greater than bandwidth
+                         of clutter echo
+                       – Requires high PRF to avoid aliasing issues
+
+         •      Joint Stars
+                       – Uses interferometer for clutter suppression processing
+
+
+
+
+                                                                             IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       53
+                                                                                   IEEE AES Society
+                                                   Summary
+       •       Difficult ground clutter environment is chief radar design driver for
+               airborne radars
+                  –         Elevated radar platform implies ground clutter at long range
+                  –         Both Doppler frequency of clutter and its spread depend on radar
+                            platform motion and scan angle
+
+       •       Clutter challenges with Airborne radars
+                  –         Antenna aperture size often limits frequencies, so that ambiguous
+                            range and Doppler velocity issues arise
+                               Low, Medium and High PRF Modes each have unique clutter issues
+                  –         Doppler spreading of ground clutter, particularly at broadside, viewing
+                            can degrade performance
+
+       •       Sophisticated clutter suppression techniques can alleviate some of
+               these issues
+                  –         DPCA techniques
+                  –         Medium and High PRF modes often imply higher power
+
+       •       Active Electronically Scanned arrays and advanced signal
+               processing techniques (STAP) offer significant new capabilities for
+               airborne radars
+
+                                                                             IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       54
+                                                                                   IEEE AES Society
+                                         Homework Problems
+
+        •      From Skolnik (Reference 1)
+                   –        Problems 3-19, 3-20, 3-21, 3-22, 3-23, and 3-24
+                   –        Show that the maximum Doppler frequency of ground clutter as seen
+                            by an airborne radar is
+
+
+                                                   2V⎛      h2 ⎞
+                                              fD ≤    ⎜⎜ 1 − 2 ⎟⎟
+                                                    λ ⎝     R ⎠
+                                Where:
+                                         V = velocity of airborne radar
+                                         λ = radar wavelength
+                                         h = height of radar above ground
+                                         R = slant range
+
+
+                   –        Show that, for an airborne radar flying at a constant height above the
+                            ground, the lines of constant clutter velocity are a set of hyperbolae
+
+                                                    The last problem is from Roger Sullivan’s previously referenced text
+
+                                                                                    IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       55
+                                                                                          IEEE AES Society
+                                 References
+
+          1. Skolnik, M., Introduction to Radar Systems, McGraw-Hill, New
+             York, 3rd Ed., 2001
+          2. Barton, D. K., Modern Radar System Analysis, Norwood,
+             Mass., Artech House, 1988
+          3. Skolnik, M., Editor in Chief, Radar Handbook, New York,
+             McGraw-Hill, 3rd Ed., 2008
+          4. Skolnik, M., Editor in Chief, Radar Handbook, New York,
+             McGraw-Hill, 2nd Ed., 1990
+          5. Nathanson, F. E., Radar Design Principles, New York,
+             McGraw-Hill, 1st Ed., 1969
+          6. Richards, M., Fundamentals of Radar Signal Processing,
+             McGraw-Hill, New York, 2005
+          7. Schleher, D. C., MTI and Pulsed Doppler Radar, Artech,
+             Boston, 1991
+          8. Long, W. H., et. al, “Medium PRF for the AN/APG-66 Radar”,
+             Proceedings of the IEEE, Vol. 73, No 2, pp 301-311, February
+             1985
+
+                                                     IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       56
+                                                           IEEE AES Society
+                              Acknowledgements
+
+
+         •      Niall J. Duffy
+         •      Dr. Allen Hearn
+         •      Mark A. Weiner
+
+
+
+
+                                             IEEE New Hampshire Section
+Radar Systems Course
+Airborne PD 1/1/2010
+                       57
+                                                   IEEE AES Society
+

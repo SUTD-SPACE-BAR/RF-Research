@@ -1,0 +1,114 @@
+=== 1. End-fed wire (free space) against a 2.5 m counterpoise; impedance per band ===
+  L = 20.1 m (65.9 ft):
+     80 m ( 3.750 MHz): L = 0.50 x lambda/2, Z =      22   -2160j ohm, |Z| =   2160; after 9:1 unun Z/9 -> VSWR(50)  489.8
+     40 m ( 7.150 MHz): L = 0.96 x lambda/2, Z =    2909    +354j ohm, |Z| =   2931; after 9:1 unun Z/9 -> VSWR(50)    6.6
+     30 m (10.125 MHz): L = 1.36 x lambda/2, Z =      56    -930j ohm, |Z| =    931; after 9:1 unun Z/9 -> VSWR(50)   42.5
+     20 m (14.175 MHz): L = 1.90 x lambda/2, Z =     870    +704j ohm, |Z| =   1119; after 9:1 unun Z/9 -> VSWR(50)    3.4
+     17 m (18.118 MHz): L = 2.43 x lambda/2, Z =      74    -379j ohm, |Z| =    386; after 9:1 unun Z/9 -> VSWR(50)   10.4
+     15 m (21.225 MHz): L = 2.85 x lambda/2, Z =     456    +568j ohm, |Z| =    728; after 9:1 unun Z/9 -> VSWR(50)    3.3
+     12 m (24.940 MHz): L = 3.34 x lambda/2, Z =     104    -321j ohm, |Z| =    337; after 9:1 unun Z/9 -> VSWR(50)    6.6
+     10 m (28.850 MHz): L = 3.87 x lambda/2, Z =     588    +762j ohm, |Z| =    962; after 9:1 unun Z/9 -> VSWR(50)    4.0
+  L = 21.6 m (70.9 ft):
+     80 m ( 3.750 MHz): L = 0.54 x lambda/2, Z =      27   -2103j ohm, |Z| =   2103; after 9:1 unun Z/9 -> VSWR(50)  376.4
+     40 m ( 7.150 MHz): L = 1.03 x lambda/2, Z =    1498   -2929j ohm, |Z| =   3290; after 9:1 unun Z/9 -> VSWR(50)   16.3
+     30 m (10.125 MHz): L = 1.46 x lambda/2, Z =      52    -769j ohm, |Z| =    771; after 9:1 unun Z/9 -> VSWR(50)   33.7
+     20 m (14.175 MHz): L = 2.04 x lambda/2, Z =    1360   -1844j ohm, |Z| =   2292; after 9:1 unun Z/9 -> VSWR(50)    8.8
+     17 m (18.118 MHz): L = 2.61 x lambda/2, Z =     105    -106j ohm, |Z| =    150; after 9:1 unun Z/9 -> VSWR(50)    4.5
+     15 m (21.225 MHz): L = 3.06 x lambda/2, Z =    1190   -1387j ohm, |Z| =   1827; after 9:1 unun Z/9 -> VSWR(50)    6.5
+     12 m (24.940 MHz): L = 3.59 x lambda/2, Z =     124     +61j ohm, |Z| =    139; after 9:1 unun Z/9 -> VSWR(50)    3.7
+     10 m (28.850 MHz): L = 4.16 x lambda/2, Z =     367    -750j ohm, |Z| =    835; after 9:1 unun Z/9 -> VSWR(50)    5.3
+  L = 12.5 m (41.0 ft):
+     80 m ( 3.750 MHz): L = 0.31 x lambda/2, Z =       7   -2477j ohm, |Z| =   2477; after 9:1 unun Z/9 -> VSWR(50) 1880.2
+     40 m ( 7.150 MHz): L = 0.60 x lambda/2, Z =      44    -923j ohm, |Z| =    924; after 9:1 unun Z/9 -> VSWR(50)   52.8
+     30 m (10.125 MHz): L = 0.84 x lambda/2, Z =     340    +190j ohm, |Z| =    390; after 9:1 unun Z/9 -> VSWR(50)    1.7
+     20 m (14.175 MHz): L = 1.18 x lambda/2, Z =     157   -1111j ohm, |Z| =   1122; after 9:1 unun Z/9 -> VSWR(50)   20.7
+     17 m (18.118 MHz): L = 1.51 x lambda/2, Z =      69    -258j ohm, |Z| =    267; after 9:1 unun Z/9 -> VSWR(50)    8.8
+     15 m (21.225 MHz): L = 1.77 x lambda/2, Z =     226    +323j ohm, |Z| =    394; after 9:1 unun Z/9 -> VSWR(50)    3.2
+     12 m (24.940 MHz): L = 2.08 x lambda/2, Z =     876   -1331j ohm, |Z| =   1594; after 9:1 unun Z/9 -> VSWR(50)    6.8
+     10 m (28.850 MHz): L = 2.41 x lambda/2, Z =      98    -119j ohm, |Z| =    154; after 9:1 unun Z/9 -> VSWR(50)    4.9
+[MISS] 20.1 m wire: |Z| > 1.5 kOhm on 40/20/15/10 m (min 728) -- pre-registered; a MISS means the counterpoise and end effects move the antiresonances (reported, not tuned)
+  21.6 m (71 ft) wire: max |Z| over 80-10 m = 3290 ohm
+
+  Length search: physical L whose half-wave multiples avoid every band by the largest margin
+    80-10 m, K = 0.97: lengths with >= 3.5 % clearance (m / ft / clearance):
+     8.95 m/29 ft/9.7%, 11.00 m/36 ft/5.4%, 12.60 m/41 ft/7.3%, 16.80 m/55 ft/3.9%, 18.55 m/61 ft/5.5%, 22.05 m/72 ft/5.6%
+    VE3EED list evaluated with the same metric (80-10 m; 29-41 ft are too short for 80 m but are scored anyway):
+     29 ft: 8.9%, 35.5 ft: 3.9%, 41 ft: 6.5%, 58 ft: 0.9%, 71 ft: 3.9%, 84 ft: 0.0%, 107 ft: 1.3%, 119 ft: 0.0%, 148 ft: 0.0%
+    bad example 66 ft (20.1 m): 0.0%; 33 ft (10.06 m): 0.0%
+[PASS] 71 ft has >= 3 % clearance on 80-10 m (3.9%)
+
+  NEC-based check of 'good lengths': worst-band VSWR(50) behind an ideal 9:1 unun and number of band
+  points (40-10 m, edges + centre = 21 points) with |Z| > 2 kOhm, for three installations:
+   inverted-L over perfect ground (6 m vertical): median worst VSWR 16.6; best lengths 33.00 m/108 ft (VSWR 11.6, 0 pts >2k), 33.25 m/109 ft (VSWR 11.6, 0 pts >2k), 32.75 m/107 ft (VSWR 11.6, 0 pts >2k); 46 % of lengths have no point > 2 kOhm
+     VE3EED: 29 ft 28/2, 35.5 ft 19/3, 41 ft 15/0, 58 ft 16/0, 71 ft 19/4, 84 ft 18/0, 107 ft 12/1, 119 ft 14/0   'bad': 10.06 m 21/3, 20.1 m 19/3, 40.6 m 18/3   (worst VSWR / points > 2 kOhm)
+   end-fed, free space, 7.5 m counterpoise: median worst VSWR 10.2; best lengths 34.75 m/114 ft (VSWR 5.7, 3 pts >2k), 34.50 m/113 ft (VSWR 5.9, 2 pts >2k), 35.00 m/115 ft (VSWR 5.9, 4 pts >2k); 3 % of lengths have no point > 2 kOhm
+     VE3EED: 29 ft 20/0, 35.5 ft 11/7, 41 ft 8/3, 58 ft 10/1, 71 ft 12/10, 84 ft 17/0, 107 ft 9/3, 119 ft 10/5   'bad': 10.06 m 14/7, 20.1 m 9/9, 40.6 m 9/5   (worst VSWR / points > 2 kOhm)
+   end-fed, free space, 2.5 m counterpoise: median worst VSWR 39.6; best lengths 40.00 m/131 ft (VSWR 5.8, 1 pts >2k), 40.25 m/132 ft (VSWR 5.8, 1 pts >2k), 40.50 m/133 ft (VSWR 6.9, 1 pts >2k); 32 % of lengths have no point > 2 kOhm
+     VE3EED: 29 ft 225/2, 35.5 ft 114/4, 41 ft 62/0, 58 ft 33/0, 71 ft 34/6, 84 ft 64/0, 107 ft 56/1, 119 ft 29/0   'bad': 10.06 m 148/3, 20.1 m 43/2, 40.6 m 7/1   (worst VSWR / points > 2 kOhm)
+  20.0 m wire: |Z| > 1.5 kOhm from 6.95 to 8.85 MHz around the first antiresonance (peak 3971 ohm at 7.43 MHz): +-13 %
+
+=== 2. Fan dipole: 40 m and 20 m dipoles on one feed (free space) ===
+  40 m alone (L = 20.3 m): resonance 7.184 MHz, R = 72.1 ohm
+  20 m alone (L = 10.1 m): resonance 14.404 MHz, R = 72.1 ohm
+  fan, 20 m wires drooping 10 deg below the 40 m wires (vertical fan): resonances 7.155 MHz (R 51 ohm), 14.960 MHz (R 36 ohm)
+  fan, 20 m wires drooping 30 deg below the 40 m wires (vertical fan): resonances 7.164 MHz (R 60 ohm), 14.672 MHz (R 37 ohm)
+  crossed: 20 m dipole rotated 30 deg in azimuth from the 40 m dipole: resonances 7.164 MHz (R 59 ohm), 14.534 MHz (R 52 ohm)
+  crossed: 20 m dipole rotated 90 deg in azimuth from the 40 m dipole: resonances 7.196 MHz (R 73 ohm), 14.277 MHz (R 70 ohm)
+[PASS] fan: a resonance remains in 12.5-15.5 MHz 
+    shift of the 20 m resonance by the 40 m wire (30 deg spread): +1.9 %
+
+=== 3. Inverted-V (7.1 MHz, free space and over average ground at 12 m apex) ===
+  apex 180 deg: free space: resonant arm 10.17 m, R = 67.7 ohm; over ground (apex 12 m): arm 10.12 m, R = 80.9 ohm
+  apex 150 deg: free space: resonant arm 10.19 m, R = 64.3 ohm; over ground (apex 12 m): arm 10.11 m, R = 76.7 ohm
+  apex 120 deg: free space: resonant arm 10.25 m, R = 54.7 ohm; over ground (apex 12 m): arm 10.16 m, R = 65.5 ohm
+  apex  90 deg: free space: resonant arm 10.36 m, R = 39.8 ohm; over ground (apex 12 m): arm 10.27 m, R = 49.0 ohm
+[PASS] inverted-V 90 deg R well below flat dipole R (free space) (40 vs 68)
+
+=== 4. Off-centre-fed dipole, 41.0 m wire (80 m half wave), free space ===
+  centre-fed resonance f1 = 3.564 MHz, R = 72.2 ohm
+  feed at 0.50 L: Z(f1) =     72    -0j (R_c/cos^2 kz =    72), Z(2f1) =   4905 -2258j, Z(3f1) =     98   -72j, Z(4f1) =   3905  -504j
+  feed at 0.40 L: Z(f1) =     79    -1j (R_c/cos^2 kz =    80), Z(2f1) =    271  -102j, Z(3f1) =    241  -181j, Z(4f1) =    121  -122j
+  feed at 0.33 L: Z(f1) =     94    -2j (R_c/cos^2 kz =    97), Z(2f1) =    122   -47j, Z(3f1) =   4212 -1460j, Z(4f1) =    127  -134j
+  feed at 0.25 L: Z(f1) =    138    -8j (R_c/cos^2 kz =   144), Z(2f1) =     88   -36j, Z(3f1) =    225  -143j, Z(4f1) =   3647 -1228j
+  33 % feed, 12 m over average ground: Z(1f1) = 79+34j, Z(2f1) = 140-25j, Z(3f1) = 4022-849j, Z(4f1) = 126-143j
+  33 % feed, 20 m over average ground: Z(1f1) = 111+23j, Z(2f1) = 132-62j, Z(3f1) = 4098-1885j, Z(4f1) = 128-138j
+[PASS] 33 % OCF: |Z(3 f1)| much higher than at f1, 2f1, 4f1 ([94, 131, 4458, 185])
+
+=== 5. G5RV: 31.1 m top at 10.4 m over average ground, 10.36 m (electrical) of 450 ohm line ===
+   80 m ( 3.750 MHz): top Z =     30  -337j, after line Z =    19.7  +77.2j, VSWR(50) =    8.9
+   40 m ( 7.150 MHz): top Z =    532 +1189j, after line Z =    64.2 -150.8j, VSWR(50) =    9.0
+   30 m (10.125 MHz): top Z =   1679 -2321j, after line Z =    76.4 +417.2j, VSWR(50) =   47.7
+   20 m (14.175 MHz): top Z =    108   -53j, after line Z =   109.6  -80.6j, VSWR(50) =    3.6
+   17 m (18.118 MHz): top Z =   1953 +1827j, after line Z =   136.2 -540.2j, VSWR(50) =   45.9
+   15 m (21.225 MHz): top Z =    289 -1021j, after line Z =    48.4 +131.7j, VSWR(50) =    9.1
+   12 m (24.940 MHz): top Z =    191  +318j, after line Z =   126.3  -81.8j, VSWR(50) =    3.7
+   10 m (28.850 MHz): top Z =   2822  -981j, after line Z =  3025.5 -655.7j, VSWR(50) =   63.4
+  sweep 13-15.5 MHz, Z0 = 450 ohm: min VSWR(50) 2.30 at 14.35 MHz; VSWR at 14.0/14.175/14.35 MHz = 6.97/3.55/2.30
+  sweep 13-15.5 MHz, Z0 = 300 ohm: min VSWR(50) 2.28 at 14.35 MHz; VSWR at 14.0/14.175/14.35 MHz = 6.07/3.25/2.28
+[MISS] G5RV 20 m VSWR(50) < 2.5 (3.55; Varney quotes ~1.8 -- pre-registered, reported)
+
+=== 6. NVIS: horizontal half-wave dipole at 5.3 MHz over average ground vs height ===
+  h = 0.05 lambda (  2.8 m): Z =  50.6  -8.6j ohm; zenith gain  0.83 dBi, max  0.83 dBi at elevation 90 deg, gain at 30 deg elev -4.18 dBi
+  h = 0.10 lambda (  5.7 m): Z =  49.3  -5.3j ohm; zenith gain  4.79 dBi, max  4.79 dBi at elevation 90 deg, gain at 30 deg elev  0.17 dBi
+  h = 0.15 lambda (  8.5 m): Z =  59.6  -0.3j ohm; zenith gain  6.12 dBi, max  6.12 dBi at elevation 90 deg, gain at 30 deg elev  2.14 dBi
+  h = 0.25 lambda ( 14.1 m): Z =  81.5  -8.5j ohm; zenith gain  5.92 dBi, max  6.09 dBi at elevation 62 deg, gain at 30 deg elev  4.12 dBi
+  h = 0.50 lambda ( 28.3 m): Z =  63.0 -33.9j ohm; zenith gain -6.36 dBi, max  7.74 dBi at elevation 28 deg, gain at 30 deg elev  7.69 dBi
+[PASS] NVIS: 0.15 lambda dipole peaks within 15 deg of zenith (peak at 90 deg)
+[PASS] 0.5 lambda dipole: peak away from zenith (peak at 28 deg)
+
+=== 7. Trap dipole (W3DZZ-like 80/40 m): traps 8.2 uH || C resonant at 7.05 MHz, Q_L = 200 ===
+  trap C = 62.2 pF; X_L at 7.05 MHz = 363 ohm
+  resonances: 3.714 MHz (R 55.6 ohm), 7.101 MHz (R 71.4 ohm)
+[PASS] trap dipole: one resonance in 3.4-4.1 MHz and one in 6.7-7.5 MHz 
+  at 3.75 MHz: Z (Q 200) = 57.8+21.4j, Z (lossless) = 56.7+21.4j -> trap-loss efficiency ~ 98 % (R_rad/R_in, same current)
+  at 7.1 MHz: Z (Q 200) = 71.3-0.6j, Z (lossless) = 65.8+0.5j -> trap-loss efficiency ~ 92 % (R_rad/R_in, same current)
+
+=== 8. lambda/4 vertical at 7.1 MHz, base 2 m up, N elevated lambda/4 radials, average ground ===
+  1 radial(s): Z =  49.8 +14.7j ohm, mean gain at 10 deg elevation -3.80 dBi, fraction of input power radiated into the sky hemisphere = 23.9 %
+  2 radial(s): Z =  35.1  +0.6j ohm, mean gain at 10 deg elevation -2.46 dBi, fraction of input power radiated into the sky hemisphere = 26.6 %
+  4 radial(s): Z =  32.6  +0.8j ohm, mean gain at 10 deg elevation -2.16 dBi, fraction of input power radiated into the sky hemisphere = 28.3 %
+  8 radial(s): Z =  32.3  +4.6j ohm, mean gain at 10 deg elevation -2.12 dBi, fraction of input power radiated into the sky hemisphere = 28.5 %
+  reference: horizontal dipole at 0.5 lambda over the same ground: sky-hemisphere fraction 77.1 %
+  reference: same vertical on a perfect ground: sky-hemisphere fraction 100.0 % (should be ~100 %), Z = 39.2+22.5j
+
+SOME MISSES (see above)

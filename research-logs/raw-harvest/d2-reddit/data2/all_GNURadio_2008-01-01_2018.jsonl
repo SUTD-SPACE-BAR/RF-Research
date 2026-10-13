@@ -1,0 +1,101 @@
+{"created_utc": 1545743825, "id": "a9esww", "link_flair_text": null, "num_comments": 3, "score": 5, "subreddit": "GNURadio", "title": "How can I convert a code to a signal audio and viceversa?"}
+{"created_utc": 1545225806, "id": "a7mdbj", "link_flair_text": null, "num_comments": 3, "score": 1, "subreddit": "GNURadio", "title": "Signals detection"}
+{"created_utc": 1544911458, "id": "a6jcvg", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "GNURadio", "title": "USRP and Dell XPS 9570"}
+{"created_utc": 1544544759, "id": "a585mu", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "WX GUI indicator?"}
+{"created_utc": 1544084359, "id": "a3m2r8", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "GNURadio", "title": "PlutoSDR - Tx issues"}
+{"created_utc": 1542830961, "id": "9z6tft", "link_flair_text": null, "num_comments": 10, "score": 5, "subreddit": "GNURadio", "title": "Audio sink error with Rtl-Sdr, i am a quite noob, so what is wrong with this config?"}
+{"created_utc": 1542567441, "id": "9y8m69", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "GNURadio", "title": "Noob and problems with ASK signal"}
+{"created_utc": 1542491519, "id": "9y0d13", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "GNURadio", "title": "Help with GNURadio"}
+{"created_utc": 1542293938, "id": "9xbw2d", "link_flair_text": null, "num_comments": 3, "score": 4, "subreddit": "GNURadio", "title": "Reverse Engineering toy airplane controller"}
+{"created_utc": 1542254008, "id": "9x7k8z", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "GNURadio", "title": "ZMG fails to import when running PyEOT on Windows 10"}
+{"created_utc": 1540924507, "id": "9sqp8i", "link_flair_text": null, "num_comments": 7, "score": 2, "subreddit": "GNURadio", "title": "Help Needed: Multiple Outputs in custom Python Block"}
+{"created_utc": 1540820686, "id": "9sd7e6", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "GNURadio", "title": "GNURadio on a MacBook Pro?"}
+{"created_utc": 1540319140, "id": "9qrot8", "link_flair_text": null, "num_comments": 10, "score": 9, "subreddit": "GNURadio", "title": "Low pass filter? Why"}
+{"created_utc": 1540293625, "id": "9qo04h", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "GNURadio", "title": "SDRplay and GNU radio"}
+{"created_utc": 1538294303, "id": "9k4lzc", "link_flair_text": null, "num_comments": 3, "score": 6, "subreddit": "GNURadio", "title": "GNU Radio HAM transceiver"}
+{"created_utc": 1537979234, "id": "9j4212", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "GNURadio", "title": "How to process signals contained in burst tags (SOB/EOB)?"}
+{"created_utc": 1537969235, "id": "9j2lbh", "link_flair_text": null, "num_comments": 27, "score": 2, "subreddit": "GNURadio", "title": "Tried to install GNURadio by installing PothosSDR on windows 10, but while gnuradio-companion works, importing gnuradio from and IDE does not."}
+{"created_utc": 1537324313, "id": "9h1az5", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "Timestamps and Metadata"}
+{"created_utc": 1536789574, "id": "9fc6a1", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "GNURadio", "title": "How do I determine which frequency is most prevalent in a given bandwidth and what the signal intensity in dB is?"}
+{"created_utc": 1536781584, "id": "9fb12j", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "GNURadio", "title": "QPSK Constellation Not Locking"}
+{"created_utc": 1536766452, "id": "9f8t0i", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Building Thrift for Performance Counters on Ubuntu 18.04"}
+{"created_utc": 1536764145, "id": "9f8guy", "link_flair_text": null, "num_comments": 3, "score": 1, "subreddit": "GNURadio", "title": "Putting data into format that GNURadio can read?"}
+{"created_utc": 1536549830, "id": "9ej8ql", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "GNURadio", "title": "A noob's attempt at reverse engineering Google's Cash/Tez mode - part 1"}
+{"created_utc": 1536351065, "id": "9dy21n", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "How to process burst contained by SOB (start of burst) and EOB (end of burst) tags?"}
+{"created_utc": 1536000883, "id": "9co4ob", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "GNURadio", "title": "osx gnuradio missing wxgui macports install ?"}
+{"created_utc": 1535746343, "id": "9bwzin", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Detecting Start of Burst with Peak Detector 2 Block"}
+{"created_utc": 1535541147, "id": "9b8bz8", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "GNURadio", "title": "Hackaday is hosting GNU Radio for their Hack Chat on Friday"}
+{"created_utc": 1535455837, "id": "9ay3js", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "USRP x310 Slot B"}
+{"created_utc": 1535215321, "id": "9a84nk", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "GNURadio", "title": "Can a Pluto mk 2 work on windows 7 ,on Gnu radio ?I\u2019ve tried it on wi 10 but just won\u2019t work"}
+{"created_utc": 1535156205, "id": "9a2lo3", "link_flair_text": null, "num_comments": 12, "score": 7, "subreddit": "GNURadio", "title": "Proper Way to Install GNURadio on Ubuntu 18.04?"}
+{"created_utc": 1535086371, "id": "99ukk3", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "GNURadio", "title": "audio scrambling (again, but with different approach)"}
+{"created_utc": 1535029235, "id": "99n67h", "link_flair_text": null, "num_comments": 9, "score": 2, "subreddit": "GNURadio", "title": "Struggling with getting started"}
+{"created_utc": 1534960327, "id": "99fioi", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "GNURadio", "title": "Help with using LimeSDR USB for OOK and ASK at MHz datarates"}
+{"created_utc": 1534561644, "id": "988jhm", "link_flair_text": null, "num_comments": 9, "score": 1, "subreddit": "GNURadio", "title": "difficulty simulating a ring modulator"}
+{"created_utc": 1534320218, "id": "97ghrh", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "GNURadio", "title": "BladeRF x40 compatible with HackRF One code"}
+{"created_utc": 1534008384, "id": "96i8tx", "link_flair_text": null, "num_comments": 12, "score": 3, "subreddit": "GNURadio", "title": "GNURadio Cannot Import Hierarchical Block"}
+{"created_utc": 1533865803, "id": "962ph2", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Can\u2019t Search for Blocks"}
+{"created_utc": 1533754118, "id": "95otso", "link_flair_text": null, "num_comments": 10, "score": 2, "subreddit": "GNURadio", "title": "Issues Using CMake in OOT Module"}
+{"created_utc": 1533737812, "id": "95mdpf", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "Is it possible to print output in linux terminal using GNU Radio?"}
+{"created_utc": 1533657391, "id": "95cuzz", "link_flair_text": null, "num_comments": 1, "score": 6, "subreddit": "GNURadio", "title": "Is it possible to run flow without the SDR connected?"}
+{"created_utc": 1533545070, "id": "94zmhs", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "GNURadio", "title": "Finding easy to understand documentation"}
+{"created_utc": 1533153390, "id": "93sdzs", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "GNUradio 3.7.10 on Raspberry Pi 3"}
+{"created_utc": 1533142505, "id": "93qqbx", "link_flair_text": null, "num_comments": 4, "score": 6, "subreddit": "GNURadio", "title": "Audio Sink appears to be dropping samples"}
+{"created_utc": 1532545990, "id": "91uuol", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "SDR dongle for ZWave"}
+{"created_utc": 1532459671, "id": "91keu3", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "GNU Radio no longer working: USRP Simple Source not found"}
+{"created_utc": 1532400056, "id": "91djdw", "link_flair_text": null, "num_comments": 1, "score": 5, "subreddit": "GNURadio", "title": "AIS RTL-SDR Help"}
+{"created_utc": 1532354924, "id": "917d30", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "GNURadio", "title": "Running flow with python script"}
+{"created_utc": 1532341024, "id": "915uq4", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "Dongle for transmitting"}
+{"created_utc": 1532087093, "id": "90fab8", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "Real time text transmission with PlutoSDR"}
+{"created_utc": 1532040672, "id": "90al2j", "link_flair_text": null, "num_comments": 0, "score": 4, "subreddit": "GNURadio", "title": "Traffic analysis"}
+{"created_utc": 1532011387, "id": "906fw9", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "GNURadio", "title": "Grouping data into chunks for packet transmission?"}
+{"created_utc": 1531690101, "id": "8z56um", "link_flair_text": null, "num_comments": 4, "score": 8, "subreddit": "GNURadio", "title": "Any good sources to learn more about GRC and signal processing?"}
+{"created_utc": 1531526025, "id": "8yp0eq", "link_flair_text": null, "num_comments": 13, "score": 5, "subreddit": "GNURadio", "title": "having a bit of trouble transmitting and receiving a text file using GNURadio. What am I doing wrong?"}
+{"created_utc": 1531241627, "id": "8xr286", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Can anyone help me with this error? I can't install gnu radio from source, it throws an error at about %75. Thanks!"}
+{"created_utc": 1531203936, "id": "8xm9p7", "link_flair_text": null, "num_comments": 5, "score": 1, "subreddit": "GNURadio", "title": "How to lower BER/PER with OFDM?"}
+{"created_utc": 1531189042, "id": "8xjrhh", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Demodulating OOK with Binary Slicer, input DC drifting above cutoff"}
+{"created_utc": 1530214623, "id": "8umobb", "link_flair_text": null, "num_comments": 0, "score": 5, "subreddit": "GNURadio", "title": "PIE demod in gnu radio"}
+{"created_utc": 1530115422, "id": "8uatco", "link_flair_text": null, "num_comments": 7, "score": 2, "subreddit": "GNURadio", "title": "Failed to XInitThreads() Error: New to SDR"}
+{"created_utc": 1529994748, "id": "8txst1", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "GNURadio", "title": "How to send bits on GRC?"}
+{"created_utc": 1529938039, "id": "8tr33x", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "Source file format compatible?"}
+{"created_utc": 1529792050, "id": "8tddqg", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "GNURadio", "title": "Installing on my rpi3 B (FROZEN)"}
+{"created_utc": 1529605449, "id": "8su95s", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Binary FSK Modulation in GNURadio?"}
+{"created_utc": 1528743145, "id": "8qbx76", "link_flair_text": null, "num_comments": 1, "score": 5, "subreddit": "GNURadio", "title": "Scale of Polyphase Clock Sync output?"}
+{"created_utc": 1527850375, "id": "8nqylc", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "Interfacing with top_block"}
+{"created_utc": 1526945376, "id": "8l5aga", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Problems with cmake std installing gnuradio from source"}
+{"created_utc": 1526474451, "id": "8julb7", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "GNURadio", "title": "Listening in on wireless pool controller"}
+{"created_utc": 1526206735, "id": "8j2xfd", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "GNURadio", "title": "Can't run GRC on Linux"}
+{"created_utc": 1526121163, "id": "8iv84f", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "GNURadio", "title": "Read FFT Power value"}
+{"created_utc": 1525635285, "id": "8hhnar", "link_flair_text": null, "num_comments": 11, "score": 5, "subreddit": "GNURadio", "title": "Change center frequency automatically"}
+{"created_utc": 1525348564, "id": "8gpsou", "link_flair_text": null, "num_comments": 1, "score": 5, "subreddit": "GNURadio", "title": "Sink block that spawns video decoder"}
+{"created_utc": 1525263368, "id": "8ggxpk", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "GNURadio", "title": "How do I interface my X310 to a NVIDIA K80 GPU"}
+{"created_utc": 1524595985, "id": "8emx0t", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "4L-FSK demodulator blocks GNUradio 3.7"}
+{"created_utc": 1524581939, "id": "8el1h7", "link_flair_text": null, "num_comments": 1, "score": 5, "subreddit": "GNURadio", "title": "Video Streaming in GnuRadio ?"}
+{"created_utc": 1524231193, "id": "8dnlfg", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "GNURadio", "title": "ASK Temperature Stream Listening Service"}
+{"created_utc": 1524113786, "id": "8dc6ui", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "GNURadio", "title": "GNURadio RTL SDR Testing bed"}
+{"created_utc": 1524083164, "id": "8d8v0v", "link_flair_text": null, "num_comments": 1, "score": 5, "subreddit": "GNURadio", "title": "Rx on RX2 from TX/RX using B200"}
+{"created_utc": 1523877882, "id": "8cmsrn", "link_flair_text": null, "num_comments": 11, "score": 3, "subreddit": "GNURadio", "title": "using GNURadio in Ubuntu virtual machine: fatal error"}
+{"created_utc": 1523757988, "id": "8cc9kz", "link_flair_text": null, "num_comments": 1, "score": 7, "subreddit": "GNURadio", "title": "PCIe-based SDR fpga development board"}
+{"created_utc": 1523471131, "id": "8bjcsw", "link_flair_text": null, "num_comments": 29, "score": 5, "subreddit": "GNURadio", "title": "error when running GNU Radio on Raspberry Pi"}
+{"created_utc": 1523394951, "id": "8bbhbh", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "Could use some help setting up an FM receiver"}
+{"created_utc": 1523179840, "id": "8aoyce", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "GNU Radio gr-digital clock sync loop bandwidth"}
+{"created_utc": 1522477605, "id": "88gwtq", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "GNURadio", "title": "Comparing numbers to get an algorithm"}
+{"created_utc": 1522269084, "id": "87vanj", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "GNURadio", "title": "Despreading FHSS Signals in GNURadio Using RTL-SDR"}
+{"created_utc": 1522260641, "id": "87u4vv", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "GNU Radio OFDM Channel Estimation Block"}
+{"created_utc": 1521103482, "id": "84kzqp", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "GNURadio", "title": "Frequency Hopping in GNURadio"}
+{"created_utc": 1520977487, "id": "847ze1", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "GNURadio", "title": "Where's the Knob/Dial control widget?"}
+{"created_utc": 1520427778, "id": "82o3e1", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "GNURadio", "title": "Shorten range of the receive window"}
+{"created_utc": 1519913114, "id": "815gbn", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "GNURadio", "title": "Problem with Socket PDU"}
+{"created_utc": 1519873672, "id": "8124od", "link_flair_text": null, "num_comments": 4, "score": 11, "subreddit": "GNURadio", "title": "i'm still wondering why nobody has tried to use GNUradio as a PS scanner..."}
+{"created_utc": 1519827439, "id": "80wc8e", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "GNU radio on Virtual Machine"}
+{"created_utc": 1519769373, "id": "80qma0", "link_flair_text": null, "num_comments": 6, "score": 1, "subreddit": "GNURadio", "title": "USRP to Wav File via GRC"}
+{"created_utc": 1519631894, "id": "80bedi", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "GNURadio", "title": "GNU Radio to MATLAB"}
+{"created_utc": 1519362154, "id": "7zlktd", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "GNURadio", "title": "Automatic Gain Control (AGC) Block"}
+{"created_utc": 1518359595, "id": "7wt2rd", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "GNURadio", "title": "Dark GTK theme that works with GRC?"}
+{"created_utc": 1518049839, "id": "7w0uwu", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "GNURadio", "title": "Error given when attempting to run after fresh install"}
+{"created_utc": 1517810254, "id": "7vcsc9", "link_flair_text": null, "num_comments": 1, "score": 4, "subreddit": "GNURadio", "title": "Spectrum sensing block diagram for GNURadio"}
+{"created_utc": 1517703750, "id": "7v3b30", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "GNURadio", "title": "DAB gnuradio receiver?"}
+{"created_utc": 1517370161, "id": "7u70hb", "link_flair_text": null, "num_comments": 2, "score": 5, "subreddit": "GNURadio", "title": "Need help with the tutorials on GNU Radio: how to go about the tutorials that come as a part of the installation package."}
+{"created_utc": 1516807945, "id": "7snuj1", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "GNURadio", "title": "Diatomite, Software to monitor radio frequency activity using GNURadio and the RealTek 2838."}
+{"created_utc": 1516098860, "id": "7qrh09", "link_flair_text": null, "num_comments": 1, "score": 6, "subreddit": "GNURadio", "title": "For my end of degree project, I'm studying security on radio communications using SDR. This is a little bit of what I've been working on"}
+{"created_utc": 1514834340, "id": "7ngyai", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "GNURadio", "title": "goertzel block"}

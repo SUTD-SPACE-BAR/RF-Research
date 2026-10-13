@@ -1,0 +1,360 @@
+d9306|10|0k|array-signal-processing|Practical wideband digital beamforming for large arrays in radar applications
+d58032|9|5k|array-signal-processing|Multi-channel audio upsampling interpolation
+d30275|9|1k|array-signal-processing|Can a narrowband beamformer be used for speech separation
+d30425|8|3k|array-signal-processing|Intuitive interpretation of Fourier transform in beamforming
+d64203|8|0k|array-signal-processing|Beamformer implementation methods
+d83816|8|1k|array-signal-processing|Why is the null of an adaptive beamformer narrower than antenna beam-width?
+d82918|7|1k|array-signal-processing|MUSIC Algorithm for Direction of Arrival (DOA) in Acoustic Signals
+d87172|7|0k|array-signal-processing|Noise leakage problem with least square estimation in the frequency-distance domain
+d72298|6|0k|array-signal-processing|How to derive the "well-known" solution to Unconstrained Array Gain?
+d99792|5|0k|array-signal-processing|What does the eigendecomposition of a sensor array covariance matrix represent physically?
+d62630|5|2k|array-signal-processing|Radar signal processing flow chart
+d89870|4|0k|array-signal-processing|What wavelength do we use when calculating the array manifold vector when transmitting LFM waveforms?
+d96356|4|0k|array-signal-processing|Multiplicative Array Processing
+d96357|4|0k|array-signal-processing|Making the MIMO virtual array size appear in the FFT and Capon angle resolution
+d89815|4|0k|array-signal-processing|Expanding cross correlation DOA estimation to n microphones
+d83669|3|1k|array-signal-processing|MUSIC implementation in Pyroomacoustics library
+d81316|3|0k|array-signal-processing|Direction-of-Arrival estimates clustered at specific angles
+d146|14|0k|beamforming|How can one improve the robustness of adaptive beamformers to signal mismatches?
+d7825|10|2k|beamforming|Difference between 'conventional' and 'adaptive' beamformers?
+d82978|9|0k|beamforming|What is the relationship between beamforming and Independent Component Analysis (ICA)?
+d88867|6|0k|beamforming|Is there an intuitive explanation for how adaptive beamformers work?
+d89498|5|1k|beamforming|What's the point of differential beamforming?
+d16387|5|0k|beamforming|Is it possible to do further beamforming on already beamformed data?
+d41971|6|2k|chirp|Problems Using FFT to Compute Impedance in a Model Neuron
+d38867|5|3k|chirp|Radar SNR for a LFM Waveform
+d69720|3|2k|chirp|Complex nature of chirped signal
+d96462|3|0k|chirp|FMCW - Chirp bandwidth superior to ADC samplig rate
+d72103|3|0k|chirp|Circular Convolution and FFT of power 2
+d71124|3|0k|chirp|CZT: Do Bluestein algorithm perform backward transformation?
+d93704|2|2k|chirp|Why does frequency sweeping double the frequency?
+d73320|2|2k|chirp|How to implement an RF Mixer for chirp signal in python?
+d76374|2|0k|chirp|Chirp zero crossings
+d75|23|4k|decimation|Why would I leave a signal oversampled?
+d3071|12|18k|decimation|Downsampling a signal with decimate
+d45446|11|15k|decimation|Python's $\tt resample$ vs $\tt resample\_poly$ vs $\tt decimate$
+d83696|8|3k|decimation|Downsample a signal by a non-integer factor
+d62177|7|4k|decimation|Downsample: resample vs antialias fitlering + decimation
+d3047|5|1k|decimation|Timing syncronisation using polyphase decimation filter
+d715|24|9k|demodulation|Extracting Binary Magnetic-Strip Card Data from raw WAV
+d3158|15|16k|demodulation|How to demodulate an AFSK signal in software
+d8456|14|13k|demodulation|How to perform carrier phase recovery in software?
+d1259|14|3k|demodulation|Improving SNR using DSP techniques
+d30793|13|7k|demodulation|FSK Demodulation, Bit Timing Recovery
+d360|12|13k|demodulation|How to demodulate an OFDM signal
+d7544|10|2k|demodulation|Common methods of transmitting digital data through an extremely noisy audio signal?
+d24372|10|4k|demodulation|What is the connection between analog signal to noise ratio and signal to noise ratio in the IQ plane in a quadrature demodulation system?
+d512|8|5k|demodulation|How to determine where to sample for demodulation of BPSK signals?
+d14368|4|1k|demodulation|IQ sampling vs 2X f0 sampling for SDR
+d9094|41|88k|digital-communications|Understanding the Matched Filter
+d422|18|7k|digital-communications|How to estimate and compensate for doppler shift in wireless signals?
+d7724|12|20k|digital-communications|How is symbol synchronization with OFDM done?
+d117|12|4k|digital-communications|Optimum matched filter without ISI
+d79209|11|7k|digital-communications|How can I work on DSP using C/C++?
+d1519|11|10k|digital-communications|Information Theory - units of channel capacity
+d555|11|0k|digital-communications|What are thoughts on best modulation to use for underwater acoustic communications at low frequencies?
+d22473|11|7k|digital-communications|What is difference between OFDM and GFDM?
+d31517|9|5k|digital-communications|Location of Matched Filter
+d26747|9|0k|digital-communications|Practicality of the assumption of i.i.d. for Rayleigh channels
+d41171|8|3k|digital-communications|Whitened Matched Filter
+d58191|6|1k|digital-communications|QPSK Phase Recovery : Maximum-likelihood Vs Costa's Loop
+d49556|5|0k|digital-communications|FFT based symbol synchronization for digital demodulation
+d74697|4|2k|digital-communications|Why is phase range between $-\pi$ and $+\pi$ (instead of $0$ and $2\pi$)?
+d86997|4|3k|digital-communications|What's the difference between frequency shift, frequency offset, phase offset, and phase noise?
+d96745|4|0k|digital-communications|Introductory Wireless Communications Text
+d2878|4|2k|digital-communications|Is it possible to transmit and/or receive multiple types of signals at the same time?
+d70635|4|0k|doa|MUSIC algorithm terminology
+d74574|3|7k|doa|Understanding GCC-PHAT as a Feature
+d96419|3|0k|doa|Best algorithm for location estimation of a travelling broadband noise source recorded using two hydrophones
+d72346|3|0k|doa|Compressed Sensing in DOA processing
+d99819|2|0k|doa|Direction of arrival estimate using microphone array
+d38910|8|2k|doppler|Interpretation of Clarke's Doppler power spectral density
+d36401|5|1k|doppler|Matched filter loss due to frequency offset
+d37868|5|2k|doppler|Pulse Doppler Radar: how to filter its Range-Doppler matrix?
+d41118|3|4k|doppler|How to interpret an Ambiguity function
+d62208|3|0k|doppler|How to use a FIR on a signal with a drifting central frequency?
+d91998|3|0k|doppler|Continuous wave Doppler radar
+d70257|3|0k|doppler|Radar for Vital Signs – Matlab Simulation
+d6220|122|58k|fft|Why is it a bad idea to filter by zeroing out FFT bins?
+d741|108|228k|fft|Why should I zero-pad a signal before taking the discrete Fourier transform?
+d736|74|138k|fft|How do I implement cross-correlation to prove two audio files are similar?
+d4825|52|109k|fft|Why is the FFT "mirrored"?
+d1317|36|15k|fft|Is there an algorithm for finding a frequency without DFT or FFT?
+d3026|34|50k|fft|Picking the correct filter for accelerometer data
+d35238|31|11k|fft|Is there a technical term for this simple method of smoothing out a signal?
+d651|30|6k|fft|Which time-frequency coefficients does the Wavelet transform compute?
+d2636|29|22k|fft|Overlap-Add versus Overlap-Save
+d4691|27|34k|fft|What is the difference between PSD and squared magnitude of frequency spectrum?
+d2337|21|7k|fft|FFT with asymmetric windowing?
+d8911|16|28k|fft|Why do we use window in time domain rather than do FFT modify the spectrum and than inverse FFT
+d18164|15|16k|fft|Is it customary to correct for the gain of a window?
+d70700|30|14k|fsk|Why can so little digital information be stored on a cassette tape?
+d45600|13|5k|fsk|Transmit data through sound between 2 computers (very close distance)
+d30653|12|18k|fsk|What is a $BT$ (Bandwidth-Time) product with reference to modulation?
+d7720|10|7k|fsk|PC-to-PC data communication over Sound FSK / PSK / DSSS
+d78367|6|4k|fsk|How to decode a binary Signal in a wav file into binary - sent here from stackoverflow
+d38283|10|1k|gnuradio|What kind of modulation is this?
+d30562|9|7k|gnuradio|Large spike at the center frequency when using Ettus X310
+d51088|6|6k|gnuradio|Pulse shaping with RRC : Number of taps
+d26702|9|4k|matched-filter|Detecting a Signal Inside a Time Series Using MATLAB's $ \tt xcorr() $
+d8237|8|0k|matched-filter|How to Tell How Likely a Signal Is Present in Another One (Variance Unknown)?
+d2400|7|2k|matched-filter|Match Filter in Time-Frequency domain instead of just Time domain. Redundant, or better?
+d50003|6|2k|matched-filter|Finding Reference Audio Signal in Test Audio Signal and Cropping Accordingly
+d35072|6|10k|matched-filter|Pulse Compression(Chirp) SNR Gain
+d7833|21|92k|modulation|How to mimic/copy/fake someone's voice?
+d96|18|3k|modulation|What mathematical tools exist for understanding modulated noise?
+d15206|17|9k|modulation|Can we break the Shannon capacity?
+d37627|14|8k|modulation|Why do SDR receivers emit I/Q samples?
+d2475|12|0k|modulation|What are the basic categories of operations performed on audio signals to create interesting sounds?
+d2284|11|23k|modulation|Why are sidebands generated in AM and FM?
+d85817|6|2k|modulation|Range-Doppler Coupling in FMCW
+d40157|7|1k|ofdm|Flat fading criterion of OFDM subcarrier spacing
+d82945|4|0k|ofdm|Cross Ambiguity Function Peak Width
+d66486|7|1k|pll|2nd Order Type 2 PLL for Tracking Frequency Error
+d75492|5|3k|pll|How to set parameters of the PI controller inside the PLL?
+d73653|5|1k|pll|How can I experimentally find the bandwidth of my PLL?
+d8257|5|1k|pll|Phase Locked Loop Basics
+d17297|4|4k|pll|High modulation index PSK - carrier recovery
+d31213|4|0k|pll|Symbol timing recovery design
+d60993|9|0k|radar|Combining two Images with Different Resolutions into Higher Resolution Image
+d50431|5|10k|radar|Deriving the Resolution Equation of an FMCW RADAR
+d38521|5|4k|radar|Radar terminology - Specific meaning of "video signal"
+d66665|5|5k|radar|Is it fast time or slow time for the delay in the ambiguity function domain for radar signal?
+d46931|5|3k|radar|Radar Pulse Compression Gain (PCR)
+d50413|4|1k|radar|DOA - 1D Music Algorithm
+d68234|4|6k|radar|Generating IF signal for FMCW radar
+d96188|4|0k|radar|Doppler to Azimuth Conversion
+d78288|4|2k|radar|3dFFT to compute angle of arrival in FCMW radars
+d45850|4|0k|radar|Finding the parameters and endpoints of a sinusoid
+d88156|3|0k|radar|FMCW Radar timing of transmission and reception
+d51372|3|3k|radar|How to Calculate the Ambiguity Function
+d70349|3|4k|radar|FMCW Radar - Range-Doppler Plot
+d46047|3|4k|radar|Time-Bandwidth Product
+d94140|3|0k|radar|Phase noise influence on ADC in bistatic FMCW Radar
+d38131|65|33k|sampling|If humans can only hear up to 20 kHz frequency sound, why is music audio sampled at 44.1 kHz?
+d672|34|24k|sampling|"Complex sampling" can break Nyquist?
+d17685|33|30k|sampling|Why do we choose 44.1 kHz as recording sampling rate?
+d79|29|12k|sampling|What is meant by "stochastic sampling"?
+d147|28|4k|sampling|When is aliasing a good thing?
+d101|27|17k|sampling|How to Extrapolate a 1D Signal?
+d79138|20|5k|sampling|What sampling frequency should I use if Nyquist is not available?
+d14523|16|5k|snr|Relationship between entropy and SNR
+d4889|14|55k|snr|how do I calculate SNR of noisy signal?
+d515|14|1k|snr|What are the various definitions for $\rm SNR$, and their associated methods for measuring it?
+d2552|12|80k|snr|What is meant by 20 dB signal-to-noise ratio?
+d1493|11|0k|snr|How can you tell whether there's a signal (when your signal looks a lot like noise)?
+d40734|13|17k|software-defined-radio|What does correcting IQ do?
+d63359|6|4k|software-defined-radio|Obtain I/Q Components from a Real Signal On the Fly - Hilbert Transform or Digital Downconversion?
+d50400|5|1k|software-defined-radio|Time Alignment of 2 Sensors Sampling the Same Signal with Different Hardware Delays
+d79244|4|3k|software-defined-radio|Are Software Defined Radios only Oscilloscopes?
+d66988|4|1k|software-defined-radio|DAC and ADC architecture in SDRs
+d72753|4|6k|software-defined-radio|I/Q sampling with just one ADC
+d74517|4|0k|software-defined-radio|Digital demodulator (SDR) for receiving legacy analog modulated wave
+d63345|4|0k|software-defined-radio|I Q sampling and baseband version of analytic signal
+d54309|4|0k|software-defined-radio|Technical Term for the Sum I + Q
+d1418|10|3k|synchronization|Synchronizing Two Audio Tracks
+d59220|5|1k|synchronization|Maximum cross-correlation coefficient value for time delay estimation
+d79275|4|2k|synchronization|Synchronizing 2 time series signals at slightly different sampling frequencies
+d208|32|24k|window-functions|What should be considered when selecting a windowing function when smoothing a time series?
+d10429|14|2k|window-functions|Is the discrete Gaussian kernel an eigenfunction of the DFT?
+d40598|14|8k|window-functions|Why would one use a Hann or Bartlett window?
+h135|64|9k|ALL|Why is Morse code still in use?
+h59|51|10k|ALL|How do I report an emergency using ham radio?
+h538|45|53k|ALL|Using a balun with a resonant dipole
+h345|43|74k|ALL|Why do hams often conclude messages with "73"?
+h1437|39|47k|ALL|What's the difference between national calling frequency and national simplex calling frequency in the 2m and 70cm band plans published by ARRL?
+h1388|36|60k|ALL|Effect of different metals for antenna elements
+h6887|36|45k|ALL|Can my neighbor's ham radio antenna be interfering with my internet signal or is my internet provider just throwing blame elsewhere?
+h32|35|5k|ALL|Are there well-known methods that can help improve my CW copying speed?
+h1755|35|113k|ALL|Which HF bands are best during the day and which are better at night?
+h606|31|44k|ALL|Can I reduce RFI/noise at the antenna?
+h23|29|36k|ALL|What's a cost-effective way to boost the range of my cheap 2m/70cm handheld?
+h221|29|23k|ALL|How can one convert from Lat/Long to Grid Square?
+h352|28|6k|ALL|What is a link budget, and how do I make one?
+h1646|28|13k|ALL|Is "just listening" on EchoLink considered bad etiquette?
+h72|27|8k|ALL|Encrypted traffic and amateur radio
+h382|27|22k|ALL|What is the relationship between SWR and receive performance?
+h4938|27|80k|ALL|How can I avoid accidentally transmitting with a Baofeng UV-5R?
+h495|26|7k|ALL|How do Handheld antennas work without ground?
+h1891|26|34k|ALL|What's the pinout for "Kenwood" 2.5mm TRS/3.5 mm TRS connector?
+h51|25|17k|ALL|How can I protect equipment against a lightning strike?
+h332|25|7k|ALL|Is there a way to listen to live HF communications using the internet?
+h822|25|0k|ALL|What is the body of knowledge the U.S. written exams test?
+h1142|25|20k|ALL|What makes a 5/8 wavelength vertical desirable?
+h6140|25|47k|ALL|Why are some 1:1 current baluns twice as complicated as others?
+h876|24|5k|ALL|If I hear a distress call, what is the correct procedure for helping the person?
+h1336|24|8k|ALL|Why do we use LSB below 10 MHz and USB above 10 MHz when operating SSB HF?
+h12198|23|6k|ALL|How does the signal know where the cable ends and the antenna starts?
+h356|22|6k|ALL|What defines music, per amateur radio regulations?
+h1073|22|1k|ALL|What information should be on a QSL card?
+h1132|22|3k|ALL|I hate contests. How can I avoid them?
+h2257|22|28k|ALL|What's the difference between saying “CQ” or “QRZ” in a contest?
+h11668|22|4k|ALL|Can I build a radio telescope out of a parabolic TV satellite dish?
+h55|21|9k|ALL|Why do I need to tune an antenna?
+h140|21|85k|ALL|Good wire for wire antenna?
+h607|21|8k|ALL|SDR sampling bandwidth - do the bits per sample matter?
+h1196|21|11k|ALL|SDR: Quadrature demodulation vs direct RF sampling
+h1921|21|36k|ALL|How do I make a RF propagation map for a repeater?
+h18431|21|4k|ALL|Why do people say, "get a nickel," on repeaters?
+h183|20|48k|ALL|What do "QRM" and "QSB" refer to?
+h1271|20|17k|ALL|How to detect common-mode currents or “RF in the shack”?
+h1410|20|17k|ALL|What is the peak voltage at the tips of a dipole antenna?
+h1469|20|103k|ALL|What antenna on a BaoFeng UV-5R Pro will give me better reception?
+h95|19|4k|ALL|How does moving a feedpoint off-center in a dipole affect the resonant frequency and resistive load?
+h516|19|4k|ALL|Ham radio above 275 GHz
+h754|19|39k|ALL|How does a mag mount antenna achieve a ground plane?
+h830|19|17k|ALL|Why do folded dipoles have greater bandwidth than ordinary resonant dipoles?
+h955|19|0k|ALL|What makes cellphone transmissions so energy cheap?
+h1256|19|38k|ALL|Using a Morse code key with a computer?
+h15747|19|4k|ALL|Why do amateur radio operators call an RF choke a balun?
+h18453|19|9k|ALL|FCC sends "Notice of Dismissal" with quite threatening language just for denial of a vanity callsign?
+h117|18|6k|ALL|Can a licensed ham use or modify CB equipment to work the 10 Meter Amateur bands?
+h146|18|43k|ALL|Should I chose a vertical or a horizontal HF antenna?
+h718|18|3k|ALL|What is a "random wire antenna"?
+h835|18|1k|ALL|Is there a disadvantage to using a cheap HT for APRS?
+h1124|18|12k|ALL|What does a noise blanker really do, and what are the side effects?
+h6545|18|35k|ALL|Is packet radio possible on Baofeng UV-5R and similar HTs?
+h7225|18|22k|ALL|Where are the baluns for VHF and higher? How can one be made?
+h9778|18|6k|ALL|How does an SWR meter really work?
+h18280|18|3k|ALL|Why are proprietary codecs used in amateur radio?
+h273|17|1k|ALL|Why is the solar-flux index measured at 10.7 cm?
+h355|17|3k|ALL|Why does SSB have the hollow voice sound?
+h574|17|39k|ALL|What bands and modes will give me voice at 3,000 miles?
+h623|17|154k|ALL|Using my Baofeng UV-5R to talk to walkie talkies
+h635|17|0k|ALL|How do emergency nets work?
+h971|17|3k|ALL|Why do repeaters use cavity filters?
+h986|17|9k|ALL|What's wrong with 220MHz?
+h1291|17|10k|ALL|Understanding coax impedance
+h5061|17|0k|ALL|Are amateur radio call signs unique among all radio call signs?
+h12113|17|8k|ALL|Why do we not use AM and FM at the same time to transmit more information?
+h12999|17|14k|ALL|If I receive an SOS signal, what is the proper response?
+h111|16|7k|ALL|50 Ohm coaxial cable vs 450 Ohm or 600 Ohm ladder or window line?
+h213|16|6k|ALL|OK to use any repeater?
+h615|16|19k|ALL|How can I safely transmit without an antenna tuner or SWR meter?
+h899|16|11k|ALL|What does the addition of a shield to a small loop accomplish?
+h1159|16|5k|ALL|How does one read a ferrite datasheet?
+h1440|16|10k|ALL|What is dBm and why is it used rather than watts?
+h1589|16|3k|ALL|Does a FCC amateur license cost money?
+h1695|16|20k|ALL|Are there any real advantages to an aftermarket NA-701 over the Baofeng stock antenna?
+h2034|16|2k|ALL|Where can one find recordings of Morse code, generated by humans and not machines?
+h3692|16|8k|ALL|Is free space path loss dependent on frequency?
+h6471|16|60k|ALL|FCC tracking of unlicensed FRS/GMRS transmissions
+h8940|16|14k|ALL|What is the cause of this unusually long period of terrible HF band conditions?
+h13|15|9k|ALL|What is the purpose of a balun and a unun in a feed line?
+h16|15|1k|ALL|What should I consider when choosing a coaxial cable?
+h7081|15|16k|ALL|What is the impedance of an end-fed half-wave antenna?
+h14521|15|1k|ALL|Testing blind license applicants
+h34|14|13k|ALL|When is RF grounding necessary, and when is it not?
+h283|14|36k|ALL|Calculating Antenna Length on the FCC Exam vs. in Reality
+h337|14|0k|ALL|Why do concurrent FM signals not mix together?
+h809|14|2k|ALL|Is is possible to operate D-Star from a software-defined radio?
+h919|14|8k|ALL|How does a folded dipole work?
+h1586|14|8k|ALL|How do I change my registered address with the FCC?
+h9044|14|5k|ALL|What is an antenna tuner? Why bother with resonant antennas in the first place?
+h63|13|11k|ALL|How do I prevent radio signals from tripping a GFCI?
+h412|13|1k|ALL|Direction finding: How to find a stuck FM transmitter on 70cm?
+h644|13|4k|ALL|Handheld Dipoles
+h1628|13|5k|ALL|Is there an optimum Antenna Feedline Length for mobile installations?
+h6014|13|11k|ALL|Conductive boom vs non conductive boom: what's the difference on a Yagi?
+h7047|13|2k|ALL|How do I receive ATSC with GNU Radio?
+h12203|13|0k|ALL|UHF FM power amplifier design without expensive software
+h16566|13|5k|ALL|Can a ham license be used for a job?
+h522|12|12k|ALL|How much RF energy do trees and branches absorb?
+h1019|12|1k|ALL|What is the best practice when tuning an antenna on air?
+h3502|12|2k|ALL|Are antennas circuits?
+h3523|12|9k|ALL|Grounding a second-story shack with an outdoor antenna
+h3606|12|1k|ALL|How does an antenna transform impedances along its length?
+h5830|12|0k|ALL|Confusion about SDR
+h6445|12|4k|ALL|Why isn't twisted pair used for feedlines?
+h12769|12|0k|ALL|Who funds amateur radio satellites?
+h173|11|1k|ALL|AIS and RTL-SDR Dongles
+h421|11|0k|ALL|What would propagation look like on Mars?
+h425|11|4k|ALL|Does iron ore in the ground affect my signal?
+h601|11|5k|ALL|How to reduce RF in the shack when using vertical HF antenna (no radials)
+h814|11|0k|ALL|Can an amateur use cellular technologies with SDR?
+h946|11|0k|ALL|Why do satellites receive and transmit on different bands?
+h1764|11|3k|ALL|How to combine two 50 Ω antennas such that they appear as one 50 Ω load?
+h1804|11|55k|ALL|What is a Gamma match in the context of the driven element of a Yagi antenna?
+h2001|11|8k|ALL|How do I find out what bands are open?
+h4951|11|38k|ALL|Should I ground my radio to the chassis or battery for a mobile install?
+h6173|11|0k|ALL|Is there a name for the demodulation technique described here using the parallax propeller?
+h7008|11|6k|ALL|Could a weather balloon make a good antenna?
+h7265|11|2k|ALL|How does VHF/UHF propagate beyond the expected (radio) horizon?
+h12463|11|8k|ALL|How can I get rid of RFI coming from my house solar panel inverter?
+h12508|11|2k|ALL|What is the advantage of making an antenna resonant?
+h12822|11|1k|ALL|Why would you need a signal generator to receive early satellite transmissions?
+h13242|11|9k|ALL|Real world performance of magnetic loop antennas?
+h14765|11|0k|ALL|Why are there so many coaxial cable impedances?
+h14818|11|2k|ALL|Will electrically joined dipoles of different lengths, at right angles, behave as a multiband antenna?
+h15335|11|0k|ALL|Practical limits to maintaining coherence in an HF channel
+h16240|11|5k|ALL|Is "low loss" cable required for HF?
+h16905|11|2k|ALL|Non-traceable radio emitters
+h20870|11|2k|ALL|Would it be possible for a software-defined FM receiver to demodulate two signals on the same frequency?
+h21314|11|6k|ALL|How do GPS receivers communicate with satellites?
+h2|10|11k|ALL|What is the best time of day/Band to make a contact with Hawaii from the East Coast?
+h256|10|12k|ALL|Phasing harness for antenna array
+h1034|10|3k|ALL|My neighbor is complaining about my transmissions, what can I do?
+h1304|10|2k|ALL|How do I design a round or square coaxial transmission line to have a specific impedance?
+h1407|10|0k|ALL|Why do SDR control apps have two frequency settings?
+h1567|10|3k|ALL|Antenna RX vs. TX
+h1637|10|8k|ALL|How can I calibrate a SWR meter?
+h1700|10|2k|ALL|How does a "chip antenna" work?
+h2281|10|7k|ALL|Remote SDR on the internet other than WebSDR?
+h5563|10|31k|ALL|How is a 1:1 current balun different from a choke?
+h5880|10|4k|ALL|Can every antenna be used both for transmit and receive?
+h7132|10|5k|ALL|Using an RTL-SDR as a spectrum analyzer
+h20934|5|0k|ALL|14dB insertion loss for bandpass filter acceptable?
+h18614|5|0k|ALL|MF band mixer - feasible parameters
+h23256|4|1k|ALL|Discrete-Component Mixer design
+h22226|4|0k|ALL|APRS-IS filter by message sender
+h12899|4|1k|ALL|How does an E-Z-O Antenna work and why does it appear in Wikipedia's article on quad antennas?
+h10015|4|7k|ALL|What are some equivalents of a BF199 transistor?
+h23969|3|0k|ALL|Selecting inductors for Class E switching MOSFET power amplifiers (PA)
+h21288|3|0k|ALL|Linking DStar repeaters using Icom syntax
+h7271|3|0k|ALL|Term For Receive Antenna Using Lorentz Force?
+h23977|2|0k|ALL|Is this a triangular roof antenna?
+h6600|2|0k|ALL|Morse code help
+h23970|1|0k|ALL|Does getting a ham license under FCC rules still require an US address to receive mail?
+h23979|0|0k|ALL|What sort of political content can amateurs transmit?
+h23976|0|0k|ALL|How does a Hilbert transform generate a SSB signal?
+h21135|0|0k|ALL|Can an antenna be affected if mounted to a bull bar?
+h11682|0|0k|ALL|Reflection Coefficient to Impedance transformation on the Smith Chart
+h15675|0|0k|ALL|50 Ohm Active Termination + Unity Gain Amp with PIIP3 > 60+ dBm
+h23968|-1|0k|ALL|What headset will plug into id-51e Plus
+h12354|-1|1k|ALL|Is it legal to transmit scrambled or encrypted voice via SSB on ham bands?
+h9451|10|19k|antenna-theory|Aluminum vs copper antenna element lengths
+h11873|10|2k|antenna-theory|Are there formulae to calculate capacitance and inductance of an antenna?
+h1243|9|0k|antenna-theory|If two antennas of 50 Ω and 377 Ω have VSWR=1:1, then which one is more efficient?
+h12779|5|1k|antenna-theory|Yagi vs Parabolic Dish for 2.4GHz Campus Wifi from 1,800ft away?
+h7333|10|3k|antenna-tuner|What is the actual loss in a feed line with high SWR?
+h14566|9|2k|antenna-tuner|What types of materials increase the inductance of a coil when inserted inside it?
+h1898|9|2k|antenna-tuner|Why is the risk of damage to a transmitter due to a mismatched antenna at lower frequencies greater?
+h19939|8|1k|antenna-tuner|Tuner at antenna side versus transmitter?
+h16941|9|6k|balun|When would we ever want to use a voltage balun in ham radio?
+h6983|9|7k|balun|Does a balun need to be made with coax?
+h16771|9|3k|balun|Importance of Ferrite Size in Coax Choke Balun
+h9722|10|0k|coaxial-cable|Does Coax Limit the Maximum SWR a Transmitter 'Sees'?
+h10220|10|1k|coaxial-cable|How terminate RG8 coaxial cable using PL259 (UHF) - screw - gasket - solder type?
+h13030|9|4k|coaxial-cable|Why does ladder line generally have a lower loss than coaxial cable?
+h16610|7|1k|coaxial-cable|What does an antenna analyzer tell me about these coaxial cables?
+h11708|10|1k|impedance-matching|How did hams manage to tune their antennas before VSWR meters?
+h17661|10|2k|impedance-matching|How effectively do modern transmitters protect against high SWR?
+h14665|9|2k|impedance-matching|Impedance ratio vs. SWR
+h13157|9|4k|impedance-matching|RigExpert AA-35 - Interpreting The Information
+h9757|9|0k|impedance-matching|SWR Measured at the Transmitter versus SWR at the Antenna
+h15508|7|0k|impedance-matching|Why aren't "ghosts" and intersymbol interference due to unmatched impedance (high SWR) a concern for HF receivers?
+h953|8|1k|measurement|What is the point of a SWR/power meter where the needles cross over each other?
+h12454|8|2k|measurement|dBm signal minus dB
+h10441|8|0k|measurement|How were 1920s hams able to measure megahertz frequency?
+h8984|7|1k|measurement|Ferrite rod or core permeability determination
+h15033|7|4k|measurement|How to measuring ferrite core efficiency vs frequency
+h12866|10|2k|propagation|Better explanation for beyond-line-of-sight VHF signal reach than "lower curvature to radio waves"
+h1174|9|25k|rfi|How can I reduce the noise coming in from an RTL-SDR dongle?
+h20335|8|13k|rtl-sdr|Why is 20m band waterfall showing signals every 50 kHz?
+h18093|10|4k|software-defined-radio|How does IQ modulation work (intuitively)?
+h9510|10|2k|software-defined-radio|Multiple simultaneous tunings with SDR
+h21785|6|1k|uhf|Is a boom important to a Yagi?
+h857|7|0k|yagi|Is bending the tips of the antenna wires going to affect the effective length?
+h3704|6|3k|yagi|How to measure gain of an antenna?
+h20070|5|2k|yagi|Do these look like amateur radio antennas?
+h20332|5|4k|yagi|Which way is a yagi polarized?

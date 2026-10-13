@@ -1,0 +1,54 @@
+================================================================================================
+1. RC snubber by ring halving (FET switching an inductive harness load, Vdd 8.4 V, 2 A, 20 kHz PWM)
+================================================================================================
+  ring 80 MHz; +470 pF -> 40 MHz  =>  C_par = 157 pF, L_par = 25.3 nH, Z = sqrt(L/C) = 12.7 ohm
+  snubber: R = 12.7 ohm (use 12 ohm), C_s = 4 C_par = 627 pF (use 680 pF); loss C V^2 f = 0.88 mW at 20 kHz
+  turn-off peak without snubber 35.1 V (formula Vdd + sqrt(Vdd^2 + (I sqrt(L/C))^2) = 35.2 V), with snubber 19.9 V
+  ringing p-p after 100 ns: 53.5 V without, 0.000 V with
+[PASS] snubber cuts the peak 
+[PASS] snubber kills the ring 
+[PASS] undamped peak matches the energy formula 
+
+================================================================================================
+2. Pyro channel: 2S LiPo 8.4 V, low-side FET, igniter 1.0 ohm, total loop R 1.4 ohm (6 A)
+================================================================================================
+  firing current 6.0 A; stored in wiring 1/2 L I^2 = 14.4 uJ
+  FET turned off while current still flows (end of a timed pulse into a shorted/intact bridge):
+    unclamped LC spike would be I*sqrt(L/Coss) = 310 V -> the FET avalanches at ~35 V;
+    avalanche energy 18.9 uJ over 180 ns (di/dt 33 A/us) — survivable for a small FET (EAS tens of mJ) but a 27 V, 30 MA/s ground-bounce event on the board
+  with a freewheel (Schottky) diode across the output terminals: lead current decays in the diode loop, tau = L_lead/R_bridge = 0.50 us;
+    with 10 uF of bulk at the pyro supply node the battery-side inductance only lifts it by I sqrt(Lb/C) = 1.04 V; FET sees ~Vb + Vf
+[PASS] unclamped spike exceeds a 30 V FET rating 
+[PASS] bulk-cap rise small 
+
+================================================================================================
+3. Inductive load decay: solenoid/relay L 10 mH, R 12 ohm, 8.4 V (0.70 A)
+================================================================================================
+  Schottky diode only (0.4 V) : current to 10 % in 1.633 ms, to zero 2.576 ms; switch sees 8.8 V; energy into clamp V_clamp*int(i dt) = 0.20 mJ (1/2 L I^2 = 2.45 mJ)
+  diode + 24 V Zener          : current to 10 % in 0.216 ms, to zero 0.244 ms; switch sees 33.1 V; energy into clamp V_clamp*int(i dt) = 2.01 mJ (1/2 L I^2 = 2.45 mJ)
+  TVS across FET, 33 V clamp  : current to 10 % in 0.217 ms, to zero 0.245 ms; switch sees 33.0 V; energy into clamp V_clamp*int(i dt) = 2.69 mJ (1/2 L I^2 = 2.45 mJ)
+[PASS] Zener clamp releases >5x faster than a bare diode 
+
+================================================================================================
+4. Hot-plug of a LiPo through an arming switch into ceramic input capacitance
+================================================================================================
+  8.4 V pack: zeta 0.047; peak 15.6 V (formula 15.6 V); with damping R_d = sqrt(L/C) = 0.32 ohm + C_d = 4C = 20 uF: peak 10.5 V
+[PASS] undamped overshoot ~2x (8.4 V) 
+[PASS] damped overshoot < 1.3x (8.4 V) 
+  12.6 V pack: zeta 0.047; peak 23.5 V (formula 23.5 V); with damping R_d = sqrt(L/C) = 0.32 ohm + C_d = 4C = 20 uF: peak 15.7 V
+[PASS] undamped overshoot ~2x (12.6 V) 
+[PASS] damped overshoot < 1.3x (12.6 V) 
+
+================================================================================================
+5. Surge and EFT energy into a clamp (idealised generators)
+================================================================================================
+  8/20 shape check: front time 1.25*(t90-t10) = 8.02 us, 50 % width Tw = 16.2 us -> duration 1.18 Tw = 19.1 us (Ed. 3 definition)
+  surge  500 V into a 20 V clamp via 2 ohm: Ipk 240 A, energy in clamp 84 mJ (charge 4.2 mC)
+  surge 1000 V into a 20 V clamp via 2 ohm: Ipk 490 A, energy in clamp 171 mJ (charge 8.6 mC)
+  surge 2000 V into a 20 V clamp via 2 ohm: Ipk 990 A, energy in clamp 346 mJ (charge 17.3 mC)
+  EFT  500 V, 50 ohm, 5/50 ns: Ipk 10 A, energy per pulse 7.2 uJ; 75 pulses/burst at 5 kHz: 0.54 mJ per burst
+  EFT 1000 V, 50 ohm, 5/50 ns: Ipk 20 A, energy per pulse 14.7 uJ; 75 pulses/burst at 5 kHz: 1.10 mJ per burst
+  EFT 2000 V, 50 ohm, 5/50 ns: Ipk 40 A, energy per pulse 29.7 uJ; 75 pulses/burst at 5 kHz: 2.23 mJ per burst
+[PASS] 8/20 shape: front 8 us +/-20 %, duration 20 us +/-20 % 
+
+ALL PASS

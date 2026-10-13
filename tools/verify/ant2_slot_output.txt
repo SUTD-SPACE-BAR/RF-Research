@@ -1,0 +1,48 @@
+=== 1. Babinet / Booker: Z_s = eta^2 / (4 Z_d) ===
+  eta^2/4 = 35481 ohm^2; ideal lambda/2 dipole (73.08+42.52j) -> slot 362.7 -211.0j ohm
+[PASS] ideal slot impedance ~363 - j211 
+  Note: X_slot has the OPPOSITE sign of X_dipole: a slot longer than resonance is capacitive.
+
+=== 2. Resonant strip dipole (MoM) -> resonant slot ===
+  slot width w = lambda/ 200 ( 0.61 mm at 2.45 GHz): resonant length 0.4743 lambda (K = 0.949, 58.0 mm), R_dip 72.1 ohm -> R_slot 492 ohm
+  slot width w = lambda/ 100 ( 1.22 mm at 2.45 GHz): resonant length 0.4698 lambda (K = 0.940, 57.5 mm), R_dip 72.6 ohm -> R_slot 489 ohm
+  slot width w = lambda/  50 ( 2.45 mm at 2.45 GHz): resonant length 0.4654 lambda (K = 0.931, 57.0 mm), R_dip 74.9 ohm -> R_slot 474 ohm
+[PASS] resonant slot R in 470-560 ohm (Booker ~485) 
+  impedance of a lambda/50-wide free-space slot vs frequency (Babinet mapping of the MoM strip):
+    f/f0 = 0.90: Z_strip =   48.3  -53.4j  ->  Z_slot =  330.7 +365.4j ohm
+    f/f0 = 0.95: Z_strip =   60.0  -26.7j  ->  Z_slot =  493.3 +219.4j ohm
+    f/f0 = 1.00: Z_strip =   74.9   +0.0j  ->  Z_slot =  473.6   -0.0j ohm
+    f/f0 = 1.05: Z_strip =   94.0  +26.7j  ->  Z_slot =  349.4  -99.3j ohm
+    f/f0 = 1.10: Z_strip =  118.5  +53.1j  ->  Z_slot =  249.4 -111.7j ohm
+
+=== 3. Offset feed along the slot (R = R_c cos^2 kx) ===
+  two-sided slot, R_c = 490 ohm: 50 ohm at x = 0.1983 lambda from centre (0.0417 lambda from the end of a 0.48 lambda slot)
+[PASS] 50-ohm offset ~0.20 lambda 
+  one-sided (cavity-backed) slot, R_c ~ 980 ohm: 50 ohm at x = 0.2137 lambda from centre
+
+=== 4. Slotted waveguide array, WR-90, 10.368 GHz, 16 slots (W1GHZ ch.7 example) ===
+  lambda0 = 28.92 mm, lambda_c = 45.72 mm, lambda_g = 37.33 mm, spacing lambda_g/2 = 18.66 mm, end short lambda_g/4 = 9.33 mm
+  Stevenson: G1 = 0.7297, offset = 2.16 mm;  Elliott-corrected: G1 = 0.6008, offset = 2.39 mm
+  gain estimate 10 log(N s / lambda0) = 10.1 dB(i-ish, DK3BA/DG8SG); elevation beamwidth 50.7 lambda0/(N s /2) = 9.8 deg (as in the W1GHZ sheet: N counts both walls)
+  (with c = 3e8 m/s, as the W1GHZ sheet uses: lambda0 = 28.94 mm, lambda_g = 37.37 mm)
+[PASS] lambda_g 37.37 mm (c = 3e8) / 37.33 mm (exact c) 
+[PASS] Stevenson offset 2.13-2.16 mm (2.161)
+[PASS] Elliott offset 2.35-2.39 mm (2.390)
+[PASS] gain 10.1 dB, beamwidth 9.8 deg 
+    if every slot conductance is 0.90x design: y_in = 0.90 -> VSWR 1.11
+    if every slot conductance is 1.10x design: y_in = 1.10 -> VSWR 1.10
+    if every slot conductance is 1.25x design: y_in = 1.25 -> VSWR 1.25
+
+=== 5. Array factor of 8 slots along one wall at lambda_g/2 spacing ===
+  alternating offsets : |AF| at broadside = 8.000 (max 8.000 at +0.0 deg from broadside)
+  all on one side     : |AF| at broadside = 0.000 (max 8.000 at -50.8 deg from broadside)
+[PASS] alternating offsets -> broadside max = N 
+[PASS] same-side offsets -> broadside null 
+
+=== 6. Squint vs frequency of a resonant (standing-wave) vs travelling-wave array ===
+  f = 10.250 GHz: lambda_g = 38.05 mm, residual phase/element = +3.4 deg -> beam tilt (end-fed, travelling-wave view) +0.9 deg
+  f = 10.368 GHz: lambda_g = 37.33 mm, residual phase/element = +0.0 deg -> beam tilt (end-fed, travelling-wave view) +0.0 deg
+  f = 10.500 GHz: lambda_g = 36.56 mm, residual phase/element = -3.8 deg -> beam tilt (end-fed, travelling-wave view) -0.9 deg
+  (a centre-fed or short-terminated resonant array keeps the beam broadside but its match degrades instead)
+
+ALL PASS

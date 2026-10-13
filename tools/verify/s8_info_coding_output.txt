@@ -1,0 +1,41 @@
+1. Entropy
+[PASS] H2(0.11) = 0.50 bit  0.4999
+[PASS] flight-state field: entropy 1.67 b, Huffman 1.70 b, fixed 3 b  H=1.671, Huffman=1.70
+
+2. Hard vs soft binary-input limits at rate 1/2
+[PASS] soft BI-AWGN rate-1/2 limit 0.19 dB (matches the page's CCSDS figure)  0.19 dB
+[PASS] hard (BSC) rate-1/2 limit ~1.7 dB: hard slicing costs ~1.5 dB at rate 1/2 (-> 1.96 dB as r -> 0)  1.77 dB, loss 1.59 dB
+[PASS] at rate 0.01 the hard-decision loss approaches 10log(pi/2) = 1.96 dB  1.95 dB
+
+3. Constellation-constrained capacity (AWGN, SNR = Es/N0)
+   QPSK  at 10 dB: CM 1.993 b/sym  (Shannon 3.459)
+   8PSK  at 10 dB: CM 2.677 b/sym  (Shannon 3.459)
+   16QAM at 10 dB: CM 3.167 b/sym, BICM 3.167  (Shannon 3.459)
+[PASS] 16-QAM Gray BICM loses < 0.05 b/sym vs CM at 10 dB  0.000
+   2 b/sym: Shannon 4.77 dB, 16-QAM CM 5.09 dB, 16-QAM BICM 5.30 dB
+   2.5 b/sym: Shannon 6.68 dB, 8-PSK CM 8.71 dB, 16-QAM CM 7.26 dB
+[PASS] 2 b/sym: 16-QAM CM ~0.3 dB from Shannon (4.77 dB); Gray BICM a further ~0.2 dB  5.09, 5.30
+[PASS] 2.5 b/sym: 16-QAM beats 8-PSK (more dimensions used)  7.26 vs 8.71 dB
+[PASS] ultimate shaping gain 10log(pi e / 6) = 1.53 dB  
+[PASS] QPSK CM saturates at 2 b/sym  
+
+4. Sphere hardening
+   n=   10: |n|^2/n mean 0.997, std 0.4474 (theory 0.4472)
+   n=  100: |n|^2/n mean 0.999, std 0.1417 (theory 0.1414)
+   n= 1000: |n|^2/n mean 1.000, std 0.0447 (theory 0.0447)
+[PASS] |n|^2/n concentrates with std sqrt(2/n): noise lives on a thin shell  
+
+5. Ungerboeck 8-PSK TCM (natural mapping, parity-check form)
+   4-state (h0,h1,h2)=(5,2,0): d2free = 4.000;  8-state (11,2,4): d2free = 4.586  (QPSK uncoded d2 = 2)
+[PASS] 4-state 8-PSK TCM d2free = 4.0 (parallel transitions) -> 3.01 dB over QPSK  3.01 dB
+[PASS] 8-state 8-PSK TCM d2free = 4.586 -> 3.6 dB over QPSK (Ungerboeck 1982)  3.60 dB
+
+6. Random (3,6)-regular LDPC, n = 1008, sum-product
+   Eb/N0 1.5 dB: BER 1.51e-02, FER 0.23   (uncoded BPSK 4.6e-02)
+   Eb/N0 2.0 dB: BER 1.46e-03, FER 0.03   (uncoded BPSK 3.8e-02)
+   Eb/N0 2.5 dB: BER 0.00e+00, FER 0.00   (uncoded BPSK 3.0e-02)
+[PASS] BP decoding improves with SNR (FER falls from 1.5 to 2.5 dB)  
+[PASS] (3,6) n=1008 at 2.5 dB: BER < 1e-4 (uncoded BPSK needs 8.4 dB for 1e-4)  0.0e+00
+[PASS] operating point is ~1-1.5 dB above the (3,6) BP threshold (1.11 dB) and ~2 dB above the rate-1/2 limit  
+
+16/16 checks PASS

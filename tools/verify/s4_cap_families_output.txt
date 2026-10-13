@@ -1,0 +1,35 @@
+=== 1. |Z| (ohm) vs frequency, and SRF ===
+part                                                 0.12k        1k       10k      100k        1M       10M      100M      434M    SRF
+Al electrolytic 100uF/16V SMD (NACZ class)            13.4      1.67     0.359     0.302     0.301     0.391      2.53      10.9      0.252 MHz
+Ta MnO2 100uF D-case (T495 class, 100 mOhm)           13.3       1.6     0.193     0.102     0.101     0.186      1.57      6.82      0.318 MHz
+Ta polymer 100uF D-case (T520 class, 40 mOhm)         13.3       1.6     0.167    0.0434    0.0425     0.162      1.57      6.82      0.318 MHz
+X5R MLCC 22uF 1206 (~10uF left at 5 V)                 133      15.9      1.59     0.159    0.0092    0.0739     0.754      3.27       1.45 MHz
+PP film 100nF leaded (MKP class)                  1.33e+04  1.59e+03       159      15.9      1.55     0.218      3.75      16.4        6.5 MHz
+PET film 100nF leaded (MKT class)                 1.33e+04  1.59e+03       159      15.9      1.55     0.218      3.75      16.4        6.5 MHz
+Silver mica 100pF leaded                          1.33e+07  1.59e+06  1.59e+05  1.59e+04  1.59e+03       159      12.8      9.96        225 MHz
+C0G MLCC 100pF 0402 (mounted)                     1.33e+07  1.59e+06  1.59e+05  1.59e+04  1.59e+03       159      15.7      2.58        796 MHz
+(columns: 120 Hz, 1 kHz, 10 kHz, 100 kHz, 1 MHz, 10 MHz, 100 MHz, 433.92 MHz)
+check NACZ: |Z|(100 kHz) model vs datasheet max 0.44 ohm: 0.302 ; tan d at 120 Hz model: 0.160 (spec 0.16)
+
+minimum |Z| = ESR at SRF; above SRF every part is ESL: 4 nH -> 10.9 ohm at 433.92 MHz, 2.5 nH -> 6.8, 1.2 nH -> 3.3, 0.4 nH -> 1.09 ohm
+
+=== 2. Film-capacitor loss split: dielectric D/(wC) vs conductor (leads + metallisation) ===
+PP (tan d 5e-4)    C   100 nF: crossover    0.121 MHz (ESR there   13.1 mOhm); at 10 MHz dielectric    0.08 mOhm vs conductor  13.84 mOhm
+PET (tan d 8e-3)   C   100 nF: crossover    1.483 MHz (ESR there   17.2 mOhm); at 10 MHz dielectric    1.27 mOhm vs conductor  13.84 mOhm
+PP 1 nF            C     1 nF: crossover    6.531 MHz (ESR there   24.4 mOhm); at 10 MHz dielectric    7.96 mOhm vs conductor  13.84 mOhm
+skin depth at     1 MHz: Cu   66.1 um (0.6 mm lead -> R_ac/R_dc   2.5), Al   85.1 um vs metallisation 0.02-0.05 um and film-foil 5-9 um
+skin depth at    10 MHz: Cu   20.9 um (0.6 mm lead -> R_ac/R_dc   7.2), Al   26.9 um vs metallisation 0.02-0.05 um and film-foil 5-9 um
+skin depth at   100 MHz: Cu    6.6 um (0.6 mm lead -> R_ac/R_dc  22.7), Al    8.5 um vs metallisation 0.02-0.05 um and film-foil 5-9 um
+
+=== 3. Electrolytic in the cold ===
+ESR x1   (100 kHz 0.30 ohm): a 1 A load step through ESR -> 0.30 V dip
+ESR x2   (100 kHz 0.60 ohm): a 1 A load step through ESR -> 0.60 V dip
+ESR x3   (100 kHz 0.90 ohm): a 1 A load step through ESR -> 0.90 V dip
+ESR x10  (100 kHz 3.00 ohm): a 1 A load step through ESR -> 3.00 V dip
+datasheet (NACZ 16 V): Z(-40)/Z(+20) <= 2 at 120 Hz; the 100 kHz ESR ratio is usually larger (check curves)
+
+=== 4. Q at RF (Q = |X|/ESR) ===
+Silver mica 100pF leaded          :   1.00 MHz Q     3180;   7.00 MHz Q     2375;  30.00 MHz Q     1019; 100.00 MHz Q      243
+C0G MLCC 100pF 0402 (mounted)     :   1.00 MHz Q     8730;   7.00 MHz Q     4449;  30.00 MHz Q     1243; 100.00 MHz Q      294
+PP film 100nF leaded (MKP class)  :   0.01 MHz Q     1854;   0.10 MHz Q     1100;   1.00 MHz Q      176;   3.00 MHz Q       41
+(Q is meaningless near SRF, where X -> 0; mica tan d 3e-4 and C0G 1e-4 are assumed typical values)

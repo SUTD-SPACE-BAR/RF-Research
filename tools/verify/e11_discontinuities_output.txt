@@ -1,0 +1,125 @@
+====================================================================================================
+1. 50-ohm line widths (t = 0, H-J) and open-end length extensions
+  2-layer 1.6 mm (h 1.51 mm, er 4.5): W50 = 2.842 mm (u = 1.882), Z = 50.00 ohm, eeff = 3.394
+     dl: KJK 0.6035 mm (0.3996 h), Hammerstad-81 0.5800 (0.3841 h), 0.412-form 0.5863 (0.3883 h); C_end(KJK) = 74.2 fF
+       f = 0.433 GHz: KJK(dispersive) dl = 0.6033 mm, C_end = 74.2 fF, |Y| = 0.202 mS
+       f = 0.915 GHz: KJK(dispersive) dl = 0.6031 mm, C_end = 74.3 fF, |Y| = 0.427 mS
+       f = 2.450 GHz: KJK(dispersive) dl = 0.6020 mm, C_end = 74.5 fF, |Y| = 1.147 mS
+       f = 5.800 GHz: KJK(dispersive) dl = 0.5991 mm, C_end = 74.3 fF, |Y| = 2.709 mS
+[PASS] open end models agree within 5 % (2-layer 1.6 mm (h 1.51 mm, er 4.5))  spread 4.1 %
+  JLC04161H-7628 (h 0.2104 mm, er 4.4): W50 = 0.403 mm (u = 1.914), Z = 50.00 ohm, eeff = 3.331
+     dl: KJK 0.0847 mm (0.4025 h), Hammerstad-81 0.0813 (0.3865 h), 0.412-form 0.0822 (0.3907 h); C_end(KJK) = 10.3 fF
+       f = 0.433 GHz: KJK(dispersive) dl = 0.0847 mm, C_end = 10.3 fF, |Y| = 0.028 mS
+       f = 0.915 GHz: KJK(dispersive) dl = 0.0847 mm, C_end = 10.3 fF, |Y| = 0.059 mS
+       f = 2.450 GHz: KJK(dispersive) dl = 0.0847 mm, C_end = 10.3 fF, |Y| = 0.159 mS
+       f = 5.800 GHz: KJK(dispersive) dl = 0.0847 mm, C_end = 10.3 fF, |Y| = 0.376 mS
+[PASS] open end models agree within 5 % (JLC04161H-7628 (h 0.2104 mm, er 4.4))  spread 4.1 %
+[PASS] 0.412-form reproduces the stub page's 0.62 mm (h = 1.6 mm)  0.621 mm; KJK 0.639 mm
+
+   dl/h vs u (er 4.5):  u   KJK   H81   0.412
+       0.10  0.1745  0.1975  0.2009
+       0.25  0.2322  0.2466  0.2422
+       0.50  0.2872  0.2911  0.2895
+       1.00  0.3450  0.3381  0.3436
+       2.00  0.4051  0.3888  0.3921
+       4.00  0.4673  0.4468  0.4264
+       8.00  0.5107  0.5140  0.4466
+[FAIL] open-end models within 8 % for 0.1 <= u <= 8 (er 4.5)  worst spread 15.1 %
+
+2. Square corner, 50 % mitre and Douville-James mitre
+  2-layer 1.6 mm (h 1.51 mm, er 4.5): u = 1.882; KJK corner C = 311.7 fF, L = 41.5 pH/arm; Garg-Bahl C = 321.7 fF, L = 96.4 pH/arm; 50 % mitre C = 205.9 fF, L = 153.1 pH/arm; optimum mitre (D-J) M = 57.1 %
+     f = 0.433 GHz: |S11| corner KJK  -34.5 dB, Garg-Bahl  -35.6 dB, 50 % mitre KJK  -44.9 dB
+     f = 0.915 GHz: |S11| corner KJK  -28.0 dB, Garg-Bahl  -29.1 dB, 50 % mitre KJK  -38.4 dB
+     f = 2.450 GHz: |S11| corner KJK  -19.4 dB, Garg-Bahl  -20.6 dB, 50 % mitre KJK  -29.8 dB
+     f = 5.800 GHz: |S11| corner KJK  -12.2 dB, Garg-Bahl  -13.2 dB, 50 % mitre KJK  -22.2 dB
+  JLC04161H-7628 (h 0.2104 mm, er 4.4): u = 1.914; KJK corner C = 43.9 fF, L = 6.2 pH/arm; Garg-Bahl C = 45.2 fF, L = 13.9 pH/arm; 50 % mitre C = 28.8 fF, L = 21.7 pH/arm; optimum mitre (D-J) M = 56.9 %
+     f = 0.433 GHz: |S11| corner KJK  -51.5 dB, Garg-Bahl  -52.7 dB, 50 % mitre KJK  -62.2 dB
+     f = 0.915 GHz: |S11| corner KJK  -45.0 dB, Garg-Bahl  -46.2 dB, 50 % mitre KJK  -55.7 dB
+     f = 2.450 GHz: |S11| corner KJK  -36.5 dB, Garg-Bahl  -37.6 dB, 50 % mitre KJK  -47.1 dB
+     f = 5.800 GHz: |S11| corner KJK  -29.0 dB, Garg-Bahl  -30.2 dB, 50 % mitre KJK  -39.6 dB
+[PASS] D-J optimum mitre at u = 0.25 is 98.4 % (Wikipedia check value)  98.38 %
+[PASS] D-J optimum mitre tends to 52 % for wide lines  
+[PASS] KJK and Garg-Bahl corner capacitances agree within 25 % (2-layer 50 ohm)  KJK 303 fF vs G-B 314 fF
+
+3. Step in width (50 ohm -> 2x width and 50 ohm -> 0.5x width), Gupta et al.
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) 2W -> W: Z 31.6 -> 50.0 ohm; C = 25.9 fF, L1 = 10.8 pH, L2 = 16.6 pH; at 2.45 GHz wC*Z = 0.0200, wL/Z = 0.0084
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) W -> W/2: Z 50.0 -> 72.4 ohm; C = 13.0 fF, L1 = 11.4 pH, L2 = 16.0 pH; at 2.45 GHz wC*Z = 0.0100, wL/Z = 0.0084
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) 2W -> W: Z 31.6 -> 50.0 ohm; C = 3.6 fF, L1 = 1.5 pH, L2 = 2.3 pH; at 2.45 GHz wC*Z = 0.0028, wL/Z = 0.0012
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) W -> W/2: Z 50.0 -> 72.5 ohm; C = 1.8 fF, L1 = 1.6 pH, L2 = 2.2 pH; at 2.45 GHz wC*Z = 0.0014, wL/Z = 0.0012
+
+4. Gaps (series capacitor / DC block) 50-ohm lines
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) s = 0.10 mm: Cs = 112.32 fF, Cp = 7.83 fF; |S21| at 2.45 GHz = -15.4 dB
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) s = 0.20 mm: Cs = 99.30 fF, Cp = 14.63 fF; |S21| at 2.45 GHz = -16.4 dB
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) s = 0.50 mm: Cs = 68.63 fF, Cp = 29.83 fF; |S21| at 2.45 GHz = -19.6 dB
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) s = 0.10 mm: Cs = 7.35 fF, Cp = 5.23 fF; |S21| at 2.45 GHz = -38.9 dB
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) s = 0.20 mm: Cs = 3.03 fF, Cp = 7.67 fF; |S21| at 2.45 GHz = -46.6 dB
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) s = 0.50 mm: Cs = 0.21 fF, Cp = 9.91 fF; |S21| at 2.45 GHz = -69.6 dB
+[PASS] gap series C falls with spacing  
+[PASS] a 0.2 mm gap is a poor DC block at 915 MHz on 2-layer FR-4 (|S21| < -10 dB)  
+
+5. Via to ground (Goldfarb-Pucel)
+  h = 1.600 mm, drill 0.30 mm: L = 542.9 pH, X(915 MHz) = 3.121 ohm, X(2.45 GHz) = 8.357 ohm
+  h = 1.510 mm, drill 0.30 mm: L = 497.2 pH, X(915 MHz) = 2.859 ohm, X(2.45 GHz) = 7.654 ohm
+  h = 0.210 mm, drill 0.30 mm: L = 15.4 pH, X(915 MHz) = 0.089 ohm, X(2.45 GHz) = 0.238 ohm
+  h = 0.210 mm, drill 0.20 mm: L = 22.8 pH, X(915 MHz) = 0.131 ohm, X(2.45 GHz) = 0.351 ohm
+[PASS] Goldfarb-Pucel matches 04 page (1.6 mm, 0.3 mm: 0.54 nH)  0.543 nH
+
+6. Symmetric 50-ohm T-junction (Hammerstad 1981)
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) f = 0.915 GHz: |S11|  -9.55 dB (ideal -9.54), |S33|  -9.52 dB, |S13|  -3.52 dB, d_main = 0.336 mm, d_side = 1.896 mm, Bt*Z0 = -0.0080, f_p = 13.2 GHz
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) f = 2.450 GHz: |S11|  -9.62 dB (ideal -9.54), |S33|  -9.39 dB, |S13|  -3.54 dB, d_main = 0.314 mm, d_side = 1.839 mm, Bt*Z0 = -0.0152, f_p = 13.2 GHz
+  2-layer 1.6 mm (h 1.51 mm, er 4.5) f = 5.800 GHz: |S11| -10.05 dB (ideal -9.54), |S33|  -8.61 dB, |S13|  -3.65 dB, d_main = 0.205 mm, d_side = 1.563 mm, Bt*Z0 = 0.0180, f_p = 13.4 GHz
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) f = 0.915 GHz: |S11|  -9.54 dB (ideal -9.54), |S33|  -9.54 dB, |S13|  -3.52 dB, d_main = 0.048 mm, d_side = 0.268 mm, Bt*Z0 = -0.0012, f_p = 95.1 GHz
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) f = 2.450 GHz: |S11|  -9.54 dB (ideal -9.54), |S33|  -9.54 dB, |S13|  -3.52 dB, d_main = 0.048 mm, d_side = 0.268 mm, Bt*Z0 = -0.0031, f_p = 95.0 GHz
+  JLC04161H-7628 (h 0.2104 mm, er 4.4) f = 5.800 GHz: |S11|  -9.55 dB (ideal -9.54), |S33|  -9.53 dB, |S13|  -3.52 dB, d_main = 0.047 mm, d_side = 0.267 mm, Bt*Z0 = -0.0072, f_p = 95.0 GHz
+[PASS] thin-board tee at 915 MHz is near-ideal (|S11| within 0.3 dB of -9.54)  -9.54 dB
+[PASS] Hammerstad tee model is lossless (S^H S = I within 1e-9)  
+
+7. openEMS comparison (e11_discontinuities_openems.py)
+   open end W = 2.80 mm, mesh lambda/30:
+      f = 0.900 GHz: openEMS dl = 0.6313 mm, KJK 0.6011 mm (+5.0 %), H81 0.5783, 0.412 0.5849; |G| = 0.9978
+      f = 2.450 GHz: openEMS dl = 0.6638 mm, KJK 0.6000 mm (+10.6 %), H81 0.5783, 0.412 0.5849; |G| = 0.9993
+      f = 4.000 GHz: openEMS dl = 0.6622 mm, KJK 0.5988 mm (+10.6 %), H81 0.5783, 0.412 0.5849; |G| = 0.9863
+      f = 5.800 GHz: openEMS dl = 0.6857 mm, KJK 0.5972 mm (+14.8 %), H81 0.5783, 0.412 0.5849; |G| = 0.9819
+   open end W = 2.80 mm, mesh lambda/45:
+      f = 0.900 GHz: openEMS dl = 0.7149 mm, KJK 0.6011 mm (+18.9 %), H81 0.5783, 0.412 0.5849; |G| = 1.0008
+      f = 2.450 GHz: openEMS dl = 0.6780 mm, KJK 0.6000 mm (+13.0 %), H81 0.5783, 0.412 0.5849; |G| = 0.9952
+      f = 4.000 GHz: openEMS dl = 0.6740 mm, KJK 0.5988 mm (+12.6 %), H81 0.5783, 0.412 0.5849; |G| = 0.9940
+      f = 5.800 GHz: openEMS dl = 0.6646 mm, KJK 0.5972 mm (+11.3 %), H81 0.5783, 0.412 0.5849; |G| = 0.9823
+[FAIL] openEMS open-end dl within 10 % of KJK, 1-5 GHz (W = 2.80 mm)  mean deviation +11.5 %
+   open end W = 0.75 mm, mesh lambda/45:
+      f = 0.900 GHz: openEMS dl = 0.4507 mm, KJK 0.4328 mm (+4.1 %), H81 0.4390, 0.412 0.4364; |G| = 1.0037
+      f = 2.450 GHz: openEMS dl = 0.5072 mm, KJK 0.4324 mm (+17.3 %), H81 0.4390, 0.412 0.4364; |G| = 0.9986
+      f = 4.000 GHz: openEMS dl = 0.5206 mm, KJK 0.4319 mm (+20.5 %), H81 0.4390, 0.412 0.4364; |G| = 0.9913
+      f = 5.800 GHz: openEMS dl = 0.5199 mm, KJK 0.4313 mm (+20.5 %), H81 0.4390, 0.412 0.4364; |G| = 0.9896
+[FAIL] openEMS open-end dl within 10 % of KJK, 1-5 GHz (W = 0.75 mm)  mean deviation +18.0 %
+[PASS] openEMS open-end dl mesh convergence < 5 %  coarse vs fine +0.5 %
+   bend sq_r30:
+      f = 0.900 GHz: openEMS |S11| =  -28.7 dB; models: corner KJK  -28.2, Garg-Bahl  -29.3, 50 % mitre KJK  -38.5 dB
+      f = 2.450 GHz: openEMS |S11| =  -20.2 dB; models: corner KJK  -19.5, Garg-Bahl  -20.6, 50 % mitre KJK  -29.8 dB
+      f = 4.000 GHz: openEMS |S11| =  -15.3 dB; models: corner KJK  -15.4, Garg-Bahl  -16.4, 50 % mitre KJK  -25.5 dB
+      f = 5.800 GHz: openEMS |S11| =  -11.6 dB; models: corner KJK  -12.3, Garg-Bahl  -13.3, 50 % mitre KJK  -22.1 dB
+   bend sq:
+      f = 0.900 GHz: openEMS |S11| =  -28.8 dB; models: corner KJK  -28.2, Garg-Bahl  -29.3, 50 % mitre KJK  -38.5 dB
+      f = 2.450 GHz: openEMS |S11| =  -20.2 dB; models: corner KJK  -19.5, Garg-Bahl  -20.6, 50 % mitre KJK  -29.8 dB
+      f = 4.000 GHz: openEMS |S11| =  -15.3 dB; models: corner KJK  -15.4, Garg-Bahl  -16.4, 50 % mitre KJK  -25.5 dB
+      f = 5.800 GHz: openEMS |S11| =  -11.6 dB; models: corner KJK  -12.3, Garg-Bahl  -13.3, 50 % mitre KJK  -22.1 dB
+   bend m50:
+      f = 0.900 GHz: openEMS |S11| =  -37.2 dB; models: corner KJK  -28.2, Garg-Bahl  -29.3, 50 % mitre KJK  -38.5 dB
+      f = 2.450 GHz: openEMS |S11| =  -29.4 dB; models: corner KJK  -19.5, Garg-Bahl  -20.6, 50 % mitre KJK  -29.8 dB
+      f = 4.000 GHz: openEMS |S11| =  -24.5 dB; models: corner KJK  -15.4, Garg-Bahl  -16.4, 50 % mitre KJK  -25.5 dB
+      f = 5.800 GHz: openEMS |S11| =  -21.4 dB; models: corner KJK  -12.3, Garg-Bahl  -13.3, 50 % mitre KJK  -22.1 dB
+   bend mDJ:
+      f = 0.900 GHz: openEMS |S11| =  -42.7 dB; models: corner KJK  -28.2, Garg-Bahl  -29.3, 50 % mitre KJK  -38.5 dB
+      f = 2.450 GHz: openEMS |S11| =  -36.2 dB; models: corner KJK  -19.5, Garg-Bahl  -20.6, 50 % mitre KJK  -29.8 dB
+      f = 4.000 GHz: openEMS |S11| =  -30.8 dB; models: corner KJK  -15.4, Garg-Bahl  -16.4, 50 % mitre KJK  -25.5 dB
+      f = 5.800 GHz: openEMS |S11| =  -28.0 dB; models: corner KJK  -12.3, Garg-Bahl  -13.3, 50 % mitre KJK  -22.1 dB
+   bend m75:
+      f = 0.900 GHz: openEMS |S11| =  -33.7 dB; models: corner KJK  -28.2, Garg-Bahl  -29.3, 50 % mitre KJK  -38.5 dB
+      f = 2.450 GHz: openEMS |S11| =  -24.3 dB; models: corner KJK  -19.5, Garg-Bahl  -20.6, 50 % mitre KJK  -29.8 dB
+      f = 4.000 GHz: openEMS |S11| =  -20.3 dB; models: corner KJK  -15.4, Garg-Bahl  -16.4, 50 % mitre KJK  -25.5 dB
+      f = 5.800 GHz: openEMS |S11| =  -17.1 dB; models: corner KJK  -12.3, Garg-Bahl  -13.3, 50 % mitre KJK  -22.1 dB
+[PASS] openEMS square-bend |S11| within 3 dB of KJK corner model, 1-6 GHz  max deviation 0.7 dB
+[PASS] openEMS D-J-mitred bend |S11| < -25 dB up to 4 GHz  max -30.8 dB
+[PASS] optimum mitre improves |S11| by > 10 dB at 2.45 GHz  16.1 dB
+
+Summary: 15 / 18 checks passed

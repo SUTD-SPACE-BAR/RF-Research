@@ -1,0 +1,49 @@
+sinc(pi/4) = 0.90032; sinc^2 = 0.81057
+
+A: conversion gain, tone at f_LO + delta, large RC
+  cap amplitude 0.8589 (expect sinc(pi/4)*H = 0.8589); differential I 1.718
+PASS A1 cap amplitude = sinc(pi/4) within 0.5 %
+  |z| at +delta 1.7178, at -delta 3.41e-04 (USB input -> positive baseband)
+PASS A2 complex output: tone above LO appears at +delta only (> 60 dB)
+PASS A3 |z| = 2 sinc(pi/4) A
+
+B: baseband bandwidth f_p = 1/(2 pi N R C)
+  f_p = 0.00796 f_LO: gain at 1.005 f_p relative to near-centre = -3.04 dB (single-pole prediction -3.02 dB)
+PASS B1 single-pole response with f_p = 1/(2 pi N R C) (within 0.15 dB)
+  Tayloe example: R = 50 ohm, 1 kHz baseband -3 dB -> C = 0.796 uF; RF BW 2 kHz at 7 MHz -> Q = 3500
+PASS B2 C = 0.796 uF for 1 kHz with 50 ohm, Q = 3500
+
+C: harmonic responses (tone at k*f_LO + delta)
+  k=1: at +delta    0.00 dB, at -delta  -66.18 dB
+  k=0: at +delta  -62.25 dB, at -delta  -62.26 dB
+  k=2: at +delta  -66.19 dB, at -delta  -66.18 dB
+  k=3: at +delta  -75.72 dB, at -delta   -9.54 dB
+  k=4: at +delta -104.23 dB, at -delta -104.24 dB
+  k=5: at +delta  -13.97 dB, at -delta  -80.15 dB
+  k=7: at +delta  -83.07 dB, at -delta  -16.89 dB
+PASS C1 3LO response 1/3 (-9.54 dB) and mirrored
+PASS C2 5LO response 1/5 (-13.98 dB), upright
+PASS C3 7LO response 1/7 mirrored
+PASS C4 DC, 2LO, 4LO responses cancelled (< -60 dB)
+
+D: noise folding — sum of |H_k|^2 over every band that lands on the output bin
+  N=4, M=64: F from H_k = 1.2335 (0.911 dB); discrete prediction 1.2327; continuous 1/sinc^2(pi/N) = 1.2337 (0.912 dB)
+PASS D1 N=4: deterministic F matches 1/sinc^2(pi/N) within 1 %
+  N=8, M=64: F from H_k = 1.0524 (0.222 dB); discrete prediction 1.0522; continuous 1/sinc^2(pi/N) = 1.0530 (0.224 dB)
+PASS D1 N=8: deterministic F matches 1/sinc^2(pi/N) within 1 %
+PASS D2 sum sinc^2(k pi/4), k=1 mod 4 = 1.00000 = 1
+  closed forms: N=4 0.91 dB, N=8 0.22 dB, N=2 (50 % SSB complex-pair limit) 3.92 dB
+PASS D3 N=4: 0.91 dB; N=8: 0.23 dB
+  Monte Carlo (2^17 periods): F = 1.242 vs discrete prediction 1.233 (held-noise spectrum slightly differs from white; tolerance 6 %)
+PASS D4 Monte Carlo F within 6 % of prediction
+
+E: in-band input impedance (fundamental) of the 4-path at the LO frequency
+  node fundamental / EMF = 0.8106 (expect sinc^2 = 0.8106); Z_in = 4.280 -0.001j x R (expect 4.279 R)
+PASS E1 Z_in ~ 4.28 R, real
+  so a 50 ohm source sees ~214 ohm in band: |Gamma| = 0.62 (RL 4.1 dB) — a QSD is not matched by itself
+
+F: ngspice transient (7 MHz LO, R 50 ohm, C 10 nF, RF 7.010 MHz, 1 V EMF)
+  ngspice cap beat amplitude 0.8935 V; LPTV prediction 0.8932 V (f_p = 78.8 kHz)
+PASS F1 ngspice within 2 % of sinc(pi/4)/sqrt(1+(df/fp)^2)
+
+ALL PASS

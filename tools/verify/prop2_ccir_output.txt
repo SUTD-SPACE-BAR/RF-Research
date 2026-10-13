@@ -1,0 +1,51 @@
+=== Validation against ITURHFProp (P.533 v14.2) reference outputs ===
+ Kranji -> Beijing, Jan, SSN 140, input hour 2 (the reference prints the CP time as 01:00; the maps match UT = 2)
+  UT 1: foF2 errors vs reference = [-0.975 -1.039 -1.684 -1.35  -1.31 ]
+  UT 2: foF2 errors vs reference = [ 0.065  0.069 -0.006 -0.013 -0.005]
+  [PASS] foF2 (10.1,106.096): 12.088 (reference 12.023, tol 0.15)
+  [PASS] M3000 (10.1,106.096): 2.471 (reference 2.467, tol 0.03)
+  [PASS] foF2 (11.135,106.384): 12.530 (reference 12.461, tol 0.15)
+  [PASS] M3000 (11.135,106.384): 2.499 (reference 2.495, tol 0.03)
+  [PASS] foF2 (20.824,109.223): 13.988 (reference 13.994, tol 0.15)
+  [PASS] M3000 (20.824,109.223): 2.832 (reference 2.828, tol 0.03)
+  [PASS] foF2 (30.461,112.455): 11.750 (reference 11.763, tol 0.15)
+  [PASS] M3000 (30.461,112.455): 3.077 (reference 3.075, tol 0.03)
+  [PASS] foF2 (31.483,112.835): 11.591 (reference 11.596, tol 0.15)
+  [PASS] M3000 (31.483,112.835): 3.092 (reference 3.091, tol 0.03)
+ Sydney example, May, SSN 10, input hour 12
+  [PASS] foF2 (-23.482,142.682): 3.590 (reference 3.59, tol 0.15)
+  [PASS] M3000 (-23.482,142.682): 3.185 (reference 3.185, tol 0.03)
+  [PASS] foF2 (30.63,107.344): 7.447 (reference 7.452, tol 0.15)
+  [PASS] M3000 (30.63,107.344): 3.288 (reference 3.288, tol 0.03)
+  [PASS] foF2 (57.954,18.467): 4.790 (reference 4.793, tol 0.15)
+  [PASS] M3000 (57.954,18.467): 3.074 (reference 3.074, tol 0.03)
+  [PASS] foF2 (-29.326,147.192): 3.487 (reference 3.48, tol 0.15)
+  [PASS] M3000 (-29.326,147.192): 3.145 (reference 3.144, tol 0.03)
+ foE (P.1239) at the Sydney-example midpoint: chi 83.309, decl 18.66, SSN 10
+  [PASS] foE midpoint: 1.841 (reference 1.841, tol 0.005)
+  [PASS] foE night minimum: 0.397 (reference 0.397, tol 0.005)
+ Basic MUF Kranji (1.42 N, 103.73 E) -> Beijing (39.95 N, 116.45 E), Jan, UT 2, SSN 140
+  D = 4473.2 km (ref 4477.0), n0 = 2 (ref 2), dmax = 4000, hr = 350.3 km (ref 350.8)
+   2F2 basic MUF =  27.98 MHz
+   3F2 basic MUF =  21.81 MHz
+   4F2 basic MUF =  18.20 MHz
+   5F2 basic MUF =  16.03 MHz
+   6F2 basic MUF =  14.66 MHz
+   7F2 basic MUF =  13.75 MHz
+  [PASS] distance (km) [reference uses a slightly different Earth model]: 4473.217 (reference 4477.0, tol 6.0)
+  [PASS] path basic MUF (2F) MHz: 27.984 (reference 27.77, tol 0.3)
+  [PASS] 3F basic MUF MHz: 21.813 (reference 21.65, tol 0.4)
+  [PASS] hr (km): 350.279 (reference 350.848, tol 3.0)
+  (elevation from the eq.(2) mirror height = 11.88 deg)
+  Reference prints 2F..6F elevations 9.884/18.454/25.578/31.707/37.018 deg = eq.(13) with hr = 305.8 km:
+  [PASS] 2F elevation, eq.(13) with hr = 305.8 km (deg): 9.886 (reference 9.884, tol 0.15)
+  [PASS] 3F elevation, eq.(13) with hr = 305.8 km (deg): 18.454 (reference 18.454, tol 0.15)
+  [PASS] 4F elevation, eq.(13) with hr = 305.8 km (deg): 25.576 (reference 25.578, tol 0.15)
+  [PASS] 5F elevation, eq.(13) with hr = 305.8 km (deg): 31.705 (reference 31.707, tol 0.15)
+  [PASS] 6F elevation, eq.(13) with hr = 305.8 km (deg): 37.015 (reference 37.018, tol 0.15)
+ Reference program quirk: it evaluates the maps at UT = input hour but the solar geometry (foE) at hour - 1.
+  [PASS] foE at Kranji-Beijing midpoint with the reference's chi = 70.719 deg: 2.953 (reference 2.953, tol 0.03)
+  [PASS] path basic MUF reproducing that quirk (MHz) [residual = reference's 1.5-deg grid interpolation of foF2]: 27.954 (reference 27.77, tol 0.25)
+  [PASS] eq.(3) with the reference CP values (T+d0/2): 27.768 (reference 27.77, tol 0.01)
+
+ALL PASS

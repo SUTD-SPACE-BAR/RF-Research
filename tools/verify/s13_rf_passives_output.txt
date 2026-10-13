@@ -1,0 +1,79 @@
+=== 1. 3-pole Butterworth pi LPF, fc 500 MHz ===
+ideal C = 6.37 pF, L = 31.83 nH
+[HIT ] pre-registered: R1 ideal values 6.37 pF / 31.8 nH
+ideal values, ideal parts                       : IL(434) 1.55 dB, RL 5.2 dB, rej 2f 14.5 dB, 3f 25.0 dB
+6.8 pF / 33 nH, ideal                           : IL(434) 1.93 dB, RL 4.5 dB, rej 2f 15.9 dB, 3f 26.4 dB
+6.8 pF C0G Q400 / 33 nH wire-wound Q40          : IL(434) 2.24 dB, RL 4.6 dB, rej 2f 17.2 dB, 3f 29.7 dB
+6.8 pF C0G / 33 nH multilayer Q17, SRF 1.3 GHz  : IL(434) 3.49 dB, RL 3.7 dB, rej 2f 23.3 dB, 3f 55.2 dB
+[HIT ] pre-registered: R2 ideal rejection 2f 14.5 >= 13 dB and 3f 25.0 >= 23 dB
+[MISSED] pre-registered: R2 IL at 434 MHz with Q_L 40: 2.24 dB < 0.3 dB
+[PASS] ideal-part IL 1.55 dB equals the Butterworth formula 1.55 dB (f/fc = 0.868)
+5-pole 0.1 dB Chebyshev (C-L-C-L-C) ideal: 7.30 pF, 21.82 nH, 12.57 pF, 21.82 nH, 7.30 pF
+  ideal values, lossless                    : IL(434) 0.12 dB, RL 17.8 dB, rej 2f 27.6 dB, 3f 47.6 dB
+  E12 6.8/22/12/22/6.8, Q_L 40, ESL 0.4 nH  : IL(434) 0.53 dB, RL 21.1 dB, rej 2f 29.4 dB, 3f 53.3 dB
+  corrected E12 Chebyshev IL at 434 MHz = 0.53 dB (reported, not tested; see the finite-Q split below)
+[PASS] corrected E12 Chebyshev: RL(434) 21.1 dB > 15 dB and 2f rejection > 25 dB
+  same E12 values lossless: IL 0.04 dB -> loss from finite Q = 0.50 dB
+3f rejection vs inductor SRF (33 nH, Q 40): SRF 1.0 GHz -> 34.4 dB; SRF 1.3 GHz -> 62.6 dB; SRF 1.6 GHz -> 39.8 dB; SRF 2.5 GHz -> 32.7 dB; SRF 5.0 GHz -> 30.4 dB; 
+
+=== 2. Multilayer inductor Q extrapolation ===
+Q 8 @ 100 MHz -> sqrt-f model 24.0 @ 900 MHz (04/inductors-at-rf quotes 29 for LQG15HS10N), 16.7 @ 434 MHz
+[HIT ] pre-registered: R3 within 25 % of 29
+
+=== 3. ESD capacitance on a 50 ohm line ===
+C =   0.2 pF: 434 MHz RL 37.3 dB IL 0.001 dB; 1575 MHz RL 26.1 dB IL 0.011 dB; 2450 MHz RL 22.3 dB IL 0.026 dB
+C =   0.4 pF: 434 MHz RL 31.3 dB IL 0.003 dB; 1575 MHz RL 20.1 dB IL 0.042 dB; 2450 MHz RL 16.4 dB IL 0.102 dB
+C =   0.7 pF: 434 MHz RL 26.4 dB IL 0.010 dB; 1575 MHz RL 15.4 dB IL 0.128 dB; 2450 MHz RL 11.7 dB IL 0.304 dB
+C =  80.0 pF: 434 MHz RL 0.1 dB IL 14.880 dB; 1575 MHz RL 0.0 dB IL 25.943 dB; 2450 MHz RL 0.0 dB IL 29.772 dB
+[HIT ] pre-registered: R4 0.4 pF at 1575 MHz RL 20.1 dB >= 19 dB
+[MISSED] pre-registered: R4 80 pF at 434 MHz IL 14.9 dB > 15 dB
+
+=== 4. Chip termination return loss ===
+49.9 ohm, 0.4 nH + 0.3 nH via         : RL 34.4, 27.9, 23.2, 19.4 dB at 434/915/1575/2450 MHz
+2 x 100 ohm parallel (0.2 + 0.3 nH)   : RL 37.3, 30.8, 26.1, 22.3 dB at 434/915/1575/2450 MHz
+49.9 ohm, part only 0.4 nH            : RL 39.2, 32.8, 28.0, 24.2 dB at 434/915/1575/2450 MHz
+
+=== 5. DC blocks (0402 ESL 0.4 nH) ===
+  434.1 MHz: series-resonant C = 336.0 pF; 100 pF block |Z| = 2.58 ohm, IL 0.004 dB
+  915.0 MHz: series-resonant C = 75.6 pF; 100 pF block |Z| = 0.56 ohm, IL 0.001 dB
+ 1575.4 MHz: series-resonant C = 25.5 pF; 100 pF block |Z| = 2.95 ohm, IL 0.004 dB
+ 2450.0 MHz: series-resonant C = 10.5 pF; 100 pF block |Z| = 5.51 ohm, IL 0.013 dB
+[PASS] GNSS DC-block resonant value 25.5 pF lies in 22-33 pF
+
+=== 6. Bias-tee choke at L1 ===
+47 nH (SRF 2.9 GHz, Q 30) at 1575.42 MHz: |Z| = 660 ohm (vs wL 465 ohm); shunt loss 0.022 dB
+[PASS] choke loss < 0.1 dB
+same choke if SRF were 1.6 GHz: |Z| = 10477 ohm (near SRF: real and large) - the problem is just above SRF, where it turns capacitive
+
+=== 7. Isolator protecting a PA ===
+termination RL 34.4 dB -> |Gamma_T| 0.019; worst |Gamma| at PA = 0.10 + 0.10 + 0.018 = 0.218 (VSWR 1.56) with an open/short antenna
+[PASS] VSWR < 1.7 (06/circulators gives 1.63 for a 30 dB-RL load)
+   0.1 W PA, antenna open: termination dissipates ~0.09 W -> load rating (0402 is 62.5 mW!)
+   0.5 W PA, antenna open: termination dissipates ~0.46 W -> load rating (0402 is 62.5 mW!)
+   2.0 W PA, antenna open: termination dissipates ~1.85 W -> load rating (0402 is 62.5 mW!)
+
+=== 8. ADE-1 spur (m x n) table ===
+(1,3) response: table 11 dBc vs ideal switching mixer 20 log 3 = 9.5 dB
+(1,5) response: table 22 dBc vs ideal switching mixer 20 log 5 = 14.0 dB
+[HIT ] pre-registered: R5 (1,3) within 2 dB of 9.5 dB
+(1,2), (1,4) even-order LO responses 25, 38 dBc: set by balun/diode balance, not by the 1/n law
+(2,1): 51 dBc at -14 dBm, 43 dBc at -4 dBm -> 8 dB per 10 dB (rule: 10)
+(2,2): 79 dBc at -14 dBm, 71 dBc at -4 dBm -> 8 dB per 10 dB (rule: 10)
+(2,3): 52 dBc at -14 dBm, 45 dBc at -4 dBm -> 7 dB per 10 dB (rule: 10)
+(3,1): 63 dBc at -14 dBm, 42 dBc at -4 dBm -> 21 dB per 10 dB (rule: 20)
+(3,3): 62 dBc at -14 dBm, 44 dBc at -4 dBm -> 18 dB per 10 dB (rule: 20)
+[HIT ] pre-registered: R5 slope rule within 3 dB for (2,1)
+[HIT ] pre-registered: R5 slope rule within 3 dB for (3,3)
+half-IF (2,2) rejection extrapolated to -34 dBm input: 79 + 1 x 20 = 99 dBc
+Plan: RF 433.92 MHz, LO 423.22 MHz (low side), IF 10.7 MHz; responses m f_RF - n f_LO = +-IF:
+   (1,1) -IF: interferer at 412.520 MHz; ADE-1 rejection (-14 dBm table) 0 dBc
+   (2,2) +IF: interferer at 428.570 MHz; ADE-1 rejection (-14 dBm table) 79 dBc
+   (2,2) -IF: interferer at 417.870 MHz; ADE-1 rejection (-14 dBm table) 79 dBc
+   (3,3) +IF: interferer at 426.787 MHz; ADE-1 rejection (-14 dBm table) 62 dBc
+   (3,3) -IF: interferer at 419.653 MHz; ADE-1 rejection (-14 dBm table) 62 dBc
+
+=== 9. JLC assembly fees for a 433 MHz pi filter + DC block + ESD ===
+2 extended lines -> economic PCBA US$6 extra (preferred/basic exempt); standard PCBA charges every unique line the same
+[PASS] fee arithmetic: 2 extended lines -> US$6
+
+ALL PASS

@@ -1,0 +1,20 @@
+11|11|covered|11/mimo-radar-virtual-arrays|virtual array, angle resolution (Capon on the virtual array not discussed) (re-checked 09-29 late)
+55|11|covered|11/clutter-and-mti|MTI, pulse-Doppler vs MTI, static clutter removal (re-checked 09-29 late)
+111|12|partial|11/mimo-radar-virtual-arrays|channel calibration for MIMO radar + shared reference in 12/beamforming-architectures; estimating inter-sensor delay by cross-correlation still not (array-calibration planned)
+30|14|covered|14/software-demodulation|APRS/AX.25 AFSK decode (re-checked 09-29 late)
+115|14|covered|14/software-demodulation|AM/SSB/FM from IQ (re-checked 09-29 late)
+496|10|covered|14/software-demodulation|software QPSK receiver (Costas + Gardner) (re-checked 09-29 late)
+495|14|covered|14/software-demodulation|IQ → packets; 433 MHz OOK sensors (re-checked 09-29 late)
+70|14|partial|14/software-demodulation|demodulators given once the modulation is known; identifying an unknown modulation/baud not covered
+614|14|partial|14/software-demodulation|generic GMSK/FSK demod path; AIS-specific recipe not
+317|16|covered|16/spice-circuit-simulation|SPICE noise figure pitfalls (re-checked 09-29 late)
+262|16|covered|16/spice-circuit-simulation|matching networks/filters in SPICE (re-checked 09-29 late)
+475|16|partial|16/spice-circuit-simulation|SPICE and NEC pages exist (16/nec-antenna-modelling); free-tool landscape page still planned
+511|17|covered|17/oscilloscopes-and-probing-for-rf|scope FFT vs SA dynamic range (re-checked 09-29 late)
+374|17|covered|17/oscilloscopes-and-probing-for-rf|ground-lead pickup (re-checked 09-29 late)
+307|17|covered|17/oscilloscopes-and-probing-for-rf|use the 50 Ω input / why 1 MΩ input is poor above ~50 MHz (re-checked 09-29 late)
+237|13|covered|17/oscilloscopes-and-probing-for-rf|near-field-probe hunt for the radiating part; CM/DM physics in 02/radiation-from-currents-hertzian-dipole (re-checked 09-29 late)
+461|17|partial|17/oscilloscopes-and-probing-for-rf|near-field probes; scanners/"RF cameras" not
+408|07|covered|17/phase-noise-measurement|cross-correlation vs averaging (re-checked 09-29 late)
+457|19|partial|19/certification-fcc-ce-imda|modular approval and pre-compliance tests; fixing a failed emissions test not
+288|19|partial|19/lab-safety-esd-high-power|ESD station/wrist strap covered; why the strap has a 1 MΩ series resistor not stated

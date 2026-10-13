@@ -1,0 +1,299 @@
+0	2	2026-07-09	org:meshtastic antenna	Signal propagation increased	https://github.com/meshtastic/firmware/discussions/10965
+4	1	2026-07-04	org:meshtastic antenna	considering using meshtastic	https://github.com/orgs/meshtastic/discussions/508
+22	4	2024-10-28	org:meshtastic antenna	Melbourne Meshtastic Users, Australia	https://github.com/orgs/meshtastic/discussions/7
+8	1	2026-01-25	org:meshtastic antenna	[Board]: ThinkNode G3-Single Channel LoRaWAN Gateway	https://github.com/meshtastic/firmware/discussions/9434
+0	1	2026-07-09	org:meshtastic antenna	T1000-E unable to communicate with any Meshtastic nodes	https://github.com/orgs/meshtastic/discussions/510
+7	1	2026-04-16	org:meshtastic antenna	Is it normal or is there some problem?	https://github.com/orgs/meshtastic/discussions/484
+166	1	2023-10-19	org:meshtastic antenna	[Board]: reconsideration of the chatter 2.0	https://github.com/meshtastic/firmware/discussions/6896
+5	1	2026-05-15	org:meshtastic antenna	TTGo T-beam ver1.1 gps not working on Meshtastic	https://github.com/orgs/meshtastic/discussions/493
+3	3	2026-04-06	org:meshtastic antenna	Custom solar node (nRF52840 + WioSX1262): halved RX current and fixed cold-weather brownouts — PPK2 data inside	https://github.com/orgs/meshtastic/discussions/478
+1	1	2026-05-07	org:meshtastic antenna	conf for EU aka 433 and conf for FR aka 868	https://github.com/meshtastic/firmware/discussions/10414
+0	1	2025-12-29	org:meshtastic antenna	Antenna ground plane	https://github.com/orgs/meshtastic/discussions/438
+5	1	2026-04-15	org:meshtastic antenna	[Bug]: heltec v3 and Lilygo T3 S3 do not connect via bluetooth	https://github.com/meshtastic/firmware/discussions/10173
+0	4	2026-02-25	org:meshtastic antenna	Dual LoRa modules on a CLIENT_BASE node to reduce packet loss	https://github.com/meshtastic/firmware/discussions/9746
+0	1	2026-02-27	org:meshtastic antenna	MeshStation: SDR-based Meshtastic GUI Analyzer & more (Open Source, Multi‑Platform)	https://github.com/orgs/meshtastic/discussions/464
+22	1	2024-03-26	org:meshtastic antenna	[Board]: Affordable, portable 1W Meshtastic ready platform with ESP32+OLED+GPS pads (Radiomaster Bandit Nano 900MHz ELRS Module)	https://github.com/meshtastic/firmware/discussions/3794
+5	1	2025-07-06	org:meshtastic antenna	[Feature Request]: Launch Meshtastic with Dragino SX1276 LoRa HAT v1.4 (Linux Native)	https://github.com/meshtastic/firmware/discussions/7249
+0	1	2025-12-22	org:meshtastic antenna	Can anyone explain why I can pick up node 100 miles away but not 3 miles away	https://github.com/orgs/meshtastic/discussions/434
+33	1	2024-05-08	org:meshtastic antenna	[Board]: elecrow gateway	https://github.com/meshtastic/firmware/discussions/4050
+1	1	2025-11-13	org:meshtastic antenna	So... what hat to use for Raspberry Pi in Europe?	https://github.com/orgs/meshtastic/discussions/423
+3	1	2025-09-25	org:meshtastic antenna	blog/demystifying-router-late/	https://github.com/orgs/meshtastic/discussions/409
+7	5	2025-10-25	org:meshtastic antenna	Improving the Meshtastic app UX	https://github.com/orgs/meshtastic/discussions/417
+4	3	2025-09-12	org:meshtastic antenna	What should I be setting TX power to?	https://github.com/orgs/meshtastic/discussions/402
+0	2	2026-01-12	org:meshtastic antenna	[Feature Request]: Wired Device Clusters - Multi-Node Cable Connection with Radio Integration	https://github.com/meshtastic/firmware/discussions/9282
+10	1	2025-12-02	org:meshtastic antenna	[Feature Request]: Merge HopLimit and HopStart into a Single TTL Variable	https://github.com/meshtastic/firmware/discussions/9515
+5	1	2025-06-25	org:meshtastic antenna	[Bug]: Bluetooth (re) connectivity problem	https://github.com/meshtastic/firmware/discussions/7168
+1	1	2025-08-31	org:meshtastic antenna	Does Meshtastic Support Creating a Node with a Z-Wave 800 Antenna on Truenas?	https://github.com/orgs/meshtastic/discussions/389
+7	4	2023-06-10	org:meshtastic antenna	[Feature Request]: Directly mesh via BLE	https://github.com/meshtastic/firmware/discussions/3829
+1	1	2025-10-10	org:meshtastic antenna	[Feature Request]:  Place an offset in Every Device's Firmware to Normalize SNR Rebroadcast Delay	https://github.com/meshtastic/firmware/discussions/8293
+61	9	2024-10-30	org:meshtastic antenna	Swiss Meshtastic User	https://github.com/orgs/meshtastic/discussions/24
+9	2	2025-12-08	org:meshtastic antenna	[Feature Request]: Native Direct-Link Ping Functionality	https://github.com/meshtastic/firmware/discussions/8905
+4	1	2024-12-18	org:meshtastic antenna	Western Pennsylvania Mesh	https://github.com/orgs/meshtastic/discussions/136
+4	2	2024-05-21	org:meshtastic antenna	Ebyte E22 modules[Board]:	https://github.com/meshtastic/firmware/discussions/3948
+1	1	2025-05-10	org:meshtastic antenna	All in One Devices like TDeck	https://github.com/orgs/meshtastic/discussions/308
+1	1	2025-08-02	org:meshtastic antenna	"Client Mute" is in fact "Client without retransmit"	https://github.com/meshtastic/firmware/discussions/7537
+6	1	2025-12-04	org:meshtastic antenna	[Feature Request]: DynDNS support	https://github.com/meshtastic/firmware/discussions/8867
+10	2	2024-05-05	org:meshtastic antenna	[Bug]: T-Beam v1.2, M8N - GPS module initializes but doesn't work	https://github.com/meshtastic/firmware/discussions/3804
+4	1	2025-05-02	org:meshtastic antenna	Heltec E213 and T190 fail to send longer messages	https://github.com/meshtastic/firmware/discussions/6724
+3	1	2024-12-20	org:meshtastic antenna	Heltec Wireless Tracker v1.2	https://github.com/orgs/meshtastic/discussions/140
+2	25	2024-09-23	org:meshtastic antenna	[Feature Request]: Ability to physically connect multiple nodes together to share messages as if they were one single node	https://github.com/meshtastic/firmware/discussions/4841
+3	5	2025-11-12	org:meshtastic antenna	Is Meshtastic becoming a victim of its own Success? Default Channel Congestion and New User Experience	https://github.com/meshtastic/firmware/discussions/8617
+1	1	2025-04-30	org:meshtastic antenna	Station G2 increase transmit power to offset antenna coax loss	https://github.com/orgs/meshtastic/discussions/303
+1	0	2025-05-09	org:meshtastic antenna	[Board]: Chatter (original)	https://github.com/meshtastic/firmware/discussions/6794
+1	2	2025-07-08	org:meshtastic antenna	Proposal: Accurate-ish time/date/clock/NTP sync across mesh	https://github.com/meshtastic/firmware/discussions/7273
+16	3	2024-10-29	org:meshtastic antenna	Sydney and Greater NSW Community	https://github.com/orgs/meshtastic/discussions/10
+4	2	2024-12-04	org:meshtastic antenna	Ethernet connection to homelab + bluetooth	https://github.com/orgs/meshtastic/discussions/108
+3	1	2025-09-06	org:meshtastic antenna	[Solved]: "SX126x init result -2" on RP2040-LoRa-HF	https://github.com/meshtastic/firmware/discussions/7883
+2	2	2024-12-17	org:meshtastic antenna	Users in WA - Puget Sound (Seattle Tacoma Everett)	https://github.com/orgs/meshtastic/discussions/131
+5	1	2025-01-27	org:meshtastic antenna	Can a meshtastic device be made with STM32L151 and SX1232? How can it be done?	https://github.com/orgs/meshtastic/discussions/208
+2	1	2025-03-03	org:meshtastic antenna	RAK4631 - Lora doesn't work	https://github.com/orgs/meshtastic/discussions/257
+5	2	2025-04-01	org:meshtastic antenna	[Feature Request]: time to switch to a faster preset?	https://github.com/meshtastic/firmware/discussions/6644
+1	1	2026-09-25	org:meshtastic range	LilyGo T-Deck offline map installation	https://github.com/meshtastic/device-ui/discussions/416
+1	1	2026-09-04	org:meshtastic range	Duty cycle, channel bandwidth and how to get the best from nodes config	https://github.com/meshtastic/firmware/discussions/11730
+0	2	2026-07-23	org:meshtastic range	GateWatch — Off-Grid Fence Monitoring over Meshtastic	https://github.com/orgs/meshtastic/discussions/518
+0	1	2026-06-24	org:meshtastic range	[Feature Request]: Support for AS3935 sensors (lightning detection)	https://github.com/meshtastic/firmware/discussions/10775
+36	4	2026-03-18	org:meshtastic range	No More Hop Limits: What if Every Hop Cost Just 1 TX Instead of n?	https://github.com/meshtastic/firmware/discussions/9936
+4	2	2025-10-06	org:meshtastic range	[Feature Request]: Conditional muting	https://github.com/meshtastic/firmware/discussions/8709
+7	3	2025-09-06	org:meshtastic range	[Feature Request]: OTA over LoRa	https://github.com/meshtastic/firmware/discussions/7910
+5	1	2025-08-09	org:meshtastic range	nrf52840, hang on boot if connected to linux via usb	https://github.com/meshtastic/firmware/discussions/7592
+1	1	2025-11-27	org:meshtastic range	The future implementation of Multi SF support with the LR2021	https://github.com/meshtastic/firmware/discussions/8769
+0	2	2026-04-07	org:meshtastic range	Feature idea	https://github.com/meshtastic/firmware/discussions/10100
+9	0	2025-04-23	org:meshtastic range	blog/why-your-mesh-should-switch-from-longfast/	https://github.com/orgs/meshtastic/discussions/298
+0	3	2026-03-07	org:meshtastic range	Feature request: Auto-ignore nodes more than X distance away	https://github.com/orgs/meshtastic/discussions/468
+0	2	2026-04-09	org:meshtastic range	[ Feature ] Support L76 GPS Pre-defined periodic tracking modes to save battery.	https://github.com/meshtastic/firmware/discussions/10118
+5	1	2025-12-14	org:meshtastic range	[Bug]: Range Test files are not being updated. File exist with header only, no data inside.	https://github.com/meshtastic/firmware/discussions/9690
+1	1	2026-05-26	org:meshtastic range	Acknowledged Group Messaging — per-member delivery confirmation for group conversations	https://github.com/meshtastic/firmware/discussions/10559
+4	5	2026-01-26	org:meshtastic range	Traffic management module to tame large meshes	https://github.com/meshtastic/firmware/discussions/9437
+6	1	2025-11-20	org:meshtastic range	[Bug]: Heltec v3 unstable node<>app connection and connection related restarts	https://github.com/meshtastic/firmware/discussions/8726
+3	16	2025-08-03	org:meshtastic range	[Feature Request]: bitchat bridge mode	https://github.com/meshtastic/firmware/discussions/7542
+8	13	2022-08-20	org:meshtastic range	Support for multiple radio interfaces	https://github.com/meshtastic/firmware/discussions/3831
+0	1	2026-02-18	org:meshtastic range	Restored nodes after backup show in Android app, but did not transfer to T-Deck after Update (Wipe)	https://github.com/orgs/meshtastic/discussions/458
+0	1	2026-03-13	org:meshtastic range	Hardware Partner Proposal — Family & Emergency-Focused Features	https://github.com/orgs/meshtastic/discussions/470
+5	3	2025-03-30	org:meshtastic range	6-7 hops, what's the point?	https://github.com/orgs/meshtastic/discussions/278
+2	2	2025-10-23	org:meshtastic range	Unexpected properties of contention windows for rebroadcasting	https://github.com/meshtastic/firmware/discussions/8431
+0	2	2025-12-14	org:meshtastic range	[Bug]: IOS App not updating signal strength at all just keeps GOOD and then suddenly drops when out of range	https://github.com/meshtastic/firmware/discussions/8974
+5	2	2025-07-14	org:meshtastic range	BLE Loses connection to T1000-e	https://github.com/orgs/meshtastic/discussions/357
+0	1	2026-02-01	org:meshtastic range	Use of CLIENT_BASE breaks transmission acknowledgements for associated devices	https://github.com/meshtastic/firmware/discussions/9503
+3	3	2025-11-18	org:meshtastic range	[Feature Request]: Make disabling encryption and authentication optional in ham mode	https://github.com/meshtastic/firmware/discussions/8675
+1	4	2025-12-02	org:meshtastic range	[Feature Request]: Quiet hours for external notifications	https://github.com/meshtastic/firmware/discussions/8833
+4	9	2026-01-17	org:meshtastic range	Change the "Client" role to "Client Mute" by default [For developers]	https://github.com/meshtastic/firmware/discussions/9341
+5	1	2025-11-20	org:meshtastic range	[Bug]: Unable to send/receive on t1000e in app after 2.7.15 update	https://github.com/meshtastic/firmware/discussions/8724
+21	8	2025-02-17	org:meshtastic range	[Bug]: No channel while trying to send DM	https://github.com/meshtastic/firmware/discussions/6079
+1	2	2025-10-27	org:meshtastic range	Bug with Samsung galaxy s25 ultra - Bluetooth reconnecting	https://github.com/orgs/meshtastic/discussions/419
+1	1	2024-12-10	org:meshtastic range	Remote Start	https://github.com/orgs/meshtastic/discussions/118
+2	1	2025-10-11	org:meshtastic range	Learn Node Based on Realistic Limitations	https://github.com/meshtastic/firmware/discussions/8309
+0	1	2026-01-21	org:meshtastic range	BLE connection with lilygo t-echo	https://github.com/meshtastic/firmware/discussions/9376
+2	2	2025-09-26	org:meshtastic range	Support for internal die temperature measurement in some microcontrollers	https://github.com/meshtastic/firmware/discussions/8119
+9	1	2025-11-24	org:meshtastic range	[Feature Request]: add ability to reduce mesh traffic	https://github.com/meshtastic/firmware/discussions/9241
+2	1	2025-10-21	org:meshtastic range	Method for Increasing the Bandwidth to Link Budget Ratio	https://github.com/meshtastic/firmware/discussions/8416
+1	1	2025-10-08	org:meshtastic range	Question about broadcast suppression in the flooding mesh algorithm	https://github.com/meshtastic/firmware/discussions/8280
+1	1	2026-01-04	org:meshtastic SNR	[Feature Request]: Beginner Mode	https://github.com/meshtastic/firmware/discussions/9732
+4	1	2026-01-24	org:meshtastic SNR	[Bug]: Is the upgrade scenario for packets with a higher hop_limit working?	https://github.com/meshtastic/firmware/discussions/9419
+0	1	2026-01-26	org:meshtastic SNR	Handling of telemetry data	https://github.com/orgs/meshtastic/discussions/450
+2	1	2025-10-27	org:meshtastic SNR	[Feature Request]: More elaborate Favorite Node screen	https://github.com/meshtastic/firmware/discussions/8505
+2	1	2025-10-03	org:meshtastic SNR	[Feature Request]: Client Nodes Neighbors and Neighbor`s Neighbors Used to Determine if Rebroadcast is Done	https://github.com/meshtastic/firmware/discussions/8257
+2	1	2025-10-10	org:meshtastic SNR	[Feature Request] Client_Base Assumed Well Place and Receives Rebroadcast Priority	https://github.com/meshtastic/firmware/discussions/8295
+1	1	2025-10-10	org:meshtastic SNR	[Feature Request]  Change the Timing of White Listed Client_Base Rebroadcast	https://github.com/meshtastic/firmware/discussions/8297
+3	2	2025-10-11	org:meshtastic SNR	[Feature Request] Router Silence List for Router and Router_Late	https://github.com/meshtastic/firmware/discussions/8301
+0	1	2025-10-08	org:meshtastic SNR	[Feature Request]: Secondary Routing Enhancement from Knowing Neighbors.	https://github.com/meshtastic/firmware/discussions/8259
+10	4	2025-08-04	org:meshtastic SNR	[Feature Request]: Active node scanning	https://github.com/meshtastic/firmware/discussions/7549
+14	2	2025-10-14	org:meshtastic SNR	[Bug]: CLIENT_BASE role unwanted behavior	https://github.com/meshtastic/firmware/discussions/8367
+6	3	2024-12-31	org:meshtastic SNR	What do you use the OLED screen on your node for?	https://github.com/orgs/meshtastic/discussions/159
+0	1	2025-07-02	org:meshtastic SNR	Meshstatic heltic v3	https://github.com/meshtastic/firmware/discussions/7208
+1	1	2025-05-22	org:meshtastic SNR	SNR appears as "Relação sinal-ruído" in Portuguese (from Portugal)	https://github.com/orgs/meshtastic/discussions/316
+1	1	2025-03-28	org:meshtastic SNR	Is there something like this already present in the firmware to reduce traffic?	https://github.com/meshtastic/firmware/discussions/6425
+1	1	2025-05-16	org:meshtastic SNR	Everything available on MUI alsi published to MQTT?	https://github.com/meshtastic/firmware/discussions/6826
+3	1	2024-12-02	org:meshtastic SNR	Security: Handle SNR as position	https://github.com/orgs/meshtastic/discussions/102
+3	1	2024-12-07	org:meshtastic SNR	[Bug]: Mixture of SNR and LAT/LONG	https://github.com/meshtastic/firmware/discussions/5626
+4	1	2024-10-31	org:meshtastic SNR	[Bug]: MQTT disconnects, node resets Wi-Fi and becomes unreachable until rebooted	https://github.com/meshtastic/firmware/discussions/5203
+0	2	2025-01-15	org:meshtastic SNR	Use GPS position in message routing	https://github.com/meshtastic/firmware/discussions/5862
+2	2	2025-02-05	org:meshtastic SNR	Troubleshooting sending message to channel	https://github.com/meshtastic/firmware/discussions/5990
+1	1	2025-01-04	org:meshtastic SNR	Basic Node performace testing ?	https://github.com/orgs/meshtastic/discussions/171
+4	1	2024-06-04	org:meshtastic SNR	[Bug]: nonces are only randomized with 31 bits, this make it rare but possible to see duplicated nonces in the wild threatening confidentiality of messages	https://github.com/meshtastic/firmware/discussions/4042
+1	1	2024-12-09	org:meshtastic SNR	Client "Managed Flooding" vs "Router" Function Implementation Questions	https://github.com/orgs/meshtastic/discussions/117
+3	7	2024-10-12	org:meshtastic SNR	Meshtastic needs a routing protocol	https://github.com/orgs/meshtastic/discussions/8
+1	1	2024-11-19	org:meshtastic SNR	Android App PAX counter	https://github.com/orgs/meshtastic/discussions/84
+0	2	2024-11-07	org:meshtastic SNR	2.5 PKI Admin issues	https://github.com/orgs/meshtastic/discussions/45
+6	1	2025-01-16	org:meshtastic SNR	[Bug]: CLIENT_MUTE never sends NodeInfo packets	https://github.com/meshtastic/firmware/discussions/5867
+1	1	2024-09-30	org:meshtastic SNR	Revisiting CLIENT_ROUTER in a way that makes sense	https://github.com/meshtastic/firmware/discussions/4910
+3	1	2024-05-29	org:meshtastic SNR	Publishing MQTT JSON Does Nothing	https://github.com/meshtastic/firmware/discussions/3988
+8	1	2024-08-15	org:meshtastic SNR	Title: High Frequency Mesh Communication Observed in Version 2.4.x	https://github.com/meshtastic/firmware/discussions/4512
+0	1	2023-11-18	org:meshtastic SNR	Problem with LILYGO T-BEAM AXP2101 V1.2 in Arduino IDE	https://github.com/meshtastic/firmware/discussions/2946
+1	1	2023-11-18	org:meshtastic SNR	Problem with LilyGO T-BEAM AXP2101 V1.2	https://github.com/meshtastic/firmware/discussions/2947
+2	1	2025-11-25	org:meshtastic RSSI	Unable to Connect via URL in Web Client on a LilyGo T3V1.6	https://github.com/meshtastic/web/discussions/1047
+0	3	2025-08-09	org:meshtastic RSSI	🚀 MQTT Exporter - Prometheus Integration	https://github.com/orgs/meshtastic/discussions/379
+2	2	2025-04-01	org:meshtastic RSSI	[Feature Request]: Automatic global routing using a distributed hash table	https://github.com/meshtastic/firmware/discussions/6516
+6	1	2024-12-07	org:meshtastic RSSI	Accessing client.meshtastic.org	https://github.com/orgs/meshtastic/discussions/114
+1	1	2025-04-08	org:meshtastic LNA	[Feature Request]: 2.4GHz out of the band usage for HAM licenced Radio operators	https://github.com/meshtastic/firmware/discussions/6602
+6	1	2024-05-25	org:meshtastic LNA	Request for new definition to support Ebyte E22 modules[Board]:	https://github.com/meshtastic/firmware/discussions/4984
+1	1	2025-11-02	org:meshtastic interference	Interference with medical equipment	https://github.com/orgs/meshtastic/discussions/422
+7	1	2025-12-16	org:meshtastic interference	[Bug]: 100% reproducible crash/reboot on TBeam Supreme @ 2.17.5	https://github.com/meshtastic/firmware/discussions/8990
+4	5	2025-04-18	org:meshtastic interference	Feature Request: Enable "Crossband Cable Repeater Mode" via UART between Meshtastic Nodes	https://github.com/meshtastic/firmware/discussions/6626
+2	1	2025-10-08	org:meshtastic interference	[Feature Request]: Dynamic Broadcast Power on Router Level Nodes	https://github.com/meshtastic/firmware/discussions/8260
+11	1	2024-08-14	org:meshtastic interference	blog/meshtastic-opposition-to-nextnav-proposed-changes/	https://github.com/orgs/meshtastic/discussions/16
+11	2	2024-05-12	org:meshtastic interference	[Bug]: Too much traffic in an area causes hardware failure error	https://github.com/meshtastic/firmware/discussions/3874
+12	1	2024-01-12	org:meshtastic interference	[Bug]: RP2040 LoRa transmission interferes with USB	https://github.com/meshtastic/firmware/discussions/3241
+5	2	2026-08-24	org:meshtastic modem preset	[Bug]: Router telemetry 12-hour hard floor on default channels breaks remote infrastructure monitoring	https://github.com/meshtastic/firmware/discussions/11605
+15	0	2026-02-18	org:meshtastic modem preset	blog/tak-server-integration-ios/	https://github.com/orgs/meshtastic/discussions/459
+1	1	2026-06-02	org:meshtastic modem preset	How resistent is Meshtastic to attacks? Can it withstand a flood of bogus messages?	https://github.com/meshtastic/firmware/discussions/10616
+3	1	2026-01-24	org:meshtastic modem preset	Build flag issue with STM32WLx device	https://github.com/meshtastic/firmware/discussions/9425
+2	1	2025-12-07	org:meshtastic modem preset	idea: dont make every node a client	https://github.com/meshtastic/firmware/discussions/8882
+15	27	2025-04-26	org:meshtastic modem preset	Official MQTT broker having connection issues	https://github.com/orgs/meshtastic/discussions/301
+1	2	2025-11-13	org:meshtastic modem preset	Help decoding telemetry frequency	https://github.com/meshtastic/firmware/discussions/8632
+8	24	2024-10-09	org:meshtastic modem preset	[Feature Request]:  Generate node ID out of public key	https://github.com/meshtastic/firmware/discussions/5007
+10	2	2025-02-28	org:meshtastic modem preset	Options for dealing with badly placed and configured nodes on a large mesh	https://github.com/meshtastic/firmware/discussions/6199
+2	1	2025-01-06	org:meshtastic modem preset	Reduce latency	https://github.com/orgs/meshtastic/discussions/176
+1	1	2024-12-29	org:meshtastic modem preset	Updating frequency slot after changing default channel	https://github.com/orgs/meshtastic/discussions/154
+7	2	2025-03-10	org:meshtastic modem preset	📡 GPS Accuracy Issue Between Channel and MQTT on the Meshtastic Public Map	https://github.com/meshtastic/firmware/discussions/6335
+9	19	2025-01-04	org:meshtastic modem preset	Use Meshtastic Radio as a Library (Refactor or Rewrite Radio Code?)	https://github.com/meshtastic/firmware/discussions/5739
+7	2	2024-05-19	org:meshtastic modem preset	Forward compatibility for firmware versions	https://github.com/meshtastic/firmware/discussions/3932
+19	1	2025-06-20	org:meshtastic long fast	blog/meshtastic-2-7-preview/	https://github.com/orgs/meshtastic/discussions/337
+5	3	2025-03-27	org:meshtastic long fast	[Feature Request]: UDP unicast instead of multicast	https://github.com/meshtastic/firmware/discussions/6405
+2	1	2026-04-29	org:meshtastic long fast	[Feature Request]: Choose what the User button does on single/double/triple click	https://github.com/meshtastic/firmware/discussions/10339
+12	2	2026-04-23	org:meshtastic long fast	Building: Description of the Nodes screen	https://github.com/orgs/meshtastic/discussions/485
+2	1	2026-05-08	org:meshtastic long fast	[Bug]: Trouble communicating over UART on the RasPi Pico	https://github.com/meshtastic/firmware/discussions/10536
+4	2	2025-02-28	org:meshtastic long fast	Meshtastic as a GNSS RTK data transport?	https://github.com/meshtastic/firmware/discussions/6176
+10	4	2026-04-10	org:meshtastic long fast	nRf54l15 port	https://github.com/meshtastic/firmware/discussions/10124
+6	1	2026-01-22	org:meshtastic long fast	[Bug]:  2.7.18 crash for TLORA-v2-1-1_6	https://github.com/meshtastic/firmware/discussions/9479
+0	3	2025-11-07	org:meshtastic long fast	[Feature Request]: Granular and Configurable Notification System	https://github.com/meshtastic/firmware/discussions/8586
+2	1	2025-12-02	org:meshtastic long fast	Wifi Connects but not accessible in Mobile App on Seeed SenseCAP Indicator	https://github.com/meshtastic/device-ui/discussions/238
+5	1	2025-07-23	org:meshtastic long fast	[Bug]: Only one way long messages on powerful RA-01S-P (RA-01SH-P)	https://github.com/meshtastic/firmware/discussions/7430
+2	1	2025-11-08	org:meshtastic long fast	Reverse (path) Bloom Filter (RBF) for routing packets	https://github.com/meshtastic/firmware/discussions/8592
+5	1	2025-07-10	org:meshtastic long fast	[Feature Request]: Dynamic role switcher	https://github.com/meshtastic/firmware/discussions/8419
+0	2	2025-07-25	org:meshtastic long fast	Vertical display layout for Heltec V3 and T114 displays?	https://github.com/meshtastic/firmware/discussions/7451
+1	5	2025-07-30	org:meshtastic long fast	Remote update over LoRa	https://github.com/meshtastic/firmware/discussions/7513
+3	2	2025-01-03	org:meshtastic long fast	S&F - Not available on this channel	https://github.com/orgs/meshtastic/discussions/166
+2	1	2025-04-23	org:meshtastic long fast	Multi Radio Multi Frequency	https://github.com/orgs/meshtastic/discussions/299
+6	1	2025-06-18	org:meshtastic long fast	[Bug]: Remote admin not working on secondary channel	https://github.com/meshtastic/firmware/discussions/7072
+1	1	2025-04-23	org:meshtastic long fast	Flood routing tweak for private channels	https://github.com/meshtastic/firmware/discussions/6656
+2	1	2025-03-15	org:meshtastic long fast	Meshtastic 2.6.1 maps stopped working	https://github.com/orgs/meshtastic/discussions/268
+2	2	2025-02-02	org:meshtastic long fast	Heltec Tracker V1.1 No Sat	https://github.com/orgs/meshtastic/discussions/220
+1	2	2025-01-09	org:meshtastic long fast	Stopped outsmarting myself and learned to enjoy Meshtastic	https://github.com/orgs/meshtastic/discussions/180
+4	2	2025-01-06	org:meshtastic long fast	Photo/Audio in the future of Meshtastic?	https://github.com/orgs/meshtastic/discussions/175
+6	1	2025-10-20	org:meshtastic spreading factor	[Feature Request]: Option to Encrypt Packet Header on selected channel to prevent rouge ROUTER from repeating	https://github.com/meshtastic/firmware/discussions/8422
+0	1	2026-08-28	org:meshtastic hop	Feature request: XEdDSA-signed broadcast challenge response	https://github.com/meshtastic/firmware/discussions/11642
+13	3	2024-05-27	org:meshtastic hop	[Feature Request]: Option to limit traffic based on original hop settings	https://github.com/meshtastic/firmware/discussions/4060
+1	3	2025-08-07	org:meshtastic hop	[Feature Request]: Geofenced Channels Offering Higher Hops, Network Ussage, & More	https://github.com/meshtastic/firmware/discussions/7574
+1	1	2026-06-02	org:meshtastic hop	Wouldn't routing be much more efficient?	https://github.com/meshtastic/firmware/discussions/10615
+0	2	2026-04-22	org:meshtastic hop	Exploring Routing Optimization via Hop Count	https://github.com/meshtastic/firmware/discussions/10246
+1	1	2026-07-19	org:meshtastic hop	Broadcast a "key changed" announcement to all reachable nodes after a public key reset	https://github.com/meshtastic/firmware/discussions/11075
+8	1	2025-12-01	org:meshtastic hop	[Feature Request]: Retransmit messages received in public channel to favorite nodes from CLIENT_BASE node	https://github.com/meshtastic/firmware/discussions/9541
+1	1	2026-05-13	org:meshtastic hop	Ignoring MQTT traffic?	https://github.com/orgs/meshtastic/discussions/492
+3	1	2026-04-26	org:meshtastic hop	meaning of the icon in a received message?	https://github.com/orgs/meshtastic/discussions/487
+0	2	2026-03-17	org:meshtastic hop	Question about routing behavior, specifically zero-cost hops.	https://github.com/orgs/meshtastic/discussions/473
+0	1	2026-03-02	org:meshtastic hop	does changing node LoRa max hops need a reboot of the node to be applied as setting	https://github.com/meshtastic/firmware/discussions/9786
+2	2	2026-04-17	org:meshtastic hop	Roadmap 2026 - Phase 1 Improvements	https://github.com/meshtastic/web/discussions/1046
+2	1	2024-08-18	org:meshtastic hop	blog/why-meshtastic-uses-managed-flood-routing/	https://github.com/orgs/meshtastic/discussions/14
+0	1	2026-01-25	org:meshtastic hop	Proposal: Hop-weighted rebroadcast delay to reduce flooding without breaking self-healing	https://github.com/meshtastic/firmware/discussions/9433
+6	1	2025-11-17	org:meshtastic hop	blog/zero-cost-hops-favorite-routers/	https://github.com/orgs/meshtastic/discussions/424
+1	1	2026-02-18	org:meshtastic hop	RX Router Queue Overflow Drops Oldest Packets	https://github.com/meshtastic/firmware/discussions/9679
+2	1	2026-02-05	org:meshtastic hop	Some messages on LongFast won´t reach my indoor CLIENT node from a CLIENT_BASE node (proposal)	https://github.com/meshtastic/firmware/discussions/9538
+4	1	2026-01-14	org:meshtastic hop	[Feature Request]: Discussion on path encryption	https://github.com/meshtastic/firmware/discussions/9318
+2	1	2025-12-27	org:meshtastic hop	My feedback on Mesh Broadcast Algorithm -> Layer 2: Reliable Zero Hop Messaging	https://github.com/orgs/meshtastic/discussions/436
+0	1	2025-12-27	org:meshtastic hop	What is the "contention window" (CW) in layer 0 CSMA/CA	https://github.com/orgs/meshtastic/discussions/437
+0	1	2025-10-29	org:meshtastic hop	Changes To HopStart and HopLimit in Version 3 to support the new 0-Hop Feature	https://github.com/meshtastic/firmware/discussions/8480
+0	1	2026-01-23	org:meshtastic hop	Improve retransmission logic when only one node is rebroadcasting repeatedly	https://github.com/meshtastic/firmware/discussions/9407
+5	1	2025-11-19	org:meshtastic hop	[Feature Request / Question]: Is it possible to use hoplimit only for broadcast messages?	https://github.com/meshtastic/firmware/discussions/8733
+1	1	2026-09-21	org:meshtastic power TX	[Bug]: RAK3401 + RAK13302 VD (001 Battery version) - Power Amplifier Gain / Pin issue on 2.7.24 and 2.8.1	https://github.com/meshtastic/firmware/discussions/11943
+1	1	2026-09-13	org:meshtastic power TX	Power supply considerations	https://github.com/orgs/meshtastic/discussions/532
+1	2	2026-08-28	org:meshtastic power TX	Flashing problem - HELTEC V4	https://github.com/orgs/meshtastic/discussions/526
+1	1	2026-07-14	org:meshtastic power TX	Heltec V3 + GT-U7 GPS: "No GPS Present" after firmware update (worked previously)	https://github.com/orgs/meshtastic/discussions/512
+0	0	2026-07-24	org:meshtastic power TX	Device gets into Bootloop	https://github.com/orgs/meshtastic/discussions/519
+6	1	2026-03-14	org:meshtastic power TX	[Bug]: RAK12500 GPS not detected on RAK19001 — firmware only probes UART, never I2C	https://github.com/meshtastic/firmware/discussions/9909
+2	1	2026-02-18	org:meshtastic power TX	[Bug]: Help with GYS2005 board / DIY LoraNode connection issue	https://github.com/meshtastic/firmware/discussions/9689
+5	1	2025-09-19	org:meshtastic power TX	Lilygo T3S3 with LR1121 - incorrect default TX power setting?	https://github.com/meshtastic/firmware/discussions/8048
+4	2	2025-03-21	org:meshtastic power TX	question about the pi pico 2w	https://github.com/orgs/meshtastic/discussions/271
+11	1	2024-09-01	org:meshtastic power TX	[Feature Request]: Power Saving Feature - Reduce LoRa TX power based on dusk/dawn-times or USB==1/0	https://github.com/meshtastic/firmware/discussions/4616
+1	1	2025-08-26	org:meshtastic power TX	[Bug]: nRF52840 xiao bootloop when initiating bluetooth stack	https://github.com/meshtastic/firmware/discussions/8269
+2	1	2025-08-23	org:meshtastic power TX	[Bug]: No sx1262 radio	https://github.com/meshtastic/firmware/discussions/7737
+3	2	2025-03-05	org:meshtastic power TX	Heltec T114 generic GPS crash	https://github.com/meshtastic/firmware/discussions/6236
+6	1	2025-05-05	org:meshtastic power TX	[Bug]: SEED ESP32S3 & WIO SX1262, "No Interface" Error When Setting GPS RX/TX Pins in Meshtastic App	https://github.com/meshtastic/firmware/discussions/6818
+5	2	2025-03-21	org:meshtastic power TX	[Feature Request]: Disable amateur radio licensed mode on non-amateur bands	https://github.com/meshtastic/firmware/discussions/6378
+1	1	2024-12-28	org:meshtastic power TX	Station G2 TX Power - before or after PA gain?	https://github.com/orgs/meshtastic/discussions/150
+1	1	2025-03-27	org:meshtastic power TX	DIY Faketec with Ra-01SH module critical error #3	https://github.com/meshtastic/firmware/discussions/6420
+0	1	2025-01-10	org:meshtastic power TX	nRF52840 + Wio-SX1262 bootlooping	https://github.com/orgs/meshtastic/discussions/181
+1	1	2025-01-14	org:meshtastic power TX	USB Serial -> CalTopo - serial data bug? Rak and Heltec	https://github.com/orgs/meshtastic/discussions/187
+1	1	2024-06-03	org:meshtastic noise floor	[Feature Request]: Stronger cryptographic guarantees and discussion of threat model	https://github.com/meshtastic/firmware/discussions/4027
+0	1	2026-07-08	org:meshtastic frequency slot	Does using the Detection Sensor module prevent the node’s telemetry from being updated?	https://github.com/meshtastic/firmware/discussions/10942
+6	1	2025-08-11	org:meshtastic frequency slot	[Bug]: WantAck/PKI Retries Under Asymmetric Ingress/Egress Conditions - UDP PKI Failure?	https://github.com/meshtastic/firmware/discussions/8389
+5	1	2025-09-03	org:meshtastic frequency slot	[Feature Request]: Enhanced DetectionSensor Module Configuration	https://github.com/meshtastic/firmware/discussions/7895
+35	0	2025-02-26	org:meshtastic frequency slot	blog/meshtastic-2-6-preview/	https://github.com/orgs/meshtastic/discussions/249
+8	5	2025-04-08	org:meshtastic frequency slot	Feature Request: Hop forwarding limit for routers	https://github.com/orgs/meshtastic/discussions/288
+1	1	2025-05-25	org:meshtastic frequency slot	[Bug]: Task watchdog got triggered FromRadio=STATE_SEND_PACKETS on ai-c3	https://github.com/meshtastic/firmware/discussions/6888
+6	1	2024-10-09	org:meshtastic frequency slot	[Bug]: LongFast secondary channel not sending messages with AQ== as PSK	https://github.com/meshtastic/firmware/discussions/5128
+8	4	2024-10-31	org:meshtastic frequency slot	[Bug]: Fixed GPS coordinates not retained, RAK4631	https://github.com/meshtastic/firmware/discussions/5201
+1	1	2024-07-12	org:meshtastic frequency slot	[Bug]: meshtastic exited with code 134	https://github.com/meshtastic/firmware/discussions/4278
+4	2	2024-05-07	org:meshtastic frequency slot	[Feature Request]: Private Primary channel with Secondary channel LongFast for new devices	https://github.com/meshtastic/firmware/discussions/3823
+4	2	2024-10-29	org:meshtastic frequency slot	Heltec-ESP32 V3 Position Nonsense	https://github.com/orgs/meshtastic/discussions/19
+7	1	2024-11-01	org:meshtastic frequency slot	[Feature Request]: Enable micro SD usage for Lilygo Tlora v2.1-1.6	https://github.com/meshtastic/firmware/discussions/5224
+3	1	2025-10-04	org:meshtastic duty cycle	[Feature Request]: QoS-like Message Prioritization to Manage Radio Load	https://github.com/meshtastic/firmware/discussions/8262
+1	1	2025-10-11	org:meshtastic duty cycle	AS923-4 band support(Israel)	https://github.com/meshtastic/firmware/discussions/8308
+9	1	2024-09-15	org:meshtastic duty cycle	[Feature Request]: Limit messages forwarded by routers depending of max hops settings or hops used	https://github.com/meshtastic/firmware/discussions/4764
+2	1	2025-01-11	org:meshtastic duty cycle	Restart Radio after timeout	https://github.com/orgs/meshtastic/discussions/183
+2	1	2024-11-08	org:meshtastic duty cycle	Odd off topic question: buy a frequency range	https://github.com/meshtastic/firmware/discussions/5278
+1	1	2024-05-22	org:meshtastic duty cycle	Why not 869,075 Mhz in EU	https://github.com/meshtastic/firmware/discussions/3954
+1	3	2024-07-03	org:meshtastic duty cycle	[Feature Request]: Remote radio driver	https://github.com/meshtastic/firmware/discussions/4987
+3	1	2024-02-21	org:meshtastic duty cycle	[Feature Request]: Enforced hop limits on packet relay for repeaters and routers	https://github.com/meshtastic/firmware/discussions/3833
+1	2	2024-09-22	org:meshtastic duty cycle	[Feature Request]: PWM Fan control?	https://github.com/meshtastic/firmware/discussions/4815
+0	1	2025-12-17	org:meshtastic 433	Plugin can't find the device	https://github.com/orgs/meshtastic/discussions/433
+0	1	2026-07-01	org:meshtastic 433	Lyligo T-Deck+: which firmware label?	https://github.com/orgs/meshtastic/discussions/507
+3	1	2025-09-02	org:meshtastic 433	[Bug]: DIY ESP32 module "Hydra" critical fault#3	https://github.com/meshtastic/firmware/discussions/8270
+1	1	2025-10-22	org:meshtastic 433	[Board]: T3 LoRa32 V1.6.1 (433)	https://github.com/meshtastic/firmware/discussions/8421
+2	1	2025-01-29	org:meshtastic 433	Problem sending messages from Meshtastic 2.5.18.89ebafc firmware standalone	https://github.com/orgs/meshtastic/discussions/216
+6	1	2024-11-10	org:meshtastic 433	Request: Need North America Region / 433MHz for amateur radio licensees	https://github.com/orgs/meshtastic/discussions/56
+11	1	2024-11-12	org:meshtastic congestion	blog/choosing-the-right-device-role/	https://github.com/orgs/meshtastic/discussions/65
+4	3	2026-01-05	org:meshtastic congestion	Meshtastic device role for a balcony node	https://github.com/orgs/meshtastic/discussions/443
+0	1	2026-02-18	org:meshtastic congestion	assert/null-deref in RX/ACK/retransmission paths	https://github.com/meshtastic/firmware/discussions/9680
+2	2	2025-11-26	org:meshtastic congestion	[Feature Request]: Adaptive Telemetry Rate Based on Battery State of Charge (SOC)	https://github.com/meshtastic/firmware/discussions/8758
+3	1	2025-05-08	org:meshtastic congestion	[Bug]: Unbounded Reception Hop Count Causes Node Database Churn in Large Mesh Networks	https://github.com/meshtastic/firmware/discussions/6774
+18	2	2025-01-14	org:meshtastic congestion	[Feature Request]: Make mandatory-rebroadcast roles only possible to enable via remote admin	https://github.com/meshtastic/firmware/discussions/6367
+3	1	2024-12-19	org:meshtastic congestion	Exclusivity: Implementing network layer security	https://github.com/orgs/meshtastic/discussions/137
+5	1	2026-01-09	org:meshtastic sx1262	[Board]: Heltec Cubecell HTCC AB02	https://github.com/meshtastic/firmware/discussions/9240
+2	2	2026-05-08	org:meshtastic sx1262	Developer request: Allow upstrem add for OpenHardware WHY2025-Badge (ESP32-P4+ESP32-C6+SX1262) because of the Hardware Model Acceptance Policy	https://github.com/meshtastic/firmware/discussions/10426
+2	1	2026-05-30	org:meshtastic sx1262	How a new variant can be added?	https://github.com/meshtastic/firmware/discussions/10628
+0	1	2026-05-20	org:meshtastic sx1262	Low power / light sleep on the RP2350	https://github.com/orgs/meshtastic/discussions/495
+1	1	2026-01-12	org:meshtastic sx1262	Help with DIY RpiPico + DX-LR30	https://github.com/meshtastic/firmware/discussions/9284
+4	1	2025-11-05	org:meshtastic sx1262	[Bug]: User Button for XIAO NRF32 + Wio-SX1262 Kit doesn't work	https://github.com/meshtastic/firmware/discussions/8710
+12	1	2025-12-12	org:meshtastic sx1262	[Feature Request]: sensors i2c (bme280, ahtxx,...) in XIAO nRF52840 y Wio-SX1262	https://github.com/meshtastic/firmware/discussions/9424
+0	2	2026-01-29	org:meshtastic sx1262	RAK4631 with Ethernet Module WIZnet W5100S-L - RAK13800	https://github.com/orgs/meshtastic/discussions/452
+0	1	2025-11-25	org:meshtastic sx1262	[Board]:	https://github.com/meshtastic/firmware/discussions/8785
+1	4	2025-02-25	org:meshtastic sx1262	[Feature Request] Seed Studio Xiao display options	https://github.com/meshtastic/firmware/discussions/6148
+1	3	2025-09-03	org:meshtastic sx1262	RAKwireless WisBlock Devices - SSD1309 I2C IIC SPI Serial 128X64 Large OLED LCD Display	https://github.com/orgs/meshtastic/discussions/392
+1	1	2025-08-14	org:meshtastic sx1262	KEEPTEEN LT1 GAT562	https://github.com/orgs/meshtastic/discussions/383
+4	1	2025-11-20	org:meshtastic sx1262	Heltec V4: System freeze during radio transmission with custom UI (LVGL overlay)	https://github.com/meshtastic/firmware/discussions/8703
+1	3	2025-06-25	org:meshtastic sx1262	i2c sensors on XIAO nRF52840 & Wio-SX1262 Kit	https://github.com/meshtastic/firmware/discussions/7132
+1	2	2025-09-22	org:meshtastic sx1262	Existing sensor network - upgrading in Emergency to Meshtatic - Questions	https://github.com/meshtastic/firmware/discussions/8074
+4	1	2025-05-06	org:meshtastic sx1262	Help Debugging RadioLib Init (-2 Error) on XIAO S3 + Wio-SX1262 (Meshtastic Works!)	https://github.com/meshtastic/firmware/discussions/6744
+1	1	2025-05-08	org:meshtastic sx1262	How to Define Different Pins	https://github.com/meshtastic/firmware/discussions/6769
+4	4	2025-03-06	org:meshtastic sx1262	[Feature Request]: Simple send and receive platformIO sketch for the esp32s3	https://github.com/meshtastic/firmware/discussions/6251
+0	2	2025-02-01	org:meshtastic sx1262	Adding epaper screen to XIAO ESP32S3	https://github.com/orgs/meshtastic/discussions/219
+2	1	2025-01-29	org:meshtastic sx1262	Using LoRa module with ESP32 without DIO0 pin	https://github.com/orgs/meshtastic/discussions/215
+2	1	2025-01-11	org:meshtastic sx1262	How to connect to Waveshare sx1262 running on Raspberry Pi	https://github.com/orgs/meshtastic/discussions/182
+3	1	2024-11-18	org:meshtastic sx1262	LILYGO TTGO T-Beam M8N & SX1262 won't update	https://github.com/orgs/meshtastic/discussions/79
+0	4	2026-05-08	org:meshtastic filter	Improving the developer experience for creating custom modules	https://github.com/meshtastic/firmware/discussions/10422
+7	4	2025-10-14	org:meshtastic filter	Understanding design decisions on the iOS app	https://github.com/orgs/meshtastic/discussions/414
+0	2	2025-09-24	org:meshtastic filter	Nodes - Filter Settings (not saving)	https://github.com/orgs/meshtastic/discussions/408
+0	2	2026-02-13	org:meshtastic filter	Improvement to Environment Metrics - Meshtastics	https://github.com/meshtastic/firmware/discussions/9634
+2	1	2025-09-08	org:meshtastic filter	Full-Text Search in Channels / Messages in Android App and IOS App	https://github.com/meshtastic/firmware/discussions/7923
+1	2	2025-07-23	org:meshtastic filter	"Compatibilty Announce" to allow backwards compatibilty when mesh changes protocols/settings/regions	https://github.com/meshtastic/firmware/discussions/7440
+0	3	2025-02-20	org:meshtastic filter	Channel Filter in Node View	https://github.com/meshtastic/firmware/discussions/6111
+0	5	2025-02-17	org:meshtastic filter	Age nodes on map view (filter stale nodes)	https://github.com/orgs/meshtastic/discussions/237
+1	1	2025-03-26	org:meshtastic filter	Limiting hops in node view list	https://github.com/orgs/meshtastic/discussions/273
+1	1	2025-03-09	org:meshtastic filter	Intelligent Epidemic Routing - some ideas.	https://github.com/orgs/meshtastic/discussions/262
+0	2	2025-01-24	org:meshtastic filter	Feature request: node count	https://github.com/orgs/meshtastic/discussions/205
+1	1	2025-01-20	org:meshtastic filter	MQTT Gateway ?!	https://github.com/orgs/meshtastic/discussions/198
+15	1	2025-01-22	org:meshtastic filter	[Feature Request]: Basic send/receive messages via access point on ESP32	https://github.com/meshtastic/firmware/discussions/5929
+5	1	2024-08-24	org:meshtastic filter	blog/recent-public-mqtt-broker-changes/	https://github.com/orgs/meshtastic/discussions/17
+9	1	2024-09-17	org:meshtastic filter	[Feature Request]: ST7789 TFT Rotate 90 Degrees	https://github.com/meshtastic/firmware/discussions/4762
+2	2	2024-04-27	org:meshtastic filter	MESHTASTIC_EXCLUDE_ENVIRONMENTAL_SENSOR questions	https://github.com/meshtastic/firmware/discussions/3734
+0	1	2026-02-11	org:meshtastic distance	Visualizing distance in the black box of the node map - Meshtastic - T100E	https://github.com/meshtastic/firmware/discussions/9608
+3	2	2025-04-14	org:meshtastic distance	[Bug]: Heltec v3 not finding nodes after update	https://github.com/meshtastic/firmware/discussions/6645
+2	3	2026-02-17	org:meshtastic distance	Introducing Meshhessen Windows Client	https://github.com/orgs/meshtastic/discussions/456
+2	1	2025-11-26	org:meshtastic distance	[Feature Request]: CLIENT_BASE use private channel name to determine "favorite" node	https://github.com/meshtastic/firmware/discussions/8762
+1	4	2025-09-09	org:meshtastic distance	GPS Map Location Totally Wrong	https://github.com/orgs/meshtastic/discussions/401
+0	1	2025-07-06	org:meshtastic distance	[Feature Request]: Zero Hop Router/Repeater	https://github.com/meshtastic/firmware/discussions/7257
+1	1	2025-08-25	org:meshtastic distance	DFROBOT_RAIN not sending telemetry	https://github.com/meshtastic/firmware/discussions/7742
+6	1	2025-04-13	org:meshtastic distance	HELTEC V3 No longer able to find nodes at distance	https://github.com/meshtastic/firmware/discussions/6579
+0	1	2025-06-18	org:meshtastic distance	Lower the SPI bus speed to allow split devices.	https://github.com/meshtastic/firmware/discussions/7069
+0	2	2025-04-06	org:meshtastic distance	Connect Raspi via bluetooth to a meshtastic node	https://github.com/orgs/meshtastic/discussions/286
+0	3	2025-04-03	org:meshtastic distance	GeoFencing?	https://github.com/orgs/meshtastic/discussions/280

@@ -1,0 +1,426 @@
+{"created_utc": 1483151099, "id": "5l7e23", "link_flair_text": null, "num_comments": 5, "score": 8, "subreddit": "DSP", "title": "info on phasers, chorus, delays, and flanger effects?"}
+{"created_utc": 1482976839, "id": "5ku6km", "link_flair_text": null, "num_comments": 12, "score": 1, "subreddit": "DSP", "title": "Schroeder Reverberator output question"}
+{"created_utc": 1482964410, "id": "5kt3uo", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Standing Wave Diagram"}
+{"created_utc": 1482842592, "id": "5kjjzf", "link_flair_text": null, "num_comments": 8, "score": 2, "subreddit": "DSP", "title": "[FFT] Relationship between sample array and FFT array"}
+{"created_utc": 1482742981, "id": "5kcy97", "link_flair_text": null, "num_comments": 6, "score": 20, "subreddit": "DSP", "title": "My blogpost about Farina's Room Response Estimation method (the code included)"}
+{"created_utc": 1482629768, "id": "5k67kg", "link_flair_text": null, "num_comments": 9, "score": 9, "subreddit": "DSP", "title": "Do you recommend Pure Data or CSound for sound synthesis and music composition?"}
+{"created_utc": 1482628195, "id": "5k63xj", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Which one would I learn more quickly? Which one do you recommend?"}
+{"created_utc": 1482306044, "id": "5jip13", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "DSP", "title": "how to do noise removel"}
+{"created_utc": 1482178258, "id": "5j8m5y", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "DSP", "title": "Ultrasound Transducer Impulse response delay issue"}
+{"created_utc": 1482158035, "id": "5j6nzk", "link_flair_text": null, "num_comments": 8, "score": 0, "subreddit": "DSP", "title": "Amazing new tool for IIR/FIR digital filter design and signal analysis"}
+{"created_utc": 1482126055, "id": "5j4rm5", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "Need help solving a DPS problem for class. I am lost on step d)."}
+{"created_utc": 1481994669, "id": "5ivexn", "link_flair_text": null, "num_comments": 6, "score": 23, "subreddit": "DSP", "title": "An introduction to Wave Digital Filters (jupyter notebook)"}
+{"created_utc": 1481940548, "id": "5is6ye", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Cheapest Bond Cleaning Melbourne Vacate and End of Lease Cleaning in Melbourne End of lease Vacat"}
+{"created_utc": 1481850131, "id": "5ildnz", "link_flair_text": null, "num_comments": 7, "score": 12, "subreddit": "DSP", "title": "minBleps implementation (C++/JUCE code)"}
+{"created_utc": 1481835853, "id": "5ik35k", "link_flair_text": null, "num_comments": 9, "score": 8, "subreddit": "DSP", "title": "Why use a FIR filter for decimation?"}
+{"created_utc": 1481748628, "id": "5id3jg", "link_flair_text": null, "num_comments": 9, "score": 4, "subreddit": "DSP", "title": "[help] What is the best method to compare two soundfiles in the frequency domain?"}
+{"created_utc": 1481719722, "id": "5iae1t", "link_flair_text": null, "num_comments": 14, "score": 8, "subreddit": "DSP", "title": "Digital signal processing (DSP) and Audio software engineering in C#"}
+{"created_utc": 1481450708, "id": "5hpgm2", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Mobile Dokan"}
+{"created_utc": 1481384522, "id": "5hknst", "link_flair_text": null, "num_comments": 2, "score": 5, "subreddit": "DSP", "title": "Designing a half band FIR filter with Scilab"}
+{"created_utc": 1481315859, "id": "5hg5nd", "link_flair_text": null, "num_comments": 9, "score": 22, "subreddit": "DSP", "title": "Small C99 library for sound filters (compressor, lowpass, highpass, notch, etc)"}
+{"created_utc": 1481296905, "id": "5hean9", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "An introduction to Wave Digital Filters in circuit simulation"}
+{"created_utc": 1481270036, "id": "5hclvz", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "What is the difference between RSMA and CDMA"}
+{"created_utc": 1481145687, "id": "5h2mnl", "link_flair_text": null, "num_comments": 6, "score": 14, "subreddit": "DSP", "title": "Band-limited square waves"}
+{"created_utc": 1481083018, "id": "5gxqha", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "DSP", "title": "Sampling guitar strings individually for frequency analysis"}
+{"created_utc": 1480953085, "id": "5gmlh5", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "Extended Kalman filter to remove noise from Gyro signal (sensor fuson) then integrate it - Unexpected behavior"}
+{"created_utc": 1480945843, "id": "5glzdu", "link_flair_text": null, "num_comments": 9, "score": 9, "subreddit": "DSP", "title": "Back to basics, Nyquist sampling theorem"}
+{"created_utc": 1480807473, "id": "5gcfcz", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "DSP", "title": "Do FIR Filters require group delay equalizers like IIR Filters?"}
+{"created_utc": 1480732687, "id": "5g7flx", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "DSP", "title": "Question about FFBP (fast factorized back projection)"}
+{"created_utc": 1480699013, "id": "5g4fpp", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "This upwork job got me interested. Can you have a look?"}
+{"created_utc": 1480686903, "id": "5g3cwo", "link_flair_text": null, "num_comments": 18, "score": 8, "subreddit": "DSP", "title": "Distinguishing vowels and consonants"}
+{"created_utc": 1480552888, "id": "5ftfcu", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Asher Laub - YouTube"}
+{"created_utc": 1480474558, "id": "5fn5sn", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "DSP", "title": "Calculating phase response of maximum phase filter using Hilbert Transform"}
+{"created_utc": 1480473829, "id": "5fn3nb", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Phase response of a maximum phase filter"}
+{"created_utc": 1480395370, "id": "5fgr2z", "link_flair_text": null, "num_comments": 9, "score": 10, "subreddit": "DSP", "title": "DFT of a DFT"}
+{"created_utc": 1480359178, "id": "5fdfio", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "DSP", "title": "[ELI5] How do I manipulate a discrete signal in the frequency domain?"}
+{"created_utc": 1480061948, "id": "5eskk0", "link_flair_text": null, "num_comments": 5, "score": 4, "subreddit": "DSP", "title": "Having a hard time understanding FIR filtering."}
+{"created_utc": 1480045344, "id": "5erk6p", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "DSP", "title": "Converting lowpass sinc filter to bandpass - Why does the magnitude response drop by 1/2?"}
+{"created_utc": 1480040088, "id": "5er7vh", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Hilbert-Hung-Transform"}
+{"created_utc": 1479991254, "id": "5enkdw", "link_flair_text": null, "num_comments": 5, "score": 5, "subreddit": "DSP", "title": "Spectral Averaging"}
+{"created_utc": 1479890194, "id": "5egarf", "link_flair_text": null, "num_comments": 10, "score": 5, "subreddit": "DSP", "title": "Need some help to distinguish between two radio signals (FM and QPSK)"}
+{"created_utc": 1479834043, "id": "5ebs1i", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "Symetrix Alternatives"}
+{"created_utc": 1479506659, "id": "5dp622", "link_flair_text": null, "num_comments": 13, "score": 3, "subreddit": "DSP", "title": "Which output corresponds to this pole zero plot?"}
+{"created_utc": 1479419522, "id": "5dilkp", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "DSP", "title": "How to read this pole zero plot?"}
+{"created_utc": 1479381778, "id": "5dfap1", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "DSP", "title": "Understanding the effect of a 1st order IIR filtercoefficients on the output"}
+{"created_utc": 1479377437, "id": "5df2fu", "link_flair_text": null, "num_comments": 10, "score": 1, "subreddit": "DSP", "title": "Is the output of every DSP filter a result of a linear combination?"}
+{"created_utc": 1479243433, "id": "5d50df", "link_flair_text": null, "num_comments": 2, "score": 6, "subreddit": "DSP", "title": "How to perform median filtering on the fundamental frequencies to eliminate octave errors?"}
+{"created_utc": 1479235884, "id": "5d49hq", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "DSP", "title": "Difference between DFT and DFS and DTFT?"}
+{"created_utc": 1479230693, "id": "5d3qlb", "link_flair_text": null, "num_comments": 7, "score": 1, "subreddit": "DSP", "title": "A method to separate dynamic and static part of a timeseries"}
+{"created_utc": 1479215079, "id": "5d2dsw", "link_flair_text": null, "num_comments": 0, "score": 4, "subreddit": "DSP", "title": "Some Thoughts on Sampling"}
+{"created_utc": 1479184743, "id": "5d0oz4", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "30-Day Performance Trial of Renown Protocol for Lyme Disease at No Cost - CBS News 8 - San Diego CA"}
+{"created_utc": 1479142486, "id": "5cwy64", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "DSP", "title": "Frequency extraction for phase measurement"}
+{"created_utc": 1479092552, "id": "5ctsah", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "Questions regarding DTFT, impulse response and IIR"}
+{"created_utc": 1479070215, "id": "5crzis", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "What are the biggest difference between an Embedded software engineer and a DSP engineer?"}
+{"created_utc": 1478857397, "id": "5cdp80", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Help understanding frequency response of averaging (not moving average)"}
+{"created_utc": 1478821674, "id": "5cb9gw", "link_flair_text": null, "num_comments": 7, "score": 6, "subreddit": "DSP", "title": "Gravitational Wave Analysis Techniques in Signals and Applied Math"}
+{"created_utc": 1478820767, "id": "5cb6ob", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Analysis of a Gravitational Wave"}
+{"created_utc": 1478811874, "id": "5cachs", "link_flair_text": null, "num_comments": 5, "score": 4, "subreddit": "DSP", "title": "Radar resolution"}
+{"created_utc": 1478798859, "id": "5c92jj", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "Idea + Question about Attenuators to transform Line into Mic"}
+{"created_utc": 1478794903, "id": "5c8otx", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "DSP", "title": "Radar/sonar dsp"}
+{"created_utc": 1478748927, "id": "5c5qad", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Help with practice exam question relating to fourier transforms of finite energy signals"}
+{"created_utc": 1478745726, "id": "5c5hen", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "DSP", "title": "IIR notch filter 'shifting' the noise"}
+{"created_utc": 1478741269, "id": "5c54h8", "link_flair_text": null, "num_comments": 10, "score": 9, "subreddit": "DSP", "title": "Calculating only a portion of Fourier transform?"}
+{"created_utc": 1478704773, "id": "5c1n9i", "link_flair_text": null, "num_comments": 0, "score": 15, "subreddit": "DSP", "title": "Adventures in Signal Processing with Python"}
+{"created_utc": 1478617674, "id": "5btpnm", "link_flair_text": null, "num_comments": 4, "score": 7, "subreddit": "DSP", "title": "From reverse engineering some audio DSP code, I've found some common structures and would like to know what they are to give them proper names"}
+{"created_utc": 1478550585, "id": "5bolxe", "link_flair_text": null, "num_comments": 9, "score": 8, "subreddit": "DSP", "title": "Interpolating an FFT plot with Bezier curves"}
+{"created_utc": 1478530295, "id": "5bmja1", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "DSP", "title": "Need help interfacing with MAX11049 ADC"}
+{"created_utc": 1478498031, "id": "5bkljf", "link_flair_text": null, "num_comments": 4, "score": 0, "subreddit": "DSP", "title": "A little rant on DSP"}
+{"created_utc": 1478459040, "id": "5bhdne", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "A quick question about minimal phase reconstruction."}
+{"created_utc": 1478385568, "id": "5bcm6u", "link_flair_text": null, "num_comments": 6, "score": 2, "subreddit": "DSP", "title": "I connect the output of an ideal 12-bit DAC to an ideal 16-bit ADC. Will an FFT show 74dB or 98dB SNR?"}
+{"created_utc": 1478281235, "id": "5b4zq9", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "DSP", "title": "How to see the cascaded response of multi rate filters?"}
+{"created_utc": 1478190128, "id": "5axo9p", "link_flair_text": null, "num_comments": 7, "score": 4, "subreddit": "DSP", "title": "What is gain, exactly?"}
+{"created_utc": 1478177089, "id": "5awho4", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "DSP", "title": "Cardinality in signal processing"}
+{"created_utc": 1478040342, "id": "5amaue", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "How are high frequent images (not aliases!) created during ADC ?"}
+{"created_utc": 1478039468, "id": "5am7xj", "link_flair_text": null, "num_comments": 7, "score": 13, "subreddit": "DSP", "title": "What is Signal Processing?"}
+{"created_utc": 1478030848, "id": "5alde9", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "Why does having poles outside of the unit circle means you have an unstable system?"}
+{"created_utc": 1478021853, "id": "5akguq", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "DSP", "title": "Matlab Code to Synthesize Multiplierless FIR Filters"}
+{"created_utc": 1477938842, "id": "5ae1e3", "link_flair_text": null, "num_comments": 7, "score": 5, "subreddit": "DSP", "title": "Tutorial for granular synthesis?"}
+{"created_utc": 1477911567, "id": "5ablgw", "link_flair_text": null, "num_comments": 3, "score": 1, "subreddit": "DSP", "title": "Help to fix octave errors in harmonic product spectrum in C#"}
+{"created_utc": 1477836867, "id": "5a66jk", "link_flair_text": null, "num_comments": 4, "score": 6, "subreddit": "DSP", "title": "Chirp Signal"}
+{"created_utc": 1477815236, "id": "5a55gf", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "DSP", "title": "Sampling a guitar signal, still confused, need help"}
+{"created_utc": 1477801705, "id": "5a4icf", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "Fourier Transformation Analysis HELP PLEASE"}
+{"created_utc": 1477681520, "id": "59wabb", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "HH"}
+{"created_utc": 1477614891, "id": "59rl94", "link_flair_text": null, "num_comments": 9, "score": 4, "subreddit": "DSP", "title": "Variants of Fourier Analysis"}
+{"created_utc": 1477529730, "id": "59l8g4", "link_flair_text": null, "num_comments": 8, "score": 8, "subreddit": "DSP", "title": "Advice for finding entry level signal processing jobs"}
+{"created_utc": 1477432894, "id": "59dv6k", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "General Question about Real-Time Signal Processing"}
+{"created_utc": 1477422764, "id": "59cx8x", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "DSP", "title": "Extracting signal from dual-modulated raw data"}
+{"created_utc": 1477404880, "id": "59b8f4", "link_flair_text": null, "num_comments": 20, "score": 1, "subreddit": "DSP", "title": "How does a non periodic signal generate spectral leakage when using a rectangular window?"}
+{"created_utc": 1477332204, "id": "5960py", "link_flair_text": null, "num_comments": 1, "score": 0, "subreddit": "DSP", "title": "need some help here..."}
+{"created_utc": 1477327123, "id": "595im0", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Is time limited signal always non-periodic?"}
+{"created_utc": 1477275423, "id": "59273g", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "DSP", "title": "Is this a decent explanation of the shortcomings of many sample rate converters/resamplers?"}
+{"created_utc": 1477258758, "id": "590xde", "link_flair_text": null, "num_comments": 6, "score": 1, "subreddit": "DSP", "title": "What are salaries like for software engineers who do DSP?"}
+{"created_utc": 1477210545, "id": "58xpdh", "link_flair_text": null, "num_comments": 2, "score": 6, "subreddit": "DSP", "title": "Any recommended textbooks?"}
+{"created_utc": 1477060104, "id": "58nhp3", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "DSP", "title": "How to get the FFT calculated samples per second?"}
+{"created_utc": 1476988413, "id": "58iiri", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "DSP", "title": "Can I get around slow rise times?"}
+{"created_utc": 1476936940, "id": "58eynq", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Why does my pcm data look like this?"}
+{"created_utc": 1476807094, "id": "584mrb", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "DSP", "title": "What is meant by utilization of limited data and continuity of decision?"}
+{"created_utc": 1476747913, "id": "580on7", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "DSP", "title": "Polyphonic Pitch Detection with Non-Negative Matrix Factorization"}
+{"created_utc": 1476736004, "id": "57zmeu", "link_flair_text": null, "num_comments": 1, "score": 14, "subreddit": "DSP", "title": "I've implemented a simple BPSK31 demodulator in python to demystify the DSP black magic. This is a very rudimentary code without typical filter structure but it is able to decode a sample recording. Here's the link [https://github.com/marcino239/psk31]( https://github.com/marcino239/psk31)"}
+{"created_utc": 1476714288, "id": "57xks6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Simple BPSK31 demodulator in python"}
+{"created_utc": 1476714081, "id": "57xk5m", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "DSP", "title": "LF textbook(s) on wavelets for people with plain engineering background (no analysis)."}
+{"created_utc": 1476700046, "id": "57wmpm", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "Is there anybody know what does it mean the zero mean of an signal?"}
+{"created_utc": 1476653857, "id": "57trkt", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Simple BPSK receiver in python with carrier recovery and timing recovery"}
+{"created_utc": 1476530045, "id": "57lmf9", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "How to convert filter co-efficient to sos matrix for CMSIS?"}
+{"created_utc": 1476464915, "id": "57hgdp", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "DSP", "title": "A crude frequency estimation thing"}
+{"created_utc": 1476431059, "id": "57f98y", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "DSP", "title": "I don't understand Sampling Theorem for real world signal"}
+{"created_utc": 1476383038, "id": "57bsk1", "link_flair_text": null, "num_comments": 0, "score": 8, "subreddit": "DSP", "title": "Daubechies Wavelets, Vanishing Moments and Spectral Factorization"}
+{"created_utc": 1476298810, "id": "575txf", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "DSP", "title": "DOA estimation without lambda/2 separation?"}
+{"created_utc": 1476254419, "id": "572t86", "link_flair_text": null, "num_comments": 6, "score": 5, "subreddit": "DSP", "title": "Acoustic Feedback Cancellation and Tone Retention - What's the best balance?"}
+{"created_utc": 1476147936, "id": "56vj9y", "link_flair_text": null, "num_comments": 6, "score": 4, "subreddit": "DSP", "title": "Lanczos resampling: antialiasing question"}
+{"created_utc": 1476141198, "id": "56v12n", "link_flair_text": null, "num_comments": 5, "score": 1, "subreddit": "DSP", "title": "Board for Active Noise Cancelling"}
+{"created_utc": 1476042889, "id": "56nxkz", "link_flair_text": null, "num_comments": 3, "score": 8, "subreddit": "DSP", "title": "The Power Spectrum - an article by Neil Robertson"}
+{"created_utc": 1476021970, "id": "56max0", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "klaft"}
+{"created_utc": 1475715081, "id": "562uoo", "link_flair_text": null, "num_comments": 14, "score": 3, "subreddit": "DSP", "title": "I came up with an algorithm to do a discrete Fourier transformation... is it original?"}
+{"created_utc": 1475672699, "id": "55zcu1", "link_flair_text": null, "num_comments": 3, "score": 11, "subreddit": "DSP", "title": "Digital comms meets deep learning [DSP guys hate him!]"}
+{"created_utc": 1475545824, "id": "55r87s", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "DSP", "title": "Looking for some insight regarding FPGAs for DSP"}
+{"created_utc": 1475386212, "id": "55h18f", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Given a cascaded form,how do I realize the same in direct form?"}
+{"created_utc": 1475382330, "id": "55gudq", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "DSP", "title": "Anyone know off the top of their head what the spectra of 3-state hybrid-ternary signals look like?"}
+{"created_utc": 1475372605, "id": "55gajx", "link_flair_text": null, "num_comments": 14, "score": 7, "subreddit": "DSP", "title": "DSP of .wav files in python"}
+{"created_utc": 1475295375, "id": "55bqyt", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "DSP", "title": "Can someone help me with this problem?"}
+{"created_utc": 1475099223, "id": "54yup1", "link_flair_text": null, "num_comments": 7, "score": 8, "subreddit": "DSP", "title": "Signals that are their own transforms"}
+{"created_utc": 1474979278, "id": "54qbdt", "link_flair_text": null, "num_comments": 5, "score": 5, "subreddit": "DSP", "title": "DSP newbie seeking advice on audio project."}
+{"created_utc": 1474952511, "id": "54p1w3", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Need help coming up with an original project idea related to systems identification/adaptive filters"}
+{"created_utc": 1474905539, "id": "54lafw", "link_flair_text": null, "num_comments": 3, "score": 5, "subreddit": "DSP", "title": "An s-Plane to z-Plane Mapping Example"}
+{"created_utc": 1474896480, "id": "54kkb5", "link_flair_text": null, "num_comments": 12, "score": 9, "subreddit": "DSP", "title": "How is the quantization error reduced by leaving a 2 bit margin from 12-bit ADC used as a 10-bit ADC?"}
+{"created_utc": 1474793834, "id": "54ee9b", "link_flair_text": null, "num_comments": 18, "score": 0, "subreddit": "DSP", "title": "How does the whatsapp thumbnail trick work"}
+{"created_utc": 1474691829, "id": "548qyz", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "Co-efficient Generation"}
+{"created_utc": 1474628272, "id": "54452q", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "dental frankston - YouTube"}
+{"created_utc": 1474549562, "id": "53yuaq", "link_flair_text": null, "num_comments": 6, "score": 16, "subreddit": "DSP", "title": "Fast Wavelet Transform, Filter Banks and the Dilation Equation (feedback appreciated!)"}
+{"created_utc": 1474477715, "id": "53u7qm", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Real-Time Lossless DVI or HDMI Video Manipulation"}
+{"created_utc": 1474473207, "id": "53ttqn", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "DSP", "title": "Can anyone walk me through this discrete bit waveform problem?"}
+{"created_utc": 1474463723, "id": "53t2k3", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "DSP", "title": "What's an audio callback function?"}
+{"created_utc": 1474453703, "id": "53si4k", "link_flair_text": null, "num_comments": 7, "score": 2, "subreddit": "DSP", "title": "CMSIS filter designing"}
+{"created_utc": 1474364810, "id": "53mm3h", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "DSP", "title": "Periodic call of a function"}
+{"created_utc": 1474257275, "id": "53fuo3", "link_flair_text": null, "num_comments": 13, "score": 3, "subreddit": "DSP", "title": "Can those altered voices in movies/shows be reversed?"}
+{"created_utc": 1474245095, "id": "53f1ol", "link_flair_text": null, "num_comments": 9, "score": 8, "subreddit": "DSP", "title": "Is an FIR filters 'transition width' frequency dependent?"}
+{"created_utc": 1474101807, "id": "536hd7", "link_flair_text": null, "num_comments": 3, "score": 32, "subreddit": "DSP", "title": "Audio Signal Processing for Music Applications on Coursera starts 9/26"}
+{"created_utc": 1474037483, "id": "5329ah", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "Need a help to zero pad an audio buffer"}
+{"created_utc": 1474036817, "id": "5327e4", "link_flair_text": null, "num_comments": 0, "score": 14, "subreddit": "DSP", "title": "Should DSP Undergraduate Students Study Z-transform Regions of Convergence?"}
+{"created_utc": 1474021924, "id": "531993", "link_flair_text": null, "num_comments": 8, "score": 1, "subreddit": "DSP", "title": "SOS Matrix"}
+{"created_utc": 1473667463, "id": "52d9v9", "link_flair_text": null, "num_comments": 13, "score": 2, "subreddit": "DSP", "title": "Reference Book on Extracting Amplitude/Timing of Poisson-based (Detector) Signals"}
+{"created_utc": 1473528786, "id": "5245dk", "link_flair_text": null, "num_comments": 9, "score": 7, "subreddit": "DSP", "title": "Resources on software (arbitrary precision) audio interpolation/upsampling like digital-analog converters?"}
+{"created_utc": 1473248194, "id": "51kt3b", "link_flair_text": null, "num_comments": 9, "score": 9, "subreddit": "DSP", "title": "Difference b/w IIR and FIR filter"}
+{"created_utc": 1473090464, "id": "51a00c", "link_flair_text": null, "num_comments": 8, "score": 4, "subreddit": "DSP", "title": "Please help me make sense of this biquad filter format"}
+{"created_utc": 1473054841, "id": "51820d", "link_flair_text": null, "num_comments": 6, "score": 8, "subreddit": "DSP", "title": "What is the difference between a code, a filter, a projection, and a measurement in DSP?"}
+{"created_utc": 1473049353, "id": "517qxb", "link_flair_text": null, "num_comments": 5, "score": 10, "subreddit": "DSP", "title": "Phase discontinuity leading to interesting frequency spectrum lobing... Any explanations?"}
+{"created_utc": 1472921843, "id": "50znpp", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Questioning regarding filtering given frequency response of filter"}
+{"created_utc": 1472883747, "id": "50xnh6", "link_flair_text": null, "num_comments": 16, "score": 11, "subreddit": "DSP", "title": "Why do we use Wavelets instead of just iterating the Short Time Fourier Transform with different window sizes?"}
+{"created_utc": 1472842376, "id": "50uu59", "link_flair_text": null, "num_comments": 4, "score": 0, "subreddit": "DSP", "title": "Looking for a sample code or camera output from say a simple 3-wire PCB camera."}
+{"created_utc": 1472837476, "id": "50uenl", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "DSP", "title": "How to extract information from a gated signal?"}
+{"created_utc": 1472723947, "id": "50mg0k", "link_flair_text": null, "num_comments": 9, "score": 5, "subreddit": "DSP", "title": "How to get the fundamental frequency from Harmonic Product Spectrum?"}
+{"created_utc": 1472672194, "id": "50j24n", "link_flair_text": null, "num_comments": 7, "score": 13, "subreddit": "DSP", "title": "Free Algos - Free code for common algorithms, implemented in C"}
+{"created_utc": 1472662202, "id": "50i6dt", "link_flair_text": null, "num_comments": 9, "score": 2, "subreddit": "DSP", "title": "Can a self-starting programmer get a job in DSP?"}
+{"created_utc": 1472602708, "id": "50ecea", "link_flair_text": null, "num_comments": 17, "score": 4, "subreddit": "DSP", "title": "Real time audio processing - buffers and FFT window length"}
+{"created_utc": 1472576942, "id": "50c7hs", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Quantization error as additive noise"}
+{"created_utc": 1472574836, "id": "50c0w5", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "Non-LTI Systems - Lectures?"}
+{"created_utc": 1472238816, "id": "4zqbce", "link_flair_text": null, "num_comments": 1, "score": 35, "subreddit": "DSP", "title": "Discrete-Time Signal Processing now available as a self-paced course"}
+{"created_utc": 1472217023, "id": "4zoie4", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "DSP", "title": "Audio Developer Conference 2016, November 3rd - 4th, London UK - DSP talks and workshops"}
+{"created_utc": 1472056155, "id": "4zdfra", "link_flair_text": null, "num_comments": 1, "score": 7, "subreddit": "DSP", "title": "Polyphase filter for MPEG compression question"}
+{"created_utc": 1471984290, "id": "4z8ljy", "link_flair_text": null, "num_comments": 3, "score": 7, "subreddit": "DSP", "title": "Estimation schemes for intermittent access to signals"}
+{"created_utc": 1471907063, "id": "4z3cjs", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Average error measurement for 100 sequential images taken with a stand-still camera?"}
+{"created_utc": 1471898129, "id": "4z2mxx", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "HDMI signal extraction/modification/export questions"}
+{"created_utc": 1471894832, "id": "4z2d11", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Question about the waveform of a song"}
+{"created_utc": 1471884436, "id": "4z1g93", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Is this course too dated to be useful?"}
+{"created_utc": 1471828913, "id": "4yy6tm", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "DSP", "title": "Really basic FFT question: I have to take frequency domain info for a channel from a buffer that may have more samples than I have room for. This is a real time system without a lot of cycles to spare. How can I best segment the data?"}
+{"created_utc": 1471745553, "id": "4yslh0", "link_flair_text": null, "num_comments": 2, "score": 10, "subreddit": "DSP", "title": "Is energy conserved after downsampling without an anti alias filter?"}
+{"created_utc": 1471630498, "id": "4ykdxb", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "Detection of harmonic LFMs"}
+{"created_utc": 1471604507, "id": "4yia7w", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "Flange-modulation synthesis?"}
+{"created_utc": 1471582410, "id": "4yh0if", "link_flair_text": null, "num_comments": 6, "score": 0, "subreddit": "DSP", "title": "How to convert my Mathematical equation to C Language code(for PID controller)"}
+{"created_utc": 1471383601, "id": "4y20yv", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "DSP", "title": "Issue with frequency decreasing sweep"}
+{"created_utc": 1471370477, "id": "4y0vqz", "link_flair_text": null, "num_comments": 6, "score": 2, "subreddit": "DSP", "title": "Acoustic Emission and Wear"}
+{"created_utc": 1471276609, "id": "4xu8ir", "link_flair_text": null, "num_comments": 13, "score": 8, "subreddit": "DSP", "title": "Bandpass filtering using wavelets?"}
+{"created_utc": 1471184748, "id": "4xoaqv", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "DSP", "title": "How perform zero padding on windowed data?"}
+{"created_utc": 1471131985, "id": "4xlo5s", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "Help! How to prevent data from drifting (<1mHz)!"}
+{"created_utc": 1470998968, "id": "4xcxdf", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "We use Payment Card Industry (PCI) data security standards (DSS) certification for our order processing platform. SumaSoft"}
+{"created_utc": 1470915812, "id": "4x7kkd", "link_flair_text": null, "num_comments": 3, "score": 10, "subreddit": "DSP", "title": "Is there a simple, straight to the point book or website that goes through a Masters level DSP course?"}
+{"created_utc": 1470768426, "id": "4wxsis", "link_flair_text": null, "num_comments": 3, "score": 6, "subreddit": "DSP", "title": "Looking for semester project on EW/ELINT system"}
+{"created_utc": 1470740116, "id": "4wvlbr", "link_flair_text": null, "num_comments": 15, "score": 3, "subreddit": "DSP", "title": "Design of IIR filter using CMSIS library"}
+{"created_utc": 1470734355, "id": "4wvb24", "link_flair_text": null, "num_comments": 3, "score": 5, "subreddit": "DSP", "title": "Desgining butterworth filter of Nth order"}
+{"created_utc": 1470733729, "id": "4wv9yp", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Desgining butterworth filter of Nth order"}
+{"created_utc": 1470695613, "id": "4wsx50", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "Does this feature mean Mathematica has potential applications in audio design for video games?"}
+{"created_utc": 1470677207, "id": "4wrb5l", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "Theres some new DSP functionality available within Mathematica 11"}
+{"created_utc": 1470669643, "id": "4wqnfe", "link_flair_text": null, "num_comments": 8, "score": 4, "subreddit": "DSP", "title": "Is it possible to use DSP to produce a ~realtime wurlitzer emulator guitar effects pedal?"}
+{"created_utc": 1470659420, "id": "4wpwhs", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "EE Engineering-Signal Processing Question"}
+{"created_utc": 1470601181, "id": "4wmip9", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "Whats the simplest circuit that routes lower and higher frequencies between a woofer and tweeter speaker, without losing much of the energy?"}
+{"created_utc": 1470519454, "id": "4whwcr", "link_flair_text": null, "num_comments": 6, "score": 0, "subreddit": "DSP", "title": "trinary phase amplitudes as alternative to complex numbers - Is 1.7*sine(x)+2.2*sine(x+pi*2/3)+3*sine(x+pi*4/3) a sine wave? (appears so on wolframalpha)"}
+{"created_utc": 1470095370, "id": "4vpk2y", "link_flair_text": null, "num_comments": 6, "score": 7, "subreddit": "DSP", "title": "Looking for help, book suggestion for a friend."}
+{"created_utc": 1470010562, "id": "4vjubj", "link_flair_text": null, "num_comments": 3, "score": 2, "subreddit": "DSP", "title": "Looking for text/references based on characterizing sound/voices."}
+{"created_utc": 1469959329, "id": "4vgi5k", "link_flair_text": null, "num_comments": 0, "score": 5, "subreddit": "DSP", "title": "Request of assistance for an introductory problem"}
+{"created_utc": 1469664799, "id": "4uxuw5", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Help with senior design project involving sound identification"}
+{"created_utc": 1469638079, "id": "4uvl6h", "link_flair_text": null, "num_comments": 3, "score": 5, "subreddit": "DSP", "title": "Origin of the row-column algorithm for 2D FFTs?"}
+{"created_utc": 1469629214, "id": "4uuu1e", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "DSP", "title": "Associating an IIR with a complex weighting"}
+{"created_utc": 1469563804, "id": "4uqo8f", "link_flair_text": null, "num_comments": 4, "score": 8, "subreddit": "DSP", "title": "Simple speech recognition"}
+{"created_utc": 1469155401, "id": "4u0ots", "link_flair_text": null, "num_comments": 5, "score": 16, "subreddit": "DSP", "title": "What's the 'next level' of DSP after an undergrad degree in electrical engineering?"}
+{"created_utc": 1469139403, "id": "4tzk6t", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Help me to understand a particular convention of normalized frequency"}
+{"created_utc": 1469136826, "id": "4tzd0t", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "Double integrating generated perfect dummy accelerometer data drifts, and I don't understand why."}
+{"created_utc": 1469101583, "id": "4twkim", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "DSP", "title": "Using .mid files in pd? (xpost puredata)"}
+{"created_utc": 1469072876, "id": "4tv3wp", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "ECG signal filtering in R (or perhaps python)?"}
+{"created_utc": 1469071065, "id": "4tuzsq", "link_flair_text": null, "num_comments": 9, "score": 2, "subreddit": "DSP", "title": "Averaging/smoothing filter that is robust to big spikes?"}
+{"created_utc": 1469023370, "id": "4tr9li", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "ECG signal filtering in R (or Python)?"}
+{"created_utc": 1468936330, "id": "4tl7yc", "link_flair_text": null, "num_comments": 4, "score": 9, "subreddit": "DSP", "title": "Implementing Impractical Digital Filters - A new blog post by Rick Lyons"}
+{"created_utc": 1468901061, "id": "4tj9hs", "link_flair_text": null, "num_comments": 6, "score": 3, "subreddit": "DSP", "title": "Hough/Radon transform"}
+{"created_utc": 1468842791, "id": "4tet82", "link_flair_text": null, "num_comments": 5, "score": 5, "subreddit": "DSP", "title": "Problem with numerical differentiation"}
+{"created_utc": 1468647807, "id": "4t3ban", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Composite video interference- no idea how to fix it"}
+{"created_utc": 1468542856, "id": "4swked", "link_flair_text": null, "num_comments": 18, "score": 8, "subreddit": "DSP", "title": "Self teach dsp"}
+{"created_utc": 1468529131, "id": "4svil1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Help making a simple zero phase filter"}
+{"created_utc": 1468418004, "id": "4sn97m", "link_flair_text": null, "num_comments": 24, "score": 3, "subreddit": "DSP", "title": "Totally remove any trace of vocals"}
+{"created_utc": 1468359752, "id": "4sjjv2", "link_flair_text": null, "num_comments": 0, "score": 5, "subreddit": "DSP", "title": "MFCC to Spectral Envelope filter?"}
+{"created_utc": 1468329649, "id": "4sgxuz", "link_flair_text": null, "num_comments": 17, "score": 3, "subreddit": "DSP", "title": "How to remove horizontal lines in an image ?"}
+{"created_utc": 1468242973, "id": "4sauyk", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "Instagram 'Baddie' Makeup Tutorial Matte Eyes, Dark Lips 2016"}
+{"created_utc": 1468021671, "id": "4rxp7f", "link_flair_text": null, "num_comments": 14, "score": 13, "subreddit": "DSP", "title": "new dsp online course coming up soon"}
+{"created_utc": 1467991477, "id": "4rv6qp", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "DSP", "title": "Machine Learning in DSP"}
+{"created_utc": 1467979534, "id": "4ruc1h", "link_flair_text": null, "num_comments": 3, "score": 1, "subreddit": "DSP", "title": "Data analysis help"}
+{"created_utc": 1467922242, "id": "4rqnb3", "link_flair_text": null, "num_comments": 7, "score": 4, "subreddit": "DSP", "title": "Graph plotted after deconvolution gets shifted, no idea why; could someone help out?"}
+{"created_utc": 1467836823, "id": "4rkkqo", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "DSP", "title": "Looking for TMS320C6711 dsk for repair."}
+{"created_utc": 1467710681, "id": "4rbvgn", "link_flair_text": null, "num_comments": 9, "score": 6, "subreddit": "DSP", "title": "Help understanding the digital biquad filter"}
+{"created_utc": 1467707068, "id": "4rbpo6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "problem applying fftw's r2c and c2r on image data."}
+{"created_utc": 1467387114, "id": "4qsbyq", "link_flair_text": null, "num_comments": 4, "score": 29, "subreddit": "DSP", "title": "I wrote an article as an introduction to signal filtering for programmers with zero DSP experience - comments/feedback appreciated."}
+{"created_utc": 1467156857, "id": "4qchsd", "link_flair_text": null, "num_comments": 1, "score": 0, "subreddit": "DSP", "title": "Problem in accelerometer in Lenovo Vibe K5"}
+{"created_utc": 1466884166, "id": "4pu2e8", "link_flair_text": null, "num_comments": 6, "score": 6, "subreddit": "DSP", "title": "Deconvolution of LPC Response Curve"}
+{"created_utc": 1466836847, "id": "4preqe", "link_flair_text": null, "num_comments": 4, "score": 4, "subreddit": "DSP", "title": "Output Energy Filter?"}
+{"created_utc": 1466364088, "id": "4ouq5m", "link_flair_text": null, "num_comments": 5, "score": 5, "subreddit": "DSP", "title": "creating digital signal from scratch - how smooth does it need to be?"}
+{"created_utc": 1465993580, "id": "4o71qt", "link_flair_text": null, "num_comments": 0, "score": 10, "subreddit": "DSP", "title": "Digital PLL"}
+{"created_utc": 1465848062, "id": "4nxi8e", "link_flair_text": null, "num_comments": 3, "score": 22, "subreddit": "DSP", "title": "The Swiss Army Knife of Digital Networks - a blog post by Rick Lyons"}
+{"created_utc": 1465553356, "id": "4nfms6", "link_flair_text": null, "num_comments": 2, "score": 6, "subreddit": "DSP", "title": "Have to build a diagnostic application that displays real time signal processing graphics (e.g. phonemes, info about spectrum, etc). Question about tools/libraries"}
+{"created_utc": 1465357289, "id": "4n33zk", "link_flair_text": null, "num_comments": 5, "score": 3, "subreddit": "DSP", "title": "Tutorial Questions"}
+{"created_utc": 1465332070, "id": "4n17j1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Question: How to calculate tilt based on gyroscope raw data"}
+{"created_utc": 1465155542, "id": "4mp0px", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Signal strength"}
+{"created_utc": 1465131174, "id": "4mn95s", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Newbie question about applying audio filters on a sample-by-sample basis"}
+{"created_utc": 1465057153, "id": "4mizc4", "link_flair_text": null, "num_comments": 20, "score": 6, "subreddit": "DSP", "title": "Practical advice needed: cheap way to digitize some RF from coax (VHS player output)"}
+{"created_utc": 1464934230, "id": "4mbjof", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Is there anybody who is familiar with image fusion algorithms?"}
+{"created_utc": 1464836659, "id": "4m54n3", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "FFT Help! There's something I'm not getting... (C++)"}
+{"created_utc": 1464823335, "id": "4m475l", "link_flair_text": null, "num_comments": 4, "score": 12, "subreddit": "DSP", "title": "Resources for learning filter design?"}
+{"created_utc": 1464641117, "id": "4lrj05", "link_flair_text": null, "num_comments": 5, "score": 0, "subreddit": "DSP", "title": "Other than inefficient heat of today's tech, is a laser the most efficient method of propulsion per energy emitted as light in a narrow bellcurve of direction?"}
+{"created_utc": 1464637800, "id": "4lr9qm", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "At a 3-way-join between 3 inductors which are not in sync with eachother, will any 2 inductors that are most in sync with the other inductor accelerate electricity and the third inductor slower?"}
+{"created_utc": 1464636740, "id": "4lr6p3", "link_flair_text": null, "num_comments": 10, "score": 0, "subreddit": "DSP", "title": "If software tells soundcard to play wave amplitude that averages far from center (like ave 20k instead of -32k to 32k), will some soundcards ignorantly build up a static electric charge to do the 20k you asked for, without normalizing it over time?"}
+{"created_utc": 1464636652, "id": "4lr6fd", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "If software tells soundcard to play wave amplitude that averages far from center (like ave 20k instead of -32k to 32k), will some soundcards ignorantly build up a static electric charge to do the 4k you asked for, without normalizing it over time?"}
+{"created_utc": 1464636508, "id": "4lr5zt", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "If software tells soundcard to play wave amplitude that averages far from center (like ave 4k instead of -8k to 8k), will some soundcards ignorantly build up a static electric charge to do the 4k you asked for, without normalizing it over time?"}
+{"created_utc": 1464634015, "id": "4lqyvf", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "How to remove sim card"}
+{"created_utc": 1464602204, "id": "4louo7", "link_flair_text": null, "num_comments": 10, "score": 0, "subreddit": "DSP", "title": "n-cube of infinite dimensions, 0.999... on each side, but paradoxically its volume is nowhere near 1^infinity, its volume is 1/e."}
+{"created_utc": 1464580401, "id": "4lnsx4", "link_flair_text": null, "num_comments": 5, "score": 0, "subreddit": "DSP", "title": "A single float64 number can be frequency and phase"}
+{"created_utc": 1464473047, "id": "4lhrou", "link_flair_text": null, "num_comments": 8, "score": 31, "subreddit": "DSP", "title": "Lib_dsp - A free open source C++ library for audio applications"}
+{"created_utc": 1464213658, "id": "4l24c9", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "When calculating an averaged FRF when do you perform the averaging??"}
+{"created_utc": 1464205035, "id": "4l1g68", "link_flair_text": null, "num_comments": 3, "score": 6, "subreddit": "DSP", "title": "Question about frequency resolution of dual-tree complex discrete wavelet transform."}
+{"created_utc": 1464052446, "id": "4krcih", "link_flair_text": null, "num_comments": 11, "score": 3, "subreddit": "DSP", "title": "Single Board Computer/Micro-controller for Acoustic DSP"}
+{"created_utc": 1463795735, "id": "4kbli0", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Free Minecraft Codes"}
+{"created_utc": 1463695702, "id": "4k50sn", "link_flair_text": null, "num_comments": 12, "score": 12, "subreddit": "DSP", "title": "How much of DSP can be self-taught?"}
+{"created_utc": 1463584107, "id": "4jx42b", "link_flair_text": null, "num_comments": 15, "score": 10, "subreddit": "DSP", "title": "Understanding the inputs and outputs of an FFT and how to use them"}
+{"created_utc": 1463533892, "id": "4ju77m", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Low pass filter slows song down?"}
+{"created_utc": 1463380921, "id": "4jjyv5", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Array signal processing and acoustic beamforming"}
+{"created_utc": 1463285450, "id": "4jem0t", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "In depth, Unitary or Singular Functions and its implementation in Python"}
+{"created_utc": 1463011344, "id": "4ixy4z", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "Generate output signal from points"}
+{"created_utc": 1462819535, "id": "4il113", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "denoising by wavelet thresholding: SWT vs. DWT"}
+{"created_utc": 1462751955, "id": "4ih191", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "denoising by wavelet thresholding: SWT vs. DWT"}
+{"created_utc": 1462725647, "id": "4if8jl", "link_flair_text": null, "num_comments": 12, "score": 3, "subreddit": "DSP", "title": "Orthogonality in OFDM channel spacing and baseband generation?"}
+{"created_utc": 1462691633, "id": "4idovo", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "DSP", "title": "Getting formants from LPC data"}
+{"created_utc": 1462626101, "id": "4i9wdt", "link_flair_text": null, "num_comments": 2, "score": 7, "subreddit": "DSP", "title": "Can anyone direct me to some good tutorials/explanations/papers on how mp3 compression works?"}
+{"created_utc": 1462552169, "id": "4i5vbm", "link_flair_text": null, "num_comments": 7, "score": 2, "subreddit": "DSP", "title": "Reducing periodic drift / Noise f < 1Hz"}
+{"created_utc": 1462438023, "id": "4hz2r7", "link_flair_text": null, "num_comments": 3, "score": 22, "subreddit": "DSP", "title": "An interactive textbook on Kalman and Bayesian Filters using Jupyter Notebook"}
+{"created_utc": 1462405207, "id": "4hxbq6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Cleaning up mic noise - noobie help"}
+{"created_utc": 1462392547, "id": "4hwdbz", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "There are 4 solutions of these 3 symmetric equations on 3 variables - The equation of a continuous manifold of every unitary function or quine such as the nandForest of x=sha256(x) or a WebAudio node"}
+{"created_utc": 1462371556, "id": "4huo43", "link_flair_text": null, "num_comments": 11, "score": 5, "subreddit": "DSP", "title": "Lowpass filter with the least amount of ringing"}
+{"created_utc": 1462336368, "id": "4hsxji", "link_flair_text": null, "num_comments": 8, "score": 4, "subreddit": "DSP", "title": "Finding the nyquist frequency?"}
+{"created_utc": 1462012033, "id": "4h3zd1", "link_flair_text": null, "num_comments": 2, "score": 6, "subreddit": "DSP", "title": "Looping a song seamlessly"}
+{"created_utc": 1461859158, "id": "4gumwq", "link_flair_text": null, "num_comments": 1, "score": 6, "subreddit": "DSP", "title": "TinyRave - SoundCloud for JavaScript Music"}
+{"created_utc": 1461835666, "id": "4gt8di", "link_flair_text": null, "num_comments": 8, "score": 12, "subreddit": "DSP", "title": "I'm looking for a parametric pseudo random number generator for an audio noise source."}
+{"created_utc": 1461822125, "id": "4gsmzw", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Finding amplitude peaks for audio fingerprinting algorithm"}
+{"created_utc": 1461770383, "id": "4goyc4", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Plotting an Inphase and quadrature graph using I and Q values through Matplotlib in Python"}
+{"created_utc": 1461758956, "id": "4go5w4", "link_flair_text": null, "num_comments": 0, "score": 6, "subreddit": "DSP", "title": "Data Types for Control & DSP"}
+{"created_utc": 1461750467, "id": "4gnrei", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "DSP", "title": "Need input for MPEG4 simple profile decoder"}
+{"created_utc": 1461685830, "id": "4gjfj9", "link_flair_text": null, "num_comments": 10, "score": 8, "subreddit": "DSP", "title": "Is it possible to emulate vacuum tube amplifier?"}
+{"created_utc": 1461678732, "id": "4giw41", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "DSP", "title": "Hardware help"}
+{"created_utc": 1461600406, "id": "4gdzra", "link_flair_text": null, "num_comments": 9, "score": 4, "subreddit": "DSP", "title": "How useful is the ARM MULS instruction for DSP?"}
+{"created_utc": 1461535012, "id": "4ga8pl", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Take Your Chance For Free Steam Games"}
+{"created_utc": 1461529531, "id": "4g9uag", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "What equation? Its a line of text 12 button presses long graphed in wolframalpha.com and appears related to the zeta function"}
+{"created_utc": 1461377474, "id": "4g1nfz", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "Would an unstable digital filter break a adsp box?"}
+{"created_utc": 1461333774, "id": "4fykpb", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "Amount of information in a frequency channel"}
+{"created_utc": 1461175521, "id": "4fonse", "link_flair_text": null, "num_comments": 5, "score": 6, "subreddit": "DSP", "title": "Thesis ideas"}
+{"created_utc": 1461141603, "id": "4fmf5s", "link_flair_text": null, "num_comments": 8, "score": 2, "subreddit": "DSP", "title": "Not sure what to charge"}
+{"created_utc": 1460909324, "id": "4f76hq", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "How would I go about getting high resolution FFT's of low frequency signals (say 0-120Hz)?"}
+{"created_utc": 1460871644, "id": "4f5g1b", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Matlab filter not filtering"}
+{"created_utc": 1460820806, "id": "4f2cir", "link_flair_text": null, "num_comments": 1, "score": 7, "subreddit": "DSP", "title": "Question on butterfly computation."}
+{"created_utc": 1460670783, "id": "4etjgn", "link_flair_text": null, "num_comments": 8, "score": 4, "subreddit": "DSP", "title": "Mouse gesture research starting with sine wave - Why is the energy displayed as gray curve not flat?"}
+{"created_utc": 1460485881, "id": "4ehgj1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Square Wave with AWGN Filtering"}
+{"created_utc": 1460400184, "id": "4ec3pj", "link_flair_text": null, "num_comments": 22, "score": 6, "subreddit": "DSP", "title": "Should I audit DSP courses?"}
+{"created_utc": 1460284543, "id": "4e5dm4", "link_flair_text": null, "num_comments": 0, "score": 14, "subreddit": "DSP", "title": "Why do we want the spectra of window functions to be completely positive?"}
+{"created_utc": 1459880915, "id": "4dhror", "link_flair_text": null, "num_comments": 8, "score": 9, "subreddit": "DSP", "title": "What topics are involved in photonics?"}
+{"created_utc": 1459794704, "id": "4dceqo", "link_flair_text": null, "num_comments": 3, "score": 24, "subreddit": "DSP", "title": "Digital Envelope Detection: The Good, the Bad, and the Ugly"}
+{"created_utc": 1459777049, "id": "4db3bq", "link_flair_text": null, "num_comments": 7, "score": 5, "subreddit": "DSP", "title": "thoughts about a thesis on DSP"}
+{"created_utc": 1459729946, "id": "4d8qad", "link_flair_text": null, "num_comments": 3, "score": 1, "subreddit": "DSP", "title": "Considering the recursion of cooley tukey FFT, sine(x+angle) = a*sine(x+b) + c*cosine(x+d)? Or what similar equation?"}
+{"created_utc": 1459549351, "id": "4cyikz", "link_flair_text": null, "num_comments": 7, "score": 5, "subreddit": "DSP", "title": "Questions on time/phase shifting a 1D signal, amplitude changes, ad a few more things (newbie alert)."}
+{"created_utc": 1459512398, "id": "4cvabz", "link_flair_text": null, "num_comments": 7, "score": 4, "subreddit": "DSP", "title": "Don't know if it's the right place, but how does ODFM do error correction, for things like multi path and other interference?"}
+{"created_utc": 1459370674, "id": "4cmpqz", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "How to implement a Minimum average correlation energy (MACE) filter?"}
+{"created_utc": 1459367410, "id": "4cmgv2", "link_flair_text": null, "num_comments": 0, "score": 9, "subreddit": "DSP", "title": "Play with Modem concepts in browser"}
+{"created_utc": 1459321696, "id": "4cjq0f", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "When analyzing DFT of discrete signals, why do we only analyze frequency bins equal to number of input samples?"}
+{"created_utc": 1459320666, "id": "4cjoi7", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Why do we use complex numbers to represent signals?"}
+{"created_utc": 1459317770, "id": "4cjk5l", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "DFT of real sinusoids - why sum over -N/2 to N/2-1 as opposed to 0 to N?"}
+{"created_utc": 1459255422, "id": "4cf8zb", "link_flair_text": null, "num_comments": 3, "score": 11, "subreddit": "DSP", "title": "Harmonic Notch Filter"}
+{"created_utc": 1459013538, "id": "4c21g6", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "DSP", "title": "What are some efficient algorithms\"warping\"/\"smudging\" an image?"}
+{"created_utc": 1458864120, "id": "4bua86", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "[Homework Help] Z transform question"}
+{"created_utc": 1458773926, "id": "4boz59", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Need some textbooks."}
+{"created_utc": 1458675509, "id": "4bj0cs", "link_flair_text": null, "num_comments": 1, "score": 4, "subreddit": "DSP", "title": "Question about the multitaper method and phase estimates"}
+{"created_utc": 1458505743, "id": "4b950p", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "DSP", "title": "How do you make commercial camera based products?"}
+{"created_utc": 1458500317, "id": "4b8rmo", "link_flair_text": null, "num_comments": 5, "score": 15, "subreddit": "DSP", "title": "Digitizing analog circuits containing op amps using Wave Digital Filters"}
+{"created_utc": 1458485948, "id": "4b7twy", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "The site for quick s...x Da OFdUbMm"}
+{"created_utc": 1458369342, "id": "4b24uw", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Step Function"}
+{"created_utc": 1458329886, "id": "4azvfa", "link_flair_text": null, "num_comments": 2, "score": 9, "subreddit": "DSP", "title": "FingerIO : Using Active Sonar for Fine-Grained Finger Tracking"}
+{"created_utc": 1458272837, "id": "4awpe8", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Question on FFT and IFFT intervals"}
+{"created_utc": 1458223791, "id": "4at6sq", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Many women are ready to entertain you. Lots of s...x. Here i0dWuX3k"}
+{"created_utc": 1458164532, "id": "4apz6r", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Beam Steering and Formed Angle Resolution"}
+{"created_utc": 1458152704, "id": "4ap3ut", "link_flair_text": null, "num_comments": 3, "score": 7, "subreddit": "DSP", "title": "This video explains the characteristics of linear and non-linear circuits, but later in the video a spectrum analyzer shows harmonics introduced from the non-linearity (of two combined sine waves) falling both above and below the fundamental of the signal. How is this possible?"}
+{"created_utc": 1458102080, "id": "4am7pg", "link_flair_text": null, "num_comments": 1, "score": 4, "subreddit": "DSP", "title": "How to calculate MIPS for given algorithm?"}
+{"created_utc": 1457977509, "id": "4ae5j2", "link_flair_text": null, "num_comments": 7, "score": 1, "subreddit": "DSP", "title": "Determining the right sampling frequency"}
+{"created_utc": 1457965687, "id": "4adaec", "link_flair_text": null, "num_comments": 6, "score": 5, "subreddit": "DSP", "title": "Real-time frequency shift using hilbert transform issue"}
+{"created_utc": 1457964238, "id": "4ad76i", "link_flair_text": null, "num_comments": 0, "score": 4, "subreddit": "DSP", "title": "AGC for division by LMS"}
+{"created_utc": 1457889688, "id": "4a9381", "link_flair_text": null, "num_comments": 0, "score": 12, "subreddit": "DSP", "title": "Best practices for multi-rate audio effects implementation?"}
+{"created_utc": 1457889300, "id": "4a92c5", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Best practices for multirate audio effects implementation?"}
+{"created_utc": 1457841854, "id": "4a6yqo", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "How do you get an Entry Level Job in DSP?"}
+{"created_utc": 1457811009, "id": "4a54e1", "link_flair_text": null, "num_comments": 0, "score": 8, "subreddit": "DSP", "title": "Transmit data through sound using Liquid SDR"}
+{"created_utc": 1457769482, "id": "4a326n", "link_flair_text": null, "num_comments": 5, "score": 4, "subreddit": "DSP", "title": "What is the response of a matched filter to multiple out of phase signals of different amplitude overlapping?"}
+{"created_utc": 1457737798, "id": "4a19p6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Good Read / Knowledge base for Music Information Retrieval (MIR)"}
+{"created_utc": 1457647411, "id": "49vqwy", "link_flair_text": null, "num_comments": 0, "score": 24, "subreddit": "DSP", "title": "Practical FIR filter Design"}
+{"created_utc": 1457547257, "id": "49pbic", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "What are the best practices for multirate audio effects implementation?"}
+{"created_utc": 1457485013, "id": "49lkmv", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "DSP", "title": "Reducing noise created by rfft/irfft of a wav file"}
+{"created_utc": 1457410754, "id": "49gp9w", "link_flair_text": null, "num_comments": 15, "score": 3, "subreddit": "DSP", "title": "Invert MIMO impulse response"}
+{"created_utc": 1457232275, "id": "495i0n", "link_flair_text": null, "num_comments": 8, "score": 6, "subreddit": "DSP", "title": "Matched filters via cross-correlation"}
+{"created_utc": 1457171629, "id": "491wct", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "DSP", "title": "Question about linear interpolation as a triangle window"}
+{"created_utc": 1456986416, "id": "48qu1b", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "DSP", "title": "Careers in DSP in India"}
+{"created_utc": 1456965230, "id": "48pbcg", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Thank you for giving me the opportunity to find my perfect match IIqLARfx"}
+{"created_utc": 1456958268, "id": "48osa6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Fast audio processing: How do they do it?"}
+{"created_utc": 1456930923, "id": "48mh9c", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "DSP", "title": "Choosing step size in Affine Projection Algorithm"}
+{"created_utc": 1456848790, "id": "48h61r", "link_flair_text": null, "num_comments": 1, "score": 16, "subreddit": "DSP", "title": "Pad\u00e9 Delay is Okay Today"}
+{"created_utc": 1456780272, "id": "48cihy", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Adorable Teen Babe seduced and fucked in Barn FllLBdt"}
+{"created_utc": 1456698745, "id": "486ei6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Let's have some fun through webcam? register here and i'll be your all night! AmazonGirl44 AKbQctviG"}
+{"created_utc": 1456697244, "id": "4865pu", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "It continues since i lost my virginity! Lets find me and ill show you all. Virg111 w49trfClhWZ"}
+{"created_utc": 1456694124, "id": "485png", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I like to play with myself. You can see it here cDREKQ1H5H"}
+{"created_utc": 1456692322, "id": "485ey8", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Get free webcam show! Only for registered users, and be rxabwIuVGs"}
+{"created_utc": 1456681016, "id": "4847e7", "link_flair_text": null, "num_comments": 14, "score": 8, "subreddit": "DSP", "title": "Big difference between float 32 and float 64 operations in IIR?"}
+{"created_utc": 1456679599, "id": "483zmn", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Love to dream? Like naked girls? Then you just to us. A05gcKnP6W6"}
+{"created_utc": 1456677658, "id": "483nq1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Here lonely girl looking for fun with the guys FkN6Q5Yc"}
+{"created_utc": 1456677455, "id": "483m52", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Here lonely girl looking for fun with the guys lrF0o7evp5W"}
+{"created_utc": 1456670205, "id": "482ip8", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Showing unreal things on camera! For registred and only.. cKi6g9Nxk"}
+{"created_utc": 1456668766, "id": "482bcq", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "My ex-whore nickname BunnyHoney, only registred and here.. gVsZXUtikXx"}
+{"created_utc": 1456664669, "id": "481tu8", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Free webcam show? Yea, only for registered and MQJeMyNcQ2I"}
+{"created_utc": 1456663230, "id": "481ls1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Come to my page, a private show for free just for registred and FqfdzXI"}
+{"created_utc": 1456612196, "id": "47ylk9", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Girls in front of camera LTnAbkNK"}
+{"created_utc": 1456610138, "id": "47yd2f", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Super weekend with beautiful chiks 3Gi0X6g5MaC"}
+{"created_utc": 1456600849, "id": "47xfpa", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Thank you for your service! I am very happy! wZYzhwxFu"}
+{"created_utc": 1456589965, "id": "47vypc", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I didn't join in anticipation that internet dating would work and then unexpectedly found the perfect partner and am very very happy DM2OhIgD"}
+{"created_utc": 1456585986, "id": "47vhht", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Watch lesbians touch a penis for the first time KJ30IrQ"}
+{"created_utc": 1456514393, "id": "47qpbs", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "For men looking for great single women, online dating offers a viable solution to the otherwise frustrating task of finding long-term love. 5tNAXX"}
+{"created_utc": 1456437488, "id": "47lr8i", "link_flair_text": null, "num_comments": 0, "score": 17, "subreddit": "DSP", "title": "LIGO Gravitational Wave Data analysis in iPython"}
+{"created_utc": 1456434983, "id": "47liqa", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "H_i_! Y0u l_o_ve s_ee__x?? E7v2cjuZW"}
+{"created_utc": 1456431536, "id": "47l5df", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "H1! Y_0_u l0ve s\"\"\"x?? MRT7UEFayZl"}
+{"created_utc": 1456422402, "id": "47k6b1", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Free webcam show with me here! gBUgnC2d"}
+{"created_utc": 1456354244, "id": "47fmxi", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I am looking for sex without commitment ... Join Now - it's free. Vv0XCbD4"}
+{"created_utc": 1456347938, "id": "47ewpm", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I have long been married, but sex is not enough OczjEGIKtb"}
+{"created_utc": 1456249801, "id": "477sc0", "link_flair_text": null, "num_comments": 16, "score": 8, "subreddit": "DSP", "title": "Is DSP/Signal Processing going extinct with deep learning?"}
+{"created_utc": 1455882150, "id": "46k8q0", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "HEY! THOUSANDS OF MEMBERS ARE LOOKING FOR CASUAL SEX IN YOUR NEIGHBOURHOOD! 4LeqIlwu2Qt"}
+{"created_utc": 1455838024, "id": "46hnda", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "THOUSANDS OF MEMBERS ARE LOOKING FOR CASUAL SEX IN YOUR NEIGHBOURHOOD! 5bpcjc"}
+{"created_utc": 1455812277, "id": "46fhzm", "link_flair_text": null, "num_comments": 0, "score": 2, "subreddit": "DSP", "title": "How would you go about implementing a GUS patch?"}
+{"created_utc": 1455750229, "id": "46bles", "link_flair_text": null, "num_comments": 7, "score": 3, "subreddit": "DSP", "title": "Some questions about DSP"}
+{"created_utc": 1455726416, "id": "469gj6", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I Made 12 600 in 25 days without spending a Dime?H_w9p4_DFk2__"}
+{"created_utc": 1455714543, "id": "468eov", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "I Made $12 000 in 26 Days without spending a Dime. How? j_9GT3g_s_6X_8"}
+{"created_utc": 1455703814, "id": "467oeh", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Sex with girls without interruption. Young, Big, Alien here W_o38C_pT_w6a"}
+{"created_utc": 1455685776, "id": "466pb5", "link_flair_text": null, "num_comments": 5, "score": 4, "subreddit": "DSP", "title": "Which are the basics (important) Signal & Image Processing Algorithms one must know."}
+{"created_utc": 1455649764, "id": "4640py", "link_flair_text": null, "num_comments": 0, "score": 3, "subreddit": "DSP", "title": "Which are the basics (important) Signal & Image Processing Algorithms one must know."}
+{"created_utc": 1455595609, "id": "460ozu", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "What effect does radio interference generally have on the signal of FM radio?"}
+{"created_utc": 1455584265, "id": "45zvuh", "link_flair_text": null, "num_comments": 9, "score": 4, "subreddit": "DSP", "title": "Could I (in theory) transpose the MIDI information going in to my VST synthesizer DOWN an octave, bounce it to audio, and then transpose the audio file back up an octave to the original pitch for to reduce aliasing?"}
+{"created_utc": 1455574899, "id": "45z4rp", "link_flair_text": null, "num_comments": 18, "score": 6, "subreddit": "DSP", "title": "Practical issues working with very long FIR filters"}
+{"created_utc": 1455573072, "id": "45yyne", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Practical issues generating min-phase versions of very long windowed-sinc filters."}
+{"created_utc": 1455568585, "id": "45ykm5", "link_flair_text": null, "num_comments": 2, "score": 3, "subreddit": "DSP", "title": "Numerical Methods book recommendations?"}
+{"created_utc": 1455565566, "id": "45yafw", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Super Girls for sex! xT_6_z9YqS"}
+{"created_utc": 1455450284, "id": "45q40d", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "WAnt SEx T0day? Here SUPER girls L_c2y8_G7Xk__"}
+{"created_utc": 1455443611, "id": "45pmyx", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "You want hot sex? Here girls L_j6dW5__rN"}
+{"created_utc": 1455382969, "id": "45lfv0", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Hots women for hot sex here Zb4_d_H7_C"}
+{"created_utc": 1455362616, "id": "45jvqy", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "asfasgasg"}
+{"created_utc": 1455310091, "id": "45grdu", "link_flair_text": null, "num_comments": 6, "score": 7, "subreddit": "DSP", "title": "Deep Learning from raw I/Q"}
+{"created_utc": 1455283799, "id": "45epqp", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Can anyone point me towards good sources for adaptive techniques for GPS accuracy?"}
+{"created_utc": 1455239971, "id": "45c8iy", "link_flair_text": null, "num_comments": 4, "score": 3, "subreddit": "DSP", "title": "Need help demodulating a PSK signal"}
+{"created_utc": 1455159384, "id": "456nzk", "link_flair_text": null, "num_comments": 2, "score": 4, "subreddit": "DSP", "title": "Communicating with an old UV/Vis RS232"}
+{"created_utc": 1455129230, "id": "4546s0", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Huge b\u0430ze of lonely girlz, available \u043enly 60 min"}
+{"created_utc": 1455022305, "id": "44witm", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "Find girl for s\u0435\u0435\u0435e1x. No bullshit q"}
+{"created_utc": 1454994897, "id": "44v4fu", "link_flair_text": null, "num_comments": 3, "score": 3, "subreddit": "DSP", "title": "What are Quasi-monochromatic signals?"}
+{"created_utc": 1454929235, "id": "44qg5n", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Digital signal processor and video interface"}
+{"created_utc": 1454903546, "id": "44p6w9", "link_flair_text": null, "num_comments": 10, "score": 7, "subreddit": "DSP", "title": "Where does noise come from in fixed point DSPs?"}
+{"created_utc": 1454799749, "id": "44infh", "link_flair_text": null, "num_comments": 2, "score": 6, "subreddit": "DSP", "title": "Lookup Table Based Pulse Shaping Filter"}
+{"created_utc": 1454782283, "id": "44hbvg", "link_flair_text": null, "num_comments": 5, "score": 2, "subreddit": "DSP", "title": "Differential Amplitude phase shift keying!"}
+{"created_utc": 1454646306, "id": "4497bj", "link_flair_text": null, "num_comments": 12, "score": 5, "subreddit": "DSP", "title": "Sampling Theorem: How to know the value between two samples of a Signal."}
+{"created_utc": 1454589781, "id": "44539t", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "DSP Phone Interview"}
+{"created_utc": 1454431424, "id": "43v0ov", "link_flair_text": null, "num_comments": 2, "score": 0, "subreddit": "DSP", "title": "\u062a\u062d\u0645\u064a\u0644 \u0628\u0631\u0646\u0627\u0645\u062c \u0627\u0644\u062a\u062d\u0645\u064a\u0644 \u0627\u064a\u062c\u0644 \u062c\u064a\u062a \u201d \u0627\u0644\u0646\u0633\u0631 \u201d EagleGet"}
+{"created_utc": 1454406661, "id": "43tkqg", "link_flair_text": null, "num_comments": 8, "score": 3, "subreddit": "DSP", "title": "How do you reduce noise of an audio clip from backend?"}
+{"created_utc": 1454391517, "id": "43sv8n", "link_flair_text": null, "num_comments": 1, "score": 2, "subreddit": "DSP", "title": "Can we do back propagation training with DFT in between?"}
+{"created_utc": 1454364230, "id": "43qwpe", "link_flair_text": null, "num_comments": 2, "score": 2, "subreddit": "DSP", "title": "Using LMS adaptive filter for feedback cancellation"}
+{"created_utc": 1454326129, "id": "43o2bz", "link_flair_text": null, "num_comments": 2, "score": 7, "subreddit": "DSP", "title": "MFCC vs FFT?"}
+{"created_utc": 1454189825, "id": "43g3gl", "link_flair_text": null, "num_comments": 0, "score": 13, "subreddit": "DSP", "title": "Scaling Coefficients Tutorial"}
+{"created_utc": 1453929659, "id": "42zr74", "link_flair_text": null, "num_comments": 13, "score": 2, "subreddit": "DSP", "title": "Raspberry pi (or something similar) and DSP project"}
+{"created_utc": 1453919870, "id": "42ywf5", "link_flair_text": null, "num_comments": 5, "score": 7, "subreddit": "DSP", "title": "Numerical differentiation of noisy, nonsmooth data"}
+{"created_utc": 1453902377, "id": "42xiy2", "link_flair_text": null, "num_comments": 0, "score": 0, "subreddit": "DSP", "title": "ev tipi hasta karyolas\u0131"}
+{"created_utc": 1453856571, "id": "42uuvi", "link_flair_text": null, "num_comments": 6, "score": 2, "subreddit": "DSP", "title": "Auto correlation and cross correllation formulas"}
+{"created_utc": 1453774396, "id": "42p8sw", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Will an MCU work, or..."}
+{"created_utc": 1453758147, "id": "42nxb1", "link_flair_text": null, "num_comments": 9, "score": 5, "subreddit": "DSP", "title": "Chebyshev vs. windowed-sinc filter: which to use and why?"}
+{"created_utc": 1453699974, "id": "42jvns", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "What is precoding in OFDM?"}
+{"created_utc": 1453686106, "id": "42iyqf", "link_flair_text": null, "num_comments": 5, "score": 0, "subreddit": "DSP", "title": "Source of 60Hz 1V sinusoid?"}
+{"created_utc": 1453683857, "id": "42it08", "link_flair_text": null, "num_comments": 12, "score": 2, "subreddit": "DSP", "title": "QAM/QPSK - Is it normally differential? How is the reference phase recovered?"}
+{"created_utc": 1453420786, "id": "422u54", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Divide an unknown voice signal by 2?"}
+{"created_utc": 1453411943, "id": "4225s1", "link_flair_text": null, "num_comments": 4, "score": 1, "subreddit": "DSP", "title": "Best board for 0.1-0.25 second amplitude detection"}
+{"created_utc": 1453388482, "id": "420bfh", "link_flair_text": null, "num_comments": 0, "score": 1, "subreddit": "DSP", "title": "Bring it on: your best DSP interview questions"}
+{"created_utc": 1453344209, "id": "41xun2", "link_flair_text": null, "num_comments": 6, "score": 2, "subreddit": "DSP", "title": "How is SNR calculated for a non-delta signal?"}
+{"created_utc": 1453323086, "id": "41wb14", "link_flair_text": null, "num_comments": 19, "score": 2, "subreddit": "DSP", "title": "Total newbie question: How to take the inverse of a frequency response signal?"}
+{"created_utc": 1453095145, "id": "41hjii", "link_flair_text": null, "num_comments": 4, "score": 5, "subreddit": "DSP", "title": "Compensating for Rise/Fall times?"}
+{"created_utc": 1453087795, "id": "41h2p1", "link_flair_text": null, "num_comments": 6, "score": 1, "subreddit": "DSP", "title": "Looking for the average of a periodic signal with the fewest possible samples"}
+{"created_utc": 1452594885, "id": "40lzca", "link_flair_text": null, "num_comments": 7, "score": 4, "subreddit": "DSP", "title": "DSP for RADAR"}
+{"created_utc": 1452564154, "id": "40k9fo", "link_flair_text": null, "num_comments": 2, "score": 1, "subreddit": "DSP", "title": "Peak envelope detector behavior question"}
+{"created_utc": 1452455205, "id": "40ctfo", "link_flair_text": null, "num_comments": 8, "score": 20, "subreddit": "DSP", "title": "I developed an algorithm for visualizing the spectrum of polyphonic music and packaged it into a program. It resolves closely-spaced harmonics as well as wideband features. It might be a useful tool for quick visualizations."}
+{"created_utc": 1452377875, "id": "408e0m", "link_flair_text": null, "num_comments": 1, "score": 3, "subreddit": "DSP", "title": "Audio Descriptor Help"}
+{"created_utc": 1452309272, "id": "404l4g", "link_flair_text": null, "num_comments": 10, "score": 5, "subreddit": "DSP", "title": "Self learning DSP and need some hobby project ideas"}
+{"created_utc": 1452284752, "id": "402w5f", "link_flair_text": null, "num_comments": 1, "score": 1, "subreddit": "DSP", "title": "UMTS - Frequency Division Duplex"}
+{"created_utc": 1452209193, "id": "3zy6q0", "link_flair_text": null, "num_comments": 0, "score": 25, "subreddit": "DSP", "title": "An Intro to Adaptive Echo Cancelling"}
+{"created_utc": 1452121623, "id": "3zsf7j", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "DSP", "title": "Help filtering noise"}
+{"created_utc": 1452093814, "id": "3zq7j0", "link_flair_text": null, "num_comments": 7, "score": 5, "subreddit": "DSP", "title": "Help with Linear Phase"}
+{"created_utc": 1452007871, "id": "3zkm0z", "link_flair_text": null, "num_comments": 0, "score": 7, "subreddit": "DSP", "title": "Optimizing the Half-band Filters in Multistage Decimation and Interpolation"}
+{"created_utc": 1451934393, "id": "3zg4tv", "link_flair_text": null, "num_comments": 5, "score": 4, "subreddit": "DSP", "title": "Image Registration for Biological Signals"}
+{"created_utc": 1451923056, "id": "3zfbci", "link_flair_text": null, "num_comments": 4, "score": 2, "subreddit": "DSP", "title": "Frequency as a Random Variable"}
+{"created_utc": 1451836294, "id": "3za7dx", "link_flair_text": null, "num_comments": 6, "score": 5, "subreddit": "DSP", "title": "Computing 3D FFT using 1D kernels?"}
+{"created_utc": 1451761957, "id": "3z6a73", "link_flair_text": null, "num_comments": 13, "score": 3, "subreddit": "DSP", "title": "How to tell if a sound recording has clipping artifact"}
+{"created_utc": 1451746117, "id": "3z59yw", "link_flair_text": null, "num_comments": 15, "score": 7, "subreddit": "DSP", "title": "Looking to buy an audio DSP device that I can program myself."}

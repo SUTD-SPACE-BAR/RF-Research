@@ -1,0 +1,73 @@
+=== 1. Linked dipole 40/20 m (1.6 mm wire, free space; links = 0.1 m insulator gaps at the 20 m dipole ends) ===
+  inner (20 m) dipole alone resonant at 14.2 MHz: 10.254 m; with links closed the total resonates at 7.1 MHz for 20.556 m (outer sections 5.051 m each)
+  links open (C = 1.0 pF across each gap): 20 m resonance 13.720 MHz (-3.38 %), R = 73.6 ohm (inner alone: 14.200 MHz, 67.2 ohm); X_C(14.2 MHz) = 11.2 kohm
+  links open (C = 0.3 pF across each gap): 20 m resonance 13.974 MHz (-1.59 %), R = 71.4 ohm (inner alone: 14.200 MHz, 67.2 ohm); X_C(14.2 MHz) = 37.4 kohm
+  links closed at 7.1 MHz: Z = 67.3+0.0j ohm
+  [info] pre-registered 1a (< 2.5 % shift for 0.3-1 pF) missed at 1 pF: -3.38 %
+[PASS] 1a open-link stray capacitance pulls the 20 m resonance down: -1 to -5 % for 0.3-1 pF, more for more C (-3.38 %, -1.59 %)
+
+=== 2. OCF (41 m, feed at 1/3) and centre-fed dipole on 10 m of vertical twin feeder over average ground ===
+  centre-fed:   n f1 (f1 = 3.48 MHz):  floating tuner -> Z at feeder bottom, max CM / mean DM  |  one side grounded
+     1f1 =  3.48 MHz:        51   +315j   -56.1 dB   |      124   +305j   -12.7 dB
+     2f1 =  6.96 MHz:        45    -62j   -43.8 dB   |       47    -65j   -23.5 dB
+     4f1 = 13.92 MHz:       348   +737j   -34.8 dB   |      406   +218j    -0.7 dB
+  OCF 1/3:   n f1 (f1 = 3.48 MHz):  floating tuner -> Z at feeder bottom, max CM / mean DM  |  one side grounded
+     1f1 =  3.48 MHz:       174   +557j    -8.0 dB   |      261     -4j    -4.1 dB
+     2f1 =  6.96 MHz:       206   -254j     4.5 dB   |      839    -99j    -6.9 dB
+     4f1 = 13.92 MHz:       255   -567j    -6.2 dB   |      258   -595j    -5.6 dB
+[PASS] 2a with a floating (balanced) tuner the centre-fed dipole's feeder CM is < -30 dB re DM but the OCF's is > -15 dB at f1, 2f1 and 4f1 (the OCF drives CM by itself); grounding the tuner adds CM to both (f1: centre -56.1, OCF -8.0 dB)
+
+=== 3. Shortened 80/40 m EFHW: ~20 m inner wire + loading coil + tail, 2 m counterpoise, free space ===
+  coil 110 uH (Q 200) after 21.60 m; tail 2.20 m -> total wire 24.00 m (a full-size 80 m EFHW is ~40 m)
+     3.6 MHz: Z =    988 -5140j ohm, coil-loss efficiency  56.9 %; local high-Z point at 3.56 MHz (-1.2 %), R = 5974 ohm
+     7.1 MHz: Z =   3081 -2442j ohm, coil-loss efficiency  99.4 %; local high-Z point at 7.00 MHz (-1.4 %), R = 3451 ohm
+    14.2 MHz: Z =   1111 -1874j ohm, coil-loss efficiency  99.9 %; local high-Z point at 13.77 MHz (-3.0 %), R = 2532 ohm
+    21.2 MHz: Z =    890 -1404j ohm, coil-loss efficiency  99.9 %; local high-Z point at 20.65 MHz (-2.6 %), R = 2160 ohm
+    28.4 MHz: Z =    525 -1013j ohm, coil-loss efficiency  99.9 %; local high-Z point at 27.60 MHz (-2.8 %), R = 1946 ohm
+  [info] pre-registered 3a (80 m coil loss < 1.5 dB at Q 200) missed: eta 56.9 % (-2.45 dB)
+[PASS] 3a shortened EFHW: 80 m high-Z point within 2 % of 3.6 MHz (|Z| > 1 kohm); coil loss 2-3.5 dB on 80 m but < 0.1 dB on 40 m (|Z| 5234 ohm, 80 m -2.45 dB, 40 m -0.03 dB)
+
+=== 4. EFHW harmonic patterns: 20.3 m wire along x, 1 m counterpoise, free space ===
+  first high-Z point f1 = 7.160 MHz
+   n   high-Z point MHz (n f1)   drift   R_peak   peak gain dBi   main-lobe angle from wire (NEC | standing-wave formula)
+   1     7.160 (  7.160)         +0.0 %    2575      2.99         87.0  |   90.0
+   2    14.506 ( 14.320)         +1.3 %    1894      3.88         53.0  |   53.9
+   3    21.888 ( 21.480)         +1.9 %    1621      4.94         42.0  |   42.6
+   4    29.241 ( 28.640)         +2.1 %    1463      5.78         36.0  |   36.3
+[PASS] 4a harmonic high-Z points drift upward (> n f1) and lobe angles match the standing-wave formula within 6 deg 
+
+=== 5. RF in the shack: 40 m EFHW (20.3 m at 10 m) whose coax shield (10 m down, 5 m along) is the counterpoise ===
+  CM current at the radio relative to the antenna feed current (dB), 7.1 / 14.2 MHz:
+    no choke                        :    3.9 dB (Z  3623 -1325j)  |     4.5 dB (Z  2088 +1046j)
+    5 kohm resistive at feed        :    4.5 dB (Z  7068 -2981j)  |     4.0 dB (Z  5293 -1582j)
+    1 kohm resistive 2 m down       :    1.4 dB (Z  3196 -1651j)  |    -1.1 dB (Z  1719  +269j)
+    5 kohm resistive 2 m down       :   -3.5 dB (Z  2736 -1588j)  |    -8.4 dB (Z  1327  +258j)
+    1 kohm inductive (j1k) 2 m down :    8.4 dB (Z  3857 -2814j)  |     4.7 dB (Z  1128 -1081j)
+    5 kohm resistive at entry only  :  -19.9 dB (Z  3623  -581j)  |   -18.3 dB (Z  1287  +551j)
+  [info] pre-registered 5a (5 kohm choke AT the feed, > 15 dB) missed: for an end-fed wire the counterpoise current equals the feed current; the choke must sit a short counterpoise length (~0.05 lambda) down the coax
+  [info] pre-registered 5a' (5 kohm resistive 2 m down, > 15 dB) missed: 7.4 dB -- the choke must be >> the short counterpoise's own (capacitive, kohm) impedance, or the counterpoise must be longer
+[PASS] 5a resistive 5 kohm choke 2 m down helps (> 5 dB); an inductive 1 kohm choke there makes it WORSE (resonates with the capacitive counterpoise); a 5 kohm choke at the building entry cuts radio-end CM by > 15 dB (2 m: 7.4 dB; inductive +4.5 dB; entry 23.8 dB)
+
+=== 6. 433 MHz horizontal dipole (2 mm), coax outer (5 mm dia) hanging vertically from the feed: choke placement ===
+  no choke, coax-length sweep: max shield current / feed current, Z_in, cross-pol (vertical/horizontal) at broadside
+    L_coax =  0.10 m (0.14 lambda): CM/I_feed =  -16.2 dB, Z =  69.3  -1.0j, x-pol  -27.0 dB, front/back asymmetry +0.00 dB
+    L_coax =  0.15 m (0.22 lambda): CM/I_feed =   -7.6 dB, Z =  59.4  -3.0j, x-pol  -13.4 dB, front/back asymmetry +0.00 dB
+    L_coax =  0.20 m (0.29 lambda): CM/I_feed =   -7.9 dB, Z =  70.9 +16.9j, x-pol  -10.7 dB, front/back asymmetry -0.00 dB
+    L_coax =  0.25 m (0.36 lambda): CM/I_feed =  -15.2 dB, Z =  73.9  +7.4j, x-pol  -16.6 dB, front/back asymmetry -0.00 dB
+    L_coax =  0.35 m (0.51 lambda): CM/I_feed =  -19.3 dB, Z =  72.1  +2.8j, x-pol  -19.5 dB, front/back asymmetry +0.00 dB
+    L_coax =  0.50 m (0.72 lambda): CM/I_feed =   -9.3 dB, Z =  60.8  +1.9j, x-pol  -14.3 dB, front/back asymmetry +0.00 dB
+    L_coax =  0.50 m (0.72 lambda): CM/I_feed =   -9.3 dB, Z =  60.8  +1.9j, x-pol  -14.3 dB, front/back asymmetry +0.00 dB
+    L_coax =  0.75 m (1.08 lambda): CM/I_feed =  -18.6 dB, Z =  70.4  +1.5j, x-pol  -36.3 dB, front/back asymmetry +0.00 dB
+    L_coax =  1.00 m (1.44 lambda): CM/I_feed =  -18.9 dB, Z =  72.4  +4.3j, x-pol  -18.9 dB, front/back asymmetry -0.00 dB
+  (no coax: Z = 73.0+3.4j ohm)  worst coax length (>= 0.4 m) 0.50 m
+  choke on the worst-case 0.50 m coax: max shield current / feed current (dB), Z_in, x-pol:
+    300 ohm R         : at feed  -22.4 dB / x-pol  -27.1 | lambda/4 down   -8.2 dB /  -16.0 | lambda/2 down  -19.7 dB /  -19.4
+    1 kohm R          : at feed  -29.6 dB / x-pol  -33.4 | lambda/4 down   -6.9 dB /  -15.7 | lambda/2 down  -19.4 dB /  -19.4
+    3 kohm R          : at feed  -34.3 dB / x-pol  -37.2 | lambda/4 down   -5.8 dB /  -12.2 | lambda/2 down  -19.3 dB /  -19.3
+    1 kohm L (j1000)  : at feed  -31.5 dB / x-pol  -36.2 | lambda/4 down   -5.2 dB /  -19.8 | lambda/2 down  -19.0 dB /  -19.9
+    1 kohm C (-j1000) : at feed  -30.8 dB / x-pol  -36.0 | lambda/4 down   -8.1 dB /  -10.7 | lambda/2 down  -19.1 dB /  -18.7
+  1 kohm resistive choke at the feed: Z_in 72.1+3.6j ohm (no coax 73.0+3.4j)
+[PASS] 6a a 1 kohm resistive choke at the feed suppresses shield current by > 15 dB vs no choke on the worst-case coax (20.2 dB)
+[PASS] 6b the same choke lambda/2 down the line is worse than at the feed (shield above it radiates) 
+
+SUMMARY: ALL PASS

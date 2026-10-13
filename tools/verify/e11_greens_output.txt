@@ -1,0 +1,37 @@
+[PASS] (lap + k^2) g = 0 for R > 0  
+[PASS] flux of grad g through a vanishing sphere = -1 (delta strength)  -1
+[PASS] radiation condition R(dg/dR + jkg) = -g -> 0  -exp(-I*R*k)/(4*pi*R)
+[PASS] explicit dyadic closed form matches (I + grad grad/k^2) g  max residual 1.7e-136
+[PASS] dyadic G reproduces E_r and E_theta of the Hertzian dipole  residuals 2.9e-17, 3.8e-17
+   N =   144: C = 39.706 pF  (C/4pi eps0 a = 0.3569)
+   N =   576: C = 40.244 pF  (C/4pi eps0 a = 0.3617)
+   N =  2304: C = 40.523 pF  (C/4pi eps0 a = 0.3642)
+   extrapolated (order 0.95): C = 40.822 pF, C/4pi eps0 a = 0.3669
+[PASS] square plate C/(4 pi eps0 a) within 0.36 +- 0.01 (Hwang & Mascagni 2004)  
+[PASS] pulse-basis MoM converges monotonically (edge singularity -> order ~1)  order 0.95
+   a = 0.0001 lambda, Hallen N =  51 (dz/a =   98.0): Zin =   84.55  +67.93j ohm
+   a = 0.0001 lambda, Hallen N = 101 (dz/a =   49.5): Zin =   82.43  +56.54j ohm
+   a = 0.0001 lambda, Hallen N = 201 (dz/a =   24.9): Zin =   81.40  +50.96j ohm
+   a = 0.0001 lambda, Galerkin MPIE (ant_mom_wire, 60 seg):        Zin =   80.21  +44.96j ohm
+   a = 0.0001 lambda, Hallen Richardson-extrapolated (101, 201): Zin =   80.38  +45.38j ohm
+[PASS] Hallen (extrapolated) vs Galerkin MPIE: R within 1 %, X within 1.5 ohm (a = 1e-4 lambda)  80.38+45.38j vs 80.21+44.96j
+[PASS] Hallen error halves when N doubles (first-order convergence of X)  
+   a = 0.001 lambda, Hallen N =  51 (dz/a =    9.8): Zin =   90.08  +59.71j ohm
+   a = 0.001 lambda, Hallen N = 101 (dz/a =    5.0): Zin =   88.44  +53.25j ohm
+   a = 0.001 lambda, Hallen N = 201 (dz/a =    2.5): Zin =   88.11  +50.43j ohm
+   a = 0.001 lambda, Galerkin MPIE (ant_mom_wire, 60 seg):        Zin =   86.11  +46.19j ohm
+   a = 0.001 lambda, Hallen Richardson-extrapolated (101, 201): Zin =   87.78  +47.62j ohm
+   thick wire a = lambda/100: N = 25 (dz/a = 2): 123.9+40.4j;  N = 400 (dz/a = 0.125): 0.0-0.0j
+[PASS] reduced kernel misbehaves when dz << a (thick wire, fine mesh: |dZ| > 5 ohm)  |dZ| = 130.4 ohm
+[PASS] Sommerfeld identity rho=0.3, z=0.2  rel. error 8.4e-16
+[PASS] Sommerfeld identity rho=1.0, z=0.05  rel. error 1.1e-10
+[PASS] Sommerfeld identity rho=2.0, z=0.5  rel. error 1.8e-13
+   f =  0.433 GHz: TM0 beta/k0 = 1.000057
+   f =  0.915 GHz: TM0 beta/k0 = 1.000254
+   f =  2.450 GHz: TM0 beta/k0 = 1.001839
+   f =  5.800 GHz: TM0 beta/k0 = 1.010847
+   f = 10.000 GHz: TM0 beta/k0 = 1.036556
+   f = 24.000 GHz: TM0 beta/k0 = 1.389770
+[PASS] TM0 surface-wave pole sits just above k0 at UHF (beta/k0 - 1 < 1e-3 at 915 MHz)  2.54e-04
+[PASS] TE1 onset c/(4h sqrt(er-1)) = 26 GHz (03 planar-lines value)  26.5 GHz
+Summary: 15/15 checks passed

@@ -1,0 +1,71 @@
+A: linear-mode selectivity, ODE vs Gaussian closed form
+  k = 3.000e+13 1/s^2, sigma_t = 182.6 ns; ODE -3 dB at +/-0.725 MHz -> B = 1.451 MHz; closed form 1.452 MHz
+PASS A1 ODE bandwidth matches sqrt(ln2 k)/pi within 2 %
+  regenerative gain at te relative to the window integral: ln = 15.00 (expect lnK = 15.0)
+PASS A2 regenerative gain = exp(k Tg^2/2)
+  rejection 1 MHz off: 5.7 dB (Gaussian)
+  rejection 2 MHz off: 22.9 dB (Gaussian)
+  rejection 5 MHz off: 142.9 dB (Gaussian)
+PASS A3 a signal 1 MHz off-tune is rejected by only ~6 dB at 500 kHz quench
+
+B: bandwidth vs quench frequency (lnK = 15, Tg = half the quench period)
+  quench     50 kHz: B =     145 kHz, effective Q at 433.92 MHz =   2989
+  quench    100 kHz: B =     290 kHz, effective Q at 433.92 MHz =   1495
+  quench    250 kHz: B =     726 kHz, effective Q at 433.92 MHz =    598
+  quench    500 kHz: B =    1452 kHz, effective Q at 433.92 MHz =    299
+  quench   1000 kHz: B =    2903 kHz, effective Q at 433.92 MHz =    149
+PASS B1 design law equals closed form at 500 kHz
+  a passive tank with that bandwidth would need Q = 299; a 433 MHz SAW is ~1.6 MHz wide
+
+C: noise bandwidth and thermal floor
+  ENBW = 1.55 MHz; floor with NF 6 dB: -106.1 dBm
+  ENBW = 1.55 MHz; floor with NF 10 dB: -102.1 dBm
+PASS C1 ENBW / B3dB = sqrt(pi/(4 ln2)) = 1.064
+  NF 8 dB: -104.1 dBm in the RF window -> a -105 dBm seller claim needs detection at -0.9 dB pre-detection SNR, i.e. heavy post-detection averaging over many quench cycles per bit
+PASS C2 floor ~ -104 dBm at 500 kHz quench, NF 8 dB
+
+D: saturated (logarithmic) mode — detected output = mean envelope over the cycle
+  input +  0 dB -> mean envelope 0.0076 x A_sat
+  input + 10 dB -> mean envelope 0.0161 x A_sat
+  input + 20 dB -> mean envelope 0.0259 x A_sat
+  input + 30 dB -> mean envelope 0.0361 x A_sat
+  input + 40 dB -> mean envelope 0.0466 x A_sat
+  input + 50 dB -> mean envelope 0.0573 x A_sat
+  input + 60 dB -> mean envelope 0.0682 x A_sat
+  input + 70 dB -> mean envelope 0.0795 x A_sat
+  input + 80 dB -> mean envelope 0.0911 x A_sat
+  input + 90 dB -> mean envelope 0.1030 x A_sat
+  input +100 dB -> mean envelope 0.1153 x A_sat
+  output step per 10 dB of input: 0.0085 ... 0.0123 x A_sat (roughly constant = logarithmic law); 100 dB of input -> output ratio 15.23
+PASS D1 equal output steps per 10 dB (within 1.6:1) over 100 dB: logarithmic law
+
+E: re-radiation (order of magnitude, assumed tank values)
+  R_p = 1636 ohm, oscillation -5.1 dBm peak, radiated average ~-13.4 dBm
+  FCC 15.109 200 uV/m @3 m = -49.2 dBm EIRP; 15.111 2 nW = -57.0 dBm conducted; excess ~36 dB without an isolating RF stage
+PASS E1 200 uV/m at 3 m = -49.2 dBm EIRP; 2 nW = -57.0 dBm
+PASS E2 bare SRO on an antenna is tens of dB over receiver limits
+
+F: OOK range, FS1000A-class 10 dBm, -5 dBi wire antennas both ends, 10 dB margin
+  two-ray 40 log d regime beyond d_c = 4 pi h1 h2/lambda = 41 m (h = 1.5 m)
+  superregen (realistic)     S = -100 dBm: allowed path loss 90 dB -> two-ray   267 m, free space   1.7 km
+  superregen (seller claim)  S = -105 dBm: allowed path loss 95 dB -> two-ray   356 m, free space   3.1 km
+  CC1101 1.2 kBaud           S = -112 dBm: allowed path loss 102 dB -> two-ray   532 m, free space   6.9 km
+  CC1101 0.6 kBaud           S = -116 dBm: allowed path loss 106 dB -> two-ray   670 m, free space  11.0 km
+  12 dB better sensitivity: x2.00 range near the ground (40 log d) vs x3.98 in free space
+PASS F1 12 dB -> 2.0x range two-ray, 4.0x free space
+PASS F2 superregen ground range of order 100-300 m
+
+G: one-transistor FM bug
+  tank C 20 pF + 0.1 pF (hand/antenna) -> shift 250 kHz (FM channel spacing 200 kHz)
+  tank C 20 pF + 0.5 pF (hand/antenna) -> shift 1250 kHz (FM channel spacing 200 kHz)
+PASS G1 0.1 pF on 20 pF pulls 250 kHz at 100 MHz
+  FCC 15.239: 250 uV/m @3 m = -47.3 dBm EIRP; a 10 mW bug on a whip (~0 dBi) is 57 dB over
+PASS G2 15.239 limit = -47.3 dBm EIRP
+
+H: crystal set detector (germanium/Schottky diode, n = 1.05, unbiased, very high-Z load)
+  field 10.0 mV/m x h_eff 20 m = 200 mV peak -> DC 148.45 mV (74 % of peak; square-law approx 368.40 mV)
+  field 0.5 mV/m x h_eff 10 m = 5 mV peak -> DC 0.23 mV (5 % of peak; square-law approx 0.23 mV)
+PASS H1 strong field: >= 70 % of peak (envelope detection)
+PASS H2 weak field 5 mV: 0.23 mV, square law (~5 % of peak)
+
+ALL PASS

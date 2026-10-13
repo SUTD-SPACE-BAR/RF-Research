@@ -1,0 +1,41 @@
+=== A. bounce series and energy in a lossless L-match, 12.5 -> 50 ohm, 433 MHz
+   |partial sums of Gamma_in| after 0,1,2,3,5,10,40 bounces: 0.600, 0.216, 0.078, 0.028, 0.004, 0.000, 0.000
+[PASS] bounce series converges to Gamma_in = 0 |S11| alone = 0.600
+   forward power at load plane 1.5625, reflected 0.5625, delivered 1.0000 (per watt available)
+[PASS] forward power at the load = 1/(1-|GL|^2) = 1.5625 
+[PASS] omega*(W_L+W_C)/P equals Q_n 1.7321 vs Q_n 1.7321
+=== B. negative elements in extracted models
+   -1 mm of 50-ohm microstrip (eeff 3.18) at 2.45 GHz == T of L = -0.297 nH, C = -0.119 pF
+[PASS] over-de-embedding by 1 mm == negative-L/negative-C T network (error O((beta l)^2)) max ABCD error 3.2e-03, beta*l = 0.092 rad
+[PASS] coupled-inductor T: L1 - M negative and exact L1 - M = -6.0 nH
+=== C. using an IC's impedance data (illustrative numbers, not a real part)
+   input S11 = 0.62 /-120 deg -> Z_in = 15.4 -26.8j ohm; conjugate match presents 15.4 +26.8j
+[PASS] L-match from the S11 data gives 50 ohm X 49.85 ohm, B 30.04 mS
+   PA wants Z_opt = 8+6j; presenting Z_opt (correct): power-wave |Gamma| vs Z_opt = 0.00
+   PA wants Z_opt = 8+6j; presenting conj(Z_opt) (wrong): power-wave |Gamma| vs Z_opt = 0.60
+[PASS] conjugating a load-pull Z_opt by mistake = |Gamma| 0.6 (VSWR 4) error 
+=== D. differential half-circuit, Zd = 30 - j60 ohm to 100 ohm differential, 915 MHz
+   half circuit 15 - j30 -> 50: series +52.91 ohm (9.20 nH per leg), shunt 5.31 pF to virtual ground -> one 2.66 pF across the pair
+[PASS] full differential network presents 100 ohm 100.000+0.000j
+[PASS] shunt L in the half circuit -> 2L across the pair 
+=== E. high-impedance detector match (HSMS-2850-like) at 915 MHz
+   diode Z at 915 MHz = 126.5 -955.6j ohm; shunt B 0.616 mS, series X 604.0 ohm
+   fraction of available power reaching Rv: resistive 0.0054, matched ideal 0.802, matched Q_L 40 0.599
+   sensitivity gain of the reactive match 20.4 dB (ideal limit 10log(Rv/50 x ...) ), -3 dB bandwidth 177 MHz
+[PASS] reactive match gains > 15 dB of detector sensitivity over a 50-ohm termination 20.4 dB
+[PASS] faithful: with Rs = 25 ohm and Q_L 40 the -3 dB band is 10-30 % (covers 902-928 MHz easily) 19.4 %
+[PASS] finite inductor Q costs > 1 dB of the ideal match 1.27 dB
+=== F. interstage: 3 - j2 ohm final-stage input to a 25 ohm driver load, 433 MHz
+   direct: Q_n 2.71, Z seen by driver 23.28-1.22j, efficiency 91.4 % (-0.39 dB)
+   via 50 ohm: Q 3.96 then 1.00, Z seen 24.24+2.63j, efficiency 86.0 % (-0.65 dB)
+[PASS] direct interstage match is less lossy than going through 50 ohm 
+=== G. double-stub tuner: forbidden region and solution
+[PASS] d = 0.1250 lambda: matchable iff g <= 1/sin^2(beta d) = 2.000 (brute force, 300 loads) 
+[PASS] d = 0.1875 lambda: matchable iff g <= 1/sin^2(beta d) = 1.172 (brute force, 300 loads) 
+[PASS] d = 0.3750 lambda: matchable iff g <= 1/sin^2(beta d) = 2.000 (brute force, 300 loads) 
+   y_L = 0.4 -0.8j at stub 1, d = lambda/8: b1 = 2.6000, b2 = 3.0000; y after stub 2 = 1.000000-0.000000j
+[PASS] Pozar-form double-stub solution matches (y = 1) 
+[PASS] skrf cascade of the double-stub design: |S11| < 1e-6 1.3e-15
+[PASS] forbidden load g = 3 becomes matchable after lambda/8 of extra line g -> 0.60
+
+ALL PASS

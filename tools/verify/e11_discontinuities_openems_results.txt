@@ -1,0 +1,42 @@
+
+=== e11_discontinuities_openems.py 2026-10-12 23:43 ===
+OPEN END W=2.8 mm h=1.51 er=4.5: mesh lambda/30, fine 0.378 mm, 4 substrate cells, 344250 cells, 35 s, ref plane 20.000 mm before end
+   f=0.900 GHz  Z= 50.04 ohm  eeff=3.399  dl=0.6313 mm (dl/h=0.4181)  |G_end|=0.9978
+   f=2.450 GHz  Z= 50.64 ohm  eeff=3.431  dl=0.6638 mm (dl/h=0.4396)  |G_end|=0.9993
+   f=4.000 GHz  Z= 51.59 ohm  eeff=3.482  dl=0.6622 mm (dl/h=0.4386)  |G_end|=0.9863
+   f=5.800 GHz  Z= 52.90 ohm  eeff=3.541  dl=0.6857 mm (dl/h=0.4541)  |G_end|=0.9819
+OPEN END W=2.8 mm h=1.51 er=4.5: mesh lambda/45, fine 0.189 mm, 6 substrate cells, 1267425 cells, 85 s, ref plane 20.000 mm before end
+   f=0.900 GHz  Z= 49.98 ohm  eeff=3.394  dl=0.7149 mm (dl/h=0.4734)  |G_end|=1.0008
+   f=2.450 GHz  Z= 50.60 ohm  eeff=3.433  dl=0.6780 mm (dl/h=0.4490)  |G_end|=0.9952
+   f=4.000 GHz  Z= 51.56 ohm  eeff=3.484  dl=0.6740 mm (dl/h=0.4464)  |G_end|=0.9940
+   f=5.800 GHz  Z= 52.84 ohm  eeff=3.547  dl=0.6646 mm (dl/h=0.4402)  |G_end|=0.9823
+OPEN END W=0.75 mm h=1.51 er=4.5: mesh lambda/45, fine 0.094 mm, 6 substrate cells, 1194196 cells, 117 s, ref plane 20.000 mm before end
+   f=0.900 GHz  Z= 90.62 ohm  eeff=3.120  dl=0.4507 mm (dl/h=0.2985)  |G_end|=1.0037
+   f=2.450 GHz  Z= 91.33 ohm  eeff=3.134  dl=0.5072 mm (dl/h=0.3359)  |G_end|=0.9986
+   f=4.000 GHz  Z= 92.45 ohm  eeff=3.163  dl=0.5206 mm (dl/h=0.3448)  |G_end|=0.9913
+   f=5.800 GHz  Z= 94.05 ohm  eeff=3.204  dl=0.5199 mm (dl/h=0.3443)  |G_end|=0.9896
+BEND W=2.80 mm mitre M=0.0 % (sq_r30): mesh lambda/30, 330750 cells, 17 s
+   f=0.900 GHz  Z= 50.37 ohm  |S11|= -28.7 dB  |S21|= 0.000 dB
+   f=2.450 GHz  Z= 50.86 ohm  |S11|= -20.2 dB  |S21|=-0.051 dB
+   f=4.000 GHz  Z= 51.62 ohm  |S11|= -15.3 dB  |S21|=-0.172 dB
+   f=5.800 GHz  Z= 52.79 ohm  |S11|= -11.6 dB  |S21|=-0.464 dB
+BEND W=2.80 mm mitre M=0.0 % (sq): mesh lambda/45, 1331968 cells, 51 s
+   f=0.900 GHz  Z= 50.22 ohm  |S11|= -28.8 dB  |S21|=-0.000 dB
+   f=2.450 GHz  Z= 50.73 ohm  |S11|= -20.2 dB  |S21|=-0.056 dB
+   f=4.000 GHz  Z= 51.56 ohm  |S11|= -15.3 dB  |S21|=-0.181 dB
+   f=5.800 GHz  Z= 52.77 ohm  |S11|= -11.6 dB  |S21|=-0.470 dB
+BEND W=2.80 mm mitre M=50.0 % (m50): mesh lambda/45, 1331968 cells, 96 s
+   f=0.900 GHz  Z= 50.22 ohm  |S11|= -37.2 dB  |S21|= 0.004 dB
+   f=2.450 GHz  Z= 50.73 ohm  |S11|= -29.4 dB  |S21|=-0.017 dB
+   f=4.000 GHz  Z= 51.55 ohm  |S11|= -24.5 dB  |S21|=-0.066 dB
+   f=5.800 GHz  Z= 52.83 ohm  |S11|= -21.4 dB  |S21|=-0.159 dB
+BEND W=2.80 mm mitre M=57.3 % (mDJ): mesh lambda/45, 1331968 cells, 143 s
+   f=0.900 GHz  Z= 50.22 ohm  |S11|= -42.7 dB  |S21|= 0.005 dB
+   f=2.450 GHz  Z= 50.73 ohm  |S11|= -36.2 dB  |S21|=-0.013 dB
+   f=4.000 GHz  Z= 51.54 ohm  |S11|= -30.8 dB  |S21|=-0.055 dB
+   f=5.800 GHz  Z= 52.83 ohm  |S11|= -28.0 dB  |S21|=-0.130 dB
+BEND W=2.80 mm mitre M=75.0 % (m75): mesh lambda/45, 1331968 cells, 126 s
+   f=0.900 GHz  Z= 50.22 ohm  |S11|= -33.7 dB  |S21|= 0.004 dB
+   f=2.450 GHz  Z= 50.73 ohm  |S11|= -24.3 dB  |S21|=-0.027 dB
+   f=4.000 GHz  Z= 51.52 ohm  |S11|= -20.3 dB  |S21|=-0.095 dB
+   f=5.800 GHz  Z= 52.85 ohm  |S11|= -17.1 dB  |S21|=-0.197 dB

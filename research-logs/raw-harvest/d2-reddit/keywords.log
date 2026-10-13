@@ -1,0 +1,6 @@
+JOB title_AskElectronics_antenna
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 1 (HTTP Error 422: Unprocessable Entity) wait 10s
+  retry 2 (HTTP Error 422: Unprocessable Entity) wait 15s
+  retry 3 (HTTP Error 422: Unprocessable Entity) wait 20s
+  retry 4 (HTTP Error 422: Unprocessable Entity) wait 25s

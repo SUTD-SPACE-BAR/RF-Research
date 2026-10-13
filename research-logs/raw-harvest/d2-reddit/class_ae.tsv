@@ -1,0 +1,39 @@
+1gi6ug7	Is the tiny antenna on this toy remote just for show?	08	C	08/small-antenna-limits; 09/link-budget-methodology	short-range links need very little antenna efficiency
+tycxbp	Why is there no soldermask over the RF traces?	13	C	13/stackups-and-materials	
+1kh9dgv	What is the exposed copper next to the antenna/RF section for?	13	P	08/pcb-and-chip-antennas; 13/grounding-and-return-paths	exposed ground (shield-can land, tuning, EMC contact) not explained
+i03a5f	Can one antenna serve both a receiver and a transmitter?	06	C	06/rf-switches-attenuators-limiters	
+nlxi3y	Why do EMI shield cans have no holes, one hole or many holes?	13	P	02/waveguides-and-cavity-resonators; 13/shielding-and-isolation (planned)	aperture leakage covered; pick-up/reflow holes and can design absent — D1 #10
+1k9e1nm	How did this obviously noisy product pass CE certification?	19	P	19/certification-fcc-ce-imda	self-declaration and market surveillance not explained
+j65w0g	Why does my simple audio amplifier pick up FM radio?	13	P	05/analog-signal-conditioning	RF rectification in audio stages — reinforces D1 #13
+hfgny4	What happens if I change the crystal frequency on a Bluetooth module?	04	C	04/crystals-and-resonators	ppm budget, PLL reference
+1d35vjg	Why won't this oscillator oscillate?	05	C	05/oscillators	
+1hdphoi	What is this part on a GPS board (SAW filter/TCXO)?	21	P	08/gnss-antennas; 06/rf-filters-lc-saw-baw-cavity-microstrip	GNSS module anatomy absent
+mf005j	My foxhole radio makes no sound — why?	20	P	05/diodes-schottky-pin-varactor	crystal/foxhole radio recipe absent — D1 #11
+ov9vzj	What is this GPS-antenna connector called?	18	C	18/connectors-and-cables-parts	
+1dqt81u	What does this odd inductor inside a small radio do (ferrite rod)?	08	C	08/loop-antennas	ferrite-rod antenna
+xie37w	Foxhole radio — what am I doing wrong?	20	P	05/diodes-schottky-pin-varactor	D1 #11
+yebut5	What kind of RF connector is this?	18	C	18/connectors-and-cables-parts	
+1fi0ehz	BC660 NB-IoT antenna layout: how many ground vias are too many?	13	M	13/vias-stitching-fencing (planned)	reinforces D1 #9
+s2ev53	What does this subsystem do in hobby FM transmitter circuits?	20	P	05/oscillators; 05/diodes-schottky-pin-varactor	one-transistor FM transmitter walkthrough absent — D1 #11
+r5ukxg	My cheap digital clock drifts minutes per month — can I fix it?	04	P	04/crystals-and-resonators	32.768 kHz tuning-fork tempco and trimming absent — reinforces D1 #21
+q7o0ml	My LED-strip remote says "RF" — where is its antenna?	08	C	08/pcb-and-chip-antennas	PCB trace antennas
+10v27gh	Why would a ferrite bead burn like this?	04	C	04/ferrites-and-beads	current rating / DC bias
+199v9o9	Can I rotate the antenna connector 90° without ruining the signal?	13	P	13/connectors-and-launches (planned)	launch geometry
+y5p9f5	Why does my circuit work on a breadboard but oscillate on a PCB?	05	C	05/feedback-and-stability	parasitic oscillation hunting
+xxkmgl	Can I reuse an old one-wire antenna by fitting a coax connector?	08	C	08/dipoles-and-monopoles	monopole needs a ground/counterpoise
+x6e7mg	Which part of this key-fob board is the antenna?	08	C	08/loop-antennas; 08/pcb-and-chip-antennas	PCB loop
+psatsh	Is this FM transmitter circuit legit?	20	P	05/oscillators	D1 #11
+s8651r	Is my scope reading the crystal oscillator's 1 MHz or 20 MHz?	17	P	17/oscilloscopes-and-probing-for-rf; 04/crystals-and-resonators	probe loading of crystals/overtones not covered
+1q13b2w	How do I do a Bluetooth antenna inside an aluminium enclosure?	08	P	08/pcb-and-chip-antennas; 02/waveguides-and-cavity-resonators	slot-in-enclosure and window options absent — D1 #8
+1nwfczj	Can I take the antenna off this device and use it on an ESP32?	08	C	08/pcb-and-chip-antennas	frequency/ground dependence
+1bzhgh4	Why won't my Clapp oscillator start?	05	C	05/oscillators	
+zwcv0a	What is this coax connector?	18	C	18/connectors-and-cables-parts	
+hvtrrg	Can I replace a 4-terminal crystal with a 2-terminal one?	04	P	04/crystals-and-resonators	crystal package pinouts (4-pad with 2 ground/NC pads vs XO module) not covered
+1gk89s6	What's the best orientation for the antennas on these 433 MHz modules?	08	C	08/antenna-polarization-and-circular-polarization; 09/polarization-mismatch-loss	
+mhxamd	Good books on RF circuit design and theory?	LRN	M	NEW 00/rf-learning-roadmap	
+1mdqfeq	Advice on designing a Bluetooth PCB antenna	08	C	08/pcb-and-chip-antennas	
+omzh2o	What's the world's smallest antenna connector?	18	C	18/connectors-and-cables-parts	W.FL/X.FL
+giiiid	Where is the antenna on this BT receiver, and can I extend it with a wire?	08	P	08/pcb-and-chip-antennas	why adding a wire detunes an IFA not stated
+x0oams	My amplifier interferes with FM radio — how do I fix it?	13	P	13/emc-emi-fundamentals (planned)	switching-amp emissions — D1 #7
+ihhzuo	Is this coil in a Fitbit an RFID/NFC or a Bluetooth antenna?	08	M	NEW 08/other-antenna-types (NFC coils)	D1 #8
+1k7kvjd	What did I get wrong on my very first RF PCB?	13	M	13/rf-pcb-review-checklist (planned)	D1 #3

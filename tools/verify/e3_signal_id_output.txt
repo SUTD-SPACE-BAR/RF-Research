@@ -1,0 +1,96 @@
+=== 1. Symbol-rate line in |x|^2: |c1/c0| = beta/pi for RRC pulses ===
+[PASS] QPSK RRC beta=0.10 sim 0.0325 vs beta/pi 0.0318 -> line -29.9 dB below |x|^2 DC
+[PASS] QPSK RRC beta=0.20 sim 0.0645 vs beta/pi 0.0637 -> line -23.9 dB below |x|^2 DC
+[PASS] QPSK RRC beta=0.35 sim 0.1103 vs beta/pi 0.1114 -> line -19.1 dB below |x|^2 DC
+[PASS] QPSK RRC beta=0.50 sim 0.1584 vs beta/pi 0.1592 -> line -16.0 dB below |x|^2 DC
+[PASS] QPSK RRC beta=1.00 sim 0.3186 vs beta/pi 0.3183 -> line -9.9 dB below |x|^2 DC
+[PASS] rect BPSK: |x|^2 has no symbol line |c1| = 4.49e-16
+[PASS] rect BPSK: delay-product (tau = T/2) |c1| = 1/pi sim 0.3278 vs 0.3183
+
+=== 2. Power-law carrier lines (x^M) ===
+  2-PSK raised to 2: line at 2*df is  51.3 dB above the local spectrum median
+  2-PSK raised to 4: line at 4*df is  42.9 dB above the local spectrum median
+  2-PSK raised to 8: line at 8*df is  30.6 dB above the local spectrum median
+  4-PSK raised to 2: line at 2*df is   3.8 dB above the local spectrum median
+  4-PSK raised to 4: line at 4*df is  37.8 dB above the local spectrum median
+  4-PSK raised to 8: line at 8*df is  25.5 dB above the local spectrum median
+  8-PSK raised to 2: line at 2*df is   7.7 dB above the local spectrum median
+  8-PSK raised to 4: line at 4*df is   1.4 dB above the local spectrum median
+  8-PSK raised to 8: line at 8*df is  20.9 dB above the local spectrum median
+[PASS] BPSK x^2 line present (> 25 dB) 
+[PASS] QPSK x^2 no line (< 12 dB), x^4 line (> 25 dB) 
+[PASS] 8PSK x^4 no line (< 12 dB), x^8 line (> 15 dB) 
+[PASS] MSK x^2 lines at 2df +/- Rb/2 (> 25 dB), none at 2df (< 12 dB) +38.2 / -37.9 / centre 6.7 dB
+
+=== 3. GFSK symbol rate: discriminator, low-pass, square ===
+[PASS] GFSK BT=0.5 h=0.5: discriminator^2 strongest line at Rs = 1/sps found 0.12500, expected 0.12500 cycles/sample
+[PASS] GFSK line stands > 20 dB above its local spectrum 35.2 dB
+[PASS] ideal NRZ discriminator output squared has no line (needs band-limiting) |c1| 8.9e-16
+
+=== 4. OFDM cyclic prefix ===
+[PASS] autocorrelation peak at lag N = 64 peak lag 64
+[PASS] peak height CP/(N+CP) = 0.2 sim 0.198
+  cyclic frequency 1/(N+CP) = 0.01250 cyc/sample -> 250 kHz at 20 MS/s (Wi-Fi 4 us symbols); CAF at lag N: 0.187
+[PASS] CAF at alpha = 1/(N+CP), lag N is non-zero 
+  LTE normal CP sym 0: CP 5.21 us, symbol 71.88 us
+  LTE normal CP sym 1-6: CP 4.69 us, symbol 71.35 us
+[PASS] LTE slot = 0.5 ms (160 + 6*144 + 7*2048 samples at 30.72 MS/s) 
+
+=== 5. LoRa chirp duration / slope ===
+  BW 125 kHz: SF7   1.024 ms, SF8   2.048 ms, SF9   4.096 ms, SF10   8.192 ms, SF11  16.384 ms, SF12  32.768 ms
+  BW 250 kHz: SF7   0.512 ms, SF8   1.024 ms, SF9   2.048 ms, SF10   4.096 ms, SF11   8.192 ms, SF12  16.384 ms
+  BW 500 kHz: SF7   0.256 ms, SF8   0.512 ms, SF9   1.024 ms, SF10   2.048 ms, SF11   4.096 ms, SF12   8.192 ms
+[PASS] SF7/125 kHz symbol = 1.024 ms; SF12/125 = 32.768 ms 
+  chirp slope BW^2/2^SF: SF7/125 1.221e+08 Hz/s, SF12/125 3.815e+06 Hz/s
+  SF7: optimum STFT window ~ 1/sqrt(slope) = 91 us (freq. resolution ~ 11.0 kHz)
+  SF12: optimum STFT window ~ 1/sqrt(slope) = 512 us (freq. resolution ~ 2.0 kHz)
+
+=== 6. rtl_power hop plan (re-implementation of rtl_power.c frequency_range) ===
+  433.05-434.79 MHz, 1 kHz bins             :  1 hop(s) at 1.740 MS/s, bin   849.6 Hz, 2048 bins, one FFT 1.18 ms, downsample x1
+  433.05-434.79 MHz, 1 kHz, crop 25%        :  1 hop(s) at 2.320 MS/s, bin   566.4 Hz, 3072 bins, one FFT 1.77 ms, downsample x1
+  863-870 MHz, 5 kHz, crop 25%              :  4 hop(s) at 2.333 MS/s, bin  4557.3 Hz, 1536 bins, one FFT 0.22 ms, downsample x1
+  902-928 MHz, 10 kHz, crop 25%             : 13 hop(s) at 2.667 MS/s, bin  5208.3 Hz, 4992 bins, one FFT 0.19 ms, downsample x1
+  917-925 MHz (SG), 2 kHz, crop 25%         :  4 hop(s) at 2.667 MS/s, bin  1302.1 Hz, 6144 bins, one FFT 0.77 ms, downsample x1
+  1574-1577 MHz (GNSS L1), 1 kHz, crop 25%  :  2 hop(s) at 2.000 MS/s, bin   976.6 Hz, 3072 bins, one FFT 1.02 ms, downsample x1
+[PASS] 902-928 MHz with 25 % crop needs 13 hops at 2.667 MS/s 
+[PASS] 433 MHz SRD band fits one hop 
+
+=== 7. Burst intercept by a hopping receiver ===
+  burst   50.0 ms, dwell    20 ms, revisit   260 ms: P(overlap) 0.269 (MC 0.270), P(whole burst) 0.000 (MC 0.000)
+[PASS]   formula vs MC (tau=0.05) 
+  burst   50.0 ms, dwell   100 ms, revisit  1300 ms: P(overlap) 0.115 (MC 0.117), P(whole burst) 0.038 (MC 0.039)
+[PASS]   formula vs MC (tau=0.05) 
+  burst    1.5 ms, dwell    20 ms, revisit   260 ms: P(overlap) 0.083 (MC 0.083), P(whole burst) 0.071 (MC 0.071)
+[PASS]   formula vs MC (tau=0.0015) 
+  repeating beacon (each repetition independent): 15 repetitions to see it with 99 % probability
+
+=== 8. Occupancy threshold for K-averaged bins (linear averaging, as rtl_power does) ===
+  K=    1: threshold  8.39 dB above mean noise for Pfa 1e-3; min bin SNR for Pd 0.9:  10.76 dB
+[PASS] K=1 threshold = 10log10(ln 1000) = 8.39 dB 
+  K=   10: threshold  3.55 dB above mean noise for Pfa 1e-3; min bin SNR for Pd 0.9:   3.36 dB
+  K=  100: threshold  1.26 dB above mean noise for Pfa 1e-3; min bin SNR for Pd 0.9:  -2.86 dB
+  K= 1000: threshold  0.42 dB above mean noise for Pfa 1e-3; min bin SNR for Pd 0.9:  -8.34 dB
+[PASS] Gamma model of 10-average matches simulation (Pfa at threshold) 
+  log-average bias of a single exponential bin: -2.50 dB (theory -2.51 dB) -- why log-averaged waterfalls read noise low
+
+=== 9. Symbol-rate estimate (|x|^2 line peak) std vs number of symbols ===
+  N =   256 symbols: relative std of Rs estimate 1.51e-04
+  N =  1024 symbols: relative std of Rs estimate 1.59e-05
+  N =  4096 symbols: relative std of Rs estimate 2.30e-06
+[PASS] std scales ~ N^-1.5 (Ciblat et al. 2002) fitted slope -1.51
+
+=== 10. Catalogue: FSK indices and Carson bandwidths ===
+  POCSAG 512        : h = 2*df/Rs = 17.58; Carson 2(df + Rs/2) =   9.5 kHz
+  POCSAG 1200       : h = 2*df/Rs =  7.50; Carson 2(df + Rs/2) =  10.2 kHz
+  POCSAG 2400       : h = 2*df/Rs =  3.75; Carson 2(df + Rs/2) =  11.4 kHz
+  AIS GMSK (h=0.5)  : h = 2*df/Rs =  0.50; Carson 2(df + Rs/2) =  14.4 kHz
+[PASS] AIS deviation for h = 0.5 at 9600 b/s is 2.4 kHz 
+  APRS AFSK on FM (3 kHz dev, 2.2 kHz top tone): Carson 10.4 kHz
+  Broadcast FM stereo (75 kHz dev, 53 kHz MPX): Carson 256 kHz; with RDS 57 kHz: 264 kHz
+  ADS-B 1090ES: 8 us preamble + 112 us data = 120 us; PPM 0.5 us pulses -> main lobe +/-2 MHz
+  GPS C/A: 1.023 Mchip/s BPSK -> null-to-null 2.046 MHz; GSM frame 8 x 576.9 us = 4.615 ms -> 216.7 Hz (the '217 Hz' buzz)
+[PASS] GSM TDMA frame rate ~ 216.7 Hz 
+  FT8: 79 symbols x 0.16 s = 12.64 s in a 15 s slot; 8 tones x 6.25 Hz = 50 Hz
+
+29/29 checks passed
+ALL PASS

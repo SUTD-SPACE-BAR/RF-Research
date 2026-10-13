@@ -1,0 +1,41 @@
+1pr10y0	Is this a worthwhile antenna upgrade for a Heltec V3?	08	P	08/antenna-fundamentals; 15/lora-modules-ebyte-rfm-heltec	high-gain-omni myth covered; stock-antenna quality, vendor dBi claims and how to A/B test not
+1tiqrc5	Can LoRa carry video?	15	C	15/lora-phy-css-math	bit-rate/time-on-air arithmetic
+1p2w1gg	I made my own 868 MHz antenna — is it any good?	08	C	08/dipoles-and-monopoles; 17/nanovna-librevna-practical
+1n8bajn	Which antenna/hardware for a node on a high observatory site?	08	P	08/antenna-fundamentals; 09/fresnel-zones-los-radio-horizon	elevation pattern vs site height (why low-gain/down-tilt for hilltops) only as a forum note
+1ststnd	Two paper clips doubled my range over the stock antenna — why?	08	P	08/dipoles-and-monopoles; 08/antenna-measurement	stock-antenna detuning/mismatch on cheap boards not discussed
+1lvvk7v	Why should this node be in CLIENT mode rather than ROUTER?	15	M	15/lorawan-vs-raw-lora	Meshtastic roles and flooding/rebroadcast behaviour absent
+1nhmku3	Heltec LoRa32 V4 — how much does its extra TX power actually buy?	15	P	15/lora-sensitivity-and-link-budget; 15/lora-modules-ebyte-rfm-heltec	dB→range rule covered; V4 FEM (PA+LNA) not listed
+1pqwwlx	Is a 1 W LilyGO T-Beam OK on a mesh (legal, useful)?	15	P	15/ism-band-plans-duty-cycle; 15/lora-modules-ebyte-rfm-heltec	power limits covered; asymmetric-link problem (loud TX, same RX) not stated
+1sz036v	How do these three antennas really compare for range?	08	P	08/antenna-fundamentals; 17/antenna-range-ota-testing	no guidance on judging commercial LoRa antennas (length, gain claims, pattern)
+1pml9b6	What range will this repeater/beacon give?	15	C	15/lora-sensitivity-and-link-budget; 09/fresnel-zones-los-radio-horizon
+1oyngxl	Are long whips better than the stubby antennas?	08	C	08/dipoles-and-monopoles; 08/small-antenna-limits
+1odol06	My DIY node's range is terrible — what should I check?	15	P	17/rf-bring-up-debug-playbook	no Meshtastic/LoRa node range-troubleshooting checklist (antenna band, connector, region, TX power, placement)
+1k5n1qs	Is LongFast holding big meshes back — which preset is better?	15	P	15/lorawan-vs-raw-lora; 15/lora-phy-css-math	airtime vs capacity vs sensitivity trade-off per preset not quantified
+1r75hec	How do I get better range from a dense-city apartment?	09	P	09/atmospheric-rain-attenuation; 09/empirical-path-loss-models	indoor/building loss covered; window placement, low-E glass, height tips absent
+1lxmczh	Long coax was killing my signal — how much loss is normal?	03	C	03/coax-and-cables
+1lslfwb	Which antenna works better in an urban environment?	08	P	08/antenna-fundamentals; 09/empirical-path-loss-models	multipath/elevation pattern in cities not tied to antenna choice
+1jx2a0h	What's the best way to compare LoRa devices and antennas?	17	C	17/antenna-range-ota-testing
+1ujkxzv	Can I make a high-power mesh node with this PA board?	15	P	18/lna-pa-gain-block-mmics; 15/ism-band-plans-duty-cycle	legality + asymmetric link + harmonic filtering not collected
+1nui7x6	How high should my antenna be?	09	C	09/fresnel-zones-los-radio-horizon; 09/two-ray-ground-reflection
+1nszgvn	Which has better range, Wio Tracker L1 Pro or Heltec V3?	15	P	15/lora-modules-ebyte-rfm-heltec	device comparison needs TX power + antenna + RX front end
+1p01w50	When should a mesh move off the default preset?	15	P	15/lorawan-vs-raw-lora
+1my7fu9	Should I put my node on top of a flagpole?	09	P	09/fresnel-zones-los-radio-horizon; 19/lab-safety-esd-high-power	height benefit covered; lightning/grounding absent — D1 #15
+1m162j0	Is a distant ROUTER node ruining my mesh?	15	M	15/lorawan-vs-raw-lora	mesh routing/rebroadcast behaviour absent
+1q1wohs	Is a 250 km LoRa link possible?	15	C	15/lora-sensitivity-and-link-budget	records need elevated LOS
+1luhjva	My node heard something 400 miles away — how?	09	P	09/fresnel-zones-los-radio-horizon; 15/lora-sensitivity-and-link-budget	ducting covered briefly; MQTT/internet-bridged "receptions" not explained
+1jlbuj9	A node 5 500 miles away appears in my list — what's going on?	15	M	15/lorawan-vs-raw-lora	MQTT bridging makes impossible "RF" ranges appear — absent
+1mdzbak	New to the German mesh — why do some use 433 MHz?	15	C	15/ism-band-plans-duty-cycle	EU 433 vs 868 limits
+1tznocp	How do I characterise my Meshtastic antennas with a NanoVNA?	17	C	17/nanovna-librevna-practical
+1u8oemd	What's the point of an LNA on a LoRa node?	06	C	06/lna-design; 07/noise-figure-and-friis
+1w6wbs0	Does switching the Heltec V4's LNA on always improve reception?	07	P	07/dynamic-range-sfdr-blocking; 06/lna-design	LNA-in-front-of-SX1262 gain vs urban blocking trade-off not worked for this case
+1qdjrg2	Is this actually a Wi-Fi antenna sold as a LoRa antenna?	08	C	08/dipoles-and-monopoles	length vs frequency
+1nwaqvo	Is this external antenna compatible (connector/band)?	18	C	18/connectors-and-cables-parts	SMA vs RP-SMA
+1fzjioo	Crazy range today — is it weather-related propagation?	09	C	09/fresnel-zones-los-radio-horizon	super-refraction/ducting
+1ixwzis	Why can my San Diego node suddenly hear Los Angeles this morning?	09	C	09/fresnel-zones-los-radio-horizon	coastal ducting (marine layer); add a worked ducting example
+1o5vrmf	Does a cavity filter actually improve real-world Meshtastic performance?	07	P	07/dynamic-range-sfdr-blocking; 15/ground-station-design	desense by cellular covered for Singapore 923 MHz; US 902–928 neighbours (LTE B5/B26, 929 MHz paging) and when a filter helps not covered
+1oezbe4	Does a protective case make my T1000-E's signal better or worse?	08	C	08/pcb-and-chip-antennas; 02/near-field-far-field	near-field dielectric loading/detuning
+1q03rls	Oops — was my Heltec V4's LoRa antenna on the wrong (GNSS) connector?	19	C	19/lab-safety-esd-high-power	transmitting into a mismatched/absent antenna
+1rmvfxh	How far will a node with a decent antenna reach?	15	C	15/lora-sensitivity-and-link-budget	
+1q9sk5q	Do the cheap RF (cavity/SAW) filters sold for Meshtastic actually work?	18	P	18/filter-parts-saw-ceramic-ltcc; 07/dynamic-range-sfdr-blocking	parts covered; when a filter helps (strong nearby cellular/paging) not
+1ld1apr	FCC Docket 25-110 (NextNav) — is LoRa at risk in the 900 MHz band?	19	P	19/spectrum-allocation-ism-bands	primary/secondary allocation explained; US 902–928 MHz LMS sharing not
+1vgrasw	How good is the stock whip antenna on my node?	08	P	08/antenna-measurement; 17/nanovna-librevna-practical	measuring covered; "stock antennas are often mistuned" not stated

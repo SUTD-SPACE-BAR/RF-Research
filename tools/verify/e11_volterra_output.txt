@@ -1,0 +1,44 @@
+1. Wiener-Hammerstein third-order kernel
+   IM3 at 3.75 : simulated 1.1418e-04, Volterra (3/4)|H3|A^3 = 1.1418e-04
+[PASS] Wiener-Hammerstein IM3 matches the kernel prediction (< 0.5 %)  
+   IIP3 amplitude from kernels 0.8875 vs 'cubic after input filter' 0.8888
+3. Limits of the power series (tanh)
+   A = 0.05: IM3 exact/cubic-prediction =  -0.04 dB
+   A = 0.10: IM3 exact/cubic-prediction =  -0.14 dB
+   A = 0.20: IM3 exact/cubic-prediction =  -0.56 dB
+   A = 0.30: IM3 exact/cubic-prediction =  -1.23 dB
+   A = 0.50: IM3 exact/cubic-prediction =  -3.14 dB
+   A = 0.70: IM3 exact/cubic-prediction =  -5.51 dB
+   tanh single-tone A_1dB = 0.713 (pure cubic predicts 0.660)
+[PASS] cubic (3rd-order Volterra) IM3 exact to < 0.1 dB at A = 0.05 (30 dB below A_1dB)  
+[PASS] cubic prediction off by > 1 dB at A = 0.5 (two tones near P1dB)  -3.14 dB
+5. Behavioural models: Rapp, Saleh, memory polynomial, DPD
+   Saleh TWT: saturation at input r = 0.9318, output 1.0058; AM-PM at saturation 22.4 deg
+[PASS] Saleh peak output = alpha_a/(2 sqrt(beta_a))  
+   Rapp p = 2: input 1 dB compression at 0.875 x A_sat
+   PA model NMSE: memoryless 7th-order poly -25.0 dB, memory polynomial (K 7, M 3) -59.4 dB
+[PASS] memory polynomial models a Wiener-Hammerstein PA > 15 dB better than a memoryless polynomial  -25.0 vs -59.4 dB
+   ACLR: no DPD -39.1 dBc, memoryless DPD -56.1 dBc, memory-polynomial DPD -60.4 dBc (ideal linear -101.9 dBc)
+[FAIL] memory-polynomial DPD beats memoryless DPD by > 5 dB ACLR on a PA with memory  -56.1 vs -60.4 dBc
+4. AM-PM from a complex third-order kernel (single tone, bias corner near 2f)
+   phase of fundamental rel. to small signal: sim +0.001, +0.004, +0.016 deg (A = 2, 4, 8 mV); Volterra predicts +0.004 deg at 4 mV
+[PASS] Volterra AM-PM matches simulation within 15 % at 4 mV  sim 0.004 vs 0.004 deg
+2. Method of nonlinear currents: IM3 vs tone spacing (bias-network memory)
+   df =  0.1 MHz: IM3 lower sim -94.45 dBc, Volterra -94.77 dBc; upper sim -85.29, Volterra -85.25 dBc
+   df =  0.5 MHz: IM3 lower sim -75.94 dBc, Volterra -75.94 dBc; upper sim -74.24, Volterra -74.22 dBc
+   df =  1.0 MHz: IM3 lower sim -70.17 dBc, Volterra -70.16 dBc; upper sim -69.32, Volterra -69.30 dBc
+   df =  2.0 MHz: IM3 lower sim -65.96 dBc, Volterra -65.96 dBc; upper sim -65.53, Volterra -65.52 dBc
+   df =  5.0 MHz: IM3 lower sim -63.48 dBc, Volterra -63.48 dBc; upper sim -63.26, Volterra -63.26 dBc
+[FAIL] nonlinear-current Volterra IM3 matches time-domain simulation within 0.3 dB at all spacings  worst 0.32 dB
+[PASS] IM3 depends on tone spacing by > 6 dB across 0.1-5 MHz (memory from the bias network)  span 31.0 dB
+   largest lower/upper IM3 asymmetry: 9.17 dB
+[PASS] lower/upper IM3 asymmetry appears near the corner (> 0.5 dB)  9.17 dB
+   IIP3 (per-tone amplitude, Volterra) vs spacing:
+     df =      1000 Hz: A_IIP3 =  472.75 mV  (  3.49 dBm in 50 ohm)
+     df =    100000 Hz: A_IIP3 =  468.00 mV  (  3.40 dBm in 50 ohm)
+     df =   1000000 Hz: A_IIP3 =  113.51 mV  ( -8.90 dBm in 50 ohm)
+     df =  10000000 Hz: A_IIP3 =   75.23 mV  (-12.47 dBm in 50 ohm)
+     df = 100000000 Hz: A_IIP3 =   73.75 mV  (-12.64 dBm in 50 ohm)
+[PASS] bare BJT exponential: A_IIP3 = 2 sqrt(2) V_T = 73.5 mV  73.54 mV
+
+Summary: 9/11 checks passed

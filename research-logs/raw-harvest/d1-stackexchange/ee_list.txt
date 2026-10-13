@@ -1,0 +1,526 @@
+185632|18|23k|433mhz|Why is 433 MHz used widely in RF modules?
+132051|18|70k|433mhz|433MHz quarter-wave length antenna: longer is better?
+144358|12|25k|433mhz|Wireless Home Automation 2.4GHz versus 433MHz
+58923|9|6k|433mhz|Why is 433 MHz still used?
+103884|8|46k|433mhz|Boost 433 MHz receiver module receiving signal (XY-MK-5V)
+138803|7|12k|433mhz|What will it take to build a DIY 2km (city conditions) RF transmitter (433Mhz)?
+28704|7|11k|433mhz|Improve range of 433MHz RF link
+744335|7|1k|433mhz|433MHz garage remote PCB reverse engineer
+251318|7|16k|433mhz|Design rf trace antenna 433MHz + 315MHz on pcb
+173170|6|11k|433mhz|Using 433 MHz Tx/Rx without encoders/decoders
+198682|3|1k|433mhz|433.92 Noise Is Different Across The Same Type Of Devices
+21998|61|16k|adc|Why are digital oscilloscopes still so expensive?
+3105|53|64k|adc|How do I measure a negative voltage with a ADC?
+83426|36|35k|adc|What is the difference between an injected and regular STM32 ADC channel?
+199548|31|12k|adc|Why do ADCs use 10 bit rather than 8 or 16?
+21017|27|37k|adc|How to Convert 0 to 10V analog signal to 0 to 2.5V for ADC input?
+256370|25|17k|adc|Circuit for measuring high voltage DC voltage (up to 1000V)
+78788|23|17k|adc|What is the meaning of "half bit" in this context?
+3727|23|53k|adc|What is a differential ADC?
+14073|15|3k|adc|Receive several fm-radio stations at the same time (~10-20 MHz wide summary at 90MHz radiofrequency)
+73867|13|2k|adc|Hobby oscilloscope based on AVR. How to remove op-amp noise?
+72778|9|1k|adc|Impedance of differential inputs on AD converters
+401895|29|11k|amplitude-modulation|Are audio cassettes FM or AM?
+397112|23|9k|amplitude-modulation|How exactly does AM/FM carry both pitch and loudness of voice?
+432355|12|8k|amplitude-modulation|Why is superheterodyning better than direct conversion?
+74351|12|25k|amplitude-modulation|AM Modulator Mixer Circuit
+169688|11|13k|amplitude-modulation|How does an AM radio filter out only the desired frequency?
+99735|10|4k|amplitude-modulation|building simple radio
+667181|9|2k|amplitude-modulation|How does an emitter follower work as an AM detector?
+400665|53|21k|antenna|Why is 50 Ω often chosen as the input impedance of antennas, whereas the free space impedance is 377 Ω?
+34605|48|9k|antenna|Why does an antenna trace have this shape?
+73998|46|49k|antenna|How does an antenna radiate (how do currents flow through the wire)
+58027|41|21k|antenna|Why is an inductor not a good antenna?
+243341|41|21k|antenna|How does a chip antenna work?
+586900|40|6k|antenna|How can a 9mm square antenna pick up GPS?
+228959|38|6k|antenna|Can people act like antennas?
+507895|33|7k|antenna|Why don't we use lenses for RF?
+193898|33|3k|antenna|Can I build a camera that is sensitive at 2.4GHz?
+321186|27|10k|antenna|Is it possible to receive information if the received power is below the noise floor?
+557501|26|6k|antenna|Is it possible to generate light with an antenna?
+83248|26|2k|antenna|Is an omnidirectional antenna a must for a cell phone?
+178173|26|5k|antenna|True GPS Location - At the Antenna or Receiver Chip?
+3881|24|32k|antenna|What is a 50-ohm antenna? How would you make one?
+286006|24|2k|antenna|Why is the reflector on this millimeter-wave antenna spinning?
+41871|24|14k|antenna|Via fences for noise reduction of a chip antenna?
+322927|24|1k|antenna|What is the purpose of the elements of this antenna?
+39568|22|28k|antenna|Designing a GSM PCB antenna
+317816|21|48k|antenna|Difference between Hirose U.FL and IPEX connectors
+335912|20|23k|antenna|Can I break a radio tranceiving device by operating it with no antenna connected?
+52515|20|17k|antenna|What do I need in order to build and test a ferrite rod antenna for a specific frequency?
+480508|19|20k|antenna|Why does 1/4 wavelength have a ground plane and 1/2 wavelength needs none?
+86957|19|12k|antenna|Why are wifi antennas covered in plastic?
+420631|16|5k|antenna|Can antennas be viewed as light sources?
+561066|16|7k|antenna|How does a GPS antenna have only two connections yet have all this circuitry inside?
+261558|16|42k|antenna|Are TV coaxial cables compatible with WiFi antennas?
+273932|16|4k|antenna|What does the radiation from an antenna look like?
+352186|16|3k|antenna|Through-Glass WiFi Antenna
+588560|16|1k|antenna|What is this circuit diagram found on an FM transmitter?
+11573|16|11k|antenna|How does a Theremin "antenna" work?
+624225|15|6k|antenna|Are antennas specified for a certain frequency?
+36821|15|9k|antenna|Antennas and Ground Planes
+84121|15|5k|antenna|PCB clearance/keepout area surrounding wireless antenna
+77256|15|29k|antenna|Why do some radio antennas require a path to ground and some do not?
+554|14|28k|antenna|How do you build your own RFID reader?
+59434|14|1k|antenna|Need help with selecting an antenna for PCB
+247740|13|2k|antenna|Why would a time signal receiving watch have an airplane mode?
+432994|13|13k|antenna|Do square wave exist?
+308004|13|4k|antenna|Simulate bad cell phone reception in the lab
+36031|13|95k|antenna|Does higher dBi mean further range, for an antenna?
+51009|13|12k|antenna|How does a wifi antenna work in full-metal laptops?
+33369|13|1k|antenna|What's the purpose of such weird wiring inside this smart card?
+137093|13|4k|antenna|How is it possible to have a 5W transmitter driving 50 ohms with a 12V supply?
+68394|11|1k|antenna|Why can a feedline be cut randomly when the antenna needs a specific length?
+264621|10|8k|antenna|How does a Dual-Antenna WiFi router work better in terms of signal strength?
+484058|10|1k|antenna|What piece of technology is able to record the exact phase of microwaves?
+345786|10|10k|antenna|Directionality and gain: yagi versus parabolic antenna
+6168|10|3k|antenna|Which antenna to use if close proximity to metal objects is unavoidable?
+456620|10|1k|antenna|Quality factor in antenna matching / question about SX1261 LoRa transceiver
+498419|9|8k|antenna|Why should a receiving antenna be impedance matched to 50 ohm instead of a lower impedance?
+288530|9|18k|antenna|Uniform Linear Array (ULA) beamwidth and angular resolution using FFT
+180934|9|5k|antenna|PCB antenna: ground plane layers and dimensions?
+113003|9|4k|antenna|Antenna matching network. What? Why? How?
+113487|9|2k|antenna|A poor man's alternative to a network analyzer for antenna matching
+153567|8|6k|antenna|What RF attentuator would be used for the HackRF?
+761466|7|0k|antenna|Can a magnetic loop antenna be used to communicate through a perfect metal container?
+722177|7|1k|antenna|Do radios need a minimum range to function properly?
+447039|7|2k|antenna|Why do the Duga-1 dipoles look like an array of birdcages?
+116691|7|19k|antenna|What power is measured by a spectrum analyzer?
+429031|7|1k|antenna|Where to connect the VNA during matching network tuning
+325068|6|3k|antenna|Why is the bunny-ears TV antenna normally connected to 300 ohm twin lead?
+479254|5|2k|antenna|Standing waves in Dipole antennas
+606304|5|1k|antenna|Why are many radar antenna arrays not rectangular but rather octagonal÷icosagonal?
+629446|3|1k|antenna|Monopole antenna: does current flow in loops?
+772088|2|0k|antenna|Multiplexing an RFID-RC522 with multiple antennas
+772065|2|0k|antenna|Problem reproducing a graphene-based terahertz quasi-Yagi antenna simulation in CST Studio Suite
+771890|2|0k|antenna|What can I do about the antenna for my nrf52840 project?
+771061|2|0k|antenna|Decoupling Between Antennas
+504861|1|0k|antenna|Antenna for ESP32-pico-D4
+772142|-5|0k|antenna|Fyp project ideas
+142112|12|2k|balun|Balun/matching network question
+605772|8|2k|balun|What causes common mode currents in a coaxial cable?
+661156|7|0k|balun|Why is the balun transformer shorted and not simply removed?
+467592|5|4k|balun|Adding Two Balun Transformers to SA612 Mixer Has No Effect on LO Suppression
+436787|4|2k|balun|Voltage Balun 1:1
+488272|4|2k|balun|Explain how this CCTV video balun actually works?
+195261|4|2k|balun|Is this layout good? (RF - 2.45 GHz)
+740491|4|0k|balun|How effective are my old TV baluns?
+722802|4|0k|balun|Why are there still coax shield currents in this system?
+245744|4|1k|balun|Balun Polarity Importance
+321251|3|1k|balun|balun, and balun circuitry
+727960|3|0k|balun|Where to put a 300Ω to 75Ω balun
+334392|3|9k|balun|sx1276 Understanding matching network
+458181|16|3k|coaxial|How are unbalanced coaxial cables used for broadcasting TV signals without any problems?
+575350|10|2k|coaxial|What does "mode-free" mean, in the context of coaxial connectors?
+603357|10|2k|coaxial|Why are coaxial cables typically faster/longer than twisted pairs?
+429843|7|0k|coaxial|Why did CATV standarize in 75 ohms and everyone else in 50?
+455129|7|0k|coaxial|Can two 802.11n devices communicate via a coaxial cable?
+681616|3|2k|coaxial|Coaxial quality and frequency rating
+536640|3|0k|coaxial|Can someone explain me these waveforms?
+635855|2|0k|coaxial|How is the center pin supported in air-filled coaxial cables?
+627651|2|0k|coaxial|Effect of small length impedance discontinuity in a transmission line
+551640|2|0k|coaxial|Is an (n+1/4) wavelength transmission line impedance transformer comparable to a 1/4 wavelength line of the same composition?
+36308|83|108k|crystal|Crystals, Oscillators, and Resonators. What the difference?
+177844|65|87k|crystal|Why do we use 32.768 kHz crystals in most circuits?
+39136|57|57k|crystal|Competing PCB Crystal layout recommendations
+248919|49|10k|crystal|What's special about 14.31818 MHz?
+117624|45|54k|crystal|How does a Crystal work?
+33166|38|9k|crystal|Why do Arduinos ship w/ 16MHz crystal instead of 20MHz?
+655312|31|7k|crystal|How can you achieve decent clock accuracy in microcontrollers (e.g., max 1 second drift in a year)? How do digital watch manufacturers accomplish it?
+658434|31|4k|crystal|Why is crystal frequency often multiplied inside a microcontroller?
+94031|31|7k|crystal|What effect does selecting the wrong load capacitance for a crystal have?
+38962|26|2k|crystal|What are 12.000393 MHz crystals used for?
+173503|12|3k|decoupling-capacitor+rf|Forgot to put a via near bypass capacitor, and now the boards have been fab'd - what can I do?
+415515|0|0k|decoupling-capacitor+rf|Implementation of Decoupling capacitor
+614059|0|0k|decoupling-capacitor+rf|Decoupling capacitors for fine-pitch BGA on single-sided board
+627796|-1|0k|decoupling-capacitor+rf|What capacitor should I use for DC decoupling a 50Ω transmission line?
+616318|6|1k|dipole|Finding the electric field due to a "point" dipole in different locations
+517605|3|0k|dipole|Why exactly is a Hertzian dipole inefficient?
+282249|3|0k|dipole|Dipole Sleeve Antenna design in fresh water - Transmission frequency and emitted power?
+397093|2|7k|dipole|Shortening a long antenna with a capacitance
+303182|2|0k|dipole|Why are this monopole and dipole antenna so similar?
+216959|83|56k|emc|What does the Y capacitor in a SMPS do?
+81761|44|5k|emc|What's radiating on my PCB?
+272461|39|1k|emc|Identifying Source of Periodic Artifact at Op-Amp Output
+37710|34|6k|emc|Ground ring -- good or bad?
+330436|33|8k|emc|Why do some EMI/RF shields have holes on the top and some don't?
+195616|31|11k|emc|Why is it good to slow down digital lines with resistors?
+624787|27|5k|emc|Is twisting a single ended signal with its own GND really useful?
+35091|24|5k|emc|Alternatives to SPI because of EMI
+445888|20|8k|emc|Why do some PCBs have exposed plated perimeters?
+13500|19|6k|emc|PCB routing: EMI and signal integrity, return current questions
+40242|18|8k|emc|What problems could occur when chaining 40 shift registers?
+48567|18|10k|emc|To "ground fill"or not to "ground fill"?
+67241|17|8k|emc|Why does a simple conductor start to emit EM waves when carrying a signal?
+642568|17|4k|emc|Failed radiated emissions test on USB cable - USB module hardware and firmware improvements
+329608|12|2k|emc|Why exactly is it discouraged to gap the ground plane?
+76412|12|41k|emc|How does a ferrite core wire terminator work to reduce EMC?
+140701|9|7k|emc|What is the purpose of holes on edge of the PCB?
+761936|30|3k|ferrite|Why are ferrite cores on cables less common in consumer electronics?
+115021|25|46k|ferrite|Ferrite bead position
+70604|24|18k|ferrite|Ferrite or iron powder? How do I tell what an unknown core is made of?
+210640|15|7k|ferrite|Adding a gap to a core for an inductor
+33770|14|9k|ferrite|Alternatives to transistors
+12594|14|4k|ferrite|Measuring ferrite core parameters
+3941|66|15k|filter+rf|What is impedance?
+405044|20|7k|filter+rf|Why are there so many vias on this board?
+125237|14|4k|filter+rf|What does this schematic symbol marked SG1 looking like two arrows pointing to each other represent?
+684504|8|3k|filter+rf|How are RF filters constructed?
+624113|7|2k|filter+rf|What's the purpose of the band-pass filter in an RF transmitter?
+753933|7|1k|filter+rf|Low Pass Filter not having expected response
+666611|6|0k|filter+rf|Simulating a tuning circuit in LTspice
+722770|6|1k|filter+rf|Trying to identify manufacturer logo .. circle with circle inside
+23991|6|13k|filter+rf|Circuit to remove noise from digital communication line
+26760|6|3k|filter+rf|100W Low Pass Filter
+143496|6|3k|filter+rf|Impedance matching with only capacitors?
+378329|5|0k|filter+rf|How do I design a DC-block cap without interfering with my filter?
+58975|5|1k|filter+rf|Why is the loaded Q of a critically coupled two-resonator circuit approximately equal to 0.707 times the loaded Q of one of its resonators?
+18275|4|3k|filter+rf|How to terminate 50 ohm transmission line without drawing DC
+664603|1|0k|filter+rf|How do you use an RC filter on an LNA output to reduce unwanted noise?
+529890|1|2k|filter+rf|GPS antenna reference design
+184969|16|6k|frequency-modulation|If an FM signal has different frequencies, how does the radio receive the signal in a fixed frequency?
+86100|13|3k|frequency-modulation|How can this FM transmitter modulate?
+189104|10|3k|frequency-modulation|FM Carrier Wave Generation
+454047|6|4k|frequency-modulation|Discrete component FM radio receiver circuit - explanation needed
+322596|87|17k|gps|Why does smartphone GPS find its position much faster than a GPS module?
+11884|85|44k|gps|How many GPS channels make sense?
+271900|45|9k|gps|How do GPS satellites refresh their clocks
+30750|43|124k|gps|Why do GPS receivers have a 1 PPS output?
+606987|30|6k|gps|How can the GPS position update rate be 10 Hz?
+714401|16|10k|gps|Which signals (Wi-Fi, mobile phone, and GPS) can reliably be blocked by aluminum foil?
+394513|15|2k|gps|Official GPS protocol documentation?
+581315|15|1k|gps|How do receivers decode multiple GPS signals on the same carrier frequency?
+632860|15|1k|gps|GPS pulse/s not aligned with reported times (u-blox ZOE-M8Q)
+62395|15|5k|gps|GPS Design Review (RF Input)
+696641|6|3k|gps|10MHz reference vs 1 PPS vs GPSDO
+384377|3|0k|gps|Top Ground Copper pour in PCB having three RF Sections
+306862|34|14k|ground-plane|Should I really divide the ground plane into analog and digital parts?
+86197|17|3k|ground-plane|Reasons not to fill unused board area with power planes instead of ground planes?
+466447|12|1k|ground-plane|How to minimize impedance from capacitor to Gnd and Power planes
+680791|11|5k|ground-plane|Should I fill free PCB space with ground?
+265920|11|12k|ground-plane|Should there really be 1 MΩ resistance between an anti-static wrist strap and a pc?
+711696|10|4k|ground-plane|How can I find where a short has occurred inside of a PCB?
+308638|9|11k|ground-plane|Should there be any PCB ground plane under a 16 MHz oscillator?
+178112|37|7k|impedance+rf|Why do characteristic impedances matter only when traces are longer than half a wavelength?
+646926|13|3k|impedance+rf|Do 50 Ω signal generators have a series resistor or not?
+164966|11|3k|impedance+rf|Should each trace carrying RF be 50Ohm in characteristic impedance? How?
+16116|11|6k|impedance+rf|Impedance Matching and Large Trace Widths
+661291|11|1k|impedance+rf|What does degree in a schematic mean when drawing a PCB?
+6917|10|14k|impedance+rf|Measuring output impedance
+452886|9|2k|impedance+rf|Why does the cable resistance jump from a low value to high value at a particular frequency?
+36686|9|14k|impedance+rf|Impedance Matching Differential Signals
+600915|5|1k|impedance+rf|Impedence matching required for very short PCB trace?
+72652|28|2k|impedance-matching|What happens at the end of a transmission line?
+449645|23|3k|impedance-matching|Does Impedance Matching Imply any Practical RF Transmitter Must Waste >=50% of Energy?
+213433|23|15k|impedance-matching|Can I solder a RG316 coax directly to a PCB instead of using the intended SMA connectors?
+79717|21|39k|impedance-matching|What can reduce overshoot and ringing on a simple square wave pulse generator?
+73662|18|10k|impedance-matching|What's the importance of source impedance termination?
+393664|13|6k|impedance-matching|Does non-matching impedance of amplifier and speaker distort the sound?
+208856|13|15k|impedance-matching|How do I lay out PCB traces for a given "differential impedance"
+583234|12|2k|impedance-matching|Trace impedance ohm meaning
+130655|11|12k|impedance-matching|Effects of impedance matching between 50 and 75 Ohm coaxial cables for 10 Mbit/s, Manchester-coded signals (20 MHz)
+538601|10|2k|impedance-matching|Why is length matching performed with the clock trace length as the target length?
+101634|10|21k|impedance-matching|Terminating a 50 Ohm source into 1M Ohm oscilloscope input
+216735|10|3k|impedance-matching|Transmission Line: characteristic impedance matching
+68801|10|18k|impedance-matching|Why Characteristic Impedance must be 50 ohms?
+321607|10|4k|impedance-matching|RS485 termination: AC + failsafe + parallel + bidirectional
+117214|10|16k|impedance-matching|Impedance of an Edge-Coupled Coplanar Waveguide With Ground
+49192|10|10k|impedance-matching|Question about trace length matching patterns for high speed signals
+701733|9|1k|impedance-matching|Impedance matching and termination resistor
+676831|9|2k|impedance-matching|Impedance matching, don't reflections just happen somewhere else?
+362125|8|1k|impedance-matching|What is an audio output transformer? Is it the same thing as an impedance matching transformer?
+13214|7|2k|impedance-matching|Wideband Impedance Matching
+678584|6|0k|impedance-matching|Smith Chart is giving me an answer I didn't expect - Am I using it right?
+21947|6|0k|impedance-matching|Help with Matching circuit
+613131|7|2k|lna|Why have a filter before the LNA in LoRa boards?
+679845|3|0k|lna|Noise Figure in LTSpice
+677822|2|2k|lna|S parameters calculation from VNA file
+685169|2|0k|lna|Output matching influences the input matching (RF amplifier)
+613179|2|2k|lna|Tips on how to increase the gain and lower the noise factor of a LNA
+550128|2|0k|lna|Calibrating RTL-SDR Power with 50 Ohm Load and Thermal/LNA Noise
+540803|1|0k|lna|What is the significance of phase margin in an open loop amplifier?
+278192|23|27k|lora|Understanding the relationship between LoRa chips, chirps, symbols and bits
+562809|7|0k|lora|What keeps frying my RF switches?
+606642|6|0k|lora|How can LoRa transmit without interference even though SigFox also transmits on the same frequency?
+277722|6|15k|lora|How to calculate the data rate of LoRa?
+285155|5|1k|lora|What is SEMTECH's "secret sauce" that makes LoRa Picocells viable?
+309424|4|0k|lora|Am I using Shannon-Hartley Theorem and thermal noise correctly here?
+415645|4|1k|lora|Why different SFs in LoRa are said to be orthogonal?
+626793|3|2k|lora|Can SPI be used without implementing a modern MCU?
+209799|3|2k|lora|SX1272 - LoRa - What is the minimal schematic (needed capacitors/resistors) to use that device?
+358924|3|2k|lora|Creating a LoRaWAN gateway with multiple nodes?
+375813|3|0k|lora|Chip and Chirp rate in LoRa
+277060|3|2k|lora|Can 900MHz and 2.45GHz Antennas be differentiated by shape?
+636043|2|0k|lora|I need help on identifying the value of a schematic symbol
+736005|2|0k|lora|Is type of material relevant for antenna length?
+743035|2|0k|lora|Why is the LoRa chip rate equal to the bandwidth?
+255034|2|0k|lora|Star sub-network with LoRa capability?
+544696|2|0k|lora|SX1276 LoRa - Implicit mode - Not knowing PayloadLength at reception
+431493|2|1k|lora|Peak TX current of LoRa RFM95W
+727634|2|0k|lora|Optimizing Wireless Communication for High Data Rate and Low Latency
+562251|2|0k|lora|How to separate PCB antenna and SMA connector?
+202224|12|2k|microstrip|Microstrip through passive components
+563918|11|1k|microstrip|What is wrong with my 50Ω microstrip?
+510438|10|9k|microstrip|What is Negative Inductance?
+254067|10|16k|microstrip|USB trace impedance calculations, with termination resistors
+84466|8|24k|microstrip|How can I guarantee 50 ohm impedance on PCB trace?
+105404|7|1k|microstrip|Consensus on microstrip trace impedance calculations?
+26577|7|1k|microstrip|Microstrip over power plane
+27673|7|7k|microstrip|How to calculate signal propagation speed through vias?
+256468|7|3k|microstrip|RF Ground Stitching in Proteus Ares 8
+669162|6|4k|microstrip|Unexpected low characteristic impedance using the JLCPCB impedance calculator
+521265|6|2k|microstrip|Why is there a solder mask opening over a microstrip line?
+141264|6|5k|microstrip|Can differential USB traces be routed relative to Power (not Ground) planes?
+19592|15|15k|mixer|How do those 3.5mm stereo to mono adapters work?
+301823|14|5k|mixer|Accidentally downmixed stereo to mono, why does this work?
+19669|9|33k|mixer|Algorithm for mixing 2 axis analog input to control a differential motor drive
+136127|8|21k|mixer|Using diodes to mix 2 audio signals into one set of speakers
+97322|6|8k|mixer|Can I input a square wave LO into a mixer?
+294749|6|9k|mixer|Audio summing mixer- inverting or non inverting output?
+678954|6|0k|mixer|Radar received RF signal phase-shifted by 90 to obtain I/Q signals
+337848|6|4k|mixer|Multiple Options for Passive Audio Mixer
+34925|6|3k|mixer|HDMI Mixer/Blender/Superimposer-Chip (2 to 1) wanted
+25533|5|4k|mixer|Difference between Inphase/Quadrature (I/Q) Mixer and I/Q Demodulator
+686829|5|0k|mixer|Schematic review for an ultrasonic heterodyne mixer
+57917|5|1k|mixer|24GHz Radar : IF amplification and strange mixer output
+39423|38|71k|modulation|What is the basic difference between AM and FM radio?
+596747|31|4k|modulation|How much data could be stored on a standard compact cassette using modern encoding?
+15818|24|21k|modulation|fastest way of doing on/off-modulation of a LED?
+107128|19|52k|modulation|What is Overmodulation?
+504401|15|9k|modulation|Why doesn't higher frequency mean higher data rate?
+221508|14|1k|modulation|Why FM stereo uses DSB-SC instead of VSB?
+256299|13|4k|modulation|Why is amplitude-modulated radio broadcast (AM) still active?
+141735|13|1k|modulation|How does the plastic-tube inductor in this wireless transmitter work?
+327238|12|2k|modulation|What could this signal at 119.9 MHz be?
+327844|9|6k|modulation|What does "shift keying" mean in the context of digital modulation?
+387097|7|2k|modulation|Why do spectrum analyzers use envelope detectors?
+32257|66|104k|noise|Noise and what does V/√Hz actually mean?
+323356|52|15k|noise|Loud pop noise while plugging to a headphones jack
+79752|45|64k|noise|What is "common-mode" noise?
+126502|42|11k|noise|How can "purely" electrical circuits emit sound?
+25198|31|14k|noise|Noise reduction strategies in electrophysiology
+41611|30|5k|noise|How to disable a single op-amp in dual packaging?
+742085|19|1k|noise|Active analog summing circuit with very high noise floor
+566766|17|3k|noise|Cable shielding adequate for video, but not audio frequencies
+450585|14|4k|noise|Which is the preferred approach to PCB layout for signal vs power traces in analog circuits, and things to consider?
+357131|11|1k|noise|Random and unpredictable analog comparator behaviour
+356355|11|2k|noise|low noise, low distortion analog multiplexing
+225540|10|4k|noise|Difference between zero-drift and auto-zero op amps?
+341917|14|2k|noise+rf|Eliminating mains hum from frequency modulated RF LC oscillators
+671456|8|3k|noise+rf|Why is my oscilloscope showing noise when I short both terminals of the probe and connecting them to any metal surface?
+8405|7|6k|noise+rf|Advice on cleaning up 5VDC from a wall-wart
+445928|6|0k|noise+rf|How do wireless receivers reject noise created by the original signal reflecting off walls?
+69637|6|4k|noise+rf|Accurately measure relative intensity noise (RIN) using RF spectral analyzer?
+158345|4|2k|noise+rf|Why does a metal sheet block all noise, but not when wrapped around a cable?
+670711|4|0k|noise+rf|Improving Modeling of Thermal Noise in Radio Antennae
+282334|3|0k|noise+rf|Why does noise-figure of components become less significant further down the chain in a cascaded network?
+140043|3|0k|noise+rf|Antenna to reject 5.8Ghz Interference
+521230|3|2k|noise+rf|Only using ground fill on RF portion of PCB
+506296|3|2k|noise+rf|"To ground" or "not to ground" a coax to prevent RF ingress?
+102508|36|85k|operational-amplifier+stability|Choosing resistor values for inverting amplifier and why?
+252089|34|18k|operational-amplifier+stability|What is noise gain, really? And how is it determined in the general case?
+69506|17|24k|operational-amplifier+stability|Stability problem in unity-gain opAmp
+713725|14|2k|operational-amplifier+stability|Reasons for implementing op-amps which are not unity-gain stable
+544404|9|2k|operational-amplifier+stability|A mistake in "Op Amps for Everyone" about op amp attenuators
+390986|8|11k|operational-amplifier+stability|Non-inverting op-amp configuration with capacitor
+648817|8|2k|operational-amplifier+stability|How to stabilize an op-amp with a MOSFET in the feedback loop
+429479|8|1k|operational-amplifier+stability|Opamp stability given in not inverting configuration
+420979|54|8k|oscillator|Why does music synthesizer built from chain of astable multivibrator circuits get "out-of-tune" after a few hours?
+15851|51|118k|oscillator|What is the ppm in the crystal oscillator?
+5621|40|18k|oscillator|Why does a faster clock require more power?
+15455|27|44k|oscillator|Internal or external oscillator
+543668|27|5k|oscillator|Why are two 555 timers in separate sub-circuits cross-talking? (Poltergeist in the Breadboard)
+27763|27|49k|oscillator|Using the ATMega328 with the internal oscillator?
+368723|12|6k|oscillator|How do processors control their clock speed?
+113372|29|11k|pcb-design+rf|At what frequencies does PCB design get tricky?
+382321|11|2k|pcb-design+rf|PCB Techniques for RF Circuits
+455791|11|9k|pcb-design+rf|Design of 50 ohms RF trace for 2.4GHz...Double layer FR-4 PCB
+415504|11|6k|pcb-design+rf|90° Bend: Mitered vs Curved
+334902|11|10k|pcb-design+rf|50Ω Impedance Matching with Signals Through Vias
+322990|11|3k|pcb-design+rf|PCB Antenna design for nRF2401
+678973|9|1k|pcb-design+rf|Pie shaped stubs in RF supply PCB layout
+253208|9|5k|pcb-design+rf|Are core and prepreg dielectrics interchangeable?
+252955|9|9k|pcb-design+rf|What are the advantages of CPW over microstrip?
+126728|9|1k|pcb-design+rf|PCB RF Layout Critique: Input on my radio-telescope PCB
+225946|8|0k|pcb-design+rf|Optional feature in PCB layout of MMCX board edge connector. What's it for?
+141533|7|0k|pcb-design+rf|Preferred balun location? (Are differential microstrips preferrable to single-ended?)
+304354|6|5k|pcb-design+rf|RF Switch vs Zero-Ohm Resistors
+632008|9|0k|phase-noise|Phase noise of op-amp
+384128|6|0k|phase-noise|Can phase noise be averaged out?
+373325|5|0k|phase-noise|Phase noise reduction in LC oscillator with a high-loss capacitor
+349822|4|0k|phase-noise|A capacitor as loop filter of a DLL
+744718|3|0k|phase-noise|Flicker and Noise Floor
+438635|3|0k|phase-noise|Two details about phase noise have been confusing me for a long time. Hope to be resolved
+574587|2|6k|phase-noise|Phase noise units: dBc/Hz --> dB(rad/√Hz)
+607647|2|0k|phase-noise|How to interpolate phase noise curves?
+69037|30|30k|pll|What is the difference between a PLL and a DLL?
+34587|18|12k|pll|PLL - why compare phases not frequencies
+622324|15|2k|pll|Why is the MCU clock out waveform sinusoidal and not square pulse
+152786|14|4k|pll|How can over 24 GHz communication be possible?
+514204|13|18k|pll|What is the purpose of PLL in a general microcontroller
+243041|12|16k|pll|What is the difference between first order, second order and third order phase locked loops?
+607406|11|6k|pll|Why do we need phase-locked loops?
+520460|11|2k|pll|Using PLLs inside FPGAs
+429532|9|10k|pll|Why is there a PLL in CPU?
+229152|9|2k|pll|How do I drive 14.3Mhz clock input from 10MHz?
+8059|9|1k|pll|Why do frequency synthesizers often use N/N+1 prescalers?
+767669|15|1k|power-amplifier|Why are BJTs predominantly used in audio circuits?
+763624|12|0k|power-amplifier|Feasibility of a fast, high current linear amplifier
+738485|9|0k|power-amplifier|Toasted PCB region of power amplifier
+640642|8|1k|power-amplifier|How can LM386 follow a signal when it becomes negative?
+364315|7|5k|power-amplifier|Confusion between Class B and Class AB Amplifier
+751151|7|0k|power-amplifier|How do I diagnose the problems with this amplifier?
+716468|7|0k|power-amplifier|Audio amplifier for school project
+622295|7|1k|power-amplifier|What specifically causes damage when a transformer-coupled valve amplifier has no load across the secondary coil?
+623443|6|1k|power-amplifier|Linearity of power amplifiers
+484776|6|10k|power-amplifier|Why is it preferable to use NPN transistors for both high-current-output devices in a push-pull amplifier?
+697554|6|0k|power-amplifier|Need help with audio amplifier design for loud volume
+732811|6|0k|power-amplifier|Audio Amplifier ICs with RC Filters
+379834|88|13k|radar|Will radar/lidar still work when every car is equipped with them?
+332197|24|5k|radar|How did old WW2-era radars accurately measure time delay and integrate this into an oscilloscope?
+451709|21|4k|radar|How does LIDAR avoid getting confused in an environment being scanned by hundreds of other LIDAR?
+131531|17|2k|radar|Why are sound waves the best choice for many location detectors?
+200574|15|1k|radar|What power limitations was chirped radar designed to overcome?
+55501|9|4k|radar|Can I improve the directivity of an X-band radar module with integrated plane-patch antenna?
+350093|8|2k|radar|How does / can this radar wave detector circuit work?
+278674|8|13k|radar|Help reverse engineering RCWL-0516 microwave proximity detector module
+770068|7|1k|radar|Why did Patriot missile battery's tracking performance significantly decrease few hours after each reboot before 90s?
+454485|6|2k|radar|Does this VCO produce a sine wave or square wave
+427629|5|0k|radar|How does one measure the Fourier components of a signal?
+522420|5|0k|radar|Why does medical ultrasound use pulses instead of chirps?
+508509|5|0k|radar|IC / logo identification: 5.8 GHz radar MMIC marked "5810"
+371269|4|0k|radar|Short-range radar and LIDAR, how do they work?
+701470|4|0k|radar|How to determine the Doppler radar frequency required to measure an object moving at a given speed
+3203|83|15k|radio|What's the cheapest way to link a few microcontrollers wirelessly at low speeds over short distances
+187681|55|13k|radio|Can a radio transmitter somehow detect the number of receivers in its area?
+455043|42|6k|radio|Why do IR remotes influence AM radios?
+606210|39|8k|radio|How did 455 kHz end up being a commonly used IF (intermediate frequency)?
+39481|39|7k|radio|Why don't interfering radio stations both play at the same time?
+4664|32|12k|radio|Stealing energy from radio towers or power lines
+6839|27|9k|radio|What does dBm mean?
+515193|26|5k|radio|Why does radio reception consume so much energy?
+479709|24|9k|radio|What went wrong with my DIY project?
+144326|23|16k|radio|Do we know what a radio wave looks like?
+25894|22|6k|radio|Dual-SIM phone, do they use 2 GSM modules ? Anyone has high level schematic?
+5696|22|1k|radio|Microcontroller with both ethernet and radio onboard?
+83292|17|5k|radio|How does RF anti-jam technology work?
+123991|16|7k|radio|Schematics for a simple radio transmitter that can be built only with passive components?
+64519|14|14k|radio|Are E and B fields in phase in electromagnetic radiation?
+722130|9|3k|radio|Is there a limit to how much power could be transmitted wirelessly?
+79901|17|34k|receiver|Why the conversion to intermediate frequency?
+260358|15|6k|receiver|How do two UARTS know which baud rate to use?
+26028|12|37k|receiver|ultra low power mini wireless transmitter / receiver?
+582770|11|1k|receiver|What is the reason behind the wiring of the IF tapped transformers in these AM superheterodyne receivers?
+347852|50|9k|rf|What is wrong with my 50 Ω grounded coplanar waveguide?
+42923|44|86k|rf|What do I need for a basic RF circuit?
+94388|36|23k|rf|How come radio signals don't interfere with each other all the time?
+42610|30|4k|rf|FCC and CE Testing / Failure Resolution
+381259|29|9k|rf|Why solder mask are not applied to RF PCBs
+402067|24|9k|rf|How could have Banksy kept an RF receiver running for 12 years?
+546318|23|6k|rf|In which direction do electric signals flow?
+343641|21|7k|rf|What does the rectifier do in a crystal radio?
+84052|21|11k|rf|Is there a RF viewer like a thermo camera?
+33537|20|109k|rf|Why do higher frequency waves have better penetration?
+10510|20|1k|rf|How do low price toys implement RF communication
+2332|20|14k|rf|Cheapest way to add wifi to a project
+227705|19|4k|rf|Why are RF components and cables still so large?
+446737|19|8k|rf|Wouldn't putting an electronic key inside a small Faraday cage render it completely useless?
+39127|19|20k|rf|Why do my speakers make a noise when my cell phone gets a call?
+78634|16|3k|rf|Analyze My Homebrew Diplexer
+493390|15|5k|rf|Are there any advantages to using rigid RF coaxial cables?
+281782|15|1k|rf|Could a copper RF cavity like this be reasonably expected to have a Q > 7000?
+71201|15|2k|rf|Is it possible to reject noise traveling on the outside of a coaxial transmission line?
+175121|14|5k|rf|RF Energy Harvesting
+598767|14|7k|rf|What is the purpose of a carrier signal in communication technology?
+301221|14|8k|rf|Why do only high-end phones support a lot of LTE bands?
+237267|14|26k|rf|What is a PA/LNA?
+8645|14|25k|rf|Free RF Simulation Software
+78530|14|44k|rf|How can I tell if an RF transmitter is transmitting?
+173490|14|1k|rf|Should the unused areas on the top layer of my RF PCB have ground pours?
+645046|11|3k|rf|Is there anything particularly special about a "short" and an "open" in a VNA calibration kit?
+520471|11|0k|rf|Looking for criticisms for a VNA-like meter I am designing
+128503|9|22k|rf|Reading S2P Files - What Does Each Column Represent
+36989|9|4k|rf|Smith Chart Explanation
+109699|9|1k|rf|How does frequency affect the ability to traverse objects in RF transmissions?
+58227|8|4k|rf|Low-power wireless module strategy
+60656|7|1k|rf|Is information lost when you downconvert an RF frequency?
+772081|5|0k|rf|How to vary the quantity of charge on a steel tube at 1 MHz, while keeping it negative
+588654|5|3k|rf|Why are the measured and theoretical Q factor of an LC circuit very far off?
+772129|4|0k|rf|Colpitts oscillator doesn't work
+771822|1|0k|rf|what is the purpose of the capacitors in this VFO?
+771854|1|0k|rf|VCO unable to oscillate at desired frequency
+771850|1|0k|rf|Modelling s parameters of a step discontinuity in a grounded coplanar waveguide (OpenEMS)
+772203|0|0k|rf|My GNSS Module (ZED F9P) kept losing signal when tested outdoor, is there any issues with my hardware (Bias tee)?
+664468|0|1k|rf|How to adapt a FM reciever circuit to use a varicap diode instead of a trimmer capacitor
+39796|44|50k|sdr|Can somebody explain what IQ (quadrature) means in terms of SDR?
+301121|20|0k|sdr|"56k modem" found in VHF band
+120967|9|12k|sdr|Bandwidth vs sample rate in SDR
+218865|6|0k|sdr|limit duration 1pps signal
+131098|5|2k|sdr|How would I go about analyzing this SDR-captured 300 MHz radio signal?
+129626|5|1k|sdr|Designing an optimal BPSK and/or QPSK transciever in SDR
+382356|4|1k|sdr|Expected peak-to-peak output voltage of satellite LNB
+74733|4|0k|sdr|Can I/Q signals from two perpendicular antennas be simplified to any less than 4 signals?
+4515|85|138k|shielding|How to connect USB Connector shield?
+60253|34|5k|shielding|Correct place to attach shields for twisted pairs
+22223|19|3k|shielding|Shielding can, what is the proper way?
+215138|16|16k|shielding|How to Connect USB/Ethernet Shields to Chassis or Digital Grounds
+50120|6|4k|smith-chart|What application do you use for plots?
+750019|5|0k|smith-chart|Input impedance for MAX41470 receiver IC
+663522|5|1k|smith-chart|Is my VNA broken or miscalibrated, or are these weird results normal?
+198663|5|2k|smith-chart|Smith Chart Conjugate Matching
+380485|4|0k|smith-chart|Self-resonance frequency of chip inductors
+602730|4|5k|smith-chart|Tuning an antenna using a NanoVNA, Smith chart and impedance readings
+298998|4|1k|smith-chart|Finding unknown load using a smith chart
+94037|40|4k|spectrum-analyzer|Can anyone explain this high-frequency "alien voodoo black magic"?
+463669|22|6k|spectrum-analyzer|Where do overtones in a 555 generated square wave come from?
+50581|18|53k|spectrum-analyzer|Oscilloscope with FFT or a Spectrum Analyzer?
+236617|11|0k|spectrum-analyzer|What happened to all of the Dynamic Signal Analyzers?
+364664|7|5k|spectrum-analyzer|Audio spectrum analysis: PC Software vs Hardware Spectrum Analyzer
+605504|7|2k|spectrum-analyzer|Measuring signal with of nanosecond pulse width with a spectrum analyser?
+439414|7|0k|spectrum-analyzer|resolution bandwidth
+114782|7|1k|spectrum-analyzer|What does sequences like 1-3, 1-10, 1-3-10 etc in a spectrum analyzer mean?
+130993|6|1k|spectrum-analyzer|Observing effect of household appliances on powerline communication
+132255|14|10k|transceiver|Transceivers in the field of FPGAs: When and why will we use them?
+62387|9|24k|transceiver|In USB, what is the difference between a PHY and a transceiver?
+445047|8|3k|transceiver|How can I fix a dry solder pin in a BGA package?
+35133|8|0k|transceiver|Designing my own Bus
+253607|59|20k|transmission-line|Why weights on cables between utility poles?
+167295|58|7k|transmission-line|What is this object found on transmission lines?
+115200|40|191k|transmission-line|Why does the USA use 110V and UK use 230-240V?
+83152|40|20k|transmission-line|How do transposition towers in transmission lines work?
+67838|38|1k|transmission-line|If we could start our electrical grid from scratch with today's technology, which would be the most efficient choice? AC or DC?
+59208|32|4k|transmission-line|Transmission line reflection. I would like a non-mathematical explanation
+375302|29|9k|transmission-line|Why not implement 1Gbps, when all I need is 20Mbps?
+342116|26|4k|transmission-line|Why must some HDMI repeaters know the cable length?
+324637|22|4k|transmission-line|What is this device attached to a high-voltage power line?
+40292|20|4k|transmission-line|Why not use a ferrite bead around an RS-232 cable?
+484269|19|7k|transmission-line|Physics behind signal reflections and series termination
+521117|19|11k|transmission-line|What are these teardrop-shaped loops in power lines for?
+494977|15|12k|transmission-line|Signal velocity in PCB traces
+83184|15|4k|transmission-line|Why does reflection off a PCB via look like this?
+13955|15|3k|transmission-line|Is paying extra for "Controlled Impedance" boards necessary?
+579895|14|12k|transmission-line|How am I getting 1 Gbps through a CAT3 cable?
+635727|14|4k|transmission-line|A 200-mile-long neutral busbar doesn't sound real
+710079|14|1k|transmission-line|Why do these secondary transmission wires coil around the primaries?
+764155|13|6k|transmission-line|How can I build a simple pulse generator to demonstrate transmission lines
+470115|13|2k|transmission-line|Can we reduce power consumption of digital interfaces by using high impedance transmission lines?
+182555|13|4k|transmission-line|Why does reflection only applies to transmission lines?
+353513|22|2k|transmitter|Optical audio transmitter can't handle speech
+511634|19|5k|transmitter|Why are color difference signals transmitted rather than R,G,B signals?
+475876|16|8k|transmitter|Best practice in transmitting sensor analog signal over longer distances (approx. 100') -- in cost sensitive products for microcontrollers
+518442|13|2k|vna|What makes open/short/load (OSL) calibrators so expensive/sophisticated?
+467619|6|13k|vna|Vector Analyzer: what is IF bandwidth?
+726048|5|0k|vna|Nano VNA shows something that I don't understand
+84866|5|0k|vna|Procedure for experimentally determining decoupling capability?
+587842|4|0k|vna|How is the "open" component of the vector analyzer calibration kit made?
+740310|4|0k|vna|Calibrating VNA with U.FL connector: Use SMA 50R load or U.FL 50R load?
+271384|4|3k|vna|How to measure antenna S21?
+704918|4|0k|vna|Why is the core resistance modeled as 2*Rp and capacitance as Cp/2 in a common-mode choke?
+434125|4|0k|vna|Why do long cables measured with a VNA show a "drop" in their attenuation curve?
+38193|49|47k|wireless|Why don't we use wireless electricity today?
+471613|42|11k|wireless|Why is wired Ethernet losing its speed advantage over wireless?
+125692|37|10k|wireless|Why 2.4 GHz Band?
+5314|37|34k|wireless|What is XBee and how is it different from Zigbee?
+615799|31|5k|wireless|Why can't USB-C receivers be as small as their USB-A counterparts?
+38864|24|54k|wireless|I need the most basic circuit diagram for wireless energy transfer please
+129|19|14k|wireless|Ideal WiFi to Serial (or SPI) bridge?

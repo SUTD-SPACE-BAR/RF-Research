@@ -1,0 +1,86 @@
+=== 1. Validation vs NTIA LFMF reference examples (LFMF-test-data/LFMF_Examples.csv, rtn = 0 rows) ===
+  [PASS] f=0.01 MHz d=1000 km H (residue; ref residue) E dBuV/m: -82.5 (expected -82.7..-82.3)
+  [PASS] f=1 MHz d=5000 km V (residue; ref residue) E dBuV/m: -387.5 (expected -387.7..-387.3)
+  [PASS] f=10 MHz d=15 km H (flat; ref flat) E dBuV/m: 7.648 (expected 7.3999999999999995..7.8)
+  [PASS] f=0.45 MHz d=3000 km V (residue; ref residue) E dBuV/m: -129.3 (expected -129.5..-129.10000000000002)
+  [PASS] f=30 MHz d=5000 km H (residue; ref residue) E dBuV/m: -1393 (expected -1400.2665..-1386.3335)
+
+=== 1b. Internal consistency: flat-earth (Norton + curvature) vs residue series at the switch distance ===
+  [PASS] 1.0 MHz eps 22 sigma 0.003: jump at 80 km (dB): -0.009343 (expected -0.1..0.1)
+  [PASS] 1.0 MHz eps 70 sigma 5.0: jump at 80 km (dB): -0.008099 (expected -0.1..0.1)
+  [PASS] 10.0 MHz eps 22 sigma 0.003: jump at 37 km (dB): -0.01334 (expected -0.1..0.1)
+  [PASS] 0.2 MHz eps 15 sigma 0.001: jump at 137 km (dB): -0.02585 (expected -0.1..0.1)
+
+=== 2. Field strength (dBuV/m, 1 kW short monopole, ground-level antennas, vertical pol) ===
+  f = 0.2 MHz   (inverse-distance reference: 10 km 89.5, 30 km 80.0, 100 km 69.5, 300 km 60.0, 1000 km 49.5)
+    sea (avg salinity) 5 S/m, er 70 :   89.5    79.9    69.1    57.7    36.2
+    wet ground 10 mS/m, er 30       :   89.4    79.6    68.2    55.3    30.8
+    land 3 mS/m, er 22              :   89.1    78.8    65.8    49.5    16.6
+    medium dry 1 mS/m, er 15        :   88.1    76.4    59.8    37.7    -1.7
+  f = 1.0 MHz   (inverse-distance reference: 10 km 89.5, 30 km 80.0, 100 km 69.5, 300 km 60.0, 1000 km 49.5)
+    sea (avg salinity) 5 S/m, er 70 :   89.5    79.8    68.5    54.9    22.8
+    wet ground 10 mS/m, er 30       :   86.5    72.5    50.5    23.5   -37.7
+    land 3 mS/m, er 22              :   80.5    61.6    37.9    11.2   -53.1
+    medium dry 1 mS/m, er 15        :   72.1    52.2    29.4     2.6   -63.1
+  f = 3.0 MHz   (inverse-distance reference: 10 km 89.5, 30 km 80.0, 100 km 69.5, 300 km 60.0, 1000 km 49.5)
+    sea (avg salinity) 5 S/m, er 70 :   89.4    79.6    67.5    51.0     7.2
+    wet ground 10 mS/m, er 30       :   72.3    51.6    27.6    -4.6   -96.4
+    land 3 mS/m, er 22              :   63.4    43.6    20.0   -12.6  -105.8
+    medium dry 1 mS/m, er 15        :   58.4    38.8    15.2   -17.6  -111.5
+  f = 10.0 MHz   (inverse-distance reference: 10 km 89.5, 30 km 80.0, 100 km 69.5, 300 km 60.0, 1000 km 49.5)
+    sea (avg salinity) 5 S/m, er 70 :   89.0    78.2    62.8    36.8   -40.5
+    wet ground 10 mS/m, er 30       :   54.3    34.3     8.4   -35.2  -173.3
+    land 3 mS/m, er 22              :   50.5    30.6     4.7   -39.1  -177.8
+    medium dry 1 mS/m, er 15        :   47.1    27.3     1.3   -42.7  -181.9
+  f = 30.0 MHz   (inverse-distance reference: 10 km 89.5, 30 km 80.0, 100 km 69.5, 300 km 60.0, 1000 km 49.5)
+    sea (avg salinity) 5 S/m, er 70 :   85.4    68.4    39.3   -13.1  -183.4
+    wet ground 10 mS/m, er 30       :   43.3    22.8    -6.9   -67.0  -265.8
+    land 3 mS/m, er 22              :   40.5    20.1    -9.7   -70.0  -269.3
+    medium dry 1 mS/m, er 15        :   37.4    16.9   -12.9   -73.4  -273.3
+  [PASS] sea 1 MHz 100 km within 3 dB of inverse-distance 69.5: 68.52 (expected 66.5..70.5)
+  [PASS] land (3 mS/m) 1 MHz 100 km below sea by > 10 dB: 30.64 (expected 10..40)
+  [PASS] 10 MHz over land: 100 km field much weaker than at 1 MHz (dB): 33.19 (expected 15..60)
+
+=== 3. Norton numerical distance and the frequency/conductivity law ===
+    0.5 MHz 1 mS/m : x = sigma/(w eps0) =      36.0, |p| at 30 km =        4, Bullington A ~  -13.8 dB
+    0.5 MHz 3 mS/m : x = sigma/(w eps0) =     107.9, |p| at 30 km =     1.43, Bullington A ~   -5.6 dB
+    0.5 MHz sea    : x = sigma/(w eps0) =  179751.0, |p| at 30 km = 0.000874, Bullington A ~   -0.0 dB
+    1.0 MHz 1 mS/m : x = sigma/(w eps0) =      18.0, |p| at 30 km =     13.1, Bullington A ~  -26.0 dB
+    1.0 MHz 3 mS/m : x = sigma/(w eps0) =      53.9, |p| at 30 km =     5.36, Bullington A ~  -16.7 dB
+    1.0 MHz sea    : x = sigma/(w eps0) =   89875.5, |p| at 30 km =   0.0035, Bullington A ~   -0.0 dB
+    3.0 MHz 1 mS/m : x = sigma/(w eps0) =       6.0, |p| at 30 km =       55, Bullington A ~  -40.1 dB
+    3.0 MHz 3 mS/m : x = sigma/(w eps0) =      18.0, |p| at 30 km =     32.3, Bullington A ~  -35.0 dB
+    3.0 MHz sea    : x = sigma/(w eps0) =   29958.5, |p| at 30 km =   0.0315, Bullington A ~   -0.1 dB
+   10.0 MHz 1 mS/m : x = sigma/(w eps0) =       1.8, |p| at 30 km =      194, Bullington A ~  -51.6 dB
+   10.0 MHz 3 mS/m : x = sigma/(w eps0) =       5.4, |p| at 30 km =      133, Bullington A ~  -48.2 dB
+   10.0 MHz sea    : x = sigma/(w eps0) =    8987.6, |p| at 30 km =     0.35, Bullington A ~   -1.2 dB
+   30.0 MHz 1 mS/m : x = sigma/(w eps0) =       0.6, |p| at 30 km =      586, Bullington A ~  -61.3 dB
+   30.0 MHz 3 mS/m : x = sigma/(w eps0) =       1.8, |p| at 30 km =      408, Bullington A ~  -58.1 dB
+   30.0 MHz sea    : x = sigma/(w eps0) =    2995.9, |p| at 30 km =     3.15, Bullington A ~  -11.5 dB
+   |p| ~ pi d / (lambda |eta|) ~ pi d f^2 eps0 2pi / (c sigma) for x >> eps_r: p grows as f^2 / sigma
+   land 3 mS/m, 30 km: |p| = 5.83 at 1 MHz vs 138.8 at 10 MHz (ratio 24; f^2 law would give 100)
+  [PASS] p ratio 10 vs 1 MHz over land (x not >> er at 10 MHz): 23.81 (expected 20..100)
+
+=== 4. Vertical vs horizontal polarisation (land 3 mS/m, 1 MHz) ===
+     1 km: V  107.7  H   47.8 dBuV/m  (H - V =  -59.8 dB)
+     3 km: V   96.1  H   28.8 dBuV/m  (H - V =  -67.3 dB)
+    10 km: V   80.5  H    7.8 dBuV/m  (H - V =  -72.7 dB)
+    30 km: V   61.6  H  -11.6 dBuV/m  (H - V =  -73.1 dB)
+  [PASS] H-pol ground wave far weaker at 10 km (dB): 72.66 (expected 30..120)
+
+=== 5. Coverage: distance at which E falls to 60 dBuV/m (1 mV/m, MW primary service) and 40 dBuV/m ===
+    0.2 MHz, 1 kW: 40 dBuV/m reached at sea    860 km, wet    709 km, land    472 km, medium    272 km
+    0.6 MHz, 1 kW: 40 dBuV/m reached at sea    681 km, wet    276 km, land    149 km, medium     89 km
+    1.0 MHz, 1 kW: 40 dBuV/m reached at sea    608 km, wet    160 km, land     90 km, medium     58 km
+    1.6 MHz, 1 kW: 40 dBuV/m reached at sea    546 km, wet     99 km, land     59 km, medium     41 km
+    3.0 MHz, 1 kW: 40 dBuV/m reached at sea    465 km, wet     55 km, land     36 km, medium     28 km
+    7.0 MHz, 1 kW: 40 dBuV/m reached at sea    338 km, wet     28 km, land     22 km, medium     18 km
+   14.0 MHz, 1 kW: 40 dBuV/m reached at sea    209 km, wet     18 km, land     15 km, medium     13 km
+  [PASS] 40 dBuV/m range over land: 1 MHz / 14 MHz ratio: 5.955 (expected 3..50)
+
+=== 6. Millington mixed path (P.368-10 Annex 2): 50 km land (3 mS/m) then 50 km sea, 1 MHz ===
+   all-land 100 km 37.9, all-sea 68.5; Millington E_R 45.0, E_T 61.4 -> mixed 53.2 dBuV/m
+   (the 'recovery effect': crossing onto sea raises the field above the all-land value)
+  [PASS] Millington mixed between land and sea values: 53.2 (expected 37.88449103289835..68.519858783775)
+
+ALL PASS

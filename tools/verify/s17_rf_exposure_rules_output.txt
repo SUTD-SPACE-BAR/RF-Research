@@ -1,0 +1,25 @@
+1) Whole-body resonance f = k c / L
+   adult 1.75 m : ungrounded    62-   69 MHz; grounded (about half)   31-  34 MHz
+   child 1.2 m  : ungrounded    90-  100 MHz; grounded (about half)   45-  50 MHz
+   infant 0.7 m : ungrounded   154-  171 MHz; grounded (about half)   77-  86 MHz
+2) FCC exemption distance for ERP = 100 W (formula) and the lambda/2pi floor
+      1.9 MHz: R(formula)  0.32 m; lambda/2pi 25.11 m -> exempt only if R >= 25.11 m
+      3.6 MHz: R(formula)  0.61 m; lambda/2pi 13.25 m -> exempt only if R >= 13.25 m
+      7.1 MHz: R(formula)  1.21 m; lambda/2pi  6.72 m -> exempt only if R >=  6.72 m
+     14.2 MHz: R(formula)  2.42 m; lambda/2pi  3.36 m -> exempt only if R >=  3.36 m
+     21.2 MHz: R(formula)  3.61 m; lambda/2pi  2.25 m -> exempt only if R >=  3.61 m
+     28.5 MHz: R(formula)  4.85 m; lambda/2pi  1.67 m -> exempt only if R >=  4.85 m
+     50.1 MHz: R(formula)  5.11 m; lambda/2pi  0.95 m -> exempt only if R >=  5.11 m
+    145.0 MHz: R(formula)  5.11 m; lambda/2pi  0.33 m -> exempt only if R >=  5.11 m
+    433.0 MHz: R(formula)  4.25 m; lambda/2pi  0.11 m -> exempt only if R >=  4.25 m
+3a) Rocket with both radios on dipoles (EIRP = P - 0.5 dB + 2.15 dBi), continuous, free space
+   R = 0.3 m: ICNIRP fractions 1.19 + 0.30 = 1.49; FCC sum 1.12 -> over (ICNIRP)
+   R = 0.5 m: ICNIRP fractions 0.43 + 0.11 = 0.54; FCC sum 0.40 -> COMPLIANT (ICNIRP)
+   R = 1.0 m: ICNIRP fractions 0.11 + 0.03 = 0.13; FCC sum 0.10 -> COMPLIANT (ICNIRP)
+   ICNIRP sum = 1 at R = 0.37 m (vs 0.33 m for the E22 alone)
+3b) FCC 5 % rule at a shared site (fractions of the general-population MPE at one spot)
+   total 1.05 (exceeds the limit)
+   broadcast FM 98 MHz          93.0 % -> shares responsibility
+   club 2 m repeater 145 MHz     9.0 % -> shares responsibility
+   our 433 MHz uplink            3.0 % -> not responsible (<= 5 %)
+CHECK: PASS

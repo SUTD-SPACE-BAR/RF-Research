@@ -1,0 +1,32 @@
+=== 1. Resistor values for an inverting gain of -10 (300 K) ===
+R_G      R_F     | e_RTI bip  e_RTI CMOS (nV/rtHz, to signal input) | I_B*R_F out err bip | I_load @1V | f_p(5 pF) vs f_c
+    100     1000 |      1.82      30.83 |    0.100 mV |    1.000 mA |    350141 kHz vs 909 kHz
+   1000    10000 |      4.75      31.09 |    1.000 mV |    0.100 mA |     35014 kHz vs 909 kHz
+  10000   100000 |     21.74      33.63 |   10.000 mV |    0.010 mA |      3501 kHz vs 909 kHz
+ 100000  1000000 |    175.28      52.64 |  100.000 mV |    0.001 mA |       350 kHz vs 909 kHz
+1000000 10000000 |   1705.35     138.47 | 1000.000 mV |    0.000 mA |        35 kHz vs 909 kHz
+  ngspice, 100k/1M with 10 pF at the - input, no C_F: DC 20.00 dB, peak 27.81 dB (+7.8 dB) at 380 kHz; -3 dB at 600 kHz
+  ngspice, 100k/1M with 10 pF at the - input, C_F = R_G C_in/R_F = 1 pF: DC 20.00 dB, peak 20.00 dB (+0.0 dB) at 1 kHz; -3 dB at 155 kHz
+
+=== 2. AC-coupled non-inverting stage on 3.3 V (gain 21) ===
+  correct (R_B to mid-rail, C_G in series with R_G): V(out) = 1.635 V (mid 1.650; I_B*R_B = 10 mV error at gain 1)
+  wrong #1 (R_G straight to ground, DC gain 21): V(out) = 3.300 V  -> pinned to the rail
+  midband 26.46 dB; low -3 dB at 3.90 Hz (corners 1/2piR_BC_in = 1.59 Hz, 1/2piR_GC_G = 3.19 Hz)
+  wrong #2 (no R_B): 100 nA of bipolar I_B ramps the + input at I_B/C_in = 0.10 V/s -> rail in ~16 s; a 1 pA CMOS input still drifts 3.6 mV/h, set by leakage, i.e. undefined
+  ngspice transient without R_B: V(+) falls 3.00 V in 30 s (expected 3.0 V until the output hits 0 V)
+
+=== 3. Attenuator: inverting -0.1 (R_in 10k, R_F 1k) ===
+  noise gain 1 + R_F/R_in = 1.10 (never below 1) -> a unity-gain-stable part is MORE stable here than as a follower
+  unity-stable, follower (NG 1)                   : peaking +0.08 dB at   4.81 MHz
+  unity-stable, -0.1 attenuator (NG 1.1)          : peaking +0.04 dB at   3.74 MHz
+  decompensated (NG>=5), -0.1 attenuator          : peaking +4.92 dB at  25.30 MHz
+  decompensated + noise-gain shaping 256 R + 10 nF: peaking +0.10 dB at   4.24 MHz
+
+=== 4. MOSFET inside the loop: 0.1 -> 0.2 A step of a V-to-I sink (R_S = 1 ohm) ===
+  direct gate drive, feedback from R_S        : overshoot  58.4 %, 2 % settling   1.92 us
+  R_gate 100 R + C_F 220 pF (out->-in) + R_F 1k: overshoot   3.5 %, 2 % settling   1.71 us
+
+=== 5. Summing amplifier noise gain ===
+  4 inputs x 10k, R_F 10k: signal gain per input 1.000, NG = 1 + R_F/(R/4) = 5, -3 dB 200 kHz (GBW/NG = 200 kHz); e_n and V_OS are multiplied by 5
+
+ALL S3 OP-AMP RECIPE CHECKS PASS

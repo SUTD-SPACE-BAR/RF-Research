@@ -1,0 +1,60 @@
+1. 75-ohm cable in a 50-ohm system
+  single interface: Gamma 0.200, SWR 1.50, mismatch loss 0.177 dB
+PASS 75/50 mismatch loss 0.177 dB
+  50 -> 75-ohm line -> 50: transmission ripple 0 dB (lambda/2 multiples) to 0.695 dB (odd lambda/4)
+PASS worst case equals mismatch of 112.5 ohm (0.69 dB)
+
+2. Adapter chains
+  VSWR 1.1 x1: worst |G| 0.048 (0.01 dB), RSS |G| 0.048 (0.01 dB), + IL ~0.05 dB at 0.05 dB/adapter
+  VSWR 1.1 x2: worst |G| 0.095 (0.04 dB), RSS |G| 0.067 (0.02 dB), + IL ~0.10 dB at 0.05 dB/adapter
+  VSWR 1.1 x3: worst |G| 0.143 (0.09 dB), RSS |G| 0.082 (0.03 dB), + IL ~0.15 dB at 0.05 dB/adapter
+  VSWR 1.1 x4: worst |G| 0.190 (0.16 dB), RSS |G| 0.095 (0.04 dB), + IL ~0.20 dB at 0.05 dB/adapter
+  VSWR 1.15 x1: worst |G| 0.070 (0.02 dB), RSS |G| 0.070 (0.02 dB), + IL ~0.05 dB at 0.05 dB/adapter
+  VSWR 1.15 x2: worst |G| 0.140 (0.09 dB), RSS |G| 0.099 (0.04 dB), + IL ~0.10 dB at 0.05 dB/adapter
+  VSWR 1.15 x3: worst |G| 0.209 (0.19 dB), RSS |G| 0.121 (0.06 dB), + IL ~0.15 dB at 0.05 dB/adapter
+  VSWR 1.15 x4: worst |G| 0.279 (0.35 dB), RSS |G| 0.140 (0.09 dB), + IL ~0.20 dB at 0.05 dB/adapter
+  VSWR 1.25 x1: worst |G| 0.111 (0.05 dB), RSS |G| 0.111 (0.05 dB), + IL ~0.05 dB at 0.05 dB/adapter
+  VSWR 1.25 x2: worst |G| 0.222 (0.22 dB), RSS |G| 0.157 (0.11 dB), + IL ~0.10 dB at 0.05 dB/adapter
+  VSWR 1.25 x3: worst |G| 0.333 (0.51 dB), RSS |G| 0.192 (0.16 dB), + IL ~0.15 dB at 0.05 dB/adapter
+  VSWR 1.25 x4: worst |G| 0.444 (0.96 dB), RSS |G| 0.222 (0.22 dB), + IL ~0.20 dB at 0.05 dB/adapter
+PASS three VSWR-1.2 adapters worst-case mismatch ~0.34 dB
+
+3. Physical length per electrical degree: l = VF * lambda0 / 360
+   433.00 MHz: VF 0.66:  1.27 mm/deg, VF 0.7:  1.35 mm/deg, VF 0.85:  1.63 mm/deg
+   915.00 MHz: VF 0.66:  0.60 mm/deg, VF 0.7:  0.64 mm/deg, VF 0.85:  0.77 mm/deg
+  1575.42 MHz: VF 0.66:  0.35 mm/deg, VF 0.7:  0.37 mm/deg, VF 0.85:  0.45 mm/deg
+  2450.00 MHz: VF 0.66:  0.22 mm/deg, VF 0.7:  0.24 mm/deg, VF 0.85:  0.29 mm/deg
+PASS 433 MHz VF 0.66: 1.27 mm per degree
+  delay per metre: VF 0.66 -> 5.054 ns/m, VF 0.85 -> 3.924 ns/m
+
+4. NanoVNA cable tests
+  1.000 m open stub of VF 0.66: first S11 phase -180 deg / dip at 49.47 MHz; VF = 4 L f1 / c
+PASS VF recovered
+  open far end, |S11| = - 0.5 dB -> one-way loss  0.25 dB (error from 30 dB cal directivity up to ±0.29 dB in RL)
+  open far end, |S11| = - 2.0 dB -> one-way loss  1.00 dB (error from 30 dB cal directivity up to ±0.34 dB in RL)
+  open far end, |S11| = - 6.0 dB -> one-way loss  3.00 dB (error from 30 dB cal directivity up to ±0.53 dB in RL)
+  open far end, |S11| = -20.0 dB -> one-way loss 10.00 dB (error from 30 dB cal directivity up to ±2.39 dB in RL)
+  TDR span    900 MHz, 101 pts, VF 0.66: resolution ~ 11.0 cm (before windowing), alias-free length   11.0 m
+  TDR span    900 MHz, 401 pts, VF 0.66: resolution ~ 11.0 cm (before windowing), alias-free length   44.0 m
+  TDR span   1500 MHz, 1024 pts, VF 0.66: resolution ~  6.6 cm (before windowing), alias-free length   67.5 m
+  TDR span   6000 MHz, 1024 pts, VF 0.7: resolution ~  1.7 cm (before windowing), alias-free length   17.9 m
+PASS 900 MHz span VF 0.66 resolution 11 cm
+
+5. Bend radius ratios, LMR-400 (OD 10.3 mm): once 25 mm, repeated 102 mm
+  once = 2.4 x OD, repeated = 9.9 x OD
+PASS LMR-400 repeated bend ~10x OD
+
+6. U.FL: shock rating 735 m/s^2 for 11 ms = 75 g; cable pull limit 2-4 N (1.13 mm assemblies)
+  3 g of unsupported cable at 10 g -> 0.29 N (limit 2 N)
+  3 g of unsupported cable at 20 g -> 0.59 N (limit 2 N)
+  3 g of unsupported cable at 50 g -> 1.47 N (limit 2 N)
+PASS U.FL shock rating ~75 g
+  -> at deployment-shock levels (tens of g) an unsupported pigtail's own mass approaches the 2 N limit, and whipping, snagging and harness tension add more. Tie the cable down within ~20 mm of the plug and use a locking (MHF-LK) variant.
+PASS 3 g pigtail at 50 g is within 40 % of the 2 N limit
+
+7. Mating-cycle budget: U.FL 30 cycles; if each integration test unplugs/replugs once (2 ops = 1 cycle)
+  10 test sessions -> 10 cycles (33 % of rated life)
+  30 test sessions -> 30 cycles (100 % of rated life)
+  60 test sessions -> 60 cycles (200 % of rated life)
+
+RESULT: ALL PASS

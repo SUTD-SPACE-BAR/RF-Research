@@ -1,0 +1,197 @@
+JOB all_rfelectronics_2008-01-01
+  rfelectronics 2026: 1757
+  rfelectronics 2025: 2212
+  rfelectronics 2024: 2122
+JOB all_rfelectronics_2008-01-01
+  rfelectronics 2023: 1497
+  rfelectronics 2022: 1275
+  rfelectronics 2021: 1347
+  rfelectronics 2020: 1081
+  rfelectronics 2019: 629
+  rfelectronics 2018: 418
+  rfelectronics 2017: 342
+  rfelectronics 2016: 364
+  rfelectronics 2015: 283
+  rfelectronics 2014: 202
+  rfelectronics 2013: 219
+  rfelectronics 2012: 180
+  rfelectronics 2011: 126
+  rfelectronics 2010: 0
+  rfelectronics 2009: 0
+  rfelectronics 2008: 0
+JOB all_antennas_2008-01-01
+  antennas 2026: 0
+  antennas 2025: 0
+  antennas 2024: 0
+  antennas 2023: 0
+  antennas 2022: 0
+  antennas 2021: 0
+  antennas 2020: 0
+  antennas 2019: 0
+  antennas 2018: 0
+  antennas 2017: 0
+  antennas 2016: 0
+  antennas 2015: 0
+  antennas 2014: 0
+  antennas 2013: 0
+  antennas 2012: 0
+  antennas 2011: 0
+  antennas 2010: 0
+  antennas 2009: 0
+  antennas 2008: 0
+JOB all_sdr_2008-01-01
+  sdr 2026: 637
+  sdr 2025: 790
+  sdr 2024: 606
+  sdr 2023: 492
+  sdr 2022: 394
+  sdr 2021: 221
+  sdr 2020: 218
+  sdr 2019: 142
+  sdr 2018: 79
+  sdr 2017: 79
+  sdr 2016: 70
+  sdr 2015: 49
+  sdr 2014: 20
+  sdr 2013: 0
+  sdr 2012: 0
+  sdr 2011: 0
+  sdr 2010: 0
+  sdr 2009: 0
+  sdr 2008: 0
+JOB all_radar_2008-01-01
+  radar 2026: 40
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  radar 2025: 1566
+  radar 2024: 45
+  radar 2023: 33
+  radar 2022: 28
+  radar 2021: 72
+  radar 2020: 36
+  radar 2019: 51
+  radar 2018: 11
+  radar 2017: 16
+  radar 2016: 6
+  radar 2015: 6
+  radar 2014: 1
+  radar 2013: 0
+  radar 2012: 1
+  radar 2011: 0
+  radar 2010: 0
+  radar 2009: 0
+  radar 2008: 0
+JOB all_GNURadio_2008-01-01
+  GNURadio 2026: 80
+  GNURadio 2025: 216
+  GNURadio 2024: 271
+  GNURadio 2023: 205
+  GNURadio 2022: 161
+  GNURadio 2021: 153
+  GNURadio 2020: 63
+  GNURadio 2019: 82
+  GNURadio 2018: 101
+  GNURadio 2017: 77
+  GNURadio 2016: 87
+  GNURadio 2015: 83
+  GNURadio 2014: 44
+  GNURadio 2013: 30
+  GNURadio 2012: 23
+  GNURadio 2011: 2
+  GNURadio 2010: 0
+  GNURadio 2009: 0
+  GNURadio 2008: 0
+JOB all_LoRa_2008-01-01
+  LoRa 2026: 370
+  LoRa 2025: 334
+  LoRa 2024: 332
+  LoRa 2023: 180
+  LoRa 2022: 200
+  LoRa 2021: 189
+  LoRa 2020: 54
+  LoRa 2019: 100
+  LoRa 2018: 76
+  LoRa 2017: 14
+  LoRa 2016: 8
+  LoRa 2015: 1
+  LoRa 2014: 1
+  LoRa 2013: 247
+  LoRa 2012: 0
+  LoRa 2011: 0
+  LoRa 2010: 0
+  LoRa 2009: 0
+  LoRa 2008: 0
+JOB all_HighPowerRocketry_2008-01-01
+  HighPowerRocketry 2026: 0
+  HighPowerRocketry 2025: 0
+  HighPowerRocketry 2024: 0
+  HighPowerRocketry 2023: 0
+  HighPowerRocketry 2022: 5
+  HighPowerRocketry 2021: 7
+  HighPowerRocketry 2020: 13
+  HighPowerRocketry 2019: 1
+  HighPowerRocketry 2018: 1
+  HighPowerRocketry 2017: 0
+  HighPowerRocketry 2016: 0
+  HighPowerRocketry 2015: 2
+  HighPowerRocketry 2014: 0
+  HighPowerRocketry 2013: 0
+  HighPowerRocketry 2012: 9
+  HighPowerRocketry 2011: 0
+  HighPowerRocketry 2010: 0
+  HighPowerRocketry 2009: 0
+  HighPowerRocketry 2008: 0
+JOB all_HamRadio_2008-01-01
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  HamRadio 2026: 2816
+  HamRadio 2025: 3881
+  HamRadio 2024: 4098
+  HamRadio 2023: 3398
+  HamRadio 2022: 2966
+  HamRadio 2021: 2198
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  HamRadio 2020: 2555
+  HamRadio 2019: 1269
+  HamRadio 2018: 1031
+  HamRadio 2017: 4858
+  HamRadio 2016: 358
+  HamRadio 2015: 303
+  HamRadio 2014: 172
+  HamRadio 2013: 121
+  HamRadio 2012: 107
+  HamRadio 2011: 78
+  HamRadio 2010: 7
+  HamRadio 2009: 5
+  HamRadio 2008: 0
+JOB all_DSP_2008-01-01
+  DSP 2026: 790
+  DSP 2025: 788
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  DSP 2024: 918
+  DSP 2023: 743
+  DSP 2022: 855
+  DSP 2021: 943
+  DSP 2020: 831
+  DSP 2019: 531
+  DSP 2018: 505
+  DSP 2017: 454
+  DSP 2016: 426
+  DSP 2015: 384
+  DSP 2014: 231
+  DSP 2013: 220
+  DSP 2012: 165
+  DSP 2011: 109
+  DSP 2010: 3
+  DSP 2009: 6
+  DSP 2008: 1
+JOB all_amateurradio_2008-01-01_fl-QUESTION
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  amateurradio 2026: 1628
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 1 (HTTP Error 422: Unprocessable Entity) wait 10s
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 0 (HTTP Error 422: Unprocessable Entity) wait 5s
+  retry 1 (HTTP Error 422: Unprocessable Entity) wait 10s
+  retry 2 (HTTP Error 422: Unprocessable Entity) wait 15s
